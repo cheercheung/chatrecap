@@ -1,0 +1,481 @@
+{
+    "template": "shipany-template-one",
+    "theme": "light",
+    "header": {
+        "brand": {
+            "title": "ChatRecap AI",
+            "logo": {
+                "src": "/logo.png",
+                "alt": "ChatRecap AI"
+            },
+            "url": "/"
+        },
+        "nav": {
+            "items": [{
+                    "title": "機能",
+                    "url": "/#feature",
+                    "icon": "HiOutlineSparkles"
+                },
+                {
+                    "title": "使い方",
+                    "url": "/#usage",
+                    "icon": "RiQuestionLine"
+                },
+                {
+                    "title": "料金",
+                    "url": "/#pricing",
+                    "icon": "MdPayment"
+                },
+                {
+                    "title": "プラットフォーム",
+                    "url": "/#showcase",
+                    "icon": "BiCube",
+                    "children": [{
+                            "title": "WhatsApp分析",
+                            "description": "WhatsAppチャットを分析する",
+                            "icon": "RiWhatsappLine",
+                            "url": "/#whatsapp",
+                            "target": "_self"
+                        },
+                        {
+                            "title": "Instagram分析",
+                            "description": "InstagramのDMを分析する",
+                            "icon": "RiInstagramLine",
+                            "url": "/#instagram",
+                            "target": "_self"
+                        }
+                    ]
+                }
+            ]
+        },
+        "buttons": [{
+            "title": "無料で試す",
+            "url": "/chatrecapanalysis",
+            "target": "_self",
+            "variant": "link",
+            "icon": "RiArrowRightUpLine"
+        }],
+        "show_sign": true,
+        "show_theme": true,
+        "show_locale": true
+    },
+    "hero": {
+        "title": "ChatRecap AIで会話を分析",
+        "highlight_text": "ChatRecap AI",
+        "description": "Chat Recap AIで会話の隠れたパターンとインサイトを発見し、コミュニケーションパターン、応答時間、感情的なつながりを明らかにします。",
+        "announcement": {
+            "label": "2024",
+            "title": "🚀 チームと個人の両方で利用可能になりました",
+            "url": "/#pricing"
+        },
+        "tip": "⌛️ 期間限定オファー 100%割引",
+        "buttons": [{
+                "title": "Recap AIを無料で試す",
+                "icon": "RiFlashlightFill",
+                "url": "/chatrecapanalysis",
+                "target": "_self",
+                "variant": "default"
+            }
+        ],
+        "show_happy_users": true,
+        "show_badge": true,
+        "features_disabled": {
+            "note": "这部分配置已被替换为聊天通知组件，暂时保留",
+            "title": "主な機能",
+            "items": [
+                {
+                    "title": "ロマンチックな体験",
+                    "description": "ユーザーにロマンチックで温かい体験を提供",
+                    "icon": "Heart"
+                },
+                {
+                    "title": "迅速な応答",
+                    "description": "スムーズな操作による迅速なシステム応答",
+                    "icon": "Zap"
+                },
+                {
+                    "title": "安全で信頼性が高い",
+                    "description": "ユーザーのプライバシーを保護する暗号化データストレージ",
+                    "icon": "Shield"
+                },
+                {
+                    "title": "美しいデザイン",
+                    "description": "心地よい視覚体験のために丁寧に設計されたインターフェース",
+                    "icon": "Star"
+                },
+                {
+                    "title": "24時間365日のサービス",
+                    "description": "24時間利用可能なカスタマーサービス",
+                    "icon": "Clock"
+                }
+            ]
+        }
+    },
+   
+    "feature": {
+        "name": "feature",
+        "title": "ChatRecap AIの主な機能",
+        "description": "高度な分析ツールで会話から強力なインサイトを発見しましょう。",
+        "items": [{
+                "title": "マルチプラットフォーム相互作用分析",
+                "description": "WhatsApp、WeChat、Instagramなどでのチャット頻度とパターンを分析します。ピーク時間を特定し、応答時間の変化を追跡し、すべてのプラットフォームで統一されたトレンドを発見します。",
+                "icon": "RiGlobalLine"
+            },
+            {
+                "title": "コミュニケーションスタイルと言語分析",
+                "description": "高度な自然言語処理を使用して、あなた独自のコミュニケーションスタイルを発見し、語彙の使用法、絵文字パターンを分析し、感情的および関係特有の言語パターンを明らかにします。",
+                "icon": "RiChatSmile3Line"
+            },
+            {
+                "title": "会話の流れとダイナミクス",
+                "description": "会話がどのように始まり、発展し、終わるかを理解します。誰が最も頻繁に相互作用を開始するかを追跡し、対話トピックと感情的なトーンの変化を検出します。",
+                "icon": "RiFlowChart"
+            },
+            {
+                "title": "感情的な雰囲気と健康インサイト",
+                "description": "感情的なニュアンスを検出し、健全または不健全な行動パターンを特定し、関係においてより良いコミュニケーション習慣を促進するための認識を作り出します。",
+                "icon": "RiHeartLine"
+            },
+            {
+                "title": "エンゲージメントの深さと頻度の測定",
+                "description": "両者の投資レベルを評価するために、応答の長さ、会話の深さ、エンゲージメントの頻度を測定します。",
+                "icon": "RiBarChartLine"
+            },
+            {
+                "title": "個人情報共有のバランス",
+                "description": "誰がより多くの個人的な詳細を共有しているかを明らかにし、開放性のレベルを追跡し、よりバランスの取れた相互的な関係ダイナミクスを作るためのヒントを発見します。",
+                "icon": "RiUserHeartLine"
+            }
+        ]
+    },
+    "scenarios": {
+        "name": "scenarios",
+        "label": "適用シナリオ",
+        "title": "あらゆる関係タイプのためのチャット分析と要約",
+        "description": "私たちのチャット分析AIは、さまざまな関係タイプのニュアンスを理解します。恋愛カップル、家族、友人、同僚など、どのような関係であっても、私たちの分析は独自のインサイトを明らかにし、各関係ダイナミクスに合わせたチャット要約を作成します。",
+        "scenario_label": "シナリオ",
+        "items": [
+            {
+                "title": "恋愛関係",
+                "description": "パートナーとのコミュニケーションパターンを理解し、感情的なつながりを強化します。",
+                "buttonText": "関係を分析する"
+            },
+            {
+                "title": "家族のつながり",
+                "description": "家族グループチャットを分析し、愛する人とのコミュニケーションを改善します。",
+                "buttonText": "家族チャットを分析する"
+            },
+            {
+                "title": "2年間の関係分析",
+                "description": "時間の経過とともに関係の成長を追跡し、コミュニケーションがどのように発展したかを発見します。",
+                "buttonText": "関係の成長を分析する"
+            },
+            {
+                "title": "友情",
+                "description": "友人との相互作用パターンを発見し、社会的つながりを育みます。",
+                "buttonText": "友情を分析する"
+            }
+        ]
+    },
+    
+    "stats": {
+        "name": "stats",
+        "label": "統計",
+        "title": "人々がChatRecap AIを愛する理由",
+        "description": "時間を節約し、生産性を向上させるため。",
+        "icon": "FaRegHeart",
+        "items": [{
+                "title": "信頼されている",
+                "label": "10K+",
+                "description": "ユーザー"
+            },
+            {
+                "title": "要約された",
+                "label": "500K+",
+                "description": "ミーティング"
+            },
+            {
+                "title": "節約された時間",
+                "label": "1M+",
+                "description": "時間"
+            }
+        ]
+    },
+    "pricing": {
+        "name": "pricing",
+        "label": "料金",
+        "title": "シンプルで透明な料金設定",
+        "description": "あなたとチームに最適なプランを選びましょう。",
+        "groups": [],
+        "items": [{
+                "title": "無料",
+                "description": "始めたばかりの個人に最適です。",
+                "features_title": "含まれるもの",
+                "features": [
+                    "月5回のミーティング要約",
+                    "基本的な要約機能",
+                    "メール配信",
+                    "7日間のデータ保持",
+                    "単一ユーザーのみ",
+                    "標準サポート"
+                ],
+                "interval": "monthly",
+                "amount": 0,
+                "cn_amount": 0,
+                "currency": "USD",
+                "price": "$0",
+                "original_price": "$0",
+                "unit": "USD",
+                "is_featured": false,
+                "tip": "クレジットカード不要",
+                "button": {
+                    "title": "始める",
+                    "url": "/#signup",
+                    "icon": "RiFlashlightFill"
+                },
+                "product_id": "free",
+                "product_name": "ChatRecap AI Free",
+                "credits": 5,
+                "valid_months": 1
+            },
+            {
+                "title": "プロ",
+                "description": "より多くのミーティング要約が必要なプロフェッショナル向け。",
+                "label": "人気",
+                "features_title": "無料プランのすべてに加えて",
+                "features": [
+                    "月50回のミーティング要約",
+                    "高度な要約機能",
+                    "アクションアイテムの抽出",
+                    "30日間のデータ保持",
+                    "最大3ユーザーまで",
+                    "優先サポート",
+                    "カスタム配信オプション"
+                ],
+                "interval": "monthly",
+                "amount": 1999,
+                "cn_amount": 13999,
+                "currency": "USD",
+                "price": "$19.99",
+                "original_price": "$29.99",
+                "unit": "USD",
+                "is_featured": true,
+                "tip": "最も人気のある選択肢",
+                "button": {
+                    "title": "始める",
+                    "url": "/#signup",
+                    "icon": "RiFlashlightFill"
+                },
+                "product_id": "pro",
+                "product_name": "ChatRecap AI Pro",
+                "credits": 50,
+                "valid_months": 1
+            },
+            {
+                "title": "チーム",
+                "description": "無制限のミーティング要約が必要なチーム向け。",
+                "features_title": "プロプランのすべてに加えて",
+                "features": [
+                    "無制限のミーティング要約",
+                    "プレミアム要約機能",
+                    "アクションアイテムの追跡",
+                    "90日間のデータ保持",
+                    "最大10ユーザーまで",
+                    "24/7優先サポート",
+                    "チームコラボレーション機能",
+                    "管理者ダッシュボード"
+                ],
+                "interval": "monthly",
+                "amount": 4999,
+                "cn_amount": 34999,
+                "currency": "USD",
+                "price": "$49.99",
+                "original_price": "$69.99",
+                "unit": "USD",
+                "is_featured": false,
+                "tip": "チームに最適な価値",
+                "button": {
+                    "title": "始める",
+                    "url": "/#signup",
+                    "icon": "RiFlashlightFill"
+                },
+                "product_id": "team",
+                "product_name": "ChatRecap AI Team",
+                "credits": 999999,
+                "valid_months": 1
+            }
+        ]
+    },
+    "testimonial": {
+        "name": "testimonial",
+        "label": "お客様の声",
+        "title": "ユーザーがChatRecap AIについて言っていること",
+        "description": "ミーティングの生産性を向上させるためにChatRecap AIを使用しているプロフェッショナルの声を聞いてください。",
+        "icon": "GoThumbsup",
+        "items": [{
+                "title": "Sarah Johnson",
+                "label": "TechCorpのプロダクトマネージャー",
+                "description": "ChatRecap AIは私のミーティング管理方法を変えました。重要な詳細やアクションアイテムを見逃す心配がなくなりました。すべてのミーティングで個人アシスタントを持っているようなものです！",
+                "image": {
+                    "src": "/imgs/users/1.png"
+                }
+            },
+            {
+                "title": "Michael Chen",
+                "label": "StartupXのCEO",
+                "description": "CEOとして、私は一日中ミーティングに参加しています。ChatRecap AIは私が整理された状態を保ち、フォローアップを見逃さないようにしてくれます。私の生産性にとってゲームチェンジャーでした。",
+                "image": {
+                    "src": "/imgs/users/2.png"
+                }
+            },
+            {
+                "title": "Emily Rodriguez",
+                "label": "DesignHubのチームリーダー",
+                "description": "私のチームはChatRecap AIのミーティング要約を気に入っています。全員が同じページにいて、アクションアイテムに責任を持つようになります。フォローアップに大きな改善が見られました。",
+                "image": {
+                    "src": "/imgs/users/3.png"
+                }
+            },
+            {
+                "title": "David Kim",
+                "label": "セールスディレクター",
+                "description": "ChatRecap AIは私の顧客ミーティングにとって非常に価値がありました。メモを取る代わりに関係構築に集中でき、それでも各会話の完璧な記録を持つことができます。",
+                "image": {
+                    "src": "/imgs/users/4.png"
+                }
+            },
+            {
+                "title": "Lisa Thompson",
+                "label": "プロジェクトマネージャー",
+                "description": "アクションアイテム追跡機能が素晴らしいです！ミーティングからタスクと期限を自動的に識別し、プロジェクト完了率を40%向上させました。",
+                "image": {
+                    "src": "/imgs/users/5.png"
+                }
+            },
+            {
+                "title": "James Wilson",
+                "label": "リモートチームマネージャー",
+                "description": "リモートチームの管理は難しいですが、ChatRecap AIは私たちが同じページにいるのを助けてくれます。ミーティング要約は、全員が何が議論され、何が期待されているかを知ることができます。",
+                "image": {
+                    "src": "/imgs/users/6.png"
+                }
+            }
+        ]
+    },
+    "faq": {
+        "name": "faq",
+        "label": "よくある質問",
+        "title": "ChatRecap AIに関するよくある質問",
+        "description": "他に質問がありますか？メールまたはチャットでお問い合わせください。",
+        "items": [{
+                "title": "ChatRecap AIはどのようなタイプのミーティングを要約できますか？",
+                "description": "ChatRecap AIは、1対1のミーティング、チームミーティング、顧客通話、インタビューなど、ほぼすべてのタイプのミーティングや通話で機能します。Zoom、Google Meet、Microsoft Teams、Webexなどの主要なミーティングプラットフォームすべてと互換性があります。"
+            },
+            {
+                "title": "ミーティング要約はどれくらい正確ですか？",
+                "description": "ChatRecap AIは、何百万ものミーティングでトレーニングされた高度なAIモデルを使用して、高精度の要約を提供します。私たちの技術は通常、ミーティングの重要なポイント、決定事項、アクションアイテムの95%以上をキャプチャします。"
+            },
+            {
+                "title": "私のミーティングデータは安全ですか？",
+                "description": "はい、セキュリティは私たちの最優先事項です。すべてのミーティングデータは転送中および処理中に暗号化されます。柔軟なデータ保持ポリシーを提供しており、希望する場合は処理後にデータが自動的に削除されるように選択できます。"
+            },
+            {
+                "title": "ミーティング要約を受け取るまでにどれくらい時間がかかりますか？",
+                "description": "ほとんどのミーティング要約は、ミーティングの長さに応じて、ミーティング終了後5〜10分以内に配信されます。より長いミーティング（2時間以上）の場合、最大30分かかることがあります。"
+            },
+            {
+                "title": "要約形式をカスタマイズできますか？",
+                "description": "はい、プロおよびチームプランのユーザーは、含める/除外するセクション、詳細レベル、配信設定など、要約形式をカスタマイズできます。さまざまなミーティングタイプ用のテンプレートを作成できます。"
+            },
+            {
+                "title": "アクションアイテム追跡はどのように機能しますか？",
+                "description": "ChatRecap AIは、ミーティング中に言及されたアクションアイテム、期限、責任者を自動的に識別します。これらは要約でハイライト表示され、Asana、Trello、Monday.comなどのタスク管理ツールにエクスポートできます。"
+            }
+        ]
+    },
+    "cta": {
+        "name": "cta",
+        "title": "今日からミーティングノートの時間を節約しましょう",
+        "description": "ChatRecap AIを使用してミーティングをより生産的にしている何千人ものプロフェッショナルに参加しましょう。",
+        "buttons": [{
+                "title": "今すぐ試す",
+                "url": "/chatrecapanalysis",
+                "target": "_self",
+                "icon": "GoArrowUpRight"
+            }
+        ]
+    },
+    "upload_box": {
+        "name": "upload_box",
+        "title": "Chat Recap AIの使用を開始する",
+        "description": "サンプルを使用するか、チャットファイルをアップロードし、無料分析またはAI要約をクリックしてください。",
+        "sample_button_text": "サンプル入力を使用",
+        "upload_button_text": "ファイルをアップロード",
+        "supported_formats": "サポートされている形式：.txtファイルまたは.txtファイルを含む.zipファイル（最大5MB）",
+        "placeholder": "チャットテキストをここに入力または貼り付けてください...",
+        "primary_button": {
+            "title": "AI要約",
+            "url": "/#recap",
+            "target": "_self",
+            "variant": "default"
+        },
+        "secondary_button": {
+            "title": "無料分析",
+            "url": "/chatrecapresult",
+            "target": "_self",
+            "variant": "secondary",
+            "icon": "RiFileTextLine"
+        },
+        "max_file_size": 5
+    },
+    "json_uploader": {
+        "name": "json_uploader",
+        "title": "チャットデータをアップロード",
+        "description": "チャット履歴を分析し、インサイトを提供します",
+        "upload_prompt": "{platform} JSONファイルをアップロードするにはクリックしてください",
+        "auto_sort_message": "メッセージはタイムスタンプで自動的にソートされます。",
+        "max_message_count": "最大メッセージ数：{count}",
+        "max_characters": "最大文字数：{count}",
+        "selected_file": "選択済み：{filename}",
+        "analyze_button": "無料分析",
+        "recap_button": "AI要約"
+    },
+    "platform_filter": {
+        "name": "platform_filter",
+        "title": "プラットフォームを選択",
+        "options": [
+            {
+                "id": "whatsapp",
+                "label": "WhatsApp"
+            },
+            {
+                "id": "instagram",
+                "label": "Instagram"
+            },
+            {
+                "id": "discord",
+                "label": "Discord"
+            },
+            {
+                "id": "telegram",
+                "label": "Telegram"
+            },
+            {
+                "id": "snapchat",
+                "label": "Snapchat"
+            }
+        ]
+    },
+    "platform_upload": {
+        "name": "platform_upload",
+        "title": "チャットデータをアップロード",
+        "description": "メッセージングプラットフォームを選択し、分析用にチャットデータをアップロードしてください"
+    },
+    "footer": {
+        "name": "footer",
+        "brand": {
+            "title": "ChatRecap AI",
+            "description": "時間を節約し、整理された状態を保つのに役立つAI駆動のミーティング要約。重要な詳細やアクションアイテムを二度と見逃すことはありません。"
+        }
+    }
+}

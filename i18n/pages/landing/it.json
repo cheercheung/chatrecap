@@ -1,0 +1,562 @@
+{
+    "template": "shipany-template-one",
+    "theme": "light",
+    "header": {
+        "brand": {
+            "title": "ChatRecap AI",
+            "logo": {
+                "src": "/logo.png",
+                "alt": "ChatRecap AI"
+            },
+            "url": "/"
+        },
+        "nav": {
+            "items": [{
+                    "title": "Funzionalità",
+                    "url": "/#feature",
+                    "icon": "HiOutlineSparkles"
+                },
+                {
+                    "title": "Come Funziona",
+                    "url": "/#usage",
+                    "icon": "RiQuestionLine"
+                },
+                {
+                    "title": "Prezzi",
+                    "url": "/#pricing",
+                    "icon": "MdPayment"
+                },
+                {
+                    "title": "Piattaforme",
+                    "url": "/#showcase",
+                    "icon": "BiCube",
+                    "children": [{
+                            "title": "Analisi WhatsApp",
+                            "description": "Analizza le chat di WhatsApp",
+                            "icon": "RiWhatsappLine",
+                            "url": "/#whatsapp",
+                            "target": "_self"
+                        },
+                        {
+                            "title": "Analisi Instagram",
+                            "description": "Analizza i messaggi diretti di Instagram",
+                            "icon": "RiInstagramLine",
+                            "url": "/#instagram",
+                            "target": "_self"
+                        }
+                    ]
+                }
+            ]
+        },
+        "buttons": [{
+            "title": "Prova Gratis",
+            "url": "/chatrecapanalysis",
+            "target": "_self",
+            "variant": "link",
+            "icon": "RiArrowRightUpLine"
+        }],
+        "show_sign": true,
+        "show_theme": true,
+        "show_locale": true
+    },
+    "hero": {
+        "title": "Analizza le tue conversazioni con ChatRecap AI",
+        "highlight_text": "ChatRecap AI",
+        "description": "Scopri i modelli nascosti e le intuizioni nelle tue chat con Chat Recap AI, rivelando modelli di comunicazione, tempi di risposta e connessioni emotive.",
+        "announcement": {
+            "label": "2024",
+            "title": "🚀 Ora disponibile per team e individui",
+            "url": "/#pricing"
+        },
+        "tip": "⌛️ Offerta a tempo limitato 100% di sconto",
+        "buttons": [{
+            "title": "Prova Recap AI Gratis",
+            "icon": "RiFlashlightFill",
+            "url": "/chatrecapanalysis",
+            "target": "_self",
+            "variant": "default"
+        }],
+        "show_happy_users": true,
+        "show_badge": true,
+        "features_disabled": {
+            "note": "Questa parte della configurazione è stata sostituita dal componente di notifica chat, temporaneamente conservata",
+            "title": "Funzionalità Principali",
+            "items": [{
+                    "title": "Esperienza Romantica",
+                    "description": "Fornire agli utenti un'esperienza romantica e calorosa",
+                    "icon": "Heart"
+                },
+                {
+                    "title": "Risposta Rapida",
+                    "description": "Risposta rapida del sistema con funzionamento fluido",
+                    "icon": "Zap"
+                },
+                {
+                    "title": "Sicuro e Affidabile",
+                    "description": "Archiviazione dati crittografata per proteggere la privacy degli utenti",
+                    "icon": "Shield"
+                },
+                {
+                    "title": "Design Elegante",
+                    "description": "Interfaccia progettata con cura per un'esperienza visiva piacevole",
+                    "icon": "Star"
+                },
+                {
+                    "title": "Servizio 24/7",
+                    "description": "Servizio di assistenza clienti attivo 24 ore su 24",
+                    "icon": "Clock"
+                }
+            ]
+        }
+    },
+
+    "feature": {
+        "name": "feature",
+        "title": "Funzionalità Principali di ChatRecap AI",
+        "description": "Scopri potenti intuizioni dalle tue conversazioni con i nostri strumenti di analisi avanzati.",
+        "items": [{
+                "title": "Analisi delle Interazioni Multi-Piattaforma",
+                "description": "Analizza la frequenza e i modelli delle tue chat su WhatsApp, WeChat, Instagram e altro. Identifica i periodi di picco, monitora i cambiamenti nei tempi di risposta e scopri tendenze unificate tra le piattaforme.",
+                "icon": "RiGlobalLine"
+            },
+            {
+                "title": "Analisi dello Stile di Comunicazione e del Linguaggio",
+                "description": "Utilizza l'elaborazione avanzata del linguaggio naturale per scoprire il tuo stile di comunicazione unico, analizzare l'uso del vocabolario, i modelli di emoji e rivelare modelli linguistici emotivi e specifici delle relazioni.",
+                "icon": "RiChatSmile3Line"
+            },
+            {
+                "title": "Flusso e Dinamiche della Conversazione",
+                "description": "Comprendi come le conversazioni iniziano, si evolvono e terminano. Monitora chi inizia più spesso le interazioni e rileva cambiamenti negli argomenti di dialogo e nei toni emotivi.",
+                "icon": "RiFlowChart"
+            },
+            {
+                "title": "Sentimento Emotivo e Approfondimenti sulla Salute",
+                "description": "Rileva sfumature emotive, identifica modelli di comportamento sani o malsani e crea consapevolezza per favorire migliori abitudini di comunicazione nelle tue relazioni.",
+                "icon": "RiHeartLine"
+            },
+            {
+                "title": "Metriche di Profondità e Frequenza di Coinvolgimento",
+                "description": "Misura la lunghezza delle risposte, la profondità delle conversazioni e la frequenza di coinvolgimento per valutare il livello di investimento da entrambe le parti.",
+                "icon": "RiBarChartLine"
+            },
+            {
+                "title": "Equilibrio nella Condivisione di Informazioni Personali",
+                "description": "Rivela chi condivide più dettagli personali, monitora i livelli di apertura e scopri suggerimenti per creare una dinamica di relazione più equilibrata e reciproca.",
+                "icon": "RiUserHeartLine"
+            }
+        ]
+    },
+    "scenarios": {
+        "name": "scenarios",
+        "label": "Scenari di Applicazione",
+        "title": "Analisi e Riassunti delle Chat per Tutti i Tipi di Relazioni",
+        "description": "La nostra AI di analisi delle chat comprende le sfumature dei diversi tipi di relazioni. Che si tratti di partner romantici, familiari, amici o colleghi, la nostra analisi rivela intuizioni uniche e crea riassunti personalizzati delle chat per ogni dinamica relazionale.",
+        "scenario_label": "Scenario",
+        "items": [{
+                "title": "Relazioni Romantiche",
+                "description": "Comprendi i modelli di comunicazione con il tuo partner e rafforza la vostra connessione emotiva.",
+                "buttonText": "Analizza La Mia Relazione"
+            },
+            {
+                "title": "Connessioni Familiari",
+                "description": "Analizza le chat di gruppo familiari e migliora la comunicazione con i tuoi cari.",
+                "buttonText": "Analizza Chat Familiare"
+            },
+            {
+                "title": "Analisi di 2 Anni di Frequentazione",
+                "description": "Monitora la crescita della tua relazione nel tempo e scopri come si è evoluta la vostra comunicazione.",
+                "buttonText": "Analizza Crescita Relazione"
+            },
+            {
+                "title": "Amicizie",
+                "description": "Scopri i modelli di interazione con gli amici e coltiva le tue connessioni sociali.",
+                "buttonText": "Analizza Amicizia"
+            }
+        ]
+    },
+
+    "stats": {
+        "name": "stats",
+        "label": "Statistiche",
+        "title": "Le Persone Amano ChatRecap AI",
+        "description": "per risparmiare tempo e migliorare la produttività.",
+        "icon": "FaRegHeart",
+        "items": [{
+                "title": "Utilizzato da",
+                "label": "10K+",
+                "description": "Utenti"
+            },
+            {
+                "title": "Riassunti",
+                "label": "500K+",
+                "description": "Incontri"
+            },
+            {
+                "title": "Tempo Risparmiato",
+                "label": "1M+",
+                "description": "Ore"
+            }
+        ]
+    },
+    "pricing": {
+        "name": "pricing",
+        "label": "Prezzi",
+        "title": "Prezzi Semplici e Trasparenti",
+        "description": "Scegli il piano giusto per te e il tuo team.",
+        "groups": [],
+        "items": [{
+                "title": "Gratuito",
+                "description": "Perfetto per individui che stanno iniziando.",
+                "features_title": "Include",
+                "features": [
+                    "5 riassunti di incontri al mese",
+                    "Funzionalità di riassunto base",
+                    "Consegna via email",
+                    "Conservazione dati per 7 giorni",
+                    "Solo utente singolo",
+                    "Supporto standard"
+                ],
+                "interval": "monthly",
+                "amount": 0,
+                "cn_amount": 0,
+                "currency": "USD",
+                "price": "$0",
+                "original_price": "$0",
+                "unit": "USD",
+                "is_featured": false,
+                "tip": "Nessuna carta di credito richiesta",
+                "button": {
+                    "title": "Inizia",
+                    "url": "/#signup",
+                    "icon": "RiFlashlightFill"
+                },
+                "product_id": "free",
+                "product_name": "ChatRecap AI Gratuito",
+                "credits": 5,
+                "valid_months": 1
+            },
+            {
+                "title": "Pro",
+                "description": "Per professionisti che necessitano di più riassunti di incontri.",
+                "label": "Popolare",
+                "features_title": "Tutto del piano Gratuito, più",
+                "features": [
+                    "50 riassunti di incontri al mese",
+                    "Funzionalità di riassunto avanzate",
+                    "Estrazione di elementi d'azione",
+                    "Conservazione dati per 30 giorni",
+                    "Fino a 3 utenti",
+                    "Supporto prioritario",
+                    "Opzioni di consegna personalizzate"
+                ],
+                "interval": "monthly",
+                "amount": 1999,
+                "cn_amount": 13999,
+                "currency": "USD",
+                "price": "$19.99",
+                "original_price": "$29.99",
+                "unit": "USD",
+                "is_featured": true,
+                "tip": "Scelta più popolare",
+                "button": {
+                    "title": "Inizia",
+                    "url": "/#signup",
+                    "icon": "RiFlashlightFill"
+                },
+                "product_id": "pro",
+                "product_name": "ChatRecap AI Pro",
+                "credits": 50,
+                "valid_months": 1
+            },
+            {
+                "title": "Team",
+                "description": "Per team che necessitano di riassunti di incontri illimitati.",
+                "features_title": "Tutto del piano Pro, più",
+                "features": [
+                    "Riassunti di incontri illimitati",
+                    "Funzionalità di riassunto premium",
+                    "Monitoraggio degli elementi d'azione",
+                    "Conservazione dati per 90 giorni",
+                    "Fino a 10 utenti",
+                    "Supporto prioritario 24/7",
+                    "Funzionalità di collaborazione di team",
+                    "Dashboard amministratore"
+                ],
+                "interval": "monthly",
+                "amount": 4999,
+                "cn_amount": 34999,
+                "currency": "USD",
+                "price": "$49.99",
+                "original_price": "$69.99",
+                "unit": "USD",
+                "is_featured": false,
+                "tip": "Miglior valore per i team",
+                "button": {
+                    "title": "Inizia",
+                    "url": "/#signup",
+                    "icon": "RiFlashlightFill"
+                },
+                "product_id": "team",
+                "product_name": "ChatRecap AI Team",
+                "credits": 999999,
+                "valid_months": 1
+            }
+        ]
+    },
+    "testimonial": {
+        "name": "testimonial",
+        "label": "Testimonianze",
+        "title": "Cosa Dicono gli Utenti di ChatRecap AI",
+        "description": "Ascolta i professionisti che utilizzano ChatRecap AI per migliorare la produttività delle loro riunioni.",
+        "icon": "GoThumbsup",
+        "items": [{
+                "title": "Sarah Johnson",
+                "label": "Product Manager presso TechCorp",
+                "description": "ChatRecap AI ha trasformato il modo in cui gestisco le riunioni. Non mi preoccupo più di perdere dettagli importanti o elementi d'azione. È come avere un assistente personale in ogni riunione!",
+                "image": {
+                    "src": "/imgs/users/1.png"
+                }
+            },
+            {
+                "title": "Michael Chen",
+                "label": "CEO di StartupX",
+                "description": "Come CEO, sono in riunione tutto il giorno. ChatRecap AI mi aiuta a rimanere organizzato e assicura che non perda mai di vista i follow-up. Ha rivoluzionato la mia produttività.",
+                "image": {
+                    "src": "/imgs/users/2.png"
+                }
+            },
+            {
+                "title": "Emily Rodriguez",
+                "label": "Team Lead presso DesignHub",
+                "description": "Il mio team adora i riassunti delle riunioni di ChatRecap AI. Mantiene tutti allineati e responsabili per i loro elementi d'azione. Abbiamo visto un miglioramento significativo nel nostro follow-through.",
+                "image": {
+                    "src": "/imgs/users/3.png"
+                }
+            },
+            {
+                "title": "David Kim",
+                "label": "Direttore Vendite",
+                "description": "ChatRecap AI è stato inestimabile per le mie riunioni con i clienti. Posso concentrarmi sulla costruzione di relazioni invece di prendere appunti, e avere comunque registrazioni perfette di ogni conversazione.",
+                "image": {
+                    "src": "/imgs/users/4.png"
+                }
+            },
+            {
+                "title": "Lisa Thompson",
+                "label": "Project Manager",
+                "description": "La funzione di monitoraggio degli elementi d'azione è fantastica! Identifica automaticamente compiti e scadenze dalle nostre riunioni, il che ha migliorato il nostro tasso di completamento dei progetti del 40%.",
+                "image": {
+                    "src": "/imgs/users/5.png"
+                }
+            },
+            {
+                "title": "James Wilson",
+                "label": "Manager di Team Remoto",
+                "description": "Gestire un team remoto è impegnativo, ma ChatRecap AI ci aiuta a rimanere sulla stessa pagina. I riassunti delle riunioni assicurano che tutti sappiano cosa è stato discusso e cosa ci si aspetta.",
+                "image": {
+                    "src": "/imgs/users/6.png"
+                }
+            }
+        ]
+    },
+    "faq": {
+        "name": "faq",
+        "label": "FAQ",
+        "title": "Domande Frequenti su ChatRecap AI",
+        "description": "Hai un'altra domanda? Contattaci via email o chat.",
+        "items": [{
+                "title": "Quali tipi di riunioni può riassumere ChatRecap AI?",
+                "description": "ChatRecap AI funziona con praticamente qualsiasi tipo di riunione o chiamata, inclusi incontri one-to-one, riunioni di team, chiamate con clienti, interviste e altro. Supporta tutte le principali piattaforme di riunione come Zoom, Google Meet, Microsoft Teams, Webex e altre."
+            },
+            {
+                "title": "Quanto sono accurati i riassunti delle riunioni?",
+                "description": "ChatRecap AI utilizza modelli AI avanzati addestrati su milioni di riunioni per fornire riassunti altamente accurati. La nostra tecnologia in genere cattura oltre il 95% dei punti chiave, decisioni ed elementi d'azione dalle riunioni."
+            },
+            {
+                "title": "I miei dati delle riunioni sono sicuri?",
+                "description": "Sì, la sicurezza è la nostra massima priorità. Tutti i dati delle riunioni sono crittografati durante il transito e l'elaborazione. Offriamo politiche flessibili di conservazione dei dati, e puoi scegliere di far eliminare automaticamente i tuoi dati dopo l'elaborazione, se desiderato."
+            },
+            {
+                "title": "Quanto tempo ci vuole per ottenere un riassunto della riunione?",
+                "description": "La maggior parte dei riassunti delle riunioni viene consegnata entro 5-10 minuti dalla fine della riunione, a seconda della durata della riunione. Per riunioni più lunghe (oltre 2 ore), potrebbero essere necessari fino a 30 minuti."
+            },
+            {
+                "title": "Posso personalizzare il formato del riassunto?",
+                "description": "Sì, gli utenti dei piani Pro e Team possono personalizzare il formato del loro riassunto, incluse le sezioni da includere/escludere, il livello di dettaglio e le preferenze di consegna. Puoi creare modelli per diversi tipi di riunioni."
+            },
+            {
+                "title": "Come funziona il monitoraggio degli elementi d'azione?",
+                "description": "ChatRecap AI identifica automaticamente elementi d'azione, scadenze e parti responsabili menzionate durante la riunione. Questi sono evidenziati nel riassunto e possono essere esportati in strumenti di gestione delle attività come Asana, Trello o Monday.com."
+            }
+        ]
+    },
+    "cta": {
+        "name": "cta",
+        "title": "Inizia a Risparmiare Tempo sugli Appunti delle Riunioni Oggi",
+        "description": "Unisciti a migliaia di professionisti che utilizzano ChatRecap AI per rendere le loro riunioni più produttive.",
+        "buttons": [{
+            "title": "Prova Ora",
+            "url": "/chatrecapanalysis",
+            "target": "_self",
+            "icon": "GoArrowUpRight"
+        }]
+    },
+    "upload_box": {
+        "name": "upload_box",
+        "title": "Inizia a Usare Chat Recap AI",
+        "description": "Usa un esempio o carica un file di chat, Clicca su Analisi GRATUITA o Recap AI.",
+        "sample_button_text": "Usa Input di Esempio",
+        "upload_button_text": "Carica File",
+        "supported_formats": "Supportati: file .txt o .zip contenente un file .txt (max 5MB)",
+        "placeholder": "Inserisci o incolla il testo della tua chat qui...",
+        "primary_button": {
+            "title": "Recap AI",
+            "url": "/#recap",
+            "target": "_self",
+            "variant": "default"
+        },
+        "secondary_button": {
+            "title": "Analisi GRATUITA",
+            "url": "/chatrecapresult",
+            "target": "_self",
+            "variant": "secondary",
+            "icon": "RiFileTextLine"
+        },
+        "max_file_size": 5
+    },
+    "json_uploader": {
+        "name": "json_uploader",
+        "title": "Carica i Tuoi Dati di Chat",
+        "description": "Analizzeremo la cronologia delle tue chat e forniremo approfondimenti",
+        "upload_prompt": "Clicca per caricare il tuo file JSON di {platform}",
+        "auto_sort_message": "I messaggi saranno ordinati automaticamente per timestamp.",
+        "max_message_count": "Numero massimo di messaggi: {count}",
+        "max_characters": "Caratteri massimi: {count}",
+        "selected_file": "Selezionato: {filename}",
+        "analyze_button": "Analisi GRATUITA",
+        "recap_button": "Recap AI"
+    },
+    "platform_filter": {
+        "name": "platform_filter",
+        "title": "Seleziona Piattaforma",
+        "options": [{
+                "id": "whatsapp",
+                "label": "WhatsApp"
+            },
+            {
+                "id": "instagram",
+                "label": "Instagram"
+            },
+            {
+                "id": "discord",
+                "label": "Discord"
+            },
+            {
+                "id": "telegram",
+                "label": "Telegram"
+            },
+            {
+                "id": "snapchat",
+                "label": "Snapchat"
+            }
+        ]
+    },
+    "platform_upload": {
+        "name": "platform_upload",
+        "title": "Carica i Tuoi Dati di Chat",
+        "description": "Seleziona la tua piattaforma di messaggistica e carica i tuoi dati di chat per l'analisi"
+    },
+    "footer": {
+        "name": "footer",
+        "brand": {
+            "title": "ChatRecap AI",
+            "description": "Riassunti di riunioni basati su AI che ti fanno risparmiare tempo e ti mantengono organizzato. Non perdere mai più un dettaglio importante o un elemento d'azione.",
+            "logo": {
+                "src": "/logo.png",
+                "alt": "ChatRecap AI"
+            }
+        },
+        "links": [{
+                "title": "Prodotto",
+                "items": [{
+                        "title": "Funzionalità",
+                        "url": "/#feature"
+                    },
+                    {
+                        "title": "Prezzi",
+                        "url": "/#pricing"
+                    },
+                    {
+                        "title": "FAQ",
+                        "url": "/#faq"
+                    },
+                    {
+                        "title": "Documentazione",
+                        "url": "/docs"
+                    }
+                ]
+            },
+            {
+                "title": "Azienda",
+                "items": [{
+                        "title": "Chi Siamo",
+                        "url": "/about"
+                    },
+                    {
+                        "title": "Blog",
+                        "url": "/blog"
+                    },
+                    {
+                        "title": "Contattaci",
+                        "url": "/contact"
+                    },
+                    {
+                        "title": "Carriere",
+                        "url": "/careers"
+                    }
+                ]
+            },
+            {
+                "title": "Legale",
+                "items": [{
+                        "title": "Informativa sulla Privacy",
+                        "url": "/privacy"
+                    },
+                    {
+                        "title": "Termini di Servizio",
+                        "url": "/terms"
+                    },
+                    {
+                        "title": "Politica sui Cookie",
+                        "url": "/cookies"
+                    }
+                ]
+            },
+            {
+                "title": "Social Media",
+                "items": [{
+                        "title": "Twitter",
+                        "url": "https://twitter.com/chatrecapai",
+                        "icon": "RiTwitterXLine"
+                    },
+                    {
+                        "title": "LinkedIn",
+                        "url": "https://linkedin.com/company/chatrecapai",
+                        "icon": "RiLinkedinLine"
+                    },
+                    {
+                        "title": "Facebook",
+                        "url": "https://facebook.com/chatrecapai",
+                        "icon": "RiFacebookLine"
+                    },
+                    {
+                        "title": "Instagram",
+                        "url": "https://instagram.com/chatrecapai",
+                        "icon": "RiInstagramLine"
+                    }
+                ]
+            }
+        ],
+        "copyright": "© 2024 ChatRecap AI. Tutti i diritti riservati."
+    }
+}

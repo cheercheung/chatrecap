@@ -1,0 +1,96 @@
+{
+  "personalityInsights": {
+    "sender1": {
+      "name": "Amor Nuevo",
+      "interestLevel": {
+        "score": 8,
+        "detail": "Amor Nuevo initiates conversation, asks questions about Iann's activities, and expresses a desire for communication. The frequent use of 'Holaa' and 'Que haces' indicates a consistent effort to stay connected."
+      },
+      "responseEnthusiasm": {
+        "score": 7,
+        "detail": "Amor Nuevo responds with enthusiasm, using emojis and phrases like 'Jajaja' and 'Holaa'. The willingness to share personal details (DaviPlata, father's smart watch, going to a tattoo) suggests a comfortable level of sharing."
+      },
+      "emotionalStability": {
+        "score": 6,
+        "detail": "Amor Nuevo shows some emotional vulnerability, expressing a desire to be 'mala persona' but acknowledging an inability to do so. The concern about Iann's drinking and the request to be told goodnight suggest a need for reassurance and potential insecurity."
+      },
+      "responseTime": {
+        "score": 7,
+        "detail": "Amor Nuevo's responses are generally timely, often following up quickly after Iann's messages. The consistent back-and-forth suggests active participation in the conversation."
+      }
+    },
+    "sender2": {
+      "name": "Iann Coz",
+      "interestLevel": {
+        "score": 7,
+        "detail": "Iann frequently expresses affection ('Te amo') and initiates some conversation, but the responses are sometimes delayed (e.g., after waking up). The focus on drinking and the subsequent admission of being drunk suggest a fluctuating level of engagement."
+      },
+      "responseEnthusiasm": {
+        "score": 6,
+        "detail": "Iann's enthusiasm is evident in the frequent use of 'Te amo' and 'Jajaja'. However, the responses are sometimes brief, and the conversation is often driven by Amor Nuevo's questions."
+      },
+      "emotionalStability": {
+        "score": 5,
+        "detail": "Iann's emotional stability appears lower. The admission of being drunk, the fluctuating responses, and the quick shift to a 'fitness' lifestyle suggest impulsivity and potential issues with self-control. The lack of consistent communication could indicate emotional unavailability at times."
+      },
+      "responseTime": {
+        "score": 6,
+        "detail": "Iann's response time varies. Some responses are quick, while others are delayed, especially after drinking. The delay in responding after falling asleep suggests a lack of consistent availability."
+      }
+    }
+  },
+  "relationshipMetrics": {
+    "intimacy": {
+      "score": 7,
+      "detail": "The frequent expressions of love ('Te amo') and the sharing of personal details (e.g., plans, activities) indicate a moderate level of intimacy. The willingness to share photos and videos further supports this."
+    },
+    "communication": {
+      "score": 6,
+      "detail": "Communication is frequent, but the quality is inconsistent. There are moments of genuine connection, but also instances of delayed responses and potential miscommunication due to alcohol consumption. The conversation is primarily text-based, with some video calls."
+    },
+    "trust": {
+      "score": 5,
+      "detail": "The conversation hints at potential trust issues. Amor Nuevo's concern about Iann's drinking and his interactions with others ('las de allá') suggests a degree of insecurity and potential jealousy. The lack of immediate responses could also erode trust."
+    },
+    "conflict": {
+      "score": 4,
+      "detail": "The conflict level is low, but there are subtle signs of potential issues. The concern about Iann's drinking and the need for reassurance ('Si te acuestas a dormir sin decir me ofendo') suggest underlying tensions. The lack of direct confrontation, however, keeps the conflict level low."
+    }
+  },
+  "relationshipInsights": {
+    "points": [
+      {
+        "title": "Established Affection",
+        "description": "Both parties frequently express affection, indicating a loving relationship."
+      },
+      {
+        "title": "Inconsistent Communication",
+        "description": "Response times vary, and the quality of communication is affected by external factors (e.g., alcohol consumption)."
+      },
+      {
+        "title": "Potential Insecurity",
+        "description": "Amor Nuevo shows signs of insecurity, particularly regarding Iann's activities and drinking habits."
+      },
+      {
+        "title": "Shared Activities and Interests",
+        "description": "Both parties share details about their daily lives, indicating a desire to stay connected and share experiences."
+      }
+    ]
+  },
+  "suggestedTopics": [
+    "Discussing boundaries around alcohol consumption.",
+    "Expressing concerns and insecurities openly.",
+    "Planning shared activities and experiences.",
+    "Improving communication quality and consistency.",
+    "Defining expectations for communication and availability."
+  ],
+  "overallAnalysis": {
+    "messageTips": [
+      "Be mindful of alcohol's impact on communication.",
+      "Address insecurities and concerns directly.",
+      "Prioritize clear and consistent communication.",
+      "Schedule dedicated time for quality conversations.",
+      "Practice active listening and empathy."
+    ]
+  }
+}

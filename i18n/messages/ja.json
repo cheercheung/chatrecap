@@ -1,0 +1,369 @@
+{
+    "metadata": {
+        "title": "Chat Recap AI: 登録不要の無料オンラインチャット分析ツール - chatrecap.io",
+        "description": "チャット履歴を分析したいですか？ChatRecap AIはWhatsApp、Instagram、Snapchat、Discord、Telegramでの会話を理解するのに役立ちます。クロスプラットフォームの洞察を得て、あなたのコミュニケーションパターンを発見しましょう。",
+        "keywords": "chatrecap, チャット分析ツール, WhatsApp分析ツール, Instagramチャット分析, Discordチャット分析, Telegram分析ツール, Snapchat分析, チャット履歴, 会話パターン, メッセージングの洞察, クロスプラットフォームチャット分析, チャットエクスポート, チャットメトリクス"
+    },
+    "user": {
+        "sign_in": "サインイン",
+        "sign_out": "サインアウト",
+        "credits": "クレジット",
+        "api_keys": "APIキー",
+        "my_orders": "注文履歴",
+        "user_center": "ユーザーセンター",
+        "admin_system": "管理システム"
+    },
+    "sign_modal": {
+        "sign_in_title": "サインイン",
+        "sign_in_description": "アカウントにサインイン",
+        "sign_up_title": "サインアップ",
+        "sign_up_description": "アカウントを作成",
+        "email_title": "メールアドレス",
+        "email_placeholder": "メールアドレスを入力してください",
+        "password_title": "パスワード",
+        "password_placeholder": "パスワードを入力してください",
+        "forgot_password": "パスワードをお忘れですか？",
+        "or": "または",
+        "continue": "続ける",
+        "no_account": "アカウントをお持ちでないですか？",
+        "email_sign_in": "メールでサインイン",
+        "google_sign_in": "Googleでサインイン",
+        "github_sign_in": "GitHubでサインイン",
+        "close_title": "閉じる",
+        "cancel_title": "キャンセル"
+    },
+    "my_orders": {
+        "title": "分析履歴",
+        "description": "過去のチャット分析を表示",
+        "no_orders": "分析が見つかりません",
+        "tip": "チャットをアップロードして始めましょう",
+        "activate_order": "分析を表示",
+        "actived": "分析済み",
+        "join_discord": "Discordに参加",
+        "read_docs": "使い方",
+        "table": {
+            "order_no": "分析ID",
+            "email": "メールアドレス",
+            "product_name": "分析タイプ",
+            "amount": "チャット長",
+            "paid_at": "分析日時",
+            "github_username": "ユーザー名",
+            "status": "ステータス"
+        }
+    },
+    "my_credits": {
+        "title": "マイクレジット",
+        "left_tip": "残りクレジット: {left_credits}",
+        "no_credits": "クレジット記録がありません",
+        "recharge": "クレジットを購入",
+        "table": {
+            "trans_no": "取引ID",
+            "trans_type": "取引タイプ",
+            "credits": "クレジット",
+            "updated_at": "日付",
+            "status": "ステータス"
+        }
+    },
+    "blog": {
+        "title": "関係性の洞察",
+        "description": "関係コミュニケーションに関するヒント、リソース、最新情報",
+        "read_more_text": "もっと読む"
+    },
+    "my_invites": {
+        "title": "友達を招待",
+        "description": "Chat Recap AIを友達と共有してクレジットを獲得",
+        "no_invites": "招待記録が見つかりません",
+        "my_invite_link": "招待リンク",
+        "edit_invite_link": "招待リンクを編集",
+        "copy_invite_link": "招待リンクをコピー",
+        "invite_code": "招待コード",
+        "invite_tip": "友達をChat Recap AIに招待すると、5クレジットが無料でもらえます。",
+        "invite_balance": "招待からのクレジット残高",
+        "total_invite_count": "招待した友達の合計",
+        "total_paid_count": "購入した友達",
+        "total_award_amount": "獲得したクレジット合計",
+        "update_invite_code": "招待コードをカスタマイズ",
+        "update_invite_code_tip": "パーソナライズされた招待コードを作成",
+        "update_invite_button": "保存",
+        "no_orders": "他の人を招待する前に、少なくとも1つのチャットを分析する必要があります",
+        "no_affiliates": "招待プログラムは現在承認制です。申し込みはお問い合わせください。",
+        "table": {
+            "invite_time": "招待日",
+            "invite_user": "友達のメールアドレス",
+            "status": "ステータス",
+            "reward_percent": "報酬率",
+            "reward_amount": "獲得クレジット",
+            "pending": "保留中",
+            "completed": "完了"
+        }
+    },
+    "chat_analysis": {
+        "title": "Chat Recap AI",
+        "subtitle": "AIチャット分析",
+        "description": "Chat Recap AIであなたの会話を変革しましょう。チャットに隠されたパターンと洞察を解き明かします。より深いレベルで関係を理解しましょう。",
+        "upload_title": "チャット履歴入力",
+        "upload_description": "分析するチャットエクスポートをアップロード",
+        "select_platform": "プラットフォームを選択",
+        "platforms": {
+            "whatsapp": "WhatsApp",
+            "instagram": "Instagram",
+            "discord": "Discord",
+            "telegram": "Telegram",
+            "snapchat": "Snapchat"
+        },
+        "how_to_import": "WhatsAppからチャットをインポートする方法",
+        "import_methods": {
+            "web": "WhatsApp Webから",
+            "mobile": "WhatsApp iOS/Androidから"
+        },
+        "character_count": "{current} / {max} 文字",
+        "advanced_options": "詳細オプション",
+        "privacy_notice": "チャット履歴は保存されません。サーバーにキャッシュされたファイルは30分後に自動的に削除されます。",
+        "analyze_button": "チャットを分析",
+        "free_analysis": "チャットを無料で分析",
+        "sample_chat_text": "[2025/1/1, 01:00:00] ALICE: 明けましておめでとう！🎉\n[2025/1/1, 01:02:00] JEFF: 明けましておめでとう、愛しい人！🎆\n[2025/1/1, 08:15:00] ALICE: 今年最初のコーヒー！☕\n[2025/1/1, 08:20:00] JEFF: これからもよろしく！🥂\n[2025/1/1, 10:30:00] ALICE: 今日の予定は？🤔\n[2025/1/1, 10:32:00] JEFF: 公園を散歩しよう🌳\n[2025/1/1, 11:05:00] ALICE: 素敵ね！🌞\n[2025/1/1, 13:00:00] JEFF: 新年の抱負はある？\n[2025/1/1, 13:10:00] ALICE: もっと旅行すること！🌍\n[2025/1/1, 13:15:00] JEFF: それはいいね、僕も一緒に✈️\n[2025/1/1, 14:30:00] ALICE: 今日は天気がいいね！☀️\n[2025/1/1, 14:35:00] JEFF: 冒険にぴったりの日だね、どう思う？\n[2025/1/1, 16:00:00] ALICE: アイスクリームを食べようと思ってた🍦\n[2025/1/1, 16:10:00] JEFF: いいね！何味がいい？\n[2025/1/1, 18:30:00] ALICE: 夕食は何にする？\n[2025/1/1, 18:32:00] JEFF: ピザはどう？🍕"
+    },
+    "features": {
+        "title": "Chat Recap AIの主な機能",
+        "easy_tools": {
+            "title": "簡単作成ツール",
+            "description": "シンプルなインターフェースでAIチャット分析を作成。WhatsApp会話の分析や関係の理解に最適です。",
+            "points": [
+                "簡単なチャットインポート",
+                "複数のチャット形式をサポート",
+                "カスタムAIチャット分析設定",
+                "リアルタイム処理"
+            ]
+        },
+        "preview": {
+            "title": "リアルタイムプレビュー",
+            "description": "処理中に分析が形になるのを見ることができます。洞察をすぐにプレビューして、関係について情報に基づいた決断を下しましょう。",
+            "points": [
+                "即時分析プレビュー",
+                "インタラクティブな可視化",
+                "動的更新",
+                "モバイルフレンドリーな表示"
+            ]
+        },
+        "sentiment_analysis": {
+            "title": "感情分析",
+            "content": "会話の感情的なトーンを分析して、メッセージに表現された根底にある感情や態度を理解します。"
+        },
+        "response_time": {
+            "title": "応答時間パターン",
+            "content": "あなたと会話相手がお互いのメッセージにどれだけ早く応答するかを追跡し、エンゲージメントレベルとコミュニケーション習慣を明らかにします。"
+        },
+        "topic_analysis": {
+            "title": "トピック分析",
+            "content": "会話で最も一般的なトピックとテーマを発見し、関係で最も重要なことを理解するのに役立ちます。"
+        },
+        "comprehensive_analysis": {
+            "title": "包括的なチャット分析",
+            "content": "当社の高度なAIアルゴリズムは、チャット履歴全体を分析して、コミュニケーションパターンと関係のダイナミクスに関する深い洞察を提供します。"
+        },
+        "insights": {
+            "title": "深い洞察",
+            "description": "ChatRecap AIチャット分析で、チャットパターンと関係のダイナミクスに関する包括的な洞察を得ましょう。",
+            "points": [
+                "感情分析",
+                "応答時間パターン",
+                "エンゲージメントメトリクス",
+                "レッドフラグ検出"
+            ]
+        }
+    },
+    "pricing": {
+        "title": "高度なAI分析のためのクレジット購入",
+        "description": "1クレジット ≈ 現在5000単語、コスト最適化に取り組んでいます。"
+    },
+    "testimonial": {
+        "title": "恋人たちに愛されています",
+        "subtitle": "関係についてより深い洞察を発見したユーザー",
+        "items": [{
+                "initials": "AAD",
+                "title": "関係分析",
+                "content": "正直に言うと...驚いています。自分が完全に気づく前に、なぜその関係が終わったのかを特定してくれました。"
+            },
+            {
+                "initials": "SSP",
+                "title": "記念日分析",
+                "content": "🥰 1年後の私たちを見て...この進歩を見るのは素晴らしいです。一緒に成長してきた様子がよくわかります！"
+            },
+            {
+                "initials": "MMT",
+                "title": "個人の成長",
+                "content": "容赦なく正直な関係のアドバイスは気分を傷つけましたが...まさに聞く必要があったことでした。"
+            }
+        ]
+    },
+    "how_it_works": {
+        "title": "Chat Recap AIでチャットを分析する方法は？",
+        "subtitle": "会話に関する洞察を得るためのシンプルな3ステッププロセス",
+        "steps": [{
+                "number": "1",
+                "title": "チャットをアップロード",
+                "description": "WhatsAppや他のプラットフォームからチャット履歴をエクスポートし、安全なChatRecap AIプラットフォームにアップロードします"
+            },
+            {
+                "number": "2",
+                "title": "分析を選択",
+                "description": "会話のどの側面を分析したいかを選択します - 基本的なパターンから深い感情的洞察まで"
+            },
+            {
+                "number": "3",
+                "title": "洞察を得る",
+                "description": "コミュニケーションパターンに関する可視化と実用的な洞察を含む詳細な分析を受け取ります"
+            }
+        ],
+        "footer": {
+            "social_links": {
+                "whatsapp": "WhatsApp",
+                "instagram": "Instagram",
+                "discord": "Discord",
+                "telegram": "Telegram",
+                "snapchat": "Snapchat"
+            },
+            "copyright": "© 2025 ChatRecap AI. All rights reserved.",
+            "privacy_policy": "プライバシーポリシー",
+            "terms_of_service": "利用規約"
+        },
+        "chat_notifications": {
+            "title": "チャット通知",
+            "speakers": {
+                "girlfriend": "彼女",
+                "boyfriend": "彼氏",
+                "her": "彼女",
+                "him": "彼",
+                "ex": "元カレ/カノ",
+                "friend": "友達",
+                "crush": "好きな人"
+            },
+            "times": {
+                "just_now": "たった今",
+                "minutes_ago": "{minutes}分前",
+                "hours_ago": "{hours}時間前",
+                "days_ago": "{days}日前"
+            },
+            "messages": {
+                "message1": "やっとメッセージくれたの？世界記録を破ったに違いないね🏆🙄",
+                "message2": "ごめん、私の電話はピザの配達にしか反応しないの🍕📳",
+                "message3": "あなたの口説き文句は電子レンジのポップコーンより速いね🍿💨",
+                "message4": "私たちのチャットは南極より冷たいね❄️😎",
+                "message5": "私が恋しい？あなたの名前すら覚えてないわ😂",
+                "message6": "あなたの恋愛生活は私のWiFiみたい - 不安定な接続📶",
+                "message7": "メッセージ見ました。2〜3営業日以内に返信します📅"
+            }
+        },
+        "chatrecapplatform": {
+            "meta": {
+                "title": "チャットプラットフォームを選択",
+                "description": "分析したいチャットのプラットフォームを選択"
+            },
+            "badge": "チャット分析",
+            "title": "チャットプラットフォームを選択",
+            "description": "チャット履歴を分析したいプラットフォームを選択してください。包括的な洞察を提供するために複数のメッセージングプラットフォームをサポートしています。",
+            "select_button": "プラットフォームを選択",
+            "platforms": {
+                "whatsapp": {
+                    "description": "WhatsApp会話を分析して、メッセージングパターンと関係のダイナミクスを理解します。"
+                },
+                "instagram": {
+                    "description": "Instagramのダイレクトメッセージから洞察を発見し、コミュニケーションスタイルを理解します。"
+                },
+                "discord": {
+                    "description": "Discordチャットを分析して、ゲームやコミュニティのコンテキストでのコミュニケーションをより理解します。"
+                },
+                "telegram": {
+                    "description": "Telegram会話から洞察を得て、メッセージングパターンを理解します。"
+                },
+                "snapchat": {
+                    "description": "Snapchat会話を分析して、コミュニケーションスタイルとパターンを理解します。"
+                }
+            }
+        },
+        "payment": {
+            "title": "AIチャット分析",
+            "description": "AIを使用してチャット履歴を深く分析し、パーソナリティの洞察と関係分析を取得",
+            "service_name": "AIチャット分析サービス",
+            "pay_button": "今すぐ支払う",
+            "error_title": "エラー",
+            "missing_file_id": "ファイルIDがありません。先にファイルをアップロードしてください",
+            "return_home": "ホームに戻る",
+            "processing": "処理中..."
+        },
+        "chatrecapresult": {
+            "title": "チャット分析結果",
+            "description": "会話パターンと関係のダイナミクスに関する洞察を発見",
+            "back_to_upload": "アップロードに戻る",
+            "export_pdf": "PDFとしてエクスポート",
+            "share_results": "結果を共有",
+            "export_not_implemented": "エクスポート機能は近日公開予定です！",
+            "share_not_implemented": "共有機能は近日公開予定です！",
+            "not_found": "分析が見つかりません",
+            "error_loading": "分析データの読み込みエラー",
+            "errors": {
+                "result_not_found": "分析結果が見つかりません。ファイルを再度アップロードしてください。",
+                "loading_failed": "分析データの読み込みに失敗しました。もう一度お試しください。"
+            },
+            "processing_errors": {
+                "no_messages": "有効なメッセージを抽出できませんでした",
+                "invalid_date": "一部のメッセージに無効な日付があります",
+                "processing_failed": "処理に失敗しました: {message}",
+                "filter_too_strict": "警告: すべてのメッセージがフィルタリングされました。フィルター条件が厳しすぎる可能性があります",
+                "single_participant": "参加者が1人しか検出されませんでした。これは会話ではない可能性があります",
+                "short_timespan": "会話の期間が非常に短いです。完全な会話ではない可能性があります"
+            },
+            "chat_story": "あなたのチャットストーリー",
+            "first_message": "最初のメッセージ",
+            "last_message": "最後のメッセージ",
+            "days": "日",
+            "response_patterns": {
+                "evening_active": "夕方は素早い返信、朝はより遅い",
+                "morning_active": "夕方より朝の方がアクティブ",
+                "consistent": "一日を通して一貫した応答時間"
+            },
+            "time_of_day": {
+                "morning": "朝",
+                "afternoon": "午後",
+                "evening": "夕方",
+                "night": "夜"
+            },
+            "day_names": {
+                "sunday": "日曜日",
+                "monday": "月曜日",
+                "tuesday": "火曜日",
+                "wednesday": "水曜日",
+                "thursday": "木曜日",
+                "friday": "金曜日",
+                "saturday": "土曜日"
+            },
+            "timespan_format": "あなたのストーリーは{startYear}年{startMonth}{startDay}日（{startDayName}）00:00に始まり、{durationText}にわたって展開され、{endYear}年{endMonth}{endDay}日（{endDayName}）23:59まで続きました—時の流れに永遠の痕跡を残しています。",
+            "analysis_card": {
+                "example_title": "分析カードの例",
+                "example_description": "以下はさまざまなメトリクスを持つ分析カードの例です",
+                "user_satisfaction": {
+                    "title": "ユーザー満足度",
+                    "content": "今四半期のユーザー満足度は85％に達し、前四半期と比較して5ポイント上昇しました。\n主な成長は新製品機能のリリースとユーザーインターフェースの最適化によるものです。\nユーザーフィードバックによると、応答速度と使いやすさが満足度向上の主な要因です。\nモバイル操作プロセスを特に重視して、ユーザーエクスペリエンスの最適化を継続することをお勧めします。"
+                },
+                "conversion_rate": {
+                    "title": "コンバージョン率",
+                    "content": "今月のコンバージョン率は62％で、先月から3ポイント下落しました。\n分析によると、コンバージョン率の低下は主に新しいプロモーションチャネルの品質の低さが原因です。\n高品質トラフィックのコンバージョン率は安定していますが、低品質トラフィックの増加がコンバージョン率の全体的な低下につながっています。\nトラフィックソースを最適化し、訪問者の品質を向上させ、ランディングページのエクスペリエンスを強化することをお勧めします。"
+                },
+                "system_performance": {
+                    "title": "システムパフォーマンス",
+                    "content": "システムパフォーマンスメトリクスは93％に達し、過去最高のレベルです。\nサーバー応答時間は平均200ms減少し、ページ読み込み速度は15％向上しました。\nデータベースクエリの最適化とCDNの展開がパフォーマンス向上の主な理由です。\nピークパフォーマンスの監視を継続し、キャッシュ戦略のさらなる最適化を検討することをお勧めします。"
+                }
+            },
+            "overview_title": "概要",
+            "messages": "メッセージ",
+            "total_messages": "合計メッセージ",
+            "words": "単語",
+            "total_words": "合計単語数",
+            "words_per_message": "メッセージあたりの単語数",
+            "avg_words_per_msg": "平均単語数/メッセージ",
+            "overview_story_part1": "あなたの会話は時間をかけて交換された<span class='highlight'>{totalMessages}メッセージ</span>を通して美しい物語を語ります。{sender1Name}は<span class='highlight'>{sender1Messages}メッセージ</span>を送信し、{sender2Name}は<span class='highlight'>{sender2Messages}メッセージ</span>で応答しました。",
+            "overview_story_part2": "一緒に、あなたたちは<span class='highlight'>{totalWords}単語</span>のタペストリーを織り上げました。{sender1Name}が<span class='highlight'>{sender1Words}単語</span>を貢献し、{sender2Name}が<span class='highlight'>{sender2Words}単語</span>を共有しています。あなたたちの会話は意味深く実質的で、メッセージあたり平均<span class='highlight'>{wordsPerMessage}単語</span>です。",
+            "overview_story_part3": "最もアクティブな会話は<span class='highlight'>{mostActiveDay}</span>に行われ、毎日平均<span class='highlight'>{avgMessagesPerDay}メッセージ</span>が交換されています。典型的な応答時間<span class='highlight'>{responseTime}</span>は、お互いにコミュニケーションするときに両方が感じる熱心な期待を示しています。"
+        }
+    }
+}

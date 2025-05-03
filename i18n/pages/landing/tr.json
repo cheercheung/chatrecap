@@ -1,0 +1,481 @@
+{
+    "template": "shipany-template-one",
+    "theme": "light",
+    "header": {
+        "brand": {
+            "title": "ChatRecap AI",
+            "logo": {
+                "src": "/logo.png",
+                "alt": "ChatRecap AI"
+            },
+            "url": "/"
+        },
+        "nav": {
+            "items": [{
+                    "title": "Özellikler",
+                    "url": "/#feature",
+                    "icon": "HiOutlineSparkles"
+                },
+                {
+                    "title": "Nasıl Çalışır",
+                    "url": "/#usage",
+                    "icon": "RiQuestionLine"
+                },
+                {
+                    "title": "Fiyatlandırma",
+                    "url": "/#pricing",
+                    "icon": "MdPayment"
+                },
+                {
+                    "title": "Platformlar",
+                    "url": "/#showcase",
+                    "icon": "BiCube",
+                    "children": [{
+                            "title": "WhatsApp Analizi",
+                            "description": "WhatsApp Sohbetlerini Analiz Et",
+                            "icon": "RiWhatsappLine",
+                            "url": "/#whatsapp",
+                            "target": "_self"
+                        },
+                        {
+                            "title": "Instagram Analizi",
+                            "description": "Instagram DM'lerini Analiz Et",
+                            "icon": "RiInstagramLine",
+                            "url": "/#instagram",
+                            "target": "_self"
+                        }
+                    ]
+                }
+            ]
+        },
+        "buttons": [{
+            "title": "Ücretsiz Dene",
+            "url": "/chatrecapanalysis",
+            "target": "_self",
+            "variant": "link",
+            "icon": "RiArrowRightUpLine"
+        }],
+        "show_sign": true,
+        "show_theme": true,
+        "show_locale": true
+    },
+    "hero": {
+        "title": "Sohbetlerini ChatRecap AI ile Analiz Et",
+        "highlight_text": "ChatRecap AI",
+        "description": "Chat Recap AI ile sohbetlerindeki gizli kalıpları ve içgörüleri keşfet, iletişim kalıplarını, yanıt sürelerini ve duygusal bağlantıları ortaya çıkar.",
+        "announcement": {
+            "label": "2024",
+            "title": "🚀 Şimdi Ekipler ve Bireyler için Kullanılabilir",
+            "url": "/#pricing"
+        },
+        "tip": "⌛️ Sınırlı süre teklifi %100 indirim",
+        "buttons": [{
+                "title": "Recap AI'yi Ücretsiz Dene",
+                "icon": "RiFlashlightFill",
+                "url": "/chatrecapanalysis",
+                "target": "_self",
+                "variant": "default"
+            }
+        ],
+        "show_happy_users": true,
+        "show_badge": true,
+        "features_disabled": {
+            "note": "这部分配置已被替换为聊天通知组件，暂时保留",
+            "title": "Temel Özellikler",
+            "items": [
+                {
+                    "title": "Romantik Deneyim",
+                    "description": "Kullanıcılara romantik ve sıcak bir deneyim sunma",
+                    "icon": "Heart"
+                },
+                {
+                    "title": "Hızlı Yanıt",
+                    "description": "Akıcı çalışma ile hızlı sistem yanıtı",
+                    "icon": "Zap"
+                },
+                {
+                    "title": "Güvenli ve Güvenilir",
+                    "description": "Kullanıcı gizliliğini korumak için şifrelenmiş veri depolama",
+                    "icon": "Shield"
+                },
+                {
+                    "title": "Güzel Tasarım",
+                    "description": "Hoş bir görsel deneyim için özenle tasarlanmış arayüz",
+                    "icon": "Star"
+                },
+                {
+                    "title": "7/24 Hizmet",
+                    "description": "24 saat müşteri hizmetleri",
+                    "icon": "Clock"
+                }
+            ]
+        }
+    },
+   
+    "feature": {
+        "name": "feature",
+        "title": "ChatRecap AI'nin Temel Özellikleri",
+        "description": "Gelişmiş analiz araçlarımızla sohbetlerinden güçlü içgörüler keşfet.",
+        "items": [{
+                "title": "Çoklu Platform Etkileşim Analizi",
+                "description": "WhatsApp, WeChat, Instagram ve daha fazlasında sohbet sıklığını ve kalıplarını analiz et. Zirve dönemleri belirle, yanıt süresindeki değişiklikleri takip et ve tüm platformlarda birleşik eğilimleri keşfet.",
+                "icon": "RiGlobalLine"
+            },
+            {
+                "title": "İletişim Stili ve Dil Analizi",
+                "description": "Gelişmiş doğal dil işleme kullanarak benzersiz iletişim stilini keşfet, kelime kullanımını, emoji kalıplarını analiz et ve duygusal ve ilişkiye özgü dil kalıplarını ortaya çıkar.",
+                "icon": "RiChatSmile3Line"
+            },
+            {
+                "title": "Konuşma Akışı ve Dinamikleri",
+                "description": "Konuşmaların nasıl başladığını, geliştiğini ve bittiğini anla. Kimin daha sık etkileşim başlattığını takip et ve diyalog konularındaki ve duygusal tonlardaki değişiklikleri tespit et.",
+                "icon": "RiFlowChart"
+            },
+            {
+                "title": "Duygusal Duygu ve Sağlık İçgörüleri",
+                "description": "Duygusal nüansları tespit et, sağlıklı veya sağlıksız davranış kalıplarını belirle ve ilişkilerinde daha iyi iletişim alışkanlıklarını teşvik etmek için farkındalık yarat.",
+                "icon": "RiHeartLine"
+            },
+            {
+                "title": "Katılım Derinliği ve Sıklığı Metrikleri",
+                "description": "Her iki tarafın yatırım seviyesini değerlendirmek için yanıt uzunluklarını, konuşma derinliklerini ve katılım sıklığını ölç.",
+                "icon": "RiBarChartLine"
+            },
+            {
+                "title": "Kişisel Bilgi Paylaşım Dengesi",
+                "description": "Kimin daha fazla kişisel detay paylaştığını ortaya çıkar, açıklık seviyelerini takip et ve daha dengeli ve karşılıklı bir ilişki dinamiği oluşturmak için ipuçları keşfet.",
+                "icon": "RiUserHeartLine"
+            }
+        ]
+    },
+    "scenarios": {
+        "name": "scenarios",
+        "label": "Uygulama Senaryoları",
+        "title": "Tüm İlişki Türleri için Sohbet Analizi ve Özetleri",
+        "description": "Sohbet analiz yapay zekamız farklı ilişki türlerinin nüanslarını anlar. İster romantik çiftler, aile üyeleri, arkadaşlar veya meslektaşlar olsun, analizimiz benzersiz içgörüler ortaya çıkarır ve her ilişki dinamiği için özelleştirilmiş sohbet özetleri oluşturur.",
+        "scenario_label": "Senaryo",
+        "items": [
+            {
+                "title": "Romantik İlişkiler",
+                "description": "Partnerinle iletişim kalıplarını anla ve duygusal bağınızı güçlendir.",
+                "buttonText": "İlişkimi Analiz Et"
+            },
+            {
+                "title": "Aile Bağlantıları",
+                "description": "Aile grup sohbetlerini analiz et ve sevdiklerinle iletişimi geliştir.",
+                "buttonText": "Aile Sohbetini Analiz Et"
+            },
+            {
+                "title": "2 Yıllık İlişki Analizi",
+                "description": "İlişkinin zaman içindeki büyümesini takip et ve iletişiminin nasıl geliştiğini keşfet.",
+                "buttonText": "İlişki Büyümesini Analiz Et"
+            },
+            {
+                "title": "Arkadaşlıklar",
+                "description": "Arkadaşlarla etkileşim kalıplarını keşfet ve sosyal bağlantılarını besle.",
+                "buttonText": "Arkadaşlığı Analiz Et"
+            }
+        ]
+    },
+    
+    "stats": {
+        "name": "stats",
+        "label": "İstatistikler",
+        "title": "İnsanlar ChatRecap AI'yi Seviyor",
+        "description": "zaman tasarrufu sağladığı ve üretkenliği artırdığı için.",
+        "icon": "FaRegHeart",
+        "items": [{
+                "title": "Güvenilen",
+                "label": "10K+",
+                "description": "Kullanıcı"
+            },
+            {
+                "title": "Özetlenen",
+                "label": "500K+",
+                "description": "Toplantı"
+            },
+            {
+                "title": "Tasarruf Edilen Zaman",
+                "label": "1M+",
+                "description": "Saat"
+            }
+        ]
+    },
+    "pricing": {
+        "name": "pricing",
+        "label": "Fiyatlandırma",
+        "title": "Basit ve Şeffaf Fiyatlandırma",
+        "description": "Sana ve ekibine uygun planı seç.",
+        "groups": [],
+        "items": [{
+                "title": "Ücretsiz",
+                "description": "Yeni başlayan bireyler için mükemmel.",
+                "features_title": "Dahil",
+                "features": [
+                    "Ayda 5 toplantı özeti",
+                    "Temel özet özellikleri",
+                    "E-posta teslimi",
+                    "7 günlük veri saklama",
+                    "Sadece tek kullanıcı",
+                    "Standart destek"
+                ],
+                "interval": "monthly",
+                "amount": 0,
+                "cn_amount": 0,
+                "currency": "USD",
+                "price": "$0",
+                "original_price": "$0",
+                "unit": "USD",
+                "is_featured": false,
+                "tip": "Kredi kartı gerekmez",
+                "button": {
+                    "title": "Başla",
+                    "url": "/#signup",
+                    "icon": "RiFlashlightFill"
+                },
+                "product_id": "free",
+                "product_name": "ChatRecap AI Free",
+                "credits": 5,
+                "valid_months": 1
+            },
+            {
+                "title": "Pro",
+                "description": "Daha fazla toplantı özetine ihtiyaç duyan profesyoneller için.",
+                "label": "Popüler",
+                "features_title": "Ücretsiz'deki her şey, artı",
+                "features": [
+                    "Ayda 50 toplantı özeti",
+                    "Gelişmiş özet özellikleri",
+                    "Aksiyon maddesi çıkarımı",
+                    "30 günlük veri saklama",
+                    "3 kullanıcıya kadar",
+                    "Öncelikli destek",
+                    "Özelleştirilmiş teslimat seçenekleri"
+                ],
+                "interval": "monthly",
+                "amount": 1999,
+                "cn_amount": 13999,
+                "currency": "USD",
+                "price": "$19.99",
+                "original_price": "$29.99",
+                "unit": "USD",
+                "is_featured": true,
+                "tip": "En popüler seçim",
+                "button": {
+                    "title": "Başla",
+                    "url": "/#signup",
+                    "icon": "RiFlashlightFill"
+                },
+                "product_id": "pro",
+                "product_name": "ChatRecap AI Pro",
+                "credits": 50,
+                "valid_months": 1
+            },
+            {
+                "title": "Ekip",
+                "description": "Sınırsız toplantı özetine ihtiyaç duyan ekipler için.",
+                "features_title": "Pro'daki her şey, artı",
+                "features": [
+                    "Sınırsız toplantı özetleri",
+                    "Premium özet özellikleri",
+                    "Aksiyon maddesi takibi",
+                    "90 günlük veri saklama",
+                    "10 kullanıcıya kadar",
+                    "7/24 öncelikli destek",
+                    "Ekip işbirliği özellikleri",
+                    "Yönetici paneli"
+                ],
+                "interval": "monthly",
+                "amount": 4999,
+                "cn_amount": 34999,
+                "currency": "USD",
+                "price": "$49.99",
+                "original_price": "$69.99",
+                "unit": "USD",
+                "is_featured": false,
+                "tip": "Ekipler için en iyi değer",
+                "button": {
+                    "title": "Başla",
+                    "url": "/#signup",
+                    "icon": "RiFlashlightFill"
+                },
+                "product_id": "team",
+                "product_name": "ChatRecap AI Team",
+                "credits": 999999,
+                "valid_months": 1
+            }
+        ]
+    },
+    "testimonial": {
+        "name": "testimonial",
+        "label": "Kullanıcı Görüşleri",
+        "title": "Kullanıcılar ChatRecap AI Hakkında Ne Diyor",
+        "description": "ChatRecap AI'yi toplantı üretkenliklerini artırmak için kullanan profesyonelleri dinle.",
+        "icon": "GoThumbsup",
+        "items": [{
+                "title": "Sarah Johnson",
+                "label": "TechCorp'ta Ürün Müdürü",
+                "description": "ChatRecap AI, toplantıları nasıl yönettiğimi dönüştürdü. Artık önemli detayları veya aksiyon maddelerini kaçırmaktan endişelenmiyorum. Her toplantıda kişisel bir asistana sahip olmak gibi!",
+                "image": {
+                    "src": "/imgs/users/1.png"
+                }
+            },
+            {
+                "title": "Michael Chen",
+                "label": "StartupX CEO'su",
+                "description": "CEO olarak, tüm gün toplantılardayım. ChatRecap AI organize kalmama yardımcı oluyor ve takipleri asla kaçırmamamı sağlıyor. Üretkenliğim için oyun değiştirici oldu.",
+                "image": {
+                    "src": "/imgs/users/2.png"
+                }
+            },
+            {
+                "title": "Emily Rodriguez",
+                "label": "DesignHub'da Ekip Lideri",
+                "description": "Ekibim ChatRecap AI'nin toplantı özetlerini seviyor. Herkesi aynı çizgide ve aksiyon maddelerinden sorumlu tutuyor. Takibimizde önemli bir iyileşme gördük.",
+                "image": {
+                    "src": "/imgs/users/3.png"
+                }
+            },
+            {
+                "title": "David Kim",
+                "label": "Satış Direktörü",
+                "description": "ChatRecap AI, müşteri toplantılarım için paha biçilmez oldu. Not almak yerine ilişki kurmaya odaklanabiliyorum ve yine de her konuşmanın mükemmel kayıtlarına sahip oluyorum.",
+                "image": {
+                    "src": "/imgs/users/4.png"
+                }
+            },
+            {
+                "title": "Lisa Thompson",
+                "label": "Proje Yöneticisi",
+                "description": "Aksiyon maddesi takip özelliği harika! Toplantılarımızdan görevleri ve son tarihleri otomatik olarak tanımlıyor, bu da proje tamamlama oranımızı %40 artırdı.",
+                "image": {
+                    "src": "/imgs/users/5.png"
+                }
+            },
+            {
+                "title": "James Wilson",
+                "label": "Uzak Ekip Yöneticisi",
+                "description": "Uzak bir ekibi yönetmek zorlu, ancak ChatRecap AI aynı sayfada kalmamıza yardımcı oluyor. Toplantı özetleri, herkesin ne tartışıldığını ve ne beklendiğini bilmesini sağlıyor.",
+                "image": {
+                    "src": "/imgs/users/6.png"
+                }
+            }
+        ]
+    },
+    "faq": {
+        "name": "faq",
+        "label": "Sık Sorulan Sorular",
+        "title": "ChatRecap AI Hakkında Sık Sorulan Sorular",
+        "description": "Başka bir sorun mu var? E-posta veya sohbet yoluyla bizimle iletişime geç.",
+        "items": [{
+                "title": "ChatRecap AI hangi tür toplantıları özetleyebilir?",
+                "description": "ChatRecap AI, bire bir toplantılar, ekip toplantıları, müşteri görüşmeleri, mülakatlar ve daha fazlası dahil olmak üzere neredeyse her tür toplantı veya görüşme ile çalışır. Zoom, Google Meet, Microsoft Teams, Webex ve diğerleri gibi tüm büyük toplantı platformlarıyla uyumludur."
+            },
+            {
+                "title": "Toplantı özetleri ne kadar doğru?",
+                "description": "ChatRecap AI, yüksek doğrulukta özetler sağlamak için milyonlarca toplantı üzerinde eğitilmiş gelişmiş yapay zeka modelleri kullanır. Teknolojimiz genellikle toplantıların kilit noktalarının, kararlarının ve aksiyon maddelerinin %95'inden fazlasını yakalar."
+            },
+            {
+                "title": "Toplantı verilerim güvende mi?",
+                "description": "Evet, güvenlik en büyük önceliğimizdir. Tüm toplantı verileri aktarım ve işleme sırasında şifrelenir. Esnek veri saklama politikaları sunuyoruz ve isterseniz verilerinizin işlemden sonra otomatik olarak silinmesini seçebilirsiniz."
+            },
+            {
+                "title": "Bir toplantı özeti almak ne kadar sürer?",
+                "description": "Çoğu toplantı özeti, toplantının süresine bağlı olarak toplantı bittikten sonra 5-10 dakika içinde teslim edilir. Daha uzun toplantılar (2 saatten fazla) için 30 dakikaya kadar sürebilir."
+            },
+            {
+                "title": "Özet formatını özelleştirebilir miyim?",
+                "description": "Evet, Pro ve Ekip planı kullanıcıları, dahil edilecek/hariç tutulacak bölümler, detay seviyesi ve teslimat tercihleri dahil olmak üzere özet formatlarını özelleştirebilir. Farklı toplantı türleri için şablonlar oluşturabilirsiniz."
+            },
+            {
+                "title": "Aksiyon maddesi takibi nasıl çalışır?",
+                "description": "ChatRecap AI, toplantı sırasında bahsedilen aksiyon maddelerini, son tarihleri ve sorumlu tarafları otomatik olarak tanımlar. Bunlar özette vurgulanır ve Asana, Trello veya Monday.com gibi görev yönetimi araçlarına aktarılabilir."
+            }
+        ]
+    },
+    "cta": {
+        "name": "cta",
+        "title": "Bugün Toplantı Notlarında Zaman Tasarrufu Yapmaya Başla",
+        "description": "Toplantılarını daha üretken hale getirmek için ChatRecap AI kullanan binlerce profesyonele katıl.",
+        "buttons": [{
+                "title": "Şimdi Dene",
+                "url": "/chatrecapanalysis",
+                "target": "_self",
+                "icon": "GoArrowUpRight"
+            }
+        ]
+    },
+    "upload_box": {
+        "name": "upload_box",
+        "title": "Chat Recap AI'yi Kullanmaya Başla",
+        "description": "Örnek kullan veya sohbet dosyası yükle, ÜCRETSİZ Analiz veya AI Özeti'ne tıkla.",
+        "sample_button_text": "Örnek Girdi Kullan",
+        "upload_button_text": "Dosya Yükle",
+        "supported_formats": "Desteklenen: .txt dosyası veya .txt dosyası içeren .zip dosyası (maks 5MB)",
+        "placeholder": "Sohbet metninizi buraya girin veya yapıştırın...",
+        "primary_button": {
+            "title": "AI Özeti",
+            "url": "/#recap",
+            "target": "_self",
+            "variant": "default"
+        },
+        "secondary_button": {
+            "title": "ÜCRETSİZ Analiz",
+            "url": "/chatrecapresult",
+            "target": "_self",
+            "variant": "secondary",
+            "icon": "RiFileTextLine"
+        },
+        "max_file_size": 5
+    },
+    "json_uploader": {
+        "name": "json_uploader",
+        "title": "Sohbet Verilerini Yükle",
+        "description": "Sohbet geçmişini analiz edeceğiz ve içgörüler sağlayacağız",
+        "upload_prompt": "{platform} JSON dosyanı yüklemek için tıkla",
+        "auto_sort_message": "Mesajlar zaman damgasına göre otomatik olarak sıralanacak.",
+        "max_message_count": "Maksimum mesaj sayısı: {count}",
+        "max_characters": "Maksimum karakter: {count}",
+        "selected_file": "Seçilen: {filename}",
+        "analyze_button": "ÜCRETSİZ Analiz",
+        "recap_button": "AI Özeti"
+    },
+    "platform_filter": {
+        "name": "platform_filter",
+        "title": "Platform Seç",
+        "options": [
+            {
+                "id": "whatsapp",
+                "label": "WhatsApp"
+            },
+            {
+                "id": "instagram",
+                "label": "Instagram"
+            },
+            {
+                "id": "discord",
+                "label": "Discord"
+            },
+            {
+                "id": "telegram",
+                "label": "Telegram"
+            },
+            {
+                "id": "snapchat",
+                "label": "Snapchat"
+            }
+        ]
+    },
+    "platform_upload": {
+        "name": "platform_upload",
+        "title": "Sohbet Verilerini Yükle",
+        "description": "Mesajlaşma platformunu seç ve analiz için sohbet verilerini yükle"
+    },
+    "footer": {
+        "name": "footer",
+        "brand": {
+            "title": "ChatRecap AI",
+            "description": "Zamandan tasarruf etmenizi ve organize kalmanızı sağlayan yapay zeka destekli toplantı özetleri. Bir daha asla önemli bir detayı veya aksiyon maddesini kaçırmayın."
+        }
+    }
+}
