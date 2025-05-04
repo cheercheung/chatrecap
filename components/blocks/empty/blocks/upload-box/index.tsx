@@ -86,11 +86,11 @@ export default function UploadBox({ upload_box }: { upload_box: UploadBoxType })
       const isAiRecap = event?.currentTarget === primaryButtonRef.current;
 
       if (isAiRecap) {
-        // 如果是AI Recap按钮，跳转到AI分析结果页面
-        router.push("/ai-insight-result");
+        // 如果是AI Recap按钮，跳转到AI分析结果示例页面
+        router.push("/ai-insight-result/sample");
       } else {
-        // 如果是FREE Analyze按钮，跳转到基础分析结果页面
-        router.push("/chatrecapresult");
+        // 如果是FREE Analyze按钮，跳转到基础分析结果示例页面
+        router.push("/chatrecapresult/sample");
       }
       return;
     }

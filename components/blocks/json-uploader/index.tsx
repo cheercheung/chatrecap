@@ -296,9 +296,9 @@ export default function JsonUploader({
     const redirectPath = recapButton?.url || "/ai-insight-result";
 
     try {
-      // 如果是示例数据，直接跳转到 AI 结果页
+      // 如果是示例数据，直接跳转到 AI 结果示例页面
       if (isSampleData) {
-        router.push("/ai-insight-result");
+        router.push("/ai-insight-result/sample");
         return;
       }
       // 先处理文件，获取fileId

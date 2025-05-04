@@ -8,8 +8,9 @@ import { getCompleteAnalysisData } from "@/lib/storage/index";
 import { AIInsights, AnalysisData } from "@/types/analysis";
 import logger from "@/lib/utils/logger";
 
-// 强制使用服务器端渲染
-export const dynamicParams = true;
+// 使用动态渲染，但对于没有fileId的页面使用静态渲染
+export const dynamic = 'auto';
+export const revalidate = 3600; // 1小时重新验证一次
 
 /**
  * Generate metadata for the AI Insight Result page
@@ -146,37 +147,29 @@ export default async function AiInsightResult({
   const analysisId = searchParamsData.id || searchParamsData.fileId;
   const analyzing = searchParamsData.analyzing === 'true';
 
+  // 如果没有提供文件ID，重定向到示例页面
+  if (!analysisId && !analyzing) {
+    // 使用Next.js的redirect函数，它会处理URL格式化
+    return redirect(`/${locale}/ai-insight-result/sample`);
+  }
+
   try {
     // Data fetching logic
     let aiInsights: AIInsights;
     let fullAnalysisData: AnalysisData | null;
 
-    if (analysisId) {
-      // If ID is provided, fetch the corresponding analysis data
-      fullAnalysisData = await getCompleteAnalysisData(analysisId);
+    // If ID is provided, fetch the corresponding analysis data
+    fullAnalysisData = await getCompleteAnalysisData(analysisId);
 
-      if (!fullAnalysisData) {
-        return <Empty message={t("errors.not_found")} />;
-      }
-
-      if (!fullAnalysisData.aiInsights) {
-        return <Empty message={t("errors.ai_insights_not_found") || "AI insights not found"} />;
-      }
-
-      aiInsights = fullAnalysisData.aiInsights;
-    } else {
-      // If no ID is provided, use sample data
-      aiInsights = sampleAiInsights;
-
-      // Create a sample analysis data with AI insights
-      const { generateSampleAnalysisData } = await import("@/lib/analysis/sampleData");
-      fullAnalysisData = generateSampleAnalysisData("sample");
-
-      // Ensure sample data includes AI insights
-      if (fullAnalysisData) {
-        fullAnalysisData.aiInsights = sampleAiInsights;
-      }
+    if (!fullAnalysisData) {
+      return <Empty message={t("errors.not_found")} />;
     }
+
+    if (!fullAnalysisData.aiInsights) {
+      return <Empty message={t("errors.ai_insights_not_found") || "AI insights not found"} />;
+    }
+
+    aiInsights = fullAnalysisData.aiInsights;
 
     const { relationshipInsights } = aiInsights;
 
