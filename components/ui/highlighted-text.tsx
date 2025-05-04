@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import { useTranslations } from 'next-intl';
 
 interface HighlightedTextProps {
   text: string;
@@ -21,16 +22,35 @@ const HighlightedText: React.FC<HighlightedTextProps> = ({
   text,
   highlightClassName = "text-primary font-semibold"
 }) => {
+  const t = useTranslations('components.highlighted_text');
+
   if (!text) return null;
 
+  // 获取翻译的文本
+  const veryPositive = t('very_positive');
+  const positive = t('positive');
+  const neutral = t('neutral');
+  const negative = t('negative');
+  const veryNegative = t('very_negative');
+  const morning = t('morning');
+  const afternoon = t('afternoon');
+  const evening = t('evening');
+  const quickResponses = t('quick_responses');
+  const mediumConversations = t('medium_conversations');
+
+  // 构建正则表达式模式
+  const pattern = new RegExp(`(\\b\\d+%?\\b|${veryPositive}|${positive}|${neutral}|${negative}|${veryNegative}|${morning}|${afternoon}|${evening}|${quickResponses}|${mediumConversations})`, 'gi');
+
   // 使用正则表达式查找需要高亮的部分（数字、百分比和情感描述）
-  const parts = text.split(/(\b\d+%?\b|Very Positive|Positive|Neutral|Negative|Very Negative|morning|afternoon|evening|Quick responses|Medium to long conversations)/gi);
+  const parts = text.split(pattern);
 
   return (
     <>
       {parts.map((part, index) => {
         // 检查是否是需要高亮的部分
-        const shouldHighlight = /(\b\d+%?\b|Very Positive|Positive|Neutral|Negative|Very Negative|morning|afternoon|evening|Quick responses|Medium to long conversations)/gi.test(part);
+        const shouldHighlight = pattern.test(part);
+        // 重置正则表达式的lastIndex
+        pattern.lastIndex = 0;
 
         return shouldHighlight ? (
           <span key={index} className={highlightClassName}>

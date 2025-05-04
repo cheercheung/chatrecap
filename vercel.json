@@ -3,5 +3,8 @@
     "app/api/**/*": {
       "maxDuration": 60
     }
-  }
+  },
+  "buildCommand": "prisma generate && next build",
+  "installCommand": "npm install",
+  "outputDirectory": ".next"
 }

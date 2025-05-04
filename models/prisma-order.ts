@@ -1,3 +1,5 @@
+import { prisma } from '@/lib/prisma';
+
 export enum OrderStatus {
   PENDING = 'PENDING',
   PAID = 'PAID',
@@ -19,8 +21,7 @@ export interface PrismaOrder {
 
 export async function createPrismaOrder(order: Partial<PrismaOrder>): Promise<PrismaOrder | null> {
   try {
-    const { PrismaClient } = require('@prisma/client');
-    const prisma = new PrismaClient();
+    // 使用导入的prisma实例而不是创建新实例
 
     const newOrder = await prisma.order.create({
       data: {
@@ -40,8 +41,7 @@ export async function createPrismaOrder(order: Partial<PrismaOrder>): Promise<Pr
 
 export async function getPrismaOrderById(id: string): Promise<PrismaOrder | null> {
   try {
-    const { PrismaClient } = require('@prisma/client');
-    const prisma = new PrismaClient();
+    // 使用导入的prisma实例
 
     const order = await prisma.order.findUnique({
       where: { id }
@@ -58,8 +58,7 @@ export async function getPrismaOrderById(id: string): Promise<PrismaOrder | null
 export async function findOrderByOrderNo(orderNo: string): Promise<PrismaOrder | null> {
   try {
     console.log(`Finding order by order number: ${orderNo}`);
-    const { PrismaClient } = require('@prisma/client');
-    const prisma = new PrismaClient();
+    // 使用导入的prisma实例
 
     const order = await prisma.order.findUnique({
       where: { id: orderNo }
@@ -85,8 +84,7 @@ export async function updateOrderStatus(orderNo: string, status: OrderStatus, pa
   try {
     console.log(`Updating order ${orderNo} status to ${status}${paymentId ? ` with payment ID ${paymentId}` : ''}`);
 
-    const { PrismaClient } = require('@prisma/client');
-    const prisma = new PrismaClient();
+    // 使用导入的prisma实例
 
     const updateData: any = { status };
     if (paymentId) {

@@ -1,6 +1,7 @@
 import { getSnowId } from "@/lib/hash";
 import { updateOrderStatus, OrderStatus } from "@/models/prisma-order";
 import crypto from 'crypto';
+import { prisma } from '@/lib/prisma';
 
 // 不再使用配置对象，直接使用环境变量
 
@@ -11,8 +12,6 @@ export async function createCreemCheckout(params: {
   product_id?: string; // 可选参数，如果提供则使用，否则使用环境变量中的默认值
 }) {
   // 使用Prisma创建订单记录
-  const { PrismaClient } = require('@prisma/client');
-  const prisma = new PrismaClient();
 
   try {
     // 生成订单号
@@ -117,8 +116,6 @@ function generateSignature(params: RedirectParams, apiKey: string): string {
 
 // 处理支付成功
 export async function handlePaymentSuccess(requestId: string, checkoutId: string) {
-  const { PrismaClient } = require('@prisma/client');
-  const prisma = new PrismaClient();
 
   try {
     // 使用Prisma事务更新订单状态
@@ -154,8 +151,6 @@ export async function handleCreemPaymentCallback(data: any) {
     console.log('Payment details:', JSON.stringify(data));
 
     // 使用Prisma事务更新订单状态
-    const { PrismaClient } = require('@prisma/client');
-    const prisma = new PrismaClient();
 
     try {
       // 更新订单状态为已支付
@@ -205,8 +200,6 @@ export async function verifyCreemPayment(order_no: string) {
 
     if (data.status === 'success') {
       // 支付成功，使用Prisma事务更新订单状态
-      const { PrismaClient } = require('@prisma/client');
-      const prisma = new PrismaClient();
 
       try {
         // 更新订单状态为已支付

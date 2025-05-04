@@ -26,11 +26,10 @@ export async function generateMetadata({
   } catch (error) {
     // 如果找不到翻译，使用一个函数返回默认值
     t = (key: string) => {
-      const defaultValues: Record<string, string> = {
-        "chatrecapresult.title": "Chat Recap Result",
-        "chatrecapresult.description": "View your chat analysis results"
-      };
-      return defaultValues[key] || key;
+      // 使用命名空间路径访问
+      if (key === "chatrecapresult.title") return "Chat Recap Result";
+      if (key === "chatrecapresult.description") return "View your chat analysis results";
+      return key;
     };
   }
 

@@ -1,0 +1,5 @@
+[Credentials]
+language=EN
+endpoint=cheerlin@1732593302845210.onaliyun.com
+accessKeyID=touch oss_config.txt
+accessKeySecret=GkBNHv34gsRVfq4UV0YLzrc7byyBit

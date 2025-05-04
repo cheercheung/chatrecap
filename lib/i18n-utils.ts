@@ -21,7 +21,7 @@ export async function getErrorMessage(
       locale,
       namespace: 'chatrecapresult.processing_errors'
     });
-    
+
     return t(key, params);
   } catch (error) {
     console.error(`Failed to get translation for ${key}:`, error);
@@ -40,10 +40,20 @@ export async function createI18nErrorMessage(
   locale: string = 'en'
 ): Promise<string> {
   const errorMessage = error instanceof Error ? error.message : String(error);
-  
+
   try {
     return await getErrorMessage(locale, 'processing_failed', { message: errorMessage });
   } catch (error) {
-    return `Processing failed: ${errorMessage}`;
+    try {
+      // 尝试从组件命名空间获取错误消息
+      const t = await getTranslations({
+        locale,
+        namespace: 'components.error_messages'
+      });
+      return t('processing_failed', { message: errorMessage });
+    } catch (innerError) {
+      // 如果都失败了，返回默认错误消息
+      return `Processing failed: ${errorMessage}`;
+    }
   }
 }

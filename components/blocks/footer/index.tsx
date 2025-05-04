@@ -5,13 +5,16 @@ import Icon from "@/components/icon";
 import { useTranslations } from "next-intl";
 
 export default function Footer({ footer }: { footer: FooterType }) {
-  // 尝试使用 footer 命名空间，如果不存在则使用默认值
+  // 使用 footer 命名空间和组件命名空间作为备用
   let t;
+  let componentT;
   try {
     t = useTranslations("footer");
+    componentT = useTranslations("components.footer");
   } catch (error) {
-    // 如果找不到 footer 命名空间，使用一个函数返回默认值
-    t = (key: string) => {
+    // 如果找不到命名空间，使用一个函数返回默认值
+    t = (key: string) => key;
+    componentT = (key: string) => {
       const defaultValues: Record<string, string> = {
         "copyright": "© 2024 Chat Recap AI. All rights reserved."
       };
@@ -61,7 +64,7 @@ export default function Footer({ footer }: { footer: FooterType }) {
           </div>
 
           <div className="mt-6 flex flex-col justify-between gap-4 border-t pt-6 text-center text-sm font-medium text-muted-foreground">
-            <p>{t("copyright")}</p>
+            <p>{t("copyright") || componentT("copyright")}</p>
 
             {footer.agreement && (
               <ul className="flex justify-center gap-4">

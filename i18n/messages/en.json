@@ -354,6 +354,29 @@
         "hours": "hours",
         "try_now": "Try Now"
     },
+    "components": {
+        "notification": {
+            "limited_time_offer": "Limited Time Offer!",
+            "use_code": "Use code",
+            "to_unlock": "to unlock",
+            "of_full_access": "of full access — absolutely",
+            "free": "FREE!",
+            "hurry": "Hurry, this code expires in",
+            "hours": "hours",
+            "try_now": "Try Now"
+        },
+        "footer": {
+            "copyright": "© 2025 ChatRecap AI. All rights reserved.",
+            "privacy_policy": "Privacy Policy",
+            "terms_of_service": "Terms of Service"
+        },
+        "action_buttons": {
+            "back_to_upload": "Back to Upload",
+            "share_results": "Share Results",
+            "link_copied": "Link copied to clipboard",
+            "copy_failed": "Failed to copy link"
+        }
+    },
     "chatrecapresult": {
         "title": "Your Chat Analysis Results",
         "description": "Discover insights about your conversation patterns and relationship dynamics",

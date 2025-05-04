@@ -15,22 +15,23 @@ export default function AiInsightActionButtons() {
   const [isSharing, setIsSharing] = useState(false);
   const { toast } = useToast();
 
-  // 尝试使用 chatrecapresult 命名空间，如果不存在则使用默认值
+  // 使用 chatrecapresult 命名空间和组件命名空间作为备用
   let t;
+  let componentT;
   try {
     t = useTranslations("chatrecapresult");
+    componentT = useTranslations("components.action_buttons");
   } catch (error) {
-    // 如果找不到 chatrecapresult 命名空间，使用一个函数返回默认值
-    t = (key: string) => {
+    // 如果找不到命名空间，使用一个函数返回默认值
+    t = (key: string) => key;
+    componentT = (key: string) => {
       const defaultValues: Record<string, any> = {
         "back_to_upload": "Back to Upload",
         "share_results": "Share Results",
-        "share.link_copied": "Link copied to clipboard",
-        "share.copy_failed": "Failed to copy link"
+        "link_copied": "Link copied to clipboard",
+        "copy_failed": "Failed to copy link"
       };
-      return key.includes('.')
-        ? key.split('.').reduce((o, i) => o?.[i], defaultValues as any)
-        : defaultValues[key] || key;
+      return defaultValues[key] || key;
     };
   }
   const router = useRouter();
@@ -60,13 +61,13 @@ export default function AiInsightActionButtons() {
 
       // 立即显示成功消息
       toast({
-        title: t("share.link_copied") || "Link copied!",
+        title: t("share.link_copied") || componentT("link_copied"),
         description: "The link has been copied to your clipboard. You can share it with your friends.",
       });
     } catch (error) {
       // 显示错误消息
       toast({
-        title: t("share.copy_failed") || "Failed to copy link",
+        title: t("share.copy_failed") || componentT("copy_failed"),
         description: "Please try again or copy the URL manually.",
         variant: "destructive",
       });
@@ -83,7 +84,7 @@ export default function AiInsightActionButtons() {
         className="flex items-center gap-2"
       >
         <ArrowLeft size={16} />
-        {t("back_to_upload")}
+        {t("back_to_upload") || componentT("back_to_upload")}
       </Button>
 
       <div className="flex flex-wrap gap-2">
@@ -103,7 +104,7 @@ export default function AiInsightActionButtons() {
           ) : (
             <>
               <Share2 size={16} />
-              {t("share_results")}
+              {t("share_results") || componentT("share_results")}
             </>
           )}
         </Button>

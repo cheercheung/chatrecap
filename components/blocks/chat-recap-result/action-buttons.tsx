@@ -11,22 +11,23 @@ import { PaymentTrigger } from '@/components/blocks/payment-trigger';
 export default function ActionButtons() {
   const [isSharing, setIsSharing] = useState(false);
 
-  // 尝试使用 chatrecapresult 命名空间，如果不存在则使用默认值
+  // 使用 chatrecapresult 命名空间和组件命名空间作为备用
   let t;
+  let componentT;
   try {
     t = useTranslations("chatrecapresult");
+    componentT = useTranslations("components.action_buttons");
   } catch (error) {
-    // 如果找不到 chatrecapresult 命名空间，使用一个函数返回默认值
-    t = (key: string) => {
+    // 如果找不到命名空间，使用一个函数返回默认值
+    t = (key: string) => key;
+    componentT = (key: string) => {
       const defaultValues: Record<string, any> = {
         "back_to_upload": "Back to Upload",
         "share_results": "Share Results",
-        "share.link_copied": "Link copied to clipboard",
-        "share.copy_failed": "Failed to copy link"
+        "link_copied": "Link copied to clipboard",
+        "copy_failed": "Failed to copy link"
       };
-      return key.includes('.')
-        ? key.split('.').reduce((o, i) => o?.[i], defaultValues as any)
-        : defaultValues[key] || key;
+      return defaultValues[key] || key;
     };
   }
   const router = useRouter();
@@ -55,10 +56,10 @@ export default function ActionButtons() {
       await navigator.clipboard.writeText(shareUrl.toString());
 
       // 显示成功消息
-      toast.success(t('share.link_copied') || 'Link copied to clipboard');
+      toast.success(t('share.link_copied') || componentT('link_copied'));
     } catch (error) {
       console.error('Copy failed:', error);
-      toast.error(t('share.copy_failed') || 'Failed to copy link');
+      toast.error(t('share.copy_failed') || componentT('copy_failed'));
 
       // 备选方案：提示用户手动复制
       alert('Please copy this link manually: ' + window.location.href);
@@ -75,7 +76,7 @@ export default function ActionButtons() {
         className="flex items-center gap-2"
       >
         <ArrowLeft size={16} />
-        {t("back_to_upload")}
+        {t("back_to_upload") || componentT("back_to_upload")}
       </Button>
 
       <div className="flex flex-wrap gap-2">
@@ -95,7 +96,7 @@ export default function ActionButtons() {
           ) : (
             <>
               <Share2 size={16} />
-              {t("share_results")}
+              {t("share_results") || componentT("share_results")}
             </>
           )}
         </Button>
