@@ -4,7 +4,7 @@ import { respData, respErr } from "@/lib/resp";
 export async function GET(req: Request) {
   try {
     // 从URL参数中获取fileId
-    const url = new URL(req.url);
+    const url = new URL(req.url, process.env.NEXT_PUBLIC_WEB_URL || 'http://localhost:3000');
     const fileId = url.searchParams.get('fileId');
 
     if (!fileId) {
