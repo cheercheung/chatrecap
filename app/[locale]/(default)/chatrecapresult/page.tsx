@@ -4,6 +4,7 @@ import ChatRecapResultPageComponent from "@/components/pages/chat-recap-result";
 import { generateSampleAnalysisData } from "@/lib/analysis/sampleData";
 import { readFile, FileType } from "@/lib/storage/index";
 import { AnalysisData } from "@/types/analysis";
+import { redirect } from "next/navigation";
 
 // 使用动态渲染，但对于没有fileId的页面使用静态渲染
 export const dynamic = 'auto';
@@ -54,8 +55,8 @@ export default async function ChatRecapResultPage({
 
   // 如果没有提供文件ID，重定向到示例页面
   if (!fileId) {
-    // 使用相对路径重定向，更简单高效
-    return Response.redirect(`/${locale}/chatrecapresult/sample`);
+    // 使用Next.js的redirect函数，它会处理URL格式化
+    redirect(`/${locale}/chatrecapresult/sample`);
   }
 
   // 直接从results目录获取分析数据
