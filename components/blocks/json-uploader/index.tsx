@@ -119,7 +119,7 @@ export default function JsonUploader({
 
     // 如果是示例数据，直接跳转到示例结果页面
     if (isSampleData) {
-      router.push(redirectPath);
+      router.push(`${redirectPath}/sample`);
       return;
     }
 
@@ -296,44 +296,19 @@ export default function JsonUploader({
     const redirectPath = recapButton?.url || "/chatrecapresult";
 
     try {
+      // 如果是示例数据，直接跳转到 AI 结果页
+      if (isSampleData) {
+        router.push("/ai-insight-result");
+        return;
+      }
       // 先处理文件，获取fileId
       await processFile(redirectPath);
 
       // 文件处理完成后，fileId已经被设置
       if (fileId) {
         // 未来这里会重定向到支付页面
-        // 支付成功后，支付页面会调用AI分析API并重定向到结果页面
-
-        // 目前暂时直接重定向到支付页面（未实现）
-        // 将来支付页面会处理支付逻辑，然后调用AI分析
         router.push(`/payment?fileId=${fileId}`);
-
-        // 注意：以下代码将来会移到支付成功后的回调函数中
-        // 现在暂时保留，但在实现支付功能时应该移除
-        /*
-        // 获取当前语言
-        const locale = document.documentElement.lang || 'en';
-
-        // 调用AI分析服务
-        const aiAnalysisResponse = await fetch('/api/chat-processing/ai-analysis', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            fileId: fileId,
-            locale
-          }),
-        });
-
-        if (!aiAnalysisResponse.ok) {
-          const errorData = await aiAnalysisResponse.json();
-          console.error('AI分析失败:', errorData);
-        }
-
-        // 重定向到AI分析结果页面
-        router.push(`/ai-insight-result?fileId=${fileId}`);
-        */
+        // ...支付成功后，支付页面会调用AI分析API并重定向到结果页面
       }
     } catch (error) {
       console.error('AI Recap处理失败:', error);
