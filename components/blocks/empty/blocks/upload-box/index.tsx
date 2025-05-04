@@ -80,9 +80,18 @@ export default function UploadBox({ upload_box }: { upload_box: UploadBoxType })
       return;
     }
 
-    // 如果是示例数据，直接跳转到示例结果页面
+    // 如果是示例数据，根据按钮类型决定跳转到哪个页面
     if (isSampleData) {
-      router.push("/chatrecapresult"); // 不带 fileId 参数，会显示示例数据
+      // 检查是哪个按钮触发的处理
+      const isAiRecap = event?.currentTarget === primaryButtonRef.current;
+
+      if (isAiRecap) {
+        // 如果是AI Recap按钮，跳转到AI分析结果页面
+        router.push("/ai-insight-result");
+      } else {
+        // 如果是FREE Analyze按钮，跳转到基础分析结果页面
+        router.push("/chatrecapresult");
+      }
       return;
     }
 

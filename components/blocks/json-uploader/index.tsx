@@ -293,7 +293,7 @@ export default function JsonUploader({
   // 处理 Recap 按钮点击
   const handleRecapClick = async () => {
     // 基础处理的重定向路径
-    const redirectPath = recapButton?.url || "/chatrecapresult";
+    const redirectPath = recapButton?.url || "/ai-insight-result";
 
     try {
       // 如果是示例数据，直接跳转到 AI 结果页

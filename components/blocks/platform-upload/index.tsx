@@ -98,9 +98,8 @@ export default function PlatformUpload({ section, upload_box, className }: Platf
             }}
             recapButton={{
               title: uploadBoxData.primary_button?.title || "AI Recap",
-              url: uploadBoxData.primary_button?.url || "/#recap",
+              url: "/ai-insight-result",
               target: uploadBoxData.primary_button?.target || "_self",
-              // 只有当 icon 存在时才包含它
               ...(uploadBoxData.primary_button?.icon ? { icon: uploadBoxData.primary_button.icon } : {}),
               variant: uploadBoxData.primary_button?.variant || "default"
             }}

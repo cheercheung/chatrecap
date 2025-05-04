@@ -37,8 +37,8 @@ const AiInsightResultPage: React.FC<AiInsightResultPageProps> = ({
     return (
       <main className="max-w-3xl mx-auto py-10 px-4 space-y-8">
         <div className="p-6 bg-red-50 border border-red-200 rounded-lg">
-          <h2 className="text-xl font-semibold text-red-700">数据不完整</h2>
-          <p className="mt-2 text-red-600">AI 分析结果数据不完整，无法显示完整分析。请联系客服获取帮助。</p>
+          <h2 className="text-xl font-semibold text-red-700">Data is incomplete</h2>
+          <p className="mt-2 text-red-600">AI analysis result is incomplete, please contact customer service for help.</p>
         </div>
       </main>
     );

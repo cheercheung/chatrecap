@@ -29,23 +29,7 @@ export function PaymentTrigger({
     console.log('Starting payment process for fileId:', fileId);
 
     try {
-      // 1. 开始进行数据处理和基础分析（异步进行，不等待完成）
-      console.log('Starting background processing for fileId:', fileId);
-      fetch('/api/chat-processing/process', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          fileId,
-          skipAiAnalysis: true // 只进行基础分析，不进行AI分析
-        }),
-      }).catch(err => {
-        console.error('Background processing failed:', err);
-        // 不阻止支付流程继续
-      });
-
-      // 2. 创建支付会话
+      // 1. 创建支付会话
       console.log('Creating payment session with params:', { fileId, amount });
       const response = await fetch('/api/creem-checkout', {
         method: 'POST',
@@ -70,9 +54,24 @@ export function PaymentTrigger({
         return;
       }
 
-      // 3. 重定向到Creem支付页面
+      // 2. 跳转到Creem支付页面
       console.log('Redirecting to checkout URL:', data.checkout_url);
       window.location.href = data.checkout_url;
+
+      // 3. 异步发起基础分析（不阻塞支付流程）
+      fetch('/api/chat-processing/process', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          fileId,
+          skipAiAnalysis: true // 只进行基础分析，不进行AI分析
+        }),
+      }).catch(err => {
+        console.error('Background processing failed:', err);
+        // 不阻止支付流程继续
+      });
     } catch (error) {
       console.error('Payment request failed:', error);
       toast.error('Failed to create payment session, please try again later');
@@ -90,7 +89,7 @@ export function PaymentTrigger({
       disabled={isLoading || !fileId}
       className={className}
     >
-      {isLoading ? '处理中...' : buttonText}
+      {isLoading ? 'processing...' : buttonText}
     </Button>
   );
 }

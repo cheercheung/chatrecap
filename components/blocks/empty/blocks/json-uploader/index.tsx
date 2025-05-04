@@ -119,7 +119,7 @@ export default function JsonUploader({
 
     // 如果是示例数据，直接跳转到示例结果页面
     if (isSampleData) {
-      router.push(redirectPath);
+      router.push(`${redirectPath}/sample`);
       return;
     }
 
@@ -293,9 +293,15 @@ export default function JsonUploader({
   // 处理 Recap 按钮点击
   const handleRecapClick = async () => {
     // 基础处理的重定向路径
-    const redirectPath = recapButton?.url || "/chatrecapresult";
+    const redirectPath = recapButton?.url || "/ai-insight-result";
 
     try {
+      // 如果是示例数据，直接跳转到 AI 结果页
+      if (isSampleData) {
+        router.push("/ai-insight-result");
+        return;
+      }
+
       // 先处理文件，获取fileId
       await processFile(redirectPath);
 
@@ -303,9 +309,6 @@ export default function JsonUploader({
       if (fileId) {
         // 未来这里会重定向到支付页面
         // 支付成功后，支付页面会调用AI分析API并重定向到结果页面
-
-        // 目前暂时直接重定向到支付页面（未实现）
-        // 将来支付页面会处理支付逻辑，然后调用AI分析
         router.push(`/payment?fileId=${fileId}`);
 
         // 注意：以下代码将来会移到支付成功后的回调函数中
