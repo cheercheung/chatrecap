@@ -1,0 +1,89 @@
+{
+  "personalityInsights": {
+    "sender1": {
+      "name": "[ { \"name\"",
+      "interestLevel": {
+        "score": 8,
+        "detail": "Shows high interest in conversations"
+      },
+      "responseEnthusiasm": {
+        "score": 7,
+        "detail": "Responds with enthusiasm most of the time"
+      },
+      "emotionalStability": {
+        "score": 9,
+        "detail": "Maintains consistent emotional tone"
+      },
+      "responseTime": {
+        "score": 8,
+        "detail": "Responds quickly to messages"
+      }
+    },
+    "sender2": {
+      "name": "[ { \"sender_name\"",
+      "interestLevel": {
+        "score": 7,
+        "detail": "Shows good interest in conversations"
+      },
+      "responseEnthusiasm": {
+        "score": 8,
+        "detail": "Very enthusiastic in responses"
+      },
+      "emotionalStability": {
+        "score": 8,
+        "detail": "Generally stable emotional tone"
+      },
+      "responseTime": {
+        "score": 9,
+        "detail": "Responds very quickly to messages"
+      }
+    }
+  },
+  "relationshipMetrics": {
+    "intimacy": {
+      "score": 8,
+      "detail": "Strong connection between both parties"
+    },
+    "communication": {
+      "score": 9,
+      "detail": "Excellent communication patterns"
+    },
+    "trust": {
+      "score": 8,
+      "detail": "High level of trust evident in conversations"
+    },
+    "conflict": {
+      "score": 3,
+      "detail": "Low level of conflict in conversations"
+    }
+  },
+  "relationshipInsights": {
+    "points": [
+      {
+        "title": "Communication Style",
+        "description": "[ { \"name\" tends to initiate conversations more often, while [ { \"sender_name\" responds promptly."
+      },
+      {
+        "title": "Conversation Topics",
+        "description": "Conversations often revolve around daily activities, shared interests, and future plans."
+      },
+      {
+        "title": "Emotional Tone",
+        "description": "The overall emotional tone is positive, with frequent expressions of affection and humor."
+      }
+    ]
+  },
+  "suggestedTopics": [
+    "Daily activities",
+    "Shared interests",
+    "Future plans",
+    "Personal feelings"
+  ],
+  "overallAnalysis": {
+    "messageTips": [
+      "Continue the positive communication pattern",
+      "Share more about personal interests",
+      "Maintain the quick response times"
+    ]
+  }
+}

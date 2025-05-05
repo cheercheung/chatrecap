@@ -1,369 +1,612 @@
 {
-    "metadata": {
-        "title": "Chat Recap AI: Kayıt gerektirmeyen ücretsiz çevrimiçi sohbet analiz aracı - chatrecap.io",
-        "description": "Sohbet geçmişinizi analiz etmek mi istiyorsunuz? ChatRecap AI, WhatsApp, Instagram, Snapchat, Discord ve Telegram üzerinden yapılan konuşmaları anlamanıza yardımcı olur. Platformlar arası içgörüler elde edin ve iletişim modellerinizi keşfedin.",
-        "keywords": "chatrecap, sohbet analizörü, WhatsApp analizörü, Instagram sohbet analizi, Discord sohbet analizi, Telegram analizörü, Snapchat analizi, sohbet geçmişi, konuşma modelleri, mesajlaşma içgörüleri, platformlar arası sohbet analizi, sohbet dışa aktarma, sohbet metrikleri"
+  "afternoon": "",
+  "ai_analysis": {
+    "analyzing": "",
+    "error": "",
+    "error_description": "",
+    "failed": "",
+    "failed_description": "",
+    "generate": "",
+    "please_wait": "",
+    "starting": "",
+    "success": "",
+    "success_description": ""
+  },
+  "analyze_button": "",
+  "avg_words_per_msg": "",
+  "back_to_upload": "",
+  "badge": "",
+  "blog": {
+    "description": "İlişki iletişimi hakkında ipuçları, kaynaklar ve güncellemeler",
+    "read_more_text": "Daha Fazla Oku",
+    "title": "İlişki İçgörüleri"
+  },
+  "busiest_date": "",
+  "chat_analysis": {
+    "advanced_options": "Gelişmiş Seçenekler",
+    "analyze_button": "Sohbetinizi Analiz Edin",
+    "character_count": "{current} / {max} karakter",
+    "description": "Sohbetlerinizi Chat Recap AI ile dönüştürün. Sohbetlerinizdeki gizli kalıpları ve içgörüleri keşfedin. İlişkileri daha derin bir düzeyde anlayın.",
+    "free_analysis": "Sohbetinizi Ücretsiz Analiz Edin",
+    "how_to_import": "WhatsApp'tan Sohbet Nasıl İçe Aktarılır",
+    "import_methods": {
+      "mobile": "WhatsApp iOS/Android'den",
+      "web": "WhatsApp Web'den"
     },
-    "user": {
-        "sign_in": "Giriş Yap",
-        "sign_out": "Çıkış Yap",
-        "credits": "Krediler",
-        "api_keys": "API Anahtarları",
-        "my_orders": "Siparişlerim",
-        "user_center": "Kullanıcı Merkezi",
-        "admin_system": "Yönetim Alanı"
+    "platforms": {
+      "discord": "Discord",
+      "instagram": "Instagram",
+      "snapchat": "Snapchat",
+      "telegram": "Telegram",
+      "whatsapp": "WhatsApp"
     },
-    "sign_modal": {
-        "sign_in_title": "Giriş Yap",
-        "sign_in_description": "Hesabınıza giriş yapın",
-        "sign_up_title": "Kaydol",
-        "sign_up_description": "Bir hesap oluşturun",
-        "email_title": "E-posta",
-        "email_placeholder": "E-posta adresinizi buraya girin",
-        "password_title": "Şifre",
-        "password_placeholder": "Şifrenizi buraya girin",
-        "forgot_password": "Şifrenizi mi unuttunuz?",
-        "or": "Veya",
-        "continue": "Devam Et",
-        "no_account": "Hesabınız yok mu?",
-        "email_sign_in": "E-posta ile giriş yap",
-        "google_sign_in": "Google ile giriş yap",
-        "github_sign_in": "GitHub ile giriş yap",
-        "close_title": "Kapat",
-        "cancel_title": "İptal"
+    "privacy_notice": "Sohbet geçmişinizi saklamıyoruz, sunucumuzdaki önbelleğe alınmış dosya 30 dakika sonra otomatik olarak silinecektir.",
+    "sample_chat_text": "[2025/1/1, 01:00:00] ALICE: Mutlu yıllar! 🎉\n[2025/1/1, 01:02:00] JEFF: Mutlu yıllar, aşkım! 🎆\n[2025/1/1, 08:15:00] ALICE: Yılın ilk kahvesi! ☕\n[2025/1/1, 08:20:00] JEFF: Daha nicelerine! 🥂\n[2025/1/1, 10:30:00] ALICE: Bugün için plan ne? 🤔\n[2025/1/1, 10:32:00] JEFF: Parkta yürüyüşe çıkalım 🌳\n[2025/1/1, 11:05:00] ALICE: Harika fikir! 🌞\n[2025/1/1, 13:00:00] JEFF: Yeni yıl kararların var mı?\n[2025/1/1, 13:10:00] ALICE: Daha çok seyahat etmek! 🌍\n[2025/1/1, 13:15:00] JEFF: Bu harika, ben de seninleyim ✈️\n[2025/1/1, 14:30:00] ALICE: Hava bugün çok güzel! ☀️\n[2025/1/1, 14:35:00] JEFF: Macera için mükemmel bir gün, değil mi?\n[2025/1/1, 16:00:00] ALICE: Dondurma yemeyi düşünüyordum 🍦\n[2025/1/1, 16:10:00] JEFF: Oh, ben varım! Hangi çeşit?\n[2025/1/1, 18:30:00] ALICE: Akşam yemeğinde ne yemeliyiz?\n[2025/1/1, 18:32:00] JEFF: Pizza? 🍕",
+    "select_platform": "Platform Seçin",
+    "subtitle": "AI Sohbet Analiziniz",
+    "title": "Chat Recap AI",
+    "upload_description": "Analiz etmek için sohbet dışa aktarımınızı yükleyin",
+    "upload_title": "Sohbet Geçmişi Girişi"
+  },
+  "chatrecapresult": {
+    "description": "",
+    "title": ""
+  },
+  "common_words": "",
+  "copyright": "",
+  "count": "",
+  "daily_activity": "",
+  "daily_activity_description": "",
+  "days": "",
+  "description": "",
+  "emojis": "",
+  "errors": {
+    "ai_insights_not_found": "",
+    "loading_failed": "",
+    "not_found": "",
+    "result_not_found": ""
+  },
+  "evening": "",
+  "export_not_implemented": "",
+  "export_pdf": "",
+  "favorite_day_to_chat": "",
+  "features": {
+    "comprehensive_analysis": {
+      "content": "Gelişmiş AI algoritmalarımız, iletişim kalıplarınız ve ilişki dinamikleri hakkında derin içgörüler sağlamak için tüm sohbet geçmişinizi analiz eder.",
+      "title": "Kapsamlı Sohbet Analizi"
     },
-    "my_orders": {
-        "title": "Analiz Geçmişim",
-        "description": "Önceki sohbet analizlerinizi görüntüleyin",
-        "no_orders": "Analiz bulunamadı",
-        "tip": "Başlamak için bir sohbet yükleyin",
-        "activate_order": "Analizi Görüntüle",
-        "actived": "Analiz Edildi",
-        "join_discord": "Discord'a Katıl",
-        "read_docs": "Nasıl Çalışır",
-        "table": {
-            "order_no": "Analiz ID",
-            "email": "E-posta",
-            "product_name": "Analiz Türü",
-            "amount": "Sohbet Uzunluğu",
-            "paid_at": "Analiz Tarihi",
-            "github_username": "Kullanıcı Adı",
-            "status": "Durum"
-        }
+    "easy_tools": {
+      "description": "Basit arayüzümüzle AI sohbet analizinizi oluşturun. WhatsApp konuşmalarını analiz etmek ve ilişkileri anlamak için mükemmel.",
+      "points": [
+        "Basit sohbet içe aktarma",
+        "Birden çok sohbet formatı desteklenir",
+        "Özel AI sohbet analizi ayarları",
+        "Gerçek zamanlı işleme"
+      ],
+      "title": "Kolay Oluşturma Araçları"
     },
-    "my_credits": {
-        "title": "Kredilerim",
-        "left_tip": "Kalan krediler: {left_credits}",
-        "no_credits": "Kredi kaydı yok",
-        "recharge": "Kredi Satın Al",
-        "table": {
-            "trans_no": "İşlem ID",
-            "trans_type": "İşlem Türü",
-            "credits": "Krediler",
-            "updated_at": "Tarih",
-            "status": "Durum"
-        }
+    "insights": {
+      "description": "ChatRecap AI sohbet analizi ile sohbet kalıplarınız ve ilişki dinamikleri hakkında kapsamlı içgörüler edinin.",
+      "points": [
+        "Duygu analizi",
+        "Yanıt süresi kalıpları",
+        "Katılım metrikleri",
+        "Kırmızı bayrak tespiti"
+      ],
+      "title": "Derin İçgörüler"
     },
-    "blog": {
-        "title": "İlişki İçgörüleri",
-        "description": "İlişki iletişimi hakkında ipuçları, kaynaklar ve güncellemeler",
-        "read_more_text": "Daha Fazla Oku"
+    "preview": {
+      "description": "İşlerken analizinizin canlandığını görün. İçgörülerinizi anında önizleyin ve ilişkileriniz hakkında bilinçli kararlar alın.",
+      "points": [
+        "Anında analiz önizlemesi",
+        "Etkileşimli görselleştirmeler",
+        "Dinamik güncellemeler",
+        "Mobil uyumlu görüntüleme"
+      ],
+      "title": "Gerçek Zamanlı Önizleme"
     },
-    "my_invites": {
-        "title": "Arkadaşları Davet Et",
-        "description": "Chat Recap AI'ı arkadaşlarınla paylaş ve kredi kazan",
-        "no_invites": "Davet kaydı bulunamadı",
-        "my_invite_link": "Davet Linkim",
-        "edit_invite_link": "Davet Linkini Düzenle",
-        "copy_invite_link": "Davet Linkini Kopyala",
-        "invite_code": "Davet Kodu",
-        "invite_tip": "Bir arkadaşını Chat Recap AI kullanmaya davet et, 5 ücretsiz kredi kazan.",
-        "invite_balance": "Davetlerden Kredi Bakiyesi",
-        "total_invite_count": "Toplam Davet Edilen Arkadaş",
-        "total_paid_count": "Satın Alan Arkadaşlar",
-        "total_award_amount": "Toplam Kazanılan Kredi",
-        "update_invite_code": "Davet Kodunu Özelleştir",
-        "update_invite_code_tip": "Kişiselleştirilmiş bir davet kodu oluştur",
-        "update_invite_button": "Kaydet",
-        "no_orders": "Başkalarını davet etmeden önce en az bir sohbet analiz etmeniz gerekiyor",
-        "no_affiliates": "Davet programı şu anda yalnızca onay ile kullanılabilir. Başvurmak için bizimle iletişime geçin.",
-        "table": {
-            "invite_time": "Davet Tarihi",
-            "invite_user": "Arkadaşın E-postası",
-            "status": "Durum",
-            "reward_percent": "Ödül Oranı",
-            "reward_amount": "Kazanılan Krediler",
-            "pending": "Beklemede",
-            "completed": "Tamamlandı"
-        }
+    "response_time": {
+      "content": "Siz ve konuşma partnerinizin birbirinizin mesajlarına ne kadar hızlı yanıt verdiğini takip edin, katılım seviyelerini ve iletişim alışkanlıklarını ortaya çıkarın.",
+      "title": "Yanıt Süresi Kalıpları"
     },
-    "chat_analysis": {
-        "title": "Chat Recap AI",
-        "subtitle": "AI Sohbet Analiziniz",
-        "description": "Sohbetlerinizi Chat Recap AI ile dönüştürün. Sohbetlerinizdeki gizli kalıpları ve içgörüleri keşfedin. İlişkileri daha derin bir düzeyde anlayın.",
-        "upload_title": "Sohbet Geçmişi Girişi",
-        "upload_description": "Analiz etmek için sohbet dışa aktarımınızı yükleyin",
-        "select_platform": "Platform Seçin",
-        "platforms": {
-            "whatsapp": "WhatsApp",
-            "instagram": "Instagram",
-            "discord": "Discord",
-            "telegram": "Telegram",
-            "snapchat": "Snapchat"
-        },
-        "how_to_import": "WhatsApp'tan Sohbet Nasıl İçe Aktarılır",
-        "import_methods": {
-            "web": "WhatsApp Web'den",
-            "mobile": "WhatsApp iOS/Android'den"
-        },
-        "character_count": "{current} / {max} karakter",
-        "advanced_options": "Gelişmiş Seçenekler",
-        "privacy_notice": "Sohbet geçmişinizi saklamıyoruz, sunucumuzdaki önbelleğe alınmış dosya 30 dakika sonra otomatik olarak silinecektir.",
-        "analyze_button": "Sohbetinizi Analiz Edin",
-        "free_analysis": "Sohbetinizi Ücretsiz Analiz Edin",
-        "sample_chat_text": "[2025/1/1, 01:00:00] ALICE: Mutlu yıllar! 🎉\n[2025/1/1, 01:02:00] JEFF: Mutlu yıllar, aşkım! 🎆\n[2025/1/1, 08:15:00] ALICE: Yılın ilk kahvesi! ☕\n[2025/1/1, 08:20:00] JEFF: Daha nicelerine! 🥂\n[2025/1/1, 10:30:00] ALICE: Bugün için plan ne? 🤔\n[2025/1/1, 10:32:00] JEFF: Parkta yürüyüşe çıkalım 🌳\n[2025/1/1, 11:05:00] ALICE: Harika fikir! 🌞\n[2025/1/1, 13:00:00] JEFF: Yeni yıl kararların var mı?\n[2025/1/1, 13:10:00] ALICE: Daha çok seyahat etmek! 🌍\n[2025/1/1, 13:15:00] JEFF: Bu harika, ben de seninleyim ✈️\n[2025/1/1, 14:30:00] ALICE: Hava bugün çok güzel! ☀️\n[2025/1/1, 14:35:00] JEFF: Macera için mükemmel bir gün, değil mi?\n[2025/1/1, 16:00:00] ALICE: Dondurma yemeyi düşünüyordum 🍦\n[2025/1/1, 16:10:00] JEFF: Oh, ben varım! Hangi çeşit?\n[2025/1/1, 18:30:00] ALICE: Akşam yemeğinde ne yemeliyiz?\n[2025/1/1, 18:32:00] JEFF: Pizza? 🍕"
+    "sentiment_analysis": {
+      "content": "Mesajlarınızda ifade edilen altta yatan duyguları ve tutumları anlamak için konuşmalarınızın duygusal tonunu analiz edin.",
+      "title": "Duygu Analizi"
     },
-    "features": {
-        "title": "Chat Recap AI'ın Temel Özellikleri",
-        "easy_tools": {
-            "title": "Kolay Oluşturma Araçları",
-            "description": "Basit arayüzümüzle AI sohbet analizinizi oluşturun. WhatsApp konuşmalarını analiz etmek ve ilişkileri anlamak için mükemmel.",
-            "points": [
-                "Basit sohbet içe aktarma",
-                "Birden çok sohbet formatı desteklenir",
-                "Özel AI sohbet analizi ayarları",
-                "Gerçek zamanlı işleme"
-            ]
-        },
-        "preview": {
-            "title": "Gerçek Zamanlı Önizleme",
-            "description": "İşlerken analizinizin canlandığını görün. İçgörülerinizi anında önizleyin ve ilişkileriniz hakkında bilinçli kararlar alın.",
-            "points": [
-                "Anında analiz önizlemesi",
-                "Etkileşimli görselleştirmeler",
-                "Dinamik güncellemeler",
-                "Mobil uyumlu görüntüleme"
-            ]
-        },
-        "sentiment_analysis": {
-            "title": "Duygu Analizi",
-            "content": "Mesajlarınızda ifade edilen altta yatan duyguları ve tutumları anlamak için konuşmalarınızın duygusal tonunu analiz edin."
-        },
-        "response_time": {
-            "title": "Yanıt Süresi Kalıpları",
-            "content": "Siz ve konuşma partnerinizin birbirinizin mesajlarına ne kadar hızlı yanıt verdiğini takip edin, katılım seviyelerini ve iletişim alışkanlıklarını ortaya çıkarın."
-        },
-        "topic_analysis": {
-            "title": "Konu Analizi",
-            "content": "Konuşmalarınızdaki en yaygın konuları ve temaları keşfedin, ilişkinizde en çok neyin önemli olduğunu anlamanıza yardımcı olur."
-        },
-        "comprehensive_analysis": {
-            "title": "Kapsamlı Sohbet Analizi",
-            "content": "Gelişmiş AI algoritmalarımız, iletişim kalıplarınız ve ilişki dinamikleri hakkında derin içgörüler sağlamak için tüm sohbet geçmişinizi analiz eder."
-        },
-        "insights": {
-            "title": "Derin İçgörüler",
-            "description": "ChatRecap AI sohbet analizi ile sohbet kalıplarınız ve ilişki dinamikleri hakkında kapsamlı içgörüler edinin.",
-            "points": [
-                "Duygu analizi",
-                "Yanıt süresi kalıpları",
-                "Katılım metrikleri",
-                "Kırmızı bayrak tespiti"
-            ]
-        }
-    },
-    "pricing": {
-        "title": "Gelişmiş AI Analizi için Kredi Satın Alın",
-        "description": "1 kredi ≈ şu anda 5000 kelime, ve maliyeti optimize etmek için çok çalışıyoruz."
-    },
-    "testimonial": {
-        "title": "Sevenlerin Sevdiği",
-        "subtitle": "ilişkilerinde daha derin içgörüler keşfeden kullanıcılar",
-        "items": [{
-                "initials": "AAD",
-                "title": "İlişki Analizi",
-                "content": "Dürüst olmak gerekirse... şaşkınım. Ben tam olarak anlamadan önce ilişkinin neden bittiğini bile tespit etti."
-            },
-            {
-                "initials": "SSP",
-                "title": "Yıldönümü Analizi",
-                "content": "🥰 Bir yıl sonra bize bak... Tüm bu ilerlemeyi görmek harika. Birlikte nasıl büyüdüğümüzü tam olarak gösteriyor!"
-            },
-            {
-                "initials": "MMT",
-                "title": "Kişisel Gelişim",
-                "content": "Acımasızca dürüst ilişki ipuçları duygularımı incitti, haha... ama tam olarak duymam gereken şeydi."
-            }
-        ]
-    },
-    "how_it_works": {
-        "title": "Chat Recap AI ile Sohbetlerinizi Nasıl Analiz Edersiniz?",
-        "subtitle": "Konuşmalarınız hakkında içgörüler elde etmek için basit üç adımlı bir süreç",
-        "steps": [{
-                "number": "1",
-                "title": "Sohbet Yükle",
-                "description": "Sohbet geçmişinizi WhatsApp veya diğer platformlardan dışa aktarın ve güvenli ChatRecap AI platformumuza yükleyin"
-            },
-            {
-                "number": "2",
-                "title": "Analiz Seç",
-                "description": "Konuşmalarınızın hangi yönlerini analiz etmek istediğinizi seçin - temel kalıplardan derin duygusal içgörülere kadar"
-            },
-            {
-                "number": "3",
-                "title": "İçgörüler Alın",
-                "description": "İletişim kalıplarınız hakkında görselleştirmeler ve uygulanabilir içgörülerle ayrıntılı analiz alın"
-            }
-        ],
-        "footer": {
-            "social_links": {
-                "whatsapp": "WhatsApp",
-                "instagram": "Instagram",
-                "discord": "Discord",
-                "telegram": "Telegram",
-                "snapchat": "Snapchat"
-            },
-            "copyright": "© 2025 ChatRecap AI. Tüm hakları saklıdır.",
-            "privacy_policy": "Gizlilik Politikası",
-            "terms_of_service": "Kullanım Şartları"
-        },
-        "chat_notifications": {
-            "title": "Sohbet Bildirimleri",
-            "speakers": {
-                "girlfriend": "Kız Arkadaş",
-                "boyfriend": "Erkek Arkadaş",
-                "her": "O (Kadın)",
-                "him": "O (Erkek)",
-                "ex": "Eski",
-                "friend": "Arkadaş",
-                "crush": "Hoşlandığın Kişi"
-            },
-            "times": {
-                "just_now": "Az önce",
-                "minutes_ago": "{minutes} dakika önce",
-                "hours_ago": "{hours} saat önce",
-                "days_ago": "{days} gün önce"
-            },
-            "messages": {
-                "message1": "Oh, sonunda yazdın mı? Dünya rekoru kırmış olmalısın 🏆🙄",
-                "message2": "Üzgünüm, telefonum sadece pizza teslimatları için titreşiyor 🍕📳",
-                "message3": "Tanışma cümlelerin mikrodalga patlamış mısırımdan daha hızlı 🍿💨",
-                "message4": "Sohbetimiz Antarktika'dan daha soğuk ❄️😎",
-                "message5": "Beni özledin mi? Adını zar zor hatırlıyorum 😂",
-                "message6": "Aşk hayatın WiFi'm gibi - kararsız bağlantı 📶",
-                "message7": "Mesajını gördüm. 2-3 iş günü içinde cevap vereceğim 📅"
-            }
-        },
-        "chatrecapplatform": {
-            "meta": {
-                "title": "Sohbet Platformunuzu Seçin",
-                "description": "Sohbetinizi analiz etmek istediğiniz platformu seçin"
-            },
-            "badge": "Sohbet Analizi",
-            "title": "Sohbet Platformunuzu Seçin",
-            "description": "Sohbet geçmişinizi analiz etmek istediğiniz platformu seçin. Kapsamlı içgörüler sağlamak için birden çok mesajlaşma platformunu destekliyoruz.",
-            "select_button": "Platform Seç",
-            "platforms": {
-                "whatsapp": {
-                    "description": "Mesajlaşma kalıplarınızı ve ilişki dinamiklerinizi anlamak için WhatsApp konuşmalarınızı analiz edin."
-                },
-                "instagram": {
-                    "description": "Instagram direkt mesajlarınızdan içgörüler keşfedin ve iletişim tarzınızı anlayın."
-                },
-                "discord": {
-                    "description": "Oyun ve topluluk bağlamlarında iletişiminizi daha iyi anlamak için Discord sohbetlerinizi analiz edin."
-                },
-                "telegram": {
-                    "description": "Telegram konuşmalarınızdan içgörüler edinin ve mesajlaşma kalıplarınızı anlayın."
-                },
-                "snapchat": {
-                    "description": "İletişim tarzınızı ve kalıplarınızı anlamak için Snapchat konuşmalarınızı analiz edin."
-                }
-            }
-        },
-        "payment": {
-            "title": "AI Sohbet Analizi",
-            "description": "Sohbet geçmişinizi derinlemesine analiz etmek ve kişilik içgörüleri ve ilişki analizi elde etmek için AI kullanın",
-            "service_name": "AI Sohbet Analizi Hizmeti",
-            "pay_button": "Şimdi Öde",
-            "error_title": "Hata",
-            "missing_file_id": "Dosya ID'si eksik, lütfen önce bir dosya yükleyin",
-            "return_home": "Ana Sayfaya Dön",
-            "processing": "İşleniyor..."
-        },
-        "chatrecapresult": {
-            "title": "Sohbet Analizi Sonuçlarınız",
-            "description": "Konuşma kalıplarınız ve ilişki dinamikleri hakkında içgörüler keşfedin",
-            "back_to_upload": "Yüklemeye Geri Dön",
-            "export_pdf": "PDF Olarak Dışa Aktar",
-            "share_results": "Sonuçları Paylaş",
-            "export_not_implemented": "Dışa aktarma özelliği yakında geliyor!",
-            "share_not_implemented": "Paylaşma özelliği yakında geliyor!",
-            "not_found": "Analiz bulunamadı",
-            "error_loading": "Analiz verilerini yükleme hatası",
-            "errors": {
-                "result_not_found": "Analiz sonucu bulunamadı. Lütfen dosyanızı tekrar yüklemeyi deneyin.",
-                "loading_failed": "Analiz verilerini yükleme başarısız oldu. Lütfen tekrar deneyin."
-            },
-            "processing_errors": {
-                "no_messages": "Geçerli mesajlar çıkarılamadı",
-                "invalid_date": "Bazı mesajlarda geçersiz tarihler var",
-                "processing_failed": "İşleme başarısız oldu: {message}",
-                "filter_too_strict": "Uyarı: Tüm mesajlar filtrelendi, filtre koşulları çok katı olabilir",
-                "single_participant": "Yalnızca bir katılımcı tespit edildi, bu bir konuşma olmayabilir",
-                "short_timespan": "Konuşma süresi çok kısa, tam bir konuşma olmayabilir"
-            },
-            "chat_story": "Sohbet Hikayeniz",
-            "first_message": "İlk Mesaj",
-            "last_message": "Son Mesaj",
-            "days": "gün",
-            "response_patterns": {
-                "evening_active": "Akşam hızlı yanıtlar, sabah daha yavaş",
-                "morning_active": "Akşama göre sabah daha aktif",
-                "consistent": "Gün boyunca tutarlı yanıt süreleri"
-            },
-            "time_of_day": {
-                "morning": "Sabah",
-                "afternoon": "Öğleden Sonra",
-                "evening": "Akşam",
-                "night": "Gece"
-            },
-            "day_names": {
-                "sunday": "Pazar",
-                "monday": "Pazartesi",
-                "tuesday": "Salı",
-                "wednesday": "Çarşamba",
-                "thursday": "Perşembe",
-                "friday": "Cuma",
-                "saturday": "Cumartesi"
-            },
-            "timespan_format": "Hikayeniz {startMonth} {startDay}, {startYear} {startDayName} 00:00'da başladı, {durationText} boyunca gelişti, {endMonth} {endDay}, {endYear} {endDayName} 23:59'a kadar—zaman akışında kalıcı bir iz bıraktı.",
-            "analysis_card": {
-                "example_title": "Analiz Kartı Örnekleri",
-                "example_description": "Aşağıda farklı metriklerle analiz kartı örnekleri bulunmaktadır",
-                "user_satisfaction": {
-                    "title": "Kullanıcı Memnuniyeti",
-                    "content": "Bu çeyreğin kullanıcı memnuniyeti %85'e ulaştı, geçen çeyreğe göre 5 puanlık bir artış.\nAna büyüme, yeni ürün özelliklerinin lansmanı ve kullanıcı arayüzü optimizasyonlarından geldi.\nKullanıcı geri bildirimleri, yanıt hızı ve kullanım kolaylığının gelişmiş memnuniyet için ana faktörler olduğunu gösteriyor.\nÖzellikle mobil işlem süreçlerinde kullanıcı deneyimini optimize etmeye devam etmek önerilir."
-                },
-                "conversion_rate": {
-                    "title": "Dönüşüm Oranı",
-                    "content": "Bu ayın dönüşüm oranı %62, geçen aya göre 3 puan düşüş.\nAnaliz, dönüşüm oranındaki düşüşün temel olarak yeni promosyon kanallarının düşük kalitesinden kaynaklandığını gösteriyor.\nYüksek kaliteli trafik dönüşüm oranları sabit kalırken, düşük kaliteli trafikte artış genel dönüşüm oranlarında düşüşe yol açtı.\nTrafik kaynaklarını optimize etmek, ziyaretçi kalitesini artırmak ve iniş sayfası deneyimini geliştirmek önerilir."
-                },
-                "system_performance": {
-                    "title": "Sistem Performansı",
-                    "content": "Sistem performans metrikleri %93'e ulaştı, en iyi tarihsel seviyede.\nSunucu yanıt süresi ortalama 200ms azaldı ve sayfa yükleme hızı %15 arttı.\nVeritabanı sorgu optimizasyonu ve CDN dağıtımı, performans iyileştirmesinin ana nedenleri.\nZirve performansını izlemeye devam etmek ve önbellek stratejisi optimizasyonunu daha da düşünmek önerilir."
-                }
-            },
-            "overview_title": "Genel Bakış",
-            "messages": "Mesajlar",
-            "total_messages": "Toplam Mesaj",
-            "words": "Kelimeler",
-            "total_words": "Toplam Kelime",
-            "words_per_message": "Mesaj Başına Kelime",
-            "avg_words_per_msg": "Ort. Kelime/Mesaj",
-            "overview_story_part1": "Konuşmanız, zaman içinde değiş tokuş edilen <span class='highlight'>{totalMessages} mesaj</span> aracılığıyla güzel bir hikaye anlatıyor. {sender1Name} <span class='highlight'>{sender1Messages} mesaj</span> gönderirken, {sender2Name} <span class='highlight'>{sender2Messages} mesaj</span> ile yanıt verdi.",
-            "overview_story_part2": "Birlikte, {sender1Name}'in <span class='highlight'>{sender1Words} kelime</span> katkıda bulunduğu ve {sender2Name}'in <span class='highlight'>{sender2Words} kelime</span> paylaştığı <span class='highlight'>{totalWords} kelimelik</span> bir duvar dokudunuz. Konuşmalarınız anlamlı ve önemli, ortalama <span class='highlight'>mesaj başına {wordsPerMessage} kelime</span> içeriyor.",
-            "overview_story_part3": "En aktif konuşmalarınız <span class='highlight'>{mostActiveDay}</span> günlerinde gerçekleşiyor, günlük ortalama <span class='highlight'>{avgMessagesPerDay} mesaj</span> alışverişi yapılıyor. <span class='highlight'>{responseTime}</span> tipik yanıt süresi, birbirinizle iletişim kurarken hissettiğiniz hevesli beklentiyi gösteriyor."
-        }
+    "title": "Chat Recap AI'ın Temel Özellikleri",
+    "topic_analysis": {
+      "content": "Konuşmalarınızdaki en yaygın konuları ve temaları keşfedin, ilişkinizde en çok neyin önemli olduğunu anlamanıza yardımcı olur.",
+      "title": "Konu Analizi"
     }
+  },
+  "first_message": "",
+  "free": "",
+  "free_analysis": "",
+  "heatmap_data_not_available": "",
+  "high": "",
+  "hours": "",
+  "how_it_works": {
+    "chat_notifications": {
+      "messages": {
+        "message1": "Oh, sonunda yazdın mı? Dünya rekoru kırmış olmalısın 🏆🙄",
+        "message2": "Üzgünüm, telefonum sadece pizza teslimatları için titreşiyor 🍕📳",
+        "message3": "Tanışma cümlelerin mikrodalga patlamış mısırımdan daha hızlı 🍿💨",
+        "message4": "Sohbetimiz Antarktika'dan daha soğuk ❄️😎",
+        "message5": "Beni özledin mi? Adını zar zor hatırlıyorum 😂",
+        "message6": "Aşk hayatın WiFi'm gibi - kararsız bağlantı 📶",
+        "message7": "Mesajını gördüm. 2-3 iş günü içinde cevap vereceğim 📅"
+      },
+      "speakers": {
+        "boyfriend": "Erkek Arkadaş",
+        "crush": "Hoşlandığın Kişi",
+        "ex": "Eski",
+        "friend": "Arkadaş",
+        "girlfriend": "Kız Arkadaş",
+        "her": "O (Kadın)",
+        "him": "O (Erkek)"
+      },
+      "times": {
+        "days_ago": "{days} gün önce",
+        "hours_ago": "{hours} saat önce",
+        "just_now": "Az önce",
+        "minutes_ago": "{minutes} dakika önce"
+      },
+      "title": "Sohbet Bildirimleri"
+    },
+    "chatrecapplatform": {
+      "badge": "Sohbet Analizi",
+      "description": "Sohbet geçmişinizi analiz etmek istediğiniz platformu seçin. Kapsamlı içgörüler sağlamak için birden çok mesajlaşma platformunu destekliyoruz.",
+      "meta": {
+        "description": "Sohbetinizi analiz etmek istediğiniz platformu seçin",
+        "title": "Sohbet Platformunuzu Seçin"
+      },
+      "platforms": {
+        "discord": {
+          "description": "Oyun ve topluluk bağlamlarında iletişiminizi daha iyi anlamak için Discord sohbetlerinizi analiz edin."
+        },
+        "instagram": {
+          "description": "Instagram direkt mesajlarınızdan içgörüler keşfedin ve iletişim tarzınızı anlayın."
+        },
+        "snapchat": {
+          "description": "İletişim tarzınızı ve kalıplarınızı anlamak için Snapchat konuşmalarınızı analiz edin."
+        },
+        "telegram": {
+          "description": "Telegram konuşmalarınızdan içgörüler edinin ve mesajlaşma kalıplarınızı anlayın."
+        },
+        "whatsapp": {
+          "description": "Mesajlaşma kalıplarınızı ve ilişki dinamiklerinizi anlamak için WhatsApp konuşmalarınızı analiz edin."
+        }
+      },
+      "select_button": "Platform Seç",
+      "title": "Sohbet Platformunuzu Seçin"
+    },
+    "chatrecapresult": {
+      "analysis_card": {
+        "conversion_rate": {
+          "content": "Bu ayın dönüşüm oranı %62, geçen aya göre 3 puan düşüş.\nAnaliz, dönüşüm oranındaki düşüşün temel olarak yeni promosyon kanallarının düşük kalitesinden kaynaklandığını gösteriyor.\nYüksek kaliteli trafik dönüşüm oranları sabit kalırken, düşük kaliteli trafikte artış genel dönüşüm oranlarında düşüşe yol açtı.\nTrafik kaynaklarını optimize etmek, ziyaretçi kalitesini artırmak ve iniş sayfası deneyimini geliştirmek önerilir.",
+          "title": "Dönüşüm Oranı"
+        },
+        "example_description": "Aşağıda farklı metriklerle analiz kartı örnekleri bulunmaktadır",
+        "example_title": "Analiz Kartı Örnekleri",
+        "system_performance": {
+          "content": "Sistem performans metrikleri %93'e ulaştı, en iyi tarihsel seviyede.\nSunucu yanıt süresi ortalama 200ms azaldı ve sayfa yükleme hızı %15 arttı.\nVeritabanı sorgu optimizasyonu ve CDN dağıtımı, performans iyileştirmesinin ana nedenleri.\nZirve performansını izlemeye devam etmek ve önbellek stratejisi optimizasyonunu daha da düşünmek önerilir.",
+          "title": "Sistem Performansı"
+        },
+        "user_satisfaction": {
+          "content": "Bu çeyreğin kullanıcı memnuniyeti %85'e ulaştı, geçen çeyreğe göre 5 puanlık bir artış.\nAna büyüme, yeni ürün özelliklerinin lansmanı ve kullanıcı arayüzü optimizasyonlarından geldi.\nKullanıcı geri bildirimleri, yanıt hızı ve kullanım kolaylığının gelişmiş memnuniyet için ana faktörler olduğunu gösteriyor.\nÖzellikle mobil işlem süreçlerinde kullanıcı deneyimini optimize etmeye devam etmek önerilir.",
+          "title": "Kullanıcı Memnuniyeti"
+        }
+      },
+      "avg_words_per_msg": "Ort. Kelime/Mesaj",
+      "back_to_upload": "Yüklemeye Geri Dön",
+      "chat_story": "Sohbet Hikayeniz",
+      "day_names": {
+        "friday": "Cuma",
+        "monday": "Pazartesi",
+        "saturday": "Cumartesi",
+        "sunday": "Pazar",
+        "thursday": "Perşembe",
+        "tuesday": "Salı",
+        "wednesday": "Çarşamba"
+      },
+      "days": "gün",
+      "description": "Konuşma kalıplarınız ve ilişki dinamikleri hakkında içgörüler keşfedin",
+      "error_loading": "Analiz verilerini yükleme hatası",
+      "errors": {
+        "loading_failed": "Analiz verilerini yükleme başarısız oldu. Lütfen tekrar deneyin.",
+        "result_not_found": "Analiz sonucu bulunamadı. Lütfen dosyanızı tekrar yüklemeyi deneyin."
+      },
+      "export_not_implemented": "Dışa aktarma özelliği yakında geliyor!",
+      "export_pdf": "PDF Olarak Dışa Aktar",
+      "first_message": "İlk Mesaj",
+      "last_message": "Son Mesaj",
+      "messages": "Mesajlar",
+      "not_found": "Analiz bulunamadı",
+      "overview_story_part1": "Konuşmanız, zaman içinde değiş tokuş edilen <span class='highlight'>{totalMessages} mesaj</span> aracılığıyla güzel bir hikaye anlatıyor. {sender1Name} <span class='highlight'>{sender1Messages} mesaj</span> gönderirken, {sender2Name} <span class='highlight'>{sender2Messages} mesaj</span> ile yanıt verdi.",
+      "overview_story_part2": "Birlikte, {sender1Name}'in <span class='highlight'>{sender1Words} kelime</span> katkıda bulunduğu ve {sender2Name}'in <span class='highlight'>{sender2Words} kelime</span> paylaştığı <span class='highlight'>{totalWords} kelimelik</span> bir duvar dokudunuz. Konuşmalarınız anlamlı ve önemli, ortalama <span class='highlight'>mesaj başına {wordsPerMessage} kelime</span> içeriyor.",
+      "overview_story_part3": "En aktif konuşmalarınız <span class='highlight'>{mostActiveDay}</span> günlerinde gerçekleşiyor, günlük ortalama <span class='highlight'>{avgMessagesPerDay} mesaj</span> alışverişi yapılıyor. <span class='highlight'>{responseTime}</span> tipik yanıt süresi, birbirinizle iletişim kurarken hissettiğiniz hevesli beklentiyi gösteriyor.",
+      "overview_title": "Genel Bakış",
+      "processing_errors": {
+        "filter_too_strict": "Uyarı: Tüm mesajlar filtrelendi, filtre koşulları çok katı olabilir",
+        "invalid_date": "Bazı mesajlarda geçersiz tarihler var",
+        "no_messages": "Geçerli mesajlar çıkarılamadı",
+        "processing_failed": "İşleme başarısız oldu: {message}",
+        "short_timespan": "Konuşma süresi çok kısa, tam bir konuşma olmayabilir",
+        "single_participant": "Yalnızca bir katılımcı tespit edildi, bu bir konuşma olmayabilir"
+      },
+      "response_patterns": {
+        "consistent": "Gün boyunca tutarlı yanıt süreleri",
+        "evening_active": "Akşam hızlı yanıtlar, sabah daha yavaş",
+        "morning_active": "Akşama göre sabah daha aktif"
+      },
+      "share_not_implemented": "Paylaşma özelliği yakında geliyor!",
+      "share_results": "Sonuçları Paylaş",
+      "time_of_day": {
+        "afternoon": "Öğleden Sonra",
+        "evening": "Akşam",
+        "morning": "Sabah",
+        "night": "Gece"
+      },
+      "timespan_format": "Hikayeniz {startMonth} {startDay}, {startYear} {startDayName} 00:00'da başladı, {durationText} boyunca gelişti, {endMonth} {endDay}, {endYear} {endDayName} 23:59'a kadar—zaman akışında kalıcı bir iz bıraktı.",
+      "title": "Sohbet Analizi Sonuçlarınız",
+      "total_messages": "Toplam Mesaj",
+      "total_words": "Toplam Kelime",
+      "words": "Kelimeler",
+      "words_per_message": "Mesaj Başına Kelime"
+    },
+    "footer": {
+      "copyright": "© 2025 ChatRecap AI. Tüm hakları saklıdır.",
+      "privacy_policy": "Gizlilik Politikası",
+      "social_links": {
+        "discord": "Discord",
+        "instagram": "Instagram",
+        "snapchat": "Snapchat",
+        "telegram": "Telegram",
+        "whatsapp": "WhatsApp"
+      },
+      "terms_of_service": "Kullanım Şartları"
+    },
+    "payment": {
+      "description": "Sohbet geçmişinizi derinlemesine analiz etmek ve kişilik içgörüleri ve ilişki analizi elde etmek için AI kullanın",
+      "error_title": "Hata",
+      "missing_file_id": "Dosya ID'si eksik, lütfen önce bir dosya yükleyin",
+      "pay_button": "Şimdi Öde",
+      "processing": "İşleniyor...",
+      "return_home": "Ana Sayfaya Dön",
+      "service_name": "AI Sohbet Analizi Hizmeti",
+      "title": "AI Sohbet Analizi"
+    },
+    "steps": [
+      {
+        "description": "Sohbet geçmişinizi WhatsApp veya diğer platformlardan dışa aktarın ve güvenli ChatRecap AI platformumuza yükleyin",
+        "number": "1",
+        "title": "Sohbet Yükle"
+      },
+      {
+        "description": "Konuşmalarınızın hangi yönlerini analiz etmek istediğinizi seçin - temel kalıplardan derin duygusal içgörülere kadar",
+        "number": "2",
+        "title": "Analiz Seç"
+      },
+      {
+        "description": "İletişim kalıplarınız hakkında görselleştirmeler ve uygulanabilir içgörülerle ayrıntılı analiz alın",
+        "number": "3",
+        "title": "İçgörüler Alın"
+      }
+    ],
+    "subtitle": "Konuşmalarınız hakkında içgörüler elde etmek için basit üç adımlı bir süreç",
+    "title": "Chat Recap AI ile Sohbetlerinizi Nasıl Analiz Edersiniz?"
+  },
+  "hurry": "",
+  "insights": {
+    "interaction_title": "",
+    "relationship_title": ""
+  },
+  "keywords": "",
+  "last_message": "",
+  "limited_time_offer": "",
+  "low": "",
+  "medium_conversations": "",
+  "messages": {
+    "message1": "",
+    "message2": "",
+    "message3": "",
+    "message4": "",
+    "message5": "",
+    "message6": "",
+    "message7": ""
+  },
+  "messages_count_one": "",
+  "messages_count_other": "",
+  "meta": {
+    "description": "",
+    "title": ""
+  },
+  "metadata": {
+    "description": "Sohbet geçmişinizi analiz etmek mi istiyorsunuz? ChatRecap AI, WhatsApp, Instagram, Snapchat, Discord ve Telegram üzerinden yapılan konuşmaları anlamanıza yardımcı olur. Platformlar arası içgörüler elde edin ve iletişim modellerinizi keşfedin.",
+    "keywords": "chatrecap, sohbet analizörü, WhatsApp analizörü, Instagram sohbet analizi, Discord sohbet analizi, Telegram analizörü, Snapchat analizi, sohbet geçmişi, konuşma modelleri, mesajlaşma içgörüleri, platformlar arası sohbet analizi, sohbet dışa aktarma, sohbet metrikleri",
+    "title": "Chat Recap AI: Kayıt gerektirmeyen ücretsiz çevrimiçi sohbet analiz aracı - chatrecap.io"
+  },
+  "morning": "",
+  "most_active_day": "",
+  "most_active_hour": "",
+  "my_credits": {
+    "left_tip": "Kalan krediler: {left_credits}",
+    "no_credits": "Kredi kaydı yok",
+    "recharge": "Kredi Satın Al",
+    "table": {
+      "credits": "Krediler",
+      "status": "Durum",
+      "trans_no": "İşlem ID",
+      "trans_type": "İşlem Türü",
+      "updated_at": "Tarih"
+    },
+    "title": "Kredilerim"
+  },
+  "my_invites": {
+    "copy_invite_link": "Davet Linkini Kopyala",
+    "description": "Chat Recap AI'ı arkadaşlarınla paylaş ve kredi kazan",
+    "edit_invite_link": "Davet Linkini Düzenle",
+    "invite_balance": "Davetlerden Kredi Bakiyesi",
+    "invite_code": "Davet Kodu",
+    "invite_tip": "Bir arkadaşını Chat Recap AI kullanmaya davet et, 5 ücretsiz kredi kazan.",
+    "my_invite_link": "Davet Linkim",
+    "no_affiliates": "Davet programı şu anda yalnızca onay ile kullanılabilir. Başvurmak için bizimle iletişime geçin.",
+    "no_invites": "Davet kaydı bulunamadı",
+    "no_orders": "Başkalarını davet etmeden önce en az bir sohbet analiz etmeniz gerekiyor",
+    "table": {
+      "completed": "Tamamlandı",
+      "invite_time": "Davet Tarihi",
+      "invite_user": "Arkadaşın E-postası",
+      "pending": "Beklemede",
+      "reward_amount": "Kazanılan Krediler",
+      "reward_percent": "Ödül Oranı",
+      "status": "Durum"
+    },
+    "title": "Arkadaşları Davet Et",
+    "total_award_amount": "Toplam Kazanılan Kredi",
+    "total_invite_count": "Toplam Davet Edilen Arkadaş",
+    "total_paid_count": "Satın Alan Arkadaşlar",
+    "update_invite_button": "Kaydet",
+    "update_invite_code": "Davet Kodunu Özelleştir",
+    "update_invite_code_tip": "Kişiselleştirilmiş bir davet kodu oluştur"
+  },
+  "my_orders": {
+    "activate_order": "Analizi Görüntüle",
+    "actived": "Analiz Edildi",
+    "description": "Önceki sohbet analizlerinizi görüntüleyin",
+    "join_discord": "Discord'a Katıl",
+    "no_orders": "Analiz bulunamadı",
+    "read_docs": "Nasıl Çalışır",
+    "table": {
+      "amount": "Sohbet Uzunluğu",
+      "email": "E-posta",
+      "github_username": "Kullanıcı Adı",
+      "order_no": "Analiz ID",
+      "paid_at": "Analiz Tarihi",
+      "product_name": "Analiz Türü",
+      "status": "Durum"
+    },
+    "tip": "Başlamak için bir sohbet yükleyin",
+    "title": "Analiz Geçmişim"
+  },
+  "negative": "",
+  "neutral": "",
+  "no_data_available": "",
+  "no_data_found": "",
+  "no_meaningful_words": "",
+  "no_words_found": "",
+  "of_full_access": "",
+  "overall_sentiment": "",
+  "overview_story_part1": "",
+  "overview_story_part2": "",
+  "overview_story_part3": "",
+  "overview_title": "",
+  "payment": {
+    "error_title": ""
+  },
+  "peak_activity_time": "",
+  "placeholder": "",
+  "platforms": {
+    "discord": "",
+    "instagram": "",
+    "snapchat": "",
+    "telegram": "",
+    "whatsapp": ""
+  },
+  "positive": "",
+  "pricing": {
+    "description": "1 kredi ≈ şu anda 5000 kelime, ve maliyeti optimize etmek için çok çalışıyoruz.",
+    "title": "Gelişmiş AI Analizi için Kredi Satın Alın"
+  },
+  "processing": {
+    "analysis_progress": "",
+    "analyzing": "",
+    "cleaning": "",
+    "cleaning_progress": "",
+    "completed": "",
+    "description": "",
+    "failed": "",
+    "preparing": "",
+    "processing": "",
+    "result_fetch_failed": "",
+    "status_fetch_failed": "",
+    "title": "",
+    "uploading": ""
+  },
+  "quick_responses": "",
+  "relationship_analysis": {
+    "description": ""
+  },
+  "relationship_metrics": {
+    "emotional_stability": "",
+    "interest_level": "",
+    "response_enthusiasm": "",
+    "response_time": ""
+  },
+  "relationship_metrics_hearts": {
+    "description": "",
+    "title": ""
+  },
+  "response_pattern_description": "",
+  "results": {
+    "back": "",
+    "date_range": "",
+    "description": "",
+    "export": "",
+    "filtered_messages": "",
+    "link_copied": "",
+    "media_messages_one": "",
+    "media_messages_other": "",
+    "messages_description_one": "",
+    "messages_description_other": "",
+    "messages_title": "",
+    "next": "",
+    "no_messages": "",
+    "no_search_results": "",
+    "page_info": "",
+    "participants": "",
+    "previous": "",
+    "search": "",
+    "search_placeholder": "",
+    "share": "",
+    "share_text_one": "",
+    "share_text_other": "",
+    "share_title": "",
+    "summary_description": "",
+    "summary_title": "",
+    "system_messages_one": "",
+    "system_messages_other": "",
+    "title": "",
+    "total_messages": "",
+    "unknown_date_range": "",
+    "valid_date_messages_one": "",
+    "valid_date_messages_other": "",
+    "warnings_title": ""
+  },
+  "sample_button_text": "",
+  "sample_chat_text": "",
+  "select_button": "",
+  "sentiment_analysis": "",
+  "sentiment_description": "",
+  "sentiment_negative": "",
+  "sentiment_neutral": "",
+  "sentiment_positive": "",
+  "sentiment_score": "",
+  "sentiment_very_negative": "",
+  "sentiment_very_positive": "",
+  "share": {
+    "copy_failed": "",
+    "link_copied": ""
+  },
+  "share_not_implemented": "",
+  "share_results": "",
+  "sharing": "",
+  "sign_modal": {
+    "cancel_title": "İptal",
+    "close_title": "Kapat",
+    "continue": "Devam Et",
+    "email_placeholder": "E-posta adresinizi buraya girin",
+    "email_sign_in": "E-posta ile giriş yap",
+    "email_title": "E-posta",
+    "forgot_password": "Şifrenizi mi unuttunuz?",
+    "github_sign_in": "GitHub ile giriş yap",
+    "google_sign_in": "Google ile giriş yap",
+    "no_account": "Hesabınız yok mu?",
+    "or": "Veya",
+    "password_placeholder": "Şifrenizi buraya girin",
+    "password_title": "Şifre",
+    "sign_in_description": "Hesabınıza giriş yapın",
+    "sign_in_title": "Giriş Yap",
+    "sign_up_description": "Bir hesap oluşturun",
+    "sign_up_title": "Kaydol"
+  },
+  "speakers": {
+    "boyfriend": "",
+    "crush": "",
+    "ex": "",
+    "friend": "",
+    "girlfriend": "",
+    "her": "",
+    "him": ""
+  },
+  "story_timeline_description": "",
+  "story_timeline_title": "",
+  "subtitle": "",
+  "supported_formats": "",
+  "testimonial": {
+    "items": [
+      {
+        "content": "Dürüst olmak gerekirse... şaşkınım. Ben tam olarak anlamadan önce ilişkinin neden bittiğini bile tespit etti.",
+        "initials": "AAD",
+        "title": "İlişki Analizi"
+      },
+      {
+        "content": "🥰 Bir yıl sonra bize bak... Tüm bu ilerlemeyi görmek harika. Birlikte nasıl büyüdüğümüzü tam olarak gösteriyor!",
+        "initials": "SSP",
+        "title": "Yıldönümü Analizi"
+      },
+      {
+        "content": "Acımasızca dürüst ilişki ipuçları duygularımı incitti, haha... ama tam olarak duymam gereken şeydi.",
+        "initials": "MMT",
+        "title": "Kişisel Gelişim"
+      }
+    ],
+    "subtitle": "ilişkilerinde daha derin içgörüler keşfeden kullanıcılar",
+    "title": "Sevenlerin Sevdiği"
+  },
+  "text_analysis_title": "",
+  "time_analysis_title": "",
+  "time_distribution": "",
+  "time_distribution_description": "",
+  "times": {
+    "days_ago": "",
+    "hours_ago": "",
+    "just_now": "",
+    "minutes_ago": ""
+  },
+  "title": "",
+  "to_unlock": "",
+  "top_emojis": "",
+  "top_words": "",
+  "total_emojis": "",
+  "total_messages": "",
+  "total_unique_words": "",
+  "total_words": "",
+  "try_now": "",
+  "upload": {
+    "description": "",
+    "drop_files": "",
+    "error": "",
+    "failed": "",
+    "file_size_limit": "",
+    "invalid_format": "",
+    "no_file_selected": "",
+    "select_file": "",
+    "supported_formats": "",
+    "title": "",
+    "upload_button": "",
+    "upload_failed": "",
+    "uploading": ""
+  },
+  "upload_button_text": "",
+  "upload_description": "",
+  "upload_title": "",
+  "use_code": "",
+  "user": {
+    "admin_system": "Yönetim Alanı",
+    "api_keys": "API Anahtarları",
+    "credits": "Krediler",
+    "my_orders": "Siparişlerim",
+    "sign_in": "Giriş Yap",
+    "sign_out": "Çıkış Yap",
+    "user_center": "Kullanıcı Merkezi"
+  },
+  "very_negative": "",
+  "very_positive": "",
+  "view_guide": "View download guide",
+  "weekly_activity_heatmap": "",
+  "word": "",
+  "word_cloud": "",
+  "words": "",
+  "words_per_message": ""
 }

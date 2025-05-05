@@ -1,412 +1,661 @@
 {
-    "metadata": {
-        "title": "Chat Recap AI : Outil gratuit d'analyse de chat en ligne sans inscription - chatrecap.io",
-        "description": "Vous souhaitez analyser votre historique de chat ? ChatRecap AI vous aide à comprendre les conversations sur WhatsApp, Instagram, Snapchat, Discord et Telegram. Obtenez des informations multiplateforme et découvrez vos modèles de communication.",
-        "keywords": "chatrecap, analyseur de chat, analyseur whatsapp, analyse de chat instagram, analyse de chat discord, analyseur telegram, analyse snapchat, historique de chat, modèles de conversation, informations de messagerie, analyse de chat multiplateforme, exportation de chat, métriques de chat"
+  "afternoon": "",
+  "ai_analysis": {
+    "analyzing": "",
+    "error": "",
+    "error_description": "",
+    "failed": "",
+    "failed_description": "",
+    "generate": "",
+    "please_wait": "",
+    "starting": "",
+    "success": "",
+    "success_description": ""
+  },
+  "analyze_button": "",
+  "avg_words_per_msg": "",
+  "back_to_upload": "",
+  "badge": "",
+  "blog": {
+    "description": "Conseils, ressources et mises à jour sur la communication relationnelle",
+    "read_more_text": "Lire plus",
+    "title": "Perspectives relationnelles"
+  },
+  "busiest_date": "",
+  "chat_analysis": {
+    "advanced_options": "Options avancées",
+    "analyze_button": "Analyser votre chat",
+    "character_count": "{current} / {max} caractères",
+    "description": "Transformez vos conversations avec Chat Recap AI. Découvrez les modèles et les informations cachés dans vos chats. Comprenez les relations à un niveau plus profond.",
+    "free_analysis": "Analysez votre chat gratuitement",
+    "how_to_import": "Comment importer un chat depuis WhatsApp",
+    "import_methods": {
+      "mobile": "Depuis WhatsApp iOS/Android",
+      "web": "Depuis WhatsApp Web"
     },
-    "user": {
-        "sign_in": "Connexion",
-        "sign_out": "Déconnexion",
-        "credits": "Crédits",
-        "api_keys": "Clés API",
-        "my_orders": "Mes commandes",
-        "user_center": "Centre utilisateur",
-        "admin_system": "Système d'administration"
+    "platforms": {
+      "discord": "Discord",
+      "instagram": "Instagram",
+      "snapchat": "Snapchat",
+      "telegram": "Telegram",
+      "whatsapp": "WhatsApp"
     },
-    "sign_modal": {
-        "sign_in_title": "Connexion",
-        "sign_in_description": "Connectez-vous à votre compte",
-        "sign_up_title": "Inscription",
-        "sign_up_description": "Créer un compte",
-        "email_title": "Email",
-        "email_placeholder": "Saisissez votre email ici",
-        "password_title": "Mot de passe",
-        "password_placeholder": "Saisissez votre mot de passe ici",
-        "forgot_password": "Mot de passe oublié ?",
-        "or": "Ou",
-        "continue": "Continuer",
-        "no_account": "Vous n'avez pas de compte ?",
-        "email_sign_in": "Connexion avec Email",
-        "google_sign_in": "Connexion avec Google",
-        "github_sign_in": "Connexion avec GitHub",
-        "close_title": "Fermer",
-        "cancel_title": "Annuler"
+    "privacy_notice": "Nous ne stockons pas votre historique de chat, le fichier mis en cache sur notre serveur sera automatiquement supprimé après 30 minutes.",
+    "sample_chat_text": "[2025/1/1, 01:00:00] ALICE: Bonne année ! 🎉\n[2025/1/1, 01:02:00] JEFF: Bonne année, mon amour ! 🎆\n[2025/1/1, 08:15:00] ALICE: Premier café de l'année ! ☕\n[2025/1/1, 08:20:00] JEFF: À bien d'autres ! 🥂\n[2025/1/1, 10:30:00] ALICE: Quel est le programme aujourd'hui ? 🤔\n[2025/1/1, 10:32:00] JEFF: Allons nous promener dans le parc 🌳\n[2025/1/1, 11:05:00] ALICE: Ça semble parfait ! 🌞\n[2025/1/1, 13:00:00] JEFF: Tu as des résolutions pour la nouvelle année ?\n[2025/1/1, 13:10:00] ALICE: Voyager davantage ! 🌍\n[2025/1/1, 13:15:00] JEFF: C'est une excellente idée, je te suis là-dessus ✈️\n[2025/1/1, 14:30:00] ALICE: Le temps est si agréable aujourd'hui ! ☀️\n[2025/1/1, 14:35:00] JEFF: Journée parfaite pour une aventure, tu ne trouves pas ?\n[2025/1/1, 16:00:00] ALICE: Je pensais prendre une glace 🍦\n[2025/1/1, 16:10:00] JEFF: Oh, je suis partant ! Quel parfum ?\n[2025/1/1, 18:30:00] ALICE: Que devrions-nous manger ce soir ?\n[2025/1/1, 18:32:00] JEFF: Une pizza ? 🍕",
+    "select_platform": "Sélectionner la plateforme",
+    "subtitle": "Votre analyse de chat par IA",
+    "title": "Chat Recap AI",
+    "upload_description": "Téléchargez votre exportation de chat à analyser",
+    "upload_title": "Saisie de l'historique de chat"
+  },
+  "chatrecapresult": {
+    "description": "",
+    "title": ""
+  },
+  "common_words": "",
+  "copyright": "",
+  "count": "",
+  "daily_activity": "",
+  "daily_activity_description": "",
+  "days": "",
+  "description": "",
+  "emojis": "",
+  "errors": {
+    "ai_insights_not_found": "",
+    "loading_failed": "",
+    "not_found": "",
+    "result_not_found": ""
+  },
+  "evening": "",
+  "export_not_implemented": "",
+  "export_pdf": "",
+  "favorite_day_to_chat": "",
+  "features": {
+    "comprehensive_analysis": {
+      "content": "Nos algorithmes d'IA avancés analysent tout votre historique de chat pour fournir des informations approfondies sur vos modèles de communication et la dynamique de votre relation.",
+      "title": "Analyse complète de chat"
     },
-    "my_orders": {
-        "title": "Mon historique d'analyses",
-        "description": "Consultez vos analyses de chat précédentes",
-        "no_orders": "Aucune analyse trouvée",
-        "tip": "Téléchargez un chat pour commencer",
-        "activate_order": "Voir l'analyse",
-        "actived": "Analysé",
-        "join_discord": "Rejoindre Discord",
-        "read_docs": "Comment ça marche",
-        "table": {
-            "order_no": "ID d'analyse",
-            "email": "Email",
-            "product_name": "Type d'analyse",
-            "amount": "Longueur du chat",
-            "paid_at": "Analysé le",
-            "github_username": "Nom d'utilisateur",
-            "status": "Statut"
-        }
+    "easy_tools": {
+      "description": "Créez votre analyse de chat par IA avec notre interface simple. Parfait pour analyser les conversations WhatsApp et comprendre les relations.",
+      "points": [
+        "Importation simple de chat",
+        "Plusieurs formats de chat pris en charge",
+        "Paramètres d'analyse de chat IA personnalisés",
+        "Traitement en temps réel"
+      ],
+      "title": "Outils de création faciles"
     },
-    "my_credits": {
-        "title": "Mes crédits",
-        "left_tip": "Crédits restants : {left_credits}",
-        "no_credits": "Aucun enregistrement de crédit",
-        "recharge": "Acheter des crédits",
-        "table": {
-            "trans_no": "ID de transaction",
-            "trans_type": "Type de transaction",
-            "credits": "Crédits",
-            "updated_at": "Date",
-            "status": "Statut"
-        }
+    "insights": {
+      "description": "Obtenez des informations complètes sur vos modèles de chat et la dynamique de votre relation avec l'analyse de chat ChatRecap AI.",
+      "points": [
+        "Analyse des sentiments",
+        "Modèles de temps de réponse",
+        "Métriques d'engagement",
+        "Détection de signaux d'alerte"
+      ],
+      "title": "Informations approfondies"
     },
-    "blog": {
-        "title": "Perspectives relationnelles",
-        "description": "Conseils, ressources et mises à jour sur la communication relationnelle",
-        "read_more_text": "Lire plus"
+    "preview": {
+      "description": "Voyez votre analyse prendre vie pendant le traitement. Prévisualisez vos informations instantanément et prenez des décisions éclairées concernant vos relations.",
+      "points": [
+        "Aperçu d'analyse instantané",
+        "Visualisations interactives",
+        "Mises à jour dynamiques",
+        "Affichage adapté aux mobiles"
+      ],
+      "title": "Aperçu en temps réel"
     },
-    "my_invites": {
-        "title": "Inviter des amis",
-        "description": "Partagez Chat Recap AI avec des amis et gagnez des crédits",
-        "no_invites": "Aucune invitation trouvée",
-        "my_invite_link": "Mon lien d'invitation",
-        "edit_invite_link": "Modifier le lien d'invitation",
-        "copy_invite_link": "Copier le lien d'invitation",
-        "invite_code": "Code d'invitation",
-        "invite_tip": "Invitez un ami à utiliser Chat Recap AI, obtenez 5 crédits gratuits.",
-        "invite_balance": "Solde de crédits des invitations",
-        "total_invite_count": "Total des amis invités",
-        "total_paid_count": "Amis ayant effectué un achat",
-        "total_award_amount": "Total des crédits gagnés",
-        "update_invite_code": "Personnaliser le code d'invitation",
-        "update_invite_code_tip": "Créez un code d'invitation personnalisé",
-        "update_invite_button": "Enregistrer",
-        "no_orders": "Vous devez analyser au moins un chat avant d'inviter d'autres personnes",
-        "no_affiliates": "Programme d'invitation actuellement sur approbation uniquement. Contactez-nous pour postuler.",
-        "table": {
-            "invite_time": "Date d'invitation",
-            "invite_user": "Email de l'ami",
-            "status": "Statut",
-            "reward_percent": "Taux de récompense",
-            "reward_amount": "Crédits gagnés",
-            "pending": "En attente",
-            "completed": "Terminé"
-        }
+    "response_time": {
+      "content": "Suivez la rapidité avec laquelle vous et votre partenaire de conversation répondez aux messages de l'autre, révélant les niveaux d'engagement et les habitudes de communication.",
+      "title": "Modèles de temps de réponse"
     },
-    "chat_analysis": {
-        "title": "Chat Recap AI",
-        "subtitle": "Votre analyse de chat par IA",
-        "description": "Transformez vos conversations avec Chat Recap AI. Découvrez les modèles et les informations cachés dans vos chats. Comprenez les relations à un niveau plus profond.",
-        "upload_title": "Saisie de l'historique de chat",
-        "upload_description": "Téléchargez votre exportation de chat à analyser",
-        "select_platform": "Sélectionner la plateforme",
-        "platforms": {
-            "whatsapp": "WhatsApp",
-            "instagram": "Instagram",
-            "discord": "Discord",
-            "telegram": "Telegram",
-            "snapchat": "Snapchat"
-        },
-        "how_to_import": "Comment importer un chat depuis WhatsApp",
-        "import_methods": {
-            "web": "Depuis WhatsApp Web",
-            "mobile": "Depuis WhatsApp iOS/Android"
-        },
-        "character_count": "{current} / {max} caractères",
-        "advanced_options": "Options avancées",
-        "privacy_notice": "Nous ne stockons pas votre historique de chat, le fichier mis en cache sur notre serveur sera automatiquement supprimé après 30 minutes.",
-        "analyze_button": "Analyser votre chat",
-        "free_analysis": "Analysez votre chat gratuitement",
-        "sample_chat_text": "[2025/1/1, 01:00:00] ALICE: Bonne année ! 🎉\n[2025/1/1, 01:02:00] JEFF: Bonne année, mon amour ! 🎆\n[2025/1/1, 08:15:00] ALICE: Premier café de l'année ! ☕\n[2025/1/1, 08:20:00] JEFF: À bien d'autres ! 🥂\n[2025/1/1, 10:30:00] ALICE: Quel est le programme aujourd'hui ? 🤔\n[2025/1/1, 10:32:00] JEFF: Allons nous promener dans le parc 🌳\n[2025/1/1, 11:05:00] ALICE: Ça semble parfait ! 🌞\n[2025/1/1, 13:00:00] JEFF: Tu as des résolutions pour la nouvelle année ?\n[2025/1/1, 13:10:00] ALICE: Voyager davantage ! 🌍\n[2025/1/1, 13:15:00] JEFF: C'est une excellente idée, je te suis là-dessus ✈️\n[2025/1/1, 14:30:00] ALICE: Le temps est si agréable aujourd'hui ! ☀️\n[2025/1/1, 14:35:00] JEFF: Journée parfaite pour une aventure, tu ne trouves pas ?\n[2025/1/1, 16:00:00] ALICE: Je pensais prendre une glace 🍦\n[2025/1/1, 16:10:00] JEFF: Oh, je suis partant ! Quel parfum ?\n[2025/1/1, 18:30:00] ALICE: Que devrions-nous manger ce soir ?\n[2025/1/1, 18:32:00] JEFF: Une pizza ? 🍕"
+    "sentiment_analysis": {
+      "content": "Analysez le ton émotionnel de vos conversations pour comprendre les sentiments et attitudes sous-jacents exprimés dans vos messages.",
+      "title": "Analyse des sentiments"
     },
-    "features": {
-        "title": "Fonctionnalités clés de Chat Recap AI",
-        "easy_tools": {
-            "title": "Outils de création faciles",
-            "description": "Créez votre analyse de chat par IA avec notre interface simple. Parfait pour analyser les conversations WhatsApp et comprendre les relations.",
-            "points": [
-                "Importation simple de chat",
-                "Plusieurs formats de chat pris en charge",
-                "Paramètres d'analyse de chat IA personnalisés",
-                "Traitement en temps réel"
-            ]
-        },
-        "preview": {
-            "title": "Aperçu en temps réel",
-            "description": "Voyez votre analyse prendre vie pendant le traitement. Prévisualisez vos informations instantanément et prenez des décisions éclairées concernant vos relations.",
-            "points": [
-                "Aperçu d'analyse instantané",
-                "Visualisations interactives",
-                "Mises à jour dynamiques",
-                "Affichage adapté aux mobiles"
-            ]
-        },
-        "sentiment_analysis": {
-            "title": "Analyse des sentiments",
-            "content": "Analysez le ton émotionnel de vos conversations pour comprendre les sentiments et attitudes sous-jacents exprimés dans vos messages."
-        },
-        "response_time": {
-            "title": "Modèles de temps de réponse",
-            "content": "Suivez la rapidité avec laquelle vous et votre partenaire de conversation répondez aux messages de l'autre, révélant les niveaux d'engagement et les habitudes de communication."
-        },
-        "topic_analysis": {
-            "title": "Analyse des sujets",
-            "content": "Découvrez les sujets et thèmes les plus courants dans vos conversations, vous aidant à comprendre ce qui compte le plus dans votre relation."
-        },
-        "comprehensive_analysis": {
-            "title": "Analyse complète de chat",
-            "content": "Nos algorithmes d'IA avancés analysent tout votre historique de chat pour fournir des informations approfondies sur vos modèles de communication et la dynamique de votre relation."
-        },
-        "insights": {
-            "title": "Informations approfondies",
-            "description": "Obtenez des informations complètes sur vos modèles de chat et la dynamique de votre relation avec l'analyse de chat ChatRecap AI.",
-            "points": [
-                "Analyse des sentiments",
-                "Modèles de temps de réponse",
-                "Métriques d'engagement",
-                "Détection de signaux d'alerte"
-            ]
-        }
-    },
-    "pricing": {
-        "title": "Achetez des crédits pour l'analyse IA avancée",
-        "description": "1 crédit ≈ 5000 mots actuellement, et nous travaillons dur pour optimiser le coût."
-    },
-    "testimonial": {
-        "title": "Aimé par les amoureux",
-        "subtitle": "utilisateurs qui ont découvert des informations plus profondes sur leurs relations",
-        "items": [{
-                "initials": "AAD",
-                "title": "Analyse de relation",
-                "content": "Honnêtement... je dois dire que je suis choqué. Cela a même identifié pourquoi la relation était terminée avant que je ne m'en rende pleinement compte moi-même."
-            },
-            {
-                "initials": "SSP",
-                "title": "Analyse d'anniversaire",
-                "content": "🥰 Regardez-nous après un an... Incroyable de voir tous ces progrès. Cela montre exactement comment nous avons grandi ensemble !"
-            },
-            {
-                "initials": "MMT",
-                "title": "Croissance personnelle",
-                "content": "Les conseils relationnels brutalement honnêtes ont blessé mes sentiments lol... mais c'est exactement ce que j'avais besoin d'entendre."
-            }
-        ]
-    },
-    "how_it_works": {
-        "title": "Comment analyser vos chats avec Chat Recap AI ?",
-        "subtitle": "Un processus simple en trois étapes pour obtenir des informations sur vos conversations",
-        "steps": [{
-                "number": "1",
-                "title": "Télécharger le chat",
-                "description": "Exportez votre historique de chat depuis WhatsApp ou d'autres plateformes et téléchargez-le sur notre plateforme sécurisée ChatRecap AI"
-            },
-            {
-                "number": "2",
-                "title": "Sélectionner l'analyse",
-                "description": "Choisissez quels aspects de vos conversations vous souhaitez analyser - des modèles de base aux informations émotionnelles profondes"
-            },
-            {
-                "number": "3",
-                "title": "Obtenir des informations",
-                "description": "Recevez une analyse détaillée avec des visualisations et des informations exploitables sur vos modèles de communication"
-            }
-        ],
-        "footer": {
-            "social_links": {
-                "whatsapp": "WhatsApp",
-                "instagram": "Instagram",
-                "discord": "Discord",
-                "telegram": "Telegram",
-                "snapchat": "Snapchat"
-            },
-            "copyright": "© 2025 ChatRecap AI. Tous droits réservés.",
-            "privacy_policy": "Politique de confidentialité",
-            "terms_of_service": "Conditions d'utilisation"
-        },
-        "chat_notifications": {
-            "title": "Notifications de chat",
-            "speakers": {
-                "girlfriend": "Petite amie",
-                "boyfriend": "Petit ami",
-                "her": "Elle",
-                "him": "Lui",
-                "ex": "Ex",
-                "friend": "Ami(e)",
-                "crush": "Béguin"
-            },
-            "times": {
-                "just_now": "À l'instant",
-                "minutes_ago": "Il y a {minutes} minutes",
-                "hours_ago": "Il y a {hours} heures",
-                "days_ago": "Il y a {days} jours"
-            },
-            "messages": {
-                "message1": "Oh, tu as enfin écrit ? Tu as dû battre un record du monde 🏆🙄",
-                "message2": "Désolé, mon téléphone ne vibre que pour les livraisons de pizza 🍕📳",
-                "message3": "Tes phrases d'accroche sont plus rapides que mon pop-corn au micro-ondes 🍿💨",
-                "message4": "Notre conversation est plus froide que l'Antarctique ❄️😎",
-                "message5": "Je te manque ? Je me souviens à peine de ton nom 😂",
-                "message6": "Ta vie amoureuse est comme mon WiFi - connexion instable 📶",
-                "message7": "Vu ton message. Répondrai dans 2-3 jours ouvrables 📅"
-            }
-        },
-        "chatrecapplatform": {
-            "meta": {
-                "title": "Choisissez votre plateforme de chat",
-                "description": "Sélectionnez la plateforme à partir de laquelle vous souhaitez analyser votre chat"
-            },
-            "badge": "Analyse de chat",
-            "title": "Choisissez votre plateforme de chat",
-            "description": "Sélectionnez la plateforme à partir de laquelle vous souhaitez analyser votre historique de chat. Nous prenons en charge plusieurs plateformes de messagerie pour fournir des informations complètes.",
-            "select_button": "Sélectionner la plateforme",
-            "platforms": {
-                "whatsapp": {
-                    "description": "Analysez vos conversations WhatsApp pour comprendre vos modèles de messagerie et la dynamique de votre relation."
-                },
-                "instagram": {
-                    "description": "Découvrez des informations à partir de vos messages directs Instagram et comprenez votre style de communication."
-                },
-                "discord": {
-                    "description": "Analysez vos chats Discord pour mieux comprendre votre communication dans les contextes de jeu et de communauté."
-                },
-                "telegram": {
-                    "description": "Obtenez des informations à partir de vos conversations Telegram et comprenez vos modèles de messagerie."
-                },
-                "snapchat": {
-                    "description": "Analysez vos conversations Snapchat pour comprendre votre style et vos modèles de communication."
-                }
-            }
-        },
-        "payment": {
-            "title": "Analyse de chat par IA",
-            "description": "Utilisez l'IA pour analyser en profondeur votre historique de chat et obtenir des informations sur la personnalité et l'analyse des relations",
-            "service_name": "Service d'analyse de chat par IA",
-            "pay_button": "Payer maintenant",
-            "error_title": "Erreur",
-            "missing_file_id": "ID de fichier manquant, veuillez d'abord télécharger un fichier",
-            "return_home": "Retour à l'accueil",
-            "processing": "Traitement en cours..."
-        },
-        "chatrecapresult": {
-            "title": "Vos résultats d'analyse de chat",
-            "description": "Découvrez des informations sur vos modèles de conversation et la dynamique de votre relation",
-            "back_to_upload": "Retour au téléchargement",
-            "export_pdf": "Exporter en PDF",
-            "share_results": "Partager les résultats",
-            "export_not_implemented": "La fonction d'exportation arrive bientôt !",
-            "share_not_implemented": "La fonction de partage arrive bientôt !",
-            "not_found": "Analyse non trouvée",
-            "error_loading": "Erreur lors du chargement des données d'analyse",
-            "errors": {
-                "result_not_found": "Résultat d'analyse non trouvé. Veuillez essayer de télécharger à nouveau votre fichier.",
-                "loading_failed": "Échec du chargement des données d'analyse. Veuillez réessayer."
-            },
-            "processing_errors": {
-                "no_messages": "Aucun message valide n'a pu être extrait",
-                "invalid_date": "Certains messages ont des dates invalides",
-                "processing_failed": "Échec du traitement : {message}",
-                "filter_too_strict": "Avertissement : Tous les messages ont été filtrés, les conditions de filtrage peuvent être trop strictes",
-                "single_participant": "Un seul participant détecté, cela peut ne pas être une conversation",
-                "short_timespan": "La durée de la conversation est très courte, cela peut ne pas être une conversation complète"
-            },
-            "chat_story": "Votre histoire de chat",
-            "first_message": "Premier message",
-            "last_message": "Dernier message",
-            "days": "jours",
-            "response_patterns": {
-                "evening_active": "Réponses rapides le soir, plus lentes le matin",
-                "morning_active": "Plus actif le matin que le soir",
-                "consistent": "Temps de réponse constants tout au long de la journée"
-            },
-            "time_of_day": {
-                "morning": "Matin",
-                "afternoon": "Après-midi",
-                "evening": "Soirée",
-                "night": "Nuit"
-            },
-            "day_names": {
-                "sunday": "Dimanche",
-                "monday": "Lundi",
-                "tuesday": "Mardi",
-                "wednesday": "Mercredi",
-                "thursday": "Jeudi",
-                "friday": "Vendredi",
-                "saturday": "Samedi"
-            },
-            "timespan_format": "Votre histoire a commencé le {startDay} {startMonth} {startYear} {startDayName} à 00h00, se déroulant sur {durationText}, jusqu'au {endDay} {endMonth} {endYear} {endDayName} à 23h59 — laissant une marque éternelle dans le passage du temps.",
-            "analysis_card": {
-                "example_title": "Exemples de cartes d'analyse",
-                "example_description": "Voici des exemples de cartes d'analyse avec différentes métriques",
-                "user_satisfaction": {
-                    "title": "Satisfaction utilisateur",
-                    "content": "La satisfaction utilisateur de ce trimestre a atteint 85%, une augmentation de 5 points de pourcentage par rapport au trimestre précédent.\nLa croissance principale provient du lancement de nouvelles fonctionnalités de produit et des optimisations de l'interface utilisateur.\nLes retours des utilisateurs montrent que la vitesse de réponse et la facilité d'utilisation sont les principaux facteurs d'amélioration de la satisfaction.\nIl est recommandé de continuer à optimiser l'expérience utilisateur, en particulier dans les processus d'opération mobile."
-                },
-                "conversion_rate": {
-                    "title": "Taux de conversion",
-                    "content": "Le taux de conversion de ce mois est de 62%, en baisse de 3 points de pourcentage par rapport au mois dernier.\nL'analyse montre que la baisse du taux de conversion est principalement due à la mauvaise qualité des nouveaux canaux de promotion.\nLes taux de conversion du trafic de haute qualité restent stables, mais une augmentation du trafic de faible qualité a entraîné une baisse globale des taux de conversion.\nIl est recommandé d'optimiser les sources de trafic, d'améliorer la qualité des visiteurs et d'améliorer l'expérience des pages de destination."
-                },
-                "system_performance": {
-                    "title": "Performance du système",
-                    "content": "Les métriques de performance du système ont atteint 93%, au meilleur niveau historique.\nLe temps de réponse du serveur a diminué en moyenne de 200 ms et la vitesse de chargement des pages a augmenté de 15%.\nL'optimisation des requêtes de base de données et le déploiement CDN sont les principales raisons de l'amélioration des performances.\nIl est recommandé de continuer à surveiller les performances de pointe et d'envisager une optimisation supplémentaire de la stratégie de cache."
-                }
-            },
-            "overview_title": "Aperçu",
-            "messages": "Messages",
-            "total_messages": "Total des messages",
-            "words": "Mots",
-            "total_words": "Total des mots",
-            "words_per_message": "Mots par message",
-            "avg_words_per_msg": "Moy. mots/msg",
-            "overview_story_part1": "Votre conversation raconte une belle histoire à travers <span class='highlight'>{totalMessages} messages</span> échangés au fil du temps. {sender1Name} a envoyé <span class='highlight'>{sender1Messages} messages</span>, tandis que {sender2Name} a répondu avec <span class='highlight'>{sender2Messages} messages</span>.",
-            "overview_story_part2": "Ensemble, vous avez tissé une tapisserie de <span class='highlight'>{totalWords} mots</span>, avec {sender1Name} contribuant <span class='highlight'>{sender1Words} mots</span> et {sender2Name} partageant <span class='highlight'>{sender2Words} mots</span>. Vos conversations sont significatives et substantielles, avec une moyenne de <span class='highlight'>{wordsPerMessage} mots par message</span>.",
-            "overview_story_part3": "Vos conversations les plus actives se déroulent le <span class='highlight'>{mostActiveDay}</span>, avec une moyenne de <span class='highlight'>{avgMessagesPerDay} messages</span> échangés quotidiennement. Le temps de réponse typique de <span class='highlight'>{responseTime}</span> montre l'anticipation impatiente que vous ressentez tous les deux lorsque vous communiquez l'un avec l'autre.",
-            "text_analysis_title": "Analyse de texte",
-            "sentiment_analysis": "Analyse des sentiments",
-            "sentiment_score": "Score de sentiment",
-            "sentiment_description": "Les scores de sentiment vont de -1 (très négatif) à 1 (très positif), 0 étant neutre.",
-            "sentiment_over_time": "Sentiment au fil du temps",
-            "sentiment_comparison": "Comparaison des sentiments",
-            "sentiment_by_day": "Sentiment par jour",
-            "sentiment_by_hour": "Sentiment par heure",
-            "topic_analysis": "Analyse des sujets",
-            "common_topics": "Sujets communs",
-            "topic_distribution": "Distribution des sujets",
-            "topic_over_time": "Sujets au fil du temps",
-            "topic_by_participant": "Sujets par participant",
-            "emoji_analysis": "Analyse des émojis",
-            "top_emojis": "Émojis les plus utilisés",
-            "emoji_by_sentiment": "Émojis par sentiment",
-            "emoji_timeline": "Chronologie des émojis",
-            "emoji_by_participant": "Émojis par participant",
-            "communication_patterns": "Modèles de communication",
-            "message_frequency": "Fréquence des messages",
-            "response_time": "Temps de réponse",
-            "message_length": "Longueur des messages",
-            "active_hours": "Heures actives",
-            "conversation_starters": "Initiateurs de conversation",
-            "conversation_enders": "Terminateurs de conversation",
-            "relationship_insights": "Informations sur la relation",
-            "relationship_health": "Santé de la relation",
-            "communication_balance": "Équilibre de communication",
-            "emotional_support": "Soutien émotionnel",
-            "conflict_patterns": "Modèles de conflit",
-            "growth_over_time": "Croissance au fil du temps",
-            "personality_insights": "Informations sur la personnalité",
-            "communication_style": "Style de communication",
-            "emotional_expression": "Expression émotionnelle",
-            "decision_making": "Prise de décision",
-            "social_tendencies": "Tendances sociales",
-            "values_and_interests": "Valeurs et intérêts",
-            "recommendations": "Recommandations",
-            "communication_tips": "Conseils de communication",
-            "relationship_suggestions": "Suggestions pour la relation",
-            "conflict_resolution": "Résolution de conflits",
-            "growth_opportunities": "Opportunités de croissance",
-            "next_steps": "Prochaines étapes"
-        }
+    "title": "Fonctionnalités clés de Chat Recap AI",
+    "topic_analysis": {
+      "content": "Découvrez les sujets et thèmes les plus courants dans vos conversations, vous aidant à comprendre ce qui compte le plus dans votre relation.",
+      "title": "Analyse des sujets"
     }
+  },
+  "first_message": "",
+  "free": "",
+  "free_analysis": "",
+  "heatmap_data_not_available": "",
+  "high": "",
+  "hours": "",
+  "how_it_works": {
+    "chat_notifications": {
+      "messages": {
+        "message1": "Oh, tu as enfin écrit ? Tu as dû battre un record du monde 🏆🙄",
+        "message2": "Désolé, mon téléphone ne vibre que pour les livraisons de pizza 🍕📳",
+        "message3": "Tes phrases d'accroche sont plus rapides que mon pop-corn au micro-ondes 🍿💨",
+        "message4": "Notre conversation est plus froide que l'Antarctique ❄️😎",
+        "message5": "Je te manque ? Je me souviens à peine de ton nom 😂",
+        "message6": "Ta vie amoureuse est comme mon WiFi - connexion instable 📶",
+        "message7": "Vu ton message. Répondrai dans 2-3 jours ouvrables 📅"
+      },
+      "speakers": {
+        "boyfriend": "Petit ami",
+        "crush": "Béguin",
+        "ex": "Ex",
+        "friend": "Ami(e)",
+        "girlfriend": "Petite amie",
+        "her": "Elle",
+        "him": "Lui"
+      },
+      "times": {
+        "days_ago": "Il y a {days} jours",
+        "hours_ago": "Il y a {hours} heures",
+        "just_now": "À l'instant",
+        "minutes_ago": "Il y a {minutes} minutes"
+      },
+      "title": "Notifications de chat"
+    },
+    "chatrecapplatform": {
+      "badge": "Analyse de chat",
+      "description": "Sélectionnez la plateforme à partir de laquelle vous souhaitez analyser votre historique de chat. Nous prenons en charge plusieurs plateformes de messagerie pour fournir des informations complètes.",
+      "meta": {
+        "description": "Sélectionnez la plateforme à partir de laquelle vous souhaitez analyser votre chat",
+        "title": "Choisissez votre plateforme de chat"
+      },
+      "platforms": {
+        "discord": {
+          "description": "Analysez vos chats Discord pour mieux comprendre votre communication dans les contextes de jeu et de communauté."
+        },
+        "instagram": {
+          "description": "Découvrez des informations à partir de vos messages directs Instagram et comprenez votre style de communication."
+        },
+        "snapchat": {
+          "description": "Analysez vos conversations Snapchat pour comprendre votre style et vos modèles de communication."
+        },
+        "telegram": {
+          "description": "Obtenez des informations à partir de vos conversations Telegram et comprenez vos modèles de messagerie."
+        },
+        "whatsapp": {
+          "description": "Analysez vos conversations WhatsApp pour comprendre vos modèles de messagerie et la dynamique de votre relation."
+        }
+      },
+      "select_button": "Sélectionner la plateforme",
+      "title": "Choisissez votre plateforme de chat"
+    },
+    "chatrecapresult": {
+      "active_hours": "Heures actives",
+      "analysis_card": {
+        "conversion_rate": {
+          "content": "Le taux de conversion de ce mois est de 62%, en baisse de 3 points de pourcentage par rapport au mois dernier.\nL'analyse montre que la baisse du taux de conversion est principalement due à la mauvaise qualité des nouveaux canaux de promotion.\nLes taux de conversion du trafic de haute qualité restent stables, mais une augmentation du trafic de faible qualité a entraîné une baisse globale des taux de conversion.\nIl est recommandé d'optimiser les sources de trafic, d'améliorer la qualité des visiteurs et d'améliorer l'expérience des pages de destination.",
+          "title": "Taux de conversion"
+        },
+        "example_description": "Voici des exemples de cartes d'analyse avec différentes métriques",
+        "example_title": "Exemples de cartes d'analyse",
+        "system_performance": {
+          "content": "Les métriques de performance du système ont atteint 93%, au meilleur niveau historique.\nLe temps de réponse du serveur a diminué en moyenne de 200 ms et la vitesse de chargement des pages a augmenté de 15%.\nL'optimisation des requêtes de base de données et le déploiement CDN sont les principales raisons de l'amélioration des performances.\nIl est recommandé de continuer à surveiller les performances de pointe et d'envisager une optimisation supplémentaire de la stratégie de cache.",
+          "title": "Performance du système"
+        },
+        "user_satisfaction": {
+          "content": "La satisfaction utilisateur de ce trimestre a atteint 85%, une augmentation de 5 points de pourcentage par rapport au trimestre précédent.\nLa croissance principale provient du lancement de nouvelles fonctionnalités de produit et des optimisations de l'interface utilisateur.\nLes retours des utilisateurs montrent que la vitesse de réponse et la facilité d'utilisation sont les principaux facteurs d'amélioration de la satisfaction.\nIl est recommandé de continuer à optimiser l'expérience utilisateur, en particulier dans les processus d'opération mobile.",
+          "title": "Satisfaction utilisateur"
+        }
+      },
+      "avg_words_per_msg": "Moy. mots/msg",
+      "back_to_upload": "Retour au téléchargement",
+      "chat_story": "Votre histoire de chat",
+      "common_topics": "Sujets communs",
+      "communication_balance": "Équilibre de communication",
+      "communication_patterns": "Modèles de communication",
+      "communication_style": "Style de communication",
+      "communication_tips": "Conseils de communication",
+      "conflict_patterns": "Modèles de conflit",
+      "conflict_resolution": "Résolution de conflits",
+      "conversation_enders": "Terminateurs de conversation",
+      "conversation_starters": "Initiateurs de conversation",
+      "day_names": {
+        "friday": "Vendredi",
+        "monday": "Lundi",
+        "saturday": "Samedi",
+        "sunday": "Dimanche",
+        "thursday": "Jeudi",
+        "tuesday": "Mardi",
+        "wednesday": "Mercredi"
+      },
+      "days": "jours",
+      "decision_making": "Prise de décision",
+      "description": "Découvrez des informations sur vos modèles de conversation et la dynamique de votre relation",
+      "emoji_analysis": "Analyse des émojis",
+      "emoji_by_participant": "Émojis par participant",
+      "emoji_by_sentiment": "Émojis par sentiment",
+      "emoji_timeline": "Chronologie des émojis",
+      "emotional_expression": "Expression émotionnelle",
+      "emotional_support": "Soutien émotionnel",
+      "error_loading": "Erreur lors du chargement des données d'analyse",
+      "errors": {
+        "loading_failed": "Échec du chargement des données d'analyse. Veuillez réessayer.",
+        "result_not_found": "Résultat d'analyse non trouvé. Veuillez essayer de télécharger à nouveau votre fichier."
+      },
+      "export_not_implemented": "La fonction d'exportation arrive bientôt !",
+      "export_pdf": "Exporter en PDF",
+      "first_message": "Premier message",
+      "growth_opportunities": "Opportunités de croissance",
+      "growth_over_time": "Croissance au fil du temps",
+      "last_message": "Dernier message",
+      "message_frequency": "Fréquence des messages",
+      "message_length": "Longueur des messages",
+      "messages": "Messages",
+      "next_steps": "Prochaines étapes",
+      "not_found": "Analyse non trouvée",
+      "overview_story_part1": "Votre conversation raconte une belle histoire à travers <span class='highlight'>{totalMessages} messages</span> échangés au fil du temps. {sender1Name} a envoyé <span class='highlight'>{sender1Messages} messages</span>, tandis que {sender2Name} a répondu avec <span class='highlight'>{sender2Messages} messages</span>.",
+      "overview_story_part2": "Ensemble, vous avez tissé une tapisserie de <span class='highlight'>{totalWords} mots</span>, avec {sender1Name} contribuant <span class='highlight'>{sender1Words} mots</span> et {sender2Name} partageant <span class='highlight'>{sender2Words} mots</span>. Vos conversations sont significatives et substantielles, avec une moyenne de <span class='highlight'>{wordsPerMessage} mots par message</span>.",
+      "overview_story_part3": "Vos conversations les plus actives se déroulent le <span class='highlight'>{mostActiveDay}</span>, avec une moyenne de <span class='highlight'>{avgMessagesPerDay} messages</span> échangés quotidiennement. Le temps de réponse typique de <span class='highlight'>{responseTime}</span> montre l'anticipation impatiente que vous ressentez tous les deux lorsque vous communiquez l'un avec l'autre.",
+      "overview_title": "Aperçu",
+      "personality_insights": "Informations sur la personnalité",
+      "processing_errors": {
+        "filter_too_strict": "Avertissement : Tous les messages ont été filtrés, les conditions de filtrage peuvent être trop strictes",
+        "invalid_date": "Certains messages ont des dates invalides",
+        "no_messages": "Aucun message valide n'a pu être extrait",
+        "processing_failed": "Échec du traitement : {message}",
+        "short_timespan": "La durée de la conversation est très courte, cela peut ne pas être une conversation complète",
+        "single_participant": "Un seul participant détecté, cela peut ne pas être une conversation"
+      },
+      "recommendations": "Recommandations",
+      "relationship_health": "Santé de la relation",
+      "relationship_insights": "Informations sur la relation",
+      "relationship_suggestions": "Suggestions pour la relation",
+      "response_patterns": {
+        "consistent": "Temps de réponse constants tout au long de la journée",
+        "evening_active": "Réponses rapides le soir, plus lentes le matin",
+        "morning_active": "Plus actif le matin que le soir"
+      },
+      "response_time": "Temps de réponse",
+      "sentiment_analysis": "Analyse des sentiments",
+      "sentiment_by_day": "Sentiment par jour",
+      "sentiment_by_hour": "Sentiment par heure",
+      "sentiment_comparison": "Comparaison des sentiments",
+      "sentiment_description": "Les scores de sentiment vont de -1 (très négatif) à 1 (très positif), 0 étant neutre.",
+      "sentiment_over_time": "Sentiment au fil du temps",
+      "sentiment_score": "Score de sentiment",
+      "share_not_implemented": "La fonction de partage arrive bientôt !",
+      "share_results": "Partager les résultats",
+      "social_tendencies": "Tendances sociales",
+      "text_analysis_title": "Analyse de texte",
+      "time_of_day": {
+        "afternoon": "Après-midi",
+        "evening": "Soirée",
+        "morning": "Matin",
+        "night": "Nuit"
+      },
+      "timespan_format": "Votre histoire a commencé le {startDay} {startMonth} {startYear} {startDayName} à 00h00, se déroulant sur {durationText}, jusqu'au {endDay} {endMonth} {endYear} {endDayName} à 23h59 — laissant une marque éternelle dans le passage du temps.",
+      "title": "Vos résultats d'analyse de chat",
+      "top_emojis": "Émojis les plus utilisés",
+      "topic_analysis": "Analyse des sujets",
+      "topic_by_participant": "Sujets par participant",
+      "topic_distribution": "Distribution des sujets",
+      "topic_over_time": "Sujets au fil du temps",
+      "total_messages": "Total des messages",
+      "total_words": "Total des mots",
+      "values_and_interests": "Valeurs et intérêts",
+      "words": "Mots",
+      "words_per_message": "Mots par message"
+    },
+    "footer": {
+      "copyright": "© 2025 ChatRecap AI. Tous droits réservés.",
+      "privacy_policy": "Politique de confidentialité",
+      "social_links": {
+        "discord": "Discord",
+        "instagram": "Instagram",
+        "snapchat": "Snapchat",
+        "telegram": "Telegram",
+        "whatsapp": "WhatsApp"
+      },
+      "terms_of_service": "Conditions d'utilisation"
+    },
+    "payment": {
+      "description": "Utilisez l'IA pour analyser en profondeur votre historique de chat et obtenir des informations sur la personnalité et l'analyse des relations",
+      "error_title": "Erreur",
+      "missing_file_id": "ID de fichier manquant, veuillez d'abord télécharger un fichier",
+      "pay_button": "Payer maintenant",
+      "processing": "Traitement en cours...",
+      "return_home": "Retour à l'accueil",
+      "service_name": "Service d'analyse de chat par IA",
+      "title": "Analyse de chat par IA"
+    },
+    "steps": [
+      {
+        "description": "Exportez votre historique de chat depuis WhatsApp ou d'autres plateformes et téléchargez-le sur notre plateforme sécurisée ChatRecap AI",
+        "number": "1",
+        "title": "Télécharger le chat"
+      },
+      {
+        "description": "Choisissez quels aspects de vos conversations vous souhaitez analyser - des modèles de base aux informations émotionnelles profondes",
+        "number": "2",
+        "title": "Sélectionner l'analyse"
+      },
+      {
+        "description": "Recevez une analyse détaillée avec des visualisations et des informations exploitables sur vos modèles de communication",
+        "number": "3",
+        "title": "Obtenir des informations"
+      }
+    ],
+    "subtitle": "Un processus simple en trois étapes pour obtenir des informations sur vos conversations",
+    "title": "Comment analyser vos chats avec Chat Recap AI ?"
+  },
+  "hurry": "",
+  "insights": {
+    "interaction_title": "",
+    "relationship_title": ""
+  },
+  "keywords": "",
+  "last_message": "",
+  "limited_time_offer": "",
+  "low": "",
+  "medium_conversations": "",
+  "messages": {
+    "message1": "",
+    "message2": "",
+    "message3": "",
+    "message4": "",
+    "message5": "",
+    "message6": "",
+    "message7": ""
+  },
+  "messages_count_one": "",
+  "messages_count_many": "",
+  "messages_count_other": "",
+  "meta": {
+    "description": "",
+    "title": ""
+  },
+  "metadata": {
+    "description": "Vous souhaitez analyser votre historique de chat ? ChatRecap AI vous aide à comprendre les conversations sur WhatsApp, Instagram, Snapchat, Discord et Telegram. Obtenez des informations multiplateforme et découvrez vos modèles de communication.",
+    "keywords": "chatrecap, analyseur de chat, analyseur whatsapp, analyse de chat instagram, analyse de chat discord, analyseur telegram, analyse snapchat, historique de chat, modèles de conversation, informations de messagerie, analyse de chat multiplateforme, exportation de chat, métriques de chat",
+    "title": "Chat Recap AI : Outil gratuit d'analyse de chat en ligne sans inscription - chatrecap.io"
+  },
+  "morning": "",
+  "most_active_day": "",
+  "most_active_hour": "",
+  "my_credits": {
+    "left_tip": "Crédits restants : {left_credits}",
+    "no_credits": "Aucun enregistrement de crédit",
+    "recharge": "Acheter des crédits",
+    "table": {
+      "credits": "Crédits",
+      "status": "Statut",
+      "trans_no": "ID de transaction",
+      "trans_type": "Type de transaction",
+      "updated_at": "Date"
+    },
+    "title": "Mes crédits"
+  },
+  "my_invites": {
+    "copy_invite_link": "Copier le lien d'invitation",
+    "description": "Partagez Chat Recap AI avec des amis et gagnez des crédits",
+    "edit_invite_link": "Modifier le lien d'invitation",
+    "invite_balance": "Solde de crédits des invitations",
+    "invite_code": "Code d'invitation",
+    "invite_tip": "Invitez un ami à utiliser Chat Recap AI, obtenez 5 crédits gratuits.",
+    "my_invite_link": "Mon lien d'invitation",
+    "no_affiliates": "Programme d'invitation actuellement sur approbation uniquement. Contactez-nous pour postuler.",
+    "no_invites": "Aucune invitation trouvée",
+    "no_orders": "Vous devez analyser au moins un chat avant d'inviter d'autres personnes",
+    "table": {
+      "completed": "Terminé",
+      "invite_time": "Date d'invitation",
+      "invite_user": "Email de l'ami",
+      "pending": "En attente",
+      "reward_amount": "Crédits gagnés",
+      "reward_percent": "Taux de récompense",
+      "status": "Statut"
+    },
+    "title": "Inviter des amis",
+    "total_award_amount": "Total des crédits gagnés",
+    "total_invite_count": "Total des amis invités",
+    "total_paid_count": "Amis ayant effectué un achat",
+    "update_invite_button": "Enregistrer",
+    "update_invite_code": "Personnaliser le code d'invitation",
+    "update_invite_code_tip": "Créez un code d'invitation personnalisé"
+  },
+  "my_orders": {
+    "activate_order": "Voir l'analyse",
+    "actived": "Analysé",
+    "description": "Consultez vos analyses de chat précédentes",
+    "join_discord": "Rejoindre Discord",
+    "no_orders": "Aucune analyse trouvée",
+    "read_docs": "Comment ça marche",
+    "table": {
+      "amount": "Longueur du chat",
+      "email": "Email",
+      "github_username": "Nom d'utilisateur",
+      "order_no": "ID d'analyse",
+      "paid_at": "Analysé le",
+      "product_name": "Type d'analyse",
+      "status": "Statut"
+    },
+    "tip": "Téléchargez un chat pour commencer",
+    "title": "Mon historique d'analyses"
+  },
+  "negative": "",
+  "neutral": "",
+  "no_data_available": "",
+  "no_data_found": "",
+  "no_meaningful_words": "",
+  "no_words_found": "",
+  "of_full_access": "",
+  "overall_sentiment": "",
+  "overview_story_part1": "",
+  "overview_story_part2": "",
+  "overview_story_part3": "",
+  "overview_title": "",
+  "payment": {
+    "error_title": ""
+  },
+  "peak_activity_time": "",
+  "placeholder": "",
+  "platforms": {
+    "discord": "",
+    "instagram": "",
+    "snapchat": "",
+    "telegram": "",
+    "whatsapp": ""
+  },
+  "positive": "",
+  "pricing": {
+    "description": "1 crédit ≈ 5000 mots actuellement, et nous travaillons dur pour optimiser le coût.",
+    "title": "Achetez des crédits pour l'analyse IA avancée"
+  },
+  "processing": {
+    "analysis_progress": "",
+    "analyzing": "",
+    "cleaning": "",
+    "cleaning_progress": "",
+    "completed": "",
+    "description": "",
+    "failed": "",
+    "preparing": "",
+    "processing": "",
+    "result_fetch_failed": "",
+    "status_fetch_failed": "",
+    "title": "",
+    "uploading": ""
+  },
+  "quick_responses": "",
+  "relationship_analysis": {
+    "description": ""
+  },
+  "relationship_metrics": {
+    "emotional_stability": "",
+    "interest_level": "",
+    "response_enthusiasm": "",
+    "response_time": ""
+  },
+  "relationship_metrics_hearts": {
+    "description": "",
+    "title": ""
+  },
+  "response_pattern_description": "",
+  "results": {
+    "back": "",
+    "date_range": "",
+    "description": "",
+    "export": "",
+    "filtered_messages": "",
+    "link_copied": "",
+    "media_messages_one": "",
+    "media_messages_many": "",
+    "media_messages_other": "",
+    "messages_description_one": "",
+    "messages_description_many": "",
+    "messages_description_other": "",
+    "messages_title": "",
+    "next": "",
+    "no_messages": "",
+    "no_search_results": "",
+    "page_info": "",
+    "participants": "",
+    "previous": "",
+    "search": "",
+    "search_placeholder": "",
+    "share": "",
+    "share_text_one": "",
+    "share_text_many": "",
+    "share_text_other": "",
+    "share_title": "",
+    "summary_description": "",
+    "summary_title": "",
+    "system_messages_one": "",
+    "system_messages_many": "",
+    "system_messages_other": "",
+    "title": "",
+    "total_messages": "",
+    "unknown_date_range": "",
+    "valid_date_messages_one": "",
+    "valid_date_messages_many": "",
+    "valid_date_messages_other": "",
+    "warnings_title": ""
+  },
+  "sample_button_text": "",
+  "sample_chat_text": "",
+  "select_button": "",
+  "sentiment_analysis": "",
+  "sentiment_description": "",
+  "sentiment_negative": "",
+  "sentiment_neutral": "",
+  "sentiment_positive": "",
+  "sentiment_score": "",
+  "sentiment_very_negative": "",
+  "sentiment_very_positive": "",
+  "share": {
+    "copy_failed": "",
+    "link_copied": ""
+  },
+  "share_not_implemented": "",
+  "share_results": "",
+  "sharing": "",
+  "sign_modal": {
+    "cancel_title": "Annuler",
+    "close_title": "Fermer",
+    "continue": "Continuer",
+    "email_placeholder": "Saisissez votre email ici",
+    "email_sign_in": "Connexion avec Email",
+    "email_title": "Email",
+    "forgot_password": "Mot de passe oublié ?",
+    "github_sign_in": "Connexion avec GitHub",
+    "google_sign_in": "Connexion avec Google",
+    "no_account": "Vous n'avez pas de compte ?",
+    "or": "Ou",
+    "password_placeholder": "Saisissez votre mot de passe ici",
+    "password_title": "Mot de passe",
+    "sign_in_description": "Connectez-vous à votre compte",
+    "sign_in_title": "Connexion",
+    "sign_up_description": "Créer un compte",
+    "sign_up_title": "Inscription"
+  },
+  "speakers": {
+    "boyfriend": "",
+    "crush": "",
+    "ex": "",
+    "friend": "",
+    "girlfriend": "",
+    "her": "",
+    "him": ""
+  },
+  "story_timeline_description": "",
+  "story_timeline_title": "",
+  "subtitle": "",
+  "supported_formats": "",
+  "testimonial": {
+    "items": [
+      {
+        "content": "Honnêtement... je dois dire que je suis choqué. Cela a même identifié pourquoi la relation était terminée avant que je ne m'en rende pleinement compte moi-même.",
+        "initials": "AAD",
+        "title": "Analyse de relation"
+      },
+      {
+        "content": "🥰 Regardez-nous après un an... Incroyable de voir tous ces progrès. Cela montre exactement comment nous avons grandi ensemble !",
+        "initials": "SSP",
+        "title": "Analyse d'anniversaire"
+      },
+      {
+        "content": "Les conseils relationnels brutalement honnêtes ont blessé mes sentiments lol... mais c'est exactement ce que j'avais besoin d'entendre.",
+        "initials": "MMT",
+        "title": "Croissance personnelle"
+      }
+    ],
+    "subtitle": "utilisateurs qui ont découvert des informations plus profondes sur leurs relations",
+    "title": "Aimé par les amoureux"
+  },
+  "text_analysis_title": "",
+  "time_analysis_title": "",
+  "time_distribution": "",
+  "time_distribution_description": "",
+  "times": {
+    "days_ago": "",
+    "hours_ago": "",
+    "just_now": "",
+    "minutes_ago": ""
+  },
+  "title": "",
+  "to_unlock": "",
+  "top_emojis": "",
+  "top_words": "",
+  "total_emojis": "",
+  "total_messages": "",
+  "total_unique_words": "",
+  "total_words": "",
+  "try_now": "",
+  "upload": {
+    "description": "",
+    "drop_files": "",
+    "error": "",
+    "failed": "",
+    "file_size_limit": "",
+    "invalid_format": "",
+    "no_file_selected": "",
+    "select_file": "",
+    "supported_formats": "",
+    "title": "",
+    "upload_button": "",
+    "upload_failed": "",
+    "uploading": ""
+  },
+  "upload_button_text": "",
+  "upload_description": "",
+  "upload_title": "",
+  "use_code": "",
+  "user": {
+    "admin_system": "Système d'administration",
+    "api_keys": "Clés API",
+    "credits": "Crédits",
+    "my_orders": "Mes commandes",
+    "sign_in": "Connexion",
+    "sign_out": "Déconnexion",
+    "user_center": "Centre utilisateur"
+  },
+  "very_negative": "",
+  "very_positive": "",
+  "view_guide": "View download guide",
+  "weekly_activity_heatmap": "",
+  "word": "",
+  "word_cloud": "",
+  "words": "",
+  "words_per_message": ""
 }

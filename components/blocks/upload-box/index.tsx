@@ -10,11 +10,12 @@ import { Sparkles, AlertCircle } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { useRouter } from "next/navigation";
-// 不再直接使用useTranslations
+import { useTranslations } from 'next-intl';
 import { PaymentTrigger } from "@/components/blocks/payment-trigger";
 
 export default function UploadBox({ upload_box }: { upload_box: UploadBoxType }) {
   const router = useRouter();
+  const t = useTranslations('chat_analysis');
   const [text, setText] = useState("");
   const [fileName, setFileName] = useState("");
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -40,7 +41,7 @@ export default function UploadBox({ upload_box }: { upload_box: UploadBoxType })
 
     // Check file size
     if (file.size > (upload_box.max_file_size || 5) * 1024 * 1024) {
-      setError(`File size exceeds ${upload_box.max_file_size || 5}MB limit`);
+      setError(t('upload.upload_failed') + ': ' + t('upload.file_size_limit', { size: upload_box.max_file_size || 5 }));
       return;
     }
 
@@ -48,7 +49,7 @@ export default function UploadBox({ upload_box }: { upload_box: UploadBoxType })
     const validExtensions = [".txt", ".zip", ".json", ".csv"];
     const fileExtension = file.name.substring(file.name.lastIndexOf(".")).toLowerCase();
     if (!validExtensions.includes(fileExtension)) {
-      setError(`Invalid file format. Supported formats: ${validExtensions.join(", ")}`);
+      setError(t('upload.upload_failed') + ': ' + t('upload.invalid_format', { formats: validExtensions.join(", ") }));
       return;
     }
 
@@ -160,7 +161,7 @@ export default function UploadBox({ upload_box }: { upload_box: UploadBoxType })
   // AI Recap 按钮处理函数
   const handleAiRecapClick = async () => {
     if (!file && !text) {
-      setError("Please select a file or enter text first");
+      setError(t('upload.no_file_selected'));
       return;
     }
 
@@ -174,7 +175,7 @@ export default function UploadBox({ upload_box }: { upload_box: UploadBoxType })
       const fileId = await uploadAndProcessFile();
 
       if (!fileId) {
-        throw new Error("文件处理失败");
+        throw new Error(t('processing.failed'));
       }
 
       // 创建支付会话
@@ -193,7 +194,7 @@ export default function UploadBox({ upload_box }: { upload_box: UploadBoxType })
       console.log('Payment API response data:', paymentData);
 
       if (!paymentData.success) {
-        throw new Error(paymentData.message || "支付创建失败");
+        throw new Error(paymentData.message || t('payment.error_title'));
       }
 
       // 重定向到Creem支付页面
@@ -211,7 +212,7 @@ export default function UploadBox({ upload_box }: { upload_box: UploadBoxType })
   // FREE Analyze 按钮处理函数
   const handleFreeAnalyzeClick = async () => {
     if (!file && !text) {
-      setError("Please select a file or enter text first");
+      setError(t('upload.no_file_selected'));
       return;
     }
 
@@ -225,7 +226,7 @@ export default function UploadBox({ upload_box }: { upload_box: UploadBoxType })
       const fileId = await uploadAndProcessFile();
 
       if (!fileId) {
-        throw new Error("文件处理失败");
+        throw new Error(t('processing.failed'));
       }
 
       // 重定向到基础分析结果页面
@@ -303,7 +304,7 @@ export default function UploadBox({ upload_box }: { upload_box: UploadBoxType })
             {uploading && (
               <div className="space-y-2 mb-4">
                 <div className="flex justify-between text-sm">
-                  <span>{processing ? "Processing..." : "Uploading..."}</span>
+                  <span>{processing ? t('processing.processing') : t('processing.uploading')}</span>
                   <span>{progress}%</span>
                 </div>
                 <Progress value={progress} className="h-2" />
@@ -314,7 +315,7 @@ export default function UploadBox({ upload_box }: { upload_box: UploadBoxType })
             {error && (
               <Alert variant="destructive" className="mb-4">
                 <AlertCircle className="h-4 w-4" />
-                <AlertTitle>Error</AlertTitle>
+                <AlertTitle>{t('processing.failed')}</AlertTitle>
                 <AlertDescription>{error}</AlertDescription>
               </Alert>
             )}
@@ -327,7 +328,7 @@ export default function UploadBox({ upload_box }: { upload_box: UploadBoxType })
                   onClick={handleFreeAnalyzeClick}
                   disabled={(!file && !text) || uploading || processing}
                 >
-                  {uploading || processing ? "Processing..." : (
+                  {uploading || processing ? t('processing.processing') : (
                     <>
                       {upload_box.secondary_button.icon && (
                         <Icon name={upload_box.secondary_button.icon} className="mr-2" />
@@ -355,7 +356,7 @@ export default function UploadBox({ upload_box }: { upload_box: UploadBoxType })
                     onClick={handleAiRecapClick}
                     disabled={(!file && !text) || uploading || processing}
                   >
-                    {uploading || processing ? "Processing..." : (
+                    {uploading || processing ? t('processing.processing') : (
                       <>
                         {upload_box.primary_button.title}
                         {upload_box.primary_button.icon && (

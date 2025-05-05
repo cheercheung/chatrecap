@@ -89,33 +89,37 @@ const OverviewBlock = forwardRef<HTMLDivElement, Props>(({ overview }, ref) => {
         {/* Communication Story */}
         <div className="mt-6">
           <div className="bg-background/70 rounded-lg p-5 border border-primary/5 shadow-sm text-muted-foreground">
-            <p className="mb-3">
-              Your conversation tells a beautiful story through{' '}
-              <span className="text-primary font-semibold">{overview.totalMessages} messages</span>{' '}
-              exchanged over time. {overview.sender1.name} sent{' '}
-              <span className="text-primary font-semibold">{overview.sender1.messages} messages</span>,
-              while {overview.sender2.name} responded with{' '}
-              <span className="text-primary font-semibold">{overview.sender2.messages} messages</span>.
-            </p>
-            <p className="mb-3">
-              Together, you've woven a tapestry of{' '}
-              <span className="text-primary font-semibold">{overview.totalWords} words</span>,
-              with {overview.sender1.name} contributing{' '}
-              <span className="text-primary font-semibold">{overview.sender1.words} words</span>{' '}
-              and {overview.sender2.name} sharing{' '}
-              <span className="text-primary font-semibold">{overview.sender2.words} words</span>.
-              Your conversations are meaningful and substantial, with an average of{' '}
-              <span className="text-primary font-semibold">{overview.wordsPerMessage} words per message</span>.
-            </p>
-            <p>
-              Your most active conversations happen on{' '}
-              <span className="text-primary font-semibold">{t(overview.mostActiveDay)}</span>,
-              with an average of{' '}
-              <span className="text-primary font-semibold">{overview.avgMessagesPerDay.toFixed(1)} messages</span>{' '}
-              exchanged daily. The typical response time of{' '}
-              <span className="text-primary font-semibold">{overview.responseTime}</span>{' '}
-              shows the eager anticipation you both feel when communicating with each other.
-            </p>
+            <p className="mb-3"
+               dangerouslySetInnerHTML={{
+                 __html: t('overview_story_part1', {
+                   totalMessages: overview.totalMessages,
+                   sender1Name: overview.sender1.name,
+                   sender1Messages: overview.sender1.messages,
+                   sender2Name: overview.sender2.name,
+                   sender2Messages: overview.sender2.messages
+                 })
+               }}
+            />
+            <p className="mb-3"
+               dangerouslySetInnerHTML={{
+                 __html: t('overview_story_part2', {
+                   totalWords: overview.totalWords,
+                   sender1Name: overview.sender1.name,
+                   sender1Words: overview.sender1.words,
+                   sender2Name: overview.sender2.name,
+                   sender2Words: overview.sender2.words,
+                   wordsPerMessage: overview.wordsPerMessage
+                 })
+               }}
+            />
+            <p dangerouslySetInnerHTML={{
+                 __html: t('overview_story_part3', {
+                   mostActiveDay: t(overview.mostActiveDay),
+                   avgMessagesPerDay: overview.avgMessagesPerDay.toFixed(1),
+                   responseTime: overview.responseTime
+                 })
+               }}
+            />
           </div>
         </div>
       </div>

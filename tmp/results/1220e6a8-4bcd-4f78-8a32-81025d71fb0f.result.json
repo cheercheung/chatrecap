@@ -1,0 +1,1161 @@
+{
+  "id": "generated",
+  "startDate": "May 5, 2025",
+  "duration": 0,
+  "endDate": "May 5, 2025",
+  "timespanSummary": "Your story began on May 5, 2025 Monday 00:00, unfolding over 1 days, until May 5, 2025 Monday 23:59—leaving an everlasting mark in the passage of time.",
+  "overview": {
+    "totalMessages": 26,
+    "totalWords": 8918,
+    "wordsPerMessage": 343,
+    "sender1": {
+      "name": "[ { \"name\"",
+      "messages": 1,
+      "words": 8,
+      "wordsPerMessage": 8
+    },
+    "sender2": {
+      "name": "[ { \"sender_name\"",
+      "messages": 1,
+      "words": 113,
+      "wordsPerMessage": 113
+    },
+    "avgMessagesPerDay": null,
+    "mostActiveDay": "day_names.monday",
+    "responseTime": "0 seconds"
+  },
+  "textAnalysis": {
+    "commonWords": [
+      {
+        "word": "false",
+        "count": 1108
+      },
+      {
+        "word": "u00e5",
+        "count": 782
+      },
+      {
+        "word": "u00e6",
+        "count": 667
+      },
+      {
+        "word": "timestamp_ms",
+        "count": 556
+      },
+      {
+        "word": "is_geoblocked_for_viewer",
+        "count": 556
+      },
+      {
+        "word": "sender_name",
+        "count": 555
+      },
+      {
+        "word": "is_unsent_image_by_messenger_kid_parent",
+        "count": 552
+      },
+      {
+        "word": "content",
+        "count": 545
+      },
+      {
+        "word": "u00bc",
+        "count": 394
+      },
+      {
+        "word": "u00a0",
+        "count": 337
+      },
+      {
+        "word": "u00a6",
+        "count": 337
+      },
+      {
+        "word": "u0082",
+        "count": 319
+      },
+      {
+        "word": "u00e4",
+        "count": 318
+      },
+      {
+        "word": "chunny",
+        "count": 299
+      },
+      {
+        "word": "u009f",
+        "count": 266
+      },
+      {
+        "word": "u00f0",
+        "count": 195
+      },
+      {
+        "word": "u00e8",
+        "count": 183
+      },
+      {
+        "word": "u00e7",
+        "count": 168
+      },
+      {
+        "word": "u0080",
+        "count": 153
+      },
+      {
+        "word": "u00b8",
+        "count": 151
+      },
+      {
+        "word": "u00a4",
+        "count": 151
+      },
+      {
+        "word": "u0088",
+        "count": 140
+      },
+      {
+        "word": "u00a5",
+        "count": 132
+      },
+      {
+        "word": "u00b9",
+        "count": 115
+      },
+      {
+        "word": "u009c",
+        "count": 110
+      },
+      {
+        "word": "u00bd",
+        "count": 109
+      },
+      {
+        "word": "u009a",
+        "count": 107
+      },
+      {
+        "word": "u00a3",
+        "count": 106
+      },
+      {
+        "word": "u00af",
+        "count": 101
+      },
+      {
+        "word": "u00ef",
+        "count": 100
+      },
+      {
+        "word": "u00ba",
+        "count": 99
+      },
+      {
+        "word": "u0098",
+        "count": 98
+      },
+      {
+        "word": "u008c",
+        "count": 92
+      },
+      {
+        "word": "u00e2",
+        "count": 91
+      },
+      {
+        "word": "u00bf",
+        "count": 86
+      },
+      {
+        "word": "u0084",
+        "count": 74
+      },
+      {
+        "word": "u008d",
+        "count": 73
+      },
+      {
+        "word": "u0091",
+        "count": 71
+      },
+      {
+        "word": "u00e9",
+        "count": 71
+      },
+      {
+        "word": "u00bb",
+        "count": 70
+      },
+      {
+        "word": "u009d",
+        "count": 69
+      },
+      {
+        "word": "u0081",
+        "count": 69
+      },
+      {
+        "word": "u0089",
+        "count": 65
+      },
+      {
+        "word": "the",
+        "count": 63
+      },
+      {
+        "word": "u00a1",
+        "count": 60
+      },
+      {
+        "word": "u0086",
+        "count": 59
+      },
+      {
+        "word": "u00b0",
+        "count": 58
+      },
+      {
+        "word": "u0093",
+        "count": 56
+      },
+      {
+        "word": "u0083",
+        "count": 56
+      },
+      {
+        "word": "u0090",
+        "count": 55
+      }
+    ],
+    "sentimentScore": 0.7019722569193346,
+    "topEmojis": [],
+    "wordCount": 14616,
+    "sender1": {
+      "name": "[ { \"name\"",
+      "commonWords": [
+        {
+          "word": "chunny",
+          "count": 1
+        },
+        {
+          "word": "name",
+          "count": 1
+        },
+        {
+          "word": "u00e5",
+          "count": 1
+        },
+        {
+          "word": "u00bc",
+          "count": 1
+        },
+        {
+          "word": "u00a0",
+          "count": 1
+        },
+        {
+          "word": "u00e6",
+          "count": 1
+        },
+        {
+          "word": "u0082",
+          "count": 1
+        },
+        {
+          "word": "u00a6",
+          "count": 1
+        },
+        {
+          "word": "messages",
+          "count": 1
+        }
+      ],
+      "topEmojis": []
+    },
+    "sender2": {
+      "name": "[ { \"sender_name\"",
+      "commonWords": [
+        {
+          "word": "false",
+          "count": 12
+        },
+        {
+          "word": "timestamp_ms",
+          "count": 7
+        },
+        {
+          "word": "content",
+          "count": 6
+        },
+        {
+          "word": "is_geoblocked_for_viewer",
+          "count": 6
+        },
+        {
+          "word": "is_unsent_image_by_messenger_kid_parent",
+          "count": 6
+        },
+        {
+          "word": "sender_name",
+          "count": 6
+        },
+        {
+          "word": "u00e5",
+          "count": 4
+        },
+        {
+          "word": "u00bc",
+          "count": 4
+        },
+        {
+          "word": "u00a0",
+          "count": 4
+        },
+        {
+          "word": "u00e6",
+          "count": 4
+        }
+      ],
+      "topEmojis": []
+    }
+  },
+  "timeAnalysis": {
+    "mostActiveHour": 13,
+    "mostActiveDay": "day_names.monday",
+    "mostActiveDate": "2025-05-05",
+    "mostMessagesCount": 26,
+    "responsePattern": "response_patterns.consistent",
+    "conversationLength": "Average 32 minutes",
+    "timeDistribution": [
+      {
+        "time": "Morning",
+        "percentage": 0
+      },
+      {
+        "time": "Afternoon",
+        "percentage": 100
+      },
+      {
+        "time": "Evening",
+        "percentage": 0
+      },
+      {
+        "time": "Night",
+        "percentage": 0
+      }
+    ],
+    "hourlyActivity": [
+      {
+        "hour": 0,
+        "count": 0
+      },
+      {
+        "hour": 1,
+        "count": 0
+      },
+      {
+        "hour": 2,
+        "count": 0
+      },
+      {
+        "hour": 3,
+        "count": 0
+      },
+      {
+        "hour": 4,
+        "count": 0
+      },
+      {
+        "hour": 5,
+        "count": 0
+      },
+      {
+        "hour": 6,
+        "count": 0
+      },
+      {
+        "hour": 7,
+        "count": 0
+      },
+      {
+        "hour": 8,
+        "count": 0
+      },
+      {
+        "hour": 9,
+        "count": 0
+      },
+      {
+        "hour": 10,
+        "count": 0
+      },
+      {
+        "hour": 11,
+        "count": 0
+      },
+      {
+        "hour": 12,
+        "count": 0
+      },
+      {
+        "hour": 13,
+        "count": 26
+      },
+      {
+        "hour": 14,
+        "count": 0
+      },
+      {
+        "hour": 15,
+        "count": 0
+      },
+      {
+        "hour": 16,
+        "count": 0
+      },
+      {
+        "hour": 17,
+        "count": 0
+      },
+      {
+        "hour": 18,
+        "count": 0
+      },
+      {
+        "hour": 19,
+        "count": 0
+      },
+      {
+        "hour": 20,
+        "count": 0
+      },
+      {
+        "hour": 21,
+        "count": 0
+      },
+      {
+        "hour": 22,
+        "count": 0
+      },
+      {
+        "hour": 23,
+        "count": 0
+      }
+    ],
+    "dailyActivity": [
+      {
+        "date": "2025-05-05",
+        "count": 26
+      }
+    ],
+    "weekdayHourHeatmap": [
+      {
+        "day": "day_names.sunday",
+        "hours": [
+          {
+            "hour": 0,
+            "count": 0
+          },
+          {
+            "hour": 1,
+            "count": 0
+          },
+          {
+            "hour": 2,
+            "count": 0
+          },
+          {
+            "hour": 3,
+            "count": 0
+          },
+          {
+            "hour": 4,
+            "count": 0
+          },
+          {
+            "hour": 5,
+            "count": 0
+          },
+          {
+            "hour": 6,
+            "count": 0
+          },
+          {
+            "hour": 7,
+            "count": 0
+          },
+          {
+            "hour": 8,
+            "count": 0
+          },
+          {
+            "hour": 9,
+            "count": 0
+          },
+          {
+            "hour": 10,
+            "count": 0
+          },
+          {
+            "hour": 11,
+            "count": 0
+          },
+          {
+            "hour": 12,
+            "count": 0
+          },
+          {
+            "hour": 13,
+            "count": 0
+          },
+          {
+            "hour": 14,
+            "count": 0
+          },
+          {
+            "hour": 15,
+            "count": 0
+          },
+          {
+            "hour": 16,
+            "count": 0
+          },
+          {
+            "hour": 17,
+            "count": 0
+          },
+          {
+            "hour": 18,
+            "count": 0
+          },
+          {
+            "hour": 19,
+            "count": 0
+          },
+          {
+            "hour": 20,
+            "count": 0
+          },
+          {
+            "hour": 21,
+            "count": 0
+          },
+          {
+            "hour": 22,
+            "count": 0
+          },
+          {
+            "hour": 23,
+            "count": 0
+          }
+        ]
+      },
+      {
+        "day": "day_names.monday",
+        "hours": [
+          {
+            "hour": 0,
+            "count": 0
+          },
+          {
+            "hour": 1,
+            "count": 0
+          },
+          {
+            "hour": 2,
+            "count": 0
+          },
+          {
+            "hour": 3,
+            "count": 0
+          },
+          {
+            "hour": 4,
+            "count": 0
+          },
+          {
+            "hour": 5,
+            "count": 0
+          },
+          {
+            "hour": 6,
+            "count": 0
+          },
+          {
+            "hour": 7,
+            "count": 0
+          },
+          {
+            "hour": 8,
+            "count": 0
+          },
+          {
+            "hour": 9,
+            "count": 0
+          },
+          {
+            "hour": 10,
+            "count": 0
+          },
+          {
+            "hour": 11,
+            "count": 0
+          },
+          {
+            "hour": 12,
+            "count": 0
+          },
+          {
+            "hour": 13,
+            "count": 26
+          },
+          {
+            "hour": 14,
+            "count": 0
+          },
+          {
+            "hour": 15,
+            "count": 0
+          },
+          {
+            "hour": 16,
+            "count": 0
+          },
+          {
+            "hour": 17,
+            "count": 0
+          },
+          {
+            "hour": 18,
+            "count": 0
+          },
+          {
+            "hour": 19,
+            "count": 0
+          },
+          {
+            "hour": 20,
+            "count": 0
+          },
+          {
+            "hour": 21,
+            "count": 0
+          },
+          {
+            "hour": 22,
+            "count": 0
+          },
+          {
+            "hour": 23,
+            "count": 0
+          }
+        ]
+      },
+      {
+        "day": "day_names.tuesday",
+        "hours": [
+          {
+            "hour": 0,
+            "count": 0
+          },
+          {
+            "hour": 1,
+            "count": 0
+          },
+          {
+            "hour": 2,
+            "count": 0
+          },
+          {
+            "hour": 3,
+            "count": 0
+          },
+          {
+            "hour": 4,
+            "count": 0
+          },
+          {
+            "hour": 5,
+            "count": 0
+          },
+          {
+            "hour": 6,
+            "count": 0
+          },
+          {
+            "hour": 7,
+            "count": 0
+          },
+          {
+            "hour": 8,
+            "count": 0
+          },
+          {
+            "hour": 9,
+            "count": 0
+          },
+          {
+            "hour": 10,
+            "count": 0
+          },
+          {
+            "hour": 11,
+            "count": 0
+          },
+          {
+            "hour": 12,
+            "count": 0
+          },
+          {
+            "hour": 13,
+            "count": 0
+          },
+          {
+            "hour": 14,
+            "count": 0
+          },
+          {
+            "hour": 15,
+            "count": 0
+          },
+          {
+            "hour": 16,
+            "count": 0
+          },
+          {
+            "hour": 17,
+            "count": 0
+          },
+          {
+            "hour": 18,
+            "count": 0
+          },
+          {
+            "hour": 19,
+            "count": 0
+          },
+          {
+            "hour": 20,
+            "count": 0
+          },
+          {
+            "hour": 21,
+            "count": 0
+          },
+          {
+            "hour": 22,
+            "count": 0
+          },
+          {
+            "hour": 23,
+            "count": 0
+          }
+        ]
+      },
+      {
+        "day": "day_names.wednesday",
+        "hours": [
+          {
+            "hour": 0,
+            "count": 0
+          },
+          {
+            "hour": 1,
+            "count": 0
+          },
+          {
+            "hour": 2,
+            "count": 0
+          },
+          {
+            "hour": 3,
+            "count": 0
+          },
+          {
+            "hour": 4,
+            "count": 0
+          },
+          {
+            "hour": 5,
+            "count": 0
+          },
+          {
+            "hour": 6,
+            "count": 0
+          },
+          {
+            "hour": 7,
+            "count": 0
+          },
+          {
+            "hour": 8,
+            "count": 0
+          },
+          {
+            "hour": 9,
+            "count": 0
+          },
+          {
+            "hour": 10,
+            "count": 0
+          },
+          {
+            "hour": 11,
+            "count": 0
+          },
+          {
+            "hour": 12,
+            "count": 0
+          },
+          {
+            "hour": 13,
+            "count": 0
+          },
+          {
+            "hour": 14,
+            "count": 0
+          },
+          {
+            "hour": 15,
+            "count": 0
+          },
+          {
+            "hour": 16,
+            "count": 0
+          },
+          {
+            "hour": 17,
+            "count": 0
+          },
+          {
+            "hour": 18,
+            "count": 0
+          },
+          {
+            "hour": 19,
+            "count": 0
+          },
+          {
+            "hour": 20,
+            "count": 0
+          },
+          {
+            "hour": 21,
+            "count": 0
+          },
+          {
+            "hour": 22,
+            "count": 0
+          },
+          {
+            "hour": 23,
+            "count": 0
+          }
+        ]
+      },
+      {
+        "day": "day_names.thursday",
+        "hours": [
+          {
+            "hour": 0,
+            "count": 0
+          },
+          {
+            "hour": 1,
+            "count": 0
+          },
+          {
+            "hour": 2,
+            "count": 0
+          },
+          {
+            "hour": 3,
+            "count": 0
+          },
+          {
+            "hour": 4,
+            "count": 0
+          },
+          {
+            "hour": 5,
+            "count": 0
+          },
+          {
+            "hour": 6,
+            "count": 0
+          },
+          {
+            "hour": 7,
+            "count": 0
+          },
+          {
+            "hour": 8,
+            "count": 0
+          },
+          {
+            "hour": 9,
+            "count": 0
+          },
+          {
+            "hour": 10,
+            "count": 0
+          },
+          {
+            "hour": 11,
+            "count": 0
+          },
+          {
+            "hour": 12,
+            "count": 0
+          },
+          {
+            "hour": 13,
+            "count": 0
+          },
+          {
+            "hour": 14,
+            "count": 0
+          },
+          {
+            "hour": 15,
+            "count": 0
+          },
+          {
+            "hour": 16,
+            "count": 0
+          },
+          {
+            "hour": 17,
+            "count": 0
+          },
+          {
+            "hour": 18,
+            "count": 0
+          },
+          {
+            "hour": 19,
+            "count": 0
+          },
+          {
+            "hour": 20,
+            "count": 0
+          },
+          {
+            "hour": 21,
+            "count": 0
+          },
+          {
+            "hour": 22,
+            "count": 0
+          },
+          {
+            "hour": 23,
+            "count": 0
+          }
+        ]
+      },
+      {
+        "day": "day_names.friday",
+        "hours": [
+          {
+            "hour": 0,
+            "count": 0
+          },
+          {
+            "hour": 1,
+            "count": 0
+          },
+          {
+            "hour": 2,
+            "count": 0
+          },
+          {
+            "hour": 3,
+            "count": 0
+          },
+          {
+            "hour": 4,
+            "count": 0
+          },
+          {
+            "hour": 5,
+            "count": 0
+          },
+          {
+            "hour": 6,
+            "count": 0
+          },
+          {
+            "hour": 7,
+            "count": 0
+          },
+          {
+            "hour": 8,
+            "count": 0
+          },
+          {
+            "hour": 9,
+            "count": 0
+          },
+          {
+            "hour": 10,
+            "count": 0
+          },
+          {
+            "hour": 11,
+            "count": 0
+          },
+          {
+            "hour": 12,
+            "count": 0
+          },
+          {
+            "hour": 13,
+            "count": 0
+          },
+          {
+            "hour": 14,
+            "count": 0
+          },
+          {
+            "hour": 15,
+            "count": 0
+          },
+          {
+            "hour": 16,
+            "count": 0
+          },
+          {
+            "hour": 17,
+            "count": 0
+          },
+          {
+            "hour": 18,
+            "count": 0
+          },
+          {
+            "hour": 19,
+            "count": 0
+          },
+          {
+            "hour": 20,
+            "count": 0
+          },
+          {
+            "hour": 21,
+            "count": 0
+          },
+          {
+            "hour": 22,
+            "count": 0
+          },
+          {
+            "hour": 23,
+            "count": 0
+          }
+        ]
+      },
+      {
+        "day": "day_names.saturday",
+        "hours": [
+          {
+            "hour": 0,
+            "count": 0
+          },
+          {
+            "hour": 1,
+            "count": 0
+          },
+          {
+            "hour": 2,
+            "count": 0
+          },
+          {
+            "hour": 3,
+            "count": 0
+          },
+          {
+            "hour": 4,
+            "count": 0
+          },
+          {
+            "hour": 5,
+            "count": 0
+          },
+          {
+            "hour": 6,
+            "count": 0
+          },
+          {
+            "hour": 7,
+            "count": 0
+          },
+          {
+            "hour": 8,
+            "count": 0
+          },
+          {
+            "hour": 9,
+            "count": 0
+          },
+          {
+            "hour": 10,
+            "count": 0
+          },
+          {
+            "hour": 11,
+            "count": 0
+          },
+          {
+            "hour": 12,
+            "count": 0
+          },
+          {
+            "hour": 13,
+            "count": 0
+          },
+          {
+            "hour": 14,
+            "count": 0
+          },
+          {
+            "hour": 15,
+            "count": 0
+          },
+          {
+            "hour": 16,
+            "count": 0
+          },
+          {
+            "hour": 17,
+            "count": 0
+          },
+          {
+            "hour": 18,
+            "count": 0
+          },
+          {
+            "hour": 19,
+            "count": 0
+          },
+          {
+            "hour": 20,
+            "count": 0
+          },
+          {
+            "hour": 21,
+            "count": 0
+          },
+          {
+            "hour": 22,
+            "count": 0
+          },
+          {
+            "hour": 23,
+            "count": 0
+          }
+        ]
+      }
+    ]
+  }
+}
