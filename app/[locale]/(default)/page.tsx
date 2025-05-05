@@ -1,20 +1,10 @@
 
-import CTA from "@/components/blocks/cta";
-import FAQ from "@/components/blocks/faq";
-import Feature from "@/components/blocks/feature";
-import GridGallery from "@/components/blocks/grid-gallery";
-import QuoteCards from "@/components/blocks/quote-cards";
-import PlatformUpload from "@/components/blocks/platform-upload";
-import NotificationBlockWrapper from "@/components/blocks/notification-block/client-wrapper";
+// 使用增量静态再生成 (ISR)，每24小时重新验证一次
+// 这样页面会在构建时预渲染，并在后台定期更新
+export const revalidate = 86400; // 24小时 = 86400秒
 
-import Hero from "@/components/blocks/hero";
-import SimplePricing from "@/components/blocks/simple-pricing";
-
-// 强制使用服务器端渲染
-export const dynamic = 'force-dynamic';
-
-import Stats from "@/components/blocks/stats";
-import Testimonial from "@/components/blocks/testimonial";
+import { Suspense } from "react";
+import LandingSections from "@/components/blocks/landing-sections";
 import { getLandingPage } from "@/services/page";
 
 export async function generateMetadata({
@@ -47,22 +37,10 @@ export default async function LandingPage({
   const page = await getLandingPage(locale);
 
   return (
-    <>
-      {/* 添加通知区块 */}
-      <NotificationBlockWrapper />
-
-      {page.hero && <Hero hero={page.hero} />}
-      {page.platform_upload && page.upload_box && (
-        <PlatformUpload section={page.platform_upload} upload_box={page.upload_box} />
-      )}
-      {page.introduce && <GridGallery section={page.introduce} />}
-      {page.feature && <Feature section={page.feature} />}
-      {page.scenarios && <QuoteCards section={page.scenarios} />}
-      {page.stats && <Stats section={page.stats} />}
-      {page.simple_pricing && <SimplePricing {...page.simple_pricing} />}
-      {page.testimonial && <Testimonial section={page.testimonial} />}
-      {page.faq && <FAQ section={page.faq} />}
-      {page.cta && <CTA section={page.cta} />}
-    </>
+    <Suspense fallback={<div className="min-h-screen flex items-center justify-center">
+      <div className="animate-pulse text-xl">加载中...</div>
+    </div>}>
+      <LandingSections page={page} />
+    </Suspense>
   );
 }

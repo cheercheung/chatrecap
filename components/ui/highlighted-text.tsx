@@ -22,21 +22,37 @@ const HighlightedText: React.FC<HighlightedTextProps> = ({
   text,
   highlightClassName = "text-primary font-semibold"
 }) => {
-  const t = useTranslations('components.highlighted_text');
+  // 使用 try-catch 包装翻译获取，防止翻译缺失导致错误
+  let veryPositive = 'Very Positive';
+  let positive = 'Positive';
+  let neutral = 'Neutral';
+  let negative = 'Negative';
+  let veryNegative = 'Very Negative';
+  let morning = 'Morning';
+  let afternoon = 'Afternoon';
+  let evening = 'Evening';
+  let quickResponses = 'Quick Responses';
+  let mediumConversations = 'Medium Conversations';
+
+  try {
+    const t = useTranslations('components.highlighted_text');
+
+    // 尝试获取翻译的文本，如果不存在则使用默认值
+    veryPositive = t('very_positive') || veryPositive;
+    positive = t('positive') || positive;
+    neutral = t('neutral') || neutral;
+    negative = t('negative') || negative;
+    veryNegative = t('very_negative') || veryNegative;
+    morning = t('morning') || morning;
+    afternoon = t('afternoon') || afternoon;
+    evening = t('evening') || evening;
+    quickResponses = t('quick_responses') || quickResponses;
+    mediumConversations = t('medium_conversations') || mediumConversations;
+  } catch (error) {
+    console.warn('Translation for highlighted text not found, using defaults');
+  }
 
   if (!text) return null;
-
-  // 获取翻译的文本
-  const veryPositive = t('very_positive');
-  const positive = t('positive');
-  const neutral = t('neutral');
-  const negative = t('negative');
-  const veryNegative = t('very_negative');
-  const morning = t('morning');
-  const afternoon = t('afternoon');
-  const evening = t('evening');
-  const quickResponses = t('quick_responses');
-  const mediumConversations = t('medium_conversations');
 
   // 构建正则表达式模式
   const pattern = new RegExp(`(\\b\\d+%?\\b|${veryPositive}|${positive}|${neutral}|${negative}|${veryNegative}|${morning}|${afternoon}|${evening}|${quickResponses}|${mediumConversations})`, 'gi');

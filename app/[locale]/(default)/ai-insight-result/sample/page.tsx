@@ -4,15 +4,9 @@ import { generateSampleAnalysisData } from "@/lib/analysis/sampleData";
 import { sampleAiInsights } from "@/lib/analysis/sampleData";
 import { locales } from "@/i18n/locale";
 
-// 使用静态渲染，因为示例数据是固定的
-// 这将确保页面在构建时生成，并且不会在运行时重新生成
-export const dynamic = 'force-static';
-export const revalidate = false; // 永不重新验证，因为示例数据不会改变
-
-// 为所有支持的语言生成静态页面
-export function generateStaticParams() {
-  return locales.map(locale => ({ locale }));
-}
+// 暂时使用动态渲染，避免构建错误
+// 后续可以改回静态渲染
+export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({
   params,
@@ -56,13 +50,13 @@ export default async function AiInsightSamplePage({
 }) {
   // 获取示例分析数据
   const sampleData = generateSampleAnalysisData("sample");
-  
+
   // 确保示例数据包含AI分析结果
   sampleData.aiInsights = sampleAiInsights;
 
   // 准备关系洞察数据
   const { relationshipInsights } = sampleAiInsights;
-  
+
   // 映射关系洞察到预期的格式
   const mappedInsights = (relationshipInsights?.points || []).map((item: { title: string; description: string }) => ({
     title: item.title,
