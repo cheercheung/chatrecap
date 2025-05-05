@@ -73,28 +73,8 @@ export default function UploadBox({ upload_box }: { upload_box: UploadBoxType })
     }
   };
 
-  // Process file for recap or analyze
-  const handleProcessClick = async (event: React.MouseEvent<HTMLButtonElement>) => {
-    if (!file && !text) {
-      setError("Please select a file or enter text first");
-      return;
-    }
-
-    // 如果是示例数据，根据按钮类型决定跳转到哪个页面
-    if (isSampleData) {
-      // 检查是哪个按钮触发的处理
-      const isAiRecap = event?.currentTarget === primaryButtonRef.current;
-
-      if (isAiRecap) {
-        // 如果是AI Recap按钮，跳转到AI分析结果示例页面
-        router.push("/ai-insight-result/sample");
-      } else {
-        // 如果是FREE Analyze按钮，跳转到基础分析结果页面
-        router.push("/chatrecapresult/sample");
-      }
-      return;
-    }
-
+  // 共享的文件上传和处理逻辑
+  const uploadAndProcessFile = async (): Promise<string | null> => {
     setUploading(true);
     setProgress(0);
     setError(null);
@@ -169,41 +149,89 @@ export default function UploadBox({ upload_box }: { upload_box: UploadBoxType })
         throw new Error(errorData.message || "Processing failed");
       }
 
-      // 检查是哪个按钮触发的处理
-      // 如果是主按钮（AI Recap），则重定向到支付页面
-      // 如果是次要按钮（FREE Analyze），则重定向到基础分析结果页面
-      const isAiRecap = event?.currentTarget === primaryButtonRef.current;
-
-      if (isAiRecap) {
-        // 创建支付会话
-        const paymentResponse = await fetch("/api/creem-checkout", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            fileId: data.fileId,
-            amount: 990 // 默认金额 $9.90 (单位为分)
-          }),
-        });
-
-        const paymentData = await paymentResponse.json();
-        console.log('Payment API response data:', paymentData);
-
-        if (!paymentData.success) {
-          throw new Error(paymentData.message || "支付创建失败");
-        }
-
-        // 重定向到Creem支付页面
-        console.log('Redirecting to checkout URL:', paymentData.data.checkout_url);
-        window.location.href = paymentData.data.checkout_url;
-      } else {
-        // 重定向到基础分析结果页面
-        router.push(`/chatrecapresult?fileId=${data.fileId}`);
-      }
-
+      return data.fileId;
     } catch (error) {
       console.error("Processing failed:", error);
+      setError(error instanceof Error ? error.message : String(error));
+      return null;
+    }
+  };
+
+  // AI Recap 按钮处理函数
+  const handleAiRecapClick = async () => {
+    if (!file && !text) {
+      setError("Please select a file or enter text first");
+      return;
+    }
+
+    // 如果是示例数据，直接跳转到AI分析结果示例页面
+    if (isSampleData) {
+      router.push("/ai-insight-result/sample");
+      return;
+    }
+
+    try {
+      const fileId = await uploadAndProcessFile();
+
+      if (!fileId) {
+        throw new Error("文件处理失败");
+      }
+
+      // 创建支付会话
+      const paymentResponse = await fetch("/api/creem-checkout", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          fileId: fileId,
+          amount: 990 // 默认金额 $9.90 (单位为分)
+        }),
+      });
+
+      const paymentData = await paymentResponse.json();
+      console.log('Payment API response data:', paymentData);
+
+      if (!paymentData.success) {
+        throw new Error(paymentData.message || "支付创建失败");
+      }
+
+      // 重定向到Creem支付页面
+      console.log('Redirecting to checkout URL:', paymentData.data.checkout_url);
+      window.location.href = paymentData.data.checkout_url;
+    } catch (error) {
+      console.error("AI Recap processing failed:", error);
+      setError(error instanceof Error ? error.message : String(error));
+    } finally {
+      setUploading(false);
+      setProcessing(false);
+    }
+  };
+
+  // FREE Analyze 按钮处理函数
+  const handleFreeAnalyzeClick = async () => {
+    if (!file && !text) {
+      setError("Please select a file or enter text first");
+      return;
+    }
+
+    // 如果是示例数据，直接跳转到基础分析结果示例页面
+    if (isSampleData) {
+      router.push("/chatrecapresult/sample");
+      return;
+    }
+
+    try {
+      const fileId = await uploadAndProcessFile();
+
+      if (!fileId) {
+        throw new Error("文件处理失败");
+      }
+
+      // 重定向到基础分析结果页面
+      router.push(`/chatrecapresult?fileId=${fileId}`);
+    } catch (error) {
+      console.error("FREE Analyze processing failed:", error);
       setError(error instanceof Error ? error.message : String(error));
     } finally {
       setUploading(false);
@@ -296,7 +324,7 @@ export default function UploadBox({ upload_box }: { upload_box: UploadBoxType })
                 <Button
                   variant={upload_box.secondary_button.variant as any || "secondary"}
                   className="w-full sm:w-auto"
-                  onClick={handleProcessClick}
+                  onClick={handleFreeAnalyzeClick}
                   disabled={(!file && !text) || uploading || processing}
                 >
                   {uploading || processing ? "Processing..." : (
@@ -324,7 +352,7 @@ export default function UploadBox({ upload_box }: { upload_box: UploadBoxType })
                     ref={primaryButtonRef}
                     variant={upload_box.primary_button.variant as any || "default"}
                     className="w-full sm:w-auto bg-gradient-to-r from-primary to-pink-500 hover:from-primary hover:to-pink-600"
-                    onClick={handleProcessClick}
+                    onClick={handleAiRecapClick}
                     disabled={(!file && !text) || uploading || processing}
                   >
                     {uploading || processing ? "Processing..." : (

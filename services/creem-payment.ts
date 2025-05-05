@@ -29,8 +29,9 @@ export async function createCreemCheckout(params: {
       }
     });
 
-    // 构建重定向URL，包含fileId
-    const redirectUrl = `${process.env.NEXT_PUBLIC_WEB_URL || 'http://localhost:3000'}/ai-insight-result?fileId=${params.fileId}`;
+    // 构建重定向URL，包含fileId和支付标记
+    // 添加payment_callback=true参数，用于标识这是支付回调
+    const redirectUrl = `${process.env.NEXT_PUBLIC_WEB_URL || 'http://localhost:3000'}/api/payment-callback?fileId=${params.fileId}&order_no=${order_no}`;
 
     // 准备Creem支付请求 - 包含所有必要参数
     const creemPayload = {

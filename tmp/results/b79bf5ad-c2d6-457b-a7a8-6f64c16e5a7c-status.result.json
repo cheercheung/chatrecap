@@ -1,0 +1,7 @@
+{
+  "status": "completed",
+  "cleaningProgress": 100,
+  "analysisProgress": 100,
+  "currentCleaningStep": "过滤系统消息和噪声",
+  "currentAnalysisStep": "验证结果"
+}
