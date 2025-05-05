@@ -1,10 +1,8 @@
 "use client";
 
-import React, { useEffect, useState, useRef } from "react";
+import React from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
-import { useInView } from "framer-motion";
 
 interface ChatNotificationProps {
   speaker: string;
@@ -23,22 +21,7 @@ export function ChatNotification({
   className,
   index = 0,
 }: ChatNotificationProps) {
-  // 使用 ref 和 useInView 来检测元素是否在视口中
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.3 });
-  const [isVisible, setIsVisible] = useState(false);
-
-  // 当元素进入视口时，设置为可见
-  useEffect(() => {
-    if (isInView) {
-      // 添加一个小延迟，使元素按顺序显示
-      const timeout = setTimeout(() => {
-        setIsVisible(true);
-      }, index * 100);
-
-      return () => clearTimeout(timeout);
-    }
-  }, [isInView, index]);
+  // 移除所有动画和视口检测逻辑，直接显示内容
 
   // 根据speaker生成头像的颜色和首字母
   const getAvatarInfo = (name: string) => {
@@ -64,18 +47,13 @@ export function ChatNotification({
   const { color, initials } = getAvatarInfo(speaker);
 
   return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 20 }}
-      animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-      whileHover={{ y: -5, scale: 1.02 }}
-      transition={{ duration: 0.3 }}
+    <div
       className={cn(
-        "group relative flex items-start gap-3 p-4 rounded-lg bg-card/50 backdrop-blur-sm border border-primary/10 shadow-sm hover:shadow-md transition-all cursor-pointer",
+        "flex items-start gap-3 p-4 rounded-lg bg-card/50 border border-primary/10",
         className
       )}
     >
-      <Avatar className="h-10 w-10 transition-transform duration-300 group-hover:scale-110">
+      <Avatar className="h-10 w-10">
         {avatarUrl ? (
           <AvatarImage src={avatarUrl} alt={speaker} />
         ) : (
@@ -87,15 +65,12 @@ export function ChatNotification({
 
       <div className="flex-1 min-w-0">
         <div className="flex justify-between items-center mb-1">
-          <h4 className="font-medium text-sm transition-colors duration-300 group-hover:text-primary">{speaker}</h4>
+          <h4 className="font-medium text-sm">{speaker}</h4>
           <span className="text-xs text-muted-foreground">{time}</span>
         </div>
         <p className="text-sm text-foreground/90 break-words">{content}</p>
       </div>
-
-      {/* 悬停时的背景效果 */}
-      <div className="pointer-events-none absolute inset-0 transform-gpu transition-all duration-300 group-hover:bg-primary/[.03] group-hover:dark:bg-primary/[.05] rounded-lg" />
-    </motion.div>
+    </div>
   );
 }
 
@@ -114,7 +89,6 @@ export function ChatNotificationsList({
         <ChatNotification
           key={index}
           {...notification}
-          index={index}
         />
       ))}
     </div>

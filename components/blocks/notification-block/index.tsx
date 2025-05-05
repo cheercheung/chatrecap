@@ -21,10 +21,10 @@ export default function NotificationBlock({
   if (!isVisible) return null;
 
   return (
-    <div className={`fixed top-0 left-0 right-0 z-50 bg-white dark:bg-gray-900 shadow-md p-4 flex flex-col items-center justify-center text-center ${className}`}>
+    <div className={`fixed top-0 left-0 right-0 z-50 bg-white dark:bg-gray-900 p-4 flex flex-col items-center justify-center text-center ${className}`}>
       <button
         onClick={() => setIsVisible(false)}
-        className="absolute right-4 top-4 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
+        className="absolute right-4 top-4 text-gray-500"
         aria-label="Close"
       >
         <X size={20} />
@@ -48,7 +48,7 @@ export default function NotificationBlock({
         onClick={() => {
           if (onActionClick) onActionClick();
         }}
-        className="bg-pink-500 hover:bg-pink-600 text-white px-8 py-2 rounded-full"
+        className="bg-pink-500 text-white px-8 py-2 rounded-full"
       >
         {t('try_now')}
       </Button>

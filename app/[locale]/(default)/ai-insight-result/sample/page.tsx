@@ -4,9 +4,10 @@ import { generateSampleAnalysisData } from "@/lib/analysis/sampleData";
 import { sampleAiInsights } from "@/lib/analysis/sampleData";
 import { locales } from "@/i18n/locale";
 
-// 暂时使用动态渲染，避免构建错误
-// 后续可以改回静态渲染
-export const dynamic = 'force-dynamic';
+// 使用增量静态再生成 (ISR)，提高页面加载性能
+export const dynamic = 'force-static';
+export const revalidate = 86400; // 24小时 = 86400秒
+export const fetchCache = 'force-cache';
 
 export async function generateMetadata({
   params,

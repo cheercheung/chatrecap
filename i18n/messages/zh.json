@@ -102,8 +102,8 @@
   },
   "chat_notifications": {
     "messages": {
-      "message1": "Oh, you finally texted? Must've broken a world record 🏆🙄",
-      "message2": "Sorry, my phone only buzzes for pizza deliveries 🍕📳",
+      "message1": "哦，你终于发短信了吗？\n一定打破了世界纪录🏆🙄",
+      "message2": "抱歉，我的手机只会嗡嗡作用披萨送货🍕📳",
       "message3": "Your pick-up lines are faster than my microwave popcorn 🍿💨",
       "message4": "Our chat's colder than Antarctica ❄️😎",
       "message5": "Miss me? I barely remember your name 😂",
@@ -777,9 +777,9 @@
   "overview_story_part3": "概述故事部分3",
   "overview_title": "概述标题",
   "payment": {
-    "description": "Use AI to deeply analyze your chat history and get personality insights and relationship analysis",
+    "description": "使用AI深入分析您的聊天历史并获得个性见解和关系分析",
     "error_title": "Error",
-    "missing_file_id": "Missing file ID, please upload a file first",
+    "missing_file_id": "缺少文件ID，请先上传文件",
     "pay_button": "Pay Now",
     "processing": "Processing...",
     "return_home": "Return to Home",

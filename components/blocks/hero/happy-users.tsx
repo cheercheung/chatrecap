@@ -5,16 +5,15 @@ import { Heart, Star } from "lucide-react";
 
 export default function HappyUsers() {
   return (
-    <div className="w-fit flex flex-col sm:flex-row items-start gap-4 bg-primary/5 backdrop-blur-sm p-4 rounded-2xl border border-primary/20 shadow-sm">
+    <div className="w-fit flex flex-col sm:flex-row items-start gap-4 bg-card p-4 rounded-2xl border border-primary/20">
       <span className="inline-flex items-center -space-x-3">
         {Array.from({ length: 5 }).map((_, index) => (
           <Avatar
-            className="size-12 border-2 border-background shadow-md transition-transform hover:scale-105 hover:z-10"
+            className="size-12 border-2 border-background"
             key={index}
             style={{
               zIndex: 5 - index,
-              transform: `translateX(${index * 2}px)`,
-              animationDelay: `${index * 0.1}s`
+              transform: `translateX(${index * 2}px)`
             }}
           >
             <AvatarImage
@@ -34,7 +33,7 @@ export default function HappyUsers() {
             />
           ))}
           <Heart
-            className="size-5 fill-primary text-primary animate-pulse"
+            className="size-5 fill-primary text-primary"
           />
         </div>
         <p className="text-left font-medium text-muted-foreground">

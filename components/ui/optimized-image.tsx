@@ -13,9 +13,6 @@ interface OptimizedImageProps {
   objectFit?: 'contain' | 'cover' | 'fill' | 'none' | 'scale-down';
 }
 
-// 为图片创建模糊占位符 - 移到组件外部避免重复创建
-const blurDataURL = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFdwI2QOQviwAAAABJRU5ErkJggg==';
-
 export default function OptimizedImage({
   src,
   alt,
@@ -54,11 +51,11 @@ export default function OptimizedImage({
   return (
     <div className={`relative overflow-hidden ${className}`} style={{ aspectRatio: `${width}/${height}` }}>
       {isExternal ? (
-        // 外部图片使用普通 img 标签，但添加懒加载和占位符
+        // 外部图片使用普通 img 标签，添加懒加载
         <img
           src={imgSrc}
           alt={alt}
-          className={`w-full h-full transition-opacity duration-300 ${isLoading ? 'opacity-0' : 'opacity-100'}`}
+          className="w-full h-full"
           style={{ objectFit }}
           loading={priority ? 'eager' : 'lazy'}
           decoding={priority ? 'sync' : 'async'} // 添加解码属性以优化渲染
@@ -72,24 +69,16 @@ export default function OptimizedImage({
           alt={alt}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          className={`transition-opacity duration-300 ${isLoading ? 'opacity-0' : 'opacity-100'}`}
           style={{ objectFit }}
           priority={priority}
           loading={priority ? 'eager' : 'lazy'}
-          placeholder="blur"
-          blurDataURL={blurDataURL}
           onLoad={handleImageLoad}
           onError={handleImageError}
           unoptimized={isExternal} // 对于外部图片，禁用Next.js的优化以避免额外的处理
         />
       )}
 
-      {/* 加载中的占位符 - 只在非优先加载的图片上显示 */}
-      {isLoading && (
-        <div className="absolute inset-0 bg-muted/20 flex items-center justify-center">
-          <div className="w-6 h-6 border-2 border-primary border-t-transparent rounded-full animate-spin"></div>
-        </div>
-      )}
+      {/* 移除加载动画占位符 */}
     </div>
   );
 }

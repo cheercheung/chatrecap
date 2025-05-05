@@ -60,28 +60,18 @@ export default function LandingSections({ page }: { page: LandingPage }) {
   const [loadTertiary, setLoadTertiary] = useState(false);
 
   useEffect(() => {
-    // 使用 requestIdleCallback 在浏览器空闲时加载次要组件
-    const loadSecondaryComponents = () => {
-      setLoadSecondary(true);
-    };
-
-    // 使用 requestIdleCallback 在浏览器空闲时加载第三级组件
-    const loadTertiaryComponents = () => {
-      setLoadTertiary(true);
-    };
-
-    // 优先加载首屏内容，然后在浏览器空闲时加载其他内容
-    const idleCallback = window.requestIdleCallback || ((cb) => setTimeout(cb, 200));
+    // 使用简单的 setTimeout 替代 requestIdleCallback
+    // 增加延迟时间，减轻主线程负担
 
     // 延迟加载次要组件
     const secondaryTimeout = setTimeout(() => {
-      idleCallback(loadSecondaryComponents);
-    }, 1000);
+      setLoadSecondary(true);
+    }, 3000); // 增加到3秒
 
     // 进一步延迟加载第三级组件
     const tertiaryTimeout = setTimeout(() => {
-      idleCallback(loadTertiaryComponents);
-    }, 2000);
+      setLoadTertiary(true);
+    }, 6000); // 增加到6秒
 
     return () => {
       clearTimeout(secondaryTimeout);
@@ -91,9 +81,6 @@ export default function LandingSections({ page }: { page: LandingPage }) {
 
   return (
     <>
-      {/* 添加通知区块 - 关键组件，立即加载 */}
-      <NotificationBlockWrapper />
-
       {/* 英雄区块 - 关键组件，立即加载 */}
       {page.hero && <OptimizedHero hero={page.hero} />}
 
@@ -101,19 +88,14 @@ export default function LandingSections({ page }: { page: LandingPage }) {
       {loadSecondary && (
         <>
           {/* 平台上传组件 - 次要优先级 */}
-          <Suspense fallback={<div className="py-16 bg-muted/30 animate-pulse"></div>}>
+          <Suspense fallback={<div className="py-16 bg-muted/30"></div>}>
             {page.platform_upload && page.upload_box && (
               <PlatformUpload section={page.platform_upload} upload_box={page.upload_box} />
             )}
           </Suspense>
 
-          {/* 介绍组件 - 次要优先级 */}
-          <Suspense fallback={<div className="py-16 bg-muted/30 animate-pulse"></div>}>
-            {page.introduce && <GridGallery section={page.introduce} />}
-          </Suspense>
-
           {/* 特性组件 - 次要优先级 */}
-          <Suspense fallback={<div className="py-16 bg-muted/30 animate-pulse"></div>}>
+          <Suspense fallback={<div className="py-16 bg-muted/30"></div>}>
             {page.feature && <Feature section={page.feature} />}
           </Suspense>
         </>
@@ -122,33 +104,18 @@ export default function LandingSections({ page }: { page: LandingPage }) {
       {/* 第三级组件，在次要组件加载完成后加载 */}
       {loadTertiary && (
         <>
-          {/* 场景组件 - 第三级优先级 */}
-          <Suspense fallback={<div className="py-16 bg-muted/30 animate-pulse"></div>}>
-            {page.scenarios && <QuoteCards section={page.scenarios} />}
-          </Suspense>
-
-          {/* 统计组件 - 第三级优先级 */}
-          <Suspense fallback={<div className="py-16 bg-muted/30 animate-pulse"></div>}>
-            {page.stats && <Stats section={page.stats} />}
-          </Suspense>
-
           {/* 定价组件 - 第三级优先级 */}
-          <Suspense fallback={<div className="py-16 bg-muted/30 animate-pulse"></div>}>
+          <Suspense fallback={<div className="py-16 bg-muted/30"></div>}>
             {page.simple_pricing && <SimplePricing {...page.simple_pricing} />}
           </Suspense>
 
-          {/* 推荐组件 - 第三级优先级 */}
-          <Suspense fallback={<div className="py-16 bg-muted/30 animate-pulse"></div>}>
-            {page.testimonial && <Testimonial section={page.testimonial} />}
-          </Suspense>
-
           {/* FAQ组件 - 第三级优先级 */}
-          <Suspense fallback={<div className="py-16 bg-muted/30 animate-pulse"></div>}>
+          <Suspense fallback={<div className="py-16 bg-muted/30"></div>}>
             {page.faq && <FAQ section={page.faq} />}
           </Suspense>
 
           {/* CTA组件 - 第三级优先级 */}
-          <Suspense fallback={<div className="py-16 bg-muted/30 animate-pulse"></div>}>
+          <Suspense fallback={<div className="py-16 bg-muted/30"></div>}>
             {page.cta && <CTA section={page.cta} />}
           </Suspense>
         </>
