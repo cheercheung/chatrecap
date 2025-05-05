@@ -62,143 +62,143 @@
       "description": "Résultats de votre traitement de l'historique de chat",
       "download": "Download",
       "filtered_media": "Messages multimédias filtrés",
-      "filtered_system": "Filtered System Messages",
+      "filtered_system": "Messages système filtrés",
       "messages": "Messages",
       "next": "Next",
-      "no_results": "No matching messages found",
+      "no_results": "Aucun message correspondant trouvé",
       "no_warnings": "No warnings",
-      "page_of": "Page {current} of {total}",
-      "previous": "Previous",
-      "search": "Search",
-      "search_placeholder": "Search messages or sender",
-      "share": "Share",
-      "title": "Processing Results",
-      "total_messages": "Total Messages",
-      "unknown_date_range": "Unknown date range",
-      "valid_dates": "Valid Date Messages",
-      "warnings": "Warnings"
+      "page_of": "Page {Current} de {total}",
+      "previous": "Précédent",
+      "search": "Recherche",
+      "search_placeholder": "Rechercher des messages ou expéditeur",
+      "share": "Partager",
+      "title": "Résultats de traitement",
+      "total_messages": "Messages totaux",
+      "unknown_date_range": "Plage de dates inconnues",
+      "valid_dates": "Messages de date valides",
+      "warnings": "Avertissements"
     },
     "sample_button_text": "Use Sample Input",
     "sample_chat_text": "[2025/1/1, 01:00:00] ALICE: Bonne année ! 🎉\n[2025/1/1, 01:02:00] JEFF: Bonne année, mon amour ! 🎆\n[2025/1/1, 08:15:00] ALICE: Premier café de l'année ! ☕\n[2025/1/1, 08:20:00] JEFF: À bien d'autres ! 🥂\n[2025/1/1, 10:30:00] ALICE: Quel est le programme aujourd'hui ? 🤔\n[2025/1/1, 10:32:00] JEFF: Allons nous promener dans le parc 🌳\n[2025/1/1, 11:05:00] ALICE: Ça semble parfait ! 🌞\n[2025/1/1, 13:00:00] JEFF: Tu as des résolutions pour la nouvelle année ?\n[2025/1/1, 13:10:00] ALICE: Voyager davantage ! 🌍\n[2025/1/1, 13:15:00] JEFF: C'est une excellente idée, je te suis là-dessus ✈️\n[2025/1/1, 14:30:00] ALICE: Le temps est si agréable aujourd'hui ! ☀️\n[2025/1/1, 14:35:00] JEFF: Journée parfaite pour une aventure, tu ne trouves pas ?\n[2025/1/1, 16:00:00] ALICE: Je pensais prendre une glace 🍦\n[2025/1/1, 16:10:00] JEFF: Oh, je suis partant ! Quel parfum ?\n[2025/1/1, 18:30:00] ALICE: Que devrions-nous manger ce soir ?\n[2025/1/1, 18:32:00] JEFF: Une pizza ? 🍕",
     "select_platform": "Sélectionner la plateforme",
     "subtitle": "Votre analyse de chat par IA",
-    "supported_formats": "Supported: .txt file or .zip containing a .txt file (max 5MB)",
+    "supported_formats": "Prise en charge: fichier .txt ou .zip contenant un fichier .txt (max 5 Mo)",
     "title": "Chat Recap AI",
     "upload": {
-      "description": "Select a chat history file to upload",
-      "drag_drop": "Drag and drop file here or click to select",
-      "file_selected": "File selected",
+      "description": "Sélectionnez un fichier d'historique de chat à télécharger",
+      "drag_drop": "Faites glisser et déposez le fichier ici ou cliquez pour sélectionner",
+      "file_selected": "Fichier sélectionné",
       "file_size_limit": "File size exceeds {size}MB limit",
-      "invalid_format": "Invalid file format. Supported formats: {formats}",
-      "no_file_selected": "Please select a file",
-      "title": "Upload Chat History",
-      "upload_button": "Upload",
-      "upload_failed": "Upload failed",
-      "upload_success": "Upload successful"
+      "invalid_format": "Format de fichier non valide. \nFormats pris en charge: {formats}",
+      "no_file_selected": "Veuillez sélectionner un fichier",
+      "title": "Télécharger l'historique du chat",
+      "upload_button": "Télécharger",
+      "upload_failed": "Le téléchargement a échoué",
+      "upload_success": "Télécharger réussi"
     },
-    "upload_button_text": "Upload File",
+    "upload_button_text": "Télécharger le fichier",
     "upload_description": "Téléchargez votre exportation de chat à analyser",
     "upload_title": "Saisie de l'historique de chat"
   },
   "chat_notifications": {
     "messages": {
-      "message1": "Oh, you finally texted? Must've broken a world record 🏆🙄",
-      "message2": "Sorry, my phone only buzzes for pizza deliveries 🍕📳",
-      "message3": "Your pick-up lines are faster than my microwave popcorn 🍿💨",
-      "message4": "Our chat's colder than Antarctica ❄️😎",
-      "message5": "Miss me? I barely remember your name 😂",
-      "message6": "Your dating life is like my WiFi - unstable connection 📶",
-      "message7": "Seen your message. Will reply in 2-3 business days 📅"
+      "message1": "Oh, tu as finalement envoyé un texto? \nDoit avoir battu un record du monde 🏆🙄",
+      "message2": "Désolé, mon téléphone ne fait que bourdonner pour les livraisons de pizza 🍕📳",
+      "message3": "Vos lignes de ramassage sont plus rapides que mon pop-corn au micro-ondes 🍿💨",
+      "message4": "Notre chat est plus froid que l'Antarctique ❄️😎",
+      "message5": "Je vous manque? \nJe me souviens à peine ton nom 😂",
+      "message6": "Votre vie de rencontres est comme ma connexion Wi-Fi - instable 📶",
+      "message7": "Vu votre message. \nRépondra dans 2-3 jours ouvrables 📅"
     },
     "speakers": {
-      "boyfriend": "Boyfriend",
-      "crush": "Crush",
+      "boyfriend": "Petit ami",
+      "crush": "Écraser",
       "ex": "Ex",
-      "friend": "Friend",
-      "girlfriend": "Girlfriend",
-      "her": "Her",
-      "him": "Him"
+      "friend": "Ami",
+      "girlfriend": "Petite amie",
+      "her": "Son",
+      "him": "Lui"
     },
     "times": {
-      "days_ago": "{days} days ago",
-      "hours_ago": "{hours} hours ago",
-      "just_now": "Just now",
-      "minutes_ago": "{minutes} minutes ago"
+      "days_ago": "{days} il y a des jours",
+      "hours_ago": "{days} il y a des heures",
+      "just_now": "Tout à l' heure",
+      "minutes_ago": "{minutes}Il y a quelques minutes"
     },
-    "title": "Chat Notifications"
+    "title": "Notifications de chat"
   },
   "chatrecapplatform": {
-    "badge": "Chat Analysis",
-    "description": "Select the platform you want to analyze your chat history from. We support multiple messaging platforms to provide comprehensive insights.",
+    "badge": "Analyse du chat",
+    "description": "Sélectionnez la plate-forme à laquelle vous souhaitez analyser votre historique de chat. \nNous prenons en charge plusieurs plates-formes de messagerie pour fournir des informations complètes.",
     "meta": {
-      "description": "Select the platform you want to analyze your chat from",
-      "title": "Choose Your Chat Platform"
+      "description": "Sélectionnez la plate-forme que vous souhaitez analyser votre chat",
+      "title": "Choisissez votre plateforme de chat"
     },
     "platforms": {
       "discord": {
-        "description": "Analyze your Discord chats to better understand your communication in gaming and community contexts."
+        "description": "Analysez vos chats Discord pour mieux comprendre votre communication dans les contextes de jeux et de communauté."
       },
       "instagram": {
-        "description": "Discover insights from your Instagram direct messages and understand your communication style."
+        "description": "Découvrez les informations de vos messages directs Instagram et comprenez votre style de communication."
       },
       "snapchat": {
-        "description": "Analyze your Snapchat conversations to understand your communication style and patterns."
+        "description": "Analysez vos conversations Snapchat pour comprendre votre style de communication et vos modèles."
       },
       "telegram": {
-        "description": "Get insights from your Telegram conversations and understand your messaging patterns."
+        "description": "Obtenez des informations de vos conversations télégrammes et comprenez vos modèles de messagerie."
       },
       "whatsapp": {
-        "description": "Analyze your WhatsApp conversations to understand your messaging patterns and relationship dynamics."
+        "description": "Analysez vos conversations WhatsApp pour comprendre vos modèles de messagerie et vos dynamiques de relation."
       }
     },
-    "select_button": "Select Platform",
-    "title": "Choose Your Chat Platform"
+    "select_button": "Sélectionner la plate-forme",
+    "title": "Choisissez votre plateforme de chat"
   },
   "chatrecapresult": {
     "ai_analysis": {
-      "analyzing": "Analyzing...",
-      "error": "Error",
-      "error_description": "An error occurred during AI analysis. Please try again later.",
-      "failed": "AI Analysis Failed",
+      "analyzing": "Analyse ...",
+      "error": "Erreur",
+      "error_description": "Une erreur s'est produite pendant l'analyse de l'IA. \nVeuillez réessayer plus tard.",
+      "failed": "L'analyse de l'IA a échoué",
       "failed_description": "We couldn't complete the AI analysis. Please try again.",
-      "generate": "Generate AI Insights",
-      "please_wait": "This may take a few minutes. Please wait while we analyze your chat data.",
-      "starting": "Starting AI Analysis",
-      "success": "AI Analysis Complete",
-      "success_description": "Your AI insights are ready to view."
+      "generate": "Générer des informations sur l'IA",
+      "please_wait": "Cela peut prendre quelques minutes. \nVeuillez patienter pendant que nous analysons vos données de chat.",
+      "starting": "Démarrage de l'analyse de l'IA",
+      "success": "Analyse de l'IA complète",
+      "success_description": "Vos idées d'IA sont prêtes à voir."
     },
     "analysis_card": {
       "conversion_rate": {
-        "content": "This month's conversion rate is 62%, down 3 percentage points from last month.\nAnalysis shows that the decline in conversion rate is mainly due to the poor quality of new promotion channels.\nHigh-quality traffic conversion rates remain stable, but an increase in low-quality traffic has led to an overall decline in conversion rates.\nIt is recommended to optimize traffic sources, improve visitor quality, and enhance landing page experience.",
-        "title": "Conversion Rate"
+        "content": "Le taux de conversion de ce mois est de 62%, en baisse de 3 points de pourcentage par rapport au mois dernier.\n\nL'analyse montre que la baisse du taux de conversion est principalement due à la mauvaise qualité des nouveaux canaux de promotion.\n\nLes taux de conversion du trafic de haute qualité restent stables, mais une augmentation du trafic de faible qualité a entraîné une baisse globale des taux de conversion.\n\nIl est recommandé d'optimiser les sources de trafic, d'améliorer la qualité des visiteurs et d'améliorer l'expérience de la page de destination.",
+        "title": "Taux de conversion"
       },
-      "example_description": "Below are examples of analysis cards with different metrics",
-      "example_title": "Analysis Card Examples",
+      "example_description": "Vous trouverez ci-dessous des exemples de cartes d'analyse avec différentes mesures",
+      "example_title": "Exemples de cartes d'analyse",
       "system_performance": {
         "content": "System performance metrics reached 93%, at the best historical level.\nServer response time decreased by an average of 200ms, and page loading speed increased by 15%.\nDatabase query optimization and CDN deployment are the main reasons for performance improvement.\nIt is recommended to continue monitoring peak performance and consider further cache strategy optimization.",
-        "title": "System Performance"
+        "title": "Performance du système"
       },
       "user_satisfaction": {
-        "content": "This quarter's user satisfaction reached 85%, a 5 percentage point increase compared to last quarter.\nThe main growth came from the launch of new product features and user interface optimizations.\nUser feedback shows that response speed and ease of use are the main factors for improved satisfaction.\nIt is recommended to continue optimizing the user experience, especially in mobile operation processes.",
-        "title": "User Satisfaction"
+        "content": "La satisfaction des utilisateurs de ce trimestre a atteint 85%, une augmentation de 5 points de pourcentage par rapport au dernier trimestre.\n\nLa croissance principale est venue du lancement de nouvelles fonctionnalités du produit et d'optimisations d'interface utilisateur.\n\nLes commentaires des utilisateurs montrent que la vitesse de réponse et la facilité d'utilisation sont les principaux facteurs d'une meilleure satisfaction.\n\nIl est recommandé de continuer à optimiser l'expérience utilisateur, en particulier dans les processus de fonctionnement mobile.",
+        "title": "Satisfaction de l'utilisateur"
       }
     },
-    "avg_words_per_msg": "Avg Words/Msg",
-    "back_to_upload": "Back to Upload",
-    "busiest_date": "Busiest Date",
-    "chat_story": "Your Chat Story",
-    "common_words": "Common Words",
+    "avg_words_per_msg": "Mots / message avg",
+    "back_to_upload": "Retour pour télécharger",
+    "busiest_date": "Date la plus occupée",
+    "chat_story": "Votre histoire de chat",
+    "common_words": "Mots communs",
     "communication_comparison": {
-      "description": "A comparison of communication patterns and relationship dynamics between both parties.",
-      "title": "Communication Comparison: {sender1} vs {sender2}"
+      "description": "Une comparaison des modèles de communication et de la dynamique des relations entre les deux parties.",
+      "title": "Comparaison de communication: {Sender1} vs {Sender2}"
     },
-    "count": "Count",
-    "daily_activity": "Daily Activity",
-    "daily_activity_description": "Your conversations are most active on {mostActiveDay}s around {mostActiveHour}. This consistent pattern suggests you both prioritize making time for each other during these periods.",
+    "count": "Compter",
+    "daily_activity": "Activité quotidienne",
+    "daily_activity_description": "Vos conversations sont les plus actives sur {Mostactiveday} S autour de {MostactiveHour}. \nCe schéma cohérent vous suggère tous les deux la priorité de prendre du temps les uns pour les autres pendant ces périodes.",
     "day_names": {
-      "friday": "Friday",
-      "monday": "Monday",
-      "saturday": "Saturday",
+      "friday": "Vendredi",
+      "monday": "Lundi",
+      "saturday": "Samedi",
       "sunday": "Sunday",
       "thursday": "Thursday",
       "tuesday": "Tuesday",

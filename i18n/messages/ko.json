@@ -62,143 +62,143 @@
       "description": "채팅 기록 처리 결과",
       "download": "Download",
       "filtered_media": "필터링 된 미디어 메시지",
-      "filtered_system": "Filtered System Messages",
+      "filtered_system": "필터링 된 시스템 메시지",
       "messages": "Messages",
       "next": "Next",
-      "no_results": "No matching messages found",
+      "no_results": "일치하는 메시지가 없습니다",
       "no_warnings": "No warnings",
-      "page_of": "Page {current} of {total}",
-      "previous": "Previous",
-      "search": "Search",
-      "search_placeholder": "Search messages or sender",
-      "share": "Share",
-      "title": "Processing Results",
-      "total_messages": "Total Messages",
-      "unknown_date_range": "Unknown date range",
-      "valid_dates": "Valid Date Messages",
-      "warnings": "Warnings"
+      "page_of": "{total} 페이지 {current}",
+      "previous": "이전의",
+      "search": "찾다",
+      "search_placeholder": "검색 메시지 또는 발신자",
+      "share": "공유하다",
+      "title": "처리 결과",
+      "total_messages": "총 메시지",
+      "unknown_date_range": "알 수없는 날짜 범위",
+      "valid_dates": "유효한 날짜 메시지",
+      "warnings": "경고"
     },
     "sample_button_text": "Use Sample Input",
     "sample_chat_text": "[2025/1/1, 01:00:00] ALICE: 새해 복 많이 받으세요! 🎉\n[2025/1/1, 01:02:00] JEFF: 새해 복 많이 받아요, 내 사랑! 🎆\n[2025/1/1, 08:15:00] ALICE: 올해 첫 커피! ☕\n[2025/1/1, 08:20:00] JEFF: 앞으로도 많은 일들을 함께해요! 🥂\n[2025/1/1, 10:30:00] ALICE: 오늘 계획은 뭐예요? 🤔\n[2025/1/1, 10:32:00] JEFF: 공원에서 산책하는 건 어때요?🌳\n[2025/1/1, 11:05:00] ALICE: 완벽해요! 🌞\n[2025/1/1, 13:00:00] JEFF: 새해 결심은 있어요?\n[2025/1/1, 13:10:00] ALICE: 더 많이 여행하는 거요! 🌍\n[2025/1/1, 13:15:00] JEFF: 좋은 생각이에요, 저도 함께할게요✈️\n[2025/1/1, 14:30:00] ALICE: 오늘 날씨가 정말 좋네요! ☀️\n[2025/1/1, 14:35:00] JEFF: 모험하기 완벽한 날이죠, 어떻게 생각해요?\n[2025/1/1, 16:00:00] ALICE: 아이스크림 먹으러 가는 건 어때요?🍦\n[2025/1/1, 16:10:00] JEFF: 좋아요! 어떤 맛이 좋아요?\n[2025/1/1, 18:30:00] ALICE: 저녁은 뭘로 할까요?\n[2025/1/1, 18:32:00] JEFF: 피자 어때요? 🍕",
     "select_platform": "플랫폼 선택",
     "subtitle": "AI 채팅 분석",
-    "supported_formats": "Supported: .txt file or .zip containing a .txt file (max 5MB)",
+    "supported_formats": "지원되는 : .txt 파일 또는 .txt 파일을 포함하는 .zip (max 5MB)",
     "title": "Chat Recap AI",
     "upload": {
-      "description": "Select a chat history file to upload",
-      "drag_drop": "Drag and drop file here or click to select",
-      "file_selected": "File selected",
+      "description": "업로드 할 채팅 기록 파일을 선택하십시오",
+      "drag_drop": "여기에서 파일을 드래그 앤 드롭거나 클릭하여 선택하십시오",
+      "file_selected": "선택된 파일",
       "file_size_limit": "File size exceeds {size}MB limit",
-      "invalid_format": "Invalid file format. Supported formats: {formats}",
-      "no_file_selected": "Please select a file",
-      "title": "Upload Chat History",
-      "upload_button": "Upload",
-      "upload_failed": "Upload failed",
-      "upload_success": "Upload successful"
+      "invalid_format": "잘못된 파일 형식. \n지원되는 형식 : {formats}",
+      "no_file_selected": "파일을 선택하십시오",
+      "title": "채팅 기록을 업로드하십시오",
+      "upload_button": "업로드",
+      "upload_failed": "업로드 실패",
+      "upload_success": "성공적으로 업로드하십시오"
     },
-    "upload_button_text": "Upload File",
+    "upload_button_text": "파일 업로드",
     "upload_description": "분석할 채팅 내보내기 파일을 업로드하세요",
     "upload_title": "채팅 기록 입력"
   },
   "chat_notifications": {
     "messages": {
-      "message1": "Oh, you finally texted? Must've broken a world record 🏆🙄",
-      "message2": "Sorry, my phone only buzzes for pizza deliveries 🍕📳",
-      "message3": "Your pick-up lines are faster than my microwave popcorn 🍿💨",
-      "message4": "Our chat's colder than Antarctica ❄️😎",
-      "message5": "Miss me? I barely remember your name 😂",
-      "message6": "Your dating life is like my WiFi - unstable connection 📶",
-      "message7": "Seen your message. Will reply in 2-3 business days 📅"
+      "message1": "오, 마침내 문자를 보냈나요? \n세계 기록을 깨뜨렸다",
+      "message2": "죄송합니다. 내 휴대 전화는 피자 배달을 위해서만 윙윙 거립니다",
+      "message3": "픽업 라인은 내 전자 레인지 팝콘보다 빠릅니다.",
+      "message4": "우리 채팅은 남극 대륙보다 더 차갑습니다",
+      "message5": "날 그리워? \n나는 당신의 이름을 간신히 기억하지 않습니다",
+      "message6": "당신의 데이트 생활은 나의 wi -fi- 불안정한 연결 📶와 같습니다.",
+      "message7": "당신의 메시지를 보았습니다. \n영업일 기준 2-3 일에 답장을합니다"
     },
     "speakers": {
-      "boyfriend": "Boyfriend",
-      "crush": "Crush",
+      "boyfriend": "남자 친구",
+      "crush": "으깨다",
       "ex": "Ex",
-      "friend": "Friend",
-      "girlfriend": "Girlfriend",
-      "her": "Her",
-      "him": "Him"
+      "friend": "친구",
+      "girlfriend": "여자 친구",
+      "her": "그녀의",
+      "him": "그를"
     },
     "times": {
-      "days_ago": "{days} days ago",
-      "hours_ago": "{hours} hours ago",
-      "just_now": "Just now",
-      "minutes_ago": "{minutes} minutes ago"
+      "days_ago": "{days} 며칠 전",
+      "hours_ago": "{days}몇 시간 전",
+      "just_now": "방금",
+      "minutes_ago": "{minutes} 분 전"
     },
-    "title": "Chat Notifications"
+    "title": "채팅 알림"
   },
   "chatrecapplatform": {
     "badge": "Chat Analysis",
-    "description": "Select the platform you want to analyze your chat history from. We support multiple messaging platforms to provide comprehensive insights.",
+    "description": "채팅 기록을 분석하려는 플랫폼을 선택하십시오. \n우리는 포괄적 인 통찰력을 제공하기 위해 여러 메시징 플랫폼을 지원합니다.",
     "meta": {
-      "description": "Select the platform you want to analyze your chat from",
-      "title": "Choose Your Chat Platform"
+      "description": "채팅을 분석하려는 플랫폼을 선택하십시오.",
+      "title": "채팅 플랫폼을 선택하십시오"
     },
     "platforms": {
       "discord": {
-        "description": "Analyze your Discord chats to better understand your communication in gaming and community contexts."
+        "description": "게임 및 커뮤니티 상황에서의 의사 소통을 더 잘 이해하기 위해 불화 채팅을 분석하십시오."
       },
       "instagram": {
-        "description": "Discover insights from your Instagram direct messages and understand your communication style."
+        "description": "Instagram 직접 메시지에서 통찰력을 발견하고 커뮤니케이션 스타일을 이해하십시오."
       },
       "snapchat": {
-        "description": "Analyze your Snapchat conversations to understand your communication style and patterns."
+        "description": "커뮤니케이션 스타일과 패턴을 이해하기 위해 Snapchat 대화를 분석하십시오."
       },
       "telegram": {
-        "description": "Get insights from your Telegram conversations and understand your messaging patterns."
+        "description": "전보 대화에서 통찰력을 얻고 메시징 패턴을 이해하십시오."
       },
       "whatsapp": {
-        "description": "Analyze your WhatsApp conversations to understand your messaging patterns and relationship dynamics."
+        "description": "WhatsApp 대화를 분석하여 메시징 패턴과 관계 역학을 이해하십시오."
       }
     },
-    "select_button": "Select Platform",
-    "title": "Choose Your Chat Platform"
+    "select_button": "플랫폼을 선택하십시오",
+    "title": "채팅 플랫폼을 선택하십시오"
   },
   "chatrecapresult": {
     "ai_analysis": {
-      "analyzing": "Analyzing...",
-      "error": "Error",
-      "error_description": "An error occurred during AI analysis. Please try again later.",
-      "failed": "AI Analysis Failed",
+      "analyzing": "분석 ...",
+      "error": "오류",
+      "error_description": "AI 분석 중에 오류가 발생했습니다. \n나중에 다시 시도하십시오.",
+      "failed": "AI 분석이 실패했습니다",
       "failed_description": "We couldn't complete the AI analysis. Please try again.",
-      "generate": "Generate AI Insights",
-      "please_wait": "This may take a few minutes. Please wait while we analyze your chat data.",
-      "starting": "Starting AI Analysis",
-      "success": "AI Analysis Complete",
-      "success_description": "Your AI insights are ready to view."
+      "generate": "AI 통찰력을 생성합니다",
+      "please_wait": "몇 분이 걸릴 수 있습니다. \n채팅 데이터를 분석하는 동안 기다려주세요.",
+      "starting": "AI 분석 시작",
+      "success": "AI 분석 완료",
+      "success_description": "AI 통찰력이 볼 준비가되었습니다."
     },
     "analysis_card": {
       "conversion_rate": {
-        "content": "This month's conversion rate is 62%, down 3 percentage points from last month.\nAnalysis shows that the decline in conversion rate is mainly due to the poor quality of new promotion channels.\nHigh-quality traffic conversion rates remain stable, but an increase in low-quality traffic has led to an overall decline in conversion rates.\nIt is recommended to optimize traffic sources, improve visitor quality, and enhance landing page experience.",
-        "title": "Conversion Rate"
+        "content": "이번 달의 전환율은 지난 달의 3%포인트 감소한 62%입니다.\n\n분석에 따르면 전환율 감소는 주로 새로운 프로모션 채널의 품질이 좋지 않기 때문입니다.\n\n고품질 트래픽 전환율은 안정적으로 유지되지만 품질이 낮은 트래픽의 증가로 전환율이 전반적으로 감소했습니다.\n\n트래픽 소스를 최적화하고 방문자 품질을 개선하며 방문 페이지 경험을 향상시키는 것이 좋습니다.",
+        "title": "전환율"
       },
-      "example_description": "Below are examples of analysis cards with different metrics",
-      "example_title": "Analysis Card Examples",
+      "example_description": "다음은 메트릭이 다른 분석 카드의 예입니다",
+      "example_title": "분석 카드 예제",
       "system_performance": {
         "content": "System performance metrics reached 93%, at the best historical level.\nServer response time decreased by an average of 200ms, and page loading speed increased by 15%.\nDatabase query optimization and CDN deployment are the main reasons for performance improvement.\nIt is recommended to continue monitoring peak performance and consider further cache strategy optimization.",
-        "title": "System Performance"
+        "title": "시스템 성능"
       },
       "user_satisfaction": {
-        "content": "This quarter's user satisfaction reached 85%, a 5 percentage point increase compared to last quarter.\nThe main growth came from the launch of new product features and user interface optimizations.\nUser feedback shows that response speed and ease of use are the main factors for improved satisfaction.\nIt is recommended to continue optimizing the user experience, especially in mobile operation processes.",
-        "title": "User Satisfaction"
+        "content": "이번 분기의 사용자 만족도는 85%에 이르렀으며, 지난 분기에 비해 5%포인트가 증가했습니다.\n\n주요 성장은 신제품 기능 및 사용자 인터페이스 최적화의 출시에서 비롯되었습니다.\n\n사용자 피드백은 응답 속도와 사용 편의성이 만족도 향상의 주요 요인임을 보여줍니다.\n\n특히 모바일 운영 프로세스에서 사용자 경험을 계속 최적화하는 것이 좋습니다.",
+        "title": "사용자 만족도"
       }
     },
-    "avg_words_per_msg": "Avg Words/Msg",
-    "back_to_upload": "Back to Upload",
-    "busiest_date": "Busiest Date",
-    "chat_story": "Your Chat Story",
-    "common_words": "Common Words",
+    "avg_words_per_msg": "AVG 단어/메시지",
+    "back_to_upload": "업로드로 돌아갑니다",
+    "busiest_date": "가장 바쁜 날짜",
+    "chat_story": "당신의 채팅 이야기",
+    "common_words": "일반적인 단어",
     "communication_comparison": {
-      "description": "A comparison of communication patterns and relationship dynamics between both parties.",
-      "title": "Communication Comparison: {sender1} vs {sender2}"
+      "description": "커뮤니케이션 패턴과 두 당사자 간의 관계 역학 비교.",
+      "title": "커뮤니케이션 비교 : {sender1} vs {sender2}"
     },
-    "count": "Count",
-    "daily_activity": "Daily Activity",
-    "daily_activity_description": "Your conversations are most active on {mostActiveDay}s around {mostActiveHour}. This consistent pattern suggests you both prioritize making time for each other during these periods.",
+    "count": "세다",
+    "daily_activity": "일상 활동",
+    "daily_activity_description": "대화는 {mostactivehour} 주변의 {mostactiveday}에서 가장 활발합니다. \n이 일관된 패턴은이 기간 동안 서로에 대한 시간을 올리는 데 우선 순위를 정하는 것을 제안합니다.",
     "day_names": {
-      "friday": "Friday",
-      "monday": "Monday",
-      "saturday": "Saturday",
+      "friday": "금요일",
+      "monday": "월요일",
+      "saturday": "토요일",
       "sunday": "Sunday",
       "thursday": "Thursday",
       "tuesday": "Tuesday",

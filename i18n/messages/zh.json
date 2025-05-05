@@ -13,7 +13,7 @@
     "success_description": "成功描述"
   },
   "analyze_button": "分析按钮",
-  "avg_words_per_msg": "每个味精的avg单词",
+  "avg_words_per_msg": "每句话平均多少字",
   "back_to_upload": "返回上传",
   "badge": "徽章",
   "blog": {
@@ -30,8 +30,8 @@
     "free_analysis": "免费分析您的聊天",
     "how_to_import": "如何从WhatsApp导入聊天",
     "import_methods": {
-      "mobile": "从WhatsApp iOS/Android",
-      "web": "从WhatsApp网页版"
+      "mobile": "从WhatsApp iOS/Android 导入",
+      "web": "从WhatsApp网页版导入"
     },
     "placeholder": "在此输入或粘贴您的聊天文本...",
     "platforms": {
@@ -88,8 +88,8 @@
       "description": "选择一个聊天记录文件进行上传",
       "drag_drop": "拖放文件到这里或点击选择",
       "file_selected": "已选择文件",
-      "file_size_limit": "File size exceeds {size}MB limit",
-      "invalid_format": "Invalid file format. Supported formats: {formats}",
+      "file_size_limit": "文件大小超过 {size}MB 限制",
+      "invalid_format": "无效的文件格式。\n支持格式：{formats}",
       "no_file_selected": "请选择一个文件",
       "title": "上传聊天记录",
       "upload_button": "上传",
@@ -104,258 +104,258 @@
     "messages": {
       "message1": "哦，你终于发短信了吗？\n一定打破了世界纪录🏆🙄",
       "message2": "抱歉，我的手机只会嗡嗡作用披萨送货🍕📳",
-      "message3": "Your pick-up lines are faster than my microwave popcorn 🍿💨",
-      "message4": "Our chat's colder than Antarctica ❄️😎",
-      "message5": "Miss me? I barely remember your name 😂",
-      "message6": "Your dating life is like my WiFi - unstable connection 📶",
-      "message7": "Seen your message. Will reply in 2-3 business days 📅"
+      "message3": "你接电话速度比我的微波爆米花更快",
+      "message4": "我们的聊天比南极洲还冷❄️😎",
+      "message5": "想念我吗？\n我几乎不记得你的名字😂",
+      "message6": "你的约会生活就像我的wifi-不稳定的连接📶",
+      "message7": "看到了你的消息。\n将在2-3个工作日中回复📅"
     },
     "speakers": {
-      "boyfriend": "Boyfriend",
-      "crush": "Crush",
-      "ex": "Ex",
-      "friend": "Friend",
-      "girlfriend": "Girlfriend",
-      "her": "Her",
-      "him": "Him"
+      "boyfriend": "男朋友",
+      "crush": "暧昧对象",
+      "ex": "前任",
+      "friend": "朋友",
+      "girlfriend": "女朋友",
+      "her": "她",
+      "him": "他"
     },
     "times": {
-      "days_ago": "{days} days ago",
-      "hours_ago": "{hours} hours ago",
-      "just_now": "Just now",
-      "minutes_ago": "{minutes} minutes ago"
+      "days_ago": "{days}几天前",
+      "hours_ago": "{days}小时前",
+      "just_now": "刚刚",
+      "minutes_ago": "{minutes}几分钟前"
     },
-    "title": "Chat Notifications"
+    "title": "聊天通知"
   },
   "chatrecapplatform": {
-    "badge": "Chat Analysis",
-    "description": "Select the platform you want to analyze your chat history from. We support multiple messaging platforms to provide comprehensive insights.",
+    "badge": "聊天分析",
+    "description": "选择您要从中分析聊天历史记录的平台。\n我们支持多个消息平台，以提供全面的见解。",
     "meta": {
-      "description": "Select the platform you want to analyze your chat from",
-      "title": "Choose Your Chat Platform"
+      "description": "选择您要从中分析聊天的平台",
+      "title": "选择您的聊天平台"
     },
     "platforms": {
       "discord": {
-        "description": "Analyze your Discord chats to better understand your communication in gaming and community contexts."
+        "description": "分析您的不和谐聊天，以更好地了解您在游戏和社区环境中的沟通。"
       },
       "instagram": {
-        "description": "Discover insights from your Instagram direct messages and understand your communication style."
+        "description": "从您的Instagram私信消息中发现见解，并了解您的沟通方式。"
       },
       "snapchat": {
-        "description": "Analyze your Snapchat conversations to understand your communication style and patterns."
+        "description": "分析您的Snapchat对话，以了解您的沟通方式和模式。"
       },
       "telegram": {
-        "description": "Get insights from your Telegram conversations and understand your messaging patterns."
+        "description": "从telegram对话中获取见解，并了解您的消息传递模式。"
       },
       "whatsapp": {
-        "description": "Analyze your WhatsApp conversations to understand your messaging patterns and relationship dynamics."
+        "description": "分析您的WhatsApp对话，以了解您的消息传递模式和关系动态。"
       }
     },
-    "select_button": "Select Platform",
-    "title": "Choose Your Chat Platform"
+    "select_button": "选择平台",
+    "title": "选择您的聊天平台"
   },
   "chatrecapresult": {
     "ai_analysis": {
-      "analyzing": "Analyzing...",
-      "error": "Error",
-      "error_description": "An error occurred during AI analysis. Please try again later.",
-      "failed": "AI Analysis Failed",
-      "failed_description": "We couldn't complete the AI analysis. Please try again.",
-      "generate": "Generate AI Insights",
-      "please_wait": "This may take a few minutes. Please wait while we analyze your chat data.",
-      "starting": "Starting AI Analysis",
-      "success": "AI Analysis Complete",
-      "success_description": "Your AI insights are ready to view."
+      "analyzing": "分析...",
+      "error": "错误",
+      "error_description": "在AI分析期间发生了错误。\n请稍后再试。",
+      "failed": "AI分析失败",
+      "failed_description": "我们无法完成AI分析。请重试。",
+      "generate": "生成AI洞察分析",
+      "please_wait": "这可能需要几分钟。\n当我们分析您的聊天数据时，请等待。",
+      "starting": "开始AI分析",
+      "success": "AI分析完成",
+      "success_description": "您的AI见解已准备好查看。"
     },
     "analysis_card": {
       "conversion_rate": {
-        "content": "This month's conversion rate is 62%, down 3 percentage points from last month.\nAnalysis shows that the decline in conversion rate is mainly due to the poor quality of new promotion channels.\nHigh-quality traffic conversion rates remain stable, but an increase in low-quality traffic has led to an overall decline in conversion rates.\nIt is recommended to optimize traffic sources, improve visitor quality, and enhance landing page experience.",
-        "title": "Conversion Rate"
+        "content": "本月的转化率为62％，比上个月下降了3个百分点。\n\n分析表明，转化率的下降主要是由于新促销渠道质量较差。\n\n高质量的交通转换率保持稳定，但是低质量流量的增加导致转化率的总体下降。\n\n建议优化流量来源，提高访问者质量并增强着陆页体验。",
+        "title": "转换率"
       },
-      "example_description": "Below are examples of analysis cards with different metrics",
-      "example_title": "Analysis Card Examples",
+      "example_description": "以下是具有不同指标的分析卡的示例",
+      "example_title": "分析卡示例",
       "system_performance": {
-        "content": "System performance metrics reached 93%, at the best historical level.\nServer response time decreased by an average of 200ms, and page loading speed increased by 15%.\nDatabase query optimization and CDN deployment are the main reasons for performance improvement.\nIt is recommended to continue monitoring peak performance and consider further cache strategy optimization.",
-        "title": "System Performance"
+        "content": "系统性能指标达到93%，处于历史最佳水平。\n服务器响应时间平均减少200ms，页面加载速度提高15%。\n数据库查询优化和CDN部署是性能提升的主要原因。\n建议继续监控峰值性能，考虑进一步优化缓存策略。",
+        "title": "系统性能"
       },
       "user_satisfaction": {
-        "content": "This quarter's user satisfaction reached 85%, a 5 percentage point increase compared to last quarter.\nThe main growth came from the launch of new product features and user interface optimizations.\nUser feedback shows that response speed and ease of use are the main factors for improved satisfaction.\nIt is recommended to continue optimizing the user experience, especially in mobile operation processes.",
-        "title": "User Satisfaction"
+        "content": "本季度用户满意度达到85％，与上一季度相比增加了5个百分点。\n\n主要增长来自新产品功能和用户界面优化的启动。\n\n用户反馈表明，响应速度和易用性是提高满意度的主要因素。\n\n建议继续优化用户体验，尤其是在移动操作过程中。",
+        "title": "用户满意度"
       }
     },
-    "avg_words_per_msg": "Avg Words/Msg",
-    "back_to_upload": "Back to Upload",
-    "busiest_date": "Busiest Date",
-    "chat_story": "Your Chat Story",
-    "common_words": "Common Words",
+    "avg_words_per_msg": "文字/平均每句话",
+    "back_to_upload": "返回上传",
+    "busiest_date": "最繁忙的日期",
+    "chat_story": "您的聊天故事",
+    "common_words": "常见的话",
     "communication_comparison": {
-      "description": "A comparison of communication patterns and relationship dynamics between both parties.",
-      "title": "Communication Comparison: {sender1} vs {sender2}"
+      "description": "双方之间的沟通模式和关系动态的比较。",
+      "title": "对话比较：{sender1} vs {sender2}"
     },
-    "count": "Count",
-    "daily_activity": "Daily Activity",
-    "daily_activity_description": "Your conversations are most active on {mostActiveDay}s around {mostActiveHour}. This consistent pattern suggests you both prioritize making time for each other during these periods.",
+    "count": "数数",
+    "daily_activity": "日常活动",
+    "daily_activity_description": "您的对话在{mostActiveAday} s周围{mastactiveHour}上最活跃。\n这种一致的模式建议您在这些时期优先考虑彼此的时间。",
     "day_names": {
-      "friday": "Friday",
-      "monday": "Monday",
-      "saturday": "Saturday",
-      "sunday": "Sunday",
-      "thursday": "Thursday",
-      "tuesday": "Tuesday",
-      "wednesday": "Wednesday"
+      "friday": "星期五",
+      "monday": "周一",
+      "saturday": "周六",
+      "sunday": "星期日",
+      "thursday": "星期四",
+      "tuesday": "星期二",
+      "wednesday": "星期三"
     },
-    "days": "days",
-    "description": "Discover insights about your conversation patterns and relationship dynamics",
-    "emojis": "Emojis",
-    "error_loading": "Error loading analysis data",
+    "days": "天",
+    "description": "发现关于您的对话模式和关系动态的洞察",
+    "emojis": "表情符号",
+    "error_loading": "加载分析数据错误",
     "errors": {
-      "ai_insights_not_found": "AI insights not found. You may need to purchase AI analysis for this chat.",
-      "file_not_found": "File not found. Please try uploading your file again.",
-      "invalid_signature": "Invalid signature. Please try again.",
-      "loading_failed": "Failed to load analysis data. Please try again.",
-      "not_found": "Analysis not found. Please try uploading your file again.",
-      "order_not_found": "Order not found. Please try again.",
-      "payment_processing_failed": "Payment processing failed. Please try again.",
-      "result_not_found": "Analysis result not found. Please try uploading your file again."
+      "ai_insights_not_found": "AI洞察未找到。您可能需要为此聊天购买AI分析。",
+      "file_not_found": "文件未找到。请尝试重新上传您的文件。",
+      "invalid_signature": "无效签名。请重试。",
+      "loading_failed": "加载分析数据失败。请重试。",
+      "not_found": "未找到分析。请尝试重新上传您的文件。",
+      "order_not_found": "订单未找到。请重试。",
+      "payment_processing_failed": "支付处理失败。请重试。",
+      "result_not_found": "未找到分析结果。请尝试重新上传您的文件。"
     },
-    "export_not_implemented": "Export feature is coming soon!",
-    "export_pdf": "Export as PDF",
-    "favorite_day_to_chat": "Favorite Day to Chat",
-    "first_message": "First Message",
-    "heatmap_data_not_available": "Heatmap data not available",
-    "high": "High",
+    "export_not_implemented": "导出功能即将推出！",
+    "export_pdf": "导出为PDF",
+    "favorite_day_to_chat": "最喜欢聊天的一天",
+    "first_message": "第一条消息",
+    "heatmap_data_not_available": "热图数据不可用",
+    "high": "高",
     "insights": {
-      "interaction_title": "Interaction Insights",
-      "relationship_title": "Relationship Insights"
+      "interaction_title": "互动洞察",
+      "relationship_title": "关系洞察"
     },
-    "last_message": "Last Message",
-    "low": "Low",
-    "messages": "Messages",
-    "messages_count": "{count} messages",
-    "most_active_day": "Most Active Day",
-    "most_active_hour": "Most Active Hour",
-    "no_data_available": "No data available",
-    "no_data_found": "No data found",
-    "no_meaningful_words": "No meaningful words found",
-    "no_words_found": "No words found",
-    "not_found": "Analysis not found",
-    "overall_sentiment": "Overall Sentiment",
-    "overview_story_part1": "Your conversation tells a beautiful story through <span class='highlight'>{totalMessages} messages</span> exchanged over time. {sender1Name} sent <span class='highlight'>{sender1Messages} messages</span>, while {sender2Name} responded with <span class='highlight'>{sender2Messages} messages</span>.",
-    "overview_story_part2": "Together, you've woven a tapestry of <span class='highlight'>{totalWords} words</span>, with {sender1Name} contributing <span class='highlight'>{sender1Words} words</span> and {sender2Name} sharing <span class='highlight'>{sender2Words} words</span>. Your conversations are meaningful and substantial, with an average of <span class='highlight'>{wordsPerMessage} words per message</span>.",
-    "overview_story_part3": "Your most active conversations happen on <span class='highlight'>{mostActiveDay}</span>, with an average of <span class='highlight'>{avgMessagesPerDay} messages</span> exchanged daily. The typical response time of <span class='highlight'>{responseTime}</span> shows the eager anticipation you both feel when communicating with each other.",
-    "overview_title": "Overview",
-    "peak_activity_time": "Peak Activity Time",
+    "last_message": "最后一条消息",
+    "low": "低",
+    "messages": "消息",
+    "messages_count": "{count} 条消息",
+    "most_active_day": "最活跃的一天",
+    "most_active_hour": "最活跃的小时",
+    "no_data_available": "无可用数据",
+    "no_data_found": "未找到数据",
+    "no_meaningful_words": "未找到有意义的单词",
+    "no_words_found": "未找到单词",
+    "not_found": "未找到分析",
+    "overall_sentiment": "总体情绪",
+    "overview_story_part1": "您的对话通过 <span class='highlight'>{totalMessages} 条消息</span> 交换，讲述了一个美丽的故事。{sender1Name} 发送了 <span class='highlight'>{sender1Messages} 条消息</span>，而 {sender2Name} 回复了 <span class='highlight'>{sender2Messages} 条消息</span>。",
+    "overview_story_part2": "你们一起编织了一幅 <span class='highlight'>{totalWords} 个字</span> 的画卷，{sender1Name} 贡献了 <span class='highlight'>{sender1Words} 个字</span>，{sender2Name} 分享了 <span class='highlight'>{sender2Words} 个字</span>。你们的对话有意义且内容丰富，平均每条消息 <span class='highlight'>{wordsPerMessage} 个字</span>。",
+    "overview_story_part3": "你们最活跃的对话发生在 <span class='highlight'>{mostActiveDay}</span>，每天平均交换 <span class='highlight'>{avgMessagesPerDay} 条消息</span>。典型的响应时间 <span class='highlight'>{responseTime}</span> 显示了你们在相互交流时感受到的热切期待。",
+    "overview_title": "概览",
+    "peak_activity_time": "高峰活动时间",
     "processing_errors": {
-      "filter_too_strict": "Warning: All messages were filtered out, filter conditions may be too strict",
-      "invalid_date": "Some messages have invalid dates",
-      "no_messages": "No valid messages could be extracted",
-      "processing_failed": "Processing failed: {message}",
-      "short_timespan": "Conversation timespan is very short, may not be a complete conversation",
-      "single_participant": "Only one participant detected, this may not be a conversation"
+      "filter_too_strict": "警告：所有消息都被过滤掉了，过滤条件可能太严格",
+      "invalid_date": "某些消息有无效日期",
+      "no_messages": "无法提取有效消息",
+      "processing_failed": "处理失败：{message}",
+      "short_timespan": "对话时间跨度很短，可能不是一个完整的对话",
+      "single_participant": "仅检测到一个参与者，这可能不是一个对话"
     },
     "relationship_analysis": {
-      "description": "Analysis of communication patterns and relationship dynamics based on message history.",
-      "title": "{sender}'s Communication Analysis"
+      "description": "基于消息历史的沟通模式和关系动态分析。",
+      "title": "{sender} 的沟通分析"
     },
     "relationship_metrics": {
-      "communication": "Communication",
-      "conflict": "Conflict Management",
-      "emotional_stability": "Emotional Stability",
-      "interest_level": "Interest Level",
-      "intimacy": "Intimacy",
-      "response_enthusiasm": "Response Enthusiasm",
-      "response_time": "Response Time",
-      "trust": "Trust"
+      "communication": "沟通",
+      "conflict": "冲突管理",
+      "emotional_stability": "情绪稳定",
+      "interest_level": "兴趣水平",
+      "intimacy": "亲密度",
+      "response_enthusiasm": "反应热情",
+      "response_time": "响应时间",
+      "trust": "信任"
     },
     "relationship_metrics_hearts": {
-      "description": "Analysis of key relationship quality indicators based on communication patterns.",
-      "title": "Relationship Quality Metrics"
+      "description": "基于沟通模式的关键关系质量指标分析。",
+      "title": "关系质量指标"
     },
-    "relationship_metrics_radar": "{name}'s Communication Metrics",
-    "response_pattern_description": "Your typical response pattern is \"{responsePattern}\". Your conversations tend to be \"{conversationLength}\".",
+    "relationship_metrics_radar": "{name} 的沟通指标",
+    "response_pattern_description": "您的典型响应模式是“{responsePattern}”。您的对话倾向于“{conversationLength}”。",
     "response_patterns": {
-      "consistent": "Consistent response times throughout the day",
-      "evening_active": "Quick responses in evening, slower in morning",
-      "morning_active": "More active in morning than evening"
+      "consistent": "全天回复时间一致",
+      "evening_active": "晚上回复快，早上较慢",
+      "morning_active": "早上比晚上更活跃"
     },
-    "sentiment_analysis": "Sentiment Analysis",
-    "sentiment_description": "Your conversations have a sentiment score of {sentimentScore}, which indicates a {sentimentDescription} emotional tone. This reflects the overall mood and feeling of your exchanges.",
-    "sentiment_negative": "Negative",
-    "sentiment_neutral": "Neutral",
-    "sentiment_positive": "Positive",
-    "sentiment_score": "Sentiment Score",
-    "sentiment_very_negative": "Very Negative",
-    "sentiment_very_positive": "Very Positive",
+    "sentiment_analysis": "情感分析",
+    "sentiment_description": "您的对话情感得分为 {sentimentScore}，表明情感基调为 {sentimentDescription}。这反映了您交流的整体情绪和感觉。",
+    "sentiment_negative": "负面",
+    "sentiment_neutral": "中性",
+    "sentiment_positive": "正面",
+    "sentiment_score": "情感分数",
+    "sentiment_very_negative": "非常负面",
+    "sentiment_very_positive": "非常正面",
     "share": {
-      "copy_failed": "Failed to copy link",
-      "link_copied": "Link copied to clipboard"
+      "copy_failed": "复制链接失败",
+      "link_copied": "链接已复制到剪贴板"
     },
-    "share_not_implemented": "Share feature is coming soon!",
-    "share_results": "Share Results",
-    "story_timeline_description": "Your story began on {startDate}, unfolding over {duration} days, until {endDate}—leaving an everlasting mark in the passage of time.",
-    "story_timeline_title": "Your Chat Journey",
-    "text_analysis_title": "Text Analysis",
-    "time_analysis_title": "Time Analysis",
-    "time_distribution": "Time Distribution",
-    "time_distribution_description": "You tend to chat most during the evening ({evening}%), followed by afternoon ({afternoon}%) and morning ({morning}%). This pattern shows when you're both most available and engaged in conversation.",
+    "share_not_implemented": "分享功能即将推出！",
+    "share_results": "分享结果",
+    "story_timeline_description": "您的故事始于 {startDate}，持续了 {duration} 天，直到 {endDate}——在时间长河中留下了永恒的印记。",
+    "story_timeline_title": "您的聊天旅程",
+    "text_analysis_title": "文本分析",
+    "time_analysis_title": "时间分析",
+    "time_distribution": "时间分布",
+    "time_distribution_description": "您倾向于在傍晚 ({evening}%) 聊天最多，其次是下午 ({afternoon}%) 和早晨 ({morning}%)。这种模式显示了您双方最有空闲和参与对话的时间。",
     "time_of_day": {
-      "afternoon": "Afternoon",
-      "evening": "Evening",
-      "morning": "Morning",
-      "night": "Night"
+      "afternoon": "下午",
+      "evening": "傍晚",
+      "morning": "早晨",
+      "night": "夜晚"
     },
-    "timespan_format": "Your story began on {startMonth} {startDay}, {startYear} {startDayName} 00:00, unfolding over {durationText}, until {endMonth} {endDay}, {endYear} {endDayName} 23:59—leaving an everlasting mark in the passage of time.",
-    "title": "Your Chat Analysis Results",
-    "top_emojis": "{name}'s Top Emojis",
-    "top_words": "Top Words",
-    "total_emojis": "Total Emojis",
-    "total_messages": "Total Messages",
-    "total_unique_words": "Total Unique Words",
-    "total_words": "Total Words",
-    "weekly_activity_heatmap": "Weekly Activity Heatmap",
-    "word": "Word",
-    "word_cloud": "Word Cloud",
-    "words": "Words",
-    "words_per_message": "Words Per Message"
+    "timespan_format": "您的故事始于 {startMonth} {startDay}, {startYear} {startDayName} 00:00，历时 {durationText}，直到 {endMonth} {endDay}, {endYear} {endDayName} 23:59——在时间长河中留下永恒的印记。",
+    "title": "您的聊天分析结果",
+    "top_emojis": "{name} 的最常用表情符号",
+    "top_words": "最常用单词",
+    "total_emojis": "表情符号总数",
+    "total_messages": "总消息数",
+    "total_unique_words": "总独特单词",
+    "total_words": "总字数",
+    "weekly_activity_heatmap": "每周活动热图",
+    "word": "单词",
+    "word_cloud": "词云",
+    "words": "字数",
+    "words_per_message": "每条消息字数"
   },
   "common_words": "常见的话",
   "components": {
     "action_buttons": {
-      "back_to_upload": "Back to Upload",
-      "copy_failed": "Failed to copy link",
-      "link_copied": "Link copied to clipboard",
-      "share_results": "Share Results"
+      "back_to_upload": "返回上传",
+      "copy_failed": "复制链接失败",
+      "link_copied": "链接已复制到剪贴板",
+      "share_results": "分享结果"
     },
     "footer": {
-      "copyright": "© 2025 ChatRecap AI. All rights reserved.",
-      "privacy_policy": "Privacy Policy",
-      "terms_of_service": "Terms of Service"
+      "copyright": "© 2025 ChatRecap AI. 保留所有权利。",
+      "privacy_policy": "隐私政策",
+      "terms_of_service": "服务条款"
     },
     "highlighted_text": {
-      "afternoon": "Afternoon",
-      "evening": "Evening",
-      "medium_conversations": "Medium Conversations",
-      "morning": "Morning",
-      "negative": "Negative",
-      "neutral": "Neutral",
-      "positive": "Positive",
-      "quick_responses": "Quick Responses",
-      "very_negative": "Very Negative",
-      "very_positive": "Very Positive"
+      "afternoon": "下午",
+      "evening": "傍晚",
+      "medium_conversations": "中等对话",
+      "morning": "早晨",
+      "negative": "负面",
+      "neutral": "中性",
+      "positive": "正面",
+      "quick_responses": "快速响应",
+      "very_negative": "非常负面",
+      "very_positive": "非常正面"
     },
     "notification": {
-      "free": "FREE!",
-      "hours": "hours",
-      "hurry": "Hurry, this code expires in",
-      "limited_time_offer": "Limited Time Offer!",
-      "of_full_access": "of full access — absolutely",
-      "to_unlock": "to unlock",
-      "try_now": "Try Now",
-      "use_code": "Use code"
+      "free": "免费！",
+      "hours": "小时",
+      "hurry": "赶紧",
+      "limited_time_offer": "限时优惠！",
+      "of_full_access": "完全访问权限",
+      "to_unlock": "解锁",
+      "try_now": "立即尝试",
+      "use_code": "使用代码"
     }
   },
   "copyright": "版权",
-  "count": "数数",
+  "count": "计数",
   "daily_activity": "日常活动",
   "daily_activity_description": "日常活动描述",
   "days": "天",
@@ -369,7 +369,7 @@
   },
   "evening": "晚上",
   "export_not_implemented": "未实施导出",
-  "export_pdf": "导出pdf",
+  "export_pdf": "导出为PDF",
   "favorite_day_to_chat": "最喜欢聊天的一天",
   "features": {
     "comprehensive_analysis": {
@@ -390,7 +390,7 @@
       "description": "通过ChatRecap AI聊天分析，获取关于您的聊天模式和关系动态的全面洞察。",
       "points": [
         "情感分析",
-        "回复时间模式",
+        "响应时间模式",
         "参与度指标",
         "危险信号检测"
       ],
@@ -408,7 +408,7 @@
     },
     "response_time": {
       "content": "跟踪您和对话伙伴对彼此消息的回复速度，揭示参与度和沟通习惯。",
-      "title": "回复时间模式"
+      "title": "响应时间模式"
     },
     "sentiment_analysis": {
       "content": "分析您对话的情感基调，了解消息中表达的潜在感受和态度。",
@@ -422,8 +422,8 @@
   },
   "first_message": "第一条消息",
   "footer": {
-    "copyright": "© 2025 ChatRecap AI. All rights reserved.",
-    "privacy_policy": "Privacy Policy",
+    "copyright": "© 2025 ChatRecap AI. 保留所有权利。",
+    "privacy_policy": "隐私政策",
     "social_links": {
       "discord": "Discord",
       "instagram": "Instagram",
@@ -431,12 +431,12 @@
       "telegram": "Telegram",
       "whatsapp": "WhatsApp"
     },
-    "terms_of_service": "Terms of Service"
+    "terms_of_service": "服务条款"
   },
-  "free": "自由的",
+  "free": "免费！",
   "free_analysis": "免费分析",
-  "heatmap_data_not_available": "没有可用的热图数据",
-  "high": "高的",
+  "heatmap_data_not_available": "热图数据不可用",
+  "high": "高",
   "hours": "小时",
   "how_it_works": {
     "chat_notifications": {
@@ -521,8 +521,8 @@
       "communication_tips": "沟通技巧",
       "conflict_patterns": "冲突模式",
       "conflict_resolution": "冲突解决",
-      "conversation_enders": "对话结束者",
-      "conversation_starters": "对话发起者",
+      "conversation_enders": "对话结束语",
+      "conversation_starters": "对话开场白",
       "day_names": {
         "friday": "星期五",
         "monday": "星期一",
@@ -584,7 +584,7 @@
         "morning_active": "早上比晚上更活跃"
       },
       "response_time": "响应时间",
-      "sentiment_analysis": "情感分析",
+      "sentiment ENC>analysis": "情感分析",
       "sentiment_by_day": "按日情感",
       "sentiment_by_hour": "按小时情感",
       "sentiment_comparison": "情感比较",
@@ -660,15 +660,15 @@
     "subtitle": "获取对话洞察的简单三步流程",
     "title": "如何使用Chat Recap AI分析您的聊天？"
   },
-  "hurry": "匆忙",
+  "hurry": "赶紧",
   "insights": {
     "interaction_title": "互动标题",
     "relationship_title": "关系标题"
   },
   "keywords": "关键字",
   "last_message": "最后一条消息",
-  "limited_time_offer": "时间限点优惠",
-  "low": "低的",
+  "limited_time_offer": "限时优惠！",
+  "low": "低",
   "medium_conversations": "中等对话",
   "messages": {
     "message1": "消息1",
@@ -688,7 +688,7 @@
   },
   "metadata": {
     "description": "想要分析您的聊天记录？ChatRecap AI帮助您理解WhatsApp、Instagram、Snapchat、Discord和Telegram上的对话。获取跨平台洞察，发现您的沟通模式。",
-    "keywords": "chatrecap, 聊天分析器, WhatsApp分析器, Instagram聊天分析, Discord聊天分析, Telegram分析器, Snapchat分析, 聊天历史, 对话模式, 消息洞察, 跨平台聊天分析, 聊天导出, 聊天指标",
+    "keywords": "聊天分析, 聊天分析器, WhatsApp分析器, Instagram聊天分析, Discord聊天分析, Telegram分析器, Snapchat分析, 聊天历史, 对话模式, 消息洞察, 跨平台聊天分析, 聊天导出, 聊天指标",
     "title": "Chat Recap AI: 免注册免费在线聊天分析工具 - chatrecap.io"
   },
   "morning": "早晨",
@@ -754,23 +754,23 @@
     "tip": "上传聊天记录开始使用",
     "title": "我的分析历史"
   },
-  "negative": "消极的",
-  "neutral": "中性的",
-  "no_data_available": "没有可用的数据",
-  "no_data_found": "找不到数据",
-  "no_meaningful_words": "没有有意义的话",
-  "no_words_found": "找不到任何话",
+  "negative": "负面",
+  "neutral": "中性",
+  "no_data_available": "无可用数据",
+  "no_data_found": "未找到数据",
+  "no_meaningful_words": "未找到有意义的单词",
+  "no_words_found": "未找到单词",
   "notification": {
-    "free": "FREE!",
-    "hours": "hours",
-    "hurry": "Hurry, this code expires in",
-    "limited_time_offer": "有限的时间优惠！",
-    "of_full_access": "of full access — absolutely",
-    "to_unlock": "to unlock",
-    "try_now": "Try Now",
-    "use_code": "Use code"
+    "free": "免费！",
+    "hours": "小时",
+    "hurry": "赶紧",
+    "limited_time_offer": "限时优惠！",
+    "of_full_access": "完全访问权限",
+    "to_unlock": "解锁",
+    "try_now": "立即尝试",
+    "use_code": "使用代码"
   },
-  "of_full_access": "完全访问",
+  "of_full_access": "完全访问权限",
   "overall_sentiment": "总体情绪",
   "overview_story_part1": "概述故事第1部分",
   "overview_story_part2": "概述故事第2部分",
@@ -778,24 +778,24 @@
   "overview_title": "概述标题",
   "payment": {
     "description": "使用AI深入分析您的聊天历史并获得个性见解和关系分析",
-    "error_title": "Error",
+    "error_title": "错误",
     "missing_file_id": "缺少文件ID，请先上传文件",
-    "pay_button": "Pay Now",
-    "processing": "Processing...",
-    "return_home": "Return to Home",
-    "service_name": "AI Chat Analysis Service",
-    "title": "AI Chat Analysis"
+    "pay_button": "立即支付",
+    "processing": "处理中...",
+    "return_home": "返回首页",
+    "service_name": "AI聊天分析服务",
+    "title": "AI聊天分析"
   },
   "peak_activity_time": "高峰活动时间",
   "placeholder": "占位符",
   "platforms": {
-    "discord": "不和谐",
+    "discord": "Discord",
     "instagram": "Instagram",
     "snapchat": "Snapchat",
-    "telegram": "电报",
+    "telegram": "Telegram",
     "whatsapp": "WhatsApp"
   },
-  "positive": "积极的",
+  "positive": "正面",
   "pricing": {
     "description": "1积分 ≈ 现在5000字，我们正在努力优化成本。",
     "title": "购买积分进行高级AI分析"
@@ -803,13 +803,13 @@
   "processing": {
     "analysis_progress": "分析进度",
     "analyzing": "分析",
-    "cleaning": "打扫",
-    "cleaning_progress": "清洁进度",
-    "completed": "完全的",
+    "cleaning": "清理",
+    "cleaning_progress": "清理进度",
+    "completed": "完成",
     "description": "描述",
-    "failed": "失败的",
+    "failed": "失败",
     "preparing": "准备",
-    "processing": "加工",
+    "processing": "处理",
     "result_fetch_failed": "结果提取失败",
     "status_fetch_failed": "状态获取失败",
     "title": "标题",
@@ -831,12 +831,12 @@
   },
   "response_pattern_description": "响应模式描述",
   "results": {
-    "back": "后退",
+    "back": "返回",
     "date_range": "日期范围",
     "description": "描述",
-    "export": "出口",
+    "export": "导出",
     "filtered_messages": "过滤消息",
-    "link_copied": "链接复制",
+    "link_copied": "链接已复制",
     "media_messages_many": "媒体消息很多",
     "media_messages_one": "媒体消息一",
     "media_messages_other": "媒体消息其他",
@@ -844,26 +844,26 @@
     "messages_description_one": "消息说明一个",
     "messages_description_other": "消息说明其他",
     "messages_title": "消息标题",
-    "next": "下一个",
+    "next": "下一页",
     "no_messages": "没有消息",
     "no_search_results": "没有搜索结果",
     "page_info": "页面信息",
     "participants": "参与者",
-    "previous": "以前的",
+    "previous": "上一页",
     "search": "搜索",
     "search_placeholder": "搜索占位符",
     "share": "分享",
     "share_text_many": "分享文本很多",
     "share_text_one": "分享文字一",
     "share_text_other": "分享其他文字",
-    "share_title": "共享标题",
+    "share_title": "分享标题",
     "summary_description": "摘要描述",
     "summary_title": "摘要标题",
     "system_messages_many": "系统消息很多",
     "system_messages_one": "系统消息一",
     "system_messages_other": "系统消息其他",
     "title": "标题",
-    "total_messages": "总邮件",
+    "total_messages": "总消息数",
     "unknown_date_range": "未知日期范围",
     "valid_date_messages_many": "有效的日期消息很多",
     "valid_date_messages_one": "有效的日期消息一个",
@@ -875,18 +875,18 @@
   "select_button": "选择按钮",
   "sentiment_analysis": "情感分析",
   "sentiment_description": "情感描述",
-  "sentiment_negative": "情绪负面",
-  "sentiment_neutral": "情感中立",
-  "sentiment_positive": "情绪积极",
-  "sentiment_score": "情感得分",
-  "sentiment_very_negative": "情绪非常负面",
-  "sentiment_very_positive": "情绪非常积极",
+  "sentiment_negative": "负面",
+  "sentiment_neutral": "中性",
+  "sentiment_positive": "正面",
+  "sentiment_score": "情感分数",
+  "sentiment_very_negative": "非常负面",
+  "sentiment_very_positive": "非常正面",
   "share": {
     "copy_failed": "复制失败",
-    "link_copied": "链接复制"
+    "link_copied": "链接已复制"
   },
-  "share_not_implemented": "共享未实施",
-  "share_results": "共享结果",
+  "share_not_implemented": "分享未实施",
+  "share_results": "分享结果",
   "sharing": "分享",
   "sign_modal": {
     "cancel_title": "取消",
@@ -909,7 +909,7 @@
   },
   "speakers": {
     "boyfriend": "男朋友",
-    "crush": "压碎",
+    "crush": "暗恋对象",
     "ex": "前任",
     "friend": "朋友",
     "girlfriend": "女朋友",
@@ -947,24 +947,24 @@
   "time_distribution_description": "时间分配描述",
   "times": {
     "days_ago": "几天前",
-    "hours_ago": "几个小时前",
-    "just_now": "现在",
+    "hours_ago": "几小时前",
+    "just_now": "刚刚",
     "minutes_ago": "几分钟前"
   },
   "title": "标题",
   "to_unlock": "解锁",
-  "top_emojis": "顶级表情符号",
-  "top_words": "最重要的话",
+  "top_emojis": "最常用表情符号",
+  "top_words": "最常用单词",
   "total_emojis": "表情符号总数",
-  "total_messages": "总邮件",
-  "total_unique_words": "总独特的单词",
-  "total_words": "总词",
-  "try_now": "现在尝试",
+  "total_messages": "总消息数",
+  "total_unique_words": "总独特单词",
+  "total_words": "总字数",
+  "try_now": "立即尝试",
   "upload": {
     "description": "描述",
-    "drop_files": "删除文件",
+    "drop_files": "拖放文件",
     "error": "错误",
-    "failed": "失败的",
+    "failed": "失败",
     "file_size_limit": "文件大小限制",
     "invalid_format": "无效格式",
     "no_file_selected": "未选择文件",
@@ -976,7 +976,7 @@
     "uploading": "上传"
   },
   "upload_button_text": "上传按钮文本",
-  "upload_description": "上传说明",
+  "upload_description": "上传描述",
   "upload_title": "上传标题",
   "use_code": "使用代码",
   "user": {
@@ -989,11 +989,11 @@
     "user_center": "用户中心"
   },
   "very_negative": "非常负面",
-  "very_positive": "非常积极",
-  "view_guide": "View download guide",
+  "very_positive": "非常正面",
+  "view_guide": "查看下载指南",
   "weekly_activity_heatmap": "每周活动热图",
   "word": "单词",
-  "word_cloud": "字云",
-  "words": "字",
-  "words_per_message": "每条消息单词"
+  "word_cloud": "词云",
+  "words": "字数",
+  "words_per_message": "每条消息字数"
 }

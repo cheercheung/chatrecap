@@ -62,143 +62,143 @@
       "description": "Sohbet geçmişi işleminizin sonuçları",
       "download": "Download",
       "filtered_media": "Filtrelenmiş ortam mesajları",
-      "filtered_system": "Filtered System Messages",
+      "filtered_system": "Filtrelenmiş sistem mesajları",
       "messages": "Messages",
       "next": "Next",
-      "no_results": "No matching messages found",
+      "no_results": "Eşleşen mesaj bulunamadı",
       "no_warnings": "No warnings",
-      "page_of": "Page {current} of {total}",
+      "page_of": "{Total} sayfa {current}",
       "previous": "Previous",
-      "search": "Search",
-      "search_placeholder": "Search messages or sender",
-      "share": "Share",
-      "title": "Processing Results",
-      "total_messages": "Total Messages",
-      "unknown_date_range": "Unknown date range",
-      "valid_dates": "Valid Date Messages",
-      "warnings": "Warnings"
+      "search": "Aramak",
+      "search_placeholder": "Arama mesajları veya gönderen",
+      "share": "Paylaşmak",
+      "title": "İşleme Sonuçları",
+      "total_messages": "Toplam Mesajlar",
+      "unknown_date_range": "Bilinmeyen tarih aralığı",
+      "valid_dates": "Geçerli tarih mesajları",
+      "warnings": "Uyarı"
     },
     "sample_button_text": "Use Sample Input",
     "sample_chat_text": "[2025/1/1, 01:00:00] ALICE: Mutlu yıllar! 🎉\n[2025/1/1, 01:02:00] JEFF: Mutlu yıllar, aşkım! 🎆\n[2025/1/1, 08:15:00] ALICE: Yılın ilk kahvesi! ☕\n[2025/1/1, 08:20:00] JEFF: Daha nicelerine! 🥂\n[2025/1/1, 10:30:00] ALICE: Bugün için plan ne? 🤔\n[2025/1/1, 10:32:00] JEFF: Parkta yürüyüşe çıkalım 🌳\n[2025/1/1, 11:05:00] ALICE: Harika fikir! 🌞\n[2025/1/1, 13:00:00] JEFF: Yeni yıl kararların var mı?\n[2025/1/1, 13:10:00] ALICE: Daha çok seyahat etmek! 🌍\n[2025/1/1, 13:15:00] JEFF: Bu harika, ben de seninleyim ✈️\n[2025/1/1, 14:30:00] ALICE: Hava bugün çok güzel! ☀️\n[2025/1/1, 14:35:00] JEFF: Macera için mükemmel bir gün, değil mi?\n[2025/1/1, 16:00:00] ALICE: Dondurma yemeyi düşünüyordum 🍦\n[2025/1/1, 16:10:00] JEFF: Oh, ben varım! Hangi çeşit?\n[2025/1/1, 18:30:00] ALICE: Akşam yemeğinde ne yemeliyiz?\n[2025/1/1, 18:32:00] JEFF: Pizza? 🍕",
     "select_platform": "Platform Seçin",
     "subtitle": "AI Sohbet Analiziniz",
-    "supported_formats": "Supported: .txt file or .zip containing a .txt file (max 5MB)",
+    "supported_formats": "Desteklenen: .txt dosyası veya .txt dosyası içeren .zip (maksimum 5MB)",
     "title": "Chat Recap AI",
     "upload": {
-      "description": "Select a chat history file to upload",
-      "drag_drop": "Drag and drop file here or click to select",
-      "file_selected": "File selected",
+      "description": "Yüklemek için bir sohbet geçmişi dosyası seçin",
+      "drag_drop": "Dosyayı buraya sürükleyin ve bırakın veya seçmek için tıklayın",
+      "file_selected": "Dosya seçildi",
       "file_size_limit": "File size exceeds {size}MB limit",
-      "invalid_format": "Invalid file format. Supported formats: {formats}",
-      "no_file_selected": "Please select a file",
-      "title": "Upload Chat History",
-      "upload_button": "Upload",
-      "upload_failed": "Upload failed",
-      "upload_success": "Upload successful"
+      "invalid_format": "Geçersiz dosya biçimi. \nDesteklenen formatlar: {formats}",
+      "no_file_selected": "Lütfen bir dosya seçin",
+      "title": "Sohbet geçmişini yükleyin",
+      "upload_button": "Yüklemek",
+      "upload_failed": "Yükleme başarısız oldu",
+      "upload_success": "Başarılı Yükle"
     },
-    "upload_button_text": "Upload File",
+    "upload_button_text": "Dosyayı Yükle",
     "upload_description": "Analiz etmek için sohbet dışa aktarımınızı yükleyin",
     "upload_title": "Sohbet Geçmişi Girişi"
   },
   "chat_notifications": {
     "messages": {
-      "message1": "Oh, you finally texted? Must've broken a world record 🏆🙄",
-      "message2": "Sorry, my phone only buzzes for pizza deliveries 🍕📳",
-      "message3": "Your pick-up lines are faster than my microwave popcorn 🍿💨",
-      "message4": "Our chat's colder than Antarctica ❄️😎",
-      "message5": "Miss me? I barely remember your name 😂",
-      "message6": "Your dating life is like my WiFi - unstable connection 📶",
-      "message7": "Seen your message. Will reply in 2-3 business days 📅"
+      "message1": "Oh, sonunda mesaj attın mı? \nBir dünya rekorunu kırmış olmalı 🏆🙄",
+      "message2": "Üzgünüm, telefonum sadece pizza teslimatları için vızıldıyor 🍕📳",
+      "message3": "Pick-up hatlarınız mikrodalga patlamış mısırımdan daha hızlı",
+      "message4": "Sohbetimiz Antarktika'dan daha soğuk",
+      "message5": "Beni özle? \nAdını zar zor hatırlıyorum 😂",
+      "message6": "Flört hayatınız benim wifi gibi - kararsız bağlantı 📶",
+      "message7": "Mesajınızı gördüm. \n2-3 iş gününde cevap verecek 📅"
     },
     "speakers": {
-      "boyfriend": "Boyfriend",
-      "crush": "Crush",
+      "boyfriend": "Erkek arkadaş",
+      "crush": "Ezmek",
       "ex": "Ex",
-      "friend": "Friend",
-      "girlfriend": "Girlfriend",
-      "her": "Her",
-      "him": "Him"
+      "friend": "Arkadaş",
+      "girlfriend": "Kız arkadaşı",
+      "her": "O",
+      "him": "O"
     },
     "times": {
-      "days_ago": "{days} days ago",
-      "hours_ago": "{hours} hours ago",
-      "just_now": "Just now",
-      "minutes_ago": "{minutes} minutes ago"
+      "days_ago": "{days} günler önce",
+      "hours_ago": "{days}saatler önce",
+      "just_now": "Şu anda",
+      "minutes_ago": "{minutes} dakika önce"
     },
-    "title": "Chat Notifications"
+    "title": "Sohbet Bildirimleri"
   },
   "chatrecapplatform": {
-    "badge": "Chat Analysis",
-    "description": "Select the platform you want to analyze your chat history from. We support multiple messaging platforms to provide comprehensive insights.",
+    "badge": "Sohbet analizi",
+    "description": "Sohbet geçmişinizi analiz etmek istediğiniz platformu seçin. \nKapsamlı bilgiler sağlamak için birden fazla mesajlaşma platformunu destekliyoruz.",
     "meta": {
-      "description": "Select the platform you want to analyze your chat from",
-      "title": "Choose Your Chat Platform"
+      "description": "Sohbetinizi analiz etmek istediğiniz platformu seçin",
+      "title": "Sohbet platformunuzu seçin"
     },
     "platforms": {
       "discord": {
-        "description": "Analyze your Discord chats to better understand your communication in gaming and community contexts."
+        "description": "Oyun ve topluluk bağlamlarındaki iletişiminizi daha iyi anlamak için anlaşmazlık sohbetlerinizi analiz edin."
       },
       "instagram": {
-        "description": "Discover insights from your Instagram direct messages and understand your communication style."
+        "description": "Instagram doğrudan mesajlarınızdan bilgileri keşfedin ve iletişim stilinizi anlayın."
       },
       "snapchat": {
-        "description": "Analyze your Snapchat conversations to understand your communication style and patterns."
+        "description": "İletişim tarzınızı ve kalıplarınızı anlamak için Snapchat konuşmalarınızı analiz edin."
       },
       "telegram": {
-        "description": "Get insights from your Telegram conversations and understand your messaging patterns."
+        "description": "Telgraf konuşmalarınızdan bilgiler alın ve mesajlaşma kalıplarınızı anlayın."
       },
       "whatsapp": {
         "description": "Analyze your WhatsApp conversations to understand your messaging patterns and relationship dynamics."
       }
     },
-    "select_button": "Select Platform",
-    "title": "Choose Your Chat Platform"
+    "select_button": "Platform seçin",
+    "title": "Sohbet platformunuzu seçin"
   },
   "chatrecapresult": {
     "ai_analysis": {
-      "analyzing": "Analyzing...",
-      "error": "Error",
-      "error_description": "An error occurred during AI analysis. Please try again later.",
-      "failed": "AI Analysis Failed",
+      "analyzing": "Analiz ...",
+      "error": "Hata",
+      "error_description": "AI analizi sırasında bir hata oluştu. \nLütfen daha sonra tekrar deneyin.",
+      "failed": "AI analizi başarısız oldu",
       "failed_description": "We couldn't complete the AI analysis. Please try again.",
-      "generate": "Generate AI Insights",
-      "please_wait": "This may take a few minutes. Please wait while we analyze your chat data.",
-      "starting": "Starting AI Analysis",
-      "success": "AI Analysis Complete",
-      "success_description": "Your AI insights are ready to view."
+      "generate": "AI bilgileri oluşturun",
+      "please_wait": "Bu birkaç dakika sürebilir. \nSohbet verilerinizi analiz ederken lütfen bekleyin.",
+      "starting": "AI analizine başlamak",
+      "success": "AI analizi tamamlandı",
+      "success_description": "AI bilgileriniz görüntülemeye hazır."
     },
     "analysis_card": {
       "conversion_rate": {
-        "content": "This month's conversion rate is 62%, down 3 percentage points from last month.\nAnalysis shows that the decline in conversion rate is mainly due to the poor quality of new promotion channels.\nHigh-quality traffic conversion rates remain stable, but an increase in low-quality traffic has led to an overall decline in conversion rates.\nIt is recommended to optimize traffic sources, improve visitor quality, and enhance landing page experience.",
-        "title": "Conversion Rate"
+        "content": "Bu ayın dönüşüm oranı%62, geçen aya göre yüzde 3 puan düşüyor.\n\nAnaliz, dönüşüm oranındaki düşüşün esas olarak yeni promosyon kanallarının kalitesizliğinden kaynaklandığını göstermektedir.\n\nYüksek kaliteli trafik dönüşüm oranları sabit kalır, ancak düşük kaliteli trafikte bir artış, dönüşüm oranlarında genel bir düşüşe yol açmıştır.\n\nTrafik kaynaklarını optimize etmeniz, ziyaretçi kalitesini iyileştirmeniz ve açılış sayfası deneyimini geliştirmeniz önerilir.",
+        "title": "Dönüşüm oranı"
       },
-      "example_description": "Below are examples of analysis cards with different metrics",
-      "example_title": "Analysis Card Examples",
+      "example_description": "Aşağıda farklı metriklere sahip analiz kartlarına örnekler",
+      "example_title": "Analiz kartı örnekleri",
       "system_performance": {
         "content": "System performance metrics reached 93%, at the best historical level.\nServer response time decreased by an average of 200ms, and page loading speed increased by 15%.\nDatabase query optimization and CDN deployment are the main reasons for performance improvement.\nIt is recommended to continue monitoring peak performance and consider further cache strategy optimization.",
-        "title": "System Performance"
+        "title": "Sistem performansı"
       },
       "user_satisfaction": {
-        "content": "This quarter's user satisfaction reached 85%, a 5 percentage point increase compared to last quarter.\nThe main growth came from the launch of new product features and user interface optimizations.\nUser feedback shows that response speed and ease of use are the main factors for improved satisfaction.\nIt is recommended to continue optimizing the user experience, especially in mobile operation processes.",
-        "title": "User Satisfaction"
+        "content": "Bu çeyreğin kullanıcı memnuniyeti%85'e ulaştı ve son çeyreğe göre yüzde 5 puan artışı.\n\nAna büyüme, yeni ürün özelliklerinin ve kullanıcı arayüzü optimizasyonlarının başlatılmasından geldi.\n\nKullanıcı geri bildirimi, yanıt hızının ve kullanım kolaylığının iyileştirilmiş memnuniyet için ana faktörler olduğunu göstermektedir.\n\nÖzellikle mobil çalışma süreçlerinde kullanıcı deneyimini optimize etmeye devam etmeniz önerilir.",
+        "title": "Kullanıcı memnuniyeti"
       }
     },
-    "avg_words_per_msg": "Avg Words/Msg",
-    "back_to_upload": "Back to Upload",
-    "busiest_date": "Busiest Date",
-    "chat_story": "Your Chat Story",
-    "common_words": "Common Words",
+    "avg_words_per_msg": "AVG kelimeler/mesaj",
+    "back_to_upload": "Yüklemeye geri dön",
+    "busiest_date": "En yoğun tarih",
+    "chat_story": "Sohbet Hikayeniz",
+    "common_words": "Ortak sözler",
     "communication_comparison": {
-      "description": "A comparison of communication patterns and relationship dynamics between both parties.",
-      "title": "Communication Comparison: {sender1} vs {sender2}"
+      "description": "Her iki taraf arasındaki iletişim modellerinin ve ilişki dinamiklerinin karşılaştırılması.",
+      "title": "İletişim Karşılaştırması: {sender1} vs {sender2}"
     },
-    "count": "Count",
-    "daily_activity": "Daily Activity",
-    "daily_activity_description": "Your conversations are most active on {mostActiveDay}s around {mostActiveHour}. This consistent pattern suggests you both prioritize making time for each other during these periods.",
+    "count": "Saymak",
+    "daily_activity": "Günlük aktivite",
+    "daily_activity_description": "Konuşmalarınız en çok {MostactiveHour} çevresinde {Mostactiveday} s. \nBu tutarlı model, her ikisinin de bu dönemlerde birbirlerine zaman ayırmaya öncelik vermenizi önerir.",
     "day_names": {
-      "friday": "Friday",
-      "monday": "Monday",
-      "saturday": "Saturday",
+      "friday": "Cuma",
+      "monday": "Pazartesi",
+      "saturday": "Cumartesi",
       "sunday": "Sunday",
       "thursday": "Thursday",
       "tuesday": "Tuesday",

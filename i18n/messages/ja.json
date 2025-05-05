@@ -62,143 +62,143 @@
       "description": "チャット履歴処理の結果",
       "download": "Download",
       "filtered_media": "フィルタリングされたメディアメッセージ",
-      "filtered_system": "Filtered System Messages",
+      "filtered_system": "フィルタリングされたシステムメッセージ",
       "messages": "Messages",
       "next": "Next",
-      "no_results": "No matching messages found",
+      "no_results": "一致するメッセージは見つかりません",
       "no_warnings": "No warnings",
-      "page_of": "Page {current} of {total}",
-      "previous": "Previous",
-      "search": "Search",
-      "search_placeholder": "Search messages or sender",
-      "share": "Share",
-      "title": "Processing Results",
-      "total_messages": "Total Messages",
-      "unknown_date_range": "Unknown date range",
-      "valid_dates": "Valid Date Messages",
-      "warnings": "Warnings"
+      "page_of": "{合計}のページ{現在}",
+      "previous": "前の",
+      "search": "検索",
+      "search_placeholder": "メッセージまたは送信者を検索します",
+      "share": "共有",
+      "title": "処理結果",
+      "total_messages": "合計メッセージ",
+      "unknown_date_range": "不明な日付範囲",
+      "valid_dates": "有効な日付メッセージ",
+      "warnings": "警告"
     },
     "sample_button_text": "Use Sample Input",
     "sample_chat_text": "[2025/1/1, 01:00:00] ALICE: 明けましておめでとう！🎉\n[2025/1/1, 01:02:00] JEFF: 明けましておめでとう、愛しい人！🎆\n[2025/1/1, 08:15:00] ALICE: 今年最初のコーヒー！☕\n[2025/1/1, 08:20:00] JEFF: これからもよろしく！🥂\n[2025/1/1, 10:30:00] ALICE: 今日の予定は？🤔\n[2025/1/1, 10:32:00] JEFF: 公園を散歩しよう🌳\n[2025/1/1, 11:05:00] ALICE: 素敵ね！🌞\n[2025/1/1, 13:00:00] JEFF: 新年の抱負はある？\n[2025/1/1, 13:10:00] ALICE: もっと旅行すること！🌍\n[2025/1/1, 13:15:00] JEFF: それはいいね、僕も一緒に✈️\n[2025/1/1, 14:30:00] ALICE: 今日は天気がいいね！☀️\n[2025/1/1, 14:35:00] JEFF: 冒険にぴったりの日だね、どう思う？\n[2025/1/1, 16:00:00] ALICE: アイスクリームを食べようと思ってた🍦\n[2025/1/1, 16:10:00] JEFF: いいね！何味がいい？\n[2025/1/1, 18:30:00] ALICE: 夕食は何にする？\n[2025/1/1, 18:32:00] JEFF: ピザはどう？🍕",
     "select_platform": "プラットフォームを選択",
     "subtitle": "AIチャット分析",
-    "supported_formats": "Supported: .txt file or .zip containing a .txt file (max 5MB)",
+    "supported_formats": "サポート：.txtファイルまたは.txtファイルを含む.zip（最大5MB）",
     "title": "Chat Recap AI",
     "upload": {
-      "description": "Select a chat history file to upload",
-      "drag_drop": "Drag and drop file here or click to select",
-      "file_selected": "File selected",
+      "description": "アップロードするチャット履歴ファイルを選択します",
+      "drag_drop": "ここでファイルをドラッグアンドドロップするか、クリックして選択します",
+      "file_selected": "選択したファイル",
       "file_size_limit": "File size exceeds {size}MB limit",
-      "invalid_format": "Invalid file format. Supported formats: {formats}",
-      "no_file_selected": "Please select a file",
-      "title": "Upload Chat History",
-      "upload_button": "Upload",
-      "upload_failed": "Upload failed",
-      "upload_success": "Upload successful"
+      "invalid_format": "無効なファイル形式。\nサポートされているフォーマット：{formats}",
+      "no_file_selected": "ファイルを選択してください",
+      "title": "チャット履歴をアップロードします",
+      "upload_button": "アップロード",
+      "upload_failed": "アップロードに失敗しました",
+      "upload_success": "成功したアップロード"
     },
-    "upload_button_text": "Upload File",
+    "upload_button_text": "ファイルをアップロードします",
     "upload_description": "分析するチャットエクスポートをアップロード",
     "upload_title": "チャット履歴入力"
   },
   "chat_notifications": {
     "messages": {
-      "message1": "Oh, you finally texted? Must've broken a world record 🏆🙄",
-      "message2": "Sorry, my phone only buzzes for pizza deliveries 🍕📳",
-      "message3": "Your pick-up lines are faster than my microwave popcorn 🍿💨",
-      "message4": "Our chat's colder than Antarctica ❄️😎",
-      "message5": "Miss me? I barely remember your name 😂",
-      "message6": "Your dating life is like my WiFi - unstable connection 📶",
-      "message7": "Seen your message. Will reply in 2-3 business days 📅"
+      "message1": "ああ、あなたはついにテキストメッセージを送りましたか？\n世界記録を破ったに違いない",
+      "message2": "申し訳ありませんが、私の電話はピザ配達のために賑やかです🍕📳",
+      "message3": "あなたのピックアップラインは私の電子レンジよりも速いです🍿💨",
+      "message4": "私たちのチャットは南極よりも寒い❄️😎です",
+      "message5": "私が恋しかったですか？\n私はあなたの名前をかろうじて覚えていません",
+      "message6": "あなたのデートライフは私のwifiのようなものです - 不安定な接続📶",
+      "message7": "あなたのメッセージを見ました。 \n2〜3営業日以内に返信します"
     },
     "speakers": {
-      "boyfriend": "Boyfriend",
-      "crush": "Crush",
+      "boyfriend": "彼氏",
+      "crush": "打ち砕く",
       "ex": "Ex",
-      "friend": "Friend",
-      "girlfriend": "Girlfriend",
-      "her": "Her",
-      "him": "Him"
+      "friend": "友達",
+      "girlfriend": "彼女",
+      "her": "彼女",
+      "him": "彼"
     },
     "times": {
-      "days_ago": "{days} days ago",
-      "hours_ago": "{hours} hours ago",
-      "just_now": "Just now",
-      "minutes_ago": "{minutes} minutes ago"
+      "days_ago": "{days}日前",
+      "hours_ago": "{days}数時間前",
+      "just_now": "ちょうど今",
+      "minutes_ago": "{minutes}数分前"
     },
-    "title": "Chat Notifications"
+    "title": "チャット通知"
   },
   "chatrecapplatform": {
-    "badge": "Chat Analysis",
-    "description": "Select the platform you want to analyze your chat history from. We support multiple messaging platforms to provide comprehensive insights.",
+    "badge": "チャット分析",
+    "description": "チャット履歴を分析するプラットフォームを選択します。\n複数のメッセージングプラットフォームをサポートして、包括的な洞察を提供しています。",
     "meta": {
-      "description": "Select the platform you want to analyze your chat from",
-      "title": "Choose Your Chat Platform"
+      "description": "チャットをから分析するプラットフォームを選択します",
+      "title": "チャットプラットフォームを選択してください"
     },
     "platforms": {
       "discord": {
-        "description": "Analyze your Discord chats to better understand your communication in gaming and community contexts."
+        "description": "Discordチャットを分析して、ゲームやコミュニティのコンテキストでのコミュニケーションをよりよく理解します。"
       },
       "instagram": {
         "description": "Discover insights from your Instagram direct messages and understand your communication style."
       },
       "snapchat": {
-        "description": "Analyze your Snapchat conversations to understand your communication style and patterns."
+        "description": "Snapchatの会話を分析して、コミュニケーションスタイルとパターンを理解します。"
       },
       "telegram": {
-        "description": "Get insights from your Telegram conversations and understand your messaging patterns."
+        "description": "Telegramの会話から洞察を得て、メッセージングパターンを理解してください。"
       },
       "whatsapp": {
-        "description": "Analyze your WhatsApp conversations to understand your messaging patterns and relationship dynamics."
+        "description": "WhatsAppの会話を分析して、メッセージングパターンと関係のダイナミクスを理解します。"
       }
     },
-    "select_button": "Select Platform",
-    "title": "Choose Your Chat Platform"
+    "select_button": "プラットフォームを選択します",
+    "title": "チャットプラットフォームを選択してください"
   },
   "chatrecapresult": {
     "ai_analysis": {
-      "analyzing": "Analyzing...",
-      "error": "Error",
-      "error_description": "An error occurred during AI analysis. Please try again later.",
-      "failed": "AI Analysis Failed",
+      "analyzing": "分析...",
+      "error": "エラー",
+      "error_description": "AI分析中にエラーが発生しました。\n後でもう一度やり直してください。",
+      "failed": "AI分析に失敗しました",
       "failed_description": "We couldn't complete the AI analysis. Please try again.",
-      "generate": "Generate AI Insights",
-      "please_wait": "This may take a few minutes. Please wait while we analyze your chat data.",
-      "starting": "Starting AI Analysis",
-      "success": "AI Analysis Complete",
-      "success_description": "Your AI insights are ready to view."
+      "generate": "AIの洞察を生成します",
+      "please_wait": "これには数分かかる場合があります。\nチャットデータを分析している間お待ちください。",
+      "starting": "AI分析の開始",
+      "success": "AI分析が完了します",
+      "success_description": "あなたのAIの洞察は見る準備ができています。"
     },
     "analysis_card": {
       "conversion_rate": {
-        "content": "This month's conversion rate is 62%, down 3 percentage points from last month.\nAnalysis shows that the decline in conversion rate is mainly due to the poor quality of new promotion channels.\nHigh-quality traffic conversion rates remain stable, but an increase in low-quality traffic has led to an overall decline in conversion rates.\nIt is recommended to optimize traffic sources, improve visitor quality, and enhance landing page experience.",
-        "title": "Conversion Rate"
+        "content": "今月の変換率は62％で、先月から3パーセントポイント減少しています。\n\n分析によると、変換率の低下は、主に新しいプロモーションチャネルの質が低いためであることが示されています。\n\n高品質のトラフィック変換率は安定したままですが、低品質のトラフィックの増加により、変換率が全体的に低下しました。\n\n交通源を最適化し、訪問者の品質を向上させ、ランディングページのエクスペリエンスを向上させることをお勧めします。",
+        "title": "変換率"
       },
-      "example_description": "Below are examples of analysis cards with different metrics",
-      "example_title": "Analysis Card Examples",
+      "example_description": "以下は、異なるメトリックを持つ分析カードの例です",
+      "example_title": "分析カードの例",
       "system_performance": {
         "content": "System performance metrics reached 93%, at the best historical level.\nServer response time decreased by an average of 200ms, and page loading speed increased by 15%.\nDatabase query optimization and CDN deployment are the main reasons for performance improvement.\nIt is recommended to continue monitoring peak performance and consider further cache strategy optimization.",
-        "title": "System Performance"
+        "title": "システムパフォーマンス"
       },
       "user_satisfaction": {
-        "content": "This quarter's user satisfaction reached 85%, a 5 percentage point increase compared to last quarter.\nThe main growth came from the launch of new product features and user interface optimizations.\nUser feedback shows that response speed and ease of use are the main factors for improved satisfaction.\nIt is recommended to continue optimizing the user experience, especially in mobile operation processes.",
-        "title": "User Satisfaction"
+        "content": "この四半期のユーザーの満足度は85％に達し、前四半期と比較して5ポイント増加しました。\n\n主な成長は、新製品の機能とユーザーインターフェイスの最適化の発売からもたらされました。\n\nユーザーのフィードバックは、応答速度と使いやすさが満足度の向上の主な要因であることを示しています。\n\n特にモバイル操作プロセスでは、ユーザーエクスペリエンスの最適化を継続することをお勧めします。",
+        "title": "ユーザーの満足度"
       }
     },
-    "avg_words_per_msg": "Avg Words/Msg",
-    "back_to_upload": "Back to Upload",
-    "busiest_date": "Busiest Date",
-    "chat_story": "Your Chat Story",
-    "common_words": "Common Words",
+    "avg_words_per_msg": "平均的な単語/メッセージ",
+    "back_to_upload": "アップロードに戻ります",
+    "busiest_date": "最も忙しいデート",
+    "chat_story": "あなたのチャットストーリー",
+    "common_words": "一般的な言葉",
     "communication_comparison": {
-      "description": "A comparison of communication patterns and relationship dynamics between both parties.",
-      "title": "Communication Comparison: {sender1} vs {sender2}"
+      "description": "両当事者間のコミュニケーションパターンと関係のダイナミクスの比較。",
+      "title": "コミュニケーションの比較：{sender1} vs {sender2}"
     },
-    "count": "Count",
-    "daily_activity": "Daily Activity",
-    "daily_activity_description": "Your conversations are most active on {mostActiveDay}s around {mostActiveHour}. This consistent pattern suggests you both prioritize making time for each other during these periods.",
+    "count": "カウント",
+    "daily_activity": "毎日の活動",
+    "daily_activity_description": "会話は、{mostactivehour}の周りで{mostactiveday}で最もアクティブです。\nこの一貫したパターンは、これらの期間中にお互いに時間をかけることを優先することを示唆しています。",
     "day_names": {
-      "friday": "Friday",
-      "monday": "Monday",
-      "saturday": "Saturday",
+      "friday": "金曜日",
+      "monday": "月曜日",
+      "saturday": "土曜日",
       "sunday": "Sunday",
       "thursday": "Thursday",
       "tuesday": "Tuesday",

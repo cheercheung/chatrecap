@@ -183,7 +183,7 @@
         "title": "User Satisfaction"
       }
     },
-    "avg_words_per_msg": "Avg Words/Msg",
+    "avg_words_per_msg": "Avg Words/Message",
     "back_to_upload": "Back to Upload",
     "busiest_date": "Busiest Date",
     "chat_story": "Your Chat Story",
@@ -371,16 +371,6 @@
   "export_not_implemented": "Export not implemented",
   "export_pdf": "Export pdf",
   "favorite_day_to_chat": "Favorite day to chat",
-  "notification": {
-    "free": "FREE!",
-    "hours": "hours",
-    "hurry": "Hurry, this code expires in",
-    "limited_time_offer": "Limited Time Offer!",
-    "of_full_access": "of full access — absolutely",
-    "to_unlock": "to unlock",
-    "try_now": "Try Now",
-    "use_code": "Use code"
-  },
   "features": {
     "comprehensive_analysis": {
       "content": "Our advanced AI algorithms analyze your entire chat history to provide deep insights into your communication patterns and relationship dynamics.",
@@ -594,6 +584,7 @@
         "morning_active": "Morning active"
       },
       "response_time": "Response time",
+      "sentiment ENC>analysis": "",
       "sentiment_analysis": "Sentiment analysis",
       "sentiment_by_day": "Sentiment by day",
       "sentiment_by_hour": "Sentiment by hour",
