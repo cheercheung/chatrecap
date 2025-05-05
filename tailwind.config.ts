@@ -9,6 +9,16 @@ const config = {
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
   ],
+  // 使用Tailwind内置的PurgeCSS功能
+  safelist: [
+    // 保留关键类名
+    'bg-background',
+    'text-foreground',
+    'font-sans',
+    'animate-fade-in',
+    'animate-fade-in-up',
+    'animate-pulse-subtle',
+  ],
   prefix: "",
   theme: {
   	container: {

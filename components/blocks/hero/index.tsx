@@ -9,12 +9,15 @@ import Icon from "@/components/icon";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ChatNotification } from "@/components/ui/chat-notification";
-import { useTranslations } from "next-intl";
 import { useState, useEffect } from "react";
+import { useTranslations } from "next-intl";
 
 export default function Hero({ hero }: { hero: HeroType }) {
-  const t = useTranslations("chat_notifications");
   const [isClient, setIsClient] = useState(false);
+
+  // 使用标准的翻译钩子
+  // 使用how_it_works.chat_notifications命名空间
+  const t = useTranslations('how_it_works.chat_notifications');
 
   // 使用 useEffect 确保组件只在客户端渲染后才显示完整内容
   useEffect(() => {
@@ -162,48 +165,48 @@ export default function Hero({ hero }: { hero: HeroType }) {
               className="flex items-start justify-center col-span-1"
             >
               <div className="bg-primary/5 backdrop-blur-sm border border-primary/10 rounded-2xl w-full p-6 shadow-lg h-auto overflow-hidden">
-                <h3 className="text-xl font-medium text-center mb-6 text-foreground bg-clip-text text-transparent bg-gradient-to-r from-primary to-pink-500">{t("title")}</h3>
+                <h3 className="text-xl font-medium text-center mb-6 text-foreground bg-clip-text text-transparent bg-gradient-to-r from-primary to-pink-500">{t('title')}</h3>
                 <div className="space-y-4 pr-2 overflow-y-auto max-h-[400px] pb-2 scrollbar-thin scrollbar-thumb-primary/20 scrollbar-track-transparent" style={{ scrollBehavior: 'smooth' }}>
                   <ChatNotification
-                    speaker={t("speakers.girlfriend")}
-                    time={t("times.days_ago", { days: 2 })}
-                    content={t("messages.message1")}
+                    speaker={t('speakers.girlfriend')}
+                    time={t('times.days_ago', { days: 2 })}
+                    content={t('messages.message1')}
                     index={0}
                   />
                   <ChatNotification
-                    speaker={t("speakers.boyfriend")}
-                    time={t("times.minutes_ago", { minutes: 10 })}
-                    content={t("messages.message2")}
+                    speaker={t('speakers.boyfriend')}
+                    time={t('times.minutes_ago', { minutes: 10 })}
+                    content={t('messages.message2')}
                     index={1}
                   />
                   <ChatNotification
-                    speaker={t("speakers.her")}
-                    time={t("times.days_ago", { days: 1 })}
-                    content={t("messages.message3")}
+                    speaker={t('speakers.her')}
+                    time={t('times.days_ago', { days: 1 })}
+                    content={t('messages.message3')}
                     index={2}
                   />
                   <ChatNotification
-                    speaker={t("speakers.him")}
-                    time={t("times.minutes_ago", { minutes: 30 })}
-                    content={t("messages.message4")}
+                    speaker={t('speakers.him')}
+                    time={t('times.minutes_ago', { minutes: 30 })}
+                    content={t('messages.message4')}
                     index={3}
                   />
                   <ChatNotification
-                    speaker={t("speakers.ex")}
-                    time={t("times.days_ago", { days: 3 })}
-                    content={t("messages.message5")}
+                    speaker={t('speakers.ex')}
+                    time={t('times.days_ago', { days: 3 })}
+                    content={t('messages.message5')}
                     index={4}
                   />
                   <ChatNotification
-                    speaker={t("speakers.friend")}
-                    time={t("times.hours_ago", { hours: 5 })}
-                    content={t("messages.message6")}
+                    speaker={t('speakers.friend')}
+                    time={t('times.hours_ago', { hours: 5 })}
+                    content={t('messages.message6')}
                     index={5}
                   />
                   <ChatNotification
-                    speaker={t("speakers.crush")}
-                    time={t("times.just_now")}
-                    content={t("messages.message7")}
+                    speaker={t('speakers.crush')}
+                    time={t('times.just_now')}
+                    content={t('messages.message7')}
                     index={6}
                   />
                 </div>

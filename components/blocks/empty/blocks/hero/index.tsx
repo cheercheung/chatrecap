@@ -9,10 +9,11 @@ import Icon from "@/components/icon";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ChatNotification } from "@/components/ui/chat-notification";
-import { useTranslations } from "next-intl";
 import { useState, useEffect } from "react";
+import { useTranslations } from "next-intl";
 
 export default function Hero({ hero }: { hero: HeroType }) {
+  // 使用正确的翻译命名空间
   const t = useTranslations("chat_notifications");
   const [isClient, setIsClient] = useState(false);
 

@@ -14,22 +14,9 @@ export default function NotificationBlock({
 }: NotificationBlockProps) {
   const [isVisible, setIsVisible] = useState(true);
 
-  // 使用notification命名空间的翻译和组件命名空间作为备用
-  let t;
-  let componentT;
-  try {
-    t = useTranslations('notification');
-    componentT = useTranslations('components.notification');
-  } catch (error) {
-    // 如果找不到命名空间，使用一个函数返回默认值
-    t = (key: string) => key;
-    componentT = (key: string) => {
-      const defaultValues: Record<string, string> = {
-        "limited_time_offer": "Limited Time Offer!"
-      };
-      return defaultValues[key] || key;
-    };
-  }
+  // 使用标准的翻译钩子
+  // 使用notification命名空间
+  const t = useTranslations('notification');
 
   if (!isVisible) return null;
 
@@ -44,7 +31,7 @@ export default function NotificationBlock({
       </button>
 
       <div className="mb-2 text-xl font-bold text-pink-500">
-        🎉 {t('limited_time_offer') || componentT('limited_time_offer')}
+        🎉 {t('limited_time_offer')}
       </div>
 
       <div className="mb-2">

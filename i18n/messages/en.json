@@ -1,27 +1,27 @@
 {
-  "afternoon": "",
+  "afternoon": "afternoon",
   "ai_analysis": {
-    "analyzing": "",
-    "error": "",
-    "error_description": "",
-    "failed": "",
-    "failed_description": "",
-    "generate": "",
-    "please_wait": "",
-    "starting": "",
-    "success": "",
-    "success_description": ""
+    "analyzing": "Analyzing",
+    "error": "Error",
+    "error_description": "Error description",
+    "failed": "Failed",
+    "failed_description": "Failed description",
+    "generate": "Generate",
+    "please_wait": "Please wait",
+    "starting": "Starting",
+    "success": "Success",
+    "success_description": "Success description"
   },
-  "analyze_button": "",
-  "avg_words_per_msg": "",
-  "back_to_upload": "",
-  "badge": "",
+  "analyze_button": "Analyze button",
+  "avg_words_per_msg": "Avg words per msg",
+  "back_to_upload": "Back to upload",
+  "badge": "Badge",
   "blog": {
     "description": "Tips, resources, and updates about relationship communication",
     "read_more_text": "Read More",
     "title": "Relationship Insights"
   },
-  "busiest_date": "",
+  "busiest_date": "Busiest date",
   "chat_analysis": {
     "advanced_options": "Advanced Options",
     "analyze_button": "Analyze Your Chat",
@@ -318,7 +318,7 @@
     "words": "Words",
     "words_per_message": "Words Per Message"
   },
-  "common_words": "",
+  "common_words": "Common words",
   "components": {
     "action_buttons": {
       "back_to_upload": "Back to Upload",
@@ -331,7 +331,18 @@
       "privacy_policy": "Privacy Policy",
       "terms_of_service": "Terms of Service"
     },
-    "highlighted_text": "Highlighted text",
+    "highlighted_text": {
+      "afternoon": "Afternoon",
+      "evening": "Evening",
+      "medium_conversations": "Medium Conversations",
+      "morning": "Morning",
+      "negative": "Negative",
+      "neutral": "Neutral",
+      "positive": "Positive",
+      "quick_responses": "Quick Responses",
+      "very_negative": "Very Negative",
+      "very_positive": "Very Positive"
+    },
     "notification": {
       "free": "FREE!",
       "hours": "hours",
@@ -343,23 +354,33 @@
       "use_code": "Use code"
     }
   },
-  "copyright": "",
-  "count": "",
-  "daily_activity": "",
-  "daily_activity_description": "",
-  "days": "",
-  "description": "",
-  "emojis": "",
+  "copyright": "Copyright",
+  "count": "Count",
+  "daily_activity": "Daily activity",
+  "daily_activity_description": "Daily activity description",
+  "days": "Days",
+  "description": "Description",
+  "emojis": "Emojis",
   "errors": {
-    "ai_insights_not_found": "",
-    "loading_failed": "",
-    "not_found": "",
-    "result_not_found": ""
+    "ai_insights_not_found": "Ai insights not found",
+    "loading_failed": "Loading failed",
+    "not_found": "Not found",
+    "result_not_found": "Result not found"
   },
-  "evening": "",
-  "export_not_implemented": "",
-  "export_pdf": "",
-  "favorite_day_to_chat": "",
+  "evening": "Evening",
+  "export_not_implemented": "Export not implemented",
+  "export_pdf": "Export pdf",
+  "favorite_day_to_chat": "Favorite day to chat",
+  "notification": {
+    "free": "FREE!",
+    "hours": "hours",
+    "hurry": "Hurry, this code expires in",
+    "limited_time_offer": "Limited Time Offer!",
+    "of_full_access": "of full access — absolutely",
+    "to_unlock": "to unlock",
+    "try_now": "Try Now",
+    "use_code": "Use code"
+  },
   "features": {
     "comprehensive_analysis": {
       "content": "Our advanced AI algorithms analyze your entire chat history to provide deep insights into your communication patterns and relationship dynamics.",
@@ -409,7 +430,7 @@
       "title": "Topic Analysis"
     }
   },
-  "first_message": "",
+  "first_message": "First message",
   "footer": {
     "copyright": "© 2025 ChatRecap AI. All rights reserved.",
     "privacy_policy": "Privacy Policy",
@@ -422,12 +443,213 @@
     },
     "terms_of_service": "Terms of Service"
   },
-  "free": "",
-  "free_analysis": "",
-  "heatmap_data_not_available": "",
-  "high": "",
-  "hours": "",
+  "free": "Free",
+  "free_analysis": "Free analysis",
+  "heatmap_data_not_available": "Heatmap data not available",
+  "high": "High",
+  "hours": "Hours",
   "how_it_works": {
+    "chat_notifications": {
+      "messages": {
+        "message1": "Message1",
+        "message2": "Message2",
+        "message3": "Message3",
+        "message4": "Message4",
+        "message5": "Message5",
+        "message6": "Message6",
+        "message7": "Message7"
+      },
+      "speakers": {
+        "boyfriend": "Boyfriend",
+        "crush": "Crush",
+        "ex": "Ex",
+        "friend": "Friend",
+        "girlfriend": "Girlfriend",
+        "her": "Her",
+        "him": "Him"
+      },
+      "times": {
+        "days_ago": "Days ago",
+        "hours_ago": "Hours ago",
+        "just_now": "Just now",
+        "minutes_ago": "Minutes ago"
+      },
+      "title": "Title"
+    },
+    "chatrecapplatform": {
+      "badge": "Badge",
+      "description": "Description",
+      "meta": {
+        "description": "Description",
+        "title": "Title"
+      },
+      "platforms": {
+        "discord": {
+          "description": "Description"
+        },
+        "instagram": {
+          "description": "Description"
+        },
+        "snapchat": {
+          "description": "Description"
+        },
+        "telegram": {
+          "description": "Description"
+        },
+        "whatsapp": {
+          "description": "Description"
+        }
+      },
+      "select_button": "Select button",
+      "title": "Title"
+    },
+    "chatrecapresult": {
+      "active_hours": "Active hours",
+      "analysis_card": {
+        "conversion_rate": {
+          "content": "Content",
+          "title": "Title"
+        },
+        "example_description": "Example description",
+        "example_title": "Example title",
+        "system_performance": {
+          "content": "Content",
+          "title": "Title"
+        },
+        "user_satisfaction": {
+          "content": "Content",
+          "title": "Title"
+        }
+      },
+      "avg_words_per_msg": "Avg words per msg",
+      "back_to_upload": "Back to upload",
+      "chat_story": "Chat story",
+      "common_topics": "Common topics",
+      "communication_balance": "Communication balance",
+      "communication_patterns": "Communication patterns",
+      "communication_style": "Communication style",
+      "communication_tips": "Communication tips",
+      "conflict_patterns": "Conflict patterns",
+      "conflict_resolution": "Conflict resolution",
+      "conversation_enders": "Conversation enders",
+      "conversation_starters": "Conversation starters",
+      "day_names": {
+        "friday": "Friday",
+        "monday": "Monday",
+        "saturday": "Saturday",
+        "sunday": "Sunday",
+        "thursday": "Thursday",
+        "tuesday": "Tuesday",
+        "wednesday": "Wednesday"
+      },
+      "days": "Days",
+      "decision_making": "Decision making",
+      "description": "Description",
+      "emoji_analysis": "Emoji analysis",
+      "emoji_by_participant": "Emoji by participant",
+      "emoji_by_sentiment": "Emoji by sentiment",
+      "emoji_timeline": "Emoji timeline",
+      "emotional_expression": "Emotional expression",
+      "emotional_support": "Emotional support",
+      "error_loading": "Error loading",
+      "errors": {
+        "loading_failed": "Loading failed",
+        "result_not_found": "Result not found"
+      },
+      "export_not_implemented": "Export not implemented",
+      "export_pdf": "Export pdf",
+      "first_message": "First message",
+      "growth_opportunities": "Growth opportunities",
+      "growth_over_time": "Growth over time",
+      "insights": {
+        "interaction_title": "Interaction title",
+        "relationship_title": "Relationship title"
+      },
+      "last_message": "Last message",
+      "message_frequency": "Message frequency",
+      "message_length": "Message length",
+      "messages": "Messages",
+      "next_steps": "Next steps",
+      "not_found": "Not found",
+      "overview_story_part1": "Overview story part1",
+      "overview_story_part2": "Overview story part2",
+      "overview_story_part3": "Overview story part3",
+      "overview_title": "Overview title",
+      "personality_insights": "Personality insights",
+      "processing_errors": {
+        "filter_too_strict": "Filter too strict",
+        "invalid_date": "Invalid date",
+        "no_messages": "No messages",
+        "processing_failed": "Processing failed",
+        "short_timespan": "Short timespan",
+        "single_participant": "Single participant"
+      },
+      "recommendations": "Recommendations",
+      "relationship_health": "Relationship health",
+      "relationship_insights": "Relationship insights",
+      "relationship_suggestions": "Relationship suggestions",
+      "response_patterns": {
+        "consistent": "Consistent",
+        "evening_active": "Evening active",
+        "morning_active": "Morning active"
+      },
+      "response_time": "Response time",
+      "sentiment_analysis": "Sentiment analysis",
+      "sentiment_by_day": "Sentiment by day",
+      "sentiment_by_hour": "Sentiment by hour",
+      "sentiment_comparison": "Sentiment comparison",
+      "sentiment_description": "Sentiment description",
+      "sentiment_over_time": "Sentiment over time",
+      "sentiment_score": "Sentiment score",
+      "share": {
+        "copy_failed": "Copy failed",
+        "link_copied": "Link copied"
+      },
+      "share_not_implemented": "Share not implemented",
+      "share_results": "Share results",
+      "social_tendencies": "Social tendencies",
+      "text_analysis_title": "Text analysis title",
+      "time_of_day": {
+        "afternoon": "Afternoon",
+        "evening": "Evening",
+        "morning": "Morning",
+        "night": "Night"
+      },
+      "timespan_format": "Timespan format",
+      "title": "Title",
+      "top_emojis": "Top emojis",
+      "topic_analysis": "Topic analysis",
+      "topic_by_participant": "Topic by participant",
+      "topic_distribution": "Topic distribution",
+      "topic_over_time": "Topic over time",
+      "total_messages": "Total messages",
+      "total_words": "Total words",
+      "values_and_interests": "Values and interests",
+      "words": "Words",
+      "words_per_message": "Words per message"
+    },
+    "footer": {
+      "copyright": "Copyright",
+      "privacy_policy": "Privacy policy",
+      "social_links": {
+        "discord": "Discord",
+        "instagram": "Instagram",
+        "snapchat": "Snapchat",
+        "telegram": "Telegram",
+        "whatsapp": "Whatsapp"
+      },
+      "terms_of_service": "Terms of service"
+    },
+    "payment": {
+      "description": "Description",
+      "error_title": "Error title",
+      "missing_file_id": "Missing file id",
+      "pay_button": "Pay button",
+      "processing": "Processing",
+      "return_home": "Return home",
+      "service_name": "Service name",
+      "title": "Title"
+    },
     "steps": [
       {
         "description": "Export your chat history from WhatsApp or other platforms and upload it to our secure ChatRecap AI platform",
@@ -448,39 +670,40 @@
     "subtitle": "A simple three-step process to get insights about your conversations",
     "title": "How to Analyze Your Chats with Chat Recap AI?"
   },
-  "hurry": "",
+  "hurry": "Hurry",
   "insights": {
-    "interaction_title": "",
-    "relationship_title": ""
+    "interaction_title": "Interaction title",
+    "relationship_title": "Relationship title"
   },
-  "keywords": "",
-  "last_message": "",
-  "limited_time_offer": "",
-  "low": "",
-  "medium_conversations": "",
+  "keywords": "Keywords",
+  "last_message": "Last message",
+  "limited_time_offer": "Limited time offer",
+  "low": "Low",
+  "medium_conversations": "Medium conversations",
   "messages": {
-    "message1": "",
-    "message2": "",
-    "message3": "",
-    "message4": "",
-    "message5": "",
-    "message6": "",
-    "message7": ""
+    "message1": "Message1",
+    "message2": "Message2",
+    "message3": "Message3",
+    "message4": "Message4",
+    "message5": "Message5",
+    "message6": "Message6",
+    "message7": "Message7"
   },
-  "messages_count_one": "",
-  "messages_count_other": "",
+  "messages_count_many": "Messages count many",
+  "messages_count_one": "Messages count one",
+  "messages_count_other": "Messages count other",
   "meta": {
-    "description": "",
-    "title": ""
+    "description": "Description",
+    "title": "Title"
   },
   "metadata": {
     "description": "Want to analyze your chat history? ChatRecap AI helps you understand conversations across WhatsApp, Instagram, Snapchat, Discord, and Telegram. Get cross-platform insights and discover your communication patterns.",
     "keywords": "chatrecap, chat analyzer, whatsapp analyzer, instagram chat analysis, discord chat analysis, telegram analyzer, snapchat analysis, chat history, conversation patterns, messaging insights, cross platform chat analysis, chat export, chat metrics",
     "title": "Chat Recap AI: Free online tool to analyze Chat without signup - chatrecap.io"
   },
-  "morning": "",
-  "most_active_day": "",
-  "most_active_hour": "",
+  "morning": "Morning",
+  "most_active_day": "Most active day",
+  "most_active_hour": "Most active hour",
   "my_credits": {
     "left_tip": "Credits remaining: {left_credits}",
     "no_credits": "No credit records",
@@ -541,12 +764,12 @@
     "tip": "Upload a chat to get started",
     "title": "My Analysis History"
   },
-  "negative": "",
-  "neutral": "",
-  "no_data_available": "",
-  "no_data_found": "",
-  "no_meaningful_words": "",
-  "no_words_found": "",
+  "negative": "Negative",
+  "neutral": "Neutral",
+  "no_data_available": "No data available",
+  "no_data_found": "No data found",
+  "no_meaningful_words": "No meaningful words",
+  "no_words_found": "No words found",
   "notification": {
     "free": "FREE!",
     "hours": "hours",
@@ -557,12 +780,12 @@
     "try_now": "Try Now",
     "use_code": "Use code"
   },
-  "of_full_access": "",
-  "overall_sentiment": "",
-  "overview_story_part1": "",
-  "overview_story_part2": "",
-  "overview_story_part3": "",
-  "overview_title": "",
+  "of_full_access": "Of full access",
+  "overall_sentiment": "Overall sentiment",
+  "overview_story_part1": "Overview story part1",
+  "overview_story_part2": "Overview story part2",
+  "overview_story_part3": "Overview story part3",
+  "overview_title": "Overview title",
   "payment": {
     "description": "Use AI to deeply analyze your chat history and get personality insights and relationship analysis",
     "error_title": "Error",
@@ -573,103 +796,108 @@
     "service_name": "AI Chat Analysis Service",
     "title": "AI Chat Analysis"
   },
-  "peak_activity_time": "",
-  "placeholder": "",
+  "peak_activity_time": "Peak activity time",
+  "placeholder": "Placeholder",
   "platforms": {
-    "discord": "",
-    "instagram": "",
-    "snapchat": "",
-    "telegram": "",
-    "whatsapp": ""
+    "discord": "Discord",
+    "instagram": "Instagram",
+    "snapchat": "Snapchat",
+    "telegram": "Telegram",
+    "whatsapp": "Whatsapp"
   },
-  "positive": "",
+  "positive": "Positive",
   "pricing": {
     "description": "1 credit ≈ 5000 words now, and we are working hard to optimize the cost.",
     "title": "Buy Credits for Advanced AI Analysis"
   },
   "processing": {
-    "analysis_progress": "",
-    "analyzing": "",
-    "cleaning": "",
-    "cleaning_progress": "",
-    "completed": "",
-    "description": "",
-    "failed": "",
-    "preparing": "",
-    "processing": "",
-    "result_fetch_failed": "",
-    "status_fetch_failed": "",
-    "title": "",
-    "uploading": ""
+    "analysis_progress": "Analysis progress",
+    "analyzing": "Analyzing",
+    "cleaning": "Cleaning",
+    "cleaning_progress": "Cleaning progress",
+    "completed": "Completed",
+    "description": "Description",
+    "failed": "Failed",
+    "preparing": "Preparing",
+    "processing": "Processing",
+    "result_fetch_failed": "Result fetch failed",
+    "status_fetch_failed": "Status fetch failed",
+    "title": "Title",
+    "uploading": "Uploading"
   },
-  "quick_responses": "",
+  "quick_responses": "Quick responses",
   "relationship_analysis": {
-    "description": ""
+    "description": "Description"
   },
   "relationship_metrics": {
-    "emotional_stability": "",
-    "interest_level": "",
-    "response_enthusiasm": "",
-    "response_time": ""
+    "emotional_stability": "Emotional stability",
+    "interest_level": "Interest level",
+    "response_enthusiasm": "Response enthusiasm",
+    "response_time": "Response time"
   },
   "relationship_metrics_hearts": {
-    "description": "",
-    "title": ""
+    "description": "Description",
+    "title": "Title"
   },
-  "response_pattern_description": "",
+  "response_pattern_description": "Response pattern description",
   "results": {
-    "back": "",
-    "date_range": "",
-    "description": "",
-    "export": "",
-    "filtered_messages": "",
-    "link_copied": "",
-    "media_messages_one": "",
-    "media_messages_other": "",
-    "messages_description_one": "",
-    "messages_description_other": "",
-    "messages_title": "",
-    "next": "",
-    "no_messages": "",
-    "no_search_results": "",
-    "page_info": "",
-    "participants": "",
-    "previous": "",
-    "search": "",
-    "search_placeholder": "",
-    "share": "",
-    "share_text_one": "",
-    "share_text_other": "",
-    "share_title": "",
-    "summary_description": "",
-    "summary_title": "",
-    "system_messages_one": "",
-    "system_messages_other": "",
-    "title": "",
-    "total_messages": "",
-    "unknown_date_range": "",
-    "valid_date_messages_one": "",
-    "valid_date_messages_other": "",
-    "warnings_title": ""
+    "back": "Back",
+    "date_range": "Date range",
+    "description": "Description",
+    "export": "Export",
+    "filtered_messages": "Filtered messages",
+    "link_copied": "Link copied",
+    "media_messages_many": "Media messages many",
+    "media_messages_one": "Media messages one",
+    "media_messages_other": "Media messages other",
+    "messages_description_many": "Messages description many",
+    "messages_description_one": "Messages description one",
+    "messages_description_other": "Messages description other",
+    "messages_title": "Messages title",
+    "next": "Next",
+    "no_messages": "No messages",
+    "no_search_results": "No search results",
+    "page_info": "Page info",
+    "participants": "Participants",
+    "previous": "Previous",
+    "search": "Search",
+    "search_placeholder": "Search placeholder",
+    "share": "Share",
+    "share_text_many": "Share text many",
+    "share_text_one": "Share text one",
+    "share_text_other": "Share text other",
+    "share_title": "Share title",
+    "summary_description": "Summary description",
+    "summary_title": "Summary title",
+    "system_messages_many": "System messages many",
+    "system_messages_one": "System messages one",
+    "system_messages_other": "System messages other",
+    "title": "Title",
+    "total_messages": "Total messages",
+    "unknown_date_range": "Unknown date range",
+    "valid_date_messages_many": "Valid date messages many",
+    "valid_date_messages_one": "Valid date messages one",
+    "valid_date_messages_other": "Valid date messages other",
+    "warnings_title": "Warnings title"
   },
-  "sample_button_text": "",
-  "sample_chat_text": "",
-  "select_button": "",
-  "sentiment_analysis": "",
-  "sentiment_description": "",
-  "sentiment_negative": "",
-  "sentiment_neutral": "",
-  "sentiment_positive": "",
-  "sentiment_score": "",
-  "sentiment_very_negative": "",
-  "sentiment_very_positive": "",
+  "sample_button_text": "Sample button text",
+  "sample_chat_text": "Sample chat text",
+  "select_button": "Select button",
+  "sentiment_analysis": "Sentiment analysis",
+  "sentiment_description": "Sentiment description",
+  "sentiment_negative": "Sentiment negative",
+  "sentiment_neutral": "Sentiment neutral",
+  "sentiment_positive": "Sentiment positive",
+  "sentiment_score": "Sentiment score",
+  "sentiment_very_negative": "Sentiment very negative",
+  "sentiment_very_positive": "Sentiment very positive",
   "share": {
-    "copy_failed": "",
-    "link_copied": ""
+    "copy_failed": "Copy failed",
+    "link_copied": "Link copied"
   },
-  "share_not_implemented": "",
-  "share_results": "",
-  "sharing": "",
+  "share_not_implemented": "Share not implemented",
+  "share_results": "Share results",
+  "sharing": "Sharing",
   "sign_modal": {
     "cancel_title": "Cancel",
     "close_title": "Close",
@@ -690,18 +918,18 @@
     "sign_up_title": "Sign Up"
   },
   "speakers": {
-    "boyfriend": "",
-    "crush": "",
-    "ex": "",
-    "friend": "",
-    "girlfriend": "",
-    "her": "",
-    "him": ""
+    "boyfriend": "Boyfriend",
+    "crush": "Crush",
+    "ex": "Ex",
+    "friend": "Friend",
+    "girlfriend": "Girlfriend",
+    "her": "Her",
+    "him": "Him"
   },
-  "story_timeline_description": "",
-  "story_timeline_title": "",
-  "subtitle": "",
-  "supported_formats": "",
+  "story_timeline_description": "Story timeline description",
+  "story_timeline_title": "Story timeline title",
+  "subtitle": "Subtitle",
+  "supported_formats": "Supported formats",
   "testimonial": {
     "items": [
       {
@@ -723,44 +951,44 @@
     "subtitle": "users who've discovered deeper insights into their relationships",
     "title": "Loved by Lovers"
   },
-  "text_analysis_title": "",
-  "time_analysis_title": "",
-  "time_distribution": "",
-  "time_distribution_description": "",
+  "text_analysis_title": "Text analysis title",
+  "time_analysis_title": "Time analysis title",
+  "time_distribution": "Time distribution",
+  "time_distribution_description": "Time distribution description",
   "times": {
-    "days_ago": "",
-    "hours_ago": "",
-    "just_now": "",
-    "minutes_ago": ""
+    "days_ago": "Days ago",
+    "hours_ago": "Hours ago",
+    "just_now": "Just now",
+    "minutes_ago": "Minutes ago"
   },
-  "title": "",
-  "to_unlock": "",
-  "top_emojis": "",
-  "top_words": "",
-  "total_emojis": "",
-  "total_messages": "",
-  "total_unique_words": "",
-  "total_words": "",
-  "try_now": "",
+  "title": "Title",
+  "to_unlock": "To unlock",
+  "top_emojis": "Top emojis",
+  "top_words": "Top words",
+  "total_emojis": "Total emojis",
+  "total_messages": "Total messages",
+  "total_unique_words": "Total unique words",
+  "total_words": "Total words",
+  "try_now": "Try now",
   "upload": {
-    "description": "",
-    "drop_files": "",
-    "error": "",
-    "failed": "",
-    "file_size_limit": "",
-    "invalid_format": "",
-    "no_file_selected": "",
-    "select_file": "",
-    "supported_formats": "",
-    "title": "",
-    "upload_button": "",
-    "upload_failed": "",
-    "uploading": ""
+    "description": "Description",
+    "drop_files": "Drop files",
+    "error": "Error",
+    "failed": "Failed",
+    "file_size_limit": "File size limit",
+    "invalid_format": "Invalid format",
+    "no_file_selected": "No file selected",
+    "select_file": "Select file",
+    "supported_formats": "Supported formats",
+    "title": "Title",
+    "upload_button": "Upload button",
+    "upload_failed": "Upload failed",
+    "uploading": "Uploading"
   },
-  "upload_button_text": "",
-  "upload_description": "",
-  "upload_title": "",
-  "use_code": "",
+  "upload_button_text": "Upload button text",
+  "upload_description": "Upload description",
+  "upload_title": "Upload title",
+  "use_code": "Use code",
   "user": {
     "admin_system": "Admin System",
     "api_keys": "API Keys",
@@ -770,12 +998,12 @@
     "sign_out": "Sign Out",
     "user_center": "User Center"
   },
-  "very_negative": "",
-  "very_positive": "",
+  "very_negative": "Very negative",
+  "very_positive": "very positive",
   "view_guide": "View download guide",
-  "weekly_activity_heatmap": "",
-  "word": "",
-  "word_cloud": "",
-  "words": "",
-  "words_per_message": ""
+  "weekly_activity_heatmap": "weekly activity heatmap",
+  "word": "word",
+  "word_cloud": "word cloud",
+  "words": "words",
+  "words_per_message": "word per message"
 }

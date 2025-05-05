@@ -1,19 +1,11 @@
-import './globals.css';
+// 这个文件只用于重定向到默认语言
+// 所有的布局逻辑都在 app/[locale]/layout.tsx 中
 import { ReactNode } from 'react';
-
-export const metadata = {
-  title: 'Chat Recap AI',
-  description: 'AI-powered chat analysis and insights',
-};
 
 export default function RootLayout({
   children,
 }: {
   children: ReactNode;
 }) {
-  return (
-    <html lang="en">
-      <body>{children}</body>
-    </html>
-  );
+  return children;
 }

@@ -48,9 +48,9 @@ export default function Footer({ footer }: { footer: FooterType }) {
               </div>
             )}
 
-            {footer.social && (
+            {footer.social && footer.social.items && Array.isArray(footer.social.items) && (
               <ul className="flex items-center space-x-6 text-muted-foreground">
-                {footer.social.items?.map((item, i) => (
+                {footer.social.items.map((item, i) => (
                   <li key={i} className="font-medium hover:text-primary">
                     <a href={item.url} target={item.target} title={item.title}>
                       {item.icon && (
@@ -66,9 +66,9 @@ export default function Footer({ footer }: { footer: FooterType }) {
           <div className="mt-6 flex flex-col justify-between gap-4 border-t pt-6 text-center text-sm font-medium text-muted-foreground">
             <p>{t("copyright") || componentT("copyright")}</p>
 
-            {footer.agreement && (
+            {footer.agreement && footer.agreement.items && Array.isArray(footer.agreement.items) && (
               <ul className="flex justify-center gap-4">
-                {footer.agreement.items?.map((item, i) => (
+                {footer.agreement.items.map((item, i) => (
                   <li key={i} className="hover:text-primary">
                     <a href={item.url} target={item.target}>
                       {item.title}

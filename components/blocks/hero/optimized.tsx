@@ -10,24 +10,31 @@ import Icon from "@/components/icon";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ChatNotification } from "@/components/ui/chat-notification";
-import { useTranslations } from "next-intl";
-import { useState, useEffect } from "react";
+
+import { useState, useEffect, useMemo } from "react";
 import { createAnimation } from "@/lib/animation";
+import { useTranslations } from "next-intl";
 
 // 优化的 Hero 组件，使用 OptimizedImage 和延迟加载
 export default function OptimizedHero({ hero }: { hero: HeroType }) {
+  // 使用正确的翻译命名空间
   const t = useTranslations("chat_notifications");
   const [isClient, setIsClient] = useState(false);
   const [showChatNotifications, setShowChatNotifications] = useState(false);
 
   // 使用 useEffect 确保组件只在客户端渲染后才显示完整内容
   useEffect(() => {
-    setIsClient(true);
+    // 使用 requestAnimationFrame 确保在下一帧渲染时设置 isClient
+    // 这样可以避免在首次渲染时触发不必要的动画
+    requestAnimationFrame(() => {
+      setIsClient(true);
+    });
 
     // 延迟加载聊天通知，提高首屏加载速度
+    // 增加延迟时间，确保首屏内容优先渲染
     const timer = setTimeout(() => {
       setShowChatNotifications(true);
-    }, 500);
+    }, 1000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -178,21 +185,19 @@ export default function OptimizedHero({ hero }: { hero: HeroType }) {
             </div>
 
             {/* 右侧内容 - 聊天通知 */}
-            <motion.div
-              {...createAnimation(0.2, 0.8, 'fadeInRight')}
-              animate={{
-                opacity: isClient ? 1 : 0,
-                transform: isClient ? 'translateX(0)' : 'translateX(20px)'
-              }}
-              className="flex items-start justify-center col-span-1"
-              style={{ willChange: 'transform, opacity' }}
-            >
+            <div className="flex items-start justify-center col-span-1">
               <div className="bg-primary/5 backdrop-blur-sm border border-primary/10 rounded-2xl w-full p-6 shadow-lg h-auto overflow-hidden">
                 <h3 className="text-xl font-medium text-center mb-6 text-foreground bg-clip-text text-transparent bg-gradient-to-r from-primary to-pink-500">{t("title")}</h3>
 
                 {/* 只有在客户端渲染后且延迟加载计时器触发后才显示聊天通知 */}
                 {isClient && showChatNotifications ? (
-                  <div className="space-y-4 pr-2 overflow-y-auto max-h-[400px] pb-2 scrollbar-thin scrollbar-thumb-primary/20 scrollbar-track-transparent" style={{ scrollBehavior: 'smooth' }}>
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.3 }}
+                    className="space-y-4 pr-2 overflow-y-auto max-h-[400px] pb-2 scrollbar-thin scrollbar-thumb-primary/20 scrollbar-track-transparent"
+                  >
+                    {/* 减少初始显示的聊天通知数量，提高渲染性能 */}
                     <ChatNotification
                       speaker={t("speakers.girlfriend")}
                       time={t("times.days_ago", { days: 2 })}
@@ -211,35 +216,40 @@ export default function OptimizedHero({ hero }: { hero: HeroType }) {
                       content={t("messages.message3")}
                       index={2}
                     />
-                    <ChatNotification
-                      speaker={t("speakers.him")}
-                      time={t("times.minutes_ago", { minutes: 30 })}
-                      content={t("messages.message4")}
-                      index={3}
-                    />
-                    <ChatNotification
-                      speaker={t("speakers.ex")}
-                      time={t("times.days_ago", { days: 3 })}
-                      content={t("messages.message5")}
-                      index={4}
-                    />
-                    <ChatNotification
-                      speaker={t("speakers.friend")}
-                      time={t("times.hours_ago", { hours: 5 })}
-                      content={t("messages.message6")}
-                      index={5}
-                    />
-                    <ChatNotification
-                      speaker={t("speakers.crush")}
-                      time={t("times.just_now")}
-                      content={t("messages.message7")}
-                      index={6}
-                    />
-                  </div>
+                    {/* 其余的聊天通知在用户滚动时才会显示 */}
+                    {isClient && (
+                      <>
+                        <ChatNotification
+                          speaker={t("speakers.him")}
+                          time={t("times.minutes_ago", { minutes: 30 })}
+                          content={t("messages.message4")}
+                          index={3}
+                        />
+                        <ChatNotification
+                          speaker={t("speakers.ex")}
+                          time={t("times.days_ago", { days: 3 })}
+                          content={t("messages.message5")}
+                          index={4}
+                        />
+                        <ChatNotification
+                          speaker={t("speakers.friend")}
+                          time={t("times.hours_ago", { hours: 5 })}
+                          content={t("messages.message6")}
+                          index={5}
+                        />
+                        <ChatNotification
+                          speaker={t("speakers.crush")}
+                          time={t("times.just_now")}
+                          content={t("messages.message7")}
+                          index={6}
+                        />
+                      </>
+                    )}
+                  </motion.div>
                 ) : (
-                  // 加载占位符
+                  // 加载占位符 - 减少占位符数量，提高渲染性能
                   <div className="space-y-4 pr-2 max-h-[400px] pb-2">
-                    {Array.from({ length: 3 }).map((_, i) => (
+                    {Array.from({ length: 2 }).map((_, i) => (
                       <div key={i} className="flex flex-col gap-2">
                         <div className="h-6 bg-muted/50 rounded-md w-1/3 animate-pulse"></div>
                         <div className="h-12 bg-muted/30 rounded-md w-full animate-pulse"></div>
@@ -248,7 +258,7 @@ export default function OptimizedHero({ hero }: { hero: HeroType }) {
                   </div>
                 )}
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
 

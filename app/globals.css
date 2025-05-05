@@ -1,6 +1,7 @@
 @import "theme.css";
-@import "../styles/animations.css";
+@import "../styles/core-animations.css";
 
+/* 使用PurgeCSS优化Tailwind输出 */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

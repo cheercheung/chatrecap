@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import { Check, Loader } from "lucide-react";
-import { useEffect, useState } from "react";
+import { Check } from "lucide-react";
+import { useState } from "react";
 import { toast } from "sonner";
 
 import { Badge } from "@/components/ui/badge";
@@ -80,11 +80,11 @@ export default function SimplePricing({ title, description, plans }: SimplePrici
       <div className="container">
         <div className="mx-auto mb-12 text-center">
           <h2 className="mb-4 text-4xl font-semibold lg:text-5xl">{title}</h2>
-          <p className="text-muted-foreground lg:text-lg">{description}</p >
+          <p className="text-muted-foreground lg:text-lg">{description}</p>
         </div>
 
         <div className="grid gap-8 md:grid-cols-2 lg:gap-12 max-w-5xl mx-auto">
-          {plans.map((plan, index) => (
+          {plans && Array.isArray(plans) ? plans.map((plan, index) => (
             <Card
               key={index}
               className={`relative overflow-hidden transition-all duration-300 hover:shadow-lg ${
@@ -103,7 +103,7 @@ export default function SimplePricing({ title, description, plans }: SimplePrici
               <div className="p-6 flex flex-col h-full">
                 <div className="mb-6">
                   <h3 className="text-2xl font-semibold mb-2">{plan.title}</h3>
-                  <p className="text-muted-foreground">{plan.description}</p >
+                  <p className="text-muted-foreground">{plan.description}</p>
                 </div>
 
                 <div className="mb-6">
@@ -155,12 +155,16 @@ export default function SimplePricing({ title, description, plans }: SimplePrici
                   {plan.tipText && (
                     <p className="text-sm text-muted-foreground mt-3 text-center">
                       {plan.tipText}
-                    </p >
+                    </p>
                   )}
                 </div>
               </div>
             </Card>
-          ))}
+          )) : (
+            <div className="text-center p-8">
+              <p className="text-muted-foreground">No pricing plans available</p>
+            </div>
+          )}
         </div>
       </div>
     </section>

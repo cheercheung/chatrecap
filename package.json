@@ -5,7 +5,8 @@
   "author": "idoubi",
   "homepage": "https://shipany.ai",
   "scripts": {
-    "dev": "cross-env NODE_NO_WARNINGS=1 NEXT_IGNORE_WARNINGS=1 next dev --turbopack",
+    "dev": "cross-env NODE_NO_WARNINGS=1 NEXT_IGNORE_WARNINGS=1 next dev",
+    "dev:turbo": "cross-env NODE_NO_WARNINGS=1 NEXT_IGNORE_WARNINGS=1 next dev --turbopack",
     "build": "prisma generate && next build",
     "start": "NODE_NO_WARNINGS=1 next start",
     "lint": "next lint",
@@ -75,6 +76,7 @@
     "google-one-tap": "^1.0.6",
     "gray-matter": "^4.0.3",
     "highlight.js": "^11.11.0",
+    "lru-cache": "^11.1.0",
     "lucide-react": "^0.439.0",
     "markdown-it": "^14.1.0",
     "moment": "^2.30.1",

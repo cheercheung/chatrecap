@@ -48,7 +48,7 @@ export default function Header({ header }: { header: HeaderType }) {
             >
               {header.brand?.logo?.src && (
                 <img
-                  src={`${header.brand.logo.src}?v=${new Date().getTime()}`}
+                  src={header.brand.logo.src}
                   alt={header.brand.logo.alt || header.brand.title}
                   className="w-9 transition-transform group-hover:scale-110"
                 />
@@ -174,7 +174,7 @@ export default function Header({ header }: { header: HeaderType }) {
             <div className="flex items-center gap-2">
               {header.brand?.logo?.src && (
                 <img
-                  src={`${header.brand.logo.src}?v=${new Date().getTime()}`}
+                  src={header.brand.logo.src}
                   alt={header.brand.logo.alt || header.brand.title}
                   className="w-8"
                 />
@@ -197,7 +197,7 @@ export default function Header({ header }: { header: HeaderType }) {
                     <div className="flex items-center gap-2">
                       {header.brand?.logo?.src && (
                         <img
-                          src={`${header.brand.logo.src}?v=${new Date().getTime()}`}
+                          src={header.brand.logo.src}
                           alt={header.brand.logo.alt || header.brand.title}
                           className="w-8"
                         />

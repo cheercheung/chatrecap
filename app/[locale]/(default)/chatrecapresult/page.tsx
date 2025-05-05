@@ -2,12 +2,14 @@ import { getTranslations } from "next-intl/server";
 import Empty from "@/components/blocks/empty";
 import ChatRecapResultPageComponent from "@/components/pages/chat-recap-result";
 import { generateSampleAnalysisData } from "@/lib/analysis/sampleData";
-import { readFile, FileType } from "@/lib/storage/index";
+import { getCachedAnalysisData } from "@/lib/storage/cache";
 import { AnalysisData } from "@/types/analysis";
 import { redirect } from "next/navigation";
+import { Suspense } from "react";
 
-// 使用动态渲染，但对于没有fileId的页面使用静态渲染
-export const dynamic = 'auto';
+// 使用增量静态再生成 (ISR)
+// 这样页面会在构建时预渲染，并在后台定期更新
+export const dynamic = 'force-dynamic'; // 对于有fileId的请求使用动态渲染
 export const revalidate = 3600; // 1小时重新验证一次
 
 export async function generateMetadata({
@@ -59,14 +61,22 @@ export default async function ChatRecapResultPage({
     redirect(`/${locale}/chatrecapresult/sample`);
   }
 
-  // 直接从results目录获取分析数据
-  const analysisData = await readFile(fileId, FileType.RESULT) as AnalysisData;
+  // 使用缓存函数获取分析数据
+  const analysisData = await getCachedAnalysisData(fileId);
 
   // 如果没有找到分析数据，显示错误信息
   if (!analysisData) {
     return <Empty message={t("errors.result_not_found")} />;
   }
 
-  // 显示处理结果 - pass data only, no UI elements
-  return <ChatRecapResultPageComponent analysisData={analysisData} />;
+  // 使用 Suspense 包装组件，提供加载占位符
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="animate-pulse text-xl">加载中...</div>
+      </div>
+    }>
+      <ChatRecapResultPageComponent analysisData={analysisData} />
+    </Suspense>
+  );
 }

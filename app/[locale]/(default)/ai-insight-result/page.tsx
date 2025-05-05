@@ -4,12 +4,14 @@ import { redirect } from "next/navigation";
 import Empty from "@/components/blocks/empty";
 import AiInsightResultPage from "@/components/pages/ai-insight-result";
 import crypto from 'crypto';
-import { getCompleteAnalysisData } from "@/lib/storage/index";
+import { getCachedCompleteAnalysisData } from "@/lib/storage/cache";
 import { AIInsights, AnalysisData } from "@/types/analysis";
 import logger from "@/lib/utils/logger";
+import { Suspense } from "react";
 
-// 使用动态渲染，但对于没有fileId的页面使用静态渲染
-export const dynamic = 'auto';
+// 使用增量静态再生成 (ISR)
+// 这样页面会在构建时预渲染，并在后台定期更新
+export const dynamic = 'force-dynamic'; // 对于有fileId的请求使用动态渲染
 export const revalidate = 3600; // 1小时重新验证一次
 
 /**
@@ -68,12 +70,12 @@ export default async function AiInsightResult({
   }
 
   try {
-    // Data fetching logic
+    // 使用缓存函数获取分析数据
     let aiInsights: AIInsights;
     let fullAnalysisData: AnalysisData | null;
 
-    // If ID is provided, fetch the corresponding analysis data
-    fullAnalysisData = await getCompleteAnalysisData(analysisId);
+    // 使用缓存函数获取完整分析数据
+    fullAnalysisData = await getCachedCompleteAnalysisData(analysisId);
 
     if (!fullAnalysisData) {
       return <Empty message={t("errors.not_found")} />;
@@ -87,16 +89,11 @@ export default async function AiInsightResult({
 
     const { relationshipInsights } = aiInsights;
 
-    // Map relationship insights to the expected format
+    // 映射关系洞察到预期的格式
     const mappedInsights = (relationshipInsights?.points || []).map((item: { title: string; description: string }) => ({
       title: item.title,
       content: item.description,
     }));
-
-    // Return the page component with data
-    if (!fullAnalysisData) {
-      return <Empty message={t("errors.not_found")} />;
-    }
 
     // 如果正在分析中，显示loading页面
     if (analyzing) {
@@ -113,22 +110,18 @@ export default async function AiInsightResult({
               页面将在分析完成后自动刷新，请勿关闭页面。
             </p>
 
-            {/* 添加客户端脚本，定期检查分析状态 */}
+            {/* 使用 WebSocket 客户端组件检查分析状态 */}
+            <div id="analysis-status-checker" data-file-id={analysisId} data-redirect-url={`/ai-insight-result?fileId=${analysisId}`}></div>
             <script
               dangerouslySetInnerHTML={{
                 __html: `
-                  // 每3秒检查一次分析状态
-                  const interval = setInterval(() => {
-                    fetch('/api/check-analysis-status?fileId=${analysisId}')
-                      .then(response => response.json())
-                      .then(data => {
-                        if (data.success && data.data.completed) {
-                          // 分析完成，刷新页面
-                          window.location.href = '/ai-insight-result?fileId=${analysisId}';
-                        }
-                      })
-                      .catch(error => console.error('Check analysis status failed:', error));
-                  }, 3000);
+                  // 动态加载分析状态检查器组件
+                  (function() {
+                    const script = document.createElement('script');
+                    script.src = '/js/analysis-status-checker.js';
+                    script.async = true;
+                    document.body.appendChild(script);
+                  })();
                 `
               }}
             />
@@ -137,12 +130,18 @@ export default async function AiInsightResult({
       );
     }
 
-    // 否则显示分析结果
+    // 使用 Suspense 包装组件，提供加载占位符
     return (
-      <AiInsightResultPage
-        analysisData={fullAnalysisData}
-        mappedInsights={mappedInsights}
-      />
+      <Suspense fallback={
+        <div className="min-h-screen flex items-center justify-center">
+          <div className="animate-pulse text-xl">加载中...</div>
+        </div>
+      }>
+        <AiInsightResultPage
+          analysisData={fullAnalysisData}
+          mappedInsights={mappedInsights}
+        />
+      </Suspense>
     );
   } catch (error) {
     // 检查错误是否是重定向错误

@@ -1,27 +1,27 @@
 {
-  "afternoon": "",
+  "afternoon": "오후",
   "ai_analysis": {
-    "analyzing": "",
-    "error": "",
-    "error_description": "",
-    "failed": "",
-    "failed_description": "",
-    "generate": "",
-    "please_wait": "",
-    "starting": "",
-    "success": "",
-    "success_description": ""
+    "analyzing": "분석",
+    "error": "오류",
+    "error_description": "오류 설명",
+    "failed": "실패한",
+    "failed_description": "실패한 설명",
+    "generate": "생성하다",
+    "please_wait": "기다리세요",
+    "starting": "시작",
+    "success": "성공",
+    "success_description": "성공 설명"
   },
-  "analyze_button": "",
-  "avg_words_per_msg": "",
-  "back_to_upload": "",
-  "badge": "",
+  "analyze_button": "분석 버튼을 분석하십시오",
+  "avg_words_per_msg": "MSG 당 AVG 단어",
+  "back_to_upload": "업로드로 돌아갑니다",
+  "badge": "배지",
   "blog": {
     "description": "관계 커뮤니케이션에 관한 팁, 리소스 및 업데이트",
     "read_more_text": "더 읽기",
     "title": "관계 인사이트"
   },
-  "busiest_date": "",
+  "busiest_date": "가장 바쁜 날짜",
   "chat_analysis": {
     "advanced_options": "고급 옵션",
     "analyze_button": "채팅 분석하기",
@@ -33,6 +33,7 @@
       "mobile": "WhatsApp iOS/Android에서",
       "web": "WhatsApp 웹에서"
     },
+    "placeholder": "Enter or paste your chat text here...",
     "platforms": {
       "discord": "Discord",
       "instagram": "Instagram",
@@ -41,35 +42,335 @@
       "whatsapp": "WhatsApp"
     },
     "privacy_notice": "채팅 기록은 저장되지 않습니다. 서버에 캐시된 파일은 30분 후 자동으로 삭제됩니다.",
+    "processing": {
+      "analysis_progress": "Analysis Progress",
+      "analyzing": "분석",
+      "cleaning": "청소",
+      "cleaning_progress": "Cleaning Progress",
+      "completed": "Completed",
+      "description": "We're processing your chat history, please wait",
+      "failed": "Failed",
+      "preparing": "Preparing",
+      "result_fetch_failed": "Failed to fetch processing result",
+      "status_fetch_failed": "Failed to fetch processing status",
+      "title": "Processing Your Chat",
+      "uploading": "Uploading"
+    },
+    "results": {
+      "back": "Back",
+      "date_range": "Date Range",
+      "description": "Results of your chat history processing",
+      "download": "Download",
+      "filtered_media": "Filtered Media Messages",
+      "filtered_system": "Filtered System Messages",
+      "messages": "Messages",
+      "next": "Next",
+      "no_results": "No matching messages found",
+      "no_warnings": "No warnings",
+      "page_of": "Page {current} of {total}",
+      "previous": "Previous",
+      "search": "Search",
+      "search_placeholder": "Search messages or sender",
+      "share": "Share",
+      "title": "Processing Results",
+      "total_messages": "Total Messages",
+      "unknown_date_range": "Unknown date range",
+      "valid_dates": "Valid Date Messages",
+      "warnings": "Warnings"
+    },
+    "sample_button_text": "Use Sample Input",
     "sample_chat_text": "[2025/1/1, 01:00:00] ALICE: 새해 복 많이 받으세요! 🎉\n[2025/1/1, 01:02:00] JEFF: 새해 복 많이 받아요, 내 사랑! 🎆\n[2025/1/1, 08:15:00] ALICE: 올해 첫 커피! ☕\n[2025/1/1, 08:20:00] JEFF: 앞으로도 많은 일들을 함께해요! 🥂\n[2025/1/1, 10:30:00] ALICE: 오늘 계획은 뭐예요? 🤔\n[2025/1/1, 10:32:00] JEFF: 공원에서 산책하는 건 어때요?🌳\n[2025/1/1, 11:05:00] ALICE: 완벽해요! 🌞\n[2025/1/1, 13:00:00] JEFF: 새해 결심은 있어요?\n[2025/1/1, 13:10:00] ALICE: 더 많이 여행하는 거요! 🌍\n[2025/1/1, 13:15:00] JEFF: 좋은 생각이에요, 저도 함께할게요✈️\n[2025/1/1, 14:30:00] ALICE: 오늘 날씨가 정말 좋네요! ☀️\n[2025/1/1, 14:35:00] JEFF: 모험하기 완벽한 날이죠, 어떻게 생각해요?\n[2025/1/1, 16:00:00] ALICE: 아이스크림 먹으러 가는 건 어때요?🍦\n[2025/1/1, 16:10:00] JEFF: 좋아요! 어떤 맛이 좋아요?\n[2025/1/1, 18:30:00] ALICE: 저녁은 뭘로 할까요?\n[2025/1/1, 18:32:00] JEFF: 피자 어때요? 🍕",
     "select_platform": "플랫폼 선택",
     "subtitle": "AI 채팅 분석",
+    "supported_formats": "Supported: .txt file or .zip containing a .txt file (max 5MB)",
     "title": "Chat Recap AI",
+    "upload": {
+      "description": "Select a chat history file to upload",
+      "drag_drop": "Drag and drop file here or click to select",
+      "file_selected": "File selected",
+      "file_size_limit": "File size exceeds {size}MB limit",
+      "invalid_format": "Invalid file format. Supported formats: {formats}",
+      "no_file_selected": "Please select a file",
+      "title": "Upload Chat History",
+      "upload_button": "Upload",
+      "upload_failed": "Upload failed",
+      "upload_success": "Upload successful"
+    },
+    "upload_button_text": "Upload File",
     "upload_description": "분석할 채팅 내보내기 파일을 업로드하세요",
     "upload_title": "채팅 기록 입력"
   },
+  "chat_notifications": {
+    "messages": {
+      "message1": "Oh, you finally texted? Must've broken a world record 🏆🙄",
+      "message2": "Sorry, my phone only buzzes for pizza deliveries 🍕📳",
+      "message3": "Your pick-up lines are faster than my microwave popcorn 🍿💨",
+      "message4": "Our chat's colder than Antarctica ❄️😎",
+      "message5": "Miss me? I barely remember your name 😂",
+      "message6": "Your dating life is like my WiFi - unstable connection 📶",
+      "message7": "Seen your message. Will reply in 2-3 business days 📅"
+    },
+    "speakers": {
+      "boyfriend": "Boyfriend",
+      "crush": "Crush",
+      "ex": "Ex",
+      "friend": "Friend",
+      "girlfriend": "Girlfriend",
+      "her": "Her",
+      "him": "Him"
+    },
+    "times": {
+      "days_ago": "{days} days ago",
+      "hours_ago": "{hours} hours ago",
+      "just_now": "Just now",
+      "minutes_ago": "{minutes} minutes ago"
+    },
+    "title": "Chat Notifications"
+  },
+  "chatrecapplatform": {
+    "badge": "Chat Analysis",
+    "description": "Select the platform you want to analyze your chat history from. We support multiple messaging platforms to provide comprehensive insights.",
+    "meta": {
+      "description": "Select the platform you want to analyze your chat from",
+      "title": "Choose Your Chat Platform"
+    },
+    "platforms": {
+      "discord": {
+        "description": "Analyze your Discord chats to better understand your communication in gaming and community contexts."
+      },
+      "instagram": {
+        "description": "Discover insights from your Instagram direct messages and understand your communication style."
+      },
+      "snapchat": {
+        "description": "Analyze your Snapchat conversations to understand your communication style and patterns."
+      },
+      "telegram": {
+        "description": "Get insights from your Telegram conversations and understand your messaging patterns."
+      },
+      "whatsapp": {
+        "description": "Analyze your WhatsApp conversations to understand your messaging patterns and relationship dynamics."
+      }
+    },
+    "select_button": "Select Platform",
+    "title": "Choose Your Chat Platform"
+  },
   "chatrecapresult": {
-    "description": "",
-    "title": ""
+    "ai_analysis": {
+      "analyzing": "Analyzing...",
+      "error": "Error",
+      "error_description": "An error occurred during AI analysis. Please try again later.",
+      "failed": "AI Analysis Failed",
+      "failed_description": "We couldn't complete the AI analysis. Please try again.",
+      "generate": "Generate AI Insights",
+      "please_wait": "This may take a few minutes. Please wait while we analyze your chat data.",
+      "starting": "Starting AI Analysis",
+      "success": "AI Analysis Complete",
+      "success_description": "Your AI insights are ready to view."
+    },
+    "analysis_card": {
+      "conversion_rate": {
+        "content": "This month's conversion rate is 62%, down 3 percentage points from last month.\nAnalysis shows that the decline in conversion rate is mainly due to the poor quality of new promotion channels.\nHigh-quality traffic conversion rates remain stable, but an increase in low-quality traffic has led to an overall decline in conversion rates.\nIt is recommended to optimize traffic sources, improve visitor quality, and enhance landing page experience.",
+        "title": "Conversion Rate"
+      },
+      "example_description": "Below are examples of analysis cards with different metrics",
+      "example_title": "Analysis Card Examples",
+      "system_performance": {
+        "content": "System performance metrics reached 93%, at the best historical level.\nServer response time decreased by an average of 200ms, and page loading speed increased by 15%.\nDatabase query optimization and CDN deployment are the main reasons for performance improvement.\nIt is recommended to continue monitoring peak performance and consider further cache strategy optimization.",
+        "title": "System Performance"
+      },
+      "user_satisfaction": {
+        "content": "This quarter's user satisfaction reached 85%, a 5 percentage point increase compared to last quarter.\nThe main growth came from the launch of new product features and user interface optimizations.\nUser feedback shows that response speed and ease of use are the main factors for improved satisfaction.\nIt is recommended to continue optimizing the user experience, especially in mobile operation processes.",
+        "title": "User Satisfaction"
+      }
+    },
+    "avg_words_per_msg": "Avg Words/Msg",
+    "back_to_upload": "Back to Upload",
+    "busiest_date": "Busiest Date",
+    "chat_story": "Your Chat Story",
+    "common_words": "Common Words",
+    "communication_comparison": {
+      "description": "A comparison of communication patterns and relationship dynamics between both parties.",
+      "title": "Communication Comparison: {sender1} vs {sender2}"
+    },
+    "count": "Count",
+    "daily_activity": "Daily Activity",
+    "daily_activity_description": "Your conversations are most active on {mostActiveDay}s around {mostActiveHour}. This consistent pattern suggests you both prioritize making time for each other during these periods.",
+    "day_names": {
+      "friday": "Friday",
+      "monday": "Monday",
+      "saturday": "Saturday",
+      "sunday": "Sunday",
+      "thursday": "Thursday",
+      "tuesday": "Tuesday",
+      "wednesday": "Wednesday"
+    },
+    "days": "days",
+    "description": "Discover insights about your conversation patterns and relationship dynamics",
+    "emojis": "Emojis",
+    "error_loading": "Error loading analysis data",
+    "errors": {
+      "ai_insights_not_found": "AI insights not found. You may need to purchase AI analysis for this chat.",
+      "file_not_found": "File not found. Please try uploading your file again.",
+      "invalid_signature": "Invalid signature. Please try again.",
+      "loading_failed": "Failed to load analysis data. Please try again.",
+      "not_found": "Analysis not found. Please try uploading your file again.",
+      "order_not_found": "Order not found. Please try again.",
+      "payment_processing_failed": "Payment processing failed. Please try again.",
+      "result_not_found": "Analysis result not found. Please try uploading your file again."
+    },
+    "export_not_implemented": "Export feature is coming soon!",
+    "export_pdf": "Export as PDF",
+    "favorite_day_to_chat": "Favorite Day to Chat",
+    "first_message": "First Message",
+    "heatmap_data_not_available": "Heatmap data not available",
+    "high": "High",
+    "insights": {
+      "interaction_title": "Interaction Insights",
+      "relationship_title": "Relationship Insights"
+    },
+    "last_message": "Last Message",
+    "low": "Low",
+    "messages": "Messages",
+    "messages_count": "{count} messages",
+    "most_active_day": "Most Active Day",
+    "most_active_hour": "Most Active Hour",
+    "no_data_available": "No data available",
+    "no_data_found": "No data found",
+    "no_meaningful_words": "No meaningful words found",
+    "no_words_found": "No words found",
+    "not_found": "Analysis not found",
+    "overall_sentiment": "Overall Sentiment",
+    "overview_story_part1": "Your conversation tells a beautiful story through <span class='highlight'>{totalMessages} messages</span> exchanged over time. {sender1Name} sent <span class='highlight'>{sender1Messages} messages</span>, while {sender2Name} responded with <span class='highlight'>{sender2Messages} messages</span>.",
+    "overview_story_part2": "Together, you've woven a tapestry of <span class='highlight'>{totalWords} words</span>, with {sender1Name} contributing <span class='highlight'>{sender1Words} words</span> and {sender2Name} sharing <span class='highlight'>{sender2Words} words</span>. Your conversations are meaningful and substantial, with an average of <span class='highlight'>{wordsPerMessage} words per message</span>.",
+    "overview_story_part3": "Your most active conversations happen on <span class='highlight'>{mostActiveDay}</span>, with an average of <span class='highlight'>{avgMessagesPerDay} messages</span> exchanged daily. The typical response time of <span class='highlight'>{responseTime}</span> shows the eager anticipation you both feel when communicating with each other.",
+    "overview_title": "Overview",
+    "peak_activity_time": "Peak Activity Time",
+    "processing_errors": {
+      "filter_too_strict": "Warning: All messages were filtered out, filter conditions may be too strict",
+      "invalid_date": "Some messages have invalid dates",
+      "no_messages": "No valid messages could be extracted",
+      "processing_failed": "Processing failed: {message}",
+      "short_timespan": "Conversation timespan is very short, may not be a complete conversation",
+      "single_participant": "Only one participant detected, this may not be a conversation"
+    },
+    "relationship_analysis": {
+      "description": "Analysis of communication patterns and relationship dynamics based on message history.",
+      "title": "{sender}'s Communication Analysis"
+    },
+    "relationship_metrics": {
+      "communication": "Communication",
+      "conflict": "Conflict Management",
+      "emotional_stability": "Emotional Stability",
+      "interest_level": "Interest Level",
+      "intimacy": "Intimacy",
+      "response_enthusiasm": "Response Enthusiasm",
+      "response_time": "Response Time",
+      "trust": "Trust"
+    },
+    "relationship_metrics_hearts": {
+      "description": "Analysis of key relationship quality indicators based on communication patterns.",
+      "title": "Relationship Quality Metrics"
+    },
+    "relationship_metrics_radar": "{name}'s Communication Metrics",
+    "response_pattern_description": "Your typical response pattern is \"{responsePattern}\". Your conversations tend to be \"{conversationLength}\".",
+    "response_patterns": {
+      "consistent": "Consistent response times throughout the day",
+      "evening_active": "Quick responses in evening, slower in morning",
+      "morning_active": "More active in morning than evening"
+    },
+    "sentiment_analysis": "Sentiment Analysis",
+    "sentiment_description": "Your conversations have a sentiment score of {sentimentScore}, which indicates a {sentimentDescription} emotional tone. This reflects the overall mood and feeling of your exchanges.",
+    "sentiment_negative": "Negative",
+    "sentiment_neutral": "Neutral",
+    "sentiment_positive": "Positive",
+    "sentiment_score": "Sentiment Score",
+    "sentiment_very_negative": "Very Negative",
+    "sentiment_very_positive": "Very Positive",
+    "share": {
+      "copy_failed": "Failed to copy link",
+      "link_copied": "Link copied to clipboard"
+    },
+    "share_not_implemented": "Share feature is coming soon!",
+    "share_results": "Share Results",
+    "story_timeline_description": "Your story began on {startDate}, unfolding over {duration} days, until {endDate}—leaving an everlasting mark in the passage of time.",
+    "story_timeline_title": "Your Chat Journey",
+    "text_analysis_title": "Text Analysis",
+    "time_analysis_title": "Time Analysis",
+    "time_distribution": "Time Distribution",
+    "time_distribution_description": "You tend to chat most during the evening ({evening}%), followed by afternoon ({afternoon}%) and morning ({morning}%). This pattern shows when you're both most available and engaged in conversation.",
+    "time_of_day": {
+      "afternoon": "Afternoon",
+      "evening": "Evening",
+      "morning": "Morning",
+      "night": "Night"
+    },
+    "timespan_format": "Your story began on {startMonth} {startDay}, {startYear} {startDayName} 00:00, unfolding over {durationText}, until {endMonth} {endDay}, {endYear} {endDayName} 23:59—leaving an everlasting mark in the passage of time.",
+    "title": "Your Chat Analysis Results",
+    "top_emojis": "{name}'s Top Emojis",
+    "top_words": "Top Words",
+    "total_emojis": "Total Emojis",
+    "total_messages": "Total Messages",
+    "total_unique_words": "Total Unique Words",
+    "total_words": "Total Words",
+    "weekly_activity_heatmap": "Weekly Activity Heatmap",
+    "word": "Word",
+    "word_cloud": "Word Cloud",
+    "words": "Words",
+    "words_per_message": "Words Per Message"
   },
-  "common_words": "",
-  "copyright": "",
-  "count": "",
-  "daily_activity": "",
-  "daily_activity_description": "",
-  "days": "",
-  "description": "",
-  "emojis": "",
+  "common_words": "일반적인 단어",
+  "components": {
+    "action_buttons": {
+      "back_to_upload": "Back to Upload",
+      "copy_failed": "Failed to copy link",
+      "link_copied": "Link copied to clipboard",
+      "share_results": "Share Results"
+    },
+    "footer": {
+      "copyright": "© 2025 ChatRecap AI. All rights reserved.",
+      "privacy_policy": "Privacy Policy",
+      "terms_of_service": "Terms of Service"
+    },
+    "highlighted_text": {
+      "afternoon": "Afternoon",
+      "evening": "Evening",
+      "medium_conversations": "Medium Conversations",
+      "morning": "Morning",
+      "negative": "Negative",
+      "neutral": "Neutral",
+      "positive": "Positive",
+      "quick_responses": "Quick Responses",
+      "very_negative": "Very Negative",
+      "very_positive": "Very Positive"
+    },
+    "notification": {
+      "free": "FREE!",
+      "hours": "hours",
+      "hurry": "Hurry, this code expires in",
+      "limited_time_offer": "Limited Time Offer!",
+      "of_full_access": "of full access — absolutely",
+      "to_unlock": "to unlock",
+      "try_now": "Try Now",
+      "use_code": "Use code"
+    }
+  },
+  "copyright": "저작권",
+  "count": "세다",
+  "daily_activity": "일상 활동",
+  "daily_activity_description": "일일 활동 설명",
+  "days": "날",
+  "description": "설명",
+  "emojis": "이모티콘",
   "errors": {
-    "ai_insights_not_found": "",
-    "loading_failed": "",
-    "not_found": "",
-    "result_not_found": ""
+    "ai_insights_not_found": "AI 통찰력을 찾을 수 없습니다",
+    "loading_failed": "로드가 실패했습니다",
+    "not_found": "찾을 수 없습니다",
+    "result_not_found": "결과를 찾지 못했습니다"
   },
-  "evening": "",
-  "export_not_implemented": "",
-  "export_pdf": "",
-  "favorite_day_to_chat": "",
+  "evening": "저녁",
+  "export_not_implemented": "내보내기가 구현되지 않았습니다",
+  "export_pdf": "수출 PDF",
+  "favorite_day_to_chat": "채팅 할 좋아하는 날",
   "features": {
     "comprehensive_analysis": {
       "content": "우리의 고급 AI 알고리즘은 전체 채팅 기록을 분석하여 커뮤니케이션 패턴과 관계 역학에 대한 깊은 인사이트를 제공합니다.",
@@ -119,12 +420,24 @@
       "title": "주제 분석"
     }
   },
-  "first_message": "",
-  "free": "",
-  "free_analysis": "",
-  "heatmap_data_not_available": "",
-  "high": "",
-  "hours": "",
+  "first_message": "첫 번째 메시지",
+  "footer": {
+    "copyright": "© 2025 ChatRecap AI. All rights reserved.",
+    "privacy_policy": "Privacy Policy",
+    "social_links": {
+      "discord": "Discord",
+      "instagram": "Instagram",
+      "snapchat": "Snapchat",
+      "telegram": "Telegram",
+      "whatsapp": "WhatsApp"
+    },
+    "terms_of_service": "Terms of Service"
+  },
+  "free": "무료",
+  "free_analysis": "무료 분석",
+  "heatmap_data_not_available": "히트 맵 데이터를 사용할 수 없습니다",
+  "high": "높은",
+  "hours": "시간",
   "how_it_works": {
     "chat_notifications": {
       "messages": {
@@ -181,6 +494,7 @@
       "title": "채팅 플랫폼 선택"
     },
     "chatrecapresult": {
+      "active_hours": "활동적인 시간",
       "analysis_card": {
         "conversion_rate": {
           "content": "이번 달 전환율은 62%로, 지난 달보다 3 포인트 하락했습니다.\n분석에 따르면, 전환율 하락의 주요 원인은 새로운 프로모션 채널의 품질 저하입니다.\n고품질 트래픽 전환율은 안정적이지만, 저품질 트래픽 증가로 전체 전환율이 하락했습니다.\n트래픽 소스를 최적화하고, 방문자 품질을 향상시키며, 랜딩 페이지 경험을 개선하는 것이 좋습니다.",
@@ -200,6 +514,15 @@
       "avg_words_per_msg": "평균 단어/메시지",
       "back_to_upload": "업로드로 돌아가기",
       "chat_story": "채팅 스토리",
+      "common_topics": "일반적인 주제",
+      "communication_balance": "커뮤니케이션 균형",
+      "communication_patterns": "커뮤니케이션 패턴",
+      "communication_style": "커뮤니케이션 스타일",
+      "communication_tips": "커뮤니케이션 팁",
+      "conflict_patterns": "갈등 패턴",
+      "conflict_resolution": "갈등 해결",
+      "conversation_enders": "대화 엔더",
+      "conversation_starters": "대화 우선",
       "day_names": {
         "friday": "금요일",
         "monday": "월요일",
@@ -210,7 +533,14 @@
         "wednesday": "수요일"
       },
       "days": "일",
+      "decision_making": "의사 결정",
       "description": "대화 패턴과 관계 역학에 대한 인사이트 발견",
+      "emoji_analysis": "이모티콘 분석",
+      "emoji_by_participant": "참가자의 이모티콘",
+      "emoji_by_sentiment": "감정에 의한 이모티콘",
+      "emoji_timeline": "이모티콘 타임 라인",
+      "emotional_expression": "감정적 표현",
+      "emotional_support": "정서적 지원",
       "error_loading": "분석 데이터 로딩 오류",
       "errors": {
         "loading_failed": "분석 데이터 로딩에 실패했습니다. 다시 시도해 주세요.",
@@ -219,13 +549,23 @@
       "export_not_implemented": "내보내기 기능은 곧 제공될 예정입니다!",
       "export_pdf": "PDF로 내보내기",
       "first_message": "첫 메시지",
+      "growth_opportunities": "성장 기회",
+      "growth_over_time": "시간이 지남에 따라 성장",
+      "insights": {
+        "interaction_title": "상호 작용 제목",
+        "relationship_title": "관계 제목"
+      },
       "last_message": "마지막 메시지",
+      "message_frequency": "메시지 빈도",
+      "message_length": "메시지 길이",
       "messages": "메시지",
+      "next_steps": "다음 단계",
       "not_found": "분석을 찾을 수 없습니다",
       "overview_story_part1": "당신의 대화는 시간이 지남에 따라 교환된 <span class='highlight'>{totalMessages}개의 메시지</span>를 통해 아름다운 이야기를 들려줍니다. {sender1Name}은(는) <span class='highlight'>{sender1Messages}개의 메시지</span>를 보냈고, {sender2Name}은(는) <span class='highlight'>{sender2Messages}개의 메시지</span>로 응답했습니다.",
       "overview_story_part2": "함께, 여러분은 <span class='highlight'>{totalWords}개의 단어</span>로 이루어진 태피스트리를 짰습니다. {sender1Name}이(가) <span class='highlight'>{sender1Words}개의 단어</span>를 기여했고, {sender2Name}이(가) <span class='highlight'>{sender2Words}개의 단어</span>를 공유했습니다. 여러분의 대화는 의미 있고 실질적이며, 메시지당 평균 <span class='highlight'>{wordsPerMessage}개의 단어</span>를 포함합니다.",
       "overview_story_part3": "가장 활발한 대화는 <span class='highlight'>{mostActiveDay}</span>에 이루어지며, 매일 평균 <span class='highlight'>{avgMessagesPerDay}개의 메시지</span>가 교환됩니다. 일반적인 응답 시간인 <span class='highlight'>{responseTime}</span>은 서로 소통할 때 느끼는 열정적인 기대감을 보여줍니다.",
       "overview_title": "개요",
+      "personality_insights": "성격 통찰력",
       "processing_errors": {
         "filter_too_strict": "경고: 모든 메시지가 필터링되었습니다. 필터 조건이 너무 엄격할 수 있습니다",
         "invalid_date": "일부 메시지에 유효하지 않은 날짜가 있습니다",
@@ -234,13 +574,31 @@
         "short_timespan": "대화 기간이 매우 짧습니다. 완전한 대화가 아닐 수 있습니다",
         "single_participant": "참가자가 한 명만 감지되었습니다. 이것은 대화가 아닐 수 있습니다"
       },
+      "recommendations": "권장 사항",
+      "relationship_health": "관계 건강",
+      "relationship_insights": "관계 통찰력",
+      "relationship_suggestions": "관계 제안",
       "response_patterns": {
         "consistent": "하루 종일 일관된 응답 시간",
         "evening_active": "저녁에는 빠른 응답, 아침에는 더 느림",
         "morning_active": "저녁보다 아침에 더 활발함"
       },
+      "response_time": "응답 시간",
+      "sentiment_analysis": "감정 분석",
+      "sentiment_by_day": "낮까지의 감정",
+      "sentiment_by_hour": "시간마다 감정",
+      "sentiment_comparison": "감정 비교",
+      "sentiment_description": "감정 설명",
+      "sentiment_over_time": "시간이 지남에 따라 감정",
+      "sentiment_score": "감정 점수",
+      "share": {
+        "copy_failed": "복사 실패",
+        "link_copied": "링크 복사"
+      },
       "share_not_implemented": "공유 기능은 곧 제공될 예정입니다!",
       "share_results": "결과 공유하기",
+      "social_tendencies": "사회적 경향",
+      "text_analysis_title": "텍스트 분석 제목",
       "time_of_day": {
         "afternoon": "오후",
         "evening": "저녁",
@@ -249,8 +607,14 @@
       },
       "timespan_format": "당신의 이야기는 {startYear}년 {startMonth}{startDay}일 ({startDayName}) 00:00에 시작되어 {durationText} 동안 펼쳐졌으며, {endYear}년 {endMonth}{endDay}일 ({endDayName}) 23:59까지 계속되었습니다—시간의 흐름 속에 영원한 흔적을 남겼습니다.",
       "title": "채팅 분석 결과",
+      "top_emojis": "최고 이모티콘",
+      "topic_analysis": "주제 분석",
+      "topic_by_participant": "참가자의 주제",
+      "topic_distribution": "주제 분포",
+      "topic_over_time": "시간이 지남에 따라 주제",
       "total_messages": "총 메시지",
       "total_words": "총 단어 수",
+      "values_and_interests": "가치와 관심사",
       "words": "단어",
       "words_per_message": "메시지당 단어 수"
     },
@@ -296,38 +660,40 @@
     "subtitle": "대화에 대한 인사이트를 얻기 위한 간단한 3단계 과정",
     "title": "Chat Recap AI로 채팅을 분석하는 방법은?"
   },
-  "hurry": "",
+  "hurry": "서두르다",
   "insights": {
-    "interaction_title": "",
-    "relationship_title": ""
+    "interaction_title": "상호 작용 제목",
+    "relationship_title": "관계 제목"
   },
-  "keywords": "",
-  "last_message": "",
-  "limited_time_offer": "",
-  "low": "",
-  "medium_conversations": "",
+  "keywords": "키워드",
+  "last_message": "마지막 메시지",
+  "limited_time_offer": "제한된 시간 제안",
+  "low": "낮은",
+  "medium_conversations": "중간 대화",
   "messages": {
-    "message1": "",
-    "message2": "",
-    "message3": "",
-    "message4": "",
-    "message5": "",
-    "message6": "",
-    "message7": ""
+    "message1": "메시지 1",
+    "message2": "메시지 2",
+    "message3": "메시지 3",
+    "message4": "메시지 4",
+    "message5": "메시지 5",
+    "message6": "메시지 6",
+    "message7": "메시지 7"
   },
-  "messages_count_other": "",
+  "messages_count_many": "메시지는 많은 수를 계산합니다",
+  "messages_count_one": "메시지를 계산합니다",
+  "messages_count_other": "메시지는 기타를 계산합니다",
   "meta": {
-    "description": "",
-    "title": ""
+    "description": "설명",
+    "title": "제목"
   },
   "metadata": {
     "description": "채팅 기록을 분석하고 싶으신가요? ChatRecap AI는 WhatsApp, Instagram, Snapchat, Discord, Telegram에서의 대화를 이해하는 데 도움을 줍니다. 크로스 플랫폼 인사이트를 얻고 여러분의 커뮤니케이션 패턴을 발견하세요.",
     "keywords": "chatrecap, 채팅 분석기, 왓츠앱 분석기, 인스타그램 채팅 분석, 디스코드 채팅 분석, 텔레그램 분석기, 스냅챗 분석, 채팅 기록, 대화 패턴, 메시징 인사이트, 크로스 플랫폼 채팅 분석, 채팅 내보내기, 채팅 메트릭스",
     "title": "Chat Recap AI: 가입 없이 무료로 채팅을 분석하는 온라인 도구 - chatrecap.io"
   },
-  "morning": "",
-  "most_active_day": "",
-  "most_active_hour": "",
+  "morning": "아침",
+  "most_active_day": "가장 활동적인 날",
+  "most_active_hour": "가장 활동적인 시간",
   "my_credits": {
     "left_tip": "남은 크레딧: {left_credits}",
     "no_credits": "크레딧 기록이 없습니다",
@@ -388,113 +754,140 @@
     "tip": "채팅을 업로드하여 시작하세요",
     "title": "내 분석 기록"
   },
-  "negative": "",
-  "neutral": "",
-  "no_data_available": "",
-  "no_data_found": "",
-  "no_meaningful_words": "",
-  "no_words_found": "",
-  "of_full_access": "",
-  "overall_sentiment": "",
-  "overview_story_part1": "",
-  "overview_story_part2": "",
-  "overview_story_part3": "",
-  "overview_title": "",
+  "negative": "부정적인",
+  "neutral": "중립적",
+  "no_data_available": "사용 가능한 데이터가 없습니다",
+  "no_data_found": "데이터가 발견되지 않았습니다",
+  "no_meaningful_words": "의미있는 말이 없습니다",
+  "no_words_found": "발견 된 단어가 없습니다",
+  "notification": {
+    "free": "FREE!",
+    "hours": "hours",
+    "hurry": "Hurry, this code expires in",
+    "limited_time_offer": "제한된 시간 제안!",
+    "of_full_access": "of full access — absolutely",
+    "to_unlock": "to unlock",
+    "try_now": "Try Now",
+    "use_code": "Use code"
+  },
+  "of_full_access": "전체 액세스",
+  "overall_sentiment": "전반적인 감정",
+  "overview_story_part1": "개요 스토리 Part1",
+  "overview_story_part2": "개요 스토리 Part2",
+  "overview_story_part3": "개요 스토리 Part3",
+  "overview_title": "개요 제목",
   "payment": {
-    "error_title": ""
+    "description": "Use AI to deeply analyze your chat history and get personality insights and relationship analysis",
+    "error_title": "Error",
+    "missing_file_id": "Missing file ID, please upload a file first",
+    "pay_button": "Pay Now",
+    "processing": "Processing...",
+    "return_home": "Return to Home",
+    "service_name": "AI Chat Analysis Service",
+    "title": "AI Chat Analysis"
   },
-  "peak_activity_time": "",
-  "placeholder": "",
+  "peak_activity_time": "피크 활동 시간",
+  "placeholder": "자리 표시 자",
   "platforms": {
-    "discord": "",
-    "instagram": "",
-    "snapchat": "",
-    "telegram": "",
-    "whatsapp": ""
+    "discord": "불화",
+    "instagram": "인스 타 그램",
+    "snapchat": "Snapchat",
+    "telegram": "전보",
+    "whatsapp": "whatsapp"
   },
-  "positive": "",
+  "positive": "긍정적인",
   "pricing": {
     "description": "1 크레딧 ≈ 현재 5000단어, 비용 최적화를 위해 노력하고 있습니다.",
     "title": "고급 AI 분석을 위한 크레딧 구매"
   },
   "processing": {
-    "analysis_progress": "",
-    "analyzing": "",
-    "cleaning": "",
-    "cleaning_progress": "",
-    "completed": "",
-    "description": "",
-    "failed": "",
-    "preparing": "",
-    "processing": "",
-    "result_fetch_failed": "",
-    "status_fetch_failed": "",
-    "title": "",
-    "uploading": ""
+    "analysis_progress": "분석 진행",
+    "analyzing": "분석",
+    "cleaning": "청소",
+    "cleaning_progress": "청소 진행",
+    "completed": "완전한",
+    "description": "설명",
+    "failed": "실패한",
+    "preparing": "준비",
+    "processing": "처리",
+    "result_fetch_failed": "결과 페치가 실패했습니다",
+    "status_fetch_failed": "상태 페치가 실패했습니다",
+    "title": "제목",
+    "uploading": "업로드"
   },
-  "quick_responses": "",
+  "quick_responses": "빠른 응답",
   "relationship_analysis": {
-    "description": ""
+    "description": "설명"
   },
   "relationship_metrics": {
-    "emotional_stability": "",
-    "interest_level": "",
-    "response_enthusiasm": "",
-    "response_time": ""
+    "emotional_stability": "정서적 안정성",
+    "interest_level": "관심 수준",
+    "response_enthusiasm": "응답 열정",
+    "response_time": "응답 시간"
   },
   "relationship_metrics_hearts": {
-    "description": "",
-    "title": ""
+    "description": "설명",
+    "title": "제목"
   },
-  "response_pattern_description": "",
+  "response_pattern_description": "응답 패턴 설명",
   "results": {
-    "back": "",
-    "date_range": "",
-    "description": "",
-    "export": "",
-    "filtered_messages": "",
-    "link_copied": "",
-    "media_messages_other": "",
-    "messages_description_other": "",
-    "messages_title": "",
-    "next": "",
-    "no_messages": "",
-    "no_search_results": "",
-    "page_info": "",
-    "participants": "",
-    "previous": "",
-    "search": "",
-    "search_placeholder": "",
-    "share": "",
-    "share_text_other": "",
-    "share_title": "",
-    "summary_description": "",
-    "summary_title": "",
-    "system_messages_other": "",
-    "title": "",
-    "total_messages": "",
-    "unknown_date_range": "",
-    "valid_date_messages_other": "",
-    "warnings_title": ""
+    "back": "뒤쪽에",
+    "date_range": "날짜 범위",
+    "description": "설명",
+    "export": "내보내다",
+    "filtered_messages": "필터링 된 메시지",
+    "link_copied": "링크 복사",
+    "media_messages_many": "많은 미디어 메시지",
+    "media_messages_one": "미디어 메시지 하나",
+    "media_messages_other": "미디어 메시지 기타",
+    "messages_description_many": "메시지 설명 많은",
+    "messages_description_one": "메시지 설명 하나",
+    "messages_description_other": "메시지 설명 기타",
+    "messages_title": "메시지 제목",
+    "next": "다음",
+    "no_messages": "메시지가 없습니다",
+    "no_search_results": "검색 결과가 없습니다",
+    "page_info": "페이지 정보",
+    "participants": "참가자들",
+    "previous": "이전의",
+    "search": "찾다",
+    "search_placeholder": "Search Placholder",
+    "share": "공유하다",
+    "share_text_many": "텍스트를 많이 공유하십시오",
+    "share_text_one": "텍스트 하나를 공유하십시오",
+    "share_text_other": "다른 텍스트를 공유하십시오",
+    "share_title": "제목을 공유하십시오",
+    "summary_description": "요약 설명",
+    "summary_title": "요약 제목",
+    "system_messages_many": "많은 시스템 메시지",
+    "system_messages_one": "시스템 메시지 하나",
+    "system_messages_other": "시스템 메시지 기타",
+    "title": "제목",
+    "total_messages": "총 메시지",
+    "unknown_date_range": "알 수없는 날짜 범위",
+    "valid_date_messages_many": "유효한 날짜 메시지 많은",
+    "valid_date_messages_one": "유효한 날짜 메시지 하나",
+    "valid_date_messages_other": "유효한 날짜 메시지 기타",
+    "warnings_title": "경고 제목"
   },
-  "sample_button_text": "",
-  "sample_chat_text": "",
-  "select_button": "",
-  "sentiment_analysis": "",
-  "sentiment_description": "",
-  "sentiment_negative": "",
-  "sentiment_neutral": "",
-  "sentiment_positive": "",
-  "sentiment_score": "",
-  "sentiment_very_negative": "",
-  "sentiment_very_positive": "",
+  "sample_button_text": "샘플 버튼 텍스트",
+  "sample_chat_text": "샘플 채팅 텍스트",
+  "select_button": "선택 버튼을 선택하십시오",
+  "sentiment_analysis": "감정 분석",
+  "sentiment_description": "감정 설명",
+  "sentiment_negative": "감정 부정",
+  "sentiment_neutral": "감정 중립",
+  "sentiment_positive": "정서 양성",
+  "sentiment_score": "감정 점수",
+  "sentiment_very_negative": "매우 부정적인 감정",
+  "sentiment_very_positive": "감정은 매우 긍정적입니다",
   "share": {
-    "copy_failed": "",
-    "link_copied": ""
+    "copy_failed": "복사 실패",
+    "link_copied": "링크 복사"
   },
-  "share_not_implemented": "",
-  "share_results": "",
-  "sharing": "",
+  "share_not_implemented": "구현되지 않은 공유",
+  "share_results": "결과를 공유하십시오",
+  "sharing": "공유",
   "sign_modal": {
     "cancel_title": "취소",
     "close_title": "닫기",
@@ -515,18 +908,18 @@
     "sign_up_title": "회원가입"
   },
   "speakers": {
-    "boyfriend": "",
-    "crush": "",
-    "ex": "",
-    "friend": "",
-    "girlfriend": "",
-    "her": "",
-    "him": ""
+    "boyfriend": "남자 친구",
+    "crush": "으깨다",
+    "ex": "전",
+    "friend": "친구",
+    "girlfriend": "여자 친구",
+    "her": "그녀의",
+    "him": "그를"
   },
-  "story_timeline_description": "",
-  "story_timeline_title": "",
-  "subtitle": "",
-  "supported_formats": "",
+  "story_timeline_description": "스토리 타임 라인 설명",
+  "story_timeline_title": "스토리 타임 라인 제목",
+  "subtitle": "부제",
+  "supported_formats": "지원되는 형식",
   "testimonial": {
     "items": [
       {
@@ -548,44 +941,44 @@
     "subtitle": "관계에 대한 더 깊은 인사이트를 발견한 사용자들",
     "title": "연인들이 사랑하는 서비스"
   },
-  "text_analysis_title": "",
-  "time_analysis_title": "",
-  "time_distribution": "",
-  "time_distribution_description": "",
+  "text_analysis_title": "텍스트 분석 제목",
+  "time_analysis_title": "시간 분석 제목",
+  "time_distribution": "시간 분포",
+  "time_distribution_description": "시간 분포 설명",
   "times": {
-    "days_ago": "",
-    "hours_ago": "",
-    "just_now": "",
-    "minutes_ago": ""
+    "days_ago": "며칠 전",
+    "hours_ago": "몇 시간 전",
+    "just_now": "방금",
+    "minutes_ago": "몇 분 전"
   },
-  "title": "",
-  "to_unlock": "",
-  "top_emojis": "",
-  "top_words": "",
-  "total_emojis": "",
-  "total_messages": "",
-  "total_unique_words": "",
-  "total_words": "",
-  "try_now": "",
+  "title": "제목",
+  "to_unlock": "잠금 해제",
+  "top_emojis": "최고 이모티콘",
+  "top_words": "가장 큰 단어",
+  "total_emojis": "총 이모티콘",
+  "total_messages": "총 메시지",
+  "total_unique_words": "총 독특한 단어",
+  "total_words": "총 단어",
+  "try_now": "지금 시도하십시오",
   "upload": {
-    "description": "",
-    "drop_files": "",
-    "error": "",
-    "failed": "",
-    "file_size_limit": "",
-    "invalid_format": "",
-    "no_file_selected": "",
-    "select_file": "",
-    "supported_formats": "",
-    "title": "",
-    "upload_button": "",
-    "upload_failed": "",
-    "uploading": ""
+    "description": "설명",
+    "drop_files": "파일 드롭",
+    "error": "오류",
+    "failed": "실패한",
+    "file_size_limit": "파일 크기 제한",
+    "invalid_format": "잘못된 형식",
+    "no_file_selected": "선택된 파일이 없습니다",
+    "select_file": "파일을 선택하십시오",
+    "supported_formats": "지원되는 형식",
+    "title": "제목",
+    "upload_button": "업로드 버튼",
+    "upload_failed": "업로드 실패",
+    "uploading": "업로드"
   },
-  "upload_button_text": "",
-  "upload_description": "",
-  "upload_title": "",
-  "use_code": "",
+  "upload_button_text": "버튼 텍스트 업로드",
+  "upload_description": "설명을 업로드하십시오",
+  "upload_title": "제목 업로드",
+  "use_code": "코드를 사용하십시오",
   "user": {
     "admin_system": "관리자 시스템",
     "api_keys": "API 키",
@@ -595,12 +988,12 @@
     "sign_out": "로그아웃",
     "user_center": "사용자 센터"
   },
-  "very_negative": "",
-  "very_positive": "",
+  "very_negative": "매우 부정적인",
+  "very_positive": "매우 긍정적입니다",
   "view_guide": "View download guide",
-  "weekly_activity_heatmap": "",
-  "word": "",
-  "word_cloud": "",
-  "words": "",
-  "words_per_message": ""
+  "weekly_activity_heatmap": "주간 활동 히트 맵",
+  "word": "단어",
+  "word_cloud": "Word Cloud",
+  "words": "단어",
+  "words_per_message": "메시지 당 단어"
 }

@@ -1,11 +1,79 @@
 import { LandingPage } from "@/types/pages/landing";
 
-// 缓存对象，用于存储已加载的页面数据
+// 缓存对象，使用 Map 提高查找性能
 // 键为语言代码，值为页面数据和过期时间
-const pageCache: Record<string, { data: LandingPage; expiry: number }> = {};
+const pageCache = new Map<string, { data: LandingPage; expiry: number }>();
 
-// 缓存有效期（毫秒）- 1小时
-const CACHE_TTL = 60 * 60 * 1000;
+// 缓存有效期（毫秒）- 增加到24小时，减少重新加载频率
+const CACHE_TTL = 24 * 60 * 60 * 1000;
+
+// 支持的语言列表
+const SUPPORTED_LOCALES = ['en', 'zh', 'es', 'tr', 'de', 'ko', 'fr', 'ja'];
+
+// 预加载英文数据的 Promise
+let preloadedEnData: Promise<LandingPage> | null = null;
+
+// 在服务器启动时预加载英文数据
+if (typeof window === 'undefined') {
+  preloadedEnData = import('@/i18n/pages/landing/en.json')
+    .then(module => {
+      // 确保数据符合 LandingPage 类型
+      const data = module.default;
+      return validateAndFixLandingPageData(data);
+    })
+    .catch(() => ({}));
+}
+
+/**
+ * 验证并修复 LandingPage 数据，确保类型兼容
+ * @param data 原始数据
+ * @returns 修复后的数据
+ */
+function validateAndFixLandingPageData(data: any): LandingPage {
+  if (!data) return {};
+
+  // 创建一个新对象，避免修改原始数据
+  const fixedData = { ...data };
+
+  // 修复 header.buttons 中的 variant 属性
+  if (fixedData.header?.buttons?.length) {
+    fixedData.header.buttons = fixedData.header.buttons.map((button: any) => ({
+      ...button,
+      // 确保 variant 是有效的 ButtonVariant 类型
+      variant: validateButtonVariant(button.variant)
+    }));
+  }
+
+  // 修复 hero.buttons 中的 variant 属性
+  if (fixedData.hero?.buttons?.length) {
+    fixedData.hero.buttons = fixedData.hero.buttons.map((button: any) => ({
+      ...button,
+      // 确保 variant 是有效的 ButtonVariant 类型
+      variant: validateButtonVariant(button.variant)
+    }));
+  }
+
+  // 修复 footer.buttons 中的 variant 属性
+  if (fixedData.footer?.buttons?.length) {
+    fixedData.footer.buttons = fixedData.footer.buttons.map((button: any) => ({
+      ...button,
+      // 确保 variant 是有效的 ButtonVariant 类型
+      variant: validateButtonVariant(button.variant)
+    }));
+  }
+
+  return fixedData;
+}
+
+/**
+ * 验证按钮变体是否有效，如果无效则返回默认值
+ * @param variant 按钮变体
+ * @returns 有效的按钮变体
+ */
+function validateButtonVariant(variant: any): "secondary" | "link" | "default" | "destructive" | "outline" | "ghost" | null | undefined {
+  const validVariants = ["secondary", "link", "default", "destructive", "outline", "ghost", null, undefined];
+  return validVariants.includes(variant) ? variant : "default";
+}
 
 /**
  * 验证对象是否符合 LandingPage 接口
@@ -19,21 +87,24 @@ function isLandingPage(obj: any): obj is LandingPage {
 }
 
 /**
- * 获取落地页数据，带有内存缓存
+ * 获取落地页数据，带有内存缓存和预加载优化
  * @param locale 语言代码
  * @returns 落地页数据
  */
 export async function getLandingPage(locale: string): Promise<LandingPage> {
   // 标准化语言代码
-  if (locale === "zh-CN") {
-    locale = "zh";
+  if (locale === "en") {
+    locale = "en";
   }
 
+  // 确保语言代码有效
   const normalizedLocale = locale.toLowerCase();
+  const isValidLocale = SUPPORTED_LOCALES.includes(normalizedLocale);
+  const safeLocale = isValidLocale ? normalizedLocale : 'en';
 
   // 检查缓存中是否有有效数据
   const now = Date.now();
-  const cachedData = pageCache[normalizedLocale];
+  const cachedData = pageCache.get(safeLocale);
 
   if (cachedData && cachedData.expiry > now) {
     // 返回缓存的数据
@@ -44,45 +115,65 @@ export async function getLandingPage(locale: string): Promise<LandingPage> {
   try {
     // 使用 import() 动态加载语言文件
     // Next.js 会自动优化这些导入
-    const module = await import(`@/i18n/pages/landing/${normalizedLocale}.json`);
-    const data = module.default;
+    const module = await import(`@/i18n/pages/landing/${safeLocale}.json`);
+    const rawData = module.default;
 
     // 验证数据是否符合 LandingPage 接口
-    if (!isLandingPage(data)) {
+    if (!isLandingPage(rawData)) {
       throw new Error(`Invalid landing page data for locale: ${locale}`);
     }
 
+    // 验证并修复数据，确保类型兼容
+    const data = validateAndFixLandingPageData(rawData);
+
     // 更新缓存
-    pageCache[normalizedLocale] = {
+    pageCache.set(safeLocale, {
       data,
       expiry: now + CACHE_TTL
-    };
+    });
 
     return data;
   } catch (error) {
-    console.warn(`Failed to load ${normalizedLocale}.json, falling back to en.json`);
+    console.warn(`Failed to load ${safeLocale}.json, falling back to en.json`);
 
     // 尝试加载英文版本作为后备
     try {
       // 检查英文缓存
-      const enCache = pageCache['en'];
+      const enCache = pageCache.get('en');
       if (enCache && enCache.expiry > now) {
         return enCache.data;
       }
 
+      // 使用预加载的英文数据（如果可用）
+      if (preloadedEnData) {
+        const data = await preloadedEnData;
+
+        // 更新英文缓存
+        pageCache.set('en', {
+          data,
+          expiry: now + CACHE_TTL
+        });
+
+        return data;
+      }
+
+      // 如果没有预加载数据，则动态加载
       const module = await import("@/i18n/pages/landing/en.json");
-      const data = module.default;
+      const rawData = module.default;
 
       // 验证数据是否符合 LandingPage 接口
-      if (!isLandingPage(data)) {
+      if (!isLandingPage(rawData)) {
         throw new Error('Invalid landing page data for fallback locale: en');
       }
 
+      // 验证并修复数据，确保类型兼容
+      const data = validateAndFixLandingPageData(rawData);
+
       // 更新英文缓存
-      pageCache['en'] = {
+      pageCache.set('en', {
         data,
         expiry: now + CACHE_TTL
-      };
+      });
 
       return data;
     } catch (fallbackError) {

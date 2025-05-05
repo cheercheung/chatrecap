@@ -1,613 +1,1008 @@
 {
-    "template": "shipany-template-one",
-    "theme": "light",
-    "header": {
-        "brand": {
-            "title": "ChatRecap AI",
-            "logo": {
-                "src": "/logo.png",
-                "alt": "ChatRecap AI"
-            },
-            "url": "/"
-        },
-        "nav": {
-            "items": [{
-                    "title": "功能特点",
-                    "url": "/#feature",
-                    "icon": "HiOutlineSparkles"
-                },
-                {
-                    "title": "使用方法",
-                    "url": "/#usage",
-                    "icon": "RiQuestionLine"
-                },
-                {
-                    "title": "价格",
-                    "url": "/#pricing",
-                    "icon": "MdPayment"
-                },
-                {
-                    "title": "支持平台",
-                    "url": "/#showcase",
-                    "icon": "BiCube",
-                    "children": [{
-                            "title": "WhatsApp分析",
-                            "description": "分析WhatsApp聊天记录",
-                            "icon": "RiWhatsappLine",
-                            "url": "/#whatsapp",
-                            "target": "_self"
-                        },
-                        {
-                            "title": "Instagram分析",
-                            "description": "分析Instagram私信",
-                            "icon": "RiInstagramLine",
-                            "url": "/#instagram",
-                            "target": "_self"
-                        }
-                    ]
-                }
-            ]
-        },
-        "buttons": [{
-            "title": "免费试用",
-            "url": "/chatrecapanalysis",
-            "target": "_self",
-            "variant": "link",
-            "icon": "RiArrowRightUpLine"
-        }],
-        "show_sign": true,
-        "show_theme": true,
-        "show_locale": true
+  "afternoon": "Afternoon",
+  "ai_analysis": {
+    "analyzing": "Analyzing your chat data",
+    "error": "Analysis Error",
+    "error_description": "There was an error analyzing your chat data. Please try again.",
+    "failed": "Analysis Failed",
+    "failed_description": "We couldn't complete the analysis of your chat data. Please try again.",
+    "generate": "Generate AI Analysis",
+    "please_wait": "Please wait while we analyze your chat data",
+    "starting": "Starting analysis",
+    "success": "Analysis Complete",
+    "success_description": "Your chat analysis is ready to view"
+  },
+  "analyze_button": "Analyze",
+  "avg_words_per_msg": "Average words per message",
+  "back_to_upload": "Back to Upload",
+  "badge": "Badge",
+  "blog": {
+    "description": "Latest news and updates from our team",
+    "read_more_text": "Read More",
+    "title": "Blog"
+  },
+  "busiest_date": "Busiest date",
+  "chatrecapresult": {
+    "description": "View the analysis of your chat history",
+    "title": "Chat Recap Results"
+  },
+  "common_words": "Common words",
+  "copyright": "© 2025 • ChatRecap AI All rights reserved.",
+  "count": "Count",
+  "cta": {
+    "buttons": [
+      {
+        "icon": "GoArrowUpRight",
+        "target": "_self",
+        "title": "立即试用",
+        "url": "/chatrecapanalysis"
+      }
+    ],
+    "description": "加入数千名使用ChatRecap AI使会议更有成效的专业人士。",
+    "name": "cta",
+    "title": "今天就开始节省会议记录的时间"
+  },
+  "daily_activity": "Daily Activity",
+  "daily_activity_description": "See when you chat the most throughout the day",
+  "days": "days",
+  "description": "Description",
+  "emojis": "Emojis",
+  "errors": {
+    "ai_insights_not_found": "AI insights not found",
+    "loading_failed": "Failed to load data",
+    "not_found": "Not found",
+    "result_not_found": "Analysis result not found"
+  },
+  "evening": "Evening",
+  "export_not_implemented": "Export feature is not implemented yet",
+  "export_pdf": "Export as PDF",
+  "faq": {
+    "description": "还有其他问题？通过电子邮件或聊天联系我们。",
+    "items": [
+      {
+        "description": "ChatRecap AI适用于几乎任何类型的会议或通话，包括一对一会议、团队会议、客户通话、面试等。它支持所有主要的会议平台，如Zoom、Google Meet、Microsoft Teams、Webex等。",
+        "title": "ChatRecap AI可以总结哪些类型的会议？"
+      },
+      {
+        "description": "ChatRecap AI使用先进的AI模型，这些模型经过数百万次会议的训练，提供高度准确的摘要。我们的技术通常能捕捉到会议中95%以上的关键点、决策和行动项目。",
+        "title": "会议摘要的准确性如何？"
+      },
+      {
+        "description": "是的，安全是我们的首要任务。所有会议数据在传输和处理过程中都经过加密。我们提供灵活的数据保留政策，如果需要，您可以选择在处理后自动删除您的数据。",
+        "title": "我的会议数据安全吗？"
+      },
+      {
+        "description": "大多数会议摘要在会议结束后5-10分钟内交付，具体取决于会议的长度。对于较长的会议（超过2小时），可能需要长达30分钟。",
+        "title": "获取会议摘要需要多长时间？"
+      },
+      {
+        "description": "是的，专业版和团队版用户可以自定义他们的摘要格式，包括要包含/排除的部分、详细程度和交付偏好。您可以为不同类型的会议创建模板。",
+        "title": "我可以自定义摘要格式吗？"
+      },
+      {
+        "description": "ChatRecap AI自动识别会议期间提到的行动项目、截止日期和负责方。这些在摘要中被突出显示，并可以导出到任务管理工具，如Asana、Trello或Monday.com。",
+        "title": "行动项目跟踪是如何工作的？"
+      },
+      {
+        "description": "Early access members enjoy priority access to ChatRecap AI's full feature set and receive exclusive introductory pricing. Members also benefit from extended premium features during their initial subscription period and gain early access to new analysis tools as they're developed.",
+        "title": "What benefits do early access members receive?"
+      },
+      {
+        "description": "As a specialized WhatsApp chat analyzer, we've streamlined this process: 1) Open WhatsApp and navigate to your target conversation 2) Tap the three-dots menu > More > Export chat 3) Choose whether to include media (our analyzer processes both options) 4) Upload the exported file directly to ChatRecap AI for immediate analysis. For other platforms like Instagram, Telegram, Discord, or Snapchat, simply follow our platform-specific export guides available in our Help Center.",
+        "title": "How do I export my chat for analysis with ChatRecap AI?"
+      },
+      {
+        "description": "ChatRecap AI stands apart from basic WhatsApp chat analyzers through our proprietary deep learning models specifically designed for relationship communication analysis. Unlike standard WhatsApp chat analyzers that provide only basic statistics, ChatRecap AI detects subtle emotional patterns, relationship dynamics, and communication trends that other tools miss. Our platform offers unique features including sentiment progression tracking, conversation quality assessment, and relationship health indicators based on established communication research.",
+        "title": "What makes ChatRecap AI different from other chat analyzers?"
+      },
+      {
+        "description": "ChatRecap AI's comprehensive analysis includes detailed metrics across multiple dimensions: message frequency patterns (by day/hour), response time analytics (average and trends), emotional content mapping (positive/negative sentiment distribution), conversation topic clustering, and engagement level metrics. Premium users receive advanced insights including communication style compatibility assessments, media sharing pattern analysis, peak activity time identification, and relationship dynamic evaluations based on longitudinal chat data analysis.",
+        "title": "What specific metrics does ChatRecap AI's analysis reveal?"
+      }
+    ],
+    "label": "常见问题",
+    "name": "faq",
+    "title": "关于ChatRecap AI的常见问题"
+  },
+  "favorite_day_to_chat": "Favorite day to chat",
+  "feature": {
+    "description": "通过我们先进的分析工具，从您的对话中发现强大的洞察。",
+    "items": [
+      {
+        "description": "分析您在WhatsApp、微信、Instagram等平台上的聊天频率和模式。识别高峰期，追踪回复时间变化，发现跨平台的统一趋势。",
+        "icon": "RiGlobalLine",
+        "title": "跨平台互动分析"
+      },
+      {
+        "description": "使用先进的自然语言处理技术揭示您独特的沟通风格，分析词汇使用情况、表情符号模式，并揭示情感和关系特定的语言模式。",
+        "icon": "RiChatSmile3Line",
+        "title": "沟通风格和语言分析"
+      },
+      {
+        "description": "了解对话如何开始、发展和结束。追踪谁更经常发起互动，检测对话主题和情感基调的变化。",
+        "icon": "RiFlowChart",
+        "title": "对话流程与动态"
+      },
+      {
+        "description": "检测情感基调，识别健康或不健康的行为模式，培养意识以促进您关系中更好的沟通习惯。",
+        "icon": "RiHeartLine",
+        "title": "情感分析与健康洞察"
+      },
+      {
+        "description": "测量回复长度、对话深度和参与频率，评估双方的投入程度。",
+        "icon": "RiBarChartLine",
+        "title": "参与深度与频率指标"
+      },
+      {
+        "description": "揭示谁分享更多个人细节，追踪开放程度，发现创建更平衡、互惠关系动态的提示。",
+        "icon": "RiUserHeartLine",
+        "title": "个人信息分享平衡"
+      }
+    ],
+    "name": "feature",
+    "title": "ChatRecap AI的核心功能"
+  },
+  "first_message": "First message",
+  "footer": {
+    "brand": {
+      "description": "AI驱动的会议摘要，节省您的时间并保持您的组织。再也不会错过重要细节或行动项目。",
+      "logo": {
+        "alt": "ChatRecap AI",
+        "src": "/logo.png"
+      },
+      "title": "ChatRecap AI",
+      "url": "/"
     },
-    "hero": {
-        "title": "使用ChatRecap AI分析您的对话",
-        "highlight_text": "ChatRecap AI",
-        "description": "通过Chat Recap AI揭示聊天中隐藏的模式和洞察，展现沟通模式、回复时间和情感连接。",
-        "announcement": {
-            "label": "2024",
-            "title": "🚀 现已适用于团队和个人",
+    "copyright": "© 2024 ChatRecap AI. 保留所有权利。",
+    "links": [
+      {
+        "items": [
+          {
+            "title": "功能",
+            "url": "/#feature"
+          },
+          {
+            "title": "价格",
             "url": "/#pricing"
-        },
-        "tip": "⌛️ 限时优惠 100%折扣",
-        "buttons": [{
-            "title": "免费试用Recap AI",
-            "icon": "RiFlashlightFill",
-            "url": "/chatrecapanalysis",
-            "target": "_self",
-            "variant": "default"
-        }],
-        "show_happy_users": true,
-        "show_badge": true,
-        "features_disabled": {
-            "note": "这部分配置已被替换为聊天通知组件，暂时保留",
-            "title": "主要功能",
-            "items": [{
-                    "title": "浪漫体验",
-                    "description": "为用户提供浪漫温馨的体验",
-                    "icon": "Heart"
-                },
-                {
-                    "title": "快速响应",
-                    "description": "系统响应迅速，运行流畅",
-                    "icon": "Zap"
-                },
-                {
-                    "title": "安全可靠",
-                    "description": "加密数据存储，保护用户隐私",
-                    "icon": "Shield"
-                },
-                {
-                    "title": "精美设计",
-                    "description": "精心设计的界面，提供愉悦的视觉体验",
-                    "icon": "Star"
-                },
-                {
-                    "title": "24/7服务",
-                    "description": "全天候客户支持服务",
-                    "icon": "Clock"
-                }
-            ]
-        }
-    },
-
-    "feature": {
-        "name": "feature",
-        "title": "ChatRecap AI的核心功能",
-        "description": "通过我们先进的分析工具，从您的对话中发现强大的洞察。",
-        "items": [{
-                "title": "跨平台互动分析",
-                "description": "分析您在WhatsApp、微信、Instagram等平台上的聊天频率和模式。识别高峰期，追踪回复时间变化，发现跨平台的统一趋势。",
-                "icon": "RiGlobalLine"
-            },
-            {
-                "title": "沟通风格和语言分析",
-                "description": "使用先进的自然语言处理技术揭示您独特的沟通风格，分析词汇使用情况、表情符号模式，并揭示情感和关系特定的语言模式。",
-                "icon": "RiChatSmile3Line"
-            },
-            {
-                "title": "对话流程与动态",
-                "description": "了解对话如何开始、发展和结束。追踪谁更经常发起互动，检测对话主题和情感基调的变化。",
-                "icon": "RiFlowChart"
-            },
-            {
-                "title": "情感分析与健康洞察",
-                "description": "检测情感基调，识别健康或不健康的行为模式，培养意识以促进您关系中更好的沟通习惯。",
-                "icon": "RiHeartLine"
-            },
-            {
-                "title": "参与深度与频率指标",
-                "description": "测量回复长度、对话深度和参与频率，评估双方的投入程度。",
-                "icon": "RiBarChartLine"
-            },
-            {
-                "title": "个人信息分享平衡",
-                "description": "揭示谁分享更多个人细节，追踪开放程度，发现创建更平衡、互惠关系动态的提示。",
-                "icon": "RiUserHeartLine"
-            }
-        ]
-    },
-    "scenarios": {
-        "name": "scenarios",
-        "label": "应用场景",
-        "title": "适用于所有关系类型的聊天分析与回顾",
-        "description": "我们的聊天分析AI理解不同关系类型的细微差别。无论是恋爱伴侣、家庭成员、朋友还是同事，我们的分析都能揭示独特的洞察，并为每种关系动态创建个性化的聊天回顾。",
-        "scenario_label": "场景",
-        "items": [{
-                "title": "恋爱关系",
-                "description": "了解与伴侣的沟通模式，增强情感连接。",
-                "buttonText": "分析我的关系"
-            },
-            {
-                "title": "家庭联系",
-                "description": "分析家庭群聊，改善与亲人的沟通。",
-                "buttonText": "分析家庭聊天"
-            },
-            {
-                "title": "两年约会分析",
-                "description": "随时间追踪您的关系成长，发现您的沟通如何演变。",
-                "buttonText": "分析关系成长"
-            },
-            {
-                "title": "友谊",
-                "description": "发现与朋友的互动模式，培养您的社交联系。",
-                "buttonText": "分析友谊"
-            }
-        ]
-    },
-
-    "stats": {
-        "name": "stats",
-        "label": "统计数据",
-        "title": "人们喜爱ChatRecap AI",
-        "description": "因为它节省时间并提高生产力。",
-        "icon": "FaRegHeart",
-        "items": [{
-                "title": "受信任于",
-                "label": "10K+",
-                "description": "用户"
-            },
-            {
-                "title": "总结了",
-                "label": "500K+",
-                "description": "会议"
-            },
-            {
-                "title": "节省时间",
-                "label": "1M+",
-                "description": "小时"
-            }
-        ]
-    },
-    "simple_pricing": {
-        "name": "pricing",
-        "label": "价格",
-        "title": "选择您的分析计划",
-        "description": "选择适合您需求的聊天分析计划。",
-        "plans": [
-            {
-                "title": "免费",
-                "description": "开始您的聊天分析之旅，获取基本洞察。",
-                "price": "$0",
-                "features": [
-                    {"text": "基本消息计数分析"},
-                    {"text": "每日聊天活动模式"},
-                    {"text": "顶级聊天参与者概览"},
-                    {"text": "有限数据处理"},
-                    {"text": "7天数据保留"},
-                    {"text": "标准支持"}
-                ],
-                "buttonText": "开始使用",
-                "buttonUrl": "/chatrecapanalysis",
-                "buttonIcon": "RiFlashlightFill",
-                "productId": "free",
-                "isFree": true,
-                "tipText": "无需信用卡"
-            },
-            {
-                "title": "高级版",
-                "description": "解锁全面的聊天分析和高级功能。",
-                "price": "$9.90",
-                "originalPrice": "$19.90",
-                "features": [
-                    {"text": "所有免费功能"},
-                    {"text": "情感分析"},
-                    {"text": "主题聚类"},
-                    {"text": "交互式可视化"},
-                    {"text": "自定义日期范围分析"},
-                    {"text": "关系洞察"},
-                    {"text": "30天数据保留"},
-                    {"text": "优先支持"}
-                ],
-                "isPopular": true,
-                "popularLabel": "热门",
-                "buttonText": "立即升级",
-                "buttonUrl": "/payment",
-                "buttonIcon": "RiFlashlightFill",
-                "productId": "premium",
-                "tipText": "完整分析的最佳价值",
-                "amount": 990
-            }
-        ]
-    },
-    "pricing": {
-        "name": "pricing",
-        "label": "价格",
-        "title": "简单、透明的价格",
-        "description": "选择适合您和您团队的计划。",
-        "groups": [],
-        "items": [{
-                "title": "免费",
-                "description": "适合刚刚开始的个人。",
-                "features_title": "包含",
-                "features": [
-                    "每月5次会议摘要",
-                    "基本摘要功能",
-                    "电子邮件发送",
-                    "7天数据保留",
-                    "仅限单用户",
-                    "标准支持"
-                ],
-                "interval": "monthly",
-                "amount": 0,
-                "cn_amount": 0,
-                "currency": "USD",
-                "price": "$0",
-                "original_price": "$0",
-                "unit": "USD",
-                "is_featured": false,
-                "tip": "无需信用卡",
-                "button": {
-                    "title": "开始使用",
-                    "url": "/#signup",
-                    "icon": "RiFlashlightFill"
-                },
-                "product_id": "free",
-                "product_name": "ChatRecap AI 免费版",
-                "credits": 5,
-                "valid_months": 1
-            },
-            {
-                "title": "专业版",
-                "description": "适合需要更多会议摘要的专业人士。",
-                "label": "热门",
-                "features_title": "包含免费版的所有功能，外加",
-                "features": [
-                    "每月50次会议摘要",
-                    "高级摘要功能",
-                    "行动项目提取",
-                    "30天数据保留",
-                    "最多3个用户",
-                    "优先支持",
-                    "自定义发送选项"
-                ],
-                "interval": "monthly",
-                "amount": 1999,
-                "cn_amount": 13999,
-                "currency": "USD",
-                "price": "$19.99",
-                "original_price": "$29.99",
-                "unit": "USD",
-                "is_featured": true,
-                "tip": "最受欢迎的选择",
-                "button": {
-                    "title": "开始使用",
-                    "url": "/#signup",
-                    "icon": "RiFlashlightFill"
-                },
-                "product_id": "pro",
-                "product_name": "ChatRecap AI 专业版",
-                "credits": 50,
-                "valid_months": 1
-            },
-            {
-                "title": "团队版",
-                "description": "适合需要无限会议摘要的团队。",
-                "features_title": "包含专业版的所有功能，外加",
-                "features": [
-                    "无限会议摘要",
-                    "高级摘要功能",
-                    "行动项目跟踪",
-                    "90天数据保留",
-                    "最多10个用户",
-                    "24/7优先支持",
-                    "团队协作功能",
-                    "管理员仪表板"
-                ],
-                "interval": "monthly",
-                "amount": 4999,
-                "cn_amount": 34999,
-                "currency": "USD",
-                "price": "$49.99",
-                "original_price": "$69.99",
-                "unit": "USD",
-                "is_featured": false,
-                "tip": "团队最佳价值",
-                "button": {
-                    "title": "开始使用",
-                    "url": "/#signup",
-                    "icon": "RiFlashlightFill"
-                },
-                "product_id": "team",
-                "product_name": "ChatRecap AI 团队版",
-                "credits": 999999,
-                "valid_months": 1
-            }
-        ]
-    },
-    "testimonial": {
-        "name": "testimonial",
-        "label": "用户评价",
-        "title": "用户对ChatRecap AI的评价",
-        "description": "听听使用ChatRecap AI提高会议生产力的专业人士的意见。",
-        "icon": "GoThumbsup",
-        "items": [{
-                "title": "Sarah Johnson",
-                "label": "TechCorp产品经理",
-                "description": "ChatRecap AI改变了我管理会议的方式。我不再担心错过重要细节或行动项目。就像在每次会议中都有一个私人助理！",
-                "image": {
-                    "src": "/imgs/users/1.png"
-                }
-            },
-            {
-                "title": "Michael Chen",
-                "label": "StartupX首席执行官",
-                "description": "作为CEO，我整天都在开会。ChatRecap AI帮助我保持组织，确保我在跟进工作中不会掉链子。它对我的生产力产生了革命性的变化。",
-                "image": {
-                    "src": "/imgs/users/2.png"
-                }
-            },
-            {
-                "title": "Emily Rodriguez",
-                "label": "DesignHub团队负责人",
-                "description": "我的团队喜欢ChatRecap AI的会议摘要。它让每个人都保持一致，并对他们的行动项目负责。我们的跟进工作有了显著改善。",
-                "image": {
-                    "src": "/imgs/users/3.png"
-                }
-            },
-            {
-                "title": "David Kim",
-                "label": "销售总监",
-                "description": "ChatRecap AI对我的客户会议非常宝贵。我可以专注于建立关系而不是做笔记，同时仍然保留每次对话的完美记录。",
-                "image": {
-                    "src": "/imgs/users/4.png"
-                }
-            },
-            {
-                "title": "Lisa Thompson",
-                "label": "项目经理",
-                "description": "行动项目跟踪功能太棒了！它自动从我们的会议中识别任务和截止日期，这使我们的项目完成率提高了40%。",
-                "image": {
-                    "src": "/imgs/users/5.png"
-                }
-            },
-            {
-                "title": "James Wilson",
-                "label": "远程团队经理",
-                "description": "管理远程团队具有挑战性，但ChatRecap AI帮助我们保持在同一页面上。会议摘要确保每个人都知道讨论了什么以及期望什么。",
-                "image": {
-                    "src": "/imgs/users/6.png"
-                }
-            }
-        ]
-    },
-    "faq": {
-        "name": "faq",
-        "label": "常见问题",
-        "title": "关于ChatRecap AI的常见问题",
-        "description": "还有其他问题？通过电子邮件或聊天联系我们。",
-        "items": [{
-                "title": "ChatRecap AI可以总结哪些类型的会议？",
-                "description": "ChatRecap AI适用于几乎任何类型的会议或通话，包括一对一会议、团队会议、客户通话、面试等。它支持所有主要的会议平台，如Zoom、Google Meet、Microsoft Teams、Webex等。"
-            },
-            {
-                "title": "会议摘要的准确性如何？",
-                "description": "ChatRecap AI使用先进的AI模型，这些模型经过数百万次会议的训练，提供高度准确的摘要。我们的技术通常能捕捉到会议中95%以上的关键点、决策和行动项目。"
-            },
-            {
-                "title": "我的会议数据安全吗？",
-                "description": "是的，安全是我们的首要任务。所有会议数据在传输和处理过程中都经过加密。我们提供灵活的数据保留政策，如果需要，您可以选择在处理后自动删除您的数据。"
-            },
-            {
-                "title": "获取会议摘要需要多长时间？",
-                "description": "大多数会议摘要在会议结束后5-10分钟内交付，具体取决于会议的长度。对于较长的会议（超过2小时），可能需要长达30分钟。"
-            },
-            {
-                "title": "我可以自定义摘要格式吗？",
-                "description": "是的，专业版和团队版用户可以自定义他们的摘要格式，包括要包含/排除的部分、详细程度和交付偏好。您可以为不同类型的会议创建模板。"
-            },
-            {
-                "title": "行动项目跟踪是如何工作的？",
-                "description": "ChatRecap AI自动识别会议期间提到的行动项目、截止日期和负责方。这些在摘要中被突出显示，并可以导出到任务管理工具，如Asana、Trello或Monday.com。"
-            }
-        ]
-    },
-    "cta": {
-        "name": "cta",
-        "title": "今天就开始节省会议记录的时间",
-        "description": "加入数千名使用ChatRecap AI使会议更有成效的专业人士。",
-        "buttons": [{
-            "title": "立即试用",
-            "url": "/chatrecapanalysis",
-            "target": "_self",
-            "icon": "GoArrowUpRight"
-        }]
-    },
-    "upload_box": {
-        "name": "upload_box",
-        "title": "开始使用Chat Recap AI",
-        "description": "使用示例或上传聊天文件，点击免费分析或AI回顾。",
-        "sample_button_text": "使用示例输入",
-        "upload_button_text": "上传文件",
-        "supported_formats": "支持：.txt文件或包含.txt文件的.zip文件（最大5MB）",
-        "placeholder": "在此输入或粘贴您的聊天文本...",
-        "primary_button": {
-            "title": "AI回顾",
-            "url": "/#recap",
-            "target": "_self",
-            "variant": "default"
-        },
-        "secondary_button": {
-            "title": "免费分析",
-            "url": "/chatrecapresult",
-            "target": "_self",
-            "variant": "secondary",
-            "icon": "RiFileTextLine"
-        },
-        "max_file_size": 5
-    },
-    "json_uploader": {
-        "name": "json_uploader",
-        "title": "上传您的聊天数据",
-        "description": "我们将分析您的聊天历史并提供洞察",
-        "upload_prompt": "点击上传您的{platform} JSON文件",
-        "auto_sort_message": "消息将按时间戳自动排序。",
-        "max_message_count": "最大消息数：{count}",
-        "max_characters": "最大字符数：{count}",
-        "selected_file": "已选择：{filename}",
-        "analyze_button": "免费分析",
-        "recap_button": "AI回顾"
-    },
-    "platform_filter": {
-        "name": "platform_filter",
-        "title": "选择平台",
-        "options": [{
-                "id": "whatsapp",
-                "label": "WhatsApp"
-            },
-            {
-                "id": "instagram",
-                "label": "Instagram"
-            },
-            {
-                "id": "discord",
-                "label": "Discord"
-            },
-            {
-                "id": "telegram",
-                "label": "Telegram"
-            },
-            {
-                "id": "snapchat",
-                "label": "Snapchat"
-            }
-        ]
-    },
-    "platform_upload": {
-        "name": "platform_upload",
-        "title": "上传您的聊天数据",
-        "description": "选择您的消息平台并上传您的聊天数据进行分析"
-    },
-    "footer": {
-        "name": "footer",
-        "brand": {
-            "title": "ChatRecap AI",
-            "description": "AI驱动的会议摘要，节省您的时间并保持您的组织。再也不会错过重要细节或行动项目。",
-            "logo": {
-                "src": "/logo.png",
-                "alt": "ChatRecap AI"
-            }
-        },
-        "links": [{
-                "title": "产品",
-                "items": [{
-                        "title": "功能",
-                        "url": "/#feature"
-                    },
-                    {
-                        "title": "价格",
-                        "url": "/#pricing"
-                    },
-                    {
-                        "title": "常见问题",
-                        "url": "/#faq"
-                    },
-                    {
-                        "title": "文档",
-                        "url": "/docs"
-                    }
-                ]
-            },
-            {
-                "title": "公司",
-                "items": [{
-                        "title": "关于我们",
-                        "url": "/about"
-                    },
-                    {
-                        "title": "博客",
-                        "url": "/blog"
-                    },
-                    {
-                        "title": "联系我们",
-                        "url": "/contact"
-                    },
-                    {
-                        "title": "职业机会",
-                        "url": "/careers"
-                    }
-                ]
-            },
-            {
-                "title": "法律",
-                "items": [{
-                        "title": "隐私政策",
-                        "url": "/privacy"
-                    },
-                    {
-                        "title": "服务条款",
-                        "url": "/terms"
-                    },
-                    {
-                        "title": "Cookie政策",
-                        "url": "/cookies"
-                    }
-                ]
-            },
-            {
-                "title": "社交媒体",
-                "items": [{
-                        "title": "Twitter",
-                        "url": "https://twitter.com/chatrecapai",
-                        "icon": "RiTwitterXLine"
-                    },
-                    {
-                        "title": "LinkedIn",
-                        "url": "https://linkedin.com/company/chatrecapai",
-                        "icon": "RiLinkedinLine"
-                    },
-                    {
-                        "title": "Facebook",
-                        "url": "https://facebook.com/chatrecapai",
-                        "icon": "RiFacebookLine"
-                    },
-                    {
-                        "title": "Instagram",
-                        "url": "https://instagram.com/chatrecapai",
-                        "icon": "RiInstagramLine"
-                    }
-                ]
-            }
+          },
+          {
+            "title": "常见问题",
+            "url": "/#faq"
+          },
+          {
+            "title": "文档",
+            "url": "/docs"
+          }
         ],
-        "copyright": "© 2024 ChatRecap AI. 保留所有权利。"
+        "title": "产品"
+      },
+      {
+        "items": [
+          {
+            "title": "关于我们",
+            "url": "/about"
+          },
+          {
+            "title": "博客",
+            "url": "/blog"
+          },
+          {
+            "title": "联系我们",
+            "url": "/contact"
+          },
+          {
+            "title": "职业机会",
+            "url": "/careers"
+          }
+        ],
+        "title": "公司"
+      },
+      {
+        "items": [
+          {
+            "title": "隐私政策",
+            "url": "/privacy"
+          },
+          {
+            "title": "服务条款",
+            "url": "/terms"
+          },
+          {
+            "title": "Cookie政策",
+            "url": "/cookies"
+          }
+        ],
+        "title": "法律"
+      },
+      {
+        "items": [
+          {
+            "icon": "RiTwitterXLine",
+            "title": "Twitter",
+            "url": "https://twitter.com/chatrecapai"
+          },
+          {
+            "icon": "RiLinkedinLine",
+            "title": "LinkedIn",
+            "url": "https://linkedin.com/company/chatrecapai"
+          },
+          {
+            "icon": "RiFacebookLine",
+            "title": "Facebook",
+            "url": "https://facebook.com/chatrecapai"
+          },
+          {
+            "icon": "RiInstagramLine",
+            "title": "Instagram",
+            "url": "https://instagram.com/chatrecapai"
+          }
+        ],
+        "title": "社交媒体"
+      }
+    ],
+    "name": "footer",
+    "agreement": {
+      "items": {
+        "0": {
+          "target": "_self",
+          "title": "Privacy Policy",
+          "url": "/privacy"
+        },
+        "1": {
+          "target": "_self",
+          "title": "Terms of Service",
+          "url": "/terms"
+        }
+      }
+    },
+    "nav": {
+      "items": {
+        "0": {
+          "children": {
+            "0": {
+              "target": "_self",
+              "title": "Features",
+              "url": "/#feature"
+            },
+            "1": {
+              "target": "_self",
+              "title": "How It Works",
+              "url": "/#usage"
+            },
+            "2": {
+              "target": "_self",
+              "title": "Pricing",
+              "url": "/#pricing"
+            }
+          },
+          "title": "Product"
+        },
+        "1": {
+          "children": {
+            "0": {
+              "target": "_self",
+              "title": "Help Center",
+              "url": "/help"
+            },
+            "1": {
+              "target": "_self",
+              "title": "Blog",
+              "url": "/blog"
+            }
+          },
+          "title": "Resources"
+        }
+      }
+    },
+    "social": {
+      "items": {
+        "0": {
+          "icon": "RiTwitterXFill",
+          "target": "_blank",
+          "title": "Twitter",
+          "url": "https://x.com/Cheercheung125"
+        },
+        "1": {
+          "icon": "RiLinkedinFill",
+          "target": "_blank",
+          "title": "LinkedIn",
+          "url": "https://www.linkedin.com/in/yue-zhang-709445259/"
+        },
+        "2": {
+          "icon": "RiInstagramFill",
+          "target": "_blank",
+          "title": "Instagram",
+          "url": "https://www.instagram.com/cheer_cheung_"
+        }
+      }
     }
+  },
+  "free": "Free",
+  "free_analysis": "Free Analysis",
+  "header": {
+    "brand": {
+      "logo": {
+        "alt": "ChatRecap AI",
+        "src": "/logo.png"
+      },
+      "title": "ChatRecap AI",
+      "url": "/"
+    },
+    "buttons": [
+      {
+        "icon": "RiArrowRightUpLine",
+        "target": "_self",
+        "title": "免费试用",
+        "url": "/chatrecapanalysis",
+        "variant": "link"
+      }
+    ],
+    "nav": {
+      "items": [
+        {
+          "icon": "HiOutlineSparkles",
+          "title": "功能特点",
+          "url": "/#feature",
+          "target": "_blank"
+        },
+        {
+          "icon": "RiQuestionLine",
+          "title": "使用方法",
+          "url": "/#usage"
+        },
+        {
+          "icon": "MdPayment",
+          "title": "价格",
+          "url": "/#pricing"
+        },
+        {
+          "children": [
+            {
+              "description": "分析WhatsApp聊天记录",
+              "icon": "RiWhatsappLine",
+              "target": "_self",
+              "title": "WhatsApp分析",
+              "url": "/#whatsapp"
+            },
+            {
+              "description": "分析Instagram私信",
+              "icon": "RiInstagramLine",
+              "target": "_self",
+              "title": "Instagram分析",
+              "url": "/#instagram"
+            }
+          ],
+          "icon": "BiCube",
+          "title": "支持平台",
+          "url": "/#showcase"
+        }
+      ]
+    },
+    "show_locale": true,
+    "show_sign": true,
+    "show_theme": true
+  },
+  "heatmap_data_not_available": "Heatmap data not available",
+  "hero": {
+    "announcement": {
+      "label": "2024",
+      "title": "🚀 现已适用于团队和个人",
+      "url": "/#pricing"
+    },
+    "buttons": [
+      {
+        "icon": "RiFlashlightFill",
+        "target": "_self",
+        "title": "免费试用Recap AI",
+        "url": "/chatrecapanalysis",
+        "variant": "default"
+      }
+    ],
+    "description": "通过Chat Recap AI揭示聊天中隐藏的模式和洞察，展现沟通模式、回复时间和情感连接。",
+    "features_disabled": {
+      "items": [
+        {
+          "description": "为用户提供浪漫温馨的体验",
+          "icon": "Heart",
+          "title": "浪漫体验"
+        },
+        {
+          "description": "系统响应迅速，运行流畅",
+          "icon": "Zap",
+          "title": "快速响应"
+        },
+        {
+          "description": "加密数据存储，保护用户隐私",
+          "icon": "Shield",
+          "title": "安全可靠"
+        },
+        {
+          "description": "精心设计的界面，提供愉悦的视觉体验",
+          "icon": "Star",
+          "title": "精美设计"
+        },
+        {
+          "description": "全天候客户支持服务",
+          "icon": "Clock",
+          "title": "24/7服务"
+        }
+      ],
+      "note": "这部分配置已被替换为聊天通知组件，暂时保留",
+      "title": "主要功能"
+    },
+    "highlight_text": "ChatRecap AI",
+    "show_badge": true,
+    "show_happy_users": true,
+    "tip": "⌛️ 限时优惠 100%折扣",
+    "title": "使用ChatRecap AI分析您的对话"
+  },
+  "high": "High",
+  "hours": "hours",
+  "hurry": "Hurry",
+  "insights": {
+    "interaction_title": "Interaction Insights",
+    "relationship_title": "Relationship Insights"
+  },
+  "json_uploader": {
+    "analyze_button": "免费分析",
+    "auto_sort_message": "消息将按时间戳自动排序。",
+    "description": "我们将分析您的聊天历史并提供洞察",
+    "max_characters": "最大字符数：{count}",
+    "max_message_count": "最大消息数：{count}",
+    "name": "json_uploader",
+    "recap_button": "AI回顾",
+    "selected_file": "已选择：{filename}",
+    "title": "上传您的聊天数据",
+    "upload_prompt": "点击上传您的{platform} JSON文件"
+  },
+  "keywords": "Keywords",
+  "last_message": "Last message",
+  "limited_time_offer": "Limited time offer",
+  "low": "Low",
+  "medium_conversations": "Medium conversations",
+  "messages": {
+    "message1": "Hello! Welcome to ChatRecap AI.",
+    "message2": "Upload your chat history to get started.",
+    "message3": "We'll analyze your conversations and provide insights.",
+    "message4": "Our AI can detect patterns in your communication.",
+    "message5": "See who initiates conversations more often.",
+    "message6": "Discover your peak chat times and favorite topics.",
+    "message7": "Get a complete relationship analysis with our premium plan."
+  },
+  "messages_count_other": "{{count}} messages",
+  "meta": {
+    "description": "Analyze your chat history with ChatRecap AI",
+    "title": "ChatRecap AI - Chat Analysis Tool"
+  },
+  "metadata": {
+    "description": "ChatRecap AI helps you analyze your chat history and provides insights into your communication patterns",
+    "keywords": "chat analysis, conversation insights, relationship analysis, communication patterns",
+    "title": "ChatRecap AI - Analyze Your Chat History"
+  },
+  "morning": "Morning",
+  "most_active_day": "Most active day",
+  "most_active_hour": "Most active hour",
+  "negative": "Negative",
+  "neutral": "Neutral",
+  "no_data_available": "No data available",
+  "no_data_found": "No data found",
+  "no_meaningful_words": "No meaningful words found",
+  "no_words_found": "No words found",
+  "of_full_access": "of full access",
+  "overall_sentiment": "Overall sentiment",
+  "overview_story_part1": "You started chatting on",
+  "overview_story_part2": "and have exchanged",
+  "overview_story_part3": "messages so far.",
+  "overview_title": "Chat Overview",
+  "payment": {
+    "error_title": "Payment Error"
+  },
+  "peak_activity_time": "Peak activity time",
+  "placeholder": "Enter text here...",
+  "platform_filter": {
+    "name": "platform_filter",
+    "options": [
+      {
+        "id": "whatsapp",
+        "label": "WhatsApp"
+      },
+      {
+        "id": "instagram",
+        "label": "Instagram"
+      },
+      {
+        "id": "discord",
+        "label": "Discord"
+      },
+      {
+        "id": "telegram",
+        "label": "Telegram"
+      },
+      {
+        "id": "snapchat",
+        "label": "Snapchat"
+      }
+    ],
+    "title": "选择平台"
+  },
+  "platform_upload": {
+    "description": "选择您的消息平台并上传您的聊天数据进行分析",
+    "name": "platform_upload",
+    "title": "上传您的聊天数据"
+  },
+  "platforms": {
+    "discord": "Discord",
+    "instagram": "Instagram",
+    "snapchat": "Snapchat",
+    "telegram": "Telegram",
+    "whatsapp": "WhatsApp"
+  },
+  "positive": "Positive",
+  "pricing": {
+    "description": "选择适合您和您团队的计划。",
+    "groups": [],
+    "items": [
+      {
+        "amount": 0,
+        "button": {
+          "icon": "RiFlashlightFill",
+          "title": "开始使用",
+          "url": "/#signup"
+        },
+        "cn_amount": 0,
+        "credits": 5,
+        "currency": "USD",
+        "description": "适合刚刚开始的个人。",
+        "features": [
+          "每月5次会议摘要",
+          "基本摘要功能",
+          "电子邮件发送",
+          "7天数据保留",
+          "仅限单用户",
+          "标准支持"
+        ],
+        "features_title": "包含",
+        "interval": "monthly",
+        "is_featured": false,
+        "original_price": "$0",
+        "price": "$0",
+        "product_id": "free",
+        "product_name": "ChatRecap AI 免费版",
+        "tip": "无需信用卡",
+        "title": "免费",
+        "unit": "USD",
+        "valid_months": 1
+      },
+      {
+        "amount": 1999,
+        "button": {
+          "icon": "RiFlashlightFill",
+          "title": "开始使用",
+          "url": "/#signup"
+        },
+        "cn_amount": 13999,
+        "credits": 50,
+        "currency": "USD",
+        "description": "适合需要更多会议摘要的专业人士。",
+        "features": [
+          "每月50次会议摘要",
+          "高级摘要功能",
+          "行动项目提取",
+          "30天数据保留",
+          "最多3个用户",
+          "优先支持",
+          "自定义发送选项"
+        ],
+        "features_title": "包含免费版的所有功能，外加",
+        "interval": "monthly",
+        "is_featured": true,
+        "label": "热门",
+        "original_price": "$29.99",
+        "price": "$19.99",
+        "product_id": "pro",
+        "product_name": "ChatRecap AI 专业版",
+        "tip": "最受欢迎的选择",
+        "title": "专业版",
+        "unit": "USD",
+        "valid_months": 1
+      },
+      {
+        "amount": 4999,
+        "button": {
+          "icon": "RiFlashlightFill",
+          "title": "开始使用",
+          "url": "/#signup"
+        },
+        "cn_amount": 34999,
+        "credits": 999999,
+        "currency": "USD",
+        "description": "适合需要无限会议摘要的团队。",
+        "features": [
+          "无限会议摘要",
+          "高级摘要功能",
+          "行动项目跟踪",
+          "90天数据保留",
+          "最多10个用户",
+          "24/7优先支持",
+          "团队协作功能",
+          "管理员仪表板"
+        ],
+        "features_title": "包含专业版的所有功能，外加",
+        "interval": "monthly",
+        "is_featured": false,
+        "original_price": "$69.99",
+        "price": "$49.99",
+        "product_id": "team",
+        "product_name": "ChatRecap AI 团队版",
+        "tip": "团队最佳价值",
+        "title": "团队版",
+        "unit": "USD",
+        "valid_months": 1
+      }
+    ],
+    "label": "价格",
+    "name": "pricing",
+    "title": "简单、透明的价格"
+  },
+  "processing": {
+    "analysis_progress": "Analysis progress",
+    "analyzing": "Analyzing your chat data",
+    "cleaning": "Cleaning data",
+    "cleaning_progress": "Cleaning progress",
+    "completed": "Processing completed",
+    "description": "We're processing your chat data",
+    "failed": "Processing failed",
+    "preparing": "Preparing data",
+    "processing": "Processing",
+    "result_fetch_failed": "Failed to fetch results",
+    "status_fetch_failed": "Failed to fetch status",
+    "title": "Processing Your Chat",
+    "uploading": "Uploading"
+  },
+  "quick_responses": "Quick responses",
+  "relationship_analysis": {
+    "description": "Analysis of your relationship based on chat patterns"
+  },
+  "relationship_metrics": {
+    "emotional_stability": "Emotional Stability",
+    "interest_level": "Interest Level",
+    "response_enthusiasm": "Response Enthusiasm",
+    "response_time": "Response Time"
+  },
+  "relationship_metrics_hearts": {
+    "description": "These metrics show the health of your relationship based on your chat patterns",
+    "title": "Relationship Health Metrics"
+  },
+  "response_pattern_description": "Analysis of how quickly you respond to each other",
+  "results": {
+    "back": "Back",
+    "date_range": "Date range",
+    "description": "View the analysis of your chat history",
+    "export": "Export",
+    "filtered_messages": "Filtered messages",
+    "link_copied": "Link copied to clipboard",
+    "media_messages_other": "{{count}} media messages",
+    "messages_description_other": "You have {{count}} messages in your chat history",
+    "messages_title": "Messages",
+    "next": "Next",
+    "no_messages": "No messages found",
+    "no_search_results": "No search results found",
+    "page_info": "Page {{current}} of {{total}}",
+    "participants": "Participants",
+    "previous": "Previous",
+    "search": "Search",
+    "search_placeholder": "Search messages...",
+    "share": "Share",
+    "share_text_other": "Check out my chat analysis with {{count}} messages!",
+    "share_title": "Share your results",
+    "summary_description": "Here's a summary of your chat analysis",
+    "summary_title": "Chat Summary",
+    "system_messages_other": "{{count}} system messages",
+    "title": "Chat Analysis Results",
+    "total_messages": "Total messages",
+    "unknown_date_range": "Unknown date range",
+    "valid_date_messages_other": "{{count}} messages with valid dates",
+    "warnings_title": "Warnings",
+    "media_messages_one": "{{count}} media message",
+    "messages_description_one": "You have {{count}} message in your chat history",
+    "share_text_one": "Check out my chat analysis with {{count}} message!",
+    "system_messages_one": "{{count}} system message",
+    "valid_date_messages_one": "{{count}} message with valid date"
+  },
+  "sample_button_text": "Use Sample",
+  "sample_chat_text": "Sample chat text",
+  "scenarios": {
+    "description": "我们的聊天分析AI理解不同关系类型的细微差别。无论是恋爱伴侣、家庭成员、朋友还是同事，我们的分析都能揭示独特的洞察，并为每种关系动态创建个性化的聊天回顾。",
+    "items": [
+      {
+        "buttonText": "分析我的关系",
+        "description": "了解与伴侣的沟通模式，增强情感连接。",
+        "title": "恋爱关系"
+      },
+      {
+        "buttonText": "分析家庭聊天",
+        "description": "分析家庭群聊，改善与亲人的沟通。",
+        "title": "家庭联系"
+      },
+      {
+        "buttonText": "分析关系成长",
+        "description": "随时间追踪您的关系成长，发现您的沟通如何演变。",
+        "title": "两年约会分析"
+      },
+      {
+        "buttonText": "分析友谊",
+        "description": "发现与朋友的互动模式，培养您的社交联系。",
+        "title": "友谊"
+      }
+    ],
+    "label": "应用场景",
+    "name": "scenarios",
+    "scenario_label": "场景",
+    "title": "适用于所有关系类型的聊天分析与回顾"
+  },
+  "select_button": "Select",
+  "sentiment_analysis": "Sentiment Analysis",
+  "sentiment_description": "Analysis of the emotional tone of your messages",
+  "sentiment_negative": "Negative sentiment",
+  "sentiment_neutral": "Neutral sentiment",
+  "sentiment_positive": "Positive sentiment",
+  "sentiment_score": "Sentiment score",
+  "sentiment_very_negative": "Very negative",
+  "sentiment_very_positive": "Very positive",
+  "share": {
+    "copy_failed": "Failed to copy link",
+    "link_copied": "Link copied to clipboard"
+  },
+  "share_not_implemented": "Sharing feature is not implemented yet",
+  "share_results": "Share Results",
+  "sharing": "Sharing",
+  "simple_pricing": {
+    "description": "选择适合您需求的聊天分析计划。",
+    "label": "价格",
+    "name": "pricing",
+    "plans": [
+      {
+        "buttonIcon": "RiFlashlightFill",
+        "buttonText": "开始使用",
+        "buttonUrl": "/chatrecapanalysis",
+        "description": "开始您的聊天分析之旅，获取基本洞察。",
+        "features": [
+          {
+            "text": "基本消息计数分析"
+          },
+          {
+            "text": "每日聊天活动模式"
+          },
+          {
+            "text": "顶级聊天参与者概览"
+          },
+          {
+            "text": "有限数据处理"
+          },
+          {
+            "text": "7天数据保留"
+          },
+          {
+            "text": "标准支持"
+          }
+        ],
+        "isFree": true,
+        "price": "$0",
+        "productId": "free",
+        "tipText": "无需信用卡",
+        "title": "免费"
+      },
+      {
+        "amount": 990,
+        "buttonIcon": "RiFlashlightFill",
+        "buttonText": "立即升级",
+        "buttonUrl": "/payment",
+        "description": "解锁全面的聊天分析和高级功能。",
+        "features": [
+          {
+            "text": "所有免费功能"
+          },
+          {
+            "text": "情感分析"
+          },
+          {
+            "text": "主题聚类"
+          },
+          {
+            "text": "交互式可视化"
+          },
+          {
+            "text": "自定义日期范围分析"
+          },
+          {
+            "text": "关系洞察"
+          },
+          {
+            "text": "30天数据保留"
+          },
+          {
+            "text": "优先支持"
+          }
+        ],
+        "isPopular": true,
+        "originalPrice": "$19.90",
+        "popularLabel": "热门",
+        "price": "$9.90",
+        "productId": "premium",
+        "tipText": "完整分析的最佳价值",
+        "title": "高级版"
+      }
+    ],
+    "title": "选择您的分析计划"
+  },
+  "speakers": {
+    "boyfriend": "Boyfriend",
+    "crush": "Crush",
+    "ex": "Ex",
+    "friend": "Friend",
+    "girlfriend": "Girlfriend",
+    "her": "Her",
+    "him": "Him"
+  },
+  "stats": {
+    "description": "因为它节省时间并提高生产力。",
+    "icon": "FaRegHeart",
+    "items": [
+      {
+        "description": "用户",
+        "label": "10K+",
+        "title": "受信任于"
+      },
+      {
+        "description": "会议",
+        "label": "500K+",
+        "title": "总结了"
+      },
+      {
+        "description": "小时",
+        "label": "1M+",
+        "title": "节省时间"
+      }
+    ],
+    "label": "统计数据",
+    "name": "stats",
+    "title": "人们喜爱ChatRecap AI"
+  },
+  "story_timeline_description": "See how your conversation has evolved over time",
+  "story_timeline_title": "Chat Timeline",
+  "subtitle": "Subtitle",
+  "supported_formats": "Supported formats: .txt, .zip",
+  "template": "shipany-template-one",
+  "testimonial": {
+    "description": "听听使用ChatRecap AI提高会议生产力的专业人士的意见。",
+    "icon": "GoThumbsup",
+    "items": [
+      {
+        "description": "ChatRecap AI改变了我管理会议的方式。我不再担心错过重要细节或行动项目。就像在每次会议中都有一个私人助理！",
+        "image": {
+          "src": "/imgs/users/1.png"
+        },
+        "label": "TechCorp产品经理",
+        "title": "Sarah Johnson"
+      },
+      {
+        "description": "作为CEO，我整天都在开会。ChatRecap AI帮助我保持组织，确保我在跟进工作中不会掉链子。它对我的生产力产生了革命性的变化。",
+        "image": {
+          "src": "/imgs/users/2.png"
+        },
+        "label": "StartupX首席执行官",
+        "title": "Michael Chen"
+      },
+      {
+        "description": "我的团队喜欢ChatRecap AI的会议摘要。它让每个人都保持一致，并对他们的行动项目负责。我们的跟进工作有了显著改善。",
+        "image": {
+          "src": "/imgs/users/3.png"
+        },
+        "label": "DesignHub团队负责人",
+        "title": "Emily Rodriguez"
+      },
+      {
+        "description": "ChatRecap AI对我的客户会议非常宝贵。我可以专注于建立关系而不是做笔记，同时仍然保留每次对话的完美记录。",
+        "image": {
+          "src": "/imgs/users/4.png"
+        },
+        "label": "销售总监",
+        "title": "David Kim"
+      },
+      {
+        "description": "行动项目跟踪功能太棒了！它自动从我们的会议中识别任务和截止日期，这使我们的项目完成率提高了40%。",
+        "image": {
+          "src": "/imgs/users/5.png"
+        },
+        "label": "项目经理",
+        "title": "Lisa Thompson"
+      },
+      {
+        "description": "管理远程团队具有挑战性，但ChatRecap AI帮助我们保持在同一页面上。会议摘要确保每个人都知道讨论了什么以及期望什么。",
+        "image": {
+          "src": "/imgs/users/6.png"
+        },
+        "label": "远程团队经理",
+        "title": "James Wilson"
+      }
+    ],
+    "label": "用户评价",
+    "name": "testimonial",
+    "title": "用户对ChatRecap AI的评价"
+  },
+  "text_analysis_title": "Text Analysis",
+  "theme": "light",
+  "time_analysis_title": "Time Analysis",
+  "time_distribution": "Time Distribution",
+  "time_distribution_description": "See when you chat the most throughout the day and week",
+  "times": {
+    "days_ago": "{{count}} days ago",
+    "hours_ago": "{{count}} hours ago",
+    "just_now": "Just now",
+    "minutes_ago": "{{count}} minutes ago"
+  },
+  "title": "Title",
+  "to_unlock": "to unlock",
+  "top_emojis": "Top Emojis",
+  "top_words": "Top Words",
+  "total_emojis": "Total emojis",
+  "total_messages": "Total messages",
+  "total_unique_words": "Total unique words",
+  "total_words": "Total words",
+  "try_now": "Try Now",
+  "upload": {
+    "description": "Upload your chat file to analyze",
+    "drop_files": "Drop files here",
+    "error": "Upload Error",
+    "failed": "Upload Failed",
+    "file_size_limit": "File size limit: {{size}}MB",
+    "invalid_format": "Invalid file format",
+    "no_file_selected": "No file selected",
+    "select_file": "Select File",
+    "supported_formats": "Supported formats: {{formats}}",
+    "title": "Upload Chat File",
+    "upload_button": "Upload",
+    "upload_failed": "Upload failed",
+    "uploading": "Uploading..."
+  },
+  "upload_box": {
+    "description": "使用示例或上传聊天文件，点击免费分析或AI回顾。",
+    "max_file_size": 5,
+    "name": "upload_box",
+    "placeholder": "在此输入或粘贴您的聊天文本...",
+    "primary_button": {
+      "target": "_self",
+      "title": "AI回顾",
+      "url": "/#recap",
+      "variant": "default"
+    },
+    "sample_button_text": "使用示例输入",
+    "secondary_button": {
+      "icon": "RiFileTextLine",
+      "target": "_self",
+      "title": "免费分析",
+      "url": "/chatrecapresult",
+      "variant": "secondary"
+    },
+    "supported_formats": "支持：.txt文件或包含.txt文件的.zip文件（最大5MB）",
+    "title": "开始使用Chat Recap AI",
+    "upload_button_text": "上传文件"
+  },
+  "upload_button_text": "Upload File",
+  "upload_description": "Upload your chat file to analyze",
+  "upload_title": "Upload Chat File",
+  "use_code": "Use code",
+  "user": {
+    "sign_in": "Sign In",
+    "sign_out": "Sign Out"
+  },
+  "very_negative": "Very negative",
+  "very_positive": "Very positive",
+  "view_guide": "View download guide",
+  "weekly_activity_heatmap": "Weekly Activity Heatmap",
+  "word": "Word",
+  "word_cloud": "Word Cloud",
+  "words": "Words",
+  "words_per_message": "Words per message",
+  "messages_count_one": "{{count}} message"
 }
