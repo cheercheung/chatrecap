@@ -584,7 +584,6 @@
         "morning_active": "Morning active"
       },
       "response_time": "Response time",
-      "sentiment ENC>analysis": "",
       "sentiment_analysis": "Sentiment analysis",
       "sentiment_by_day": "Sentiment by day",
       "sentiment_by_hour": "Sentiment by hour",
@@ -698,6 +697,7 @@
   "my_credits": {
     "left_tip": "Credits remaining: {left_credits}",
     "no_credits": "No credit records",
+    "no_credits ": "my credits",
     "recharge": "Buy Credits",
     "table": {
       "credits": "Credits",
@@ -908,6 +908,7 @@
     "sign_up_description": "Create an account",
     "sign_up_title": "Sign Up"
   },
+  "simple_pricing": "",
   "speakers": {
     "boyfriend": "Boyfriend",
     "crush": "Crush",

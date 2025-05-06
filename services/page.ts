@@ -62,6 +62,21 @@ function validateAndFixLandingPageData(data: any): LandingPage {
     }));
   }
 
+  // 修复 simple_pricing.plans: 将对象转换为数组，以适配 SimplePricing 组件
+  if (fixedData.simple_pricing?.plans && !Array.isArray(fixedData.simple_pricing.plans)) {
+    // 将 plans 对象值转换成数组
+    fixedData.simple_pricing.plans = Object.values(fixedData.simple_pricing.plans);
+  }
+  // 修复每个 plan 的 features: 将对象转换为数组
+  if (Array.isArray(fixedData.simple_pricing?.plans)) {
+    fixedData.simple_pricing.plans = fixedData.simple_pricing.plans.map((plan: any) => {
+      if (plan.features && !Array.isArray(plan.features)) {
+        plan.features = Object.values(plan.features);
+      }
+      return plan;
+    });
+  }
+
   return fixedData;
 }
 

@@ -1,5 +1,5 @@
 {
-  "ai_analysis": {
+  "ai_analysis_prompt": {
     "intro": "Siz profesyonel bir sohbet analiz uzmanısınız. Lütfen iki kişi arasındaki aşağıdaki konuşmayı analiz edin ve detaylı bir ilişki analiz raporu oluşturun.",
     "chat_info": "Kişi 1: {sender1}\nKişi 2: {sender2}\n\nSohbet örneği (kısmi):\n{messageSamples}",
     "instructions": "Bu sohbet mesajlarına dayanarak, her iki bireyin iletişim modellerini, ilişki dinamiklerini ve kişilik özelliklerini analiz edin. Analiziniz şunları içermelidir:\n\n1. Her kişi için ilgi düzeyi, yanıt coşkusu, duygusal istikrar ve yanıt süresi dahil olmak üzere kişilik içgörüleri\n2. Samimiyet, iletişim kalitesi, güven ve çatışma düzeyi dahil olmak üzere ilişki metrikleri\n3. Etkileşim modelleri ve ilişki özellikleri dahil olmak üzere ilişki içgörüleri\n4. Önerilen konular ve genel analiz",

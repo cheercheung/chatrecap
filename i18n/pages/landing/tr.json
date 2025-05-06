@@ -1,238 +1,100 @@
 {
-  "afternoon": "Afternoon",
-  "ai_analysis": {
-    "analyzing": "Analyzing your chat data",
-    "error": "Analysis Error",
-    "error_description": "There was an error analyzing your chat data. Please try again.",
-    "failed": "Analysis Failed",
-    "failed_description": "We couldn't complete the analysis of your chat data. Please try again.",
-    "generate": "Generate AI Analysis",
-    "please_wait": "Please wait while we analyze your chat data",
-    "starting": "Starting analysis",
-    "success": "Analysis Complete",
-    "success_description": "Your chat analysis is ready to view"
-  },
-  "analyze_button": "Analyze",
-  "avg_words_per_msg": "Average words per message",
-  "back_to_upload": "Back to Upload",
-  "badge": "Badge",
-  "blog": {
-    "description": "Latest news and updates from our team",
-    "read_more_text": "Read More",
-    "title": "Blog"
-  },
-  "busiest_date": "Busiest date",
-  "chatrecapresult": {
-    "description": "View the analysis of your chat history",
-    "title": "Chat Recap Results"
-  },
-  "common_words": "Common words",
-  "copyright": "© 2025 • ChatRecap AI All rights reserved.",
-  "count": "Count",
   "cta": {
-    "buttons": [
-      {
-        "icon": "GoArrowUpRight",
-        "target": "_self",
-        "title": "Şimdi Dene",
-        "url": "/chatrecapanalysis"
-      }
-    ],
-    "description": "Toplantılarını daha üretken hale getirmek için ChatRecap AI kullanan binlerce profesyonele katıl.",
+    "buttons": {
+      "icon": "GoArrowUpRight",
+      "target": "_self",
+      "title": "Şimdi Deneyin",
+      "url": "/chatrecapanalysis"
+    },
+    "description": "Sohbet geçmişinizi yükleyerek sohbet analizi yolculuğunuza başlayın. Yapay zeka destekli platformumuz, ilişki dinamikleriniz, iletişim kalıplarınız ve duygusal bağlantılarınız hakkında derin içgörüler ve ayrıntılı sohbet özetleri sunar.",
     "name": "cta",
-    "title": "Bugün Toplantı Notlarında Zaman Tasarrufu Yapmaya Başla"
+    "title": "İlişkinizi Bugün Özetleyin"
   },
-  "daily_activity": "Daily Activity",
-  "daily_activity_description": "See when you chat the most throughout the day",
-  "days": "days",
-  "description": "Description",
-  "emojis": "Emojis",
-  "errors": {
-    "ai_insights_not_found": "AI insights not found",
-    "loading_failed": "Failed to load data",
-    "not_found": "Not found",
-    "result_not_found": "Analysis result not found"
-  },
-  "evening": "Evening",
-  "export_not_implemented": "Export feature is not implemented yet",
-  "export_pdf": "Export as PDF",
   "faq": {
-    "description": "Başka bir sorun mu var? E-posta veya sohbet yoluyla bizimle iletişime geç.",
+    "description": "Başka bir sorunuz mu var? Bize e-posta veya sohbet yoluyla ulaşın.",
     "items": [
       {
-        "description": "ChatRecap AI, bire bir toplantılar, ekip toplantıları, müşteri görüşmeleri, mülakatlar ve daha fazlası dahil olmak üzere neredeyse her tür toplantı veya görüşme ile çalışır. Zoom, Google Meet, Microsoft Teams, Webex ve diğerleri gibi tüm büyük toplantı platformlarıyla uyumludur.",
-        "title": "ChatRecap AI hangi tür toplantıları özetleyebilir?"
+        "description": "ChatRecap AI, öncelikle WhatsApp sohbet analizi için tasarlanmış çok yönlü bir sohbet analizörüdür. WhatsApp sohbet analizörümüz, minimum kurulumla kapsamlı içgörüler sağlar. WhatsApp'ın ötesinde, ChatRecap AI, Instagram doğrudan mesaj kalıplarınızı anlamanıza olanak tanıyan Instagram analizini destekler. Ayrıca Telegram, Discord ve Snapchat konuşmalarını tam olarak destekleriz. Geliştirme yol haritamız, mevcut en kapsamlı sohbet analizi çözümünü sunmak için daha fazla mesajlaşma platformuna genişlemeyi içeriyor.",
+        "title": "ChatRecap AI hangi tür sohbet verilerini analiz edebilir?"
       },
       {
-        "description": "ChatRecap AI, yüksek doğrulukta özetler sağlamak için milyonlarca toplantı üzerinde eğitilmiş gelişmiş yapay zeka modelleri kullanır. Teknolojimiz genellikle toplantıların kilit noktalarının, kararlarının ve aksiyon maddelerinin %95'inden fazlasını yakalar.",
-        "title": "Toplantı özetleri ne kadar doğru?"
+        "description": "Gizliliğiniz bizim temel taahhüdümüzdür. ChatRecap AI, tüm veri aktarımları ve analiz süreçlerinde uçtan uca şifreleme kullanır. Sohbet analiziniz tamamlandıktan sonra, tüm verileri sistemlerimizden otomatik olarak sileriz. Platformumuz, konuşma içeriği için sıfır depolama politikasıyla tasarlanmıştır ve kişisel mesajlarınızın tamamen gizli ve güvenli kalmasını sağlar.",
+        "title": "ChatRecap AI gizliliğimi nasıl korur?"
       },
       {
-        "description": "Evet, güvenlik en büyük önceliğimizdir. Tüm toplantı verileri aktarım ve işleme sırasında şifrelenir. Esnek veri saklama politikaları sunuyoruz ve isterseniz verilerinizin işlemden sonra otomatik olarak silinmesini seçebilirsiniz.",
-        "title": "Toplantı verilerim güvende mi?"
+        "description": "ChatRecap AI, yüksek doğrulukta desen tanıma sağlamak için çeşitli konuşma veri setleri üzerinde eğitilmiş gelişmiş makine öğrenimi modellerini kullanır. Algoritmalarımız, iletişim trendlerini olağanüstü bir hassasiyetle tanımlar, ancak tüm insan etkileşimlerinde bağlamın önemli olduğunu vurgularız. Sohbet analizi içgörülerimizi, ilişkiler hakkındaki kişisel anlayışınızı tamamlayan değerli bir rehber olarak kullanmanızı öneririz, kesin sonuçlar olarak değil.",
+        "title": "ChatRecap AI'ın analizi ne kadar güvenilir?"
       },
       {
-        "description": "Çoğu toplantı özeti, toplantının süresine bağlı olarak toplantı bittikten sonra 5-10 dakika içinde teslim edilir. Daha uzun toplantılar (2 saatten fazla) için 30 dakikaya kadar sürebilir.",
-        "title": "Bir toplantı özeti almak ne kadar sürer?"
+        "description": "ChatRecap AI, birden fazla boyutta ayrıntılı analiz sunar: mesaj sıklığı kalıpları, yanıt süresi analizleri, duygusal içerik haritalama, katılım düzeyi metrikleri ve potansiyel iletişim kalıbı işaretleri. Premium kullanıcılar, iletişim tarzı uyumluluk değerlendirmeleri ve uzun vadeli sohbet veri analizine dayalı ilişki dinamikleri değerlendirmeleri gibi gelişmiş içgörüler alır.",
+        "title": "ChatRecap AI hangi içgörüleri sağlar?"
       },
       {
-        "description": "Evet, Pro ve Ekip planı kullanıcıları, dahil edilecek/hariç tutulacak bölümler, detay seviyesi ve teslimat tercihleri dahil olmak üzere özet formatlarını özelleştirebilir. Farklı toplantı türleri için şablonlar oluşturabilirsiniz.",
-        "title": "Özet formatını özelleştirebilir miyim?"
+        "description": "ChatRecap AI'ın gelişmiş işlem motoru, sohbet boyutundan bağımsız olarak genellikle dakikalar içinde analizi tamamlar. İşlem süresi, konuşma uzunluğuna ve seçilen analiz derinliğine bağlı olarak değişir. Arayüzümüz, analiz süreci boyunca yüzde tamamlanma göstergeleriyle gerçek zamanlı ilerleme takibi sağlar.",
+        "title": "ChatRecap AI sohbet geçmişimi ne kadar hızlı işler?"
       },
       {
-        "description": "ChatRecap AI, toplantı sırasında bahsedilen aksiyon maddelerini, son tarihleri ve sorumlu tarafları otomatik olarak tanımlar. Bunlar özette vurgulanır ve Asana, Trello veya Monday.com gibi görev yönetimi araçlarına aktarılabilir.",
-        "title": "Aksiyon maddesi takibi nasıl çalışır?"
+        "description": "Kesinlikle! ChatRecap AI, hem bire bir hem de grup konuşmalarını analiz etme konusunda üstündür. Grup sohbetleri için platformumuz, sosyal veya profesyonel çevrelerinizdeki iletişim dinamiklerini ortaya çıkaran bireysel katılım metrikleri ve grup düzeyinde etkileşim kalıpları üretir.",
+        "title": "ChatRecap AI grup konuşmalarını işleyebilir mi?"
       },
       {
-        "description": "Early access members enjoy priority access to ChatRecap AI's full feature set and receive exclusive introductory pricing. Members also benefit from extended premium features during their initial subscription period and gain early access to new analysis tools as they're developed.",
-        "title": "What benefits do early access members receive?"
+        "description": "Erken erişim üyeleri, ChatRecap AI'ın tam özellik setine öncelikli erişimden yararlanır ve özel tanıtım fiyatlandırması alır. Üyeler ayrıca, ilk abonelik dönemlerinde genişletilmiş premium özelliklerden faydalanır ve yeni analiz araçlarına geliştirildikçe erken erişim kazanır.",
+        "title": "Erken erişim üyeleri hangi avantajları elde eder?"
       },
       {
-        "description": "As a specialized WhatsApp chat analyzer, we've streamlined this process: 1) Open WhatsApp and navigate to your target conversation 2) Tap the three-dots menu > More > Export chat 3) Choose whether to include media (our analyzer processes both options) 4) Upload the exported file directly to ChatRecap AI for immediate analysis. For other platforms like Instagram, Telegram, Discord, or Snapchat, simply follow our platform-specific export guides available in our Help Center.",
-        "title": "How do I export my chat for analysis with ChatRecap AI?"
+        "description": "Özel bir WhatsApp sohbet analizörü olarak bu süreci kolaylaştırdık: 1) WhatsApp'ı açın ve hedef konuşmaya gidin 2) Üç nokta menüsüne dokunun > Daha Fazla > Sohbeti Dışa Aktar 3) Medyayı dahil edip etmemeyi seçin (analizörümüz her iki seçeneği de işler) 4) Dışa aktarılan dosyayı doğrudan ChatRecap AI'a yükleyerek anında analiz yapın. Instagram, Telegram, Discord veya Snapchat gibi diğer platformlar için, Yardım Merkezimizde bulunan platforma özgü dışa aktarma kılavuzlarını takip edin.",
+        "title": "ChatRecap AI ile analiz için sohbetimi nasıl dışa aktarırım?"
       },
       {
-        "description": "ChatRecap AI stands apart from basic WhatsApp chat analyzers through our proprietary deep learning models specifically designed for relationship communication analysis. Unlike standard WhatsApp chat analyzers that provide only basic statistics, ChatRecap AI detects subtle emotional patterns, relationship dynamics, and communication trends that other tools miss. Our platform offers unique features including sentiment progression tracking, conversation quality assessment, and relationship health indicators based on established communication research.",
-        "title": "What makes ChatRecap AI different from other chat analyzers?"
+        "description": "ChatRecap AI, ilişki iletişimi analizi için özel olarak tasarlanmış tescilli derin öğrenme modelleriyle temel WhatsApp sohbet analizörlerinden ayrılır. Yalnızca temel istatistikler sunan standart WhatsApp sohbet analizörlerinin aksine, ChatRecap AI, diğer araçların gözden kaçırdığı ince duygusal kalıpları, ilişki dinamiklerini ve iletişim trendlerini tespit eder. Platformumuz, duygu ilerlemesi takibi, konuşma kalitesi değerlendirmesi ve yerleşik iletişim araştırmalarına dayalı ilişki sağlığı göstergeleri gibi benzersiz özellikler sunar.",
+        "title": "ChatRecap AI'ı diğer sohbet analizörlerinden farklı kılan nedir?"
       },
       {
-        "description": "ChatRecap AI's comprehensive analysis includes detailed metrics across multiple dimensions: message frequency patterns (by day/hour), response time analytics (average and trends), emotional content mapping (positive/negative sentiment distribution), conversation topic clustering, and engagement level metrics. Premium users receive advanced insights including communication style compatibility assessments, media sharing pattern analysis, peak activity time identification, and relationship dynamic evaluations based on longitudinal chat data analysis.",
-        "title": "What specific metrics does ChatRecap AI's analysis reveal?"
+        "description": "ChatRecap AI'ın kapsamlı analizi, birden fazla boyutta ayrıntılı metrikler içerir: mesaj sıklığı kalıpları (gün/saat bazında), yanıt süresi analizleri (ortalama ve trendler), duygusal içerik haritalama (olumlu/olumsuz duygu dağılımı), konuşma konusu kümeleme ve katılım düzeyi metrikleri. Premium kullanıcılar, iletişim tarzı uyumluluk değerlendirmeleri, medya paylaşım kalıbı analizi, en yüksek aktivite zamanı tanımlama ve uzun vadeli sohbet veri analizine dayalı ilişki dinamikleri değerlendirmeleri gibi gelişmiş içgörüler alır.",
+        "title": "ChatRecap AI'ın analizi hangi spesifik metrikleri ortaya çıkarır?"
       }
     ],
-    "label": "Sık Sorulan Sorular",
+    "label": "SSS",
     "name": "faq",
-    "title": "ChatRecap AI Hakkında Sık Sorulan Sorular"
+    "title": "ChatRecap AI Hakkında Sıkça Sorulan Sorular"
   },
-  "favorite_day_to_chat": "Favorite day to chat",
   "feature": {
-    "description": "Gelişmiş analiz araçlarımızla sohbetlerinden güçlü içgörüler keşfet.",
+    "description": "Gelişmiş analiz araçlarımızla konuşmalarınızdan güçlü içgörüler keşfedin.",
     "items": [
       {
-        "description": "WhatsApp, WeChat, Instagram ve daha fazlasında sohbet sıklığını ve kalıplarını analiz et. Zirve dönemleri belirle, yanıt süresindeki değişiklikleri takip et ve tüm platformlarda birleşik eğilimleri keşfet.",
+        "description": "WhatsApp, WeChat, Instagram ve daha fazlasında sohbet sıklığınızı ve kalıplarınızı analiz edin. Yoğun dönemleri belirleyin, yanıt süresi değişikliklerini takip edin ve platformlar arasında birleşik trendleri keşfedin.",
         "icon": "RiGlobalLine",
         "title": "Çoklu Platform Etkileşim Analizi"
       },
       {
-        "description": "Gelişmiş doğal dil işleme kullanarak benzersiz iletişim stilini keşfet, kelime kullanımını, emoji kalıplarını analiz et ve duygusal ve ilişkiye özgü dil kalıplarını ortaya çıkar.",
+        "description": "Gelişmiş doğal dil işleme kullanarak benzersiz iletişim tarzınızı ortaya çıkarın, kelime kullanımı, emoji kalıpları analiz edin ve duygusal ve ilişkiye özgü dil kalıplarını ortaya çıkarın.",
         "icon": "RiChatSmile3Line",
-        "title": "İletişim Stili ve Dil Analizi"
+        "title": "İletişim Tarzı ve Dil Analizi"
       },
       {
-        "description": "Konuşmaların nasıl başladığını, geliştiğini ve bittiğini anla. Kimin daha sık etkileşim başlattığını takip et ve diyalog konularındaki ve duygusal tonlardaki değişiklikleri tespit et.",
+        "description": "Konuşmaların nasıl başladığını, evrildiğini ve sona erdiğini anlayın. Kimin daha sık etkileşim başlattığını takip edin ve diyalog konularındaki ve duygusal tonlardaki değişimleri tespit edin.",
         "icon": "RiFlowChart",
         "title": "Konuşma Akışı ve Dinamikleri"
       },
       {
-        "description": "Duygusal nüansları tespit et, sağlıklı veya sağlıksız davranış kalıplarını belirle ve ilişkilerinde daha iyi iletişim alışkanlıklarını teşvik etmek için farkındalık yarat.",
+        "description": "Duygusal alt tonları tespit edin, sağlıklı veya sağlıksız davranış kalıplarını belirleyin ve ilişkilerinizde daha iyi iletişim alışkanlıkları geliştirmek için farkındalık oluşturun.",
         "icon": "RiHeartLine",
-        "title": "Duygusal Duygu ve Sağlık İçgörüleri"
+        "title": "Duygusal Duygu ve Sağlık İlgileri"
       },
       {
-        "description": "Her iki tarafın yatırım seviyesini değerlendirmek için yanıt uzunluklarını, konuşma derinliklerini ve katılım sıklığını ölç.",
+        "description": "Yanıt uzunluklarını, konuşma derinliklerini ve katılım sıklığını ölçerek her iki tarafın yatırım seviyesini değerlendirin.",
         "icon": "RiBarChartLine",
         "title": "Katılım Derinliği ve Sıklığı Metrikleri"
       },
       {
-        "description": "Kimin daha fazla kişisel detay paylaştığını ortaya çıkar, açıklık seviyelerini takip et ve daha dengeli ve karşılıklı bir ilişki dinamiği oluşturmak için ipuçları keşfet.",
+        "description": "Kimin daha fazla kişisel detay paylaştığını ortaya çıkarın, açıklık seviyelerini takip edin ve daha dengeli, karşılıklı bir ilişki dinamiği oluşturmak için ipuçları keşfedin.",
         "icon": "RiUserHeartLine",
         "title": "Kişisel Bilgi Paylaşım Dengesi"
       }
     ],
     "name": "feature",
-    "title": "ChatRecap AI'nin Temel Özellikleri"
+    "title": "ChatRecap AI'ın Ana Özellikleri"
   },
-  "first_message": "First message",
-  "footer": {
-    "brand": {
-      "description": "Zamandan tasarruf etmenizi ve organize kalmanızı sağlayan yapay zeka destekli toplantı özetleri. Bir daha asla önemli bir detayı veya aksiyon maddesini kaçırmayın.",
-      "title": "ChatRecap AI",
-      "logo": {
-        "alt": "ChatRecap AI",
-        "src": "/logo.png"
-      },
-      "url": "/"
-    },
-    "name": "footer",
-    "agreement": {
-      "items": {
-        "0": {
-          "target": "_self",
-          "title": "Privacy Policy",
-          "url": "/privacy"
-        },
-        "1": {
-          "target": "_self",
-          "title": "Terms of Service",
-          "url": "/terms"
-        }
-      }
-    },
-    "copyright": "© 2025 • ChatRecap AI All rights reserved.",
-    "nav": {
-      "items": {
-        "0": {
-          "children": {
-            "0": {
-              "target": "_self",
-              "title": "Features",
-              "url": "/#feature"
-            },
-            "1": {
-              "target": "_self",
-              "title": "How It Works",
-              "url": "/#usage"
-            },
-            "2": {
-              "target": "_self",
-              "title": "Pricing",
-              "url": "/#pricing"
-            }
-          },
-          "title": "Product"
-        },
-        "1": {
-          "children": {
-            "0": {
-              "target": "_self",
-              "title": "Help Center",
-              "url": "/help"
-            },
-            "1": {
-              "target": "_self",
-              "title": "Blog",
-              "url": "/blog"
-            }
-          },
-          "title": "Resources"
-        }
-      }
-    },
-    "social": {
-      "items": {
-        "0": {
-          "icon": "RiTwitterXFill",
-          "target": "_blank",
-          "title": "Twitter",
-          "url": "https://x.com/Cheercheung125"
-        },
-        "1": {
-          "icon": "RiLinkedinFill",
-          "target": "_blank",
-          "title": "LinkedIn",
-          "url": "https://www.linkedin.com/in/yue-zhang-709445259/"
-        },
-        "2": {
-          "icon": "RiInstagramFill",
-          "target": "_blank",
-          "title": "Instagram",
-          "url": "https://www.instagram.com/cheer_cheung_"
-        }
-      }
-    }
-  },
-  "free": "Free",
-  "free_analysis": "Free Analysis",
   "header": {
     "brand": {
       "logo": {
@@ -246,7 +108,7 @@
       {
         "icon": "RiArrowRightUpLine",
         "target": "_self",
-        "title": "Ücretsiz Dene",
+        "title": "Ücretsiz Deneyin",
         "url": "/chatrecapanalysis",
         "variant": "link"
       }
@@ -254,15 +116,15 @@
     "nav": {
       "items": [
         {
-          "icon": "HiOutlineSparkles",
-          "title": "Özellikler",
-          "url": "/#feature",
-          "target": "_blank"
+          "icon": "RiDiscordFill",
+          "target": "_blank",
+          "title": "Discord'a Katıl",
+          "url": "https://discord.gg/ceRtME7q"
         },
         {
           "icon": "RiQuestionLine",
           "title": "Nasıl Çalışır",
-          "url": "/#usage"
+          "url": "/chatrecapanalysis"
         },
         {
           "icon": "MdPayment",
@@ -270,150 +132,49 @@
           "url": "/#pricing"
         },
         {
-          "children": [
-            {
-              "description": "WhatsApp Sohbetlerini Analiz Et",
-              "icon": "RiWhatsappLine",
-              "target": "_self",
-              "title": "WhatsApp Analizi",
-              "url": "/#whatsapp"
-            },
-            {
-              "description": "Instagram DM'lerini Analiz Et",
-              "icon": "RiInstagramLine",
-              "target": "_self",
-              "title": "Instagram Analizi",
-              "url": "/#instagram"
-            }
-          ],
           "icon": "BiCube",
           "title": "Platformlar",
-          "url": "/#showcase"
+          "url": "/chatrecapplatform"
         }
       ]
     },
     "show_locale": true,
-    "show_sign": true,
     "show_theme": true
   },
-  "heatmap_data_not_available": "Heatmap data not available",
   "hero": {
     "announcement": {
       "label": "2024",
-      "title": "🚀 Şimdi Ekipler ve Bireyler için Kullanılabilir",
+      "title": "🚀 Artık Ekipler ve Bireyler için Kullanılabilir",
       "url": "/#pricing"
     },
     "buttons": [
       {
         "icon": "RiFlashlightFill",
         "target": "_self",
-        "title": "Recap AI'yi Ücretsiz Dene",
+        "title": "Recap AI'ı Ücretsiz Deneyin",
         "url": "/chatrecapanalysis",
         "variant": "default"
       }
     ],
-    "description": "Chat Recap AI ile sohbetlerindeki gizli kalıpları ve içgörüleri keşfet, iletişim kalıplarını, yanıt sürelerini ve duygusal bağlantıları ortaya çıkar.",
-    "features_disabled": {
-      "items": [
-        {
-          "description": "Kullanıcılara romantik ve sıcak bir deneyim sunma",
-          "icon": "Heart",
-          "title": "Romantik Deneyim"
-        },
-        {
-          "description": "Akıcı çalışma ile hızlı sistem yanıtı",
-          "icon": "Zap",
-          "title": "Hızlı Yanıt"
-        },
-        {
-          "description": "Kullanıcı gizliliğini korumak için şifrelenmiş veri depolama",
-          "icon": "Shield",
-          "title": "Güvenli ve Güvenilir"
-        },
-        {
-          "description": "Hoş bir görsel deneyim için özenle tasarlanmış arayüz",
-          "icon": "Star",
-          "title": "Güzel Tasarım"
-        },
-        {
-          "description": "24 saat müşteri hizmetleri",
-          "icon": "Clock",
-          "title": "7/24 Hizmet"
-        }
-      ],
-      "note": "这部分配置已被替换为聊天通知组件，暂时保留",
-      "title": "Temel Özellikler"
-    },
+    "description": "Chat Recap AI ile sohbetlerinizdeki gizli kalıpları ve içgörüleri açığa çıkarın, iletişim kalıplarını, yanıt sürelerini ve duygusal bağlantıları ortaya çıkarın.",
     "highlight_text": "ChatRecap AI",
     "show_badge": true,
     "show_happy_users": true,
-    "tip": "⌛️ Sınırlı süre teklifi %100 indirim",
-    "title": "Sohbetlerini ChatRecap AI ile Analiz Et"
-  },
-  "high": "High",
-  "hours": "hours",
-  "hurry": "Hurry",
-  "insights": {
-    "interaction_title": "Interaction Insights",
-    "relationship_title": "Relationship Insights"
+    "tip": "⌛️ Sınırlı süreli teklif %100 indirim",
+    "title": "Sohbetlerinizi ChatRecap AI ile Analiz Edin"
   },
   "json_uploader": {
-    "analyze_button": "ÜCRETSİZ Analiz",
-    "auto_sort_message": "Mesajlar zaman damgasına göre otomatik olarak sıralanacak.",
-    "description": "Sohbet geçmişini analiz edeceğiz ve içgörüler sağlayacağız",
+    "analyze_button": "Ücretsiz Analiz",
+    "auto_sort_message": "Mesajlar zaman damgasına göre otomatik olarak sıralanacaktır.",
+    "description": "Sohbet geçmişinizi analiz edeceğiz ve içgörüler sağlayacağız",
     "max_characters": "Maksimum karakter: {count}",
     "max_message_count": "Maksimum mesaj sayısı: {count}",
     "name": "json_uploader",
     "recap_button": "AI Özeti",
-    "selected_file": "Seçilen: {filename}",
-    "title": "Sohbet Verilerini Yükle",
-    "upload_prompt": "{platform} JSON dosyanı yüklemek için tıkla"
+    "selected_file": "Seçildi: {filename}",
+    "title": "Sohbet Verilerinizi Yükleyin",
+    "upload_prompt": "{platform} JSON dosyanızı yüklemek için tıklayın"
   },
-  "keywords": "Keywords",
-  "last_message": "Last message",
-  "limited_time_offer": "Limited time offer",
-  "low": "Low",
-  "medium_conversations": "Medium conversations",
-  "messages": {
-    "message1": "Hello! Welcome to ChatRecap AI.",
-    "message2": "Upload your chat history to get started.",
-    "message3": "We'll analyze your conversations and provide insights.",
-    "message4": "Our AI can detect patterns in your communication.",
-    "message5": "See who initiates conversations more often.",
-    "message6": "Discover your peak chat times and favorite topics.",
-    "message7": "Get a complete relationship analysis with our premium plan."
-  },
-  "messages_count_one": "{{count}} message",
-  "messages_count_other": "{{count}} messages",
-  "meta": {
-    "description": "Analyze your chat history with ChatRecap AI",
-    "title": "ChatRecap AI - Chat Analysis Tool"
-  },
-  "metadata": {
-    "description": "ChatRecap AI helps you analyze your chat history and provides insights into your communication patterns",
-    "keywords": "chat analysis, conversation insights, relationship analysis, communication patterns",
-    "title": "ChatRecap AI - Analyze Your Chat History"
-  },
-  "morning": "Morning",
-  "most_active_day": "Most active day",
-  "most_active_hour": "Most active hour",
-  "negative": "Negative",
-  "neutral": "Neutral",
-  "no_data_available": "No data available",
-  "no_data_found": "No data found",
-  "no_meaningful_words": "No meaningful words found",
-  "no_words_found": "No words found",
-  "of_full_access": "of full access",
-  "overall_sentiment": "Overall sentiment",
-  "overview_story_part1": "You started chatting on",
-  "overview_story_part2": "and have exchanged",
-  "overview_story_part3": "messages so far.",
-  "overview_title": "Chat Overview",
-  "payment": {
-    "error_title": "Payment Error"
-  },
-  "peak_activity_time": "Peak activity time",
-  "placeholder": "Enter text here...",
   "platform_filter": {
     "name": "platform_filter",
     "options": [
@@ -438,371 +199,149 @@
         "label": "Snapchat"
       }
     ],
-    "title": "Platform Seç"
+    "title": "Platform Seçin"
   },
   "platform_upload": {
-    "description": "Mesajlaşma platformunu seç ve analiz için sohbet verilerini yükle",
+    "description": "Mesajlaşma platformunuzu seçin ve analiz için sohbet verilerinizi yükleyin",
     "name": "platform_upload",
-    "title": "Sohbet Verilerini Yükle"
+    "title": "Sohbet Verilerinizi Yükleyin"
   },
-  "platforms": {
-    "discord": "Discord",
-    "instagram": "Instagram",
-    "snapchat": "Snapchat",
-    "telegram": "Telegram",
-    "whatsapp": "WhatsApp"
-  },
-  "positive": "Positive",
-  "pricing": {
-    "description": "Sana ve ekibine uygun planı seç.",
-    "groups": [],
-    "items": [
-      {
-        "amount": 0,
-        "button": {
-          "icon": "RiFlashlightFill",
-          "title": "Başla",
-          "url": "/#signup"
-        },
-        "cn_amount": 0,
-        "credits": 5,
-        "currency": "USD",
-        "description": "Yeni başlayan bireyler için mükemmel.",
-        "features": [
-          "Ayda 5 toplantı özeti",
-          "Temel özet özellikleri",
-          "E-posta teslimi",
-          "7 günlük veri saklama",
-          "Sadece tek kullanıcı",
-          "Standart destek"
-        ],
-        "features_title": "Dahil",
-        "interval": "monthly",
-        "is_featured": false,
-        "original_price": "$0",
-        "price": "$0",
-        "product_id": "free",
-        "product_name": "ChatRecap AI Free",
-        "tip": "Kredi kartı gerekmez",
-        "title": "Ücretsiz",
-        "unit": "USD",
-        "valid_months": 1
-      },
-      {
-        "amount": 1999,
-        "button": {
-          "icon": "RiFlashlightFill",
-          "title": "Başla",
-          "url": "/#signup"
-        },
-        "cn_amount": 13999,
-        "credits": 50,
-        "currency": "USD",
-        "description": "Daha fazla toplantı özetine ihtiyaç duyan profesyoneller için.",
-        "features": [
-          "Ayda 50 toplantı özeti",
-          "Gelişmiş özet özellikleri",
-          "Aksiyon maddesi çıkarımı",
-          "30 günlük veri saklama",
-          "3 kullanıcıya kadar",
-          "Öncelikli destek",
-          "Özelleştirilmiş teslimat seçenekleri"
-        ],
-        "features_title": "Ücretsiz'deki her şey, artı",
-        "interval": "monthly",
-        "is_featured": true,
-        "label": "Popüler",
-        "original_price": "$29.99",
-        "price": "$19.99",
-        "product_id": "pro",
-        "product_name": "ChatRecap AI Pro",
-        "tip": "En popüler seçim",
-        "title": "Pro",
-        "unit": "USD",
-        "valid_months": 1
-      },
-      {
-        "amount": 4999,
-        "button": {
-          "icon": "RiFlashlightFill",
-          "title": "Başla",
-          "url": "/#signup"
-        },
-        "cn_amount": 34999,
-        "credits": 999999,
-        "currency": "USD",
-        "description": "Sınırsız toplantı özetine ihtiyaç duyan ekipler için.",
-        "features": [
-          "Sınırsız toplantı özetleri",
-          "Premium özet özellikleri",
-          "Aksiyon maddesi takibi",
-          "90 günlük veri saklama",
-          "10 kullanıcıya kadar",
-          "7/24 öncelikli destek",
-          "Ekip işbirliği özellikleri",
-          "Yönetici paneli"
-        ],
-        "features_title": "Pro'daki her şey, artı",
-        "interval": "monthly",
-        "is_featured": false,
-        "original_price": "$69.99",
-        "price": "$49.99",
-        "product_id": "team",
-        "product_name": "ChatRecap AI Team",
-        "tip": "Ekipler için en iyi değer",
-        "title": "Ekip",
-        "unit": "USD",
-        "valid_months": 1
-      }
-    ],
-    "label": "Fiyatlandırma",
-    "name": "pricing",
-    "title": "Basit ve Şeffaf Fiyatlandırma"
-  },
-  "processing": {
-    "analysis_progress": "Analysis progress",
-    "analyzing": "Analyzing your chat data",
-    "cleaning": "Cleaning data",
-    "cleaning_progress": "Cleaning progress",
-    "completed": "Processing completed",
-    "description": "We're processing your chat data",
-    "failed": "Processing failed",
-    "preparing": "Preparing data",
-    "processing": "Processing",
-    "result_fetch_failed": "Failed to fetch results",
-    "status_fetch_failed": "Failed to fetch status",
-    "title": "Processing Your Chat",
-    "uploading": "Uploading"
-  },
-  "quick_responses": "Quick responses",
-  "relationship_analysis": {
-    "description": "Analysis of your relationship based on chat patterns"
-  },
-  "relationship_metrics": {
-    "emotional_stability": "Emotional Stability",
-    "interest_level": "Interest Level",
-    "response_enthusiasm": "Response Enthusiasm",
-    "response_time": "Response Time"
-  },
-  "relationship_metrics_hearts": {
-    "description": "These metrics show the health of your relationship based on your chat patterns",
-    "title": "Relationship Health Metrics"
-  },
-  "response_pattern_description": "Analysis of how quickly you respond to each other",
-  "results": {
-    "back": "Back",
-    "date_range": "Date range",
-    "description": "View the analysis of your chat history",
-    "export": "Export",
-    "filtered_messages": "Filtered messages",
-    "link_copied": "Link copied to clipboard",
-    "media_messages_one": "{{count}} media message",
-    "media_messages_other": "{{count}} media messages",
-    "messages_description_one": "You have {{count}} message in your chat history",
-    "messages_description_other": "You have {{count}} messages in your chat history",
-    "messages_title": "Messages",
-    "next": "Next",
-    "no_messages": "No messages found",
-    "no_search_results": "No search results found",
-    "page_info": "Page {{current}} of {{total}}",
-    "participants": "Participants",
-    "previous": "Previous",
-    "search": "Search",
-    "search_placeholder": "Search messages...",
-    "share": "Share",
-    "share_text_one": "Check out my chat analysis with {{count}} message!",
-    "share_text_other": "Check out my chat analysis with {{count}} messages!",
-    "share_title": "Share your results",
-    "summary_description": "Here's a summary of your chat analysis",
-    "summary_title": "Chat Summary",
-    "system_messages_one": "{{count}} system message",
-    "system_messages_other": "{{count}} system messages",
-    "title": "Chat Analysis Results",
-    "total_messages": "Total messages",
-    "unknown_date_range": "Unknown date range",
-    "valid_date_messages_one": "{{count}} message with valid date",
-    "valid_date_messages_other": "{{count}} messages with valid dates",
-    "warnings_title": "Warnings"
-  },
-  "sample_button_text": "Use Sample",
-  "sample_chat_text": "Sample chat text",
   "scenarios": {
-    "description": "Sohbet analiz yapay zekamız farklı ilişki türlerinin nüanslarını anlar. İster romantik çiftler, aile üyeleri, arkadaşlar veya meslektaşlar olsun, analizimiz benzersiz içgörüler ortaya çıkarır ve her ilişki dinamiği için özelleştirilmiş sohbet özetleri oluşturur.",
+    "description": "Sohbet analizi yapay zekamız, farklı ilişki türlerinin inceliklerini anlar. Romantik partnerler, aile üyeleri, arkadaşlar veya meslektaşlar olsun, analizimiz benzersiz içgörüler ortaya çıkarır ve her ilişki dinamiği için kişiselleştirilmiş sohbet özetleri oluşturur.",
     "items": [
       {
         "buttonText": "İlişkimi Analiz Et",
-        "description": "Partnerinle iletişim kalıplarını anla ve duygusal bağınızı güçlendir.",
+        "description": "Partnerinizle iletişim kalıplarını anlayın ve duygusal bağlantınızı güçlendirin.",
         "title": "Romantik İlişkiler"
       },
       {
         "buttonText": "Aile Sohbetini Analiz Et",
-        "description": "Aile grup sohbetlerini analiz et ve sevdiklerinle iletişimi geliştir.",
+        "description": "Aile grup sohbetlerini analiz edin ve sevdiklerinizle iletişimi geliştirin.",
         "title": "Aile Bağlantıları"
       },
       {
         "buttonText": "İlişki Büyümesini Analiz Et",
-        "description": "İlişkinin zaman içindeki büyümesini takip et ve iletişiminin nasıl geliştiğini keşfet.",
-        "title": "2 Yıllık İlişki Analizi"
+        "description": "Zaman içindeki ilişki büyümenizi takip edin ve iletişiminizin nasıl evrildiğini keşfedin.",
+        "title": "2 Yıllık Flört Analizi"
       },
       {
         "buttonText": "Arkadaşlığı Analiz Et",
-        "description": "Arkadaşlarla etkileşim kalıplarını keşfet ve sosyal bağlantılarını besle.",
+        "description": "Arkadaşlarınızla etkileşim kalıplarını keşfedin ve sosyal bağlantılarınızı güçlendirin.",
         "title": "Arkadaşlıklar"
       }
     ],
     "label": "Uygulama Senaryoları",
     "name": "scenarios",
     "scenario_label": "Senaryo",
-    "title": "Tüm İlişki Türleri için Sohbet Analizi ve Özetleri"
+    "title": "Tüm İlişki Türleri için Sohbet Analizi ve Özetler"
   },
-  "select_button": "Select",
-  "sentiment_analysis": "Sentiment Analysis",
-  "sentiment_description": "Analysis of the emotional tone of your messages",
-  "sentiment_negative": "Negative sentiment",
-  "sentiment_neutral": "Neutral sentiment",
-  "sentiment_positive": "Positive sentiment",
-  "sentiment_score": "Sentiment score",
-  "sentiment_very_negative": "Very negative",
-  "sentiment_very_positive": "Very positive",
-  "share": {
-    "copy_failed": "Failed to copy link",
-    "link_copied": "Link copied to clipboard"
-  },
-  "share_not_implemented": "Sharing feature is not implemented yet",
-  "share_results": "Share Results",
-  "sharing": "Sharing",
-  "speakers": {
-    "boyfriend": "Boyfriend",
-    "crush": "Crush",
-    "ex": "Ex",
-    "friend": "Friend",
-    "girlfriend": "Girlfriend",
-    "her": "Her",
-    "him": "Him"
+  "simple_pricing": {
+    "description": "İhtiyaçlarınıza uygun planla sohbet analizi yolculuğunuza başlayın.",
+    "label": "Fiyatlandırma",
+    "name": "pricing",
+    "plans": [
+      {
+        "buttonIcon": "RiFlashlightFill",
+        "buttonText": "Başlayın",
+        "buttonUrl": "/chatrecapanalysis",
+        "description": "Temel içgörülerle sohbet analizi yolculuğunuza başlayın.",
+        "features": [
+          {
+            "text": "Temel mesaj sayısı analizi"
+          },
+          {
+            "text": "Günlük sohbet aktivite kalıpları"
+          },
+          {
+            "text": "En iyi sohbet katılımcıları genel bakışı"
+          },
+          {
+            "text": "Sınırlı veri işleme"
+          },
+          {
+            "text": "7 günlük veri saklama"
+          },
+          {
+            "text": "Standart destek"
+          }
+        ],
+        "isFree": true,
+        "price": "$0",
+        "productId": "free",
+        "tipText": "Kredi kartı gerekmez",
+        "title": "Ücretsiz"
+      },
+      {
+        "amount": 990,
+        "buttonIcon": "RiFlashlightFill",
+        "buttonText": "Şimdi Yükselt",
+        "buttonUrl": "/payment",
+        "description": "Kapsamlı sohbet analizi ve gelişmiş özellikleri açın.",
+        "features": [
+          {
+            "text": "Tüm ÜCRETSİZ özellikler"
+          },
+          {
+            "text": "Duygu analizi"
+          },
+          {
+            "text": "Konu kümeleme"
+          },
+          {
+            "text": "Etkileşimli görselleştirmeler"
+          },
+          {
+            "text": "Özel tarih aralığı analizi"
+          },
+          {
+            "text": "İlişki içgörüleri"
+          },
+          {
+            "text": "30 günlük veri saklama"
+          },
+          {
+            "text": "Öncelikli destek"
+          }
+        ],
+        "isPopular": true,
+        "originalPrice": "$19.90",
+        "popularLabel": "Popüler",
+        "price": "$9.90",
+        "productId": "premium",
+        "tipText": "Tam analiz için en iyi değer",
+        "title": "Premium"
+      }
+    ],
+    "title": "Analiz Planınızı Seçin"
   },
   "stats": {
-    "description": "zaman tasarrufu sağladığı ve üretkenliği artırdığı için.",
+    "description": "zaman tasarrufu ve üretkenliği artırma için.",
     "icon": "FaRegHeart",
     "items": [
       {
-        "description": "Kullanıcı",
+        "description": "Kullanıcılar",
         "label": "10K+",
-        "title": "Güvenilen"
+        "title": "Tarafından Güveniliyor"
       },
       {
-        "description": "Toplantı",
-        "label": "500K+",
-        "title": "Özetlenen"
+        "description": "sohbetler",
+        "label": "50K+",
+        "title": "Özetlendi"
       },
       {
-        "description": "Saat",
-        "label": "1M+",
-        "title": "Tasarruf Edilen Zaman"
+        "description": "içgörüler",
+        "label": "80K+",
+        "title": "Keşfedildi"
       }
     ],
     "label": "İstatistikler",
     "name": "stats",
-    "title": "İnsanlar ChatRecap AI'yi Seviyor"
+    "title": "İnsanlar ChatRecap AI'ı Seviyor"
   },
-  "story_timeline_description": "See how your conversation has evolved over time",
-  "story_timeline_title": "Chat Timeline",
-  "subtitle": "Subtitle",
-  "supported_formats": "Supported formats: .txt, .zip",
   "template": "shipany-template-one",
-  "testimonial": {
-    "description": "ChatRecap AI'yi toplantı üretkenliklerini artırmak için kullanan profesyonelleri dinle.",
-    "icon": "GoThumbsup",
-    "items": [
-      {
-        "description": "ChatRecap AI, toplantıları nasıl yönettiğimi dönüştürdü. Artık önemli detayları veya aksiyon maddelerini kaçırmaktan endişelenmiyorum. Her toplantıda kişisel bir asistana sahip olmak gibi!",
-        "image": {
-          "src": "/imgs/users/1.png"
-        },
-        "label": "TechCorp'ta Ürün Müdürü",
-        "title": "Sarah Johnson"
-      },
-      {
-        "description": "CEO olarak, tüm gün toplantılardayım. ChatRecap AI organize kalmama yardımcı oluyor ve takipleri asla kaçırmamamı sağlıyor. Üretkenliğim için oyun değiştirici oldu.",
-        "image": {
-          "src": "/imgs/users/2.png"
-        },
-        "label": "StartupX CEO'su",
-        "title": "Michael Chen"
-      },
-      {
-        "description": "Ekibim ChatRecap AI'nin toplantı özetlerini seviyor. Herkesi aynı çizgide ve aksiyon maddelerinden sorumlu tutuyor. Takibimizde önemli bir iyileşme gördük.",
-        "image": {
-          "src": "/imgs/users/3.png"
-        },
-        "label": "DesignHub'da Ekip Lideri",
-        "title": "Emily Rodriguez"
-      },
-      {
-        "description": "ChatRecap AI, müşteri toplantılarım için paha biçilmez oldu. Not almak yerine ilişki kurmaya odaklanabiliyorum ve yine de her konuşmanın mükemmel kayıtlarına sahip oluyorum.",
-        "image": {
-          "src": "/imgs/users/4.png"
-        },
-        "label": "Satış Direktörü",
-        "title": "David Kim"
-      },
-      {
-        "description": "Aksiyon maddesi takip özelliği harika! Toplantılarımızdan görevleri ve son tarihleri otomatik olarak tanımlıyor, bu da proje tamamlama oranımızı %40 artırdı.",
-        "image": {
-          "src": "/imgs/users/5.png"
-        },
-        "label": "Proje Yöneticisi",
-        "title": "Lisa Thompson"
-      },
-      {
-        "description": "Uzak bir ekibi yönetmek zorlu, ancak ChatRecap AI aynı sayfada kalmamıza yardımcı oluyor. Toplantı özetleri, herkesin ne tartışıldığını ve ne beklendiğini bilmesini sağlıyor.",
-        "image": {
-          "src": "/imgs/users/6.png"
-        },
-        "label": "Uzak Ekip Yöneticisi",
-        "title": "James Wilson"
-      }
-    ],
-    "label": "Kullanıcı Görüşleri",
-    "name": "testimonial",
-    "title": "Kullanıcılar ChatRecap AI Hakkında Ne Diyor"
-  },
-  "text_analysis_title": "Text Analysis",
   "theme": "light",
-  "time_analysis_title": "Time Analysis",
-  "time_distribution": "Time Distribution",
-  "time_distribution_description": "See when you chat the most throughout the day and week",
-  "times": {
-    "days_ago": "{{count}} days ago",
-    "hours_ago": "{{count}} hours ago",
-    "just_now": "Just now",
-    "minutes_ago": "{{count}} minutes ago"
-  },
-  "title": "Title",
-  "to_unlock": "to unlock",
-  "top_emojis": "Top Emojis",
-  "top_words": "Top Words",
-  "total_emojis": "Total emojis",
-  "total_messages": "Total messages",
-  "total_unique_words": "Total unique words",
-  "total_words": "Total words",
-  "try_now": "Try Now",
-  "upload": {
-    "description": "Upload your chat file to analyze",
-    "drop_files": "Drop files here",
-    "error": "Upload Error",
-    "failed": "Upload Failed",
-    "file_size_limit": "File size limit: {{size}}MB",
-    "invalid_format": "Invalid file format",
-    "no_file_selected": "No file selected",
-    "select_file": "Select File",
-    "supported_formats": "Supported formats: {{formats}}",
-    "title": "Upload Chat File",
-    "upload_button": "Upload",
-    "upload_failed": "Upload failed",
-    "uploading": "Uploading..."
-  },
   "upload_box": {
-    "description": "Örnek kullan veya sohbet dosyası yükle, ÜCRETSİZ Analiz veya AI Özeti'ne tıkla.",
+    "description": "Örnek kullanın veya sohbet dosyasını yükleyin, Ücretsiz Analiz veya AI Özeti'ne tıklayın.",
     "max_file_size": 5,
     "name": "upload_box",
     "placeholder": "Sohbet metninizi buraya girin veya yapıştırın...",
@@ -812,111 +351,16 @@
       "url": "/#recap",
       "variant": "default"
     },
-    "sample_button_text": "Örnek Girdi Kullan",
+    "sample_button_text": "Örnek Giriş Kullan",
     "secondary_button": {
       "icon": "RiFileTextLine",
       "target": "_self",
-      "title": "ÜCRETSİZ Analiz",
+      "title": "Ücretsiz Analiz",
       "url": "/chatrecapresult",
       "variant": "secondary"
     },
-    "supported_formats": "Desteklenen: .txt dosyası veya .txt dosyası içeren .zip dosyası (maks 5MB)",
-    "title": "Chat Recap AI'yi Kullanmaya Başla",
+    "supported_formats": "Desteklenen: .txt dosyası veya .txt dosyası içeren .zip (maks 5MB)",
+    "title": "Chat Recap AI'ı Kullanmaya Başlayın",
     "upload_button_text": "Dosya Yükle"
-  },
-  "upload_button_text": "Upload File",
-  "upload_description": "Upload your chat file to analyze",
-  "upload_title": "Upload Chat File",
-  "use_code": "Use code",
-  "user": {
-    "sign_in": "Sign In",
-    "sign_out": "Sign Out"
-  },
-  "very_negative": "Very negative",
-  "very_positive": "Very positive",
-  "view_guide": "View download guide",
-  "weekly_activity_heatmap": "Weekly Activity Heatmap",
-  "word": "Word",
-  "word_cloud": "Word Cloud",
-  "words": "Words",
-  "words_per_message": "Words per message",
-  "simple_pricing": {
-    "description": "Start your chat analysis journey with the right plan for your needs.",
-    "label": "Pricing",
-    "name": "pricing",
-    "plans": {
-      "0": {
-        "buttonIcon": "RiFlashlightFill",
-        "buttonText": "Get Started",
-        "buttonUrl": "/chatrecapanalysis",
-        "description": "Start your chat analysis journey with essential insights.",
-        "features": {
-          "0": {
-            "text": "Basic message count analysis"
-          },
-          "1": {
-            "text": "Daily chat activity patterns"
-          },
-          "2": {
-            "text": "Top chat participants overview"
-          },
-          "3": {
-            "text": "Limited data processing"
-          },
-          "4": {
-            "text": "7-day data retention"
-          },
-          "5": {
-            "text": "Standard support"
-          }
-        },
-        "isFree": true,
-        "price": "$0",
-        "productId": "free",
-        "tipText": "No credit card required",
-        "title": "Free"
-      },
-      "1": {
-        "amount": 990,
-        "buttonIcon": "RiFlashlightFill",
-        "buttonText": "Upgrade Now",
-        "buttonUrl": "/payment",
-        "description": "Unlock comprehensive chat analysis and advanced features.",
-        "features": {
-          "0": {
-            "text": "All FREE features"
-          },
-          "1": {
-            "text": "Sentiment analysis"
-          },
-          "2": {
-            "text": "Topic clustering"
-          },
-          "3": {
-            "text": "Interactive visualizations"
-          },
-          "4": {
-            "text": "Custom date range analysis"
-          },
-          "5": {
-            "text": "Relationship insights"
-          },
-          "6": {
-            "text": "30-day data retention"
-          },
-          "7": {
-            "text": "Priority support"
-          }
-        },
-        "isPopular": true,
-        "originalPrice": "$19.90",
-        "popularLabel": "Popular",
-        "price": "$9.90",
-        "productId": "premium",
-        "tipText": "Best value for complete analysis",
-        "title": "Premium"
-      }
-    },
-    "title": "Choose Your Analysis Plan"
   }
 }

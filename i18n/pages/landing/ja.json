@@ -1,140 +1,93 @@
 {
-  "afternoon": "Afternoon",
-  "ai_analysis": {
-    "analyzing": "Analyzing your chat data",
-    "error": "Analysis Error",
-    "error_description": "There was an error analyzing your chat data. Please try again.",
-    "failed": "Analysis Failed",
-    "failed_description": "We couldn't complete the analysis of your chat data. Please try again.",
-    "generate": "Generate AI Analysis",
-    "please_wait": "Please wait while we analyze your chat data",
-    "starting": "Starting analysis",
-    "success": "Analysis Complete",
-    "success_description": "Your chat analysis is ready to view"
-  },
-  "analyze_button": "Analyze",
-  "avg_words_per_msg": "Average words per message",
-  "back_to_upload": "Back to Upload",
-  "badge": "Badge",
-  "blog": {
-    "description": "Latest news and updates from our team",
-    "read_more_text": "Read More",
-    "title": "Blog"
-  },
-  "busiest_date": "Busiest date",
-  "chatrecapresult": {
-    "description": "View the analysis of your chat history",
-    "title": "Chat Recap Results"
-  },
-  "common_words": "Common words",
-  "copyright": "© 2025 • ChatRecap AI All rights reserved.",
-  "count": "Count",
   "cta": {
-    "buttons": [
-      {
-        "icon": "GoArrowUpRight",
-        "target": "_self",
-        "title": "今すぐ試す",
-        "url": "/chatrecapanalysis"
-      }
-    ],
-    "description": "ChatRecap AIを使用してミーティングをより生産的にしている何千人ものプロフェッショナルに参加しましょう。",
+    "buttons": {
+      "icon": "GoArrowUpRight",
+      "target": "_self",
+      "title": "今すぐ試す",
+      "url": "/chatrecapanalysis"
+    },
+    "description": "チャット履歴をアップロードして、チャット分析の旅を始めましょう。AIを活用した当プラットフォームは、関係性のダイナミクス、コミュニケーションのパターン、感情的なつながりに関する深い洞察と詳細なチャット概要を提供します。",
     "name": "cta",
-    "title": "今日からミーティングノートの時間を節約しましょう"
+    "title": "今日、あなたの関係を振り返る"
   },
-  "daily_activity": "Daily Activity",
-  "daily_activity_description": "See when you chat the most throughout the day",
-  "days": "days",
-  "description": "Description",
-  "emojis": "Emojis",
-  "errors": {
-    "ai_insights_not_found": "AI insights not found",
-    "loading_failed": "Failed to load data",
-    "not_found": "Not found",
-    "result_not_found": "Analysis result not found"
-  },
-  "evening": "Evening",
-  "export_not_implemented": "Export feature is not implemented yet",
-  "export_pdf": "Export as PDF",
   "faq": {
-    "description": "他に質問がありますか？メールまたはチャットでお問い合わせください。",
+    "description": "他にご質問がありますか？メールまたはチャットでご連絡ください。",
     "items": [
       {
-        "description": "ChatRecap AIは、1対1のミーティング、チームミーティング、顧客通話、インタビューなど、ほぼすべてのタイプのミーティングや通話で機能します。Zoom、Google Meet、Microsoft Teams、Webexなどの主要なミーティングプラットフォームすべてと互換性があります。",
-        "title": "ChatRecap AIはどのようなタイプのミーティングを要約できますか？"
+        "description": "ChatRecap AIは、主にWhatsAppのチャット分析用に設計された多機能なチャットアナライザーです。当社のWhatsAppチャットアナライザーは、最小限の設定で包括的な洞察を提供します。WhatsApp以外にも、ChatRecap AIはInstagramの分析をサポートし、Instagramのダイレクトメッセージのパターンを理解できます。また、Telegram、Discord、Snapchatの会話も完全にサポートしています。開発ロードマップには、より多くのメッセージングプラットフォームへの拡張が含まれており、利用可能な最も包括的なチャット分析ソリューションを提供します。",
+        "title": "ChatRecap AIはどのようなチャットデータを分析できますか？"
       },
       {
-        "description": "ChatRecap AIは、何百万ものミーティングでトレーニングされた高度なAIモデルを使用して、高精度の要約を提供します。私たちの技術は通常、ミーティングの重要なポイント、決定事項、アクションアイテムの95%以上をキャプチャします。",
-        "title": "ミーティング要約はどれくらい正確ですか？"
+        "description": "あなたのプライバシーは私たちの基本的なコミットメントです。ChatRecap AIは、データ転送および分析プロセス全体でエンドツーエンドの暗号化を採用しています。チャット分析が完了すると、すべてのデータは自動的に当社のシステムから削除されます。当社のプラットフォームは、会話内容のゼロストレージポリシーを採用しており、個人メッセージが完全にプライベートで安全であることを保証します。",
+        "title": "ChatRecap AIは私のプライバシーをどのように保護しますか？"
       },
       {
-        "description": "はい、セキュリティは私たちの最優先事項です。すべてのミーティングデータは転送中および処理中に暗号化されます。柔軟なデータ保持ポリシーを提供しており、希望する場合は処理後にデータが自動的に削除されるように選択できます。",
-        "title": "私のミーティングデータは安全ですか？"
+        "description": "ChatRecap AIは、多様な会話データセットでトレーニングされた高度な機械学習モデルを活用し、高精度のパターン認識を提供します。当社のアルゴリズムは、驚くべき精度でコミュニケーショントレンドを特定しますが、すべての人間の対話においてコンテキストが重要であることを強調します。チャット分析の洞察を、関係性の個人的な理解を補完する貴重なガイダンスとして使用することをお勧めします。",
+        "title": "ChatRecap AIの分析はどの程度信頼性がありますか？"
       },
       {
-        "description": "ほとんどのミーティング要約は、ミーティングの長さに応じて、ミーティング終了後5〜10分以内に配信されます。より長いミーティング（2時間以上）の場合、最大30分かかることがあります。",
-        "title": "ミーティング要約を受け取るまでにどれくらい時間がかかりますか？"
+        "description": "ChatRecap AIは、メッセージ頻度パターン、応答時間分析、感情的内容マッピング、関与レベルメトリクス、潜在的なコミュニケーションパターンフラグなど、複数の次元にわたる詳細な分析を提供します。プレミアムユーザーは、コミュニケーションスタイルの互換性評価や長期的なチャットデータ分析に基づく関係性のダイナミクス評価を含む強化された洞察を受け取ります。",
+        "title": "ChatRecap AIはどのような洞察を提供しますか？"
       },
       {
-        "description": "はい、プロおよびチームプランのユーザーは、含める/除外するセクション、詳細レベル、配信設定など、要約形式をカスタマイズできます。さまざまなミーティングタイプ用のテンプレートを作成できます。",
-        "title": "要約形式をカスタマイズできますか？"
+        "description": "ChatRecap AIの高度な処理エンジンは、チャットのサイズに関係なく、通常数分以内に分析を完了します。処理時間は会話の長さと選択した分析の深さに応じて異なります。インターフェースは、分析プロセス全体でパーセンテージ完了インジケーターとともにリアルタイムの進捗追跡を提供します。",
+        "title": "ChatRecap AIは私のチャット履歴をどのくらい早く処理しますか？"
       },
       {
-        "description": "ChatRecap AIは、ミーティング中に言及されたアクションアイテム、期限、責任者を自動的に識別します。これらは要約でハイライト表示され、Asana、Trello、Monday.comなどのタスク管理ツールにエクスポートできます。",
-        "title": "アクションアイテム追跡はどのように機能しますか？"
+        "description": "もちろんです！ChatRecap AIは、1対1およびグループ会話の両方の分析に優れています。グループチャットの場合、当社のプラットフォームは個々の参加メトリクスとグループレベルの対話パターンを生成し、ソーシャルまたはプロフェッショナルなサークル内のコミュニケーションのダイナミクスを明らかにします。",
+        "title": "ChatRecap AIはグループ会話を処理できますか？"
       },
       {
-        "description": "Early access members enjoy priority access to ChatRecap AI's full feature set and receive exclusive introductory pricing. Members also benefit from extended premium features during their initial subscription period and gain early access to new analysis tools as they're developed.",
-        "title": "What benefits do early access members receive?"
+        "description": "早期アクセスメンバーは、ChatRecap AIの全機能セットへの優先アクセスを享受し、特別な紹介価格を受け取ります。メンバーには、初期サブスクリプション期間中の拡張プレミアム機能と、新しい分析ツールが開発される際の早期アクセスも提供されます。",
+        "title": "早期アクセスメンバーはどのような特典を受けますか？"
       },
       {
-        "description": "As a specialized WhatsApp chat analyzer, we've streamlined this process: 1) Open WhatsApp and navigate to your target conversation 2) Tap the three-dots menu > More > Export chat 3) Choose whether to include media (our analyzer processes both options) 4) Upload the exported file directly to ChatRecap AI for immediate analysis. For other platforms like Instagram, Telegram, Discord, or Snapchat, simply follow our platform-specific export guides available in our Help Center.",
-        "title": "How do I export my chat for analysis with ChatRecap AI?"
+        "description": "専門のWhatsAppチャットアナライザーとして、このプロセスを簡素化しました：1）WhatsAppを開き、対象の会話に移動 2）三点メニューをタップ > その他 > チャットをエクスポート 3）メディアを含めるかどうかを選択（当社のアナライザーは両方のオプションを処理します） 4）エクスポートしたファイルをChatRecap AIに直接アップロードして即座に分析。Instagram、Telegram、Discord、Snapchatなどの他のプラットフォームについては、ヘルプセンターで提供されているプラットフォーム固有のエクスポートガイドに従ってください。",
+        "title": "ChatRecap AIで分析するためにチャットをどのようにエクスポートしますか？"
       },
       {
-        "description": "ChatRecap AI stands apart from basic WhatsApp chat analyzers through our proprietary deep learning models specifically designed for relationship communication analysis. Unlike standard WhatsApp chat analyzers that provide only basic statistics, ChatRecap AI detects subtle emotional patterns, relationship dynamics, and communication trends that other tools miss. Our platform offers unique features including sentiment progression tracking, conversation quality assessment, and relationship health indicators based on established communication research.",
-        "title": "What makes ChatRecap AI different from other chat analyzers?"
+        "description": "ChatRecap AIは、関係性のコミュニケーション分析用に特別に設計された独自の深層学習モデルにより、基本的なWhatsAppチャットアナライザーとは一線を画します。基本的な統計のみを提供する標準的なWhatsAppチャットアナライザーとは異なり、ChatRecap AIは、他のツールが見逃す微妙な感情パターン、関係性のダイナミクス、コミュニケーショントレンドを検出します。当社のプラットフォームは、センチメント進行追跡、会話品質評価、確立されたコミュニケーション研究に基づく関係性の健康指標など、独自の機能を提供します。",
+        "title": "ChatRecap AIを他のチャットアナライザーと異なる点は何ですか？"
       },
       {
-        "description": "ChatRecap AI's comprehensive analysis includes detailed metrics across multiple dimensions: message frequency patterns (by day/hour), response time analytics (average and trends), emotional content mapping (positive/negative sentiment distribution), conversation topic clustering, and engagement level metrics. Premium users receive advanced insights including communication style compatibility assessments, media sharing pattern analysis, peak activity time identification, and relationship dynamic evaluations based on longitudinal chat data analysis.",
-        "title": "What specific metrics does ChatRecap AI's analysis reveal?"
+        "description": "ChatRecap AIの包括的な分析には、複数の次元にわたる詳細なメトリクスが含まれます：メッセージ頻度パターン（日/時間ごと）、応答時間分析（平均とトレンド）、感情的内容マッピング（ポジティブ/ネガティブなセンチメント分布）、会話トピッククラスタリング、関与レベルメトリクス。プレミアムユーザーは、コミュニケーションスタイルの互換性評価、メディア共有パターン分析、ピークアクティビティ時間の特定、長期的なチャットデータ分析に基づく関係性のダイナミクス評価などの高度な洞察を受け取ります。",
+        "title": "ChatRecap AIの分析はどのような具体的なメトリクスを明らかにしますか？"
       }
     ],
     "label": "よくある質問",
     "name": "faq",
     "title": "ChatRecap AIに関するよくある質問"
   },
-  "favorite_day_to_chat": "Favorite day to chat",
   "feature": {
-    "description": "高度な分析ツールで会話から強力なインサイトを発見しましょう。",
+    "description": "高度な分析ツールで、会話から強力な洞察を発見してください。",
     "items": [
       {
-        "description": "WhatsApp、WeChat、Instagramなどでのチャット頻度とパターンを分析します。ピーク時間を特定し、応答時間の変化を追跡し、すべてのプラットフォームで統一されたトレンドを発見します。",
+        "description": "WhatsApp、WeChat、Instagramなどでチャットの頻度とパターンを分析します。ピーク期間を特定し、応答時間の変化を追跡し、プラットフォーム全体の統一されたトレンドを発見します。",
         "icon": "RiGlobalLine",
-        "title": "マルチプラットフォーム相互作用分析"
+        "title": "クロスプラットフォーム対話分析"
       },
       {
-        "description": "高度な自然言語処理を使用して、あなた独自のコミュニケーションスタイルを発見し、語彙の使用法、絵文字パターンを分析し、感情的および関係特有の言語パターンを明らかにします。",
+        "description": "高度な自然言語処理を使用して、独自のコミュニケーションスタイルを明らかにし、語彙の使用、絵文字のパターン、感情的および関係性特有の言語パターンを分析します。",
         "icon": "RiChatSmile3Line",
         "title": "コミュニケーションスタイルと言語分析"
       },
       {
-        "description": "会話がどのように始まり、発展し、終わるかを理解します。誰が最も頻繁に相互作用を開始するかを追跡し、対話トピックと感情的なトーンの変化を検出します。",
+        "description": "会話がどのように始まり、進化し、終わるかを理解します。誰がより頻繁に対話を開始するかを追跡し、対話のトピックや感情的なトーンの変化を検出します。",
         "icon": "RiFlowChart",
         "title": "会話の流れとダイナミクス"
       },
       {
-        "description": "感情的なニュアンスを検出し、健全または不健全な行動パターンを特定し、関係においてより良いコミュニケーション習慣を促進するための認識を作り出します。",
+        "description": "感情的なニュアンスを検出し、健全または不健全な行動パターンを特定し、関係性におけるより良いコミュニケーション習慣を育むための意識を構築します。",
         "icon": "RiHeartLine",
-        "title": "感情的な雰囲気と健康インサイト"
+        "title": "感情的センチメントと健康の洞察"
       },
       {
-        "description": "両者の投資レベルを評価するために、応答の長さ、会話の深さ、エンゲージメントの頻度を測定します。",
+        "description": "返信の長さ、会話の深さ、関与の頻度を測定して、双方の投資レベルを評価します。",
         "icon": "RiBarChartLine",
-        "title": "エンゲージメントの深さと頻度の測定"
+        "title": "関与の深さと頻度メトリクス"
       },
       {
-        "description": "誰がより多くの個人的な詳細を共有しているかを明らかにし、開放性のレベルを追跡し、よりバランスの取れた相互的な関係ダイナミクスを作るためのヒントを発見します。",
+        "description": "誰がより多くの個人情報を共有しているかを明らかにし、オープンネスレベルを追跡し、よりバランスの取れた相互的な関係性のダイナミクスを作成するためのヒントを発見します。",
         "icon": "RiUserHeartLine",
         "title": "個人情報共有のバランス"
       }
@@ -142,97 +95,6 @@
     "name": "feature",
     "title": "ChatRecap AIの主な機能"
   },
-  "first_message": "First message",
-  "footer": {
-    "brand": {
-      "description": "時間を節約し、整理された状態を保つのに役立つAI駆動のミーティング要約。重要な詳細やアクションアイテムを二度と見逃すことはありません。",
-      "title": "ChatRecap AI",
-      "logo": {
-        "alt": "ChatRecap AI",
-        "src": "/logo.png"
-      },
-      "url": "/"
-    },
-    "name": "footer",
-    "agreement": {
-      "items": {
-        "0": {
-          "target": "_self",
-          "title": "Privacy Policy",
-          "url": "/privacy"
-        },
-        "1": {
-          "target": "_self",
-          "title": "Terms of Service",
-          "url": "/terms"
-        }
-      }
-    },
-    "copyright": "© 2025 • ChatRecap AI All rights reserved.",
-    "nav": {
-      "items": {
-        "0": {
-          "children": {
-            "0": {
-              "target": "_self",
-              "title": "Features",
-              "url": "/#feature"
-            },
-            "1": {
-              "target": "_self",
-              "title": "How It Works",
-              "url": "/#usage"
-            },
-            "2": {
-              "target": "_self",
-              "title": "Pricing",
-              "url": "/#pricing"
-            }
-          },
-          "title": "Product"
-        },
-        "1": {
-          "children": {
-            "0": {
-              "target": "_self",
-              "title": "Help Center",
-              "url": "/help"
-            },
-            "1": {
-              "target": "_self",
-              "title": "Blog",
-              "url": "/blog"
-            }
-          },
-          "title": "Resources"
-        }
-      }
-    },
-    "social": {
-      "items": {
-        "0": {
-          "icon": "RiTwitterXFill",
-          "target": "_blank",
-          "title": "Twitter",
-          "url": "https://x.com/Cheercheung125"
-        },
-        "1": {
-          "icon": "RiLinkedinFill",
-          "target": "_blank",
-          "title": "LinkedIn",
-          "url": "https://www.linkedin.com/in/yue-zhang-709445259/"
-        },
-        "2": {
-          "icon": "RiInstagramFill",
-          "target": "_blank",
-          "title": "Instagram",
-          "url": "https://www.instagram.com/cheer_cheung_"
-        }
-      }
-    }
-  },
-  "free": "Free",
-  "free_analysis": "Free Analysis",
   "header": {
     "brand": {
       "logo": {
@@ -254,53 +116,35 @@
     "nav": {
       "items": [
         {
-          "icon": "HiOutlineSparkles",
-          "title": "機能",
-          "url": "/#feature",
-          "target": "_blank"
+          "icon": "RiDiscordFill",
+          "target": "_blank",
+          "title": "Discordに参加",
+          "url": "https://discord.gg/ceRtME7q"
         },
         {
           "icon": "RiQuestionLine",
-          "title": "使い方",
-          "url": "/#usage"
+          "title": "仕組み",
+          "url": "/chatrecapanalysis"
         },
         {
           "icon": "MdPayment",
-          "title": "料金",
+          "title": "価格",
           "url": "/#pricing"
         },
         {
-          "children": [
-            {
-              "description": "WhatsAppチャットを分析する",
-              "icon": "RiWhatsappLine",
-              "target": "_self",
-              "title": "WhatsApp分析",
-              "url": "/#whatsapp"
-            },
-            {
-              "description": "InstagramのDMを分析する",
-              "icon": "RiInstagramLine",
-              "target": "_self",
-              "title": "Instagram分析",
-              "url": "/#instagram"
-            }
-          ],
           "icon": "BiCube",
           "title": "プラットフォーム",
-          "url": "/#showcase"
+          "url": "/chatrecapplatform"
         }
       ]
     },
     "show_locale": true,
-    "show_sign": true,
     "show_theme": true
   },
-  "heatmap_data_not_available": "Heatmap data not available",
   "hero": {
     "announcement": {
       "label": "2024",
-      "title": "🚀 チームと個人の両方で利用可能になりました",
+      "title": "🚀 チームおよび個人向けに今すぐ利用可能",
       "url": "/#pricing"
     },
     "buttons": [
@@ -312,107 +156,25 @@
         "variant": "default"
       }
     ],
-    "description": "Chat Recap AIで会話の隠れたパターンとインサイトを発見し、コミュニケーションパターン、応答時間、感情的なつながりを明らかにします。",
-    "features_disabled": {
-      "items": [
-        {
-          "description": "ユーザーにロマンチックで温かい体験を提供",
-          "icon": "Heart",
-          "title": "ロマンチックな体験"
-        },
-        {
-          "description": "スムーズな操作による迅速なシステム応答",
-          "icon": "Zap",
-          "title": "迅速な応答"
-        },
-        {
-          "description": "ユーザーのプライバシーを保護する暗号化データストレージ",
-          "icon": "Shield",
-          "title": "安全で信頼性が高い"
-        },
-        {
-          "description": "心地よい視覚体験のために丁寧に設計されたインターフェース",
-          "icon": "Star",
-          "title": "美しいデザイン"
-        },
-        {
-          "description": "24時間利用可能なカスタマーサービス",
-          "icon": "Clock",
-          "title": "24時間365日のサービス"
-        }
-      ],
-      "note": "这部分配置已被替换为聊天通知组件，暂时保留",
-      "title": "主な機能"
-    },
+    "description": "ChatRecap AIでチャットの隠れたパターンと洞察を解き放ち、コミュニケーションのパターン、応答時間、感情的なつながりを明らかにします。",
     "highlight_text": "ChatRecap AI",
     "show_badge": true,
     "show_happy_users": true,
-    "tip": "⌛️ 期間限定オファー 100%割引",
+    "tip": "⌛️ 期間限定オファー 100%オフ",
     "title": "ChatRecap AIで会話を分析"
-  },
-  "high": "High",
-  "hours": "hours",
-  "hurry": "Hurry",
-  "insights": {
-    "interaction_title": "Interaction Insights",
-    "relationship_title": "Relationship Insights"
   },
   "json_uploader": {
     "analyze_button": "無料分析",
     "auto_sort_message": "メッセージはタイムスタンプで自動的にソートされます。",
-    "description": "チャット履歴を分析し、インサイトを提供します",
-    "max_characters": "最大文字数：{count}",
-    "max_message_count": "最大メッセージ数：{count}",
+    "description": "チャット履歴を分析し、洞察を提供します。",
+    "max_characters": "最大文字数: {count}",
+    "max_message_count": "最大メッセージ数: {count}",
     "name": "json_uploader",
-    "recap_button": "AI要約",
-    "selected_file": "選択済み：{filename}",
+    "recap_button": "AI振り返り",
+    "selected_file": "選択済み: {filename}",
     "title": "チャットデータをアップロード",
-    "upload_prompt": "{platform} JSONファイルをアップロードするにはクリックしてください"
+    "upload_prompt": "{platform} JSONファイルをアップロードするにはクリック"
   },
-  "keywords": "Keywords",
-  "last_message": "Last message",
-  "limited_time_offer": "Limited time offer",
-  "low": "Low",
-  "medium_conversations": "Medium conversations",
-  "messages": {
-    "message1": "Hello! Welcome to ChatRecap AI.",
-    "message2": "Upload your chat history to get started.",
-    "message3": "We'll analyze your conversations and provide insights.",
-    "message4": "Our AI can detect patterns in your communication.",
-    "message5": "See who initiates conversations more often.",
-    "message6": "Discover your peak chat times and favorite topics.",
-    "message7": "Get a complete relationship analysis with our premium plan."
-  },
-  "messages_count_other": "{{count}} messages",
-  "meta": {
-    "description": "Analyze your chat history with ChatRecap AI",
-    "title": "ChatRecap AI - Chat Analysis Tool"
-  },
-  "metadata": {
-    "description": "ChatRecap AI helps you analyze your chat history and provides insights into your communication patterns",
-    "keywords": "chat analysis, conversation insights, relationship analysis, communication patterns",
-    "title": "ChatRecap AI - Analyze Your Chat History"
-  },
-  "morning": "Morning",
-  "most_active_day": "Most active day",
-  "most_active_hour": "Most active hour",
-  "negative": "Negative",
-  "neutral": "Neutral",
-  "no_data_available": "No data available",
-  "no_data_found": "No data found",
-  "no_meaningful_words": "No meaningful words found",
-  "no_words_found": "No words found",
-  "of_full_access": "of full access",
-  "overall_sentiment": "Overall sentiment",
-  "overview_story_part1": "You started chatting on",
-  "overview_story_part2": "and have exchanged",
-  "overview_story_part3": "messages so far.",
-  "overview_title": "Chat Overview",
-  "payment": {
-    "error_title": "Payment Error"
-  },
-  "peak_activity_time": "Peak activity time",
-  "placeholder": "Enter text here...",
   "platform_filter": {
     "name": "platform_filter",
     "options": [
@@ -440,374 +202,152 @@
     "title": "プラットフォームを選択"
   },
   "platform_upload": {
-    "description": "メッセージングプラットフォームを選択し、分析用にチャットデータをアップロードしてください",
+    "description": "メッセージングプラットフォームを選択し、チャットデータを分析のためにアップロードします。",
     "name": "platform_upload",
     "title": "チャットデータをアップロード"
   },
-  "platforms": {
-    "discord": "Discord",
-    "instagram": "Instagram",
-    "snapchat": "Snapchat",
-    "telegram": "Telegram",
-    "whatsapp": "WhatsApp"
-  },
-  "positive": "Positive",
-  "pricing": {
-    "description": "あなたとチームに最適なプランを選びましょう。",
-    "groups": [],
-    "items": [
-      {
-        "amount": 0,
-        "button": {
-          "icon": "RiFlashlightFill",
-          "title": "始める",
-          "url": "/#signup"
-        },
-        "cn_amount": 0,
-        "credits": 5,
-        "currency": "USD",
-        "description": "始めたばかりの個人に最適です。",
-        "features": [
-          "月5回のミーティング要約",
-          "基本的な要約機能",
-          "メール配信",
-          "7日間のデータ保持",
-          "単一ユーザーのみ",
-          "標準サポート"
-        ],
-        "features_title": "含まれるもの",
-        "interval": "monthly",
-        "is_featured": false,
-        "original_price": "$0",
-        "price": "$0",
-        "product_id": "free",
-        "product_name": "ChatRecap AI Free",
-        "tip": "クレジットカード不要",
-        "title": "無料",
-        "unit": "USD",
-        "valid_months": 1
-      },
-      {
-        "amount": 1999,
-        "button": {
-          "icon": "RiFlashlightFill",
-          "title": "始める",
-          "url": "/#signup"
-        },
-        "cn_amount": 13999,
-        "credits": 50,
-        "currency": "USD",
-        "description": "より多くのミーティング要約が必要なプロフェッショナル向け。",
-        "features": [
-          "月50回のミーティング要約",
-          "高度な要約機能",
-          "アクションアイテムの抽出",
-          "30日間のデータ保持",
-          "最大3ユーザーまで",
-          "優先サポート",
-          "カスタム配信オプション"
-        ],
-        "features_title": "無料プランのすべてに加えて",
-        "interval": "monthly",
-        "is_featured": true,
-        "label": "人気",
-        "original_price": "$29.99",
-        "price": "$19.99",
-        "product_id": "pro",
-        "product_name": "ChatRecap AI Pro",
-        "tip": "最も人気のある選択肢",
-        "title": "プロ",
-        "unit": "USD",
-        "valid_months": 1
-      },
-      {
-        "amount": 4999,
-        "button": {
-          "icon": "RiFlashlightFill",
-          "title": "始める",
-          "url": "/#signup"
-        },
-        "cn_amount": 34999,
-        "credits": 999999,
-        "currency": "USD",
-        "description": "無制限のミーティング要約が必要なチーム向け。",
-        "features": [
-          "無制限のミーティング要約",
-          "プレミアム要約機能",
-          "アクションアイテムの追跡",
-          "90日間のデータ保持",
-          "最大10ユーザーまで",
-          "24/7優先サポート",
-          "チームコラボレーション機能",
-          "管理者ダッシュボード"
-        ],
-        "features_title": "プロプランのすべてに加えて",
-        "interval": "monthly",
-        "is_featured": false,
-        "original_price": "$69.99",
-        "price": "$49.99",
-        "product_id": "team",
-        "product_name": "ChatRecap AI Team",
-        "tip": "チームに最適な価値",
-        "title": "チーム",
-        "unit": "USD",
-        "valid_months": 1
-      }
-    ],
-    "label": "料金",
-    "name": "pricing",
-    "title": "シンプルで透明な料金設定"
-  },
-  "processing": {
-    "analysis_progress": "Analysis progress",
-    "analyzing": "Analyzing your chat data",
-    "cleaning": "Cleaning data",
-    "cleaning_progress": "Cleaning progress",
-    "completed": "Processing completed",
-    "description": "We're processing your chat data",
-    "failed": "Processing failed",
-    "preparing": "Preparing data",
-    "processing": "Processing",
-    "result_fetch_failed": "Failed to fetch results",
-    "status_fetch_failed": "Failed to fetch status",
-    "title": "Processing Your Chat",
-    "uploading": "Uploading"
-  },
-  "quick_responses": "Quick responses",
-  "relationship_analysis": {
-    "description": "Analysis of your relationship based on chat patterns"
-  },
-  "relationship_metrics": {
-    "emotional_stability": "Emotional Stability",
-    "interest_level": "Interest Level",
-    "response_enthusiasm": "Response Enthusiasm",
-    "response_time": "Response Time"
-  },
-  "relationship_metrics_hearts": {
-    "description": "These metrics show the health of your relationship based on your chat patterns",
-    "title": "Relationship Health Metrics"
-  },
-  "response_pattern_description": "Analysis of how quickly you respond to each other",
-  "results": {
-    "back": "Back",
-    "date_range": "Date range",
-    "description": "View the analysis of your chat history",
-    "export": "Export",
-    "filtered_messages": "Filtered messages",
-    "link_copied": "Link copied to clipboard",
-    "media_messages_other": "{{count}} media messages",
-    "messages_description_other": "You have {{count}} messages in your chat history",
-    "messages_title": "Messages",
-    "next": "Next",
-    "no_messages": "No messages found",
-    "no_search_results": "No search results found",
-    "page_info": "Page {{current}} of {{total}}",
-    "participants": "Participants",
-    "previous": "Previous",
-    "search": "Search",
-    "search_placeholder": "Search messages...",
-    "share": "Share",
-    "share_text_other": "Check out my chat analysis with {{count}} messages!",
-    "share_title": "Share your results",
-    "summary_description": "Here's a summary of your chat analysis",
-    "summary_title": "Chat Summary",
-    "system_messages_other": "{{count}} system messages",
-    "title": "Chat Analysis Results",
-    "total_messages": "Total messages",
-    "unknown_date_range": "Unknown date range",
-    "valid_date_messages_other": "{{count}} messages with valid dates",
-    "warnings_title": "Warnings",
-    "media_messages_one": "{{count}} media message",
-    "messages_description_one": "You have {{count}} message in your chat history",
-    "share_text_one": "Check out my chat analysis with {{count}} message!",
-    "system_messages_one": "{{count}} system message",
-    "valid_date_messages_one": "{{count}} message with valid date"
-  },
-  "sample_button_text": "Use Sample",
-  "sample_chat_text": "Sample chat text",
   "scenarios": {
-    "description": "私たちのチャット分析AIは、さまざまな関係タイプのニュアンスを理解します。恋愛カップル、家族、友人、同僚など、どのような関係であっても、私たちの分析は独自のインサイトを明らかにし、各関係ダイナミクスに合わせたチャット要約を作成します。",
+    "description": "当社のチャット分析AIは、さまざまな関係性のニュアンスを理解します。恋愛関係、家族、友人、同僚のいずれであっても、分析は各関係性のダイナミクスに合わせた独自の洞察を明らかにし、パーソナライズされたチャット概要を作成します。",
     "items": [
       {
-        "buttonText": "関係を分析する",
-        "description": "パートナーとのコミュニケーションパターンを理解し、感情的なつながりを強化します。",
+        "buttonText": "私の関係を分析",
+        "description": "パートナーとのコミュニケーションのパターンを理解し、感情的なつながりを強化します。",
         "title": "恋愛関係"
       },
       {
-        "buttonText": "家族チャットを分析する",
-        "description": "家族グループチャットを分析し、愛する人とのコミュニケーションを改善します。",
+        "buttonText": "家族チャットを分析",
+        "description": "家族のグループチャットを分析し、愛する人とのコミュニケーションを改善します。",
         "title": "家族のつながり"
       },
       {
-        "buttonText": "関係の成長を分析する",
-        "description": "時間の経過とともに関係の成長を追跡し、コミュニケーションがどのように発展したかを発見します。",
-        "title": "2年間の関係分析"
+        "buttonText": "関係の成長を分析",
+        "description": "時間とともにあなたの関係の成長を追跡し、コミュニケーションがどのように進化したかを発見します。",
+        "title": "2年間の交際分析"
       },
       {
-        "buttonText": "友情を分析する",
-        "description": "友人との相互作用パターンを発見し、社会的つながりを育みます。",
+        "buttonText": "友情を分析",
+        "description": "友人との対話パターンを発見し、ソーシャルなつながりを育みます。",
         "title": "友情"
       }
     ],
     "label": "適用シナリオ",
     "name": "scenarios",
     "scenario_label": "シナリオ",
-    "title": "あらゆる関係タイプのためのチャット分析と要約"
+    "title": "すべての関係タイプ向けのチャット分析と振り返り"
   },
-  "select_button": "Select",
-  "sentiment_analysis": "Sentiment Analysis",
-  "sentiment_description": "Analysis of the emotional tone of your messages",
-  "sentiment_negative": "Negative sentiment",
-  "sentiment_neutral": "Neutral sentiment",
-  "sentiment_positive": "Positive sentiment",
-  "sentiment_score": "Sentiment score",
-  "sentiment_very_negative": "Very negative",
-  "sentiment_very_positive": "Very positive",
-  "share": {
-    "copy_failed": "Failed to copy link",
-    "link_copied": "Link copied to clipboard"
-  },
-  "share_not_implemented": "Sharing feature is not implemented yet",
-  "share_results": "Share Results",
-  "sharing": "Sharing",
-  "speakers": {
-    "boyfriend": "Boyfriend",
-    "crush": "Crush",
-    "ex": "Ex",
-    "friend": "Friend",
-    "girlfriend": "Girlfriend",
-    "her": "Her",
-    "him": "Him"
+  "simple_pricing": {
+    "description": "あなたのニーズに合ったプランでチャット分析の旅を始めましょう。",
+    "label": "価格",
+    "name": "pricing",
+    "plans": [
+      {
+        "buttonIcon": "RiFlashlightFill",
+        "buttonText": "始める",
+        "buttonUrl": "/chatrecapanalysis",
+        "description": "基本的な洞察でチャット分析の旅を始めましょう。",
+        "features": [
+          {
+            "text": "基本的なメッセージ数分析"
+          },
+          {
+            "text": "毎日のチャット活動パターン"
+          },
+          {
+            "text": "トップチャット参加者の概要"
+          },
+          {
+            "text": "制限されたデータ処理"
+          },
+          {
+            "text": "7日間のデータ保持"
+          },
+          {
+            "text": "標準サポート"
+          }
+        ],
+        "isFree": true,
+        "price": "$0",
+        "productId": "free",
+        "tipText": "クレジットカード不要",
+        "title": "無料"
+      },
+      {
+        "amount": 990,
+        "buttonIcon": "RiFlashlightFill",
+        "buttonText": "今すぐアップグレード",
+        "buttonUrl": "/payment",
+        "description": "包括的なチャット分析と高度な機能を解除します。",
+        "features": [
+          {
+            "text": "すべての無料機能"
+          },
+          {
+            "text": "センチメント分析"
+          },
+          {
+            "text": "トピッククラスタリング"
+          },
+          {
+            "text": "インタラクティブな視覚化"
+          },
+          {
+            "text": "カスタム日付範囲分析"
+          },
+          {
+            "text": "関係性の洞察"
+          },
+          {
+            "text": "30日間のデータ保持"
+          },
+          {
+            "text": "優先サポート"
+          }
+        ],
+        "isPopular": true,
+        "originalPrice": "$19.90",
+        "popularLabel": "人気",
+        "price": "$9.90",
+        "productId": "premium",
+        "tipText": "完全な分析に最適な価値",
+        "title": "プレミアム"
+      }
+    ],
+    "title": "分析プランを選択"
   },
   "stats": {
-    "description": "時間を節約し、生産性を向上させるため。",
+    "description": "時間節約と生産性向上のために。",
     "icon": "FaRegHeart",
     "items": [
       {
         "description": "ユーザー",
         "label": "10K+",
-        "title": "信頼されている"
+        "title": "信頼されています"
       },
       {
-        "description": "ミーティング",
-        "label": "500K+",
-        "title": "要約された"
+        "description": "チャット",
+        "label": "50K+",
+        "title": "振り返られた"
       },
       {
-        "description": "時間",
-        "label": "1M+",
-        "title": "節約された時間"
+        "description": "洞察",
+        "label": "80K+",
+        "title": "発見された"
       }
     ],
     "label": "統計",
     "name": "stats",
-    "title": "人々がChatRecap AIを愛する理由"
+    "title": "人々はChatRecap AIを愛しています"
   },
-  "story_timeline_description": "See how your conversation has evolved over time",
-  "story_timeline_title": "Chat Timeline",
-  "subtitle": "Subtitle",
-  "supported_formats": "Supported formats: .txt, .zip",
   "template": "shipany-template-one",
-  "testimonial": {
-    "description": "ミーティングの生産性を向上させるためにChatRecap AIを使用しているプロフェッショナルの声を聞いてください。",
-    "icon": "GoThumbsup",
-    "items": [
-      {
-        "description": "ChatRecap AIは私のミーティング管理方法を変えました。重要な詳細やアクションアイテムを見逃す心配がなくなりました。すべてのミーティングで個人アシスタントを持っているようなものです！",
-        "image": {
-          "src": "/imgs/users/1.png"
-        },
-        "label": "TechCorpのプロダクトマネージャー",
-        "title": "Sarah Johnson"
-      },
-      {
-        "description": "CEOとして、私は一日中ミーティングに参加しています。ChatRecap AIは私が整理された状態を保ち、フォローアップを見逃さないようにしてくれます。私の生産性にとってゲームチェンジャーでした。",
-        "image": {
-          "src": "/imgs/users/2.png"
-        },
-        "label": "StartupXのCEO",
-        "title": "Michael Chen"
-      },
-      {
-        "description": "私のチームはChatRecap AIのミーティング要約を気に入っています。全員が同じページにいて、アクションアイテムに責任を持つようになります。フォローアップに大きな改善が見られました。",
-        "image": {
-          "src": "/imgs/users/3.png"
-        },
-        "label": "DesignHubのチームリーダー",
-        "title": "Emily Rodriguez"
-      },
-      {
-        "description": "ChatRecap AIは私の顧客ミーティングにとって非常に価値がありました。メモを取る代わりに関係構築に集中でき、それでも各会話の完璧な記録を持つことができます。",
-        "image": {
-          "src": "/imgs/users/4.png"
-        },
-        "label": "セールスディレクター",
-        "title": "David Kim"
-      },
-      {
-        "description": "アクションアイテム追跡機能が素晴らしいです！ミーティングからタスクと期限を自動的に識別し、プロジェクト完了率を40%向上させました。",
-        "image": {
-          "src": "/imgs/users/5.png"
-        },
-        "label": "プロジェクトマネージャー",
-        "title": "Lisa Thompson"
-      },
-      {
-        "description": "リモートチームの管理は難しいですが、ChatRecap AIは私たちが同じページにいるのを助けてくれます。ミーティング要約は、全員が何が議論され、何が期待されているかを知ることができます。",
-        "image": {
-          "src": "/imgs/users/6.png"
-        },
-        "label": "リモートチームマネージャー",
-        "title": "James Wilson"
-      }
-    ],
-    "label": "お客様の声",
-    "name": "testimonial",
-    "title": "ユーザーがChatRecap AIについて言っていること"
-  },
-  "text_analysis_title": "Text Analysis",
   "theme": "light",
-  "time_analysis_title": "Time Analysis",
-  "time_distribution": "Time Distribution",
-  "time_distribution_description": "See when you chat the most throughout the day and week",
-  "times": {
-    "days_ago": "{{count}} days ago",
-    "hours_ago": "{{count}} hours ago",
-    "just_now": "Just now",
-    "minutes_ago": "{{count}} minutes ago"
-  },
-  "title": "Title",
-  "to_unlock": "to unlock",
-  "top_emojis": "Top Emojis",
-  "top_words": "Top Words",
-  "total_emojis": "Total emojis",
-  "total_messages": "Total messages",
-  "total_unique_words": "Total unique words",
-  "total_words": "Total words",
-  "try_now": "Try Now",
-  "upload": {
-    "description": "Upload your chat file to analyze",
-    "drop_files": "Drop files here",
-    "error": "Upload Error",
-    "failed": "Upload Failed",
-    "file_size_limit": "File size limit: {{size}}MB",
-    "invalid_format": "Invalid file format",
-    "no_file_selected": "No file selected",
-    "select_file": "Select File",
-    "supported_formats": "Supported formats: {{formats}}",
-    "title": "Upload Chat File",
-    "upload_button": "Upload",
-    "upload_failed": "Upload failed",
-    "uploading": "Uploading..."
-  },
   "upload_box": {
-    "description": "サンプルを使用するか、チャットファイルをアップロードし、無料分析またはAI要約をクリックしてください。",
+    "description": "サンプルを使用するか、チャットファイルをアップロードし、無料分析またはAI振り返りをクリックします。",
     "max_file_size": 5,
     "name": "upload_box",
-    "placeholder": "チャットテキストをここに入力または貼り付けてください...",
+    "placeholder": "ここにチャットテキストを入力または貼り付けます...",
     "primary_button": {
       "target": "_self",
-      "title": "AI要約",
+      "title": "AI振り返り",
       "url": "/#recap",
       "variant": "default"
     },
@@ -819,104 +359,8 @@
       "url": "/chatrecapresult",
       "variant": "secondary"
     },
-    "supported_formats": "サポートされている形式：.txtファイルまたは.txtファイルを含む.zipファイル（最大5MB）",
-    "title": "Chat Recap AIの使用を開始する",
+    "supported_formats": "サポートされている形式: .txtファイルまたは.txtファイルを含む.zipファイル（最大5MB）",
+    "title": "ChatRecap AIを使い始める",
     "upload_button_text": "ファイルをアップロード"
-  },
-  "upload_button_text": "Upload File",
-  "upload_description": "Upload your chat file to analyze",
-  "upload_title": "Upload Chat File",
-  "use_code": "Use code",
-  "user": {
-    "sign_in": "Sign In",
-    "sign_out": "Sign Out"
-  },
-  "very_negative": "Very negative",
-  "very_positive": "Very positive",
-  "view_guide": "View download guide",
-  "weekly_activity_heatmap": "Weekly Activity Heatmap",
-  "word": "Word",
-  "word_cloud": "Word Cloud",
-  "words": "Words",
-  "words_per_message": "Words per message",
-  "messages_count_one": "{{count}} message",
-  "simple_pricing": {
-    "description": "Start your chat analysis journey with the right plan for your needs.",
-    "label": "Pricing",
-    "name": "pricing",
-    "plans": {
-      "0": {
-        "buttonIcon": "RiFlashlightFill",
-        "buttonText": "Get Started",
-        "buttonUrl": "/chatrecapanalysis",
-        "description": "Start your chat analysis journey with essential insights.",
-        "features": {
-          "0": {
-            "text": "Basic message count analysis"
-          },
-          "1": {
-            "text": "Daily chat activity patterns"
-          },
-          "2": {
-            "text": "Top chat participants overview"
-          },
-          "3": {
-            "text": "Limited data processing"
-          },
-          "4": {
-            "text": "7-day data retention"
-          },
-          "5": {
-            "text": "Standard support"
-          }
-        },
-        "isFree": true,
-        "price": "$0",
-        "productId": "free",
-        "tipText": "No credit card required",
-        "title": "Free"
-      },
-      "1": {
-        "amount": 990,
-        "buttonIcon": "RiFlashlightFill",
-        "buttonText": "Upgrade Now",
-        "buttonUrl": "/payment",
-        "description": "Unlock comprehensive chat analysis and advanced features.",
-        "features": {
-          "0": {
-            "text": "All FREE features"
-          },
-          "1": {
-            "text": "Sentiment analysis"
-          },
-          "2": {
-            "text": "Topic clustering"
-          },
-          "3": {
-            "text": "Interactive visualizations"
-          },
-          "4": {
-            "text": "Custom date range analysis"
-          },
-          "5": {
-            "text": "Relationship insights"
-          },
-          "6": {
-            "text": "30-day data retention"
-          },
-          "7": {
-            "text": "Priority support"
-          }
-        },
-        "isPopular": true,
-        "originalPrice": "$19.90",
-        "popularLabel": "Popular",
-        "price": "$9.90",
-        "productId": "premium",
-        "tipText": "Best value for complete analysis",
-        "title": "Premium"
-      }
-    },
-    "title": "Choose Your Analysis Plan"
   }
 }

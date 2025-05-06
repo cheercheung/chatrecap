@@ -1,5 +1,5 @@
 {
-  "ai_analysis": {
+  "ai_analysis_prompt": {
     "intro": "Sie sind ein professioneller Chat-Analyse-Experte. Bitte analysieren Sie das folgende Gespräch zwischen zwei Personen und erstellen Sie einen detaillierten Beziehungsanalysebericht.",
     "chat_info": "Person 1: {sender1}\nPerson 2: {sender2}\n\nChat-Beispiel (teilweise):\n{messageSamples}",
     "instructions": "Basierend auf diesen Chat-Nachrichten analysieren Sie die Kommunikationsmuster, Beziehungsdynamiken und Persönlichkeitsmerkmale beider Personen. Ihre Analyse sollte Folgendes umfassen:\n\n1. Persönlichkeitseinblicke für jede Person, einschließlich Interessensniveau, Antwortbegeisterung, emotionale Stabilität und Antwortzeit\n2. Beziehungsmetriken, einschließlich Intimität, Kommunikationsqualität, Vertrauen und Konfliktniveau\n3. Beziehungseinblicke, einschließlich Interaktionsmuster und Beziehungsmerkmale\n4. Vorgeschlagene Themen und Gesamtanalyse",

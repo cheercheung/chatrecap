@@ -31,7 +31,7 @@ export function createAiAnalysisPrompt(messages: any[], locale: string = 'en'): 
     const promptsPath = path.join(process.cwd(), 'i18n', 'prompts', `${locale}.json`);
     if (fs.existsSync(promptsPath)) {
       const promptsData = JSON.parse(fs.readFileSync(promptsPath, 'utf8'));
-      promptTemplate = promptsData.ai_analysis;
+      promptTemplate = promptsData.ai_analysis_prompt;
     } else {
       throw new Error(`Prompts file for locale ${locale} not found`);
     }
@@ -41,7 +41,7 @@ export function createAiAnalysisPrompt(messages: any[], locale: string = 'en'): 
     const promptsPath = path.join(process.cwd(), 'i18n', 'prompts', 'en.json');
     try {
       const promptsData = JSON.parse(fs.readFileSync(promptsPath, 'utf8'));
-      promptTemplate = promptsData.ai_analysis;
+      promptTemplate = promptsData.ai_analysis_prompt;
     } catch (fallbackError) {
       console.error('Failed to load English prompts:', fallbackError);
       // 提供一个基本的提示词模板作为后备

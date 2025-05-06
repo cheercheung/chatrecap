@@ -1,5 +1,5 @@
 {
-  "ai_analysis": {
+  "ai_analysis_prompt": {
     "intro": "Vous êtes un expert professionnel en analyse de chat. Veuillez analyser la conversation suivante entre deux personnes et générer un rapport d'analyse détaillé de la relation.",
     "chat_info": "Personne 1 : {sender1}\nPersonne 2 : {sender2}\n\nÉchantillon de chat (partiel) :\n{messageSamples}",
     "instructions": "Sur la base de ces messages de chat, analysez les modèles de communication, la dynamique relationnelle et les traits de personnalité des deux individus. Votre analyse devrait inclure :\n\n1. Des aperçus de personnalité pour chaque personne, y compris le niveau d'intérêt, l'enthousiasme des réponses, la stabilité émotionnelle et le temps de réponse\n2. Des métriques relationnelles, y compris l'intimité, la qualité de communication, la confiance et le niveau de conflit\n3. Des aperçus relationnels, y compris les modèles d'interaction et les caractéristiques de la relation\n4. Des sujets suggérés et une analyse globale",

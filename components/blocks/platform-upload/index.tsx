@@ -15,9 +15,9 @@ interface PlatformOption {
   label: string;
 }
 
-interface PlatformUploadProps {
-  section?: Section;
-  upload_box?: UploadBoxType;
+export interface PlatformUploadProps {
+  section: Section;
+  upload_box: UploadBoxType;
   className?: string;
 }
 

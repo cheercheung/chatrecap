@@ -1,5 +1,3 @@
-"use client";
-
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import HappyUsers from "./happy-users";
@@ -10,12 +8,12 @@ import Icon from "@/components/icon";
 import Link from "next/link";
 import { ChatNotification } from "@/components/ui/chat-notification";
 
-import { useTranslations } from "next-intl";
+import { getTranslations } from 'next-intl/server';
 
 // 优化的 Hero 组件，移除所有动画和效果
-export default function OptimizedHero({ hero }: { hero: HeroType }) {
-  // 使用正确的翻译命名空间
-  const t = useTranslations("chat_notifications");
+export default async function OptimizedHero({ hero }: { hero: HeroType }) {
+  // 使用 server 端的翻译
+  const t = await getTranslations('chat_notifications');
 
   if (hero.disabled) {
     return null;
@@ -119,25 +117,25 @@ export default function OptimizedHero({ hero }: { hero: HeroType }) {
             {/* 右侧内容 - 聊天通知 */}
             <div className="flex items-start justify-center col-span-1">
               <div className="bg-card border border-primary/10 rounded-2xl w-full p-6 h-auto overflow-hidden">
-                <h3 className="text-xl font-medium text-center mb-6 text-primary">{t("title")}</h3>
+                <h3 className="text-xl font-medium text-center mb-6 text-primary">{t('title')}</h3>
 
                 {/* 直接显示聊天通知，不使用条件渲染和动画 */}
                 <div className="space-y-4 pr-2 overflow-y-auto max-h-[400px] pb-2">
                   {/* 显示所有聊天通知 */}
                   <ChatNotification
-                    speaker={t("speakers.girlfriend")}
-                    time={t("times.days_ago", { days: 2 })}
-                    content={t("messages.message1")}
+                    speaker={t('speakers.girlfriend')}
+                    time={t('times.days_ago', { days: 2 })}
+                    content={t('messages.message1')}
                   />
                   <ChatNotification
-                    speaker={t("speakers.boyfriend")}
-                    time={t("times.minutes_ago", { minutes: 10 })}
-                    content={t("messages.message2")}
+                    speaker={t('speakers.boyfriend')}
+                    time={t('times.minutes_ago', { minutes: 10 })}
+                    content={t('messages.message2')}
                   />
                   <ChatNotification
-                    speaker={t("speakers.her")}
-                    time={t("times.days_ago", { days: 1 })}
-                    content={t("messages.message3")}
+                    speaker={t('speakers.her')}
+                    time={t('times.days_ago', { days: 1 })}
+                    content={t('messages.message3')}
                   />
                 </div>
               </div>

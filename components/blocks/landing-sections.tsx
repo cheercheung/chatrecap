@@ -6,7 +6,6 @@ import { LandingPage } from '@/types/pages/landing';
 
 // 静态导入关键组件（首屏显示的组件）
 import OptimizedHero from "@/components/blocks/hero/optimized";
-import NotificationBlockWrapper from "@/components/blocks/notification-block/client-wrapper";
 
 // 动态导入非关键组件（延迟加载），添加 ssr: false 选项减少服务器端渲染负担
 const CTA = dynamic(() => import('@/components/blocks/cta'), {

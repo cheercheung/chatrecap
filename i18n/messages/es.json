@@ -1,39 +1,39 @@
 {
   "afternoon": "tarde",
   "ai_analysis": {
-    "analyzing": "Analización",
+    "analyzing": "Analizando",
     "error": "Error",
     "error_description": "Descripción del error",
-    "failed": "Fallido",
-    "failed_description": "Descripción fallida",
+    "failed": "Falló",
+    "failed_description": "Descripción del fallo",
     "generate": "Generar",
-    "please_wait": "Espere por favor",
-    "starting": "A partir de",
+    "please_wait": "Por favor, espera",
+    "starting": "Iniciando",
     "success": "Éxito",
     "success_description": "Descripción del éxito"
   },
-  "analyze_button": "Analizar botón",
-  "avg_words_per_msg": "Palabras AVG por mensaje",
-  "back_to_upload": "Volver a cargar",
+  "analyze_button": "Botón de análisis",
+  "avg_words_per_msg": "Promedio de palabras por mensaje",
+  "back_to_upload": "Volver a subir",
   "badge": "Insignia",
   "blog": {
     "description": "Consejos, recursos y actualizaciones sobre comunicación en relaciones",
     "read_more_text": "Leer más",
-    "title": "Perspectivas de relaciones"
+    "title": "Perspectivas sobre relaciones"
   },
-  "busiest_date": "Fecha más ocupada",
+  "busiest_date": "Fecha más activa",
   "chat_analysis": {
     "advanced_options": "Opciones avanzadas",
     "analyze_button": "Analizar tu chat",
     "character_count": "{current} / {max} caracteres",
-    "description": "Transforma tus conversaciones con Chat Recap AI. Descubre los patrones ocultos y las perspectivas en tus chats. Comprende las relaciones a un nivel más profundo.",
+    "description": "Transforma tus conversaciones con Chat Recap AI. Descubre patrones ocultos y obtén perspectivas profundas sobre tus chats para entender mejor tus relaciones.",
     "free_analysis": "Analiza tu chat gratis",
-    "how_to_import": "Cómo importar chat desde WhatsApp",
+    "how_to_import": "Cómo importar un chat desde WhatsApp",
     "import_methods": {
-      "mobile": "Desde WhatsApp iOS/Android",
+      "mobile": "Desde WhatsApp en iOS/Android",
       "web": "Desde WhatsApp Web"
     },
-    "placeholder": "Ingrese o pegue su texto de chat aquí ...",
+    "placeholder": "Ingresa o pega aquí el texto de tu chat...",
     "platforms": {
       "discord": "Discord",
       "instagram": "Instagram",
@@ -41,350 +41,350 @@
       "telegram": "Telegram",
       "whatsapp": "WhatsApp"
     },
-    "privacy_notice": "No almacenamos tu historial de chat, el archivo en caché en nuestro servidor se eliminará automáticamente después de 30 minutos.",
+    "privacy_notice": "No almacenamos tu historial de chat. El archivo almacenado en caché en nuestro servidor se eliminará automáticamente después de 30 minutos.",
     "processing": {
-      "analysis_progress": "Progreso de análisis",
-      "analyzing": "Analización",
-      "cleaning": "Limpieza",
-      "cleaning_progress": "Cleaning Progress",
-      "completed": "Terminado",
-      "description": "Estamos procesando su historial de chat, espere",
-      "failed": "Failed",
-      "preparing": "Preparante",
-      "result_fetch_failed": "No se pudo obtener el resultado de procesamiento",
-      "status_fetch_failed": "No se pudo obtener el estado de procesamiento",
+      "analysis_progress": "Progreso del análisis",
+      "analyzing": "Analizando",
+      "cleaning": "Limpiando",
+      "cleaning_progress": "Progreso de limpieza",
+      "completed": "Completado",
+      "description": "Estamos procesando tu historial de chat, por favor espera.",
+      "failed": "Falló",
+      "preparing": "Preparando",
+      "result_fetch_failed": "No se pudo obtener el resultado del procesamiento",
+      "status_fetch_failed": "No se pudo obtener el estado del procesamiento",
       "title": "Procesando tu chat",
-      "uploading": "Carga"
+      "uploading": "Subiendo"
     },
     "results": {
       "back": "Atrás",
       "date_range": "Rango de fechas",
-      "description": "Resultados del procesamiento del historial de chat",
-      "download": "Download",
-      "filtered_media": "Mensajes de medios filtrados",
+      "description": "Resultados del procesamiento de tu historial de chat",
+      "download": "Descargar",
+      "filtered_media": "Mensajes multimedia filtrados",
       "filtered_system": "Mensajes del sistema filtrados",
-      "messages": "Messages",
-      "next": "Next",
-      "no_results": "No se encuentran mensajes coincidentes",
-      "no_warnings": "No warnings",
-      "page_of": "Página {actual} de {Total}",
+      "messages": "Mensajes",
+      "next": "Siguiente",
+      "no_results": "No se encontraron mensajes coincidentes",
+      "no_warnings": "Sin advertencias",
+      "page_of": "Página {actual} de {total}",
       "previous": "Anterior",
       "search": "Buscar",
-      "search_placeholder": "Mensajes de búsqueda o remitente",
+      "search_placeholder": "Buscar mensajes o remitente",
       "share": "Compartir",
-      "title": "Resultados de procesamiento",
-      "total_messages": "Mensajes totales",
+      "title": "Resultados del procesamiento",
+      "total_messages": "Total de mensajes",
       "unknown_date_range": "Rango de fechas desconocido",
-      "valid_dates": "Mensajes de fecha válidos",
+      "valid_dates": "Mensajes con fechas válidas",
       "warnings": "Advertencias"
     },
-    "sample_button_text": "Use Sample Input",
+    "sample_button_text": "Usar entrada de muestra",
     "sample_chat_text": "[2025/1/1, 01:00:00] ALICE: ¡Feliz año nuevo! 🎉\n[2025/1/1, 01:02:00] JEFF: ¡Feliz año nuevo, mi amor! 🎆\n[2025/1/1, 08:15:00] ALICE: ¡Primer café del año! ☕\n[2025/1/1, 08:20:00] JEFF: ¡Brindemos por muchos más! 🥂\n[2025/1/1, 10:30:00] ALICE: ¿Cuál es el plan para hoy? 🤔\n[2025/1/1, 10:32:00] JEFF: Vamos a dar un paseo por el parque 🌳\n[2025/1/1, 11:05:00] ALICE: ¡Suena perfecto! 🌞\n[2025/1/1, 13:00:00] JEFF: ¿Tienes propósitos de año nuevo?\n[2025/1/1, 13:10:00] ALICE: ¡Viajar más! 🌍\n[2025/1/1, 13:15:00] JEFF: Ese es bueno, estoy contigo en eso ✈️\n[2025/1/1, 14:30:00] ALICE: ¡El clima está tan agradable hoy! ☀️\n[2025/1/1, 14:35:00] JEFF: Un día perfecto para una aventura, ¿no crees?\n[2025/1/1, 16:00:00] ALICE: Estaba pensando en tomar un helado 🍦\n[2025/1/1, 16:10:00] JEFF: ¡Oh, me apunto! ¿Qué sabor?\n[2025/1/1, 18:30:00] ALICE: ¿Qué deberíamos cenar?\n[2025/1/1, 18:32:00] JEFF: ¿Pizza? 🍕",
     "select_platform": "Seleccionar plataforma",
     "subtitle": "Tu análisis de chat con IA",
-    "supported_formats": "Compatible: archivo .txt o .zip que contiene un archivo .txt (máximo 5mb)",
+    "supported_formats": "Formatos compatibles: archivo .txt o .zip que contiene un archivo .txt (máximo 5 MB)",
     "title": "Chat Recap AI",
     "upload": {
-      "description": "Seleccione un archivo de historial de chat para cargar",
-      "drag_drop": "Arrastre y suelte el archivo aquí o haga clic para seleccionar",
+      "description": "Selecciona un archivo de historial de chat para subir",
+      "drag_drop": "Arrastra y suelta el archivo aquí o haz clic para seleccionar",
       "file_selected": "Archivo seleccionado",
-      "file_size_limit": "File size exceeds {size}MB limit",
+      "file_size_limit": "El tamaño del archivo excede el límite de {size} MB",
       "invalid_format": "Formato de archivo no válido. \nFormatos compatibles: {formats}",
-      "no_file_selected": "Seleccione un archivo",
-      "title": "Subir el historial de chat",
+      "no_file_selected": "No se ha seleccionado ningún archivo",
+      "title": "Subir historial de chat",
       "upload_button": "Subir",
-      "upload_failed": "Carga falló",
-      "upload_success": "Subir exitoso"
+      "upload_failed": "La subida falló",
+      "upload_success": "Subida exitosa"
     },
-    "upload_button_text": "Archivo de carga",
-    "upload_description": "Sube tu exportación de chat para analizar",
+    "upload_button_text": "Subir archivo",
+    "upload_description": "Sube tu exportación de chat para analizarla",
     "upload_title": "Entrada de historial de chat"
   },
   "chat_notifications": {
     "messages": {
-      "message1": "Oh, finalmente enviaste un mensaje de texto? \nDebe haber roto un récord mundial 🏆🙄",
-      "message2": "Lo siento, mi teléfono solo zumba para entregas de pizza 🍕📳",
-      "message3": "Tus líneas de recogida son más rápidas que mis palomitas de maíz de microondas 🍿💨",
-      "message4": "Our chat's colder than Antarctica ❄️😎",
-      "message5": "¿Extráñame? \nApenas recuerdo tu nombre 😂",
-      "message6": "Tu vida de citas es como mi wifi - conexión inestable 📶",
-      "message7": "Visto tu mensaje. \nResponderá en 2-3 días hábiles 📅"
+      "message1": "¿Oh, finalmente enviaste un mensaje? \n¡Debes haber roto un récord mundial! 🏆🙄",
+      "message2": "Lo siento, mi teléfono solo vibra para entregas de pizza 🍕📳",
+      "message3": "Tus frases para ligar son más rápidas que mis palomitas de microondas 🍿💨",
+      "message4": "Nuestro chat está más frío que la Antártida ❄️😎",
+      "message5": "¿Me extrañas? \n¡Apenas recuerdo tu nombre! 😂",
+      "message6": "Tu vida amorosa es como mi WiFi: conexión inestable 📶",
+      "message7": "Vi tu mensaje. \nResponderé en 2-3 días hábiles 📅"
     },
     "speakers": {
       "boyfriend": "Novio",
-      "crush": "Aplastar",
+      "crush": "Crush",
       "ex": "Ex",
       "friend": "Amigo",
       "girlfriend": "Novia",
-      "her": "Su",
-      "him": "A él"
+      "her": "Ella",
+      "him": "Él"
     },
     "times": {
-      "days_ago": "{days} hace días",
-      "hours_ago": "{days}hace horas",
-      "just_now": "En este momento",
-      "minutes_ago": "{minutes}hace minutos"
+      "days_ago": "Hace {days} días",
+      "hours_ago": "Hace {hours} horas",
+      "just_now": "Ahora mismo",
+      "minutes_ago": "Hace {minutes} minutos"
     },
     "title": "Notificaciones de chat"
   },
   "chatrecapplatform": {
     "badge": "Análisis de chat",
-    "description": "Seleccione la plataforma de la que desea analizar su historial de chat. \nApoyamos múltiples plataformas de mensajería para proporcionar información integral.",
+    "description": "Selecciona la plataforma de la que deseas analizar tu historial de chat. \nSoportamos múltiples plataformas de mensajería para ofrecerte información completa.",
     "meta": {
-      "description": "Seleccione la plataforma que desea analizar su chat desde",
-      "title": "Elija su plataforma de chat"
+      "description": "Selecciona la plataforma desde la que deseas analizar tu chat",
+      "title": "Elige tu plataforma de chat"
     },
     "platforms": {
       "discord": {
-        "description": "Analice sus chats de discordia para comprender mejor su comunicación en los juegos y los contextos comunitarios."
+        "description": "Analiza tus chats de Discord para entender mejor tu comunicación en contextos de juegos y comunidades."
       },
       "instagram": {
-        "description": "Descubra ideas de sus mensajes directos de Instagram y comprenda su estilo de comunicación."
+        "description": "Descubre perspectivas de tus mensajes directos de Instagram y comprende tu estilo de comunicación."
       },
       "snapchat": {
-        "description": "Analice sus conversaciones de Snapchat para comprender su estilo y patrones de comunicación."
+        "description": "Analiza tus conversaciones de Snapchat para entender tus patrones y estilo de comunicación."
       },
       "telegram": {
-        "description": "Obtenga información de sus conversaciones de telegrama y comprenda sus patrones de mensajería."
+        "description": "Obtén información de tus conversaciones en Telegram y comprende tus patrones de mensajería."
       },
       "whatsapp": {
-        "description": "Analice sus conversaciones de WhatsApp para comprender sus patrones de mensajería y la dinámica de la relación."
+        "description": "Analiza tus conversaciones de WhatsApp para entender tus patrones de mensajería y dinámicas de relación."
       }
     },
     "select_button": "Seleccionar plataforma",
-    "title": "Elija su plataforma de chat"
+    "title": "Elige tu plataforma de chat"
   },
   "chatrecapresult": {
     "ai_analysis": {
-      "analyzing": "Análisis ...",
+      "analyzing": "Analizando...",
       "error": "Error",
-      "error_description": "Se produjo un error durante el análisis de IA. \nVuelva a intentarlo más tarde.",
+      "error_description": "Ocurrió un error durante el análisis de IA. \nPor favor, intenta de nuevo más tarde.",
       "failed": "El análisis de IA falló",
-      "failed_description": "We couldn't complete the AI analysis. Please try again.",
-      "generate": "Generar ideas de IA",
-      "please_wait": "Esto puede llevar unos minutos. \nEspere mientras analicemos sus datos de chat.",
-      "starting": "ANÁLISIS DE IA COMENZANDO",
-      "success": "Análisis de IA completo",
-      "success_description": "Sus ideas de IA están listas para ver."
+      "failed_description": "No pudimos completar el análisis de IA. Por favor, intenta de nuevo.",
+      "generate": "Generar perspectivas de IA",
+      "please_wait": "Esto puede tomar unos minutos. \nPor favor, espera mientras analizamos tus datos de chat.",
+      "starting": "Iniciando análisis de IA",
+      "success": "Análisis de IA completado",
+      "success_description": "Tus perspectivas de IA están listas para visualizarse."
     },
     "analysis_card": {
       "conversion_rate": {
-        "content": "La tasa de conversión de este mes es del 62%, 3 puntos porcentuales menos que el mes pasado.\n\nEl análisis muestra que la disminución de la tasa de conversión se debe principalmente a la mala calidad de los nuevos canales de promoción.\n\nLas tasas de conversión de tráfico de alta calidad siguen siendo estables, pero un aumento en el tráfico de baja calidad ha llevado a una disminución general en las tasas de conversión.\n\nSe recomienda optimizar las fuentes de tráfico, mejorar la calidad de los visitantes y mejorar la experiencia de la página de destino.",
+        "content": "La tasa de conversión de este mes es del 62%, 3 puntos porcentuales menos que el mes pasado.\n\nEl análisis muestra que la disminución de la tasa de conversión se debe principalmente a la baja calidad de los nuevos canales de promoción.\n\nLas tasas de conversión de tráfico de alta calidad permanecen estables, pero un aumento en el tráfico de baja calidad ha causado una disminución general.\n\nSe recomienda optimizar las fuentes de tráfico, mejorar la calidad de los visitantes y optimizar la experiencia en la página de destino.",
         "title": "Tasa de conversión"
       },
-      "example_description": "A continuación se presentan ejemplos de tarjetas de análisis con diferentes métricas.",
+      "example_description": "A continuación, se presentan ejemplos de tarjetas de análisis con diferentes métricas.",
       "example_title": "Ejemplos de tarjetas de análisis",
       "system_performance": {
-        "content": "System performance metrics reached 93%, at the best historical level.\nServer response time decreased by an average of 200ms, and page loading speed increased by 15%.\nDatabase query optimization and CDN deployment are the main reasons for performance improvement.\nIt is recommended to continue monitoring peak performance and consider further cache strategy optimization.",
+        "content": "Las métricas de rendimiento del sistema alcanzaron el 93%, el mejor nivel histórico.\nEl tiempo de respuesta del servidor disminuyó en un promedio de 200 ms, y la velocidad de carga de la página aumentó en un 15%.\nLa optimización de consultas a la base de datos y la implementación de CDN son las principales razones de la mejora.\nSe recomienda seguir monitoreando el rendimiento máximo y considerar una mayor optimización de la estrategia de caché.",
         "title": "Rendimiento del sistema"
       },
       "user_satisfaction": {
-        "content": "La satisfacción del usuario de este trimestre alcanzó el 85%, un aumento de 5 puntos porcentuales en comparación con el último trimestre.\n\nEl crecimiento principal provino del lanzamiento de las características de los nuevos productos y las optimizaciones de la interfaz de usuario.\n\nLos comentarios de los usuarios muestran que la velocidad de respuesta y la facilidad de uso son los principales factores para mejorar la satisfacción.\n\nSe recomienda continuar optimizando la experiencia del usuario, especialmente en los procesos de operación móvil.",
+        "content": "La satisfacción del usuario este trimestre alcanzó el 85%, un aumento de 5 puntos porcentuales respecto al trimestre anterior.\n\nEl crecimiento principal proviene del lanzamiento de nuevas funciones del producto y optimizaciones de la interfaz de usuario.\n\nLos comentarios de los usuarios indican que la velocidad de respuesta y la facilidad de uso son los principales factores para mejorar la satisfacción.\n\nSe recomienda continuar optimizando la experiencia del usuario, especialmente en los procesos de operación móvil.",
         "title": "Satisfacción del usuario"
       }
     },
-    "avg_words_per_msg": "Palabras/mensaje AVG",
-    "back_to_upload": "Volver a cargar",
-    "busiest_date": "Fecha más ocupada",
+    "avg_words_per_msg": "Promedio de palabras por mensaje",
+    "back_to_upload": "Volver a subir",
+    "busiest_date": "Fecha más activa",
     "chat_story": "Tu historia de chat",
     "common_words": "Palabras comunes",
     "communication_comparison": {
-      "description": "Una comparación de los patrones de comunicación y la dinámica de la relación entre ambas partes.",
+      "description": "Una comparación de los patrones de comunicación y las dinámicas de la relación entre ambas partes.",
       "title": "Comparación de comunicación: {Sender1} vs {Sender2}"
     },
-    "count": "Contar",
+    "count": "Conteo",
     "daily_activity": "Actividad diaria",
-    "daily_activity_description": "Sus conversaciones son más activas en {MostActiveDay} s alrededor de {MostActiveHour}. \nEste patrón consistente sugiere que ambos prioricen hacer tiempo el uno para el otro durante estos períodos.",
+    "daily_activity_description": "Tus conversaciones son más activas los {MostActiveDay} alrededor de las {MostActiveHour}. \nEste patrón consistente sugiere que ambos priorizan hacer tiempo el uno para el otro durante estos períodos.",
     "day_names": {
       "friday": "Viernes",
       "monday": "Lunes",
       "saturday": "Sábado",
-      "sunday": "Sunday",
-      "thursday": "Thursday",
-      "tuesday": "Tuesday",
-      "wednesday": "Wednesday"
+      "sunday": "Domingo",
+      "thursday": "Jueves",
+      "tuesday": "Martes",
+      "wednesday": "Miércoles"
     },
-    "days": "days",
-    "description": "Discover insights about your conversation patterns and relationship dynamics",
+    "days": "días",
+    "description": "Descubre perspectivas sobre tus patrones de conversación y dinámicas de relación",
     "emojis": "Emojis",
-    "error_loading": "Error loading analysis data",
+    "error_loading": "Error al cargar los datos de análisis",
     "errors": {
-      "ai_insights_not_found": "AI insights not found. You may need to purchase AI analysis for this chat.",
-      "file_not_found": "File not found. Please try uploading your file again.",
-      "invalid_signature": "Invalid signature. Please try again.",
-      "loading_failed": "Failed to load analysis data. Please try again.",
-      "not_found": "Analysis not found. Please try uploading your file again.",
-      "order_not_found": "Order not found. Please try again.",
-      "payment_processing_failed": "Payment processing failed. Please try again.",
-      "result_not_found": "Analysis result not found. Please try uploading your file again."
+      "ai_insights_not_found": "No se encontraron perspectivas de IA. Es posible que necesites adquirir un análisis de IA para este chat.",
+      "file_not_found": "Archivo no encontrado. Por favor, intenta subir tu archivo nuevamente.",
+      "invalid_signature": "Firma no válida. Por favor, intenta de nuevo.",
+      "loading_failed": "No se pudieron cargar los datos de análisis. Por favor, intenta de nuevo.",
+      "not_found": "Análisis no encontrado. Por favor, intenta subir tu archivo nuevamente.",
+      "order_not_found": "Orden no encontrada. Por favor, intenta de nuevo.",
+      "payment_processing_failed": "El procesamiento del pago falló. Por favor, intenta de nuevo.",
+      "result_not_found": "Resultado de análisis no encontrado. Por favor, intenta subir tu archivo nuevamente."
     },
-    "export_not_implemented": "Export feature is coming soon!",
-    "export_pdf": "Export as PDF",
-    "favorite_day_to_chat": "Favorite Day to Chat",
-    "first_message": "First Message",
-    "heatmap_data_not_available": "Heatmap data not available",
-    "high": "High",
+    "export_not_implemented": "¡La función de exportación estará disponible pronto!",
+    "export_pdf": "Exportar como PDF",
+    "favorite_day_to_chat": "Día favorito para chatear",
+    "first_message": "Primer mensaje",
+    "heatmap_data_not_available": "Datos de mapa de calor no disponibles",
+    "high": "Alto",
     "insights": {
-      "interaction_title": "Interaction Insights",
-      "relationship_title": "Relationship Insights"
+      "interaction_title": "Perspectivas de interacción",
+      "relationship_title": "Perspectivas de relación"
     },
-    "last_message": "Last Message",
-    "low": "Low",
-    "messages": "Messages",
-    "messages_count": "{count} messages",
-    "most_active_day": "Most Active Day",
-    "most_active_hour": "Most Active Hour",
-    "no_data_available": "No data available",
-    "no_data_found": "No data found",
-    "no_meaningful_words": "No meaningful words found",
-    "no_words_found": "No words found",
-    "not_found": "Analysis not found",
-    "overall_sentiment": "Overall Sentiment",
-    "overview_story_part1": "Your conversation tells a beautiful story through <span class='highlight'>{totalMessages} messages</span> exchanged over time. {sender1Name} sent <span class='highlight'>{sender1Messages} messages</span>, while {sender2Name} responded with <span class='highlight'>{sender2Messages} messages</span>.",
-    "overview_story_part2": "Together, you've woven a tapestry of <span class='highlight'>{totalWords} words</span>, with {sender1Name} contributing <span class='highlight'>{sender1Words} words</span> and {sender2Name} sharing <span class='highlight'>{sender2Words} words</span>. Your conversations are meaningful and substantial, with an average of <span class='highlight'>{wordsPerMessage} words per message</span>.",
-    "overview_story_part3": "Your most active conversations happen on <span class='highlight'>{mostActiveDay}</span>, with an average of <span class='highlight'>{avgMessagesPerDay} messages</span> exchanged daily. The typical response time of <span class='highlight'>{responseTime}</span> shows the eager anticipation you both feel when communicating with each other.",
-    "overview_title": "Overview",
-    "peak_activity_time": "Peak Activity Time",
+    "last_message": "Último mensaje",
+    "low": "Bajo",
+    "messages": "Mensajes",
+    "messages_count": "{count} mensajes",
+    "most_active_day": "Día más activo",
+    "most_active_hour": "Hora más activa",
+    "no_data_available": "No hay datos disponibles",
+    "no_data_found": "No se encontraron datos",
+    "no_meaningful_words": "No se encontraron palabras significativas",
+    "no_words_found": "No se encontraron palabras",
+    "not_found": "Análisis no encontrado",
+    "overall_sentiment": "Sentimiento general",
+    "overview_story_part1": "Tu conversación cuenta una hermosa historia a través de <span class='highlight'>{totalMessages} mensajes</span> intercambiados a lo largo del tiempo. {sender1Name} envió <span class='highlight'>{sender1Messages} mensajes</span>, mientras que {sender2Name} respondió con <span class='highlight'>{sender2Messages} mensajes</span>.",
+    "overview_story_part2": "Juntos, han tejido un tapiz de <span class='highlight'>{totalWords} palabras</span>, con {sender1Name} contribuyendo <span class='highlight'>{sender1Words} palabras</span> y {sender2Name} compartiendo <span class='highlight'>{sender2Words} palabras</span>. Sus conversaciones son significativas y sustanciales, con un promedio de <span class='highlight'>{wordsPerMessage} palabras por mensaje</span>.",
+    "overview_story_part3": "Tus conversaciones más activas ocurren los <span class='highlight'>{mostActiveDay}</span>, con un promedio de <span class='highlight'>{avgMessagesPerDay} mensajes</span> intercambiados diariamente. El tiempo de respuesta típico de <span class='highlight'>{responseTime}</span> muestra la ansiosa anticipación que ambos sienten al comunicarse entre sí.",
+    "overview_title": "Resumen",
+    "peak_activity_time": "Hora de máxima actividad",
     "processing_errors": {
-      "filter_too_strict": "Warning: All messages were filtered out, filter conditions may be too strict",
-      "invalid_date": "Some messages have invalid dates",
-      "no_messages": "No valid messages could be extracted",
-      "processing_failed": "Processing failed: {message}",
-      "short_timespan": "Conversation timespan is very short, may not be a complete conversation",
-      "single_participant": "Only one participant detected, this may not be a conversation"
+      "filter_too_strict": "Advertencia: Todos los mensajes fueron filtrados, las condiciones de filtro podrían ser demasiado estrictas",
+      "invalid_date": "Algunos mensajes tienen fechas no válidas",
+      "no_messages": "No se pudieron extraer mensajes válidos",
+      "processing_failed": "Procesamiento fallido: {message}",
+      "short_timespan": "El período de la conversación es muy corto, puede no ser una conversación completa",
+      "single_participant": "Solo se detectó un participante, esto podría no ser una conversación"
     },
     "relationship_analysis": {
-      "description": "Analysis of communication patterns and relationship dynamics based on message history.",
-      "title": "{sender}'s Communication Analysis"
+      "description": "Análisis de patrones de comunicación y dinámicas de relación basado en el historial de mensajes.",
+      "title": "Análisis de comunicación de {sender}"
     },
     "relationship_metrics": {
-      "communication": "Communication",
-      "conflict": "Conflict Management",
-      "emotional_stability": "Emotional Stability",
-      "interest_level": "Interest Level",
-      "intimacy": "Intimacy",
-      "response_enthusiasm": "Response Enthusiasm",
-      "response_time": "Response Time",
-      "trust": "Trust"
+      "communication": "Comunicación",
+      "conflict": "Gestión de conflictos",
+      "emotional_stability": "Estabilidad emocional",
+      "interest_level": "Nivel de interés",
+      "intimacy": "Intimidad",
+      "response_enthusiasm": "Entusiasmo en la respuesta",
+      "response_time": "Tiempo de respuesta",
+      "trust": "Confianza"
     },
     "relationship_metrics_hearts": {
-      "description": "Analysis of key relationship quality indicators based on communication patterns.",
-      "title": "Relationship Quality Metrics"
+      "description": "Análisis de indicadores clave de la calidad de la relación basado en patrones de comunicación.",
+      "title": "Métricas de calidad de la relación"
     },
-    "relationship_metrics_radar": "{name}'s Communication Metrics",
-    "response_pattern_description": "Your typical response pattern is \"{responsePattern}\". Your conversations tend to be \"{conversationLength}\".",
+    "relationship_metrics_radar": "Métricas de comunicación de {name}",
+    "response_pattern_description": "Tu patrón de respuesta típico es \"{responsePattern}\". Tus conversaciones tienden a ser \"{conversationLength}\".",
     "response_patterns": {
-      "consistent": "Consistent response times throughout the day",
-      "evening_active": "Quick responses in evening, slower in morning",
-      "morning_active": "More active in morning than evening"
+      "consistent": "Tiempos de respuesta consistentes durante todo el día",
+      "evening_active": "Respuestas rápidas por la noche, más lentas por la mañana",
+      "morning_active": "Más activo por la mañana que por la noche"
     },
-    "sentiment_analysis": "Sentiment Analysis",
-    "sentiment_description": "Your conversations have a sentiment score of {sentimentScore}, which indicates a {sentimentDescription} emotional tone. This reflects the overall mood and feeling of your exchanges.",
-    "sentiment_negative": "Negative",
+    "sentiment_analysis": "Análisis de sentimientos",
+    "sentiment_description": "Tus conversaciones tienen una puntuación de sentimiento de {sentimentScore}, lo que indica un tono emocional {sentimentDescription}. Esto refleja el estado de ánimo general de tus intercambios.",
+    "sentiment_negative": "Negativo",
     "sentiment_neutral": "Neutral",
-    "sentiment_positive": "Positive",
-    "sentiment_score": "Sentiment Score",
-    "sentiment_very_negative": "Very Negative",
-    "sentiment_very_positive": "Very Positive",
+    "sentiment_positive": "Positivo",
+    "sentiment_score": "Puntuación de sentimiento",
+    "sentiment_very_negative": "Muy negativo",
+    "sentiment_very_positive": "Muy positivo",
     "share": {
-      "copy_failed": "Failed to copy link",
-      "link_copied": "Link copied to clipboard"
+      "copy_failed": "No se pudo copiar el enlace",
+      "link_copied": "Enlace copiado al portapapeles"
     },
-    "share_not_implemented": "Share feature is coming soon!",
-    "share_results": "Share Results",
-    "story_timeline_description": "Your story began on {startDate}, unfolding over {duration} days, until {endDate}—leaving an everlasting mark in the passage of time.",
-    "story_timeline_title": "Your Chat Journey",
-    "text_analysis_title": "Text Analysis",
-    "time_analysis_title": "Time Analysis",
-    "time_distribution": "Time Distribution",
-    "time_distribution_description": "You tend to chat most during the evening ({evening}%), followed by afternoon ({afternoon}%) and morning ({morning}%). This pattern shows when you're both most available and engaged in conversation.",
+    "share_not_implemented": "¡La función de compartir estará disponible pronto!",
+    "share_results": "Compartir resultados",
+    "story_timeline_description": "Tu historia comenzó el {startDate}, desarrollándose durante {duration} días, hasta el {endDate}, dejando una marca imborrable en el paso del tiempo.",
+    "story_timeline_title": "Tu viaje de chat",
+    "text_analysis_title": "Análisis de texto",
+    "time_analysis_title": "Análisis de tiempo",
+    "time_distribution": "Distribución del tiempo",
+    "time_distribution_description": "Tiendes a chatear más por la noche ({evening}%), seguido por la tarde ({afternoon}%) y la mañana ({morning}%). Este patrón muestra cuándo ambos están más disponibles y comprometidos en la conversación.",
     "time_of_day": {
-      "afternoon": "Afternoon",
-      "evening": "Evening",
-      "morning": "Morning",
-      "night": "Night"
+      "afternoon": "Tarde",
+      "evening": "Noche",
+      "morning": "Mañana",
+      "night": "Madrugada"
     },
-    "timespan_format": "Your story began on {startMonth} {startDay}, {startYear} {startDayName} 00:00, unfolding over {durationText}, until {endMonth} {endDay}, {endYear} {endDayName} 23:59—leaving an everlasting mark in the passage of time.",
-    "title": "Your Chat Analysis Results",
-    "top_emojis": "{name}'s Top Emojis",
-    "top_words": "Top Words",
-    "total_emojis": "Total Emojis",
-    "total_messages": "Total Messages",
-    "total_unique_words": "Total Unique Words",
-    "total_words": "Total Words",
-    "weekly_activity_heatmap": "Weekly Activity Heatmap",
-    "word": "Word",
-    "word_cloud": "Word Cloud",
-    "words": "Words",
-    "words_per_message": "Words Per Message"
+    "timespan_format": "Tu historia comenzó el {startMonth} {startDay}, {startYear} {startDayName} 00:00, desarrollándose durante {durationText}, hasta el {endMonth} {endDay}, {endYear} {endDayName} 23:59, dejando una marca eterna en el paso del tiempo.",
+    "title": "Resultados de tu análisis de chat",
+    "top_emojis": "Emojis principales de {name}",
+    "top_words": "Palabras principales",
+    "total_emojis": "Total de emojis",
+    "total_messages": "Total de mensajes",
+    "total_unique_words": "Total de palabras únicas",
+    "total_words": "Total de palabras",
+    "weekly_activity_heatmap": "Mapa de calor de actividad semanal",
+    "word": "Palabra",
+    "word_cloud": "Nube de palabras",
+    "words": "Palabras",
+    "words_per_message": "Palabras por mensaje"
   },
   "common_words": "Palabras comunes",
   "components": {
     "action_buttons": {
-      "back_to_upload": "Back to Upload",
-      "copy_failed": "Failed to copy link",
-      "link_copied": "Link copied to clipboard",
-      "share_results": "Share Results"
+      "back_to_upload": "Volver a subir",
+      "copy_failed": "No se pudo copiar el enlace",
+      "link_copied": "Enlace copiado al portapapeles",
+      "share_results": "Compartir resultados"
     },
     "footer": {
-      "copyright": "© 2025 ChatRecap AI. All rights reserved.",
-      "privacy_policy": "Privacy Policy",
-      "terms_of_service": "Terms of Service"
+      "copyright": "© 2025 ChatRecap AI. Todos los derechos reservados.",
+      "privacy_policy": "Política de privacidad",
+      "terms_of_service": "Términos de servicio"
     },
     "highlighted_text": {
-      "afternoon": "Afternoon",
-      "evening": "Evening",
-      "medium_conversations": "Medium Conversations",
-      "morning": "Morning",
-      "negative": "Negative",
+      "afternoon": "Tarde",
+      "evening": "Noche",
+      "medium_conversations": "Conversaciones moderadas",
+      "morning": "Mañana",
+      "negative": "Negativo",
       "neutral": "Neutral",
-      "positive": "Positive",
-      "quick_responses": "Quick Responses",
-      "very_negative": "Very Negative",
-      "very_positive": "Very Positive"
+      "positive": "Positivo",
+      "quick_responses": "Respuestas rápidas",
+      "very_negative": "Muy negativo",
+      "very_positive": "Muy positivo"
     },
     "notification": {
-      "free": "FREE!",
-      "hours": "hours",
-      "hurry": "Hurry, this code expires in",
-      "limited_time_offer": "Limited Time Offer!",
-      "of_full_access": "of full access — absolutely",
-      "to_unlock": "to unlock",
-      "try_now": "Try Now",
-      "use_code": "Use code"
+      "free": "¡GRATIS!",
+      "hours": "horas",
+      "hurry": "¡Date prisa, este código expira en",
+      "limited_time_offer": "¡Oferta por tiempo limitado!",
+      "of_full_access": "de acceso completo, totalmente",
+      "to_unlock": "para desbloquear",
+      "try_now": "Prueba ahora",
+      "use_code": "Usar código"
     }
   },
   "copyright": "Derechos de autor",
-  "count": "Contar",
+  "count": "Conteo",
   "daily_activity": "Actividad diaria",
   "daily_activity_description": "Descripción de la actividad diaria",
   "days": "Días",
   "description": "Descripción",
   "emojis": "Emojis",
   "errors": {
-    "ai_insights_not_found": "Insights AI no encontradas",
-    "loading_failed": "La carga falló",
-    "not_found": "Extraviado",
+    "ai_insights_not_found": "No se encontraron perspectivas de IA",
+    "loading_failed": "No se pudo cargar",
+    "not_found": "No encontrado",
     "result_not_found": "Resultado no encontrado"
   },
   "evening": "Noche",
-  "export_not_implemented": "Exportación no implementada",
-  "export_pdf": "PDF de exportación",
+  "export_not_implemented": "¡La función de exportación no está implementada aún!",
+  "export_pdf": "Exportar como PDF",
   "favorite_day_to_chat": "Día favorito para chatear",
   "features": {
     "comprehensive_analysis": {
-      "content": "Nuestros algoritmos avanzados de IA analizan todo tu historial de chat para proporcionar perspectivas profundas sobre tus patrones de comunicación y dinámicas de relación.",
+      "content": "Nuestros avanzados algoritmos de IA analizan todo tu historial de chat para ofrecer perspectivas profundas sobre tus patrones de comunicación y dinámicas de relación.",
       "title": "Análisis completo de chat"
     },
     "easy_tools": {
-      "description": "Crea tu análisis de chat con IA con nuestra interfaz simple. Perfecto para analizar conversaciones de WhatsApp y entender relaciones.",
+      "description": "Crea tu análisis de chat con IA usando nuestra interfaz sencilla. Ideal para analizar conversaciones de WhatsApp y comprender relaciones.",
       "points": [
-        "Importación simple de chat",
-        "Múltiples formatos de chat compatibles",
-        "Configuración personalizada de análisis de chat con IA",
+        "Importación sencilla de chats",
+        "Soporte para múltiples formatos de chat",
+        "Configuración personalizada para análisis de chat con IA",
         "Procesamiento en tiempo real"
       ],
-      "title": "Herramientas de creación fácil"
+      "title": "Herramientas de creación fáciles"
     },
     "insights": {
       "description": "Obtén perspectivas completas sobre tus patrones de chat y dinámicas de relación con el análisis de chat de ChatRecap AI.",
@@ -397,9 +397,9 @@
       "title": "Perspectivas profundas"
     },
     "preview": {
-      "description": "Ve cómo tu análisis cobra vida mientras lo procesas. Previsualiza tus perspectivas al instante y toma decisiones informadas sobre tus relaciones.",
+      "description": "Observa cómo tu análisis cobra vida mientras lo procesas. Previsualiza tus perspectivas al instante y toma decisiones informadas sobre tus relaciones.",
       "points": [
-        "Vista previa de análisis instantánea",
+        "Vista previa instantánea del análisis",
         "Visualizaciones interactivas",
         "Actualizaciones dinámicas",
         "Visualización compatible con dispositivos móviles"
@@ -407,23 +407,23 @@
       "title": "Vista previa en tiempo real"
     },
     "response_time": {
-      "content": "Rastrea qué tan rápido tú y tu compañero de conversación responden a los mensajes del otro, revelando niveles de compromiso y hábitos de comunicación.",
+      "content": "Rastrea la rapidez con la que tú y tu compañero de conversación responden a los mensajes, revelando niveles de compromiso y hábitos de comunicación.",
       "title": "Patrones de tiempo de respuesta"
     },
     "sentiment_analysis": {
-      "content": "Analiza el tono emocional de tus conversaciones para entender los sentimientos y actitudes subyacentes expresados en tus mensajes.",
+      "content": "Analiza el tono emocional de tus conversaciones para comprender los sentimientos y actitudes subyacentes expresados en tus mensajes.",
       "title": "Análisis de sentimientos"
     },
     "title": "Características principales de Chat Recap AI",
     "topic_analysis": {
-      "content": "Descubre los temas y temáticas más comunes en tus conversaciones, ayudándote a entender qué es lo más importante en tu relación.",
+      "content": "Descubre los temas y tópicos más comunes en tus conversaciones, ayudándote a entender qué es lo más importante en tu relación.",
       "title": "Análisis de temas"
     }
   },
   "first_message": "Primer mensaje",
   "footer": {
-    "copyright": "© 2025 ChatRecap AI. All rights reserved.",
-    "privacy_policy": "Privacy Policy",
+    "copyright": "© 2025 ChatRecap AI. Todos los derechos reservados.",
+    "privacy_policy": "Política de privacidad",
     "social_links": {
       "discord": "Discord",
       "instagram": "Instagram",
@@ -431,22 +431,22 @@
       "telegram": "Telegram",
       "whatsapp": "WhatsApp"
     },
-    "terms_of_service": "Terms of Service"
+    "terms_of_service": "Términos de servicio"
   },
   "free": "Gratis",
   "free_analysis": "Análisis gratuito",
-  "heatmap_data_not_available": "Datos de mapas de calor no disponibles",
+  "heatmap_data_not_available": "Datos de mapa de calor no disponibles",
   "high": "Alto",
   "hours": "Horas",
   "how_it_works": {
     "chat_notifications": {
       "messages": {
-        "message1": "Oh, ¿finalmente escribiste? Debes haber roto un récord mundial 🏆🙄",
+        "message1": "¿Oh, finalmente enviaste un mensaje? ¡Debes haber roto un récord mundial! 🏆🙄",
         "message2": "Lo siento, mi teléfono solo vibra para entregas de pizza 🍕📳",
-        "message3": "Tus frases de ligue son más rápidas que mis palomitas de microondas 🍿💨",
+        "message3": "Tus frases para ligar son más rápidas que mis palomitas de microondas 🍿💨",
         "message4": "Nuestro chat está más frío que la Antártida ❄️😎",
-        "message5": "¿Me extrañas? Apenas recuerdo tu nombre 😂",
-        "message6": "Tu vida amorosa es como mi WiFi - conexión inestable 📶",
+        "message5": "¿Me extrañas? ¡Apenas recuerdo tu nombre! 😂",
+        "message6": "Tu vida amorosa es como mi WiFi: conexión inestable 📶",
         "message7": "Vi tu mensaje. Responderé en 2-3 días hábiles 📅"
       },
       "speakers": {
@@ -459,32 +459,32 @@
         "him": "Él"
       },
       "times": {
-        "days_ago": "hace {days} días",
-        "hours_ago": "hace {hours} horas",
+        "days_ago": "Hace {days} días",
+        "hours_ago": "Hace {hours} horas",
         "just_now": "Ahora mismo",
-        "minutes_ago": "hace {minutes} minutos"
+        "minutes_ago": "Hace {minutes} minutos"
       },
       "title": "Notificaciones de chat"
     },
     "chatrecapplatform": {
       "badge": "Análisis de chat",
-      "description": "Selecciona la plataforma desde la que quieres analizar tu historial de chat. Soportamos múltiples plataformas de mensajería para proporcionar perspectivas completas.",
+      "description": "Selecciona la plataforma desde la que deseas analizar tu historial de chat. Soportamos múltiples plataformas de mensajería para proporcionar perspectivas completas.",
       "meta": {
-        "description": "Selecciona la plataforma desde la que quieres analizar tu chat",
+        "description": "Selecciona la plataforma desde la que deseas analizar tu chat",
         "title": "Elige tu plataforma de chat"
       },
       "platforms": {
         "discord": {
-          "description": "Analiza tus chats de Discord para entender mejor tu comunicación en contextos de juegos y comunidad."
+          "description": "Analiza tus chats de Discord para entender mejor tu comunicación en contextos de juegos y comunidades."
         },
         "instagram": {
-          "description": "Descubre perspectivas de tus mensajes directos de Instagram y entiende tu estilo de comunicación."
+          "description": "Descubre perspectivas de tus mensajes directos de Instagram y comprende tu estilo de comunicación."
         },
         "snapchat": {
-          "description": "Analiza tus conversaciones de Snapchat para entender tu estilo y patrones de comunicación."
+          "description": "Analiza tus conversaciones de Snapchat para entender tus patrones y estilo de comunicación."
         },
         "telegram": {
-          "description": "Obtén perspectivas de tus conversaciones de Telegram y entiende tus patrones de mensajería."
+          "description": "Obtén información de tus conversaciones en Telegram y comprende tus patrones de mensajería."
         },
         "whatsapp": {
           "description": "Analiza tus conversaciones de WhatsApp para entender tus patrones de mensajería y dinámicas de relación."
@@ -497,21 +497,21 @@
       "active_hours": "Horas activas",
       "analysis_card": {
         "conversion_rate": {
-          "content": "La tasa de conversión de este mes es del 62%, 3 puntos porcentuales menos que el mes pasado.\nEl análisis muestra que la disminución en la tasa de conversión se debe principalmente a la mala calidad de los nuevos canales de promoción.\nLas tasas de conversión de tráfico de alta calidad se mantienen estables, pero un aumento en el tráfico de baja calidad ha llevado a una disminución general en las tasas de conversión.\nSe recomienda optimizar las fuentes de tráfico, mejorar la calidad de los visitantes y mejorar la experiencia de la página de destino.",
+          "content": "La tasa de conversión de este mes es del 62%, 3 puntos porcentuales menos que el mes pasado.\nEl análisis muestra que la disminución en la tasa de conversión se debe principalmente a la baja calidad de los nuevos canales de promoción.\nLas tasas de conversión de tráfico de alta calidad permanecen estables, pero un aumento en el tráfico de baja calidad ha causado una disminución general.\nSe recomienda optimizar las fuentes de tráfico, mejorar la calidad de los visitantes y optimizar la experiencia en la página de destino.",
           "title": "Tasa de conversión"
         },
-        "example_description": "A continuación hay ejemplos de tarjetas de análisis con diferentes métricas",
+        "example_description": "A continuación, se presentan ejemplos de tarjetas de análisis con diferentes métricas.",
         "example_title": "Ejemplos de tarjetas de análisis",
         "system_performance": {
-          "content": "Las métricas de rendimiento del sistema alcanzaron el 93%, en el mejor nivel histórico.\nEl tiempo de respuesta del servidor disminuyó en un promedio de 200ms, y la velocidad de carga de la página aumentó en un 15%.\nLa optimización de consultas de base de datos y la implementación de CDN son las principales razones de la mejora del rendimiento.\nSe recomienda continuar monitoreando el rendimiento máximo y considerar una mayor optimización de la estrategia de caché.",
+          "content": "Las métricas de rendimiento del sistema alcanzaron el 93%, el mejor nivel histórico.\nEl tiempo de respuesta del servidor disminuyó en un promedio de 200 ms, y la velocidad de carga de la página aumentó en un 15%.\nLa optimización de consultas a la base de datos y la implementación de CDN son las principales razones de la mejora.\nSe recomienda seguir monitoreando el rendimiento máximo y considerar una mayor optimización de la estrategia de caché.",
           "title": "Rendimiento del sistema"
         },
         "user_satisfaction": {
-          "content": "La satisfacción del usuario de este trimestre alcanzó el 85%, un aumento de 5 puntos porcentuales en comparación con el trimestre anterior.\nEl crecimiento principal provino del lanzamiento de nuevas características del producto y optimizaciones de la interfaz de usuario.\nLos comentarios de los usuarios muestran que la velocidad de respuesta y la facilidad de uso son los principales factores para mejorar la satisfacción.\nSe recomienda continuar optimizando la experiencia del usuario, especialmente en los procesos de operación móvil.",
+          "content": "La satisfacción del usuario este trimestre alcanzó el 85%, un aumento de 5 puntos porcentuales respecto al trimestre anterior.\nEl crecimiento principal proviene del lanzamiento de nuevas funciones del producto y optimizaciones de la interfaz de usuario.\nLos comentarios de los usuarios indican que la velocidad de respuesta y la facilidad de uso son los principales factores para mejorar la satisfacción.\nSe recomienda continuar optimizando la experiencia del usuario, especialmente en los procesos de operación móvil.",
           "title": "Satisfacción del usuario"
         }
       },
-      "avg_words_per_msg": "Promedio palabras/msg",
+      "avg_words_per_msg": "Promedio de palabras por mensaje",
       "back_to_upload": "Volver a subir",
       "chat_story": "Tu historia de chat",
       "common_topics": "Temas comunes",
@@ -521,8 +521,8 @@
       "communication_tips": "Consejos de comunicación",
       "conflict_patterns": "Patrones de conflicto",
       "conflict_resolution": "Resolución de conflictos",
-      "conversation_enders": "Entiers de conversación",
-      "conversation_starters": "Entrante de conversación",
+      "conversation_enders": "Finales de conversación",
+      "conversation_starters": "Iniciadores de conversación",
       "day_names": {
         "friday": "Viernes",
         "monday": "Lunes",
@@ -535,15 +535,15 @@
       "days": "días",
       "decision_making": "Toma de decisiones",
       "description": "Descubre perspectivas sobre tus patrones de conversación y dinámicas de relación",
-      "emoji_analysis": "Análisis de emoji",
-      "emoji_by_participant": "Emoji por participante",
-      "emoji_by_sentiment": "Emoji por sentimiento",
-      "emoji_timeline": "Línea de tiempo de emoji",
+      "emoji_analysis": "Análisis de emojis",
+      "emoji_by_participant": "Emojis por participante",
+      "emoji_by_sentiment": "Emojis por sentimiento",
+      "emoji_timeline": "Línea de tiempo de emojis",
       "emotional_expression": "Expresión emocional",
       "emotional_support": "Apoyo emocional",
-      "error_loading": "Error al cargar datos de análisis",
+      "error_loading": "Error al cargar los datos de análisis",
       "errors": {
-        "loading_failed": "Error al cargar datos de análisis. Por favor, inténtalo de nuevo.",
+        "loading_failed": "No se pudieron cargar los datos de análisis. Por favor, intenta de nuevo.",
         "result_not_found": "Resultado de análisis no encontrado. Por favor, intenta subir tu archivo nuevamente."
       },
       "export_not_implemented": "¡La función de exportación estará disponible pronto!",
@@ -552,32 +552,32 @@
       "growth_opportunities": "Oportunidades de crecimiento",
       "growth_over_time": "Crecimiento con el tiempo",
       "insights": {
-        "interaction_title": "Título de interacción",
-        "relationship_title": "Título de relación"
+        "interaction_title": "Perspectivas de interacción",
+        "relationship_title": "Perspectivas de relación"
       },
       "last_message": "Último mensaje",
-      "message_frequency": "Frecuencia de mensaje",
-      "message_length": "Duración del mensaje",
+      "message_frequency": "Frecuencia de mensajes",
+      "message_length": "Longitud del mensaje",
       "messages": "Mensajes",
-      "next_steps": "Siguientes pasos",
+      "next_steps": "Próximos pasos",
       "not_found": "Análisis no encontrado",
       "overview_story_part1": "Tu conversación cuenta una hermosa historia a través de <span class='highlight'>{totalMessages} mensajes</span> intercambiados a lo largo del tiempo. {sender1Name} envió <span class='highlight'>{sender1Messages} mensajes</span>, mientras que {sender2Name} respondió con <span class='highlight'>{sender2Messages} mensajes</span>.",
       "overview_story_part2": "Juntos, han tejido un tapiz de <span class='highlight'>{totalWords} palabras</span>, con {sender1Name} contribuyendo <span class='highlight'>{sender1Words} palabras</span> y {sender2Name} compartiendo <span class='highlight'>{sender2Words} palabras</span>. Sus conversaciones son significativas y sustanciales, con un promedio de <span class='highlight'>{wordsPerMessage} palabras por mensaje</span>.",
-      "overview_story_part3": "Sus conversaciones más activas ocurren los <span class='highlight'>{mostActiveDay}</span>, con un promedio de <span class='highlight'>{avgMessagesPerDay} mensajes</span> intercambiados diariamente. El tiempo típico de respuesta de <span class='highlight'>{responseTime}</span> muestra la ansiosa anticipación que ambos sienten al comunicarse entre sí.",
+      "overview_story_part3": "Tus conversaciones más activas ocurren los <span class='highlight'>{mostActiveDay}</span>, con un promedio de <span class='highlight'>{avgMessagesPerDay} mensajes</span> intercambiados diariamente. El tiempo de respuesta típico de <span class='highlight'>{responseTime}</span> muestra la ansiosa anticipación que ambos sienten al comunicarse entre sí.",
       "overview_title": "Resumen",
-      "personality_insights": "Ideas de personalidad",
+      "personality_insights": "Perspectivas de personalidad",
       "processing_errors": {
-        "filter_too_strict": "Advertencia: Todos los mensajes fueron filtrados, las condiciones de filtro pueden ser demasiado estrictas",
-        "invalid_date": "Algunos mensajes tienen fechas inválidas",
+        "filter_too_strict": "Advertencia: Todos los mensajes fueron filtrados, las condiciones de filtro podrían ser demasiado estrictas",
+        "invalid_date": "Algunos mensajes tienen fechas no válidas",
         "no_messages": "No se pudieron extraer mensajes válidos",
         "processing_failed": "Procesamiento fallido: {message}",
-        "short_timespan": "El período de tiempo de la conversación es muy corto, puede no ser una conversación completa",
-        "single_participant": "Solo se detectó un participante, esto puede no ser una conversación"
+        "short_timespan": "El período de la conversación es muy corto, puede no ser una conversación completa",
+        "single_participant": "Solo se detectó un participante, esto podría no ser una conversación"
       },
       "recommendations": "Recomendaciones",
       "relationship_health": "Salud de la relación",
-      "relationship_insights": "Ideas de relación",
-      "relationship_suggestions": "Sugerencias de relaciones",
+      "relationship_insights": "Perspectivas de relación",
+      "relationship_suggestions": "Sugerencias para la relación",
       "response_patterns": {
         "consistent": "Tiempos de respuesta consistentes durante todo el día",
         "evening_active": "Respuestas rápidas por la noche, más lentas por la mañana",
@@ -585,33 +585,33 @@
       },
       "response_time": "Tiempo de respuesta",
       "sentiment_analysis": "Análisis de sentimientos",
-      "sentiment_by_day": "Sentimiento de día",
+      "sentiment_by_day": "Sentimiento por día",
       "sentiment_by_hour": "Sentimiento por hora",
       "sentiment_comparison": "Comparación de sentimientos",
       "sentiment_description": "Descripción del sentimiento",
       "sentiment_over_time": "Sentimiento a lo largo del tiempo",
-      "sentiment_score": "Puntaje de sentimiento",
+      "sentiment_score": "Puntuación de sentimiento",
       "share": {
-        "copy_failed": "Copia fallida",
+        "copy_failed": "No se pudo copiar el enlace",
         "link_copied": "Enlace copiado"
       },
       "share_not_implemented": "¡La función de compartir estará disponible pronto!",
       "share_results": "Compartir resultados",
       "social_tendencies": "Tendencias sociales",
-      "text_analysis_title": "Título del análisis de texto",
+      "text_analysis_title": "Análisis de texto",
       "time_of_day": {
         "afternoon": "Tarde",
         "evening": "Noche",
         "morning": "Mañana",
         "night": "Madrugada"
       },
-      "timespan_format": "Tu historia comenzó el {startMonth} {startDay}, {startYear} {startDayName} 00:00, desarrollándose durante {durationText}, hasta el {endMonth} {endDay}, {endYear} {endDayName} 23:59—dejando una marca eterna en el paso del tiempo.",
+      "timespan_format": "Tu historia comenzó el {startMonth} {startDay}, {startYear} {startDayName} 00:00, desarrollándose durante {durationText}, hasta el {endMonth} {endDay}, {endYear} {endDayName} 23:59, dejando una marca eterna en el paso del tiempo.",
       "title": "Resultados de tu análisis de chat",
-      "top_emojis": "Emojis superior",
+      "top_emojis": "Emojis principales",
       "topic_analysis": "Análisis de temas",
-      "topic_by_participant": "Tema del participante",
+      "topic_by_participant": "Temas por participante",
       "topic_distribution": "Distribución de temas",
-      "topic_over_time": "Tema con el tiempo",
+      "topic_over_time": "Temas a lo largo del tiempo",
       "total_messages": "Total de mensajes",
       "total_words": "Total de palabras",
       "values_and_interests": "Valores e intereses",
@@ -633,7 +633,7 @@
     "payment": {
       "description": "Usa IA para analizar profundamente tu historial de chat y obtener perspectivas de personalidad y análisis de relaciones",
       "error_title": "Error",
-      "missing_file_id": "Falta ID de archivo, por favor sube un archivo primero",
+      "missing_file_id": "Falta el ID del archivo, por favor sube un archivo primero",
       "pay_button": "Pagar ahora",
       "processing": "Procesando...",
       "return_home": "Volver al inicio",
@@ -647,7 +647,7 @@
         "title": "Subir chat"
       },
       {
-        "description": "Elige qué aspectos de tus conversaciones quieres analizar - desde patrones básicos hasta perspectivas emocionales profundas",
+        "description": "Elige qué aspectos de tus conversaciones deseas analizar, desde patrones básicos hasta perspectivas emocionales profundas",
         "number": "2",
         "title": "Seleccionar análisis"
       },
@@ -660,39 +660,39 @@
     "subtitle": "Un proceso simple de tres pasos para obtener perspectivas sobre tus conversaciones",
     "title": "¿Cómo analizar tus chats con Chat Recap AI?"
   },
-  "hurry": "Apurarse",
+  "hurry": "¡Date prisa!",
   "insights": {
-    "interaction_title": "Título de interacción",
-    "relationship_title": "Título de relación"
+    "interaction_title": "Perspectivas de interacción",
+    "relationship_title": "Perspectivas de relación"
   },
   "keywords": "Palabras clave",
   "last_message": "Último mensaje",
   "limited_time_offer": "Oferta por tiempo limitado",
   "low": "Bajo",
-  "medium_conversations": "Conversaciones medianas",
+  "medium_conversations": "Conversaciones moderadas",
   "messages": {
     "message1": "Mensaje 1",
-    "message2": "Mensaje2",
-    "message3": "Mensaje3",
-    "message4": "Mensaje4",
-    "message5": "Mensaje5",
+    "message2": "Mensaje 2",
+    "message3": "Mensaje 3",
+    "message4": "Mensaje 4",
+    "message5": "Mensaje 5",
     "message6": "Mensaje 6",
-    "message7": "Mensaje7"
+    "message7": "Mensaje 7"
   },
-  "messages_count_many": "Los mensajes cuentan muchos",
-  "messages_count_one": "Los mensajes cuentan uno",
-  "messages_count_other": "Los mensajes cuentan otro",
+  "messages_count_many": "Muchos mensajes",
+  "messages_count_one": "Un mensaje",
+  "messages_count_other": "Otros mensajes",
   "meta": {
     "description": "Descripción",
     "title": "Título"
   },
   "metadata": {
-    "description": "¿Quieres analizar tu historial de chat? ChatRecap AI te ayuda a entender conversaciones a través de WhatsApp, Instagram, Snapchat, Discord y Telegram. Obtén información entre plataformas y descubre tus patrones de comunicación.",
+    "description": "¿Quieres analizar tu historial de chat? ChatRecap AI te ayuda a entender conversaciones en WhatsApp, Instagram, Snapchat, Discord y Telegram. Obtén información multiplataforma y descubre tus patrones de comunicación.",
     "keywords": "chatrecap, analizador de chat, analizador de WhatsApp, análisis de chat de Instagram, análisis de chat de Discord, analizador de Telegram, análisis de Snapchat, historial de chat, patrones de conversación, información de mensajería, análisis de chat multiplataforma, exportación de chat, métricas de chat",
-    "title": "Chat Recap AI: Herramienta en línea gratuita para analizar chat sin registro - chatrecap.io"
+    "title": "Chat Recap AI: Herramienta en línea gratuita para analizar chats sin registro - chatrecap.io"
   },
   "morning": "Mañana",
-  "most_active_day": "El día más activo",
+  "most_active_day": "Día más activo",
   "most_active_hour": "Hora más activa",
   "my_credits": {
     "left_tip": "Créditos restantes: {left_credits}",
@@ -713,9 +713,9 @@
     "edit_invite_link": "Editar enlace de invitación",
     "invite_balance": "Saldo de créditos por invitaciones",
     "invite_code": "Código de invitación",
-    "invite_tip": "Invita a un amigo a usar Chat Recap AI, obtén 5 créditos gratis.",
+    "invite_tip": "Invita a un amigo a usar Chat Recap AI y obtén 5 créditos gratis.",
     "my_invite_link": "Mi enlace de invitación",
-    "no_affiliates": "Programa de invitación actualmente solo por aprobación. Contáctanos para aplicar.",
+    "no_affiliates": "El programa de invitación está actualmente solo por aprobación. Contáctanos para aplicar.",
     "no_invites": "No se encontraron registros de invitaciones",
     "no_orders": "Necesitas analizar al menos un chat antes de invitar a otros",
     "table": {
@@ -758,42 +758,42 @@
   "neutral": "Neutral",
   "no_data_available": "No hay datos disponibles",
   "no_data_found": "No se encontraron datos",
-  "no_meaningful_words": "Sin palabras significativas",
-  "no_words_found": "No se encuentran palabras",
+  "no_meaningful_words": "No se encontraron palabras significativas",
+  "no_words_found": "No se encontraron palabras",
   "notification": {
-    "free": "FREE!",
-    "hours": "hours",
-    "hurry": "Hurry, this code expires in",
+    "free": "¡GRATIS!",
+    "hours": "horas",
+    "hurry": "¡Date prisa, este código expira en",
     "limited_time_offer": "¡Oferta por tiempo limitado!",
-    "of_full_access": "of full access — absolutely",
-    "to_unlock": "to unlock",
-    "try_now": "Try Now",
-    "use_code": "Use code"
+    "of_full_access": "de acceso completo, totalmente",
+    "to_unlock": "para desbloquear",
+    "try_now": "Prueba ahora",
+    "use_code": "Usar código"
   },
   "of_full_access": "De acceso completo",
   "overall_sentiment": "Sentimiento general",
-  "overview_story_part1": "Resumen de la historia Parte1",
-  "overview_story_part2": "Descripción general historia parte2",
-  "overview_story_part3": "Resumen de la historia Parte3",
-  "overview_title": "Título de la descripción general",
+  "overview_story_part1": "Resumen de la historia, parte 1",
+  "overview_story_part2": "Resumen de la historia, parte 2",
+  "overview_story_part3": "Resumen de la historia, parte 3",
+  "overview_title": "Resumen",
   "payment": {
-    "description": "Use AI to deeply analyze your chat history and get personality insights and relationship analysis",
+    "description": "Usa IA para analizar profundamente tu historial de chat y obtener perspectivas de personalidad y análisis de relaciones",
     "error_title": "Error",
-    "missing_file_id": "Falta de ID de archivo, por favor suba un archivo primero",
-    "pay_button": "Pay Now",
-    "processing": "Processing...",
-    "return_home": "Return to Home",
-    "service_name": "AI Chat Analysis Service",
-    "title": "AI Chat Analysis"
+    "missing_file_id": "Falta el ID del archivo, por favor sube un archivo primero",
+    "pay_button": "Pagar ahora",
+    "processing": "Procesando...",
+    "return_home": "Volver al inicio",
+    "service_name": "Servicio de análisis de chat con IA",
+    "title": "Análisis de chat con IA"
   },
-  "peak_activity_time": "Tiempo de actividad máxima",
+  "peak_activity_time": "Hora de máxima actividad",
   "placeholder": "Marcador de posición",
   "platforms": {
-    "discord": "Discordia",
+    "discord": "Discord",
     "instagram": "Instagram",
     "snapchat": "Snapchat",
-    "telegram": "Telegrama",
-    "whatsapp": "Whatsapp"
+    "telegram": "Telegram",
+    "whatsapp": "WhatsApp"
   },
   "positive": "Positivo",
   "pricing": {
@@ -801,19 +801,19 @@
     "title": "Compra créditos para análisis avanzado con IA"
   },
   "processing": {
-    "analysis_progress": "Progreso de análisis",
-    "analyzing": "Analización",
-    "cleaning": "Limpieza",
+    "analysis_progress": "Progreso del análisis",
+    "analyzing": "Analizando",
+    "cleaning": "Limpiando",
     "cleaning_progress": "Progreso de limpieza",
-    "completed": "Terminado",
+    "completed": "Completado",
     "description": "Descripción",
-    "failed": "Fallido",
-    "preparing": "Preparante",
-    "processing": "Tratamiento",
-    "result_fetch_failed": "Falló el resultado de la búsqueda de resultados",
-    "status_fetch_failed": "Estado Fatch falló",
+    "failed": "Falló",
+    "preparing": "Preparando",
+    "processing": "Procesando",
+    "result_fetch_failed": "No se pudo obtener el resultado del procesamiento",
+    "status_fetch_failed": "No se pudo obtener el estado del procesamiento",
     "title": "Título",
-    "uploading": "Carga"
+    "uploading": "Subiendo"
   },
   "quick_responses": "Respuestas rápidas",
   "relationship_analysis": {
@@ -822,7 +822,7 @@
   "relationship_metrics": {
     "emotional_stability": "Estabilidad emocional",
     "interest_level": "Nivel de interés",
-    "response_enthusiasm": "Entusiasmo de la respuesta",
+    "response_enthusiasm": "Entusiasmo en la respuesta",
     "response_time": "Tiempo de respuesta"
   },
   "relationship_metrics_hearts": {
@@ -837,14 +837,14 @@
     "export": "Exportar",
     "filtered_messages": "Mensajes filtrados",
     "link_copied": "Enlace copiado",
-    "media_messages_many": "Mensajes de medios muchos",
-    "media_messages_one": "Mensajes de medios uno",
-    "media_messages_other": "Mensajes de medios Otro",
-    "messages_description_many": "Mensajes Descripción muchos",
-    "messages_description_one": "Mensajes Descripción uno",
-    "messages_description_other": "Mensajes Descripción Otro",
+    "media_messages_many": "Muchos mensajes multimedia",
+    "media_messages_one": "Un mensaje multimedia",
+    "media_messages_other": "Otros mensajes multimedia",
+    "messages_description_many": "Descripción de muchos mensajes",
+    "messages_description_one": "Descripción de un mensaje",
+    "messages_description_other": "Descripción de otros mensajes",
     "messages_title": "Título de mensajes",
-    "next": "Próximo",
+    "next": "Siguiente",
     "no_messages": "Sin mensajes",
     "no_search_results": "Sin resultados de búsqueda",
     "page_info": "Información de la página",
@@ -853,41 +853,41 @@
     "search": "Buscar",
     "search_placeholder": "Marcador de posición de búsqueda",
     "share": "Compartir",
-    "share_text_many": "Compartir texto muchos",
-    "share_text_one": "Compartir texto uno",
-    "share_text_other": "Compartir texto otro",
-    "share_title": "Compartir título",
+    "share_text_many": "Compartir muchos textos",
+    "share_text_one": "Compartir un texto",
+    "share_text_other": "Compartir otros textos",
+    "share_title": "Título para compartir",
     "summary_description": "Descripción resumida",
     "summary_title": "Título de resumen",
-    "system_messages_many": "Mensajes del sistema muchos",
-    "system_messages_one": "Mensajes del sistema uno",
-    "system_messages_other": "Mensajes del sistema Otro",
+    "system_messages_many": "Muchos mensajes del sistema",
+    "system_messages_one": "Un mensaje del sistema",
+    "system_messages_other": "Otros mensajes del sistema",
     "title": "Título",
-    "total_messages": "Mensajes totales",
+    "total_messages": "Total de mensajes",
     "unknown_date_range": "Rango de fechas desconocido",
-    "valid_date_messages_many": "Mensajes de fecha válidos muchos",
-    "valid_date_messages_one": "Mensajes de fecha válidos uno",
-    "valid_date_messages_other": "Mensajes de fecha válidos otros",
+    "valid_date_messages_many": "Muchos mensajes con fechas válidas",
+    "valid_date_messages_one": "Un mensaje con fecha válida",
+    "valid_date_messages_other": "Otros mensajes con fechas válidas",
     "warnings_title": "Título de advertencias"
   },
   "sample_button_text": "Texto de botón de muestra",
   "sample_chat_text": "Muestra de texto de chat",
-  "select_button": "Botón Seleccionar",
+  "select_button": "Botón de selección",
   "sentiment_analysis": "Análisis de sentimientos",
   "sentiment_description": "Descripción del sentimiento",
-  "sentiment_negative": "Sentimiento negativo",
-  "sentiment_neutral": "Sentimiento neutral",
-  "sentiment_positive": "Sentimiento positivo",
-  "sentiment_score": "Puntaje de sentimiento",
-  "sentiment_very_negative": "Sentimiento muy negativo",
-  "sentiment_very_positive": "Sentimiento muy positivo",
+  "sentiment_negative": "Negativo",
+  "sentiment_neutral": "Neutral",
+  "sentiment_positive": "Positivo",
+  "sentiment_score": "Puntuación de sentimiento",
+  "sentiment_very_negative": "Muy negativo",
+  "sentiment_very_positive": "Muy positivo",
   "share": {
-    "copy_failed": "Copia fallida",
+    "copy_failed": "No se pudo copiar",
     "link_copied": "Enlace copiado"
   },
-  "share_not_implemented": "Compartir no implementado",
+  "share_not_implemented": "¡Compartir no está implementado aún!",
   "share_results": "Compartir resultados",
-  "sharing": "Intercambio",
+  "sharing": "Compartiendo",
   "sign_modal": {
     "cancel_title": "Cancelar",
     "close_title": "Cerrar",
@@ -909,76 +909,76 @@
   },
   "speakers": {
     "boyfriend": "Novio",
-    "crush": "Aplastar",
+    "crush": "Crush",
     "ex": "Ex",
     "friend": "Amigo",
     "girlfriend": "Novia",
-    "her": "Su",
-    "him": "A él"
+    "her": "Ella",
+    "him": "Él"
   },
   "story_timeline_description": "Descripción de la línea de tiempo de la historia",
   "story_timeline_title": "Título de la línea de tiempo de la historia",
-  "subtitle": "Subtitular",
+  "subtitle": "Subtítulo",
   "supported_formats": "Formatos compatibles",
   "testimonial": {
     "items": [
       {
-        "content": "Honestamente... tengo que decir que estoy sorprendido. Incluso identificó por qué la relación había terminado antes de que yo mismo lo comprendiera completamente.",
+        "content": "Honestamente... estoy sorprendido. Incluso identificó por qué terminó la relación antes de que yo lo entendiera completamente.",
         "initials": "AAD",
         "title": "Análisis de relación"
       },
       {
-        "content": "🥰 Míranos después de un año... Increíble ver todo este progreso. ¡Muestra exactamente cómo hemos crecido juntos!",
+        "content": "🥰 ¡Míranos después de un año! Es increíble ver todo este progreso. Muestra exactamente cómo hemos crecido juntos.",
         "initials": "SSP",
         "title": "Análisis de aniversario"
       },
       {
-        "content": "Los consejos brutalmente honestos sobre relaciones hirieron mis sentimientos, jaja... pero exactamente lo que necesitaba escuchar.",
+        "content": "Los consejos brutalmente honestos sobre relaciones dolieron un poco, jaja... pero eran exactamente lo que necesitaba escuchar.",
         "initials": "MMT",
         "title": "Crecimiento personal"
       }
     ],
-    "subtitle": "usuarios que han descubierto perspectivas más profundas en sus relaciones",
-    "title": "Amado por los amantes"
+    "subtitle": "Usuarios que han descubierto perspectivas más profundas en sus relaciones",
+    "title": "Amado por los usuarios"
   },
-  "text_analysis_title": "Título del análisis de texto",
-  "time_analysis_title": "Título del análisis de tiempo",
-  "time_distribution": "Distribución de tiempo",
+  "text_analysis_title": "Análisis de texto",
+  "time_analysis_title": "Análisis de tiempo",
+  "time_distribution": "Distribución del tiempo",
   "time_distribution_description": "Descripción de la distribución del tiempo",
   "times": {
-    "days_ago": "Hace días",
-    "hours_ago": "Hace horas",
-    "just_now": "En este momento",
-    "minutes_ago": "Hace minutos"
+    "days_ago": "Hace {days} días",
+    "hours_ago": "Hace {hours} horas",
+    "just_now": "Ahora mismo",
+    "minutes_ago": "Hace {minutes} minutos"
   },
   "title": "Título",
-  "to_unlock": "Desbloquear",
-  "top_emojis": "Emojis superior",
+  "to_unlock": "Para desbloquear",
+  "top_emojis": "Emojis principales",
   "top_words": "Palabras principales",
-  "total_emojis": "Emojis totales",
-  "total_messages": "Mensajes totales",
+  "total_emojis": "Total de emojis",
+  "total_messages": "Total de mensajes",
   "total_unique_words": "Total de palabras únicas",
-  "total_words": "Palabras totales",
-  "try_now": "Intentarlo ahora",
+  "total_words": "Total de palabras",
+  "try_now": "Probar ahora",
   "upload": {
     "description": "Descripción",
-    "drop_files": "Soltar archivos",
+    "drop_files": "Arrastrar archivos",
     "error": "Error",
-    "failed": "Fallido",
+    "failed": "Falló",
     "file_size_limit": "Límite de tamaño de archivo",
     "invalid_format": "Formato no válido",
-    "no_file_selected": "No hay archivo seleccionado",
+    "no_file_selected": "No se seleccionó ningún archivo",
     "select_file": "Seleccionar archivo",
     "supported_formats": "Formatos compatibles",
     "title": "Título",
-    "upload_button": "Botón de carga",
-    "upload_failed": "Carga falló",
-    "uploading": "Carga"
+    "upload_button": "Botón de subida",
+    "upload_failed": "La subida falló",
+    "uploading": "Subiendo"
   },
-  "upload_button_text": "Texto del botón de carga",
-  "upload_description": "Descripción de carga",
-  "upload_title": "Título de carga",
-  "use_code": "Código de uso",
+  "upload_button_text": "Texto del botón de subida",
+  "upload_description": "Descripción de la subida",
+  "upload_title": "Título de la subida",
+  "use_code": "Usar código",
   "user": {
     "admin_system": "Área de administración",
     "api_keys": "Claves API",
@@ -989,11 +989,11 @@
     "user_center": "Centro de usuario"
   },
   "very_negative": "Muy negativo",
-  "very_positive": "muy positivo",
-  "view_guide": "View download guide",
-  "weekly_activity_heatmap": "Actividad semanal mapa de calor",
-  "word": "palabra",
-  "word_cloud": "nube de palabras",
-  "words": "palabras",
-  "words_per_message": "Palabra por mensaje"
+  "very_positive": "Muy positivo",
+  "view_guide": "Ver guía de descarga",
+  "weekly_activity_heatmap": "Mapa de calor de actividad semanal",
+  "word": "Palabra",
+  "word_cloud": "Nube de palabras",
+  "words": "Palabras",
+  "words_per_message": "Palabras por mensaje"
 }
