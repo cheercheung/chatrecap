@@ -102,12 +102,12 @@ export default async function AiInsightResult({
         <div className="min-h-screen flex items-center justify-center">
           <div className="text-center">
             <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-primary mx-auto"></div>
-            <h2 className="text-2xl font-semibold mt-6">AI 分析进行中...</h2>
+            <h2 className="text-2xl font-semibold mt-6">AI analysis....</h2>
             <p className="text-muted-foreground mt-2">
-              我们正在对您的聊天记录进行深度分析，这可能需要几分钟时间。
+            we are analyzing your chat,which may spend several times
             </p>
             <p className="text-sm text-muted-foreground mt-4">
-              页面将在分析完成后自动刷新，请勿关闭页面。
+          Don't close the window!
             </p>
 
             {/* 使用 WebSocket 客户端组件检查分析状态 */}

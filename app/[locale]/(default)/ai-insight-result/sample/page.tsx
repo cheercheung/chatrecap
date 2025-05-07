@@ -1,5 +1,5 @@
-import { getTranslations } from "next-intl/server";
-import StaticAiInsightResultPage from "@/components/pages/ai-insight-result/static";
+import { getTranslations, getMessages } from "next-intl/server";
+import ClientWrapper from "@/components/pages/ai-insight-result/client-wrapper";
 import { generateSampleAnalysisData } from "@/lib/analysis/sampleData";
 import { sampleAiInsights } from "@/lib/analysis/sampleData";
 import { locales } from "@/i18n/locale";
@@ -49,6 +49,8 @@ export default async function AiInsightSamplePage({
 }: {
   params: Promise<{ locale: string }>;
 }) {
+  const { locale } = await params;
+
   // 获取示例分析数据
   const sampleData = generateSampleAnalysisData("sample");
 
@@ -64,6 +66,16 @@ export default async function AiInsightSamplePage({
     content: item.description,
   }));
 
-  // 使用静态优化版本的组件显示示例结果
-  return <StaticAiInsightResultPage analysisData={sampleData} mappedInsights={mappedInsights} />;
+  // 获取翻译消息
+  const messages = await getMessages({ locale });
+
+  // 使用客户端包装组件，提供国际化上下文
+  return (
+    <ClientWrapper
+      analysisData={sampleData}
+      mappedInsights={mappedInsights}
+      messages={messages}
+      locale={locale}
+    />
+  );
 }

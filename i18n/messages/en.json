@@ -167,6 +167,14 @@
         "low": "Low",
         "high": "High"
        } ,
+       "communication_comparison": {
+            "description": "A comparison of communication patterns and relationship dynamics between both parties.",
+            "title": "Communication Comparison: {sender1} vs {sender2}"
+        },
+        "relationship_analysis": {
+            "description": "Analysis of communication patterns and relationship dynamics based on message history.",
+            "title": "{sender}'s Communication Analysis"
+        },
         "relationship_metrics": {
             "communication": "Communication",
             "conflict": "Conflict Management",
@@ -176,6 +184,14 @@
             "response_enthusiasm": "Response Enthusiasm",
             "response_time": "Response Time",
             "trust": "Trust"
+        },
+        "relationship_metrics_hearts": {
+            "description": "Analysis of key relationship quality indicators based on communication patterns.",
+            "title": "Relationship Quality Metrics"
+        },
+        "insights": {
+            "interaction_title": "Interaction Insights",
+            "relationship_title": "Relationship Insights"
         },
         "errors": {
             "not_found": "Analysis not found",

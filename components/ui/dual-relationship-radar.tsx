@@ -31,25 +31,35 @@ const DualRelationshipRadar: React.FC<DualRelationshipRadarProps> = ({
 }) => {
   const t = useTranslations('chatrecapresult');
 
+  // 安全翻译函数，如果翻译键不存在则返回默认值
+  const safeT = (key: string, defaultValue: string): string => {
+    try {
+      return t(key);
+    } catch (e) {
+      // 如果翻译失败，返回默认值
+      return defaultValue;
+    }
+  };
+
   // 将指标数据转换为雷达图所需的格式
   const createRadarData = (sender: SenderData) => [
     {
-      subject: t('relationship_metrics.interest_level'),
+      subject: safeT('relationship_metrics.interest_level', 'interest level'),
       value: sender.interestLevel.score,
       fullMark: 100,
     },
     {
-      subject: t('relationship_metrics.response_enthusiasm'),
+      subject: safeT('relationship_metrics.response_enthusiasm', 'response enthusiasm'),
       value: sender.responseEnthusiasm.score,
       fullMark: 100,
     },
     {
-      subject: t('relationship_metrics.emotional_stability'),
+      subject: safeT('relationship_metrics.emotional_stability', 'emotional stability'),
       value: sender.emotionalStability.score,
       fullMark: 100,
     },
     {
-      subject: t('relationship_metrics.response_time'),
+      subject: safeT('relationship_metrics.response_time', 'response time'),
       value: sender.responseTime.score,
       fullMark: 100,
     },
@@ -62,7 +72,9 @@ const DualRelationshipRadar: React.FC<DualRelationshipRadarProps> = ({
     <div className={cn("grid grid-cols-1 md:grid-cols-2 gap-6", className)}>
       {/* Sender 1 Radar */}
       <div className="flex flex-col items-center">
-        <h3 className="text-lg font-medium mb-2">{t.rich('relationship_metrics_radar', { name: sender1.name })}</h3>
+        <h3 className="text-lg font-medium mb-2">
+          {sender1.name} relationship metrics
+        </h3>
         <div className="h-80 w-full">
           <RadarChart
             data={sender1Data}
@@ -76,7 +88,9 @@ const DualRelationshipRadar: React.FC<DualRelationshipRadarProps> = ({
 
       {/* Sender 2 Radar */}
       <div className="flex flex-col items-center">
-        <h3 className="text-lg font-medium mb-2">{t.rich('relationship_metrics_radar', { name: sender2.name })}</h3>
+        <h3 className="text-lg font-medium mb-2">
+          {sender2.name} relationship metrics
+        </h3>
         <div className="h-80 w-full">
           <RadarChart
             data={sender2Data}

@@ -43,11 +43,6 @@ export async function generateMetadata({
     icons: {
       icon: [
         { url: "/favicon.ico" },
-        { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-        { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-      ],
-      apple: [
-        { url: "/apple-touch-icon.png" },
       ],
     },
   };
@@ -101,7 +96,21 @@ export default async function RootLayout({
           "min-h-screen bg-background font-sans antialiased overflow-x-hidden",
           fontSans.variable
         )}
+        suppressHydrationWarning
       >
+        {/* Script to remove unexpected attributes from body tag */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                // Remove any unexpected attributes from body tag
+                if (document.body.hasAttribute('inmaintabuse')) {
+                  document.body.removeAttribute('inmaintabuse');
+                }
+              })();
+            `
+          }}
+        />
         <IntlProvider locale={locale} messages={messages}>
           {/* 添加骨架屏，减少感知加载时间 */}
           <div id="page-content">

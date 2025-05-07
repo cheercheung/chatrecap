@@ -30,25 +30,35 @@ const RelationshipRadar: React.FC<RelationshipRadarProps> = ({
 }) => {
   const t = useTranslations('chatrecapresult');
 
+  // 安全翻译函数，如果翻译键不存在则返回默认值
+  const safeT = (key: string, defaultValue: string): string => {
+    try {
+      return t(key);
+    } catch (e) {
+      // 如果翻译失败，返回默认值
+      return defaultValue;
+    }
+  };
+
   // 将指标数据转换为雷达图所需的格式
   const radarData = [
     {
-      subject: t('relationship_metrics.interest_level'),
+      subject: safeT('relationship_metrics.interest_level', 'interest level'),
       value: sender1.interestLevel.score,
       fullMark: 100,
     },
     {
-      subject: t('relationship_metrics.response_enthusiasm'),
+      subject: safeT('relationship_metrics.response_enthusiasm', 'response enthusiasm'),
       value: sender1.responseEnthusiasm.score,
       fullMark: 100,
     },
     {
-      subject: t('relationship_metrics.emotional_stability'),
+      subject: safeT('relationship_metrics.emotional_stability', 'emotional stability'),
       value: sender1.emotionalStability.score,
       fullMark: 100,
     },
     {
-      subject: t('relationship_metrics.response_time'),
+      subject: safeT('relationship_metrics.response_time', 'response time'),
       value: sender1.responseTime.score,
       fullMark: 100,
     },
@@ -58,7 +68,7 @@ const RelationshipRadar: React.FC<RelationshipRadarProps> = ({
     <Card className={cn("overflow-hidden", className)}>
       <CardHeader className="pb-2">
         <CardTitle className="text-lg font-medium text-center">
-          {t.rich('relationship_metrics_radar', { name: sender1.name })}
+          {sender1.name} communication metrix
         </CardTitle>
       </CardHeader>
       <CardContent>

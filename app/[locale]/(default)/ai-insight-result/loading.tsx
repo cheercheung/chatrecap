@@ -8,9 +8,9 @@ export default function Loading() {
       <div className="bg-card p-6 rounded-lg shadow-lg max-w-md w-full">
         <div className="flex flex-col items-center space-y-4">
           <Loader2 className="h-12 w-12 animate-spin text-primary" />
-          <h3 className="text-xl font-semibold">AI 分析进行中...</h3>
+          <h3 className="text-xl font-semibold">AI analyzing...</h3>
           <p className="text-muted-foreground text-center">
-            我们正在对您的聊天记录进行深度分析，这可能需要几分钟时间。
+            We are analyzing your chat with AI for deeper insights
           </p>
           <div className="w-full bg-muted rounded-full h-2.5">
             <div 
@@ -18,7 +18,7 @@ export default function Loading() {
               style={{ width: "50%" }}
             ></div>
           </div>
-          <p className="text-sm text-muted-foreground">请耐心等待...</p>
+          <p className="text-sm text-muted-foreground">please wait</p>
         </div>
       </div>
     </div>

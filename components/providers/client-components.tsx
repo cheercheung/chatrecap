@@ -4,6 +4,7 @@ import dynamic from 'next/dynamic';
 import { useEffect, useState } from 'react';
 import CriticalCSS from './critical-css';
 import NotificationBlockWrapper from '@/components/blocks/notification-block/client-wrapper';
+import HydrationFix from './hydration-fix';
 
 // 延迟加载非关键组件
 export const DynamicToaster = dynamic(
@@ -46,6 +47,9 @@ export default function ClientComponents() {
 
   return (
     <>
+      {/* 修复水合错误 */}
+      <HydrationFix />
+
       {/* 内联关键CSS */}
       <CriticalCSS />
 
