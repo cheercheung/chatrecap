@@ -35,8 +35,8 @@ interface JsonUploaderProps {
 export default function JsonUploader({
   supportedPlatform = "JSON",
   maxFileSize = 5,
-  maxMessageCount = 1000000,
-  maxCharacters = 10000000,
+  maxMessageCount = 10000,
+  maxCharacters = 1000000,
   onFileUpload,
   analyzeButton,
 

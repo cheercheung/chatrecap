@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import PlatformFilter from "@/components/blocks/platform-filter";
 import JsonUploader from "@/components/blocks/json-uploader";
 import UploadBoxWrapper from "@/components/blocks/upload-box/server-wrapper";
+import PlatformGuide from "@/components/blocks/platform-guide";
 import { Section } from "@/types/blocks/section";
 import { UploadBox as UploadBoxType } from "@/types/blocks/upload-box";
 import { PlatformType } from "@/types/chat-processing";
@@ -80,6 +81,12 @@ export default function PlatformUpload({ section, upload_box, className }: Platf
             onChange={handlePlatformChange}
           />
         </div>
+
+        {/* Platform export guide */}
+        <PlatformGuide
+          platform={selectedPlatform}
+          exportTitle={`How to Export Your {platform} Chat`}
+        />
 
         {selectedPlatform === "whatsapp" ? (
           <UploadBoxWrapper upload_box={uploadBoxData} platform={selectedPlatform} />

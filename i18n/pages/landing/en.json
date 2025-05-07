@@ -157,7 +157,7 @@
       {
         "icon": "RiFlashlightFill",
         "target": "_self",
-        "title": "Try Recap AI Free",
+        "title": "Free Analyze",
         "url": "/chatrecapanalysis",
         "variant": "default"
       }
@@ -174,7 +174,7 @@
     "auto_sort_message": "Messages will be auto sorted by timestamp.",
     "description": "We'll analyze your chat history and provide insights",
     "max_characters": "Max characters: {count}",
-    "max_message_count": "Max message count: {count}",
+    "max_message_count": "Max messages count: {count}",
     "name": "json_uploader",
     "recap_button": "AI Recap",
     "selected_file": "Selected: {filename}",
@@ -212,6 +212,45 @@
     "name": "platform_upload",
     "title": "How to export Your Chat Data"
   },
+ "whatsapp":
+    {
+      "img1":
+      {
+        "src": "/imgs/output/whatsapp/1.png",
+        "alt": "WhatsApp Chat Export Step",
+        "description":"From WhatsApp Web"
+      },
+      "img2":
+      {
+        "src": "/imgs/output/whatsapp/2.png",
+        "alt": "WhatsApp Chat Export Step",
+        "description":"From WhatsApp iOS/Android"
+      }},
+"instagram":
+      {
+        "src": "/imgs/output/instagram/1.png",
+        "alt": "Instagram Chat Export Step",
+        "description":"Export Steps:Settings > Accounts Center > Your information and permissions > Download or transfer information.Note: After requesting your data, Instagram will email you a download link within 48 hours. The chat history will be in JSON format."
+      },
+ "discord":
+      {
+        "src": "/imgs/output/discord/1.png",
+        "alt": "Discord Chat Export Step",
+        "description":"Export Steps:1. Download and install Discord Chat Exporter2. Get your Discord token3. Export chat history to JSON format.Note: Using third-party tools like Discord Chat Exporter may violate Discord's Terms of Service. Please use at your own risk."
+      },
+"telegram":
+      {
+        "src": "/imgs/output/telegram/1.png",
+        "alt": "Telegram Chat Export Step",
+        "description":"Export Steps:1. Open Telegram Desktop app2. Go to Chat → Export Chat History3. Export with no media in JSON formatNote: Please ensure you have the latest version of Telegram Desktop installed. The export feature is only available in the desktop application."
+      },
+ "snapchat":
+      {
+        "src": "/imgs/output/snapchat/1.png",
+        "alt": "Snapchat Chat Export Step",
+        "description":"Go to Settings → My Data/Select 'Export JSON Files' for data portability purposes/Make sure 'Chat History' is selected/Submit your request and wait for the email/Download the ZIP file and extract it/Find the 'chat_history.json' file in the extracted folder/Upload this JSON file below"
+      },
+  
   "scenarios": {
     "description": "Our chat analysis AI understands the nuances of different relationship types. Whether it's romantic partners, family members, friends, or colleagues, our analysis reveals unique insights and creates personalized chat recaps for each relationship dynamic.",
     "items": [

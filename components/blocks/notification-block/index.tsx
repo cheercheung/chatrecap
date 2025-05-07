@@ -14,8 +14,27 @@ export default function NotificationBlock({
 }: NotificationBlockProps) {
   const [isVisible, setIsVisible] = useState(true);
 
-  // 使用标准翻译钩子
-  const t = useTranslations('components');
+  // Try to get translations from different possible namespaces
+  let t;
+  try {
+    // First try the components namespace
+    t = useTranslations('components');
+  } catch (error) {
+    // If that fails, use hardcoded values as fallback
+    t = (key: string) => {
+      const fallbackValues: Record<string, string> = {
+        'notification.limited_time_offer': 'Limited Time Offer!',
+        'notification.use_code': 'Use code',
+        'notification.to_unlock': 'to unlock',
+        'notification.hours': 'hours',
+        'notification.of_full_access': 'of full access — absolutely',
+        'notification.free': 'FREE!',
+        'notification.hurry': 'Hurry, this code expires in',
+        'notification.try_now': 'Try Now'
+      };
+      return fallbackValues[key] || key;
+    };
+  }
 
   if (!isVisible) return null;
 
