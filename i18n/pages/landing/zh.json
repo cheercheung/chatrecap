@@ -390,6 +390,38 @@
     },
     "title": "聊天通知"
   },
+  "image":{
+    "item1":{
+      "src": "/imgs/features/1.png",
+      "alt": "聊天分析示例1",
+      "title":"聊天分析示例",
+      "description":"上传您的聊天记录，获取深入的关系洞察和沟通模式分析。"
+    },
+    "item2": {
+      "src": "/imgs/features/2.png",
+      "alt": "聊天分析示例2",
+      "title":"跨平台支持",
+      "description":"分析来自WhatsApp、Instagram、Discord、Telegram等平台的聊天记录。"
+    },
+    "item3": {
+      "src": "/imgs/features/3.png",
+      "alt": "聊天分析示例3",
+      "title":"详细洞察",
+      "description":"获取关于您的沟通模式、响应时间和情感联系的全面分析。"
+    },
+    "item4": {
+      "src": "/imgs/features/4.png",
+      "alt": "聊天分析示例4",
+      "title":"AI驱动分析",
+      "description":"我们的高级AI分析您的对话，揭示隐藏的模式和洞察。"
+    },
+    "alt": "聊天分析示例",
+    "title": "聊天分析示例",
+    "description": "上传您的聊天记录，获取深入的关系洞察和沟通模式分析。",
+    "previous": "上一张",
+    "next": "下一张",
+    "slide": "幻灯片"
+  },
   "footer": {
     "copyright": "© 2025 ChatRecap AI. 保留所有权利。",
     "privacy_policy": "隐私政策",

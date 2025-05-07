@@ -1,7 +1,7 @@
 'use client';
 
 import Header from '@/components/blocks/header';
-import OptimizedHero from '@/components/blocks/hero/optimized';
+import Hero from '@/components/blocks/hero';
 import PlatformUploadWrapper from '@/components/blocks/platform-upload/client-wrapper';
 import { LandingPage } from '@/types/pages/landing';
 
@@ -18,11 +18,11 @@ export default function PrimarySections({ header, hero, platform_upload, upload_
       {/* 全局导航 */}
       {header && <Header header={header} />}
       {/* Hero 区块 */}
-      {hero && <OptimizedHero hero={hero} />}
+      {hero && <Hero hero={hero} />}
       {/* 上传区块，仅客户端渲染 */}
       {platform_upload && upload_box && (
         <PlatformUploadWrapper section={platform_upload} upload_box={upload_box} />
       )}
     </>
   );
-} 
+}

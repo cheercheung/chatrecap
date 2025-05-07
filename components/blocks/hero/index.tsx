@@ -1,52 +1,51 @@
-"use client";
-
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import HappyUsers from "./happy-users";
-
+import OptimizedImage from "@/components/ui/optimized-image";
+import ImageCard from "@/components/ui/image-card";
 import { Hero as HeroType } from "@/types/blocks/hero";
 import Icon from "@/components/icon";
 import Link from "next/link";
-import { motion } from "framer-motion";
-import { ChatNotification } from "@/components/ui/chat-notification";
-import { useState, useEffect } from "react";
 
-export default function Hero({ hero }: { hero: HeroType }) {
-  const [isClient, setIsClient] = useState(false);
+// Hero 组件，优化性能，移除所有动画和效果
+export default async function Hero({ hero }: { hero: HeroType }) {
+  // 动态导入 i18n 数据
+  let imageData = [];
+  // 控制显示的图片数量
+  const maxImages = 4; // 设置最大显示4张图片
 
-  // 使用 hero 对象中的数据
-  const chatNotifications = {
-    title: "Chat Notifications",
-    speakers: {
-      girlfriend: "Girlfriend",
-      boyfriend: "Boyfriend",
-      her: "Her",
-      him: "Him",
-      ex: "Ex",
-      friend: "Friend",
-      crush: "Crush"
-    },
-    times: {
-      days_ago: (days: number) => `${days} days ago`,
-      minutes_ago: (minutes: number) => `${minutes} minutes ago`,
-      hours_ago: (hours: number) => `${hours} hours ago`,
-      just_now: "Just now"
-    },
-    messages: {
-      message1: "Oh, you finally texted? Must've broken a world record 🏆🙄",
-      message2: "Sorry, my phone only buzzes for pizza deliveries 🍕📳",
-      message3: "Your pick-up lines are faster than my microwave popcorn 🍿💨",
-      message4: "Our chat's colder than Antarctica ❄️😎",
-      message5: "Miss me? I barely remember your name 😂",
-      message6: "Your dating life is like my WiFi - unstable connection 📶",
-      message7: "Seen your message. Will reply in 2-3 business days 📅"
+  try {
+    // 获取当前语言的图片数据
+    const locale = typeof window !== 'undefined' ? document.documentElement.lang || 'en' : 'en';
+    const module = await import(`@/i18n/pages/landing/${locale}.json`);
+
+    if (module.default && module.default.image) {
+      // 将对象转换为数组
+      const imgObj = module.default.image;
+      const itemKeys = Object.keys(imgObj).filter(key => key.startsWith('item')).slice(0, maxImages);
+
+      // 只获取指定数量的图片
+      imageData = itemKeys.map(key => ({
+        src: imgObj[key].src || '',
+        alt: imgObj[key].alt || '',
+        title: imgObj[key].title || '',
+        description: imgObj[key].description || ''
+      }));
+
+      // 如果没有足够的图片，使用默认数据填充
+      if (imageData.length === 0) {
+        imageData = [
+          { src: '', alt: '聊天截图示例1', title: imgObj.title || '聊天分析示例', description: imgObj.description || '' }
+        ];
+      }
     }
-  };
-
-  // 使用 useEffect 确保组件只在客户端渲染后才显示完整内容
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
+  } catch (error) {
+    console.error('Failed to load image data from i18n:', error);
+    // 使用默认数据
+    imageData = [
+      { src: '', alt: '聊天截图示例1', title: '聊天分析示例', description: '上传您的聊天记录，获取深入的关系洞察和沟通模式分析。' }
+    ];
+  }
 
   if (hero.disabled) {
     return null;
@@ -60,79 +59,45 @@ export default function Hero({ hero }: { hero: HeroType }) {
 
   return (
     <>
-      <section className="py-32 relative">
+      <section className="py-10 pt-6 relative">
         <div className="container relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-center">
-            {/* 左侧内容 */}
-            <div className="flex flex-col col-span-2">
-              {hero.show_badge && (
-                <motion.div
-                  initial={{ opacity: 0, y: -20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5 }}
-                  className="flex items-center mb-8"
-                >
-                  <img
-                    src="/imgs/badges/phdaily.svg"
-                    alt="phdaily"
-                    className="h-10 object-cover"
-                  />
-                </motion.div>
-              )}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+            {/* 左侧内容: 标题、描述、按钮和快乐用户 */}
+            <div className="flex flex-col">
               <div className="text-left">
-                {hero.announcement && (
-                  <motion.a
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.1 }}
-                    href={hero.announcement.url}
-                    className="mb-5 inline-flex items-center gap-3 rounded-full border border-primary/30 bg-primary/5 px-4 py-2 text-sm shadow-sm backdrop-blur-sm hover:bg-primary/10 transition-colors"
-                  >
-                    {hero.announcement.label && (
-                      <Badge className="bg-primary/80 hover:bg-primary/90">{hero.announcement.label}</Badge>
-                    )}
-                    {hero.announcement.title}
-                  </motion.a>
-                )}
-
                 {texts && texts.length > 1 ? (
-                  <motion.h1
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: isClient ? 1 : 0, y: isClient ? 0 : -10 }}
-                    transition={{ duration: 0.6, delay: 0.1 }}
-                    className="mb-5 mt-6 text-balance text-4xl font-bold lg:mb-8 lg:text-6xl max-w-3xl"
-                  >
+                  <h1 className="mb-4 mt-3 text-4xl font-bold lg:mb-6 lg:text-6xl max-w-3xl">
                     {texts[0]}
-                    <span className="bg-gradient-to-r from-pink-500 via-primary to-pink-400 bg-clip-text text-transparent px-2">
+                    <span className="text-primary px-2">
                       {highlightText}
                     </span>
                     {texts[1]}
-                  </motion.h1>
+                  </h1>
                 ) : (
-                  <motion.h1
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: isClient ? 1 : 0, y: isClient ? 0 : -10 }}
-                    transition={{ duration: 0.6, delay: 0.1 }}
-                    className="mb-5 mt-6 text-balance text-4xl font-bold lg:mb-8 lg:text-6xl max-w-3xl"
-                  >
+                  <h1 className="mb-4 mt-3 text-4xl font-bold lg:mb-6 lg:text-6xl max-w-3xl">
                     {hero.title}
-                  </motion.h1>
+                  </h1>
                 )}
 
-                <motion.p
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: isClient ? 1 : 0, y: isClient ? 0 : -10 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
+                <p
                   className="text-muted-foreground lg:text-xl leading-relaxed max-w-2xl"
                   dangerouslySetInnerHTML={{ __html: hero.description || "" }}
                 />
+
+                {hero.tip && (
+                  <p className="mt-6 text-md text-muted-foreground font-medium">
+                    {hero.tip}
+                  </p>
+                )}
+
+                {hero.show_happy_users && (
+                  <div className="mt-6">
+                    <HappyUsers />
+                  </div>
+                )}
+
                 {hero.buttons && (
-                  <motion.div
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: isClient ? 1 : 0, y: isClient ? 0 : -10 }}
-                    transition={{ duration: 0.6, delay: 0.3 }}
-                    className="mt-10 flex flex-col sm:flex-row gap-4"
-                  >
+                  <div className="mt-8 flex flex-col sm:flex-row gap-4">
                     {hero.buttons.map((item, i) => {
                       return (
                         <Link
@@ -140,11 +105,10 @@ export default function Hero({ hero }: { hero: HeroType }) {
                           href={item.url || ""}
                           target={item.target || ""}
                           className="flex items-center"
+                          prefetch={false} // 禁用预取，减少不必要的网络请求
                         >
                           <Button
-                            className={`w-full shadow-md hover:shadow-lg transition-all ${
-                              item.variant === "default" ? "bg-gradient-to-r from-primary to-pink-500 hover:from-primary hover:to-pink-600" : ""
-                            }`}
+                            className="w-full"
                             size="lg"
                             variant={item.variant || "default"}
                           >
@@ -156,91 +120,52 @@ export default function Hero({ hero }: { hero: HeroType }) {
                         </Link>
                       );
                     })}
-                  </motion.div>
-                )}
-                {hero.tip && (
-                  <motion.p
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.5 }}
-                    className="mt-8 text-md text-muted-foreground font-medium"
-                  >
-                    {hero.tip}
-                  </motion.p>
-                )}
-                {hero.show_happy_users && (
-                  <motion.div
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.6 }}
-                    className="mt-8"
-                  >
-                    <HappyUsers />
-                  </motion.div>
+                  </div>
                 )}
               </div>
             </div>
 
-            {/* 右侧内容 - 聊天通知 */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: isClient ? 1 : 0, x: isClient ? 0 : 20 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="flex items-start justify-center col-span-1"
-            >
-              <div className="bg-primary/5 backdrop-blur-sm border border-primary/10 rounded-2xl w-full p-6 shadow-lg h-auto overflow-hidden">
-                <h3 className="text-xl font-medium text-center mb-6 text-foreground bg-clip-text text-transparent bg-gradient-to-r from-primary to-pink-500">{chatNotifications.title}</h3>
-                <div className="space-y-4 pr-2 overflow-y-auto max-h-[400px] pb-2 scrollbar-thin scrollbar-thumb-primary/20 scrollbar-track-transparent" style={{ scrollBehavior: 'smooth' }}>
-                  <ChatNotification
-                    speaker={chatNotifications.speakers.girlfriend}
-                    time={chatNotifications.times.days_ago(2)}
-                    content={chatNotifications.messages.message1}
-                    index={0}
-                  />
-                  <ChatNotification
-                    speaker={chatNotifications.speakers.boyfriend}
-                    time={chatNotifications.times.minutes_ago(10)}
-                    content={chatNotifications.messages.message2}
-                    index={1}
-                  />
-                  <ChatNotification
-                    speaker={chatNotifications.speakers.her}
-                    time={chatNotifications.times.days_ago(1)}
-                    content={chatNotifications.messages.message3}
-                    index={2}
-                  />
-                  <ChatNotification
-                    speaker={chatNotifications.speakers.him}
-                    time={chatNotifications.times.minutes_ago(30)}
-                    content={chatNotifications.messages.message4}
-                    index={3}
-                  />
-                  <ChatNotification
-                    speaker={chatNotifications.speakers.ex}
-                    time={chatNotifications.times.days_ago(3)}
-                    content={chatNotifications.messages.message5}
-                    index={4}
-                  />
-                  <ChatNotification
-                    speaker={chatNotifications.speakers.friend}
-                    time={chatNotifications.times.hours_ago(5)}
-                    content={chatNotifications.messages.message6}
-                    index={5}
-                  />
-                  <ChatNotification
-                    speaker={chatNotifications.speakers.crush}
-                    time={chatNotifications.times.just_now}
-                    content={chatNotifications.messages.message7}
-                    index={6}
+            {/* 右侧内容: 徽章、公告和图片 */}
+            <div className="flex flex-col h-full">
+              {hero.show_badge && (
+                <div className="flex justify-center items-center mb-4">
+                  <OptimizedImage
+                    src="/imgs/badges/phdaily.svg"
+                    alt="phdaily"
+                    width={120}
+                    height={40}
+                    className="h-10"
+                    priority={true}
                   />
                 </div>
-              </div>
-            </motion.div>
+              )}
+
+              {hero.announcement && (
+                <div className="flex justify-center mb-3">
+                  <a
+                    href={hero.announcement.url}
+                    className="inline-flex items-center gap-3 rounded-full border border-primary/30 bg-primary/5 px-4 py-2 text-sm"
+                  >
+                    {hero.announcement.label && (
+                      <Badge className="bg-primary/80">{hero.announcement.label}</Badge>
+                    )}
+                    {hero.announcement.title}
+                  </a>
+                </div>
+              )}
+
+              <ImageCard
+                images={imageData.map(item => ({
+                  src: item.src,
+                  alt: item.alt
+                }))}
+                title={imageData[0]?.title || "聊天分析示例"}
+                description={imageData[0]?.description || "上传您的聊天记录，获取深入的关系洞察和沟通模式分析。"}
+                className="min-h-[400px]"
+              />
+            </div>
           </div>
         </div>
-
-        {/* 装饰元素 */}
-        <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-background to-transparent"></div>
       </section>
     </>
   );

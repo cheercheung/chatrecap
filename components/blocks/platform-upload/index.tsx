@@ -7,7 +7,6 @@ import JsonUploader from "@/components/blocks/json-uploader";
 import UploadBoxWrapper from "@/components/blocks/upload-box/server-wrapper";
 import { Section } from "@/types/blocks/section";
 import { UploadBox as UploadBoxType } from "@/types/blocks/upload-box";
-import { motion } from "framer-motion";
 import { PlatformType } from "@/types/chat-processing";
 
 interface PlatformOption {

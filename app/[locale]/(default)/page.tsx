@@ -6,7 +6,7 @@ export const revalidate = 86400; // 24小时 = 86400秒
 export const dynamic = 'force-static';
 export const fetchCache = 'force-cache';
 
-import OptimizedHero from '@/components/blocks/hero/optimized';
+import Hero from '@/components/blocks/hero';
 import LazySecondarySections from '@/components/blocks/lazy-secondary-sections';
 import PlatformUploadWrapper from '@/components/blocks/platform-upload/client-wrapper';
 import NotificationBlockWrapper from '@/components/blocks/notification-block/client-wrapper';
@@ -57,7 +57,7 @@ export default async function LandingPage({ params }: { params: Promise<{ locale
   return (
     <>
       {/* Hero 区块 */}
-      {hero && <OptimizedHero hero={hero} />}
+      {hero && <Hero hero={hero} />}
       {/* 上传区块，仅客户端渲染 */}
       {platform_upload && upload_box && (
         <PlatformUploadWrapper section={platform_upload} upload_box={upload_box} />
