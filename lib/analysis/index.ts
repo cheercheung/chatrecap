@@ -26,26 +26,26 @@ export function analyzeChatData(messages: RawMessage[]): AnalysisData {
       startDate: formatDateLong(currentDate),
       endDate: formatDateLong(currentDate),
       duration: 0,
-      timespanSummary: "No messages to analyze",
+      timespanSummary: "no_messages_to_analyze",
       overview: {
         totalMessages: 0,
         totalWords: 0,
         wordsPerMessage: 0,
         sender1: {
-          name: "Unknown",
+          name: "unknown_sender",
           messages: 0,
           words: 0,
           wordsPerMessage: 0
         },
         sender2: {
-          name: "Unknown",
+          name: "unknown_sender",
           messages: 0,
           words: 0,
           wordsPerMessage: 0
         },
         avgMessagesPerDay: 0,
-        mostActiveDay: "day_names.monday",
-        responseTime: "0 minutes"
+        mostActiveDay: "monday",
+        responseTime: "zero_minutes"
       },
       textAnalysis: {
         commonWords: [],
@@ -53,58 +53,58 @@ export function analyzeChatData(messages: RawMessage[]): AnalysisData {
         topEmojis: [],
         wordCount: 0,
         sender1: {
-          name: "Unknown",
+          name: "unknown_sender",
           commonWords: [],
           topEmojis: []
         },
         sender2: {
-          name: "Unknown",
+          name: "unknown_sender",
           commonWords: [],
           topEmojis: []
         }
       },
       timeAnalysis: {
         mostActiveHour: 0,
-        mostActiveDay: "day_names.monday",
-        mostActiveDate: "Unknown",
+        mostActiveDay: "monday",
+        mostActiveDate: "unknown_date",
         mostMessagesCount: 0,
-        responsePattern: "response_patterns.consistent",
-        conversationLength: "No conversations",
+        responsePattern: "consistent",
+        conversationLength: "no_conversations",
         timeDistribution: [
-          {time: "time_distribution.morning", percentage: 25},
-          {time: "time_distribution.afternoon", percentage: 25},
-          {time: "time_distribution.evening", percentage: 25},
-          {time: "time_distribution.night", percentage: 25}
+          {time: "morning", percentage: 25},
+          {time: "afternoon", percentage: 25},
+          {time: "evening", percentage: 25},
+          {time: "night", percentage: 25}
         ],
         hourlyActivity: Array(24).fill(0).map((_, hour) => ({ hour, count: 0 })),
         dailyActivity: [],
         weekdayHourHeatmap: [
           {
-            day: "day_names.monday",
+            day: "time_of_day.monday",
             hours: Array(24).fill(0).map((_, hour) => ({ hour, count: 0 }))
           },
           {
-            day: "day_names.tuesday",
+            day: "time_of_day.tuesday",
             hours: Array(24).fill(0).map((_, hour) => ({ hour, count: 0 }))
           },
           {
-            day: "day_names.wednesday",
+            day: "wednesday",
             hours: Array(24).fill(0).map((_, hour) => ({ hour, count: 0 }))
           },
           {
-            day: "day_names.thursday",
+            day: "thursday",
             hours: Array(24).fill(0).map((_, hour) => ({ hour, count: 0 }))
           },
           {
-            day: "day_names.friday",
+            day: "friday",
             hours: Array(24).fill(0).map((_, hour) => ({ hour, count: 0 }))
           },
           {
-            day: "day_names.saturday",
+            day: "saturday",
             hours: Array(24).fill(0).map((_, hour) => ({ hour, count: 0 }))
           },
           {
-            day: "day_names.sunday",
+            day: "sunday",
             hours: Array(24).fill(0).map((_, hour) => ({ hour, count: 0 }))
           }
         ]
@@ -125,12 +125,14 @@ export function analyzeChatData(messages: RawMessage[]): AnalysisData {
 
   // 验证并修复日期对象
   if (!(firstDate instanceof Date) || isNaN(firstDate.getTime())) {
-    console.warn('第一条消息的日期无效，使用当前日期减去30天');
+    // 只记录警告，不需要翻译，因为这是服务器端日志
+    console.warn('Invalid first message date, using current date minus 30 days');
     firstDate = new Date(new Date().getTime() - 30 * 24 * 60 * 60 * 1000); // 30天前
   }
 
   if (!(lastDate instanceof Date) || isNaN(lastDate.getTime())) {
-    console.warn('最后一条消息的日期无效，使用当前日期');
+    // 只记录警告，不需要翻译，因为这是服务器端日志
+    console.warn('Invalid last message date, using current date');
     lastDate = new Date();
   }
 

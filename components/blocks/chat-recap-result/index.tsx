@@ -37,6 +37,7 @@ const ChatRecapResultBlock: React.FC<ChatRecapResultProps> = ({
         <div className="space-y-8">
           <OverviewBlock
             overview={analysisData.overview}
+            timeAnalysis={analysisData.timeAnalysis}
           />
 
           <TextAnalysisBlock

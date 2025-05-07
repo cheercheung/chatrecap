@@ -1,5 +1,5 @@
-import { getTranslations } from "next-intl/server";
-import StaticChatRecapResultPage from "@/components/pages/chat-recap-result/static";
+import { getTranslations, getMessages } from "next-intl/server";
+import ClientWrapper from "@/components/pages/chat-recap-result/client-wrapper";
 import { generateSampleAnalysisData } from "@/lib/analysis/sampleData";
 import { locales } from "@/i18n/locale";
 
@@ -14,12 +14,12 @@ export async function generateMetadata({
 }) {
   const { locale } = await params;
   // 尝试获取翻译，如果失败则使用默认值
-  let t;
+  let t: any;
   try {
-    t = await getTranslations();
+    t = await getTranslations({ locale });
   } catch (error) {
     // 如果找不到翻译，使用一个函数返回默认值
-    t = (key: string) => {
+    t = (key: string): string => {
       // 使用命名空间路径访问
       if (key === "chatrecapresult.title") return "Chat Recap Result";
       if (key === "chatrecapresult.description") return "View your chat analysis results";
@@ -47,9 +47,20 @@ export default async function ChatRecapSamplePage({
 }: {
   params: Promise<{ locale: string }>;
 }) {
+  const { locale } = await params;
+
   // 获取示例分析数据
   const sampleData = generateSampleAnalysisData("sample");
 
-  // 使用静态优化版本的组件显示示例结果
-  return <StaticChatRecapResultPage analysisData={sampleData} />;
+  // 获取翻译消息
+  const messages = await getMessages({ locale });
+
+  // 使用客户端包装组件，提供国际化上下文
+  return (
+    <ClientWrapper
+      analysisData={sampleData}
+      messages={messages}
+      locale={locale}
+    />
+  );
 }

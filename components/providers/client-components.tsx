@@ -50,7 +50,7 @@ export default function ClientComponents() {
       <CriticalCSS />
 
       {/* 优惠券通知弹框 */}
-      <NotificationBlockWrapper />
+      {/* <NotificationBlockWrapper /> */}
 
       {/* 只在客户端加载完成后渲染非关键组件 */}
       {isLoaded && (

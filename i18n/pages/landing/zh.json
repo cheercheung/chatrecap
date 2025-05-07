@@ -362,5 +362,79 @@
     "supported_formats": "支持格式：.txt 文件或包含 .txt 文件的 .zip 文件（最大 5MB）",
     "title": "开始使用 ChatRecap AI",
     "upload_button_text": "上传文件"
+  },
+  "chat_notifications": {
+    "messages": {
+      "message1": "哦，你终于发短信了？一定打破了世界纪录 🏆🙄",
+      "message2": "抱歉，我的手机只为披萨外卖震动 🍕📳",
+      "message3": "你的搭讪速度比我的微波爆米花还快 🍿💨",
+      "message4": "我们的聊天比南极还冷 ❄️😎",
+      "message5": "想我了？我几乎不记得你的名字 😂",
+      "message6": "你的约会生活就像我的WiFi - 连接不稳定 📶",
+      "message7": "已看到你的消息。将在2-3个工作日内回复 📅"
+    },
+    "speakers": {
+      "boyfriend": "男朋友",
+      "crush": "暗恋对象",
+      "ex": "前任",
+      "friend": "朋友",
+      "girlfriend": "女朋友",
+      "her": "她",
+      "him": "他"
+    },
+    "times": {
+      "days_ago": "{days}天前",
+      "hours_ago": "{hours}小时前",
+      "just_now": "刚刚",
+      "minutes_ago": "{minutes}分钟前"
+    },
+    "title": "聊天通知"
+  },
+  "footer": {
+    "copyright": "© 2025 ChatRecap AI. 保留所有权利。",
+    "privacy_policy": "隐私政策",
+    "terms_of_service": "服务条款",
+    "social": {
+      "items": [
+        {
+          "title": "Discord",
+          "icon": "RiDiscordFill",
+          "url": "https://discord.gg/ceRtME7q",
+          "target": "_blank"
+        },
+        {
+          "title": "Twitter",
+          "icon": "RiTwitterFill",
+          "url": "https://twitter.com",
+          "target": "_blank"
+        },
+        {
+          "title": "Instagram",
+          "icon": "RiInstagramFill",
+          "url": "https://instagram.com",
+          "target": "_blank"
+        },
+        {
+          "title": "GitHub",
+          "icon": "RiGithubFill",
+          "url": "https://github.com",
+          "target": "_blank"
+        }
+      ]
+    },
+    "agreement": {
+      "items": [
+        {
+          "title": "隐私政策",
+          "url": "/privacy-policy",
+          "target": "_self"
+        },
+        {
+          "title": "服务条款",
+          "url": "/terms-of-service",
+          "target": "_self"
+        }
+      ]
+    }
   }
 }

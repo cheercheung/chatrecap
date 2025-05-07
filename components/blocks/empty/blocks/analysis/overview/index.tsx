@@ -22,7 +22,7 @@ const OverviewBlock = forwardRef<HTMLDivElement, Props>(({ overview }, ref) => {
       className="bg-card/30 backdrop-blur-sm border border-primary/10 rounded-xl p-6 shadow-md flex flex-col items-center"
     >
       <h2 className="text-2xl md:text-3xl font-bold mb-6 text-foreground text-center relative inline-block mx-auto">
-        {t('overview_title')}
+        {t('chatrecapresult.overview_title')}
         <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-pink-500 rounded-full"></span>
       </h2>
 
@@ -30,10 +30,10 @@ const OverviewBlock = forwardRef<HTMLDivElement, Props>(({ overview }, ref) => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {/* Messages Section */}
           <div className="bg-background/70 rounded-lg p-4 border border-primary/5 shadow-sm">
-            <div className="text-sm font-medium text-muted-foreground mb-2 text-center">{t('messages')}</div>
+            <div className="text-sm font-medium text-muted-foreground mb-2 text-center">{t('chatrecapresult.messages')}</div>
             <div className="flex flex-col items-center">
               <div className="text-3xl font-bold text-primary">{overview.totalMessages}</div>
-              <div className="text-xs text-muted-foreground">{t('total_messages')}</div>
+              <div className="text-xs text-muted-foreground">{t('chatrecapresult.total_messages')}</div>
             </div>
             <div className="flex justify-between mt-4">
               <div className="text-center">
@@ -71,7 +71,7 @@ const OverviewBlock = forwardRef<HTMLDivElement, Props>(({ overview }, ref) => {
             <div className="text-sm font-medium text-muted-foreground mb-2 text-center">{t('words_per_message')}</div>
             <div className="flex flex-col items-center">
               <div className="text-3xl font-bold text-primary">{overview.wordsPerMessage}</div>
-              <div className="text-xs text-muted-foreground">{t('avg_words_per_msg')}</div>
+              <div className="text-xs text-muted-foreground">{t('words_per_message')}</div>
             </div>
             <div className="flex justify-between mt-4">
               <div className="text-center">
@@ -89,33 +89,37 @@ const OverviewBlock = forwardRef<HTMLDivElement, Props>(({ overview }, ref) => {
         {/* Communication Story */}
         <div className="mt-6">
           <div className="bg-background/70 rounded-lg p-5 border border-primary/5 shadow-sm text-muted-foreground">
-            <p className="mb-3">
-              Your conversation tells a beautiful story through{' '}
-              <span className="text-primary font-semibold">{overview.totalMessages} messages</span>{' '}
-              exchanged over time. {overview.sender1.name} sent{' '}
-              <span className="text-primary font-semibold">{overview.sender1.messages} messages</span>,
-              while {overview.sender2.name} responded with{' '}
-              <span className="text-primary font-semibold">{overview.sender2.messages} messages</span>.
-            </p>
-            <p className="mb-3">
-              Together, you've woven a tapestry of{' '}
-              <span className="text-primary font-semibold">{overview.totalWords} words</span>,
-              with {overview.sender1.name} contributing{' '}
-              <span className="text-primary font-semibold">{overview.sender1.words} words</span>{' '}
-              and {overview.sender2.name} sharing{' '}
-              <span className="text-primary font-semibold">{overview.sender2.words} words</span>.
-              Your conversations are meaningful and substantial, with an average of{' '}
-              <span className="text-primary font-semibold">{overview.wordsPerMessage} words per message</span>.
-            </p>
-            <p>
-              Your most active conversations happen on{' '}
-              <span className="text-primary font-semibold">{t(overview.mostActiveDay)}</span>,
-              with an average of{' '}
-              <span className="text-primary font-semibold">{overview.avgMessagesPerDay.toFixed(1)} messages</span>{' '}
-              exchanged daily. The typical response time of{' '}
-              <span className="text-primary font-semibold">{overview.responseTime}</span>{' '}
-              shows the eager anticipation you both feel when communicating with each other.
-            </p>
+            <p className="mb-3"
+               dangerouslySetInnerHTML={{
+                 __html: t('overview_story_part1', {
+                   totalMessages: overview.totalMessages,
+                   sender1Name: overview.sender1.name,
+                   sender1Messages: overview.sender1.messages,
+                   sender2Name: overview.sender2.name,
+                   sender2Messages: overview.sender2.messages
+                 })
+               }}
+            />
+            <p className="mb-3"
+               dangerouslySetInnerHTML={{
+                 __html: t('overview_story_part2', {
+                   totalWords: overview.totalWords,
+                   sender1Name: overview.sender1.name,
+                   sender1Words: overview.sender1.words,
+                   sender2Name: overview.sender2.name,
+                   sender2Words: overview.sender2.words,
+                   wordsPerMessage: overview.wordsPerMessage
+                 })
+               }}
+            />
+            <p dangerouslySetInnerHTML={{
+                 __html: t('overview_story_part3', {
+                   mostActiveDay: t(overview.mostActiveDay),
+                   avgMessagesPerDay: overview.avgMessagesPerDay.toFixed(1),
+                   responseTime: overview.responseTime
+                 })
+               }}
+            />
           </div>
         </div>
       </div>

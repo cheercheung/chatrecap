@@ -21,13 +21,13 @@ const TextAnalysisBlock = forwardRef<HTMLDivElement, Props>(
       ? textAnalysis.commonWords.filter(item => filterMeaningfulWords(item.word))
       : textAnalysis.commonWords;
 
-    // 获取情感分析的描述
+    // 直接使用原始数据，不进行翻译
     const getSentimentDescription = (score: number) => {
-      if (score >= 0.7) return t('sentiment_very_positive');
-      if (score >= 0.5) return t('sentiment_positive');
-      if (score >= 0.3) return t('sentiment_neutral');
-      if (score >= 0.1) return t('sentiment_negative');
-      return t('sentiment_very_negative');
+      if (score >= 0.7) return 'Very Positive';
+      if (score >= 0.5) return 'Positive';
+      if (score >= 0.3) return 'Neutral';
+      if (score >= 0.1) return 'Negative';
+      return 'Very Negative';
     };
 
     return (
@@ -96,7 +96,9 @@ const TextAnalysisBlock = forwardRef<HTMLDivElement, Props>(
 
               <div className="grid grid-cols-2 gap-2 w-full">
                 <div className="bg-background/50 rounded-md p-3">
-                  <div className="text-sm font-medium text-foreground mb-2 text-center">{textAnalysis.sender1.name}</div>
+                  <div className="text-sm font-medium text-foreground mb-2 text-center">
+                    {textAnalysis.sender1.name}
+                  </div>
                   <div className="space-y-1 text-center">
                     {textAnalysis.sender1.topEmojis.slice(0, 3).map((item, index) => (
                       <div key={index} className="text-sm">
@@ -107,7 +109,9 @@ const TextAnalysisBlock = forwardRef<HTMLDivElement, Props>(
                 </div>
 
                 <div className="bg-background/50 rounded-md p-3">
-                  <div className="text-sm font-medium text-foreground mb-2 text-center">{textAnalysis.sender2.name}</div>
+                  <div className="text-sm font-medium text-foreground mb-2 text-center">
+                    {textAnalysis.sender2.name}
+                  </div>
                   <div className="space-y-1 text-center">
                     {textAnalysis.sender2.topEmojis.slice(0, 3).map((item, index) => (
                       <div key={index} className="text-sm">
@@ -175,7 +179,11 @@ const TextAnalysisBlock = forwardRef<HTMLDivElement, Props>(
           {/* Emoji Charts */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="bg-background/70 rounded-lg p-4 border border-primary/5 shadow-sm flex flex-col items-center">
-              <div className="text-lg font-medium text-foreground mb-3 text-center">{t('top_emojis', { name: textAnalysis.sender1.name })}</div>
+              <div className="text-lg font-medium text-foreground mb-3 text-center">
+                {t('top_emojis', {
+                  name: textAnalysis.sender1.name
+                })}
+              </div>
               <BarChart
                 data={textAnalysis.sender1.topEmojis}
                 isEmoji={true}
@@ -185,7 +193,11 @@ const TextAnalysisBlock = forwardRef<HTMLDivElement, Props>(
             </div>
 
             <div className="bg-background/70 rounded-lg p-4 border border-primary/5 shadow-sm flex flex-col items-center">
-              <div className="text-lg font-medium text-foreground mb-3 text-center">{t('top_emojis', { name: textAnalysis.sender2.name })}</div>
+              <div className="text-lg font-medium text-foreground mb-3 text-center">
+                {t('top_emojis', {
+                  name: textAnalysis.sender2.name
+                })}
+              </div>
               <BarChart
                 data={textAnalysis.sender2.topEmojis}
                 isEmoji={true}

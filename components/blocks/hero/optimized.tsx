@@ -8,12 +8,36 @@ import Icon from "@/components/icon";
 import Link from "next/link";
 import { ChatNotification } from "@/components/ui/chat-notification";
 
-import { getTranslations } from 'next-intl/server';
-
 // 优化的 Hero 组件，移除所有动画和效果
 export default async function OptimizedHero({ hero }: { hero: HeroType }) {
-  // 使用 server 端的翻译
-  const t = await getTranslations('chat_notifications');
+  // 使用硬编码的聊天通知数据
+  const chatNotifications = {
+    title: "Chat Notifications",
+    speakers: {
+      girlfriend: "Girlfriend",
+      boyfriend: "Boyfriend",
+      her: "Her",
+      him: "Him",
+      ex: "Ex",
+      friend: "Friend",
+      crush: "Crush"
+    },
+    times: {
+      days_ago: (days: number) => `${days} days ago`,
+      minutes_ago: (minutes: number) => `${minutes} minutes ago`,
+      hours_ago: (hours: number) => `${hours} hours ago`,
+      just_now: "Just now"
+    },
+    messages: {
+      message1: "Oh, you finally texted? Must've broken a world record 🏆🙄",
+      message2: "Sorry, my phone only buzzes for pizza deliveries 🍕📳",
+      message3: "Your pick-up lines are faster than my microwave popcorn 🍿💨",
+      message4: "Our chat's colder than Antarctica ❄️😎",
+      message5: "Miss me? I barely remember your name 😂",
+      message6: "Your dating life is like my WiFi - unstable connection 📶",
+      message7: "Seen your message. Will reply in 2-3 business days 📅"
+    }
+  };
 
   if (hero.disabled) {
     return null;
@@ -117,25 +141,25 @@ export default async function OptimizedHero({ hero }: { hero: HeroType }) {
             {/* 右侧内容 - 聊天通知 */}
             <div className="flex items-start justify-center col-span-1">
               <div className="bg-card border border-primary/10 rounded-2xl w-full p-6 h-auto overflow-hidden">
-                <h3 className="text-xl font-medium text-center mb-6 text-primary">{t('title')}</h3>
+                <h3 className="text-xl font-medium text-center mb-6 text-primary">{chatNotifications.title}</h3>
 
                 {/* 直接显示聊天通知，不使用条件渲染和动画 */}
                 <div className="space-y-4 pr-2 overflow-y-auto max-h-[400px] pb-2">
                   {/* 显示所有聊天通知 */}
                   <ChatNotification
-                    speaker={t('speakers.girlfriend')}
-                    time={t('times.days_ago', { days: 2 })}
-                    content={t('messages.message1')}
+                    speaker={chatNotifications.speakers.girlfriend}
+                    time={chatNotifications.times.days_ago(2)}
+                    content={chatNotifications.messages.message1}
                   />
                   <ChatNotification
-                    speaker={t('speakers.boyfriend')}
-                    time={t('times.minutes_ago', { minutes: 10 })}
-                    content={t('messages.message2')}
+                    speaker={chatNotifications.speakers.boyfriend}
+                    time={chatNotifications.times.minutes_ago(10)}
+                    content={chatNotifications.messages.message2}
                   />
                   <ChatNotification
-                    speaker={t('speakers.her')}
-                    time={t('times.days_ago', { days: 1 })}
-                    content={t('messages.message3')}
+                    speaker={chatNotifications.speakers.her}
+                    time={chatNotifications.times.days_ago(1)}
+                    content={chatNotifications.messages.message3}
                   />
                 </div>
               </div>

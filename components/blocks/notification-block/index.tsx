@@ -14,9 +14,8 @@ export default function NotificationBlock({
 }: NotificationBlockProps) {
   const [isVisible, setIsVisible] = useState(true);
 
-  // 使用标准的翻译钩子
-  // 使用notification命名空间
-  const t = useTranslations('notification');
+  // 使用标准翻译钩子
+  const t = useTranslations('components');
 
   if (!isVisible) return null;
 
@@ -31,17 +30,17 @@ export default function NotificationBlock({
       </button>
 
       <div className="mb-2 text-xl font-bold text-pink-500">
-        🎉 {t('limited_time_offer')}
+        🎉 {t('notification.limited_time_offer')}
       </div>
 
       <div className="mb-2">
-        {t('use_code')} <span className="font-bold text-purple-800 dark:text-purple-400">{promoCode}</span> {' '}
-        {t('to_unlock')} <span className="font-bold">{hours} {t('hours')}</span> {' '}
-        {t('of_full_access')} <span className="font-bold text-gray-700 dark:text-gray-300">{t('free')}</span>
+        {t('notification.use_code')} <span className="font-bold text-purple-800 dark:text-purple-400">{promoCode}</span> {' '}
+        {t('notification.to_unlock')} <span className="font-bold">{hours} {t('notification.hours')}</span> {' '}
+        {t('notification.of_full_access')} <span className="font-bold text-gray-700 dark:text-gray-300">{t('notification.free')}</span>
       </div>
 
       <div className="mb-4">
-        ⏳ {t('hurry')} {hours} {t('hours')}!
+        ⏳ {t('notification.hurry')} {hours} {t('notification.hours')}!
       </div>
 
       <Button
@@ -50,7 +49,7 @@ export default function NotificationBlock({
         }}
         className="bg-pink-500 text-white px-8 py-2 rounded-full"
       >
-        {t('try_now')}
+        {t('notification.try_now')}
       </Button>
     </div>
   );

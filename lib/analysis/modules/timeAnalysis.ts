@@ -20,27 +20,27 @@ export function computeTimeAnalysis(messages: RawMessage[]): AnalysisData['timeA
   // 如果没有消息，返回默认的时间分析数据
   if (!messages.length) {
     const dayNames = [
-      'day_names.sunday',
-      'day_names.monday',
-      'day_names.tuesday',
-      'day_names.wednesday',
-      'day_names.thursday',
-      'day_names.friday',
-      'day_names.saturday'
+      'sunday',
+      'monday',
+      'tuesday',
+      'wednesday',
+      'thursday',
+      'friday',
+      'saturday'
     ];
 
     return {
       mostActiveHour: 0,
-      mostActiveDay: "day_names.monday",
+      mostActiveDay: "monday",
       mostActiveDate: "Unknown",
       mostMessagesCount: 0,
-      responsePattern: "response_patterns.consistent",
-      conversationLength: "No conversations",
+      responsePattern: "consistent",
+      conversationLength: "no_conversations",
       timeDistribution: [
-        {time: "Morning", percentage: 25},
-        {time: "Afternoon", percentage: 25},
-        {time: "Evening", percentage: 25},
-        {time: "Night", percentage: 25}
+        {time: "time_of_day.morning", percentage: 25},
+        {time: "time_of_day.afternoon", percentage: 25},
+        {time: "time_of_day.evening", percentage: 25},
+        {time: "time_of_day.night", percentage: 25}
       ],
       hourlyActivity,
       dailyActivity: [],
@@ -80,13 +80,13 @@ export function computeTimeAnalysis(messages: RawMessage[]): AnalysisData['timeA
 
   // 最活跃的星期几
   const dayNames = [
-    'day_names.sunday',
-    'day_names.monday',
-    'day_names.tuesday',
-    'day_names.wednesday',
-    'day_names.thursday',
-    'day_names.friday',
-    'day_names.saturday'
+    'sunday',
+    'monday',
+    'tuesday',
+    'wednesday',
+    'thursday',
+    'friday',
+    'saturday'
   ];
   const mostActiveDay = dayNames[dayCounts.indexOf(Math.max(...dayCounts))];
 
@@ -115,21 +115,21 @@ export function computeTimeAnalysis(messages: RawMessage[]): AnalysisData['timeA
 
   const totalCount = morningCount + afternoonCount + eveningCount + nightCount;
 
-  let timeDistribution;
+  let timeDistribution: { time: string; percentage: number }[];
   if (totalCount === 0) {
     // 如果没有消息，使用均匀分布
     timeDistribution = [
-      { time: "Morning", percentage: 25 },
-      { time: "Afternoon", percentage: 25 },
-      { time: "Evening", percentage: 25 },
-      { time: "Night", percentage: 25 }
+      { time: "time_of_day.morning", percentage: 25 },
+      { time: "time_of_day.afternoon", percentage: 25 },
+      { time: "time_of_day.evening", percentage: 25 },
+      { time: "time_of_day.night", percentage: 25 }
     ];
   } else {
     timeDistribution = [
-      { time: "Morning", percentage: Math.round((morningCount / totalCount) * 100) },
-      { time: "Afternoon", percentage: Math.round((afternoonCount / totalCount) * 100) },
-      { time: "Evening", percentage: Math.round((eveningCount / totalCount) * 100) },
-      { time: "Night", percentage: Math.round((nightCount / totalCount) * 100) }
+      { time: "time_of_day.morning", percentage: Math.round((morningCount / totalCount) * 100) },
+      { time: "time_of_day.afternoon", percentage: Math.round((afternoonCount / totalCount) * 100) },
+      { time: "time_of_day.evening", percentage: Math.round((eveningCount / totalCount) * 100) },
+      { time: "time_of_day.night", percentage: Math.round((nightCount / totalCount) * 100) }
     ];
   }
 

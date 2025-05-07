@@ -11,25 +11,8 @@ import { PaymentTrigger } from '@/components/blocks/payment-trigger';
 export default function ActionButtons() {
   const [isSharing, setIsSharing] = useState(false);
 
-  // 使用 chatrecapresult 命名空间和组件命名空间作为备用
-  let t;
-  let componentT;
-  try {
-    t = useTranslations("chatrecapresult");
-    componentT = useTranslations("components.action_buttons");
-  } catch (error) {
-    // 如果找不到命名空间，使用一个函数返回默认值
-    t = (key: string) => key;
-    componentT = (key: string) => {
-      const defaultValues: Record<string, any> = {
-        "back_to_upload": "Back to Upload",
-        "share_results": "Share Results",
-        "link_copied": "Link copied to clipboard",
-        "copy_failed": "Failed to copy link"
-      };
-      return defaultValues[key] || key;
-    };
-  }
+  // 使用标准的翻译方式，直接使用命名空间
+  const componentT = useTranslations("components");
   const router = useRouter();
   const searchParams = useSearchParams();
   const fileId = searchParams.get('fileId');
@@ -56,10 +39,14 @@ export default function ActionButtons() {
       await navigator.clipboard.writeText(shareUrl.toString());
 
       // 显示成功消息
-      toast.success(t('share.link_copied') || componentT('link_copied'));
+      toast.success(componentT('action_buttons.link_copied'), {
+        description: componentT('action_buttons.description')
+      });
     } catch (error) {
       console.error('Copy failed:', error);
-      toast.error(t('share.copy_failed') || componentT('copy_failed'));
+      toast.error(componentT('action_buttons.copy_failed'), {
+        description: componentT('action_buttons.description_error')
+      });
 
       // 备选方案：提示用户手动复制
       alert('Please copy this link manually: ' + window.location.href);
@@ -76,7 +63,7 @@ export default function ActionButtons() {
         className="flex items-center gap-2"
       >
         <ArrowLeft size={16} />
-        {t("back_to_upload") || componentT("back_to_upload")}
+        {componentT('action_buttons.back_to_upload')}
       </Button>
 
       <div className="flex flex-wrap gap-2">
@@ -91,12 +78,12 @@ export default function ActionButtons() {
           {isSharing ? (
             <>
               <Loader2 className="h-4 w-4 animate-spin" />
-              {t("sharing") || "Sharing..."}
+              {"Sharing..."}
             </>
           ) : (
             <>
               <Share2 size={16} />
-              {t("share_results") || componentT("share_results")}
+              {componentT('action_buttons.share_results')}
             </>
           )}
         </Button>
@@ -104,7 +91,7 @@ export default function ActionButtons() {
         {/* 支付按钮 - 仅当提供了fileId时显示 */}
         {fileId && <PaymentTrigger
           fileId={fileId}
-          buttonText={t("ai_analysis.generate") || "AI Recap"}
+          buttonText={"AI Recap"}
           className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-600 hover:to-indigo-700"
         />}
       </div>

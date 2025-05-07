@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { cn } from "@/lib/utils";
-import { useTranslations } from 'next-intl';
+import { useSafeTranslation } from '@/components/i18n/safe-translation';
 
 interface FeatureItemProps {
   title: string;
@@ -21,12 +21,13 @@ export const FeatureItem: React.FC<FeatureItemProps> = ({
   contentKey,
   className,
 }) => {
-  const t = useTranslations('chatrecapresult');
-  
+  // 使用安全翻译钩子，尝试多个命名空间
+  const t = useSafeTranslation(['features', '']);
+
   // 如果提供了翻译键，则使用翻译文本，否则使用直接提供的文本
-  const displayTitle = titleKey ? t(`features.${titleKey}.title`) : title;
-  const displayContent = contentKey ? t(`features.${contentKey}.content`) : content;
-  
+  const displayTitle = titleKey ? t(`${titleKey}.title`, title) : title;
+  const displayContent = contentKey ? t(`${contentKey}.content`, content) : content;
+
   return (
     <div className={cn("space-y-3", className)}>
       <div className="flex items-center gap-3">

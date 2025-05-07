@@ -2,14 +2,15 @@
 
 import React, { forwardRef } from 'react';
 import { useTranslations } from 'next-intl';
-import { Overview } from '@/types/analysis';
+import { Overview, TimeAnalysis } from '@/types/analysis';
 import { motion } from 'framer-motion';
 
 type Props = {
   overview: Overview;
+  timeAnalysis?: TimeAnalysis;
 };
 
-const OverviewBlock = forwardRef<HTMLDivElement, Props>(({ overview }, ref) => {
+const OverviewBlock = forwardRef<HTMLDivElement, Props>(({ overview, timeAnalysis }, ref) => {
   const t = useTranslations('chatrecapresult');
 
   return (
@@ -38,11 +39,15 @@ const OverviewBlock = forwardRef<HTMLDivElement, Props>(({ overview }, ref) => {
             <div className="flex justify-between mt-4">
               <div className="text-center">
                 <div className="text-lg font-semibold">{overview.sender1.messages}</div>
-                <div className="text-xs text-muted-foreground">{overview.sender1.name}</div>
+                <div className="text-xs text-muted-foreground">
+                  {overview.sender1.name}
+                </div>
               </div>
               <div className="text-center">
                 <div className="text-lg font-semibold">{overview.sender2.messages}</div>
-                <div className="text-xs text-muted-foreground">{overview.sender2.name}</div>
+                <div className="text-xs text-muted-foreground">
+                  {overview.sender2.name}
+                </div>
               </div>
             </div>
           </div>
@@ -57,11 +62,15 @@ const OverviewBlock = forwardRef<HTMLDivElement, Props>(({ overview }, ref) => {
             <div className="flex justify-between mt-4">
               <div className="text-center">
                 <div className="text-lg font-semibold">{overview.sender1.words}</div>
-                <div className="text-xs text-muted-foreground">{overview.sender1.name}</div>
+                <div className="text-xs text-muted-foreground">
+                  {overview.sender1.name}
+                </div>
               </div>
               <div className="text-center">
                 <div className="text-lg font-semibold">{overview.sender2.words}</div>
-                <div className="text-xs text-muted-foreground">{overview.sender2.name}</div>
+                <div className="text-xs text-muted-foreground">
+                  {overview.sender2.name}
+                </div>
               </div>
             </div>
           </div>
@@ -71,16 +80,20 @@ const OverviewBlock = forwardRef<HTMLDivElement, Props>(({ overview }, ref) => {
             <div className="text-sm font-medium text-muted-foreground mb-2 text-center">{t('words_per_message')}</div>
             <div className="flex flex-col items-center">
               <div className="text-3xl font-bold text-primary">{overview.wordsPerMessage}</div>
-              <div className="text-xs text-muted-foreground">{t('avg_words_per_msg')}</div>
+              <div className="text-xs text-muted-foreground">{t('words_per_message')}</div>
             </div>
             <div className="flex justify-between mt-4">
               <div className="text-center">
                 <div className="text-lg font-semibold">{overview.sender1.wordsPerMessage}</div>
-                <div className="text-xs text-muted-foreground">{overview.sender1.name}</div>
+                <div className="text-xs text-muted-foreground">
+                  {overview.sender1.name}
+                </div>
               </div>
               <div className="text-center">
                 <div className="text-lg font-semibold">{overview.sender2.wordsPerMessage}</div>
-                <div className="text-xs text-muted-foreground">{overview.sender2.name}</div>
+                <div className="text-xs text-muted-foreground">
+                  {overview.sender2.name}
+                </div>
               </div>
             </div>
           </div>
@@ -89,37 +102,39 @@ const OverviewBlock = forwardRef<HTMLDivElement, Props>(({ overview }, ref) => {
         {/* Communication Story */}
         <div className="mt-6">
           <div className="bg-background/70 rounded-lg p-5 border border-primary/5 shadow-sm text-muted-foreground">
-            <p className="mb-3"
-               dangerouslySetInnerHTML={{
-                 __html: t('overview_story_part1', {
-                   totalMessages: overview.totalMessages,
-                   sender1Name: overview.sender1.name,
-                   sender1Messages: overview.sender1.messages,
-                   sender2Name: overview.sender2.name,
-                   sender2Messages: overview.sender2.messages
-                 })
-               }}
-            />
-            <p className="mb-3"
-               dangerouslySetInnerHTML={{
-                 __html: t('overview_story_part2', {
-                   totalWords: overview.totalWords,
-                   sender1Name: overview.sender1.name,
-                   sender1Words: overview.sender1.words,
-                   sender2Name: overview.sender2.name,
-                   sender2Words: overview.sender2.words,
-                   wordsPerMessage: overview.wordsPerMessage
-                 })
-               }}
-            />
-            <p dangerouslySetInnerHTML={{
-                 __html: t('overview_story_part3', {
-                   mostActiveDay: t(overview.mostActiveDay),
-                   avgMessagesPerDay: overview.avgMessagesPerDay.toFixed(1),
-                   responseTime: overview.responseTime
-                 })
-               }}
-            />
+            <div className="mb-3">
+              {t.rich('overview_story_part1', {
+                // 直接使用原始数据，不进行翻译
+                totalMessages: overview.totalMessages,
+                sender1Name: overview.sender1.name,
+                sender1Messages: overview.sender1.messages,
+                sender2Name: overview.sender2.name,
+                sender2Messages: overview.sender2.messages,
+                span: (chunks) => <span className="highlight">{chunks}</span>
+              })}
+            </div>
+            <div className="mb-3">
+              {t.rich('overview_story_part2', {
+                // 直接使用原始数据，不进行翻译
+                totalWords: overview.totalWords,
+                sender1Name: overview.sender1.name,
+                sender1Words: overview.sender1.words,
+                sender2Name: overview.sender2.name,
+                sender2Words: overview.sender2.words,
+                wordsPerMessage: overview.wordsPerMessage,
+                span: (chunks) => <span className="highlight">{chunks}</span>
+              })}
+            </div>
+            <div>
+              {t.rich('overview_story_part3', {
+                // 直接使用原始数据，不进行翻译
+                mostActiveDay: overview.mostActiveDay,
+                mostActiveHour: timeAnalysis ? timeAnalysis.mostActiveHour.toString() : '--',
+                avgMessagesPerDay: overview.avgMessagesPerDay.toFixed(1),
+                responseTime: overview.responseTime,
+                span: (chunks) => <span className="highlight">{chunks}</span>
+              })}
+            </div>
           </div>
         </div>
       </div>

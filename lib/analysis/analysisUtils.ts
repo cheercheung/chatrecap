@@ -36,11 +36,11 @@ export function generateResponsePattern(activity: { hour: number; count: number 
   const morning = activity.slice(6, 12).reduce((sum, h) => sum + h.count, 0);
   const evening = activity.slice(18, 22).reduce((sum, h) => sum + h.count, 0);
   if (evening > morning * 1.5) {
-    return "response_patterns.evening_active";
+    return "evening_active";
   } else if (morning > evening * 1.5) {
-    return "response_patterns.morning_active";
+    return "morning_active";
   } else {
-    return "response_patterns.consistent";
+    return "consistent";
   }
 }
 

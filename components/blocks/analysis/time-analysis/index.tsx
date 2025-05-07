@@ -1,7 +1,7 @@
 "use client";
 
 import React, { forwardRef } from 'react';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { TimeAnalysis } from '@/types/analysis';
 import { motion } from 'framer-motion';
 import { Clock, Calendar, MessageSquare } from 'lucide-react';
@@ -15,22 +15,41 @@ type Props = {
 const TimeAnalysisBlock = forwardRef<HTMLDivElement, Props>(
   ({ timeAnalysis }, ref) => {
     const t = useTranslations('chatrecapresult');
+    const locale = useLocale();
 
-    // 将小时转换为可读时间
+    // 将小时转换为可读时间 (使用当前语言环境)
     const formatHour = (hour: number) => {
-      const ampm = hour >= 12 ? 'PM' : 'AM';
-      const h = hour % 12 || 12;
-      return `${h} ${ampm}`;
+      try {
+        // 创建当天的日期对象，设置小时
+        const date = new Date();
+        date.setHours(hour, 0, 0, 0);
+
+        // 使用当前语言环境格式化时间
+        return new Intl.DateTimeFormat(locale, {
+          hour: 'numeric',
+          hour12: true
+        }).format(date);
+      } catch (error) {
+        // 回退到简单格式
+        const ampm = hour >= 12 ? 'PM' : 'AM';
+        const h = hour % 12 || 12;
+        return `${h} ${ampm}`;
+      }
     };
 
-    // 格式化日期
+    // 格式化日期 (使用当前语言环境)
     const formatDate = (dateString: string) => {
-      const date = new Date(dateString);
-      return date.toLocaleDateString('en-US', {
-        year: 'numeric',
-        month: 'short',
-        day: 'numeric'
-      });
+      try {
+        const date = new Date(dateString);
+        return new Intl.DateTimeFormat(locale, {
+          year: 'numeric',
+          month: 'short',
+          day: 'numeric'
+        }).format(date);
+      } catch (error) {
+        // 如果出错，返回原始字符串
+        return dateString;
+      }
     };
 
     return (
@@ -65,7 +84,9 @@ const TimeAnalysisBlock = forwardRef<HTMLDivElement, Props>(
               </div>
               <div>
                 <div className="text-sm text-muted-foreground">{t('most_active_day')}</div>
-                <div className="text-xl font-bold">{t(timeAnalysis.mostActiveDay)}</div>
+                <div className="text-xl font-bold">
+                  {t(`time_of_day.${timeAnalysis.mostActiveDay}`)}
+                </div>
                 <div className="text-xs text-muted-foreground">{t('favorite_day_to_chat')}</div>
               </div>
             </div>
@@ -79,7 +100,7 @@ const TimeAnalysisBlock = forwardRef<HTMLDivElement, Props>(
                 <div className="text-sm text-muted-foreground">{t('busiest_date')}</div>
                 <div className="text-xl font-bold">{formatDate(timeAnalysis.mostActiveDate)}</div>
                 <div className="text-xs text-muted-foreground">
-                  {t('messages_count', { count: timeAnalysis.mostMessagesCount })}
+                  {t('total_messages', { count: timeAnalysis.mostMessagesCount })}
                 </div>
               </div>
             </div>
@@ -98,26 +119,21 @@ const TimeAnalysisBlock = forwardRef<HTMLDivElement, Props>(
               <p className="text-center">
                 <HighlightedText
                   text={t('time_distribution_description', {
-                    morning: (timeAnalysis.timeDistribution.find(t => t.time === 'Morning')?.percentage || 0) + '%',
-                    afternoon: (timeAnalysis.timeDistribution.find(t => t.time === 'Afternoon')?.percentage || 0) + '%',
-                    evening: (timeAnalysis.timeDistribution.find(t => t.time === 'Evening')?.percentage || 0) + '%'
+                    morning: (timeAnalysis.timeDistribution.find(item =>
+                      item.time === 'morning')?.percentage || 0) ,
+                    afternoon: (timeAnalysis.timeDistribution.find(item =>
+                      item.time === 'afternoon')?.percentage || 0) ,
+                    evening: (timeAnalysis.timeDistribution.find(item =>
+                      item.time === 'evening')?.percentage || 0)
                   })}
                 />
               </p>
               <p className="mt-2 text-center">
                 <HighlightedText
                   text={t('response_pattern_description', {
-                    // 处理响应模式的翻译
-                    responsePattern: '"' + (
-                      timeAnalysis.responsePattern === "Consistent response times throughout the day" ?
-                      t('response_patterns.consistent') :
-                      timeAnalysis.responsePattern === "Quick responses in evening, slower in morning" ?
-                      t('response_patterns.evening_active') :
-                      timeAnalysis.responsePattern === "More active in morning than evening" ?
-                      t('response_patterns.morning_active') :
-                      timeAnalysis.responsePattern
-                    ) + '"',
-                    conversationLength: '"' + timeAnalysis.conversationLength + '"'
+                    // 直接使用原始数据，不进行翻译
+                    responsePattern: timeAnalysis.responsePattern,
+                    conversationLength: timeAnalysis.conversationLength
                   })}
                 />
               </p>
@@ -139,8 +155,9 @@ const TimeAnalysisBlock = forwardRef<HTMLDivElement, Props>(
               <p className="text-center">
                 <HighlightedText
                   text={t('daily_activity_description', {
-                    mostActiveDay: t(timeAnalysis.mostActiveDay),
-                    mostActiveHour: formatHour(timeAnalysis.mostActiveHour)
+                    // 直接使用原始数据，不进行翻译
+                    mostActiveDay: timeAnalysis.mostActiveDay,
+                    mostActiveHour: timeAnalysis.mostActiveHour.toString()
                   })}
                 />
               </p>
@@ -156,10 +173,7 @@ const TimeAnalysisBlock = forwardRef<HTMLDivElement, Props>(
                 day && day.day && Array.isArray(day.hours) && day.hours.length > 0
              ) ? (
               <Heatmap
-                data={timeAnalysis.weekdayHourHeatmap.map(day => ({
-                  ...day,
-                  day: t(day.day)
-                }))}
+                data={timeAnalysis.weekdayHourHeatmap}
                 showValues={true}
                 showLegend={true}
                 className="w-full"

@@ -1,1001 +1,461 @@
 {
-  "afternoon": "afternoon",
-  "ai_analysis": {
-    "analyzing": "Analyzing",
-    "error": "Error",
-    "error_description": "Error description",
-    "failed": "Failed",
-    "failed_description": "Failed description",
-    "generate": "Generate",
-    "please_wait": "Please wait",
-    "starting": "Starting",
-    "success": "Success",
-    "success_description": "Success description"
-  },
-  "analyze_button": "Analyze button",
-  "avg_words_per_msg": "Avg words per msg",
-  "back_to_upload": "Back to upload",
-  "badge": "Badge",
-  "blog": {
-    "description": "Tips, resources, and updates about relationship communication",
-    "read_more_text": "Read More",
-    "title": "Relationship Insights"
-  },
-  "busiest_date": "Busiest date",
-  "chat_analysis": {
-    "advanced_options": "Advanced Options",
-    "analyze_button": "Analyze Your Chat",
-    "character_count": "{current} / {max} characters",
-    "description": "Transform your conversations with Chat Recap AI. Unlock the hidden patterns and insights in your chats. Understand relationships on a deeper level.",
-    "free_analysis": "Analyze Your Chat for Free",
-    "how_to_import": "How to Import Chat from WhatsApp",
-    "import_methods": {
-      "mobile": "From WhatsApp iOS/Android",
-      "web": "From WhatsApp Web"
-    },
-    "placeholder": "Enter or paste your chat text here...",
-    "platforms": {
-      "discord": "Discord",
-      "instagram": "Instagram",
-      "snapchat": "Snapchat",
-      "telegram": "Telegram",
-      "whatsapp": "WhatsApp"
-    },
-    "privacy_notice": "We do not store your chat history, the cached file on our server will be automatically deleted after 30 minutes.",
-    "processing": {
-      "analysis_progress": "Analysis Progress",
-      "analyzing": "Analyzing",
-      "cleaning": "Cleaning",
-      "cleaning_progress": "Cleaning Progress",
-      "completed": "Completed",
-      "description": "We're processing your chat history, please wait",
-      "failed": "Failed",
-      "preparing": "Preparing",
-      "result_fetch_failed": "Failed to fetch processing result",
-      "status_fetch_failed": "Failed to fetch processing status",
-      "title": "Processing Your Chat",
-      "uploading": "Uploading"
-    },
-    "results": {
-      "back": "Back",
-      "date_range": "Date Range",
-      "description": "Results of your chat history processing",
-      "download": "Download",
-      "filtered_media": "Filtered Media Messages",
-      "filtered_system": "Filtered System Messages",
-      "messages": "Messages",
-      "next": "Next",
-      "no_results": "No matching messages found",
-      "no_warnings": "No warnings",
-      "page_of": "Page {current} of {total}",
-      "previous": "Previous",
-      "search": "Search",
-      "search_placeholder": "Search messages or sender",
-      "share": "Share",
-      "title": "Processing Results",
-      "total_messages": "Total Messages",
-      "unknown_date_range": "Unknown date range",
-      "valid_dates": "Valid Date Messages",
-      "warnings": "Warnings"
-    },
-    "sample_button_text": "Use Sample Input",
-    "sample_chat_text": "[2025/1/1, 01:00:00] ALICE: Happy New Year! 🎉\n[2025/1/1, 01:02:00] JEFF: Happy New Year, my love! 🎆\n[2025/1/1, 08:15:00] ALICE: First coffee of the year! ☕\n[2025/1/1, 08:20:00] JEFF: Cheers to many more! 🥂\n[2025/1/1, 10:30:00] ALICE: What's the plan for today? 🤔\n[2025/1/1, 10:32:00] JEFF: Let's go for a walk in the park🌳\n[2025/1/1, 11:05:00] ALICE: Sounds perfect! 🌞\n[2025/1/1, 13:00:00] JEFF: Got any new year's resolutions?\n[2025/1/1, 13:10:00] ALICE: To travel more! 🌍\n[2025/1/1, 13:15:00] JEFF: That's a great oneI'm with you on that✈️\n[2025/1/1, 14:30:00] ALICE: The weather's so nice today! ☀️\n[2025/1/1, 14:35:00] JEFF: Perfect day for an adventure, don't you think?\n[2025/1/1, 16:00:00] ALICE: I was thinking of getting some ice cream🍦\n[2025/1/1, 16:10:00] JEFF: Oh, I'm in! What flavor?\n[2025/1/1, 18:30:00] ALICE: What should we have for dinner?\n[2025/1/1, 18:32:00] JEFF: Pizza? 🍕",
-    "select_platform": "Select Platform",
-    "subtitle": "Your AI Chat Analysis",
-    "supported_formats": "Supported: .txt file or .zip containing a .txt file (max 5MB)",
-    "title": "Chat Recap AI",
-    "upload": {
-      "description": "Select a chat history file to upload",
-      "drag_drop": "Drag and drop file here or click to select",
-      "file_selected": "File selected",
-      "file_size_limit": "File size exceeds {size}MB limit",
-      "invalid_format": "Invalid file format. Supported formats: {formats}",
-      "no_file_selected": "Please select a file",
-      "title": "Upload Chat History",
-      "upload_button": "Upload",
-      "upload_failed": "Upload failed",
-      "upload_success": "Upload successful"
-    },
-    "upload_button_text": "Upload File",
-    "upload_description": "Upload your chat export to analyze",
-    "upload_title": "Chat History Input"
-  },
-  "chat_notifications": {
-    "messages": {
-      "message1": "Oh, you finally texted? Must've broken a world record 🏆🙄",
-      "message2": "Sorry, my phone only buzzes for pizza deliveries 🍕📳",
-      "message3": "Your pick-up lines are faster than my microwave popcorn 🍿💨",
-      "message4": "Our chat's colder than Antarctica ❄️😎",
-      "message5": "Miss me? I barely remember your name 😂",
-      "message6": "Your dating life is like my WiFi - unstable connection 📶",
-      "message7": "Seen your message. Will reply in 2-3 business days 📅"
-    },
-    "speakers": {
-      "boyfriend": "Boyfriend",
-      "crush": "Crush",
-      "ex": "Ex",
-      "friend": "Friend",
-      "girlfriend": "Girlfriend",
-      "her": "Her",
-      "him": "Him"
-    },
-    "times": {
-      "days_ago": "{days} days ago",
-      "hours_ago": "{hours} hours ago",
-      "just_now": "Just now",
-      "minutes_ago": "{minutes} minutes ago"
-    },
-    "title": "Chat Notifications"
-  },
-  "chatrecapplatform": {
-    "badge": "Chat Analysis",
-    "description": "Select the platform you want to analyze your chat history from. We support multiple messaging platforms to provide comprehensive insights.",
-    "meta": {
-      "description": "Select the platform you want to analyze your chat from",
-      "title": "Choose Your Chat Platform"
-    },
-    "platforms": {
-      "discord": {
-        "description": "Analyze your Discord chats to better understand your communication in gaming and community contexts."
-      },
-      "instagram": {
-        "description": "Discover insights from your Instagram direct messages and understand your communication style."
-      },
-      "snapchat": {
-        "description": "Analyze your Snapchat conversations to understand your communication style and patterns."
-      },
-      "telegram": {
-        "description": "Get insights from your Telegram conversations and understand your messaging patterns."
-      },
-      "whatsapp": {
-        "description": "Analyze your WhatsApp conversations to understand your messaging patterns and relationship dynamics."
-      }
-    },
-    "select_button": "Select Platform",
-    "title": "Choose Your Chat Platform"
-  },
-  "chatrecapresult": {
+    "afternoon": "afternoon",
     "ai_analysis": {
-      "analyzing": "Analyzing...",
-      "error": "Error",
-      "error_description": "An error occurred during AI analysis. Please try again later.",
-      "failed": "AI Analysis Failed",
-      "failed_description": "We couldn't complete the AI analysis. Please try again.",
-      "generate": "Generate AI Insights",
-      "please_wait": "This may take a few minutes. Please wait while we analyze your chat data.",
-      "starting": "Starting AI Analysis",
-      "success": "AI Analysis Complete",
-      "success_description": "Your AI insights are ready to view."
+        "analyzing": "Analyzing",
+        "error": "Error",
+        "error_description": "Error description",
+        "failed": "Failed",
+        "failed_description": "Failed description",
+        "generate": "Generate",
+        "please_wait": "Please wait",
+        "starting": "Starting",
+        "success": "Success",
+        "success_description": "Success description"
     },
-    "analysis_card": {
-      "conversion_rate": {
-        "content": "This month's conversion rate is 62%, down 3 percentage points from last month.\nAnalysis shows that the decline in conversion rate is mainly due to the poor quality of new promotion channels.\nHigh-quality traffic conversion rates remain stable, but an increase in low-quality traffic has led to an overall decline in conversion rates.\nIt is recommended to optimize traffic sources, improve visitor quality, and enhance landing page experience.",
-        "title": "Conversion Rate"
-      },
-      "example_description": "Below are examples of analysis cards with different metrics",
-      "example_title": "Analysis Card Examples",
-      "system_performance": {
-        "content": "System performance metrics reached 93%, at the best historical level.\nServer response time decreased by an average of 200ms, and page loading speed increased by 15%.\nDatabase query optimization and CDN deployment are the main reasons for performance improvement.\nIt is recommended to continue monitoring peak performance and consider further cache strategy optimization.",
-        "title": "System Performance"
-      },
-      "user_satisfaction": {
-        "content": "This quarter's user satisfaction reached 85%, a 5 percentage point increase compared to last quarter.\nThe main growth came from the launch of new product features and user interface optimizations.\nUser feedback shows that response speed and ease of use are the main factors for improved satisfaction.\nIt is recommended to continue optimizing the user experience, especially in mobile operation processes.",
-        "title": "User Satisfaction"
-      }
+    "metadata": {
+        "description": "Want to analyze your chat history? ChatRecap AI helps you understand conversations across WhatsApp, Instagram, Snapchat, Discord, and Telegram. Get cross-platform insights and discover your communication patterns.",
+        "keywords": "chatrecap, chat analyzer, whatsapp analyzer, instagram chat analysis, discord chat analysis, telegram analyzer, snapchat analysis, chat history, conversation patterns, messaging insights, cross platform chat analysis, chat export, chat metrics",
+        "title": "Chat Recap AI: Free online tool to analyze Chat without signup - chatrecap.io"
     },
-    "avg_words_per_msg": "Avg Words/Message",
-    "back_to_upload": "Back to Upload",
-    "busiest_date": "Busiest Date",
-    "chat_story": "Your Chat Story",
-    "common_words": "Common Words",
-    "communication_comparison": {
-      "description": "A comparison of communication patterns and relationship dynamics between both parties.",
-      "title": "Communication Comparison: {sender1} vs {sender2}"
+    "analyze_button": "Free Analyze",
+    "badge": "Badge",
+    "blog": {
+        "description": "Tips, resources, and updates about relationship communication",
+        "read_more_text": "Read More",
+        "title": "Relationship Insights"
     },
-    "count": "Count",
-    "daily_activity": "Daily Activity",
-    "daily_activity_description": "Your conversations are most active on {mostActiveDay}s around {mostActiveHour}. This consistent pattern suggests you both prioritize making time for each other during these periods.",
-    "day_names": {
-      "friday": "Friday",
-      "monday": "Monday",
-      "saturday": "Saturday",
-      "sunday": "Sunday",
-      "thursday": "Thursday",
-      "tuesday": "Tuesday",
-      "wednesday": "Wednesday"
-    },
-    "days": "days",
-    "description": "Discover insights about your conversation patterns and relationship dynamics",
-    "emojis": "Emojis",
-    "error_loading": "Error loading analysis data",
-    "errors": {
-      "ai_insights_not_found": "AI insights not found. You may need to purchase AI analysis for this chat.",
-      "file_not_found": "File not found. Please try uploading your file again.",
-      "invalid_signature": "Invalid signature. Please try again.",
-      "loading_failed": "Failed to load analysis data. Please try again.",
-      "not_found": "Analysis not found. Please try uploading your file again.",
-      "order_not_found": "Order not found. Please try again.",
-      "payment_processing_failed": "Payment processing failed. Please try again.",
-      "result_not_found": "Analysis result not found. Please try uploading your file again."
-    },
-    "export_not_implemented": "Export feature is coming soon!",
-    "export_pdf": "Export as PDF",
-    "favorite_day_to_chat": "Favorite Day to Chat",
-    "first_message": "First Message",
-    "heatmap_data_not_available": "Heatmap data not available",
-    "high": "High",
-    "insights": {
-      "interaction_title": "Interaction Insights",
-      "relationship_title": "Relationship Insights"
-    },
-    "last_message": "Last Message",
-    "low": "Low",
-    "messages": "Messages",
-    "messages_count": "{count} messages",
-    "most_active_day": "Most Active Day",
-    "most_active_hour": "Most Active Hour",
-    "no_data_available": "No data available",
-    "no_data_found": "No data found",
-    "no_meaningful_words": "No meaningful words found",
-    "no_words_found": "No words found",
-    "not_found": "Analysis not found",
-    "overall_sentiment": "Overall Sentiment",
-    "overview_story_part1": "Your conversation tells a beautiful story through <span class='highlight'>{totalMessages} messages</span> exchanged over time. {sender1Name} sent <span class='highlight'>{sender1Messages} messages</span>, while {sender2Name} responded with <span class='highlight'>{sender2Messages} messages</span>.",
-    "overview_story_part2": "Together, you've woven a tapestry of <span class='highlight'>{totalWords} words</span>, with {sender1Name} contributing <span class='highlight'>{sender1Words} words</span> and {sender2Name} sharing <span class='highlight'>{sender2Words} words</span>. Your conversations are meaningful and substantial, with an average of <span class='highlight'>{wordsPerMessage} words per message</span>.",
-    "overview_story_part3": "Your most active conversations happen on <span class='highlight'>{mostActiveDay}</span>, with an average of <span class='highlight'>{avgMessagesPerDay} messages</span> exchanged daily. The typical response time of <span class='highlight'>{responseTime}</span> shows the eager anticipation you both feel when communicating with each other.",
-    "overview_title": "Overview",
-    "peak_activity_time": "Peak Activity Time",
-    "processing_errors": {
-      "filter_too_strict": "Warning: All messages were filtered out, filter conditions may be too strict",
-      "invalid_date": "Some messages have invalid dates",
-      "no_messages": "No valid messages could be extracted",
-      "processing_failed": "Processing failed: {message}",
-      "short_timespan": "Conversation timespan is very short, may not be a complete conversation",
-      "single_participant": "Only one participant detected, this may not be a conversation"
-    },
-    "relationship_analysis": {
-      "description": "Analysis of communication patterns and relationship dynamics based on message history.",
-      "title": "{sender}'s Communication Analysis"
-    },
-    "relationship_metrics": {
-      "communication": "Communication",
-      "conflict": "Conflict Management",
-      "emotional_stability": "Emotional Stability",
-      "interest_level": "Interest Level",
-      "intimacy": "Intimacy",
-      "response_enthusiasm": "Response Enthusiasm",
-      "response_time": "Response Time",
-      "trust": "Trust"
-    },
-    "relationship_metrics_hearts": {
-      "description": "Analysis of key relationship quality indicators based on communication patterns.",
-      "title": "Relationship Quality Metrics"
-    },
-    "relationship_metrics_radar": "{name}'s Communication Metrics",
-    "response_pattern_description": "Your typical response pattern is \"{responsePattern}\". Your conversations tend to be \"{conversationLength}\".",
-    "response_patterns": {
-      "consistent": "Consistent response times throughout the day",
-      "evening_active": "Quick responses in evening, slower in morning",
-      "morning_active": "More active in morning than evening"
-    },
-    "sentiment_analysis": "Sentiment Analysis",
-    "sentiment_description": "Your conversations have a sentiment score of {sentimentScore}, which indicates a {sentimentDescription} emotional tone. This reflects the overall mood and feeling of your exchanges.",
-    "sentiment_negative": "Negative",
-    "sentiment_neutral": "Neutral",
-    "sentiment_positive": "Positive",
-    "sentiment_score": "Sentiment Score",
-    "sentiment_very_negative": "Very Negative",
-    "sentiment_very_positive": "Very Positive",
-    "share": {
-      "copy_failed": "Failed to copy link",
-      "link_copied": "Link copied to clipboard"
-    },
-    "share_not_implemented": "Share feature is coming soon!",
-    "share_results": "Share Results",
-    "story_timeline_description": "Your story began on {startDate}, unfolding over {duration} days, until {endDate}—leaving an everlasting mark in the passage of time.",
-    "story_timeline_title": "Your Chat Journey",
-    "text_analysis_title": "Text Analysis",
-    "time_analysis_title": "Time Analysis",
-    "time_distribution": "Time Distribution",
-    "time_distribution_description": "You tend to chat most during the evening ({evening}%), followed by afternoon ({afternoon}%) and morning ({morning}%). This pattern shows when you're both most available and engaged in conversation.",
-    "time_of_day": {
-      "afternoon": "Afternoon",
-      "evening": "Evening",
-      "morning": "Morning",
-      "night": "Night"
-    },
-    "timespan_format": "Your story began on {startMonth} {startDay}, {startYear} {startDayName} 00:00, unfolding over {durationText}, until {endMonth} {endDay}, {endYear} {endDayName} 23:59—leaving an everlasting mark in the passage of time.",
-    "title": "Your Chat Analysis Results",
-    "top_emojis": "{name}'s Top Emojis",
-    "top_words": "Top Words",
-    "total_emojis": "Total Emojis",
-    "total_messages": "Total Messages",
-    "total_unique_words": "Total Unique Words",
-    "total_words": "Total Words",
-    "weekly_activity_heatmap": "Weekly Activity Heatmap",
-    "word": "Word",
-    "word_cloud": "Word Cloud",
-    "words": "Words",
-    "words_per_message": "Words Per Message"
-  },
-  "common_words": "Common words",
-  "components": {
-    "action_buttons": {
-      "back_to_upload": "Back to Upload",
-      "copy_failed": "Failed to copy link",
-      "link_copied": "Link copied to clipboard",
-      "share_results": "Share Results"
-    },
-    "footer": {
-      "copyright": "© 2025 ChatRecap AI. All rights reserved.",
-      "privacy_policy": "Privacy Policy",
-      "terms_of_service": "Terms of Service"
-    },
-    "highlighted_text": {
-      "afternoon": "Afternoon",
-      "evening": "Evening",
-      "medium_conversations": "Medium Conversations",
-      "morning": "Morning",
-      "negative": "Negative",
-      "neutral": "Neutral",
-      "positive": "Positive",
-      "quick_responses": "Quick Responses",
-      "very_negative": "Very Negative",
-      "very_positive": "Very Positive"
-    },
-    "notification": {
-      "free": "FREE!",
-      "hours": "hours",
-      "hurry": "Hurry, this code expires in",
-      "limited_time_offer": "Limited Time Offer!",
-      "of_full_access": "of full access — absolutely",
-      "to_unlock": "to unlock",
-      "try_now": "Try Now",
-      "use_code": "Use code"
-    }
-  },
-  "copyright": "Copyright",
-  "count": "Count",
-  "daily_activity": "Daily activity",
-  "daily_activity_description": "Daily activity description",
-  "days": "Days",
-  "description": "Description",
-  "emojis": "Emojis",
-  "errors": {
-    "ai_insights_not_found": "Ai insights not found",
-    "loading_failed": "Loading failed",
-    "not_found": "Not found",
-    "result_not_found": "Result not found"
-  },
-  "evening": "Evening",
-  "export_not_implemented": "Export not implemented",
-  "export_pdf": "Export pdf",
-  "favorite_day_to_chat": "Favorite day to chat",
-  "features": {
-    "comprehensive_analysis": {
-      "content": "Our advanced AI algorithms analyze your entire chat history to provide deep insights into your communication patterns and relationship dynamics.",
-      "title": "Comprehensive Chat Analysis"
-    },
-    "easy_tools": {
-      "description": "Create your AI chat analysis with our simple interface. Perfect for analyzing WhatsApp conversations and understanding relationships.",
-      "points": [
-        "Simple chat import",
-        "Multiple chat formats supported",
-        "Custom AI chat analysis settings",
-        "Real-time processing"
-      ],
-      "title": "Easy Creation Tools"
-    },
-    "insights": {
-      "description": "Get comprehensive insights into your chat patterns and relationship dynamics with ChatRecap AI chat analysis.",
-      "points": [
-        "Sentiment analysis",
-        "Response time patterns",
-        "Engagement metrics",
-        "Red flag detection"
-      ],
-      "title": "Deep Insights"
-    },
-    "preview": {
-      "description": "See your analysis come to life as you process it. Preview your insights instantly and make informed decisions about your relationships.",
-      "points": [
-        "Instant analysis preview",
-        "Interactive visualizations",
-        "Dynamic updates",
-        "Mobile-friendly display"
-      ],
-      "title": "Real-time Preview"
-    },
-    "response_time": {
-      "content": "Track how quickly you and your conversation partner respond to each other's messages, revealing engagement levels and communication habits.",
-      "title": "Response Time Patterns"
-    },
-    "sentiment_analysis": {
-      "content": "Analyze the emotional tone of your conversations to understand the underlying feelings and attitudes expressed in your messages.",
-      "title": "Sentiment Analysis"
-    },
-    "title": "Key Features of Chat Recap AI",
-    "topic_analysis": {
-      "content": "Discover the most common topics and themes in your conversations, helping you understand what matters most in your relationship.",
-      "title": "Topic Analysis"
-    }
-  },
-  "first_message": "First message",
-  "footer": {
-    "copyright": "© 2025 ChatRecap AI. All rights reserved.",
-    "privacy_policy": "Privacy Policy",
-    "social_links": {
-      "discord": "Discord",
-      "instagram": "Instagram",
-      "snapchat": "Snapchat",
-      "telegram": "Telegram",
-      "whatsapp": "WhatsApp"
-    },
-    "terms_of_service": "Terms of Service"
-  },
-  "free": "Free",
-  "free_analysis": "Free analysis",
-  "heatmap_data_not_available": "Heatmap data not available",
-  "high": "High",
-  "hours": "Hours",
-  "how_it_works": {
-    "chat_notifications": {
-      "messages": {
-        "message1": "Message1",
-        "message2": "Message2",
-        "message3": "Message3",
-        "message4": "Message4",
-        "message5": "Message5",
-        "message6": "Message6",
-        "message7": "Message7"
-      },
-      "speakers": {
-        "boyfriend": "Boyfriend",
-        "crush": "Crush",
-        "ex": "Ex",
-        "friend": "Friend",
-        "girlfriend": "Girlfriend",
-        "her": "Her",
-        "him": "Him"
-      },
-      "times": {
-        "days_ago": "Days ago",
-        "hours_ago": "Hours ago",
-        "just_now": "Just now",
-        "minutes_ago": "Minutes ago"
-      },
-      "title": "Title"
-    },
-    "chatrecapplatform": {
-      "badge": "Badge",
-      "description": "Description",
-      "meta": {
-        "description": "Description",
-        "title": "Title"
-      },
-      "platforms": {
-        "discord": {
-          "description": "Description"
+    "busiest_date": "Busiest date",
+    "chat_analysis": {
+        "advanced_options": "Advanced Options",
+        "analyze_button": "AI Recap",
+        "character_count": "{current} / {max} characters",
+        "description": "Transform your conversations with Chat Recap AI. Unlock the hidden patterns and insights in your chats. Understand relationships on a deeper level.",
+        "free_analysis": "Free Analyze",
+        "how_to_import": "How to Import Chat from WhatsApp",
+        "import_methods": {
+            "mobile": "From WhatsApp iOS/Android",
+            "web": "From WhatsApp Web"
         },
-        "instagram": {
-          "description": "Description"
+        "placeholder": "Enter or paste your chat text here...",
+        "platforms": {
+            "discord": "Discord",
+            "instagram": "Instagram",
+            "snapchat": "Snapchat",
+            "telegram": "Telegram",
+            "whatsapp": "WhatsApp"
         },
-        "snapchat": {
-          "description": "Description"
+        "privacy_notice": "We do not store your chat history, the cached file on our server will be automatically deleted after 30 minutes.",
+        "processing": {
+            "analysis_progress": "Analysis Progress",
+            "analyzing": "Analyzing",
+            "cleaning": "Cleaning",
+            "cleaning_progress": "Cleaning Progress",
+            "completed": "Completed",
+            "description": "We're processing your chat history, please wait",
+            "failed": "Failed",
+            "preparing": "Preparing",
+            "result_fetch_failed": "Failed to fetch processing result",
+            "status_fetch_failed": "Failed to fetch processing status",
+            "title": "Processing Your Chat",
+            "uploading": "Uploading"
         },
-        "telegram": {
-          "description": "Description"
+        "results": {
+            "back": "Back",
+            "date_range": "Date Range",
+            "description": "Results of your chat history processing",
+            "download": "Download",
+            "filtered_media": "Filtered Media Messages",
+            "filtered_system": "Filtered System Messages",
+            "messages": "Messages",
+            "next": "Next",
+            "no_results": "No matching messages found",
+            "no_warnings": "No warnings",
+            "page_of": "Page {current} of {total}",
+            "previous": "Previous",
+            "search": "Search",
+            "search_placeholder": "Search messages or sender",
+            "share": "Share",
+            "title": "Processing Results",
+            "total_messages": "Total Messages",
+            "unknown_date_range": "Unknown date range",
+            "valid_dates": "Valid Date Messages",
+            "warnings": "Warnings"
         },
-        "whatsapp": {
-          "description": "Description"
-        }
-      },
-      "select_button": "Select button",
-      "title": "Title"
+        "sample_button_text": "Use Sample Input",
+        "sample_chat_text": "[2025/1/1, 01:00:00] ALICE: Happy New Year! 🎉\n[2025/1/1, 01:02:00] JEFF: Happy New Year, my love! 🎆\n[2025/1/1, 08:15:00] ALICE: First coffee of the year! ☕\n[2025/1/1, 08:20:00] JEFF: Cheers to many more! 🥂\n[2025/1/1, 10:30:00] ALICE: What's the plan for today? 🤔\n[2025/1/1, 10:32:00] JEFF: Let's go for a walk in the park🌳\n[2025/1/1, 11:05:00] ALICE: Sounds perfect! 🌞\n[2025/1/1, 13:00:00] JEFF: Got any new year's resolutions?\n[2025/1/1, 13:10:00] ALICE: To travel more! 🌍\n[2025/1/1, 13:15:00] JEFF: That's a great oneI'm with you on that✈️\n[2025/1/1, 14:30:00] ALICE: The weather's so nice today! ☀️\n[2025/1/1, 14:35:00] JEFF: Perfect day for an adventure, don't you think?\n[2025/1/1, 16:00:00] ALICE: I was thinking of getting some ice cream🍦\n[2025/1/1, 16:10:00] JEFF: Oh, I'm in! What flavor?\n[2025/1/1, 18:30:00] ALICE: What should we have for dinner?\n[2025/1/1, 18:32:00] JEFF: Pizza? 🍕",
+        "select_platform": "Select Platform",
+        "subtitle": "Your AI Chat Analysis",
+        "supported_formats": "Supported: .txt file or .zip containing a .txt file (max 5MB)",
+        "title": "Chat Recap AI",
+        "upload": {
+            "description": "Select a chat history file to upload",
+            "drag_drop": "Drag and drop file here or click to select",
+            "file_selected": "File selected",
+            "file_size_limit": "File size exceeds {size}MB limit",
+            "invalid_format": "Invalid file format. Supported formats: {formats}",
+            "no_file_selected": "Please select a file",
+            "title": "Upload Chat History",
+            "upload_button": "Upload",
+            "upload_failed": "Upload failed",
+            "upload_success": "Upload successful"
+        },
+        "upload_button_text": "Upload File",
+        "upload_description": "Upload your chat export to analyze",
+        "upload_title": "Chat History Input"
     },
     "chatrecapresult": {
-      "active_hours": "Active hours",
-      "analysis_card": {
-        "conversion_rate": {
-          "content": "Content",
-          "title": "Title"
+        "story_timeline_title": "Your Chat Journey",
+        "days":"Days",
+        "words":"words",
+        "overview_title": "Overview",
+        "title": "Your Chat Analysis Results",
+        "description": "Discover insights about your conversation patterns and relationship dynamics",
+        "overview_story_part1": "Your conversation tells a beautiful story through <span>{totalMessages} messages</span> exchanged over time. {sender1Name} sent <span>{sender1Messages} messages</span>, while {sender2Name} responded with <span>{sender2Messages} messages</span>.",
+        "overview_story_part2": "Together, you've woven a tapestry of <span>{totalWords} words</span>, with {sender1Name} contributing <span>{sender1Words} words</span> and {sender2Name} sharing <span>{sender2Words} words</span>. Your conversations are meaningful and substantial, with an average of <span>{wordsPerMessage} words per message</span>.",
+        "overview_story_part3": "Your most active conversations happen on <span>{mostActiveDay}</span>, with an average of <span>{avgMessagesPerDay} messages</span> exchanged daily. The typical response time of <span>{responseTime}</span> shows the eager anticipation you both feel when communicating with each other.",
+        "timespan_summary": "Your story began on {startDate}, unfolding over {duration}, until {endDate}—leaving an everlasting mark in the passage of time.",
+        "timespan_fallback": "Your story unfolded over time, leaving an everlasting mark in the passage of time.",
+        "total_messages": "Total Messages",
+        "total_words": "Total Words",
+        "words_per_message": "Words Per Message",
+        "first_message": "First Message",
+        "last_message": "Last Message",
+        "busiest_date": "Busiest Date",
+        "favorite_day_to_chat": "Favorite Day to Chat",
+        "most_active_day": "Most Active Day",
+        "most_active_hour": "Most Active Hour",
+        "peak_activity_time": "Peak Activity Time",
+        "sentiment_analysis": "Sentiment Analysis",
+        "sentiment_description": "Your conversations have a sentiment score of {sentimentScore}, which indicates a {sentimentDescription} emotional tone. This reflects the overall mood and feeling of your exchanges.",
+        "sentiment_score": "Sentiment Score",
+        "sentiment_positive": "Positive",
+        "sentiment_negative": "Negative",
+        "sentiment_neutral": "Neutral",
+        "sentiment_very_positive": "Very Positive",
+        "sentiment_very_negative": "Very Negative",
+        "overall_sentiment": "Overall Sentiment",
+        "text_analysis_title": "Text Analysis",
+        "common_words": "Common Words",
+        "top_words": "Top Words",
+        "top_emojis": "Top Emojis",
+        "total_emojis": "Total Emojis",
+        "total_unique_words": "Total Unique Words",
+        "word_cloud": "Word Cloud",
+        "messages": "Messages",
+        "emojis": "Emojis",
+        "daily_activity": "Daily Activity",
+        "daily_activity_description": "Your conversations are most active on {mostActiveDay}s around {mostActiveHour}. This consistent pattern suggests you both prioritize making time for each other during these periods.",
+        "weekly_activity_heatmap": "Weekly Activity Heatmap",
+        "time_analysis_title": "Time Analysis",
+        "time_distribution": "Time Distribution",
+        "time_distribution_description": "You tend to chat most during the evening ({evening}%), followed by afternoon ({afternoon}%) and morning ({morning}%). This pattern shows when you're both most available and engaged in conversation.",
+        "response_pattern_description": "Your conversation style shows {responsePattern}. This indicates {conversationLength} throughout your exchanges.",
+        "time_of_day": {
+            "morning": "Morning",
+            "afternoon": "Afternoon",
+            "evening": "Evening",
+            "night": "Night",
+            "monday": "Monday",
+            "tuesday": "Tuesday",
+            "wednesday": "Wednesday",
+            "thursday": "Thursday",
+            "friday": "Friday",
+            "saturday": "Saturday",
+            "sunday": "Sunday"
         },
-        "example_description": "Example description",
-        "example_title": "Example title",
-        "system_performance": {
-          "content": "Content",
-          "title": "Title"
+        "heatmap":{
+        "low": "Low",
+        "high": "High"
+       } ,
+        "relationship_metrics": {
+            "communication": "Communication",
+            "conflict": "Conflict Management",
+            "emotional_stability": "Emotional Stability",
+            "interest_level": "Interest Level",
+            "intimacy": "Intimacy",
+            "response_enthusiasm": "Response Enthusiasm",
+            "response_time": "Response Time",
+            "trust": "Trust"
         },
-        "user_satisfaction": {
-          "content": "Content",
-          "title": "Title"
+        "errors": {
+            "not_found": "Analysis not found",
+            "loading_failed": "Failed to load analysis data. Please try again.",
+            "result_not_found": "Analysis result not found. Please try uploading your file again.",
+            "date_format_error": "Error formatting date",
+            "timespan_format_error": "Error formatting timespan"
+        },
+        "warnings": {
+            "invalid_first_message_date": "First message date is invalid, using current date minus 30 days",
+            "invalid_last_message_date": "Last message date is invalid, using current date",
+            "invalid_date": "Invalid date, using current date",
+            "invalid_start_date": "Invalid start date, using current date minus 30 days",
+            "invalid_end_date": "Invalid end date, using current date",
+            "dates_swapped": "Start date is after end date, swapping dates"
+        },
+        "no_messages_to_analyze": "No messages to analyze",
+        "unknown_sender": "Unknown",
+        "unknown_date": "Unknown date",
+        "zero_minutes": "0 minutes",
+        "no_conversations": "No conversations",
+        "no_meaningful_words": "No meaningful words found",
+        "word": "Word",
+        "count": "Count",
+        "response_patterns": {
+            "consistent": "Consistent"
+        },
+        "share_results": "Share Results",
+        "export_pdf": "Export as PDF",
+        "back_to_upload": "Back to Upload"
+    },
+    "common_words": "Common words",
+    "components": {
+        "action_buttons": {
+            "ai_recap":"AI Recap",
+            "back_to_upload": "Back to Upload",
+            "copy_failed": "Failed to copy link",
+            "link_copied": "Link copied to clipboard",
+            "share_results": "Share Results",
+            "description_error":"Please try again or copy the URL manually.",
+            "description":"The link has been copied to your clipboard. You can share it with your friends."
+        },
+        "highlighted_text": {
+            "afternoon": "Afternoon",
+            "evening": "Evening",
+            "medium_conversations": "Medium Conversations",
+            "morning": "Morning",
+            "negative": "Negative",
+            "neutral": "Neutral",
+            "positive": "Positive",
+            "quick_responses": "Quick Responses",
+            "very_negative": "Very Negative",
+            "very_positive": "Very Positive"
+        },
+        "notification": {
+            "free": "FREE!",
+            "hours": "hours",
+            "hurry": "Hurry, this code expires in",
+            "limited_time_offer": "Limited Time Offer!",
+            "of_full_access": "of full access — absolutely",
+            "to_unlock": "to unlock",
+            "try_now": "Try Now",
+            "use_code": "Use code"
         }
-      },
-      "avg_words_per_msg": "Avg words per msg",
-      "back_to_upload": "Back to upload",
-      "chat_story": "Chat story",
-      "common_topics": "Common topics",
-      "communication_balance": "Communication balance",
-      "communication_patterns": "Communication patterns",
-      "communication_style": "Communication style",
-      "communication_tips": "Communication tips",
-      "conflict_patterns": "Conflict patterns",
-      "conflict_resolution": "Conflict resolution",
-      "conversation_enders": "Conversation enders",
-      "conversation_starters": "Conversation starters",
-      "day_names": {
-        "friday": "Friday",
-        "monday": "Monday",
-        "saturday": "Saturday",
-        "sunday": "Sunday",
-        "thursday": "Thursday",
-        "tuesday": "Tuesday",
-        "wednesday": "Wednesday"
-      },
-      "days": "Days",
-      "decision_making": "Decision making",
-      "description": "Description",
-      "emoji_analysis": "Emoji analysis",
-      "emoji_by_participant": "Emoji by participant",
-      "emoji_by_sentiment": "Emoji by sentiment",
-      "emoji_timeline": "Emoji timeline",
-      "emotional_expression": "Emotional expression",
-      "emotional_support": "Emotional support",
-      "error_loading": "Error loading",
-      "errors": {
+    },
+    "count": "Count",
+    "days": "Days",
+    "description": "Description",
+    "emojis": "Emojis",
+    "errors": {
+        "ai_insights_not_found": "Ai insights not found",
         "loading_failed": "Loading failed",
+        "not_found": "Not found",
         "result_not_found": "Result not found"
-      },
-      "export_not_implemented": "Export not implemented",
-      "export_pdf": "Export pdf",
-      "first_message": "First message",
-      "growth_opportunities": "Growth opportunities",
-      "growth_over_time": "Growth over time",
-      "insights": {
-        "interaction_title": "Interaction title",
-        "relationship_title": "Relationship title"
-      },
-      "last_message": "Last message",
-      "message_frequency": "Message frequency",
-      "message_length": "Message length",
-      "messages": "Messages",
-      "next_steps": "Next steps",
-      "not_found": "Not found",
-      "overview_story_part1": "Overview story part1",
-      "overview_story_part2": "Overview story part2",
-      "overview_story_part3": "Overview story part3",
-      "overview_title": "Overview title",
-      "personality_insights": "Personality insights",
-      "processing_errors": {
-        "filter_too_strict": "Filter too strict",
-        "invalid_date": "Invalid date",
-        "no_messages": "No messages",
-        "processing_failed": "Processing failed",
-        "short_timespan": "Short timespan",
-        "single_participant": "Single participant"
-      },
-      "recommendations": "Recommendations",
-      "relationship_health": "Relationship health",
-      "relationship_insights": "Relationship insights",
-      "relationship_suggestions": "Relationship suggestions",
-      "response_patterns": {
-        "consistent": "Consistent",
-        "evening_active": "Evening active",
-        "morning_active": "Morning active"
-      },
-      "response_time": "Response time",
-      "sentiment_analysis": "Sentiment analysis",
-      "sentiment_by_day": "Sentiment by day",
-      "sentiment_by_hour": "Sentiment by hour",
-      "sentiment_comparison": "Sentiment comparison",
-      "sentiment_description": "Sentiment description",
-      "sentiment_over_time": "Sentiment over time",
-      "sentiment_score": "Sentiment score",
-      "share": {
-        "copy_failed": "Copy failed",
-        "link_copied": "Link copied"
-      },
-      "share_not_implemented": "Share not implemented",
-      "share_results": "Share results",
-      "social_tendencies": "Social tendencies",
-      "text_analysis_title": "Text analysis title",
-      "time_of_day": {
-        "afternoon": "Afternoon",
-        "evening": "Evening",
-        "morning": "Morning",
-        "night": "Night"
-      },
-      "timespan_format": "Timespan format",
-      "title": "Title",
-      "top_emojis": "Top emojis",
-      "topic_analysis": "Topic analysis",
-      "topic_by_participant": "Topic by participant",
-      "topic_distribution": "Topic distribution",
-      "topic_over_time": "Topic over time",
-      "total_messages": "Total messages",
-      "total_words": "Total words",
-      "values_and_interests": "Values and interests",
-      "words": "Words",
-      "words_per_message": "Words per message"
     },
-    "footer": {
-      "copyright": "Copyright",
-      "privacy_policy": "Privacy policy",
-      "social_links": {
-        "discord": "Discord",
-        "instagram": "Instagram",
-        "snapchat": "Snapchat",
-        "telegram": "Telegram",
-        "whatsapp": "Whatsapp"
-      },
-      "terms_of_service": "Terms of service"
+    "export_not_implemented": "Export not implemented",
+    "export_pdf": "Export pdf",
+    "features": {
+        "comprehensive_analysis": {
+            "content": "Our advanced AI algorithms analyze your entire chat history to provide deep insights into your communication patterns and relationship dynamics.",
+            "title": "Comprehensive Chat Analysis"
+        },
+        "easy_tools": {
+            "description": "Create your AI chat analysis with our simple interface. Perfect for analyzing WhatsApp conversations and understanding relationships.",
+            "points": [
+                "Simple chat import",
+                "Multiple chat formats supported",
+                "Custom AI chat analysis settings",
+                "Real-time processing"
+            ],
+            "title": "Easy Creation Tools"
+        },
+        "insights": {
+            "description": "Get comprehensive insights into your chat patterns and relationship dynamics with ChatRecap AI chat analysis.",
+            "points": [
+                "Sentiment analysis",
+                "Response time patterns",
+                "Engagement metrics",
+                "Red flag detection"
+            ],
+            "title": "Deep Insights"
+        },
+        "preview": {
+            "description": "See your analysis come to life as you process it. Preview your insights instantly and make informed decisions about your relationships.",
+            "points": [
+                "Instant analysis preview",
+                "Interactive visualizations",
+                "Dynamic updates",
+                "Mobile-friendly display"
+            ],
+            "title": "Real-time Preview"
+        },
+        "response_time": {
+            "content": "Track how quickly you and your conversation partner respond to each other's messages, revealing engagement levels and communication habits.",
+            "title": "Response Time Patterns"
+        },
+        "sentiment_analysis": {
+            "content": "Analyze the emotional tone of your conversations to understand the underlying feelings and attitudes expressed in your messages.",
+            "title": "Sentiment Analysis"
+        },
+        "title": "Key Features of Chat Recap AI",
+        "topic_analysis": {
+            "content": "Discover the most common topics and themes in your conversations, helping you understand what matters most in your relationship.",
+            "title": "Topic Analysis"
+        }
     },
+    "first_message": "First message",
+    "free": "Free",
+    "free_analysis": "Free analysis",
+    "heatmap_data_not_available": "Heatmap data not available",
+    "high": "High",
+    "hours": "Hours",
+    "chatrecapplatform": {
+        "badge": "Chat Analysis",
+        "description": "Select the platform you want to analyze your chat history from. We support multiple messaging platforms to provide comprehensive insights.",
+        "meta": {
+            "description": "Select the platform you want to analyze your chat from",
+            "title": "Choose Your Chat Platform"
+        },
+        "platforms": {
+            "discord": {
+                "description": "Analyze your Discord chats to better understand your communication in gaming and community contexts."
+            },
+            "instagram": {
+                "description": "Discover insights from your Instagram direct messages and understand your communication style."
+            },
+            "snapchat": {
+                "description": "Analyze your Snapchat conversations to understand your communication style and patterns."
+            },
+            "telegram": {
+                "description": "Get insights from your Telegram conversations and understand your messaging patterns."
+            },
+            "whatsapp": {
+                "description": "Analyze your WhatsApp conversations to understand your messaging patterns and relationship dynamics."
+            }
+        },
+        "select_button": "Select Platform",
+        "title": "Choose Your Chat Platform"
+    },
+
     "payment": {
-      "description": "Description",
-      "error_title": "Error title",
-      "missing_file_id": "Missing file id",
-      "pay_button": "Pay button",
-      "processing": "Processing",
-      "return_home": "Return home",
-      "service_name": "Service name",
-      "title": "Title"
+        "description": "Description",
+        "error_title": "Error title",
+        "missing_file_id": "Missing file id",
+        "pay_button": "Pay",
+        "processing": "Processing",
+        "return_home": "Return home",
+        "service_name": "Service name",
+        "title": "Title"
     },
-    "steps": [
-      {
-        "description": "Export your chat history from WhatsApp or other platforms and upload it to our secure ChatRecap AI platform",
-        "number": "1",
-        "title": "Upload Chat"
-      },
-      {
-        "description": "Choose what aspects of your conversations you want to analyze - from basic patterns to deep emotional insights",
-        "number": "2",
-        "title": "Select Analysis"
-      },
-      {
-        "description": "Receive detailed analysis with visualizations and actionable insights about your communication patterns",
-        "number": "3",
-        "title": "Get Insights"
-      }
+    "steps": [{
+            "description": "Export your chat history from WhatsApp or other platforms and upload it to our secure ChatRecap AI platform",
+            "number": "1",
+            "title": "Upload Chat"
+        },
+        {
+            "description": "Choose what aspects of your conversations you want to analyze - from basic patterns to deep emotional insights",
+            "number": "2",
+            "title": "Select Analysis"
+        },
+        {
+            "description": "Receive detailed analysis with visualizations and actionable insights about your communication patterns",
+            "number": "3",
+            "title": "Get Insights"
+        }
     ],
     "subtitle": "A simple three-step process to get insights about your conversations",
-    "title": "How to Analyze Your Chats with Chat Recap AI?"
-  },
-  "hurry": "Hurry",
-  "insights": {
-    "interaction_title": "Interaction title",
-    "relationship_title": "Relationship title"
-  },
-  "keywords": "Keywords",
-  "last_message": "Last message",
-  "limited_time_offer": "Limited time offer",
-  "low": "Low",
-  "medium_conversations": "Medium conversations",
-  "messages": {
-    "message1": "Message1",
-    "message2": "Message2",
-    "message3": "Message3",
-    "message4": "Message4",
-    "message5": "Message5",
-    "message6": "Message6",
-    "message7": "Message7"
-  },
-  "messages_count_many": "Messages count many",
-  "messages_count_one": "Messages count one",
-  "messages_count_other": "Messages count other",
-  "meta": {
-    "description": "Description",
-    "title": "Title"
-  },
-  "metadata": {
-    "description": "Want to analyze your chat history? ChatRecap AI helps you understand conversations across WhatsApp, Instagram, Snapchat, Discord, and Telegram. Get cross-platform insights and discover your communication patterns.",
-    "keywords": "chatrecap, chat analyzer, whatsapp analyzer, instagram chat analysis, discord chat analysis, telegram analyzer, snapchat analysis, chat history, conversation patterns, messaging insights, cross platform chat analysis, chat export, chat metrics",
-    "title": "Chat Recap AI: Free online tool to analyze Chat without signup - chatrecap.io"
-  },
-  "morning": "Morning",
-  "most_active_day": "Most active day",
-  "most_active_hour": "Most active hour",
-  "my_credits": {
-    "left_tip": "Credits remaining: {left_credits}",
-    "no_credits": "No credit records",
-    "no_credits ": "my credits",
-    "recharge": "Buy Credits",
-    "table": {
-      "credits": "Credits",
-      "status": "Status",
-      "trans_no": "Transaction ID",
-      "trans_type": "Transaction Type",
-      "updated_at": "Date"
+    "title": "How to Analyze Your Chats with Chat Recap AI?",
+    "insights": {
+        "interaction_title": "Interaction title",
+        "relationship_title": "Relationship title"
     },
-    "title": "My Credits"
-  },
-  "my_invites": {
-    "copy_invite_link": "Copy Invite Link",
-    "description": "Share Chat Recap AI with friends and earn credits",
-    "edit_invite_link": "Edit Invite Link",
-    "invite_balance": "Credit Balance from Invites",
-    "invite_code": "Invite Code",
-    "invite_tip": "Invite a friend to use Chat Recap AI, get 5 free credits.",
-    "my_invite_link": "My Invite Link",
-    "no_affiliates": "Invite program currently by approval only. Contact us to apply.",
-    "no_invites": "No invite records found",
-    "no_orders": "You need to analyze at least one chat before inviting others",
-    "table": {
-      "completed": "Completed",
-      "invite_time": "Invite Date",
-      "invite_user": "Friend's Email",
-      "pending": "Pending",
-      "reward_amount": "Credits Earned",
-      "reward_percent": "Reward Rate",
-      "status": "Status"
+    "keywords": "Keywords",
+    "platforms": {
+        "title": "Chat Recap Platforms",
+        "description": "Explore your messaging patterns across different platforms. Get your chatrecap insights into your chat habits, active hours, and most engaging conversations.",
+        "view_guide": "View download guide",
+        "whatsapp": {
+            "title": "WhatsApp Chat Analysis",
+            "description": "Analyze your WhatsApp conversations to understand your messaging patterns and relationship dynamics.",
+            "download_guide": "How to export your WhatsApp chat history",
+            "button": "Recap Whatsapp"
+        },
+        "instagram": {
+            "title": "Instagram Chat Analysis",
+            "description": "Discover insights from your Instagram direct messages and understand your communication style.",
+            "download_guide": "How to export your Instagram chat history",
+            "button": "Recap Instagram"
+        },
+        "snapchat": {
+            "title": "Snapchat Chat Analysis",
+            "description": "Analyze your Snapchat conversations to understand your communication style and patterns.",
+            "download_guide": "How to export your Snapchat chat history",
+            "button": "Recap SnapChat"
+        },
+        "telegram": {
+            "title": "Telegram Chat Analysis",
+            "description": "Get insights from your Telegram conversations and understand your messaging patterns.",
+            "download_guide": "How to export your Telegram chat history",
+            "button": "Recap Telegram"
+        },
+        "discord": {
+            "title": "Discord Chat Analysis",
+            "description": "Analyze your Discord chats to better understand your communication in gaming and community contexts.",
+            "download_guide": "How to export your Discord chat history",
+            "button": "Recap Discord"
+        }
     },
-    "title": "Invite Friends",
-    "total_award_amount": "Total Credits Earned",
-    "total_invite_count": "Total Friends Invited",
-    "total_paid_count": "Friends Who Purchased",
-    "update_invite_button": "Save",
-    "update_invite_code": "Customize Invite Code",
-    "update_invite_code_tip": "Create a personalized invite code"
-  },
-  "my_orders": {
-    "activate_order": "View Analysis",
-    "actived": "Analyzed",
-    "description": "View your previous chat analyses",
-    "join_discord": "Join Discord",
-    "no_orders": "No analyses found",
-    "read_docs": "How It Works",
-    "table": {
-      "amount": "Chat Length",
-      "email": "Email",
-      "github_username": "Username",
-      "order_no": "Analysis ID",
-      "paid_at": "Analyzed At",
-      "product_name": "Analysis Type",
-      "status": "Status"
+    "relationship_metrics": {
+        "interest_level": "Interest Level",
+        "response_enthusiasm": "Response Enthusiasm",
+        "emotional_stability": "Emotional Stability",
+        "response_time": "Response Time"
     },
-    "tip": "Upload a chat to get started",
-    "title": "My Analysis History"
-  },
-  "negative": "Negative",
-  "neutral": "Neutral",
-  "no_data_available": "No data available",
-  "no_data_found": "No data found",
-  "no_meaningful_words": "No meaningful words",
-  "no_words_found": "No words found",
-  "notification": {
-    "free": "FREE!",
-    "hours": "hours",
-    "hurry": "Hurry, this code expires in",
-    "limited_time_offer": "Limited Time Offer!",
-    "of_full_access": "of full access — absolutely",
-    "to_unlock": "to unlock",
-    "try_now": "Try Now",
-    "use_code": "Use code"
-  },
-  "of_full_access": "Of full access",
-  "overall_sentiment": "Overall sentiment",
-  "overview_story_part1": "Overview story part1",
-  "overview_story_part2": "Overview story part2",
-  "overview_story_part3": "Overview story part3",
-  "overview_title": "Overview title",
-  "payment": {
-    "description": "Use AI to deeply analyze your chat history and get personality insights and relationship analysis",
-    "error_title": "Error",
-    "missing_file_id": "Missing file ID, please upload a file first",
-    "pay_button": "Pay Now",
-    "processing": "Processing...",
-    "return_home": "Return to Home",
-    "service_name": "AI Chat Analysis Service",
-    "title": "AI Chat Analysis"
-  },
-  "peak_activity_time": "Peak activity time",
-  "placeholder": "Placeholder",
-  "platforms": {
-    "discord": "Discord",
-    "instagram": "Instagram",
-    "snapchat": "Snapchat",
-    "telegram": "Telegram",
-    "whatsapp": "Whatsapp"
-  },
-  "positive": "Positive",
-  "pricing": {
-    "description": "1 credit ≈ 5000 words now, and we are working hard to optimize the cost.",
-    "title": "Buy Credits for Advanced AI Analysis"
-  },
-  "processing": {
-    "analysis_progress": "Analysis progress",
-    "analyzing": "Analyzing",
-    "cleaning": "Cleaning",
-    "cleaning_progress": "Cleaning progress",
-    "completed": "Completed",
-    "description": "Description",
-    "failed": "Failed",
-    "preparing": "Preparing",
-    "processing": "Processing",
-    "result_fetch_failed": "Result fetch failed",
-    "status_fetch_failed": "Status fetch failed",
-    "title": "Title",
-    "uploading": "Uploading"
-  },
-  "quick_responses": "Quick responses",
-  "relationship_analysis": {
-    "description": "Description"
-  },
-  "relationship_metrics": {
-    "emotional_stability": "Emotional stability",
-    "interest_level": "Interest level",
-    "response_enthusiasm": "Response enthusiasm",
-    "response_time": "Response time"
-  },
-  "relationship_metrics_hearts": {
-    "description": "Description",
-    "title": "Title"
-  },
-  "response_pattern_description": "Response pattern description",
-  "results": {
-    "back": "Back",
-    "date_range": "Date range",
-    "description": "Description",
-    "export": "Export",
-    "filtered_messages": "Filtered messages",
-    "link_copied": "Link copied",
-    "media_messages_many": "Media messages many",
-    "media_messages_one": "Media messages one",
-    "media_messages_other": "Media messages other",
-    "messages_description_many": "Messages description many",
-    "messages_description_one": "Messages description one",
-    "messages_description_other": "Messages description other",
-    "messages_title": "Messages title",
-    "next": "Next",
-    "no_messages": "No messages",
-    "no_search_results": "No search results",
-    "page_info": "Page info",
-    "participants": "Participants",
-    "previous": "Previous",
-    "search": "Search",
-    "search_placeholder": "Search placeholder",
-    "share": "Share",
-    "share_text_many": "Share text many",
-    "share_text_one": "Share text one",
-    "share_text_other": "Share text other",
-    "share_title": "Share title",
-    "summary_description": "Summary description",
-    "summary_title": "Summary title",
-    "system_messages_many": "System messages many",
-    "system_messages_one": "System messages one",
-    "system_messages_other": "System messages other",
-    "title": "Title",
-    "total_messages": "Total messages",
-    "unknown_date_range": "Unknown date range",
-    "valid_date_messages_many": "Valid date messages many",
-    "valid_date_messages_one": "Valid date messages one",
-    "valid_date_messages_other": "Valid date messages other",
-    "warnings_title": "Warnings title"
-  },
-  "sample_button_text": "Sample button text",
-  "sample_chat_text": "Sample chat text",
-  "select_button": "Select button",
-  "sentiment_analysis": "Sentiment analysis",
-  "sentiment_description": "Sentiment description",
-  "sentiment_negative": "Sentiment negative",
-  "sentiment_neutral": "Sentiment neutral",
-  "sentiment_positive": "Sentiment positive",
-  "sentiment_score": "Sentiment score",
-  "sentiment_very_negative": "Sentiment very negative",
-  "sentiment_very_positive": "Sentiment very positive",
-  "share": {
-    "copy_failed": "Copy failed",
-    "link_copied": "Link copied"
-  },
-  "share_not_implemented": "Share not implemented",
-  "share_results": "Share results",
-  "sharing": "Sharing",
-  "sign_modal": {
-    "cancel_title": "Cancel",
-    "close_title": "Close",
-    "continue": "Continue",
-    "email_placeholder": "Input your email here",
-    "email_sign_in": "Sign in with Email",
-    "email_title": "Email",
-    "forgot_password": "Forgot password?",
-    "github_sign_in": "Sign in with GitHub",
-    "google_sign_in": "Sign in with Google",
-    "no_account": "Don't have an account?",
-    "or": "Or",
-    "password_placeholder": "Input your password here",
-    "password_title": "Password",
-    "sign_in_description": "Sign in to your account",
-    "sign_in_title": "Sign In",
-    "sign_up_description": "Create an account",
-    "sign_up_title": "Sign Up"
-  },
-  "simple_pricing": "",
-  "speakers": {
-    "boyfriend": "Boyfriend",
-    "crush": "Crush",
-    "ex": "Ex",
-    "friend": "Friend",
-    "girlfriend": "Girlfriend",
-    "her": "Her",
-    "him": "Him"
-  },
-  "story_timeline_description": "Story timeline description",
-  "story_timeline_title": "Story timeline title",
-  "subtitle": "Subtitle",
-  "supported_formats": "Supported formats",
-  "testimonial": {
-    "items": [
-      {
-        "content": "Honestly... I gotta say I'm shocked. It even identified why the relationship was over before I fully realized it myself.",
-        "initials": "AAD",
-        "title": "Relationship Analysis"
-      },
-      {
-        "content": "🥰 Check us out after a year... Amazing to see all this progress. It shows exactly how we've grown together!",
-        "initials": "SSP",
-        "title": "Anniversary Analysis"
-      },
-      {
-        "content": "The brutally honest relationship tips hurt my feelings lol... but exactly what I needed to hear.",
-        "initials": "MMT",
-        "title": "Personal Growth"
-      }
-    ],
-    "subtitle": "users who've discovered deeper insights into their relationships",
-    "title": "Loved by Lovers"
-  },
-  "text_analysis_title": "Text analysis title",
-  "time_analysis_title": "Time analysis title",
-  "time_distribution": "Time distribution",
-  "time_distribution_description": "Time distribution description",
-  "times": {
-    "days_ago": "Days ago",
-    "hours_ago": "Hours ago",
-    "just_now": "Just now",
-    "minutes_ago": "Minutes ago"
-  },
-  "title": "Title",
-  "to_unlock": "To unlock",
-  "top_emojis": "Top emojis",
-  "top_words": "Top words",
-  "total_emojis": "Total emojis",
-  "total_messages": "Total messages",
-  "total_unique_words": "Total unique words",
-  "total_words": "Total words",
-  "try_now": "Try now",
-  "upload": {
-    "description": "Description",
-    "drop_files": "Drop files",
-    "error": "Error",
-    "failed": "Failed",
-    "file_size_limit": "File size limit",
-    "invalid_format": "Invalid format",
-    "no_file_selected": "No file selected",
-    "select_file": "Select file",
-    "supported_formats": "Supported formats",
-    "title": "Title",
-    "upload_button": "Upload button",
-    "upload_failed": "Upload failed",
-    "uploading": "Uploading"
-  },
-  "upload_button_text": "Upload button text",
-  "upload_description": "Upload description",
-  "upload_title": "Upload title",
-  "use_code": "Use code",
-  "user": {
-    "admin_system": "Admin System",
-    "api_keys": "API Keys",
-    "credits": "Credits",
-    "my_orders": "My Orders",
-    "sign_in": "Sign In",
-    "sign_out": "Sign Out",
-    "user_center": "User Center"
-  },
-  "very_negative": "Very negative",
-  "very_positive": "very positive",
-  "view_guide": "View download guide",
-  "weekly_activity_heatmap": "weekly activity heatmap",
-  "word": "word",
-  "word_cloud": "word cloud",
-  "words": "words",
-  "words_per_message": "word per message"
+    "results": {
+        "share_title": "Share Your Chat Analysis",
+        "link_copied": "Link copied to clipboard",
+        "title": "Chat Analysis Results",
+        "description": "Detailed insights from your chat history analysis",
+        "back": "Back to Upload",
+        "export": "Export as PDF",
+        "share": "Share Results",
+        "share_text": "Check out my chat analysis from ChatRecap AI!"
+    },
+    "user": {
+        "sign_out": "Sign Out",
+        "sign_in": "Sign In"
+    },
+    "upload": {
+        "upload_failed": "Upload failed",
+        "no_file_selected": "No file selected",
+        "file_size_limit": "File size exceeds limit",
+        "invalid_format": "Invalid file format",
+        "title": "Upload Chat History",
+        "description": "Upload your chat export to analyze",
+        "drop_files": "Drag and drop your file here",
+        "select_file": "Select File",
+        "uploading": "Uploading...",
+        "error": "Upload Error",
+        "upload_button": "Upload"
+    },
+    "processing": {
+        "failed": "Processing Failed",
+        "processing": "Processing...",
+        "uploading": "Uploading...",
+        "title": "Processing Your Chat",
+        "description": "We're analyzing your chat history, please wait",
+        "cleaning_progress": "Cleaning Progress",
+        "analysis_progress": "Analysis Progress"
+    },
+    "response_patterns": {
+        "consistent": "Consistent response times throughout the day",
+        "evening_active": "Quick responses in evening, slower in morning",
+        "morning_active": "More active in morning than evening"
+    },
+    "relationship_metrics_hearts": {
+        "title": "Relationship Quality Metrics",
+        "description": "Analysis of key relationship quality indicators based on communication patterns."
+    },
+    "relationship_analysis": {
+        "description": "Analysis of communication patterns and relationship dynamics based on message history."
+    }
 }

@@ -43,7 +43,7 @@ const ActionButtons: React.FC<ActionButtonsProps> = ({ fileId, className }) => {
       <Link href="/chatrecapanalysis">
         <Button variant="outline" size="sm">
           <ArrowLeft className="mr-2 h-4 w-4" />
-          {t('back_to_upload')}
+          {t('components.action_buttons.back_to_upload')}
         </Button>
       </Link>
 

@@ -18,7 +18,7 @@ const ChatProcessingResultPage: React.FC<ChatRecapResultPageProps> = ({
   result,
   className
 }) => {
-  const t = useTranslations("chat_analysis");
+  const t = useTranslations("results");
   const router = useRouter();
 
   // 处理返回
@@ -60,8 +60,8 @@ const ChatProcessingResultPage: React.FC<ChatRecapResultPageProps> = ({
     if (navigator.share) {
       try {
         await navigator.share({
-          title: t("results.share_title"),
-          text: t("results.share_text", { count: result.messages.length }),
+          title: t("share_title"),
+          text: t("share_text", { count: result.messages.length }),
           url: window.location.href
         });
       } catch (error) {
@@ -70,7 +70,7 @@ const ChatProcessingResultPage: React.FC<ChatRecapResultPageProps> = ({
     } else {
       // 复制链接到剪贴板
       navigator.clipboard.writeText(window.location.href);
-      alert(t("results.link_copied"));
+      alert(t("link_copied"));
     }
   };
 
@@ -78,27 +78,27 @@ const ChatProcessingResultPage: React.FC<ChatRecapResultPageProps> = ({
     <main className={`container py-10 ${className}`}>
       <div className="max-w-3xl mx-auto">
         <h1 className="text-3xl font-bold mb-2 text-center">
-          {t("results.title")}
+          {t("title")}
         </h1>
         <p className="text-muted-foreground mb-6 text-center">
-          {t("results.description")}
+          {t("description")}
         </p>
 
         {/* 操作按钮 */}
         <div className="flex flex-wrap gap-2 mb-6 justify-center">
           <Button variant="outline" onClick={handleBack}>
             <ArrowLeft className="h-4 w-4 mr-2" />
-            {t("results.back")}
+            {t("back")}
           </Button>
 
           <Button variant="outline" onClick={handleExport}>
             <Download className="h-4 w-4 mr-2" />
-            {t("results.export")}
+            {t("export")}
           </Button>
 
           <Button variant="outline" onClick={handleShare}>
             <Share2 className="h-4 w-4 mr-2" />
-            {t("results.share")}
+            {t("share")}
           </Button>
         </div>
 

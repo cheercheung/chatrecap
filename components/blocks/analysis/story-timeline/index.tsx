@@ -16,18 +16,9 @@ const StoryTimelineBlock = forwardRef<HTMLDivElement, Props>(
   ({ startDate, duration, endDate, title }, ref) => {
     const t = useTranslations('chatrecapresult');
 
-    // 格式化日期
-    const formatDate = (dateString: string) => {
-      const date = new Date(dateString);
-      return date.toLocaleDateString('en-US', {
-        year: 'numeric',
-        month: 'short',
-        day: 'numeric'
-      });
-    };
-
-    const formattedStartDate = formatDate(startDate);
-    const formattedEndDate = formatDate(endDate);
+    // 直接使用传入的日期字符串，不进行格式化
+    const formattedStartDate = startDate;
+    const formattedEndDate = endDate;
 
     return (
       <motion.div
@@ -45,7 +36,7 @@ const StoryTimelineBlock = forwardRef<HTMLDivElement, Props>(
 
         <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
           <HighlightedText
-            text={t('story_timeline_description', {
+            text={t('timespan_summary', {
               startDate: formattedStartDate,
               duration: duration,
               endDate: formattedEndDate

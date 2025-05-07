@@ -90,22 +90,21 @@ const ChatRecapAnalysisPage: React.FC<ChatRecapAnalysisPageProps> = ({
         <HeartBeat className="absolute inset-0 opacity-10" />
         <div className="container relative z-10">
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <div className="mb-4">
-              <Badge className="bg-primary/80 hover:bg-primary/90">
-                {title}
-              </Badge>
-            </div>
-
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-pink-500">
               {subtitle}
             </h1>
-
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
               {description}
             </p>
           </div>
 
-          <PlatformUpload upload_box={uploadBoxData} />
+          <PlatformUpload 
+            upload_box={uploadBoxData}
+            section={{
+              title: "",
+              description: ""
+            }}
+          />
         </div>
       </section>
     </div>

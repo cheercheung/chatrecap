@@ -15,25 +15,8 @@ export default function AiInsightActionButtons() {
   const [isSharing, setIsSharing] = useState(false);
   const { toast } = useToast();
 
-  // 使用 chatrecapresult 命名空间和组件命名空间作为备用
-  let t;
-  let componentT;
-  try {
-    t = useTranslations("chatrecapresult");
-    componentT = useTranslations("components.action_buttons");
-  } catch (error) {
-    // 如果找不到命名空间，使用一个函数返回默认值
-    t = (key: string) => key;
-    componentT = (key: string) => {
-      const defaultValues: Record<string, any> = {
-        "back_to_upload": "Back to Upload",
-        "share_results": "Share Results",
-        "link_copied": "Link copied to clipboard",
-        "copy_failed": "Failed to copy link"
-      };
-      return defaultValues[key] || key;
-    };
-  }
+  // 直接使用顶级命名空间 components
+  const t = useTranslations("components");
   const router = useRouter();
   const searchParams = useSearchParams();
   const fileId = searchParams.get('fileId');
@@ -61,14 +44,14 @@ export default function AiInsightActionButtons() {
 
       // 立即显示成功消息
       toast({
-        title: t("share.link_copied") || componentT("link_copied"),
-        description: "The link has been copied to your clipboard. You can share it with your friends.",
+        title: t('action_buttons.link_copied'),
+        description: t('action_buttons.description'),
       });
     } catch (error) {
       // 显示错误消息
       toast({
-        title: t("share.copy_failed") || componentT("copy_failed"),
-        description: "Please try again or copy the URL manually.",
+        title: t('action_buttons.copy_failed'),
+        description: t('action_buttons.description_error'),
         variant: "destructive",
       });
     } finally {
@@ -84,7 +67,7 @@ export default function AiInsightActionButtons() {
         className="flex items-center gap-2"
       >
         <ArrowLeft size={16} />
-        {t("back_to_upload") || componentT("back_to_upload")}
+        {t('action_buttons.back_to_upload')}
       </Button>
 
       <div className="flex flex-wrap gap-2">
@@ -99,12 +82,12 @@ export default function AiInsightActionButtons() {
           {isSharing ? (
             <>
               <Loader2 className="h-4 w-4 animate-spin" />
-              {t("sharing") || "Sharing..."}
+              {"Sharing..."}
             </>
           ) : (
             <>
               <Share2 size={16} />
-              {t("share_results") || componentT("share_results")}
+              {t('action_buttons.share_results')}
             </>
           )}
         </Button>

@@ -51,63 +51,35 @@ export function formatDateShort(date: Date | any): string {
 
 /**
  * 格式化时间跨度为描述性文本
+ * 返回翻译键，前端负责翻译
  */
 export function formatTimespan(startDate: Date | any, endDate: Date | any): string {
   try {
     // 确保 startDate 和 endDate 是有效的 Date 对象
     if (!(startDate instanceof Date) || isNaN(startDate.getTime())) {
-      console.warn('无效的开始日期，使用当前日期减去30天');
+      console.warn('chatrecapresult.warnings.invalid_start_date');
       const now = new Date();
       startDate = new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000); // 30天前
     }
 
     if (!(endDate instanceof Date) || isNaN(endDate.getTime())) {
-      console.warn('无效的结束日期，使用当前日期');
+      console.warn('chatrecapresult.warnings.invalid_end_date');
       endDate = new Date();
     }
 
     // 确保开始日期在结束日期之前
     if (startDate.getTime() > endDate.getTime()) {
-      console.warn('开始日期在结束日期之后，交换两个日期');
+      console.warn('chatrecapresult.warnings.dates_swapped');
       [startDate, endDate] = [endDate, startDate];
     }
 
-    const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-    const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    // 我们不需要在后端计算这些值，只需返回翻译键
+    // 前端将负责翻译和格式化
 
-    const startDay = startDate.getDate();
-    const startMonth = monthNames[startDate.getMonth()];
-    const startYear = startDate.getFullYear();
-    const startDayName = dayNames[startDate.getDay()];
-
-    const endDay = endDate.getDate();
-    const endMonth = monthNames[endDate.getMonth()];
-    const endYear = endDate.getFullYear();
-    const endDayName = dayNames[endDate.getDay()];
-
-    const durationInDays = Math.max(1, Math.ceil(
-      (endDate.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24)
-    ));
-
-    let durationText;
-    if (durationInDays < 30) {
-      durationText = `${durationInDays} days`;
-    } else if (durationInDays < 365) {
-      const months = Math.floor(durationInDays / 30);
-      durationText = `${months} ${months === 1 ? 'month' : 'months'}`;
-    } else {
-      const years = Math.floor(durationInDays / 365);
-      const remainingMonths = Math.floor((durationInDays % 365) / 30);
-      if (remainingMonths === 0) {
-        durationText = `${years} ${years === 1 ? 'year' : 'years'}`;
-      } else {
-        durationText = `${years} ${years === 1 ? 'year' : 'years'} and ${remainingMonths} ${remainingMonths === 1 ? 'month' : 'months'}`;
-      }
-    }
-
-    return `Your story began on ${startMonth} ${startDay}, ${startYear} ${startDayName} 00:00, unfolding over ${durationText}, until ${endMonth} ${endDay}, ${endYear} ${endDayName} 23:59—leaving an everlasting mark in the passage of time.`;
+    // 返回翻译键和参数，前端负责翻译
+    return 'chatrecapresult.timespan_summary';
   } catch (error) {
-    console.error('格式化时间跨度时出错:', error);
-    return 'Your story unfolded over time, leaving an everlasting mark in the passage of time.';
+    console.error('chatrecapresult.errors.timespan_format_error', error);
+    return 'chatrecapresult.timespan_fallback';
   }
 }

@@ -1,4 +1,9 @@
 {
+  "metadata": {
+    "title": "Chat Recap - AI Chat Analysis Tool",
+    "description": "Analyze your chat history with AI to gain insights into your relationships and communication patterns.",
+    "keywords": "chat, ai, analysis, chat history, conversation patterns, messaging insights, cross platform chat analysis, chat export, chat metrics"
+  },
   "cta": {
     "buttons": {
       "icon": "GoArrowUpRight",
@@ -144,7 +149,7 @@
   "hero": {
     "announcement": {
       "label": "2024",
-      "title": "🚀 Now Available for Teams & Individuals",
+      "title": "🚀 Now Available for almost all the paltforms!",
       "url": "/#pricing"
     },
     "buttons": [
@@ -338,8 +343,8 @@
     "name": "stats",
     "title": "People Love ChatRecap AI"
   },
-  "template": "shipany-template-one",
-  "theme": "light",
+  "template":"ChatRecap AI",
+  "theme": "dark",
   "upload_box": {
     "description": "Use sample or upload chat file, Click FREE Analyze or AI Recap.",
     "max_file_size": 5,
@@ -362,5 +367,79 @@
     "supported_formats": "Supported: .txt file or .zip containing a .txt file (max 5MB)",
     "title": "Start Using Chat Recap AI",
     "upload_button_text": "Upload File"
-  }
-}
+  },
+  "chat_notifications": {
+        "messages": {
+            "message1": "Oh, you finally texted? Must've broken a world record 🏆🙄",
+            "message2": "Sorry, my phone only buzzes for pizza deliveries 🍕📳",
+            "message3": "Your pick-up lines are faster than my microwave popcorn 🍿💨",
+            "message4": "Our chat's colder than Antarctica ❄️😎",
+            "message5": "Miss me? I barely remember your name 😂",
+            "message6": "Your dating life is like my WiFi - unstable connection 📶",
+            "message7": "Seen your message. Will reply in 2-3 business days 📅"
+        },
+        "speakers": {
+            "boyfriend": "Boyfriend",
+            "crush": "Crush",
+            "ex": "Ex",
+            "friend": "Friend",
+            "girlfriend": "Girlfriend",
+            "her": "Her",
+            "him": "Him"
+        },
+        "times": {
+            "days_ago": "{days} days ago",
+            "hours_ago": "{hours} hours ago",
+            "just_now": "Just now",
+            "minutes_ago": "{minutes} minutes ago"
+        },
+        "title": "Chat Notifications"
+      },
+  "footer": {
+    "copyright": "© 2025 ChatRecap AI. All rights reserved.",
+    "privacy_policy": "Privacy Policy",
+    "terms_of_service": "Terms of Service",
+    "social": {
+      "items": [
+        {
+          "title": "Discord",
+          "icon": "RiDiscordFill",
+          "url": "https://discord.gg/ceRtME7q",
+          "target": "_blank"
+        },
+        {
+          "title": "Twitter",
+          "icon": "RiTwitterFill",
+          "url": "https://twitter.com",
+          "target": "_blank"
+        },
+        {
+          "title": "Instagram",
+          "icon": "RiInstagramFill",
+          "url": "https://instagram.com",
+          "target": "_blank"
+        },
+        {
+          "title": "GitHub",
+          "icon": "RiGithubFill",
+          "url": "https://github.com",
+          "target": "_blank"
+        }
+      ]
+    },
+    "agreement": {
+      "items": [
+        {
+          "title": "Privacy Policy",
+          "url": "/privacy-policy",
+          "target": "_self"
+        },
+        {
+          "title": "Terms of Service",
+          "url": "/terms-of-service",
+          "target": "_self"
+        }
+      ]
+    }
+  }}
+ 

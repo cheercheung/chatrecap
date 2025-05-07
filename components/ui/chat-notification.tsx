@@ -21,8 +21,6 @@ export function ChatNotification({
   className,
   index = 0,
 }: ChatNotificationProps) {
-  // 移除所有动画和视口检测逻辑，直接显示内容
-
   // 根据speaker生成头像的颜色和首字母
   const getAvatarInfo = (name: string) => {
     const colors = [
@@ -74,23 +72,4 @@ export function ChatNotification({
   );
 }
 
-interface ChatNotificationsListProps {
-  notifications: ChatNotificationProps[];
-  className?: string;
-}
 
-export function ChatNotificationsList({
-  notifications,
-  className,
-}: ChatNotificationsListProps) {
-  return (
-    <div className={cn("space-y-3", className)}>
-      {notifications.map((notification, index) => (
-        <ChatNotification
-          key={index}
-          {...notification}
-        />
-      ))}
-    </div>
-  );
-}

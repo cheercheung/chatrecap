@@ -41,6 +41,7 @@ const StaticChatRecapResultPage: React.FC<StaticChatRecapResultPageProps> = ({
           <div className="space-y-8">
             <OverviewBlock
               overview={analysisData.overview}
+              timeAnalysis={analysisData.timeAnalysis}
             />
 
             <TextAnalysisBlock

@@ -9,6 +9,7 @@ export const fetchCache = 'force-cache';
 import OptimizedHero from '@/components/blocks/hero/optimized';
 import LazySecondarySections from '@/components/blocks/lazy-secondary-sections';
 import PlatformUploadWrapper from '@/components/blocks/platform-upload/client-wrapper';
+import NotificationBlockWrapper from '@/components/blocks/notification-block/client-wrapper';
 import { getLandingPage } from "@/services/page";
 
 export async function generateMetadata({ params }) {
@@ -63,6 +64,7 @@ export default async function LandingPage({ params }: { params: Promise<{ locale
       )}
       {/* 次屏懒加载区块 */}
       <LazySecondarySections page={restPage as typeof page} />
+      <NotificationBlockWrapper />
     </>
   );
 }

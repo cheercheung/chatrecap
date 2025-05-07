@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { useTranslations } from 'next-intl';
+import { useSafeTranslation } from '@/components/i18n/safe-translation';
 
 interface HighlightedTextProps {
   text: string;
@@ -34,23 +34,31 @@ const HighlightedText: React.FC<HighlightedTextProps> = ({
   let quickResponses = 'Quick Responses';
   let mediumConversations = 'Medium Conversations';
 
-  try {
-    const t = useTranslations('components.highlighted_text');
+  // 使用安全翻译钩子，尝试多个命名空间
+  const t = useSafeTranslation(['components.highlighted_text'], {
+    very_positive: veryPositive,
+    positive: positive,
+    neutral: neutral,
+    negative: negative,
+    very_negative: veryNegative,
+    morning: morning,
+    afternoon: afternoon,
+    evening: evening,
+    quick_responses: quickResponses,
+    medium_conversations: mediumConversations
+  });
 
-    // 尝试获取翻译的文本，如果不存在则使用默认值
-    veryPositive = t('very_positive') || veryPositive;
-    positive = t('positive') || positive;
-    neutral = t('neutral') || neutral;
-    negative = t('negative') || negative;
-    veryNegative = t('very_negative') || veryNegative;
-    morning = t('morning') || morning;
-    afternoon = t('afternoon') || afternoon;
-    evening = t('evening') || evening;
-    quickResponses = t('quick_responses') || quickResponses;
-    mediumConversations = t('medium_conversations') || mediumConversations;
-  } catch (error) {
-    console.warn('Translation for highlighted text not found, using defaults');
-  }
+  // 获取翻译的文本
+  veryPositive = t('very_positive');
+  positive = t('positive');
+  neutral = t('neutral');
+  negative = t('negative');
+  veryNegative = t('very_negative');
+  morning = t('morning');
+  afternoon = t('afternoon');
+  evening = t('evening');
+  quickResponses = t('quick_responses');
+  mediumConversations = t('medium_conversations');
 
   if (!text) return null;
 
