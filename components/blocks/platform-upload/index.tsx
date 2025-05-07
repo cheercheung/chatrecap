@@ -82,7 +82,7 @@ export default function PlatformUpload({ section, upload_box, className }: Platf
         </div>
 
         {selectedPlatform === "whatsapp" ? (
-          <UploadBoxWrapper upload_box={uploadBoxData} />
+          <UploadBoxWrapper upload_box={uploadBoxData} platform={selectedPlatform} />
         ) : (
           <JsonUploader
             supportedPlatform={platformOptions.find(p => p.id === selectedPlatform)?.label}
@@ -94,13 +94,6 @@ export default function PlatformUpload({ section, upload_box, className }: Platf
               // 只有当 icon 存在时才包含它
               ...(uploadBoxData.secondary_button?.icon ? { icon: uploadBoxData.secondary_button.icon } : {}),
               variant: uploadBoxData.secondary_button?.variant || "secondary"
-            }}
-            recapButton={{
-              title: uploadBoxData.primary_button?.title || "AI Recap",
-              url: "/ai-insight-result",
-              target: uploadBoxData.primary_button?.target || "_self",
-              ...(uploadBoxData.primary_button?.icon ? { icon: uploadBoxData.primary_button.icon } : {}),
-              variant: uploadBoxData.primary_button?.variant || "default"
             }}
           />
         )}

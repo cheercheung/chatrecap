@@ -6,13 +6,15 @@ import { UploadBox as UploadBoxType } from "@/types/blocks/upload-box";
 
 export interface UploadBoxServerWrapperProps {
   upload_box: UploadBoxType;
+  platform?: string;
 }
 
 /**
  * 客户端包装组件，用于获取翻译并传递给UploadBox组件
  */
 export default function UploadBoxServerWrapper({
-  upload_box
+  upload_box,
+  platform = "whatsapp"
 }: UploadBoxServerWrapperProps) {
   // 在客户端获取翻译
   const t = useTranslations("chat_analysis");
@@ -35,6 +37,6 @@ export default function UploadBoxServerWrapper({
     }
   };
 
-  // 将翻译后的文本传递给客户端组件
-  return <UploadBox upload_box={uploadBoxWithTranslations} />;
+  // 将翻译后的文本和平台信息传递给客户端组件
+  return <UploadBox upload_box={uploadBoxWithTranslations} platform={platform} />;
 }

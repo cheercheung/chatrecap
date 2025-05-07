@@ -28,13 +28,7 @@ interface JsonUploaderProps {
     icon?: string;
     variant?: string;
   };
-  recapButton?: {
-    title?: string;
-    url?: string;
-    target?: string;
-    icon?: string;
-    variant?: string;
-  };
+
   platform?: PlatformType;
 }
 
@@ -45,7 +39,7 @@ export default function JsonUploader({
   maxCharacters = 10000000,
   onFileUpload,
   analyzeButton,
-  recapButton,
+
   platform = "whatsapp" as PlatformType
 }: JsonUploaderProps) {
   const router = useRouter();
@@ -60,21 +54,7 @@ export default function JsonUploader({
   const [error, setError] = useState<string | null>(null);
   const [fileId, setFileId] = useState<string | null>(null);
 
-  // 处理示例数据按钮点击
-  const handleSampleClick = () => {
-    // 创建一个包含示例数据的文件
-    const sampleText = t("sample_chat_text");
-    const blob = new Blob([sampleText], { type: "text/plain" });
-    const sampleFile = new File([blob], "sample-chat.txt", { type: "text/plain" });
 
-    setFile(sampleFile);
-    setFileName("sample-chat.txt");
-    setIsSampleData(true);
-
-    if (onFileUpload) {
-      onFileUpload(sampleFile);
-    }
-  };
 
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -290,31 +270,7 @@ export default function JsonUploader({
     processFile(redirectPath);
   };
 
-  // 处理 Recap 按钮点击
-  const handleRecapClick = async () => {
-    // 基础处理的重定向路径
-    const redirectPath = recapButton?.url || "/ai-insight-result";
 
-    try {
-      // 如果是示例数据，直接跳转到 AI 结果示例页面
-      if (isSampleData) {
-        router.push("/ai-insight-result/sample");
-        return;
-      }
-      // 先处理文件，获取fileId
-      await processFile(redirectPath);
-
-      // 文件处理完成后，fileId已经被设置
-      if (fileId) {
-        // 未来这里会重定向到支付页面
-        router.push(`/payment?fileId=${fileId}`);
-        // ...支付成功后，支付页面会调用AI分析API并重定向到结果页面
-      }
-    } catch (error) {
-      console.error('AI Recap处理失败:', error);
-      setError(error instanceof Error ? error.message : String(error));
-    }
-  };
 
   return (
     <section className="py-8 relative">
@@ -376,18 +332,7 @@ export default function JsonUploader({
               )}
             </motion.div>
 
-            {/* 示例数据按钮 */}
-            <div className="flex justify-center mb-6">
-              <Button
-                variant="outline"
-                className="flex items-center gap-2 border-primary/20 bg-primary/5 hover:bg-primary/10"
-                onClick={handleSampleClick}
-              >
-                <Sparkles className="h-4 w-4 text-primary" />
-                Use Sample Input
-                <Sparkles className="h-4 w-4 text-primary" />
-              </Button>
-            </div>
+
 
             {/* 错误信息显示 */}
             {error && (
@@ -435,28 +380,7 @@ export default function JsonUploader({
                 </Button>
               )}
 
-              {recapButton && (
-                <Button
-                  variant={recapButton.variant as any || "default"}
-                  className="w-full sm:w-auto bg-gradient-to-r from-primary to-pink-500 hover:from-primary hover:to-pink-600"
-                  disabled={!fileName || uploading || processing}
-                  onClick={handleRecapClick}
-                >
-                  {uploading || processing ? (
-                    <>
-                      <span className="animate-spin mr-2">⏳</span>
-                      {processing ? "Processing..." : "Uploading..."}
-                    </>
-                  ) : (
-                    <>
-                      {recapButton.title || "AI Recap"}
-                      {recapButton.icon && (
-                        <Icon name={recapButton.icon} className="ml-2" />
-                      )}
-                    </>
-                  )}
-                </Button>
-              )}
+
             </div>
           </CardContent>
         </Card>
