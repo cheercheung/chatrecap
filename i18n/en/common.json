@@ -1,4 +1,38 @@
 {
+  "header": {
+    "brand": {
+      "logo": {
+        "alt": "ChatRecap AI"
+      },
+      "title": "ChatRecap AI"
+    },
+    "buttons": {
+      "try_free": "Try Free",
+      "sign_in": "Sign In"
+    },
+    "nav": {
+      "items": {
+        "join_discord": "Join Discord",
+        "how_it_works": "How It Works",
+        "pricing": "Pricing",
+        "platforms": "Platforms"
+      }
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 ChatRecap AI. All rights reserved.",
+    "links": {
+      "privacy_policy": "Privacy Policy",
+      "terms_of_service": "Terms of Service",
+      "contact_us": "Contact Us"
+    },
+    "social": {
+      "discord": "Discord",
+      "twitter": "Twitter",
+      "instagram": "Instagram",
+      "github": "GitHub"
+    }
+  },
   "time": {
     "days": "days",
     "hours": "hours",

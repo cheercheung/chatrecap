@@ -19,7 +19,69 @@ let preloadedEnData: LandingPage | null = null;
 if (typeof window === 'undefined') {
   // 使用静态翻译，不再动态导入
   const rawData = landingTranslations.landing;
-  preloadedEnData = validateAndFixLandingPageData(rawData);
+  const commonData = landingTranslations.common;
+
+  // 将 header.nav.items 从对象转换为数组
+  const headerNavItems = commonData.header?.nav?.items;
+  const navItemsArray = headerNavItems ? Object.keys(headerNavItems).map(key => ({
+    title: headerNavItems[key],
+    url: `/${key.replace(/_/g, '-')}`,
+    target: ""
+  })) : [];
+
+  // 将 header.buttons 从对象转换为数组
+  const headerButtons = commonData.header?.buttons;
+  const buttonsArray = headerButtons ? Object.keys(headerButtons).map(key => ({
+    title: headerButtons[key],
+    url: key === "try_free" ? "/chatrecapanalysis" : "/signin",
+    variant: key === "try_free" ? "default" : "outline",
+    target: ""
+  })) : [];
+
+  // 处理 footer 部分
+  const footerSocial = commonData.footer?.social;
+  const socialItemsArray = footerSocial ? Object.keys(footerSocial).map(key => ({
+    title: footerSocial[key],
+    url: `https://${key}.com/chatrecapio`,
+    icon: key,
+    target: "_blank"
+  })) : [];
+
+  const footerLinks = commonData.footer?.links;
+  const agreementItemsArray = footerLinks ? Object.keys(footerLinks).map(key => ({
+    title: footerLinks[key],
+    url: `/${key.replace(/_/g, '-')}`,
+    target: ""
+  })) : [];
+
+  // 确保 hero.show_happy_users 属性被正确设置
+  if (rawData.hero) {
+    rawData.hero.show_happy_users = true;
+  }
+
+  // 合并 landing 和 common 数据
+  const mergedData = {
+    ...rawData,
+    header: {
+      ...commonData.header,
+      nav: {
+        ...commonData.header?.nav,
+        items: navItemsArray
+      },
+      buttons: buttonsArray
+    },
+    footer: {
+      ...commonData.footer,
+      social: {
+        items: socialItemsArray
+      },
+      agreement: {
+        items: agreementItemsArray
+      }
+    }
+  };
+
+  preloadedEnData = validateAndFixLandingPageData(mergedData);
 }
 
 /**
@@ -129,13 +191,76 @@ export async function getLandingPage(locale: string): Promise<LandingPage> {
     // 使用静态翻译，不再动态导入
     const rawData = landingTranslations.landing;
 
+    // 从 common 翻译中获取 header 和 footer 数据
+    const commonData = landingTranslations.common;
+
+    // 合并 landing 和 common 数据
+    // 将 header.nav.items 从对象转换为数组
+    const headerNavItems = commonData.header?.nav?.items;
+    const navItemsArray = headerNavItems ? Object.keys(headerNavItems).map(key => ({
+      title: headerNavItems[key],
+      url: `/${key.replace(/_/g, '-')}`,
+      target: ""
+    })) : [];
+
+    // 将 header.buttons 从对象转换为数组
+    const headerButtons = commonData.header?.buttons;
+    const buttonsArray = headerButtons ? Object.keys(headerButtons).map(key => ({
+      title: headerButtons[key],
+      url: key === "try_free" ? "/chatrecapanalysis" : "/signin",
+      variant: key === "try_free" ? "default" : "outline",
+      target: ""
+    })) : [];
+
+    // 处理 footer 部分
+    const footerSocial = commonData.footer?.social;
+    const socialItemsArray = footerSocial ? Object.keys(footerSocial).map(key => ({
+      title: footerSocial[key],
+      url: `https://${key}.com/chatrecapio`,
+      icon: key,
+      target: "_blank"
+    })) : [];
+
+    const footerLinks = commonData.footer?.links;
+    const agreementItemsArray = footerLinks ? Object.keys(footerLinks).map(key => ({
+      title: footerLinks[key],
+      url: `/${key.replace(/_/g, '-')}`,
+      target: ""
+    })) : [];
+
+    // 确保 hero.show_happy_users 属性被正确设置
+    if (rawData.hero) {
+      rawData.hero.show_happy_users = true;
+    }
+
+    const mergedData = {
+      ...rawData,
+      header: {
+        ...commonData.header,
+        nav: {
+          ...commonData.header?.nav,
+          items: navItemsArray
+        },
+        buttons: buttonsArray
+      },
+      footer: {
+        ...commonData.footer,
+        social: {
+          items: socialItemsArray
+        },
+        agreement: {
+          items: agreementItemsArray
+        }
+      }
+    };
+
     // 验证数据是否符合 LandingPage 接口
-    if (!isLandingPage(rawData)) {
+    if (!isLandingPage(mergedData)) {
       throw new Error(`Invalid landing page data`);
     }
 
     // 验证并修复数据，确保类型兼容
-    const data = validateAndFixLandingPageData(rawData);
+    const data = validateAndFixLandingPageData(mergedData);
 
     // 更新缓存
     pageCache.set(safeLocale, {

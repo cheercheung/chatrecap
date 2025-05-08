@@ -18,15 +18,15 @@ export default function UploadBoxServerWrapper({
   upload_box,
   platform = "whatsapp"
 }: UploadBoxServerWrapperProps) {
-  // 使用静态翻译或默认值
+  // 使用静态翻译
   const defaultTranslations = {
-    sample_button_text: "Use Sample Input",
-    upload_button_text: "Upload File",
-    supported_formats: "Supported: .txt file or .zip containing a .txt file (max 5MB)",
-    placeholder: "Enter or paste your chat text here...",
-    sample_chat_text: "Sample chat text...",
-    analyze_button: "AI Recap",
-    free_analysis: "FREE Analyze"
+    sample_button_text: landingTranslations.upload.sample_button_text || "Use Sample Input",
+    upload_button_text: landingTranslations.upload.upload_button_text || "Upload File",
+    supported_formats: landingTranslations.upload.supported_formats || "Supported: .txt file or .zip containing a .txt file (max 5MB)",
+    placeholder: landingTranslations.upload.placeholder || "Enter or paste your chat text here...",
+    sample_chat_text: landingTranslations.upload.sample_chat_text || "Sample chat text...",
+    analyze_button: landingTranslations.upload.upload_box?.primary_button?.title || "AI Recap",
+    free_analysis: landingTranslations.upload.upload_box?.secondary_button?.title || "FREE Analyze"
   };
 
   // 添加默认文本到upload_box

@@ -1,7 +1,5 @@
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import StaticHappyUsers from "./static-happy-users";
-import StaticOptimizedImage from "@/components/ui/static-optimized-image";
 import StaticImageCard from "@/components/ui/static-image-card";
 import { Hero as HeroType } from "@/types/blocks/hero";
 import Icon from "@/components/icon";
@@ -61,21 +59,21 @@ export default async function Hero({ hero }: { hero: HeroType }) {
   return (
     <>
       <section className="py-10 pt-6 relative">
-        <div className="container relative z-10">
+        <div className="container max-w-[1200px] relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
             {/* 左侧内容: 标题、描述、按钮和快乐用户 */}
             <div className="flex flex-col">
               <div className="text-left">
                 {texts && texts.length > 1 ? (
-                  <h1 className="mb-4 mt-3 text-4xl font-bold lg:mb-6 lg:text-6xl max-w-3xl">
+                  <h1 className="mb-4 mt-3 text-3xl font-bold lg:mb-6 lg:text-5xl max-w-3xl">
                     {texts[0]}
-                    <span className="text-primary px-2">
+                    <span className="text-primary font-bold">
                       {highlightText}
                     </span>
                     {texts[1]}
                   </h1>
                 ) : (
-                  <h1 className="mb-4 mt-3 text-4xl font-bold lg:mb-6 lg:text-6xl max-w-3xl">
+                  <h1 className="mb-4 mt-3 text-3xl font-bold lg:mb-6 lg:text-5xl max-w-3xl">
                     {hero.title}
                   </h1>
                 )}
@@ -126,35 +124,8 @@ export default async function Hero({ hero }: { hero: HeroType }) {
               </div>
             </div>
 
-            {/* 右侧内容: 徽章、公告和图片 */}
+            {/* 右侧内容: 图片 */}
             <div className="flex flex-col h-full">
-              {hero.show_badge && (
-                <div className="flex justify-center items-center mb-4">
-                  <StaticOptimizedImage
-                    src="/imgs/badges/phdaily.svg"
-                    alt="phdaily"
-                    width={120}
-                    height={40}
-                    className="h-10"
-                    priority={true}
-                  />
-                </div>
-              )}
-
-              {hero.announcement && (
-                <div className="flex justify-center mb-3">
-                  <a
-                    href={hero.announcement.url}
-                    className="inline-flex items-center gap-3 rounded-full border border-primary/30 bg-primary/5 px-4 py-2 text-sm"
-                  >
-                    {hero.announcement.label && (
-                      <Badge className="bg-primary/80">{hero.announcement.label}</Badge>
-                    )}
-                    {hero.announcement.title}
-                  </a>
-                </div>
-              )}
-
               <StaticImageCard
                 images={imageData.map(item => ({
                   src: item.src,

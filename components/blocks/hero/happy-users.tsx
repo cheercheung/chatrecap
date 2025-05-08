@@ -18,7 +18,7 @@ export default function HappyUsers() {
             }}
           >
             <AvatarImage
-              src={`/imgs/users/${index + 6}.png`}
+              src={`/imgs/users/${index + 3}.png`}
               alt="placeholder"
               className="object-cover"
             />

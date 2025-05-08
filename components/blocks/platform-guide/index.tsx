@@ -65,7 +65,6 @@ export default function PlatformGuide({ platform, exportTitle = "How to Export Y
         >
           <Card className="border border-primary/10 shadow-sm bg-card/50 backdrop-blur-sm">
             <CardContent className="p-6">
-              <h3 className="text-lg font-medium mb-4 text-center">{title}</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {/* Column 1 */}
                 <div className="flex flex-col items-center">
@@ -127,7 +126,6 @@ export default function PlatformGuide({ platform, exportTitle = "How to Export Y
         >
           <Card className="border border-primary/10 shadow-sm bg-card/50 backdrop-blur-sm">
             <CardContent className="p-6">
-              <h3 className="text-lg font-medium mb-4 text-center">{title}</h3>
               <div className="flex flex-col items-center">
                 <div className="relative w-full aspect-[4/3] mb-4">
                   <Image
@@ -175,7 +173,6 @@ export default function PlatformGuide({ platform, exportTitle = "How to Export Y
         >
           <Card className="border border-primary/10 shadow-sm bg-card/50 backdrop-blur-sm">
             <CardContent className="p-6">
-              <h3 className="text-lg font-medium mb-4 text-center">{title}</h3>
               <div className="flex flex-col md:flex-row gap-6 items-center">
                 <div className="relative w-full md:w-1/2 aspect-[4/3] min-h-[300px]">
                   <Image
@@ -215,7 +212,6 @@ export default function PlatformGuide({ platform, exportTitle = "How to Export Y
       >
         <Card className="border border-primary/10 shadow-sm bg-card/50 backdrop-blur-sm">
           <CardContent className="p-6">
-            <h3 className="text-lg font-medium mb-4 text-center">{title}</h3>
             <div className="flex flex-col items-center">
               <div className="relative w-full aspect-[4/3] mb-4">
                 <Image

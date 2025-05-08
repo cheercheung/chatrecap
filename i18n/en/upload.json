@@ -3,7 +3,7 @@
   "description": "Upload your chat export to analyze",
   "upload_button_text": "Upload File",
   "sample_button_text": "Use Sample Input",
-  "placeholder": "Enter or paste your chat text here...",
+  "placeholder": "[1:00 am, 1/1/2025] ALICE: Happy New Year! 🎉\n[1:02 am, 1/1/2025] JEFF: Happy New Year, my love! 🎆\n[8:15 am, 1/1/2025] ALICE: First coffee of the year! ☕",
   "supported_formats": "Supported: .txt file or .zip containing a .txt file (max 5MB)",
   "max_file_size": 5,
   "privacy_notice": "We do not store your chat history, the cached file on our server will be automatically deleted after 30 minutes.",
@@ -33,11 +33,11 @@
     ]
   },
   "platform_upload": {
-    "title": "How to export Your Chat Data",
+    "title": "How to import your chat data",
     "description": "Select your messaging platform and upload your chat data for analysis"
   },
   "json_uploader": {
-    "title": "How to export Your Chat Data",
+    "title": "How to import Your Chat Data",
     "description": "We'll analyze your chat history and provide insights",
     "analyze_button": "FREE Analyze",
     "recap_button": "AI Recap",
@@ -75,5 +75,5 @@
     "invalid_format_with_formats": "Invalid file format. Supported formats: {formats}",
     "upload_success": "Upload successful"
   },
-  "sample_chat_text": "[2025/1/1, 01:00:00] ALICE: Happy New Year! 🎉\n[2025/1/1, 01:02:00] JEFF: Happy New Year, my love! 🎆\n[2025/1/1, 08:15:00] ALICE: First coffee of the year! ☕\n[2025/1/1, 08:20:00] JEFF: Cheers to many more! 🥂\n[2025/1/1, 10:30:00] ALICE: What's the plan for today? 🤔\n[2025/1/1, 10:32:00] JEFF: Let's go for a walk in the park🌳\n[2025/1/1, 11:05:00] ALICE: Sounds perfect! 🌞\n[2025/1/1, 13:00:00] JEFF: Got any new year's resolutions?\n[2025/1/1, 13:10:00] ALICE: To travel more! 🌍\n[2025/1/1, 13:15:00] JEFF: That's a great oneI'm with you on that✈️\n[2025/1/1, 14:30:00] ALICE: The weather's so nice today! ☀️\n[2025/1/1, 14:35:00] JEFF: Perfect day for an adventure, don't you think?\n[2025/1/1, 16:00:00] ALICE: I was thinking of getting some ice cream🍦\n[2025/1/1, 16:10:00] JEFF: Oh, I'm in! What flavor?\n[2025/1/1, 18:30:00] ALICE: What should we have for dinner?\n[2025/1/1, 18:32:00] JEFF: Pizza? 🍕"
+  "sample_chat_text": "[1:00 am, 1/1/2025] ALICE: Happy New Year! 🎉\n[1:02 am, 1/1/2025] JEFF: Happy New Year, my love! 🎆\n[8:15 am, 1/1/2025] ALICE: First coffee of the year! ☕\n[8:20 am, 1/1/2025] JEFF: Cheers to many more! 🥂\n[10:30 am, 1/1/2025] ALICE: What's the plan for today? 🤔\n[10:32 am, 1/1/2025] JEFF: Let's go for a walk in the park🌳\n[11:05 am, 1/1/2025] ALICE: Sounds perfect! 🌞\n[1:00 pm, 1/1/2025] JEFF: Got any new year's resolutions?\n[1:10 pm, 1/1/2025] ALICE: To travel more! 🌍\n[1:15 pm, 1/1/2025] JEFF: That's a great oneI'm with you on that✈️\n[2:30 pm, 1/1/2025] ALICE: The weather's so nice today! ☀️\n[2:35 pm, 1/1/2025] JEFF: Perfect day for an adventure, don't you think?\n[4:00 pm, 1/1/2025] ALICE: I was thinking of getting some ice cream🍦\n[4:10 pm, 1/1/2025] JEFF: Oh, I'm in! What flavor?\n[6:30 pm, 1/1/2025] ALICE: What should we have for dinner?\n[6:32 pm, 1/1/2025] JEFF: Pizza? 🍕"
 }

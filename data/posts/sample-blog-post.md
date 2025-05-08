@@ -14,7 +14,7 @@ locale: "en"
 
 # Sample Blog Post
 
-This is a sample blog post to understand how the blog system works.
+This is a sample blog post to un dderstand how the blog system works.
 
 ## Introduction
 

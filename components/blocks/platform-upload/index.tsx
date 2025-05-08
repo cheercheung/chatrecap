@@ -21,7 +21,7 @@ export interface PlatformUploadProps {
   upload_box: UploadBoxType;
 }
 
-export default function PlatformUpload({ section, upload_box }: PlatformUploadProps) {
+export default function PlatformUpload({ upload_box }: PlatformUploadProps) {
   // 使用静态翻译，不再需要额外参数
   const [selectedPlatform, setSelectedPlatform] = useState<PlatformType>("whatsapp");
 
@@ -38,11 +38,7 @@ export default function PlatformUpload({ section, upload_box }: PlatformUploadPr
     setSelectedPlatform(platformId as PlatformType);
   };
 
-  // 默认值，使用静态翻译
-  const defaultSection = {
-    title: "How to export Your Chat Data",
-    description: "Select your messaging platform and upload your chat data for analysis"
-  };
+
 
   // 默认值，使用静态翻译
   const defaultUploadBox: UploadBoxType = {
@@ -57,22 +53,20 @@ export default function PlatformUpload({ section, upload_box }: PlatformUploadPr
       url: "/chatrecapanalysis",
       target: "_self",
       variant: "secondary"
-    }
+    },
+    sample_button_text: "Use Sample Input",
+    sample_chat_text: landingTranslations.upload.sample_chat_text,
+    placeholder: landingTranslations.upload.placeholder,
+    supported_formats: landingTranslations.upload.supported_formats
   };
 
   // 使用提供的值或默认值
-  const sectionData = section || defaultSection;
   const uploadBoxData = upload_box || defaultUploadBox;
 
   return (
     <section className="py-16 relative">
       <div className="container max-w-4xl">
-        {section && (
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold mb-3 bg-clip-text text-transparent bg-gradient-to-r from-primary to-pink-500">{sectionData.title}</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">{sectionData.description}</p>
-          </div>
-        )}
+
 
         <div className="mb-8">
           <PlatformFilter
@@ -80,6 +74,11 @@ export default function PlatformUpload({ section, upload_box }: PlatformUploadPr
             defaultSelected="whatsapp"
             onChange={handlePlatformChange}
           />
+        </div>
+
+        {/* Download Guide Text */}
+        <div className="text-left mb-4 font-medium text-lg">
+          {landingTranslations.platforms[selectedPlatform]?.download_guide || "How to export your chat history"}
         </div>
 
         {/* Platform export guide */}
@@ -94,6 +93,8 @@ export default function PlatformUpload({ section, upload_box }: PlatformUploadPr
           <JsonUploader
             supportedPlatform={platformOptions.find(p => p.id === selectedPlatform)?.label}
             platform={selectedPlatform}
+            sample_chat_text={uploadBoxData.sample_chat_text}
+            sample_button_text={uploadBoxData.sample_button_text}
             analyzeButton={{
               title: uploadBoxData.secondary_button?.title || "FREE Analyze",
               url: uploadBoxData.secondary_button?.url || "/chatrecapresult",

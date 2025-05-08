@@ -178,7 +178,7 @@ export default function UploadBox({ upload_box, platform = "whatsapp" }: { uploa
 
   // FREE Analyze 按钮处理函数
   const handleFreeAnalyzeClick = async () => {
-    if (!file && !text) {
+    if (!file && !text && !isSampleData) {
       setError(t('upload.no_file_selected'));
       return;
     }
@@ -216,7 +216,7 @@ export default function UploadBox({ upload_box, platform = "whatsapp" }: { uploa
               <TabsList className="grid w-full grid-cols-2 mb-4">
                 <TabsTrigger value="paste" className="flex items-center gap-2">
                   <Icon name="RiFileTextLine" className="h-4 w-4" />
-                  Paste
+                  Paste Chat
                 </TabsTrigger>
                 <TabsTrigger value="upload" className="flex items-center gap-2">
                   <Icon name="RiUploadLine" className="h-4 w-4" />
@@ -228,7 +228,8 @@ export default function UploadBox({ upload_box, platform = "whatsapp" }: { uploa
                 <div className="mb-6">
                   <Textarea
                     placeholder={upload_box.placeholder}
-                    className="min-h-[200px] resize-vertical border-primary/20 focus:border-primary/50"
+                    className="min-h-[200px] resize-vertical border-primary/20 focus:border-primary/50 leading-relaxed text-base"
+                    style={{ lineHeight: "1.8", letterSpacing: "0.01em" }}
                     value={text}
                     onChange={(e) => {
                       setText(e.target.value);
@@ -242,17 +243,34 @@ export default function UploadBox({ upload_box, platform = "whatsapp" }: { uploa
 
                 <div className="mb-6">
                   <div className="flex justify-between items-center mb-3">
-                    {platform === "whatsapp" && (
-                      <Button
-                        variant="outline"
-                        className="flex items-center gap-2 border-primary/20 bg-primary/5 hover:bg-primary/10"
-                        onClick={handleSampleClick}
-                      >
-                        <Sparkles className="h-4 w-4 text-primary" />
-                        {upload_box.sample_button_text}
-                        <Sparkles className="h-4 w-4 text-primary" />
-                      </Button>
-                    )}
+                    <Button
+                      variant="outline"
+                      className="flex items-center gap-2 border-primary/20 bg-primary/5 hover:bg-primary/10"
+                      onClick={handleSampleClick}
+                    >
+                      <Sparkles className="h-4 w-4 text-primary" />
+                      {upload_box.sample_button_text}
+                      <Sparkles className="h-4 w-4 text-primary" />
+                    </Button>
+
+                    {/* 字符计数 */}
+                    <div className="text-sm font-medium flex items-center gap-1">
+                      <span className={`${text.length > 900000 ? 'text-red-500' : text.length > 700000 ? 'text-amber-500' : 'text-primary'}`}>
+                        {text.length.toLocaleString()}
+                      </span>
+                      <span className="text-muted-foreground">/1,000,000</span>
+                    </div>
+                  </div>
+
+                  <div className="flex justify-between items-center mb-3 mt-4">
+                    <button
+                      type="button"
+                      className="text-xs text-muted-foreground flex items-center hover:text-foreground transition-colors"
+                      onClick={() => setText("")}
+                    >
+                      <Icon name="RiCloseLine" className="h-3 w-3 mr-1" />
+                      Clear input
+                    </button>
 
                     {upload_box.secondary_button && (
                       <Button
@@ -271,15 +289,6 @@ export default function UploadBox({ upload_box, platform = "whatsapp" }: { uploa
                       </Button>
                     )}
                   </div>
-
-                  <button
-                    type="button"
-                    className="text-xs text-muted-foreground flex items-center hover:text-foreground transition-colors"
-                    onClick={() => setText("")}
-                  >
-                    <Icon name="RiCloseLine" className="h-3 w-3 mr-1" />
-                    Clear input
-                  </button>
                 </div>
               </TabsContent>
 

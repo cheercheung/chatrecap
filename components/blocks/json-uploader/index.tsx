@@ -28,7 +28,8 @@ interface JsonUploaderProps {
     icon?: string;
     variant?: string;
   };
-
+  sample_chat_text?: string;
+  sample_button_text?: string;
   platform?: PlatformType;
 }
 
@@ -39,7 +40,8 @@ export default function JsonUploader({
   maxCharacters = 1000000,
   onFileUpload,
   analyzeButton,
-
+  sample_chat_text,
+  sample_button_text = "Use Sample Input",
   platform = "whatsapp" as PlatformType
 }: JsonUploaderProps) {
   const router = useRouter();
@@ -53,6 +55,21 @@ export default function JsonUploader({
   const [progress, setProgress] = useState(0);
   const [error, setError] = useState<string | null>(null);
   const [fileId, setFileId] = useState<string | null>(null);
+  const [text, setText] = useState("");
+
+  const handleSampleClick = () => {
+    // 使用示例文本
+    setText(sample_chat_text || "");
+    setIsSampleData(true);
+    setFileName("sample-data.txt");
+
+    // 创建示例文件
+    if (sample_chat_text) {
+      const blob = new Blob([sample_chat_text], { type: "text/plain" });
+      const file = new File([blob], "sample-data.txt", { type: "text/plain" });
+      setFile(file);
+    }
+  };
 
 
 
@@ -92,7 +109,7 @@ export default function JsonUploader({
 
   // 处理文件上传和处理
   const processFile = async (redirectPath: string) => {
-    if (!file && !isSampleData) {
+    if (!file && !text && !isSampleData) {
       setError("Please select a file or use sample data first");
       return;
     }
@@ -356,12 +373,23 @@ export default function JsonUploader({
               </div>
             )}
 
-            <div className="flex flex-col sm:flex-row justify-end gap-4">
+            <div className="flex flex-col sm:flex-row justify-between gap-4">
+              {/* Sample Input Button */}
+              <Button
+                variant="outline"
+                className="flex items-center gap-2 border-primary/20 bg-primary/5 hover:bg-primary/10"
+                onClick={handleSampleClick}
+              >
+                <Sparkles className="h-4 w-4 text-primary" />
+                {sample_button_text}
+                <Sparkles className="h-4 w-4 text-primary" />
+              </Button>
+
               {analyzeButton && (
                 <Button
                   variant={analyzeButton.variant as any || "secondary"}
                   className="w-full sm:w-auto"
-                  disabled={!fileName || uploading || processing}
+                  disabled={(!fileName && !isSampleData) || uploading || processing}
                   onClick={handleAnalyzeClick}
                 >
                   {uploading || processing ? (
@@ -379,8 +407,6 @@ export default function JsonUploader({
                   )}
                 </Button>
               )}
-
-
             </div>
           </CardContent>
         </Card>
