@@ -11,6 +11,11 @@ import ClientComponents from "@/components/providers/client-components";
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
+  display: "swap", // 使用 swap 显示策略，提高感知性能
+  preload: true,   // 预加载字体
+  fallback: ["system-ui", "Arial", "sans-serif"], // 提供回退字体
+  adjustFontFallback: true, // 自动调整回退字体以匹配 Web 字体
+  weight: ["400", "500", "600", "700"], // 只加载必要的字重
 });
 
 export async function generateMetadata({
@@ -91,6 +96,16 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning>
+      <head>
+        {/* 预加载关键字体 */}
+        <link
+          rel="preload"
+          href="/fonts/inter-var.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased overflow-x-hidden",
@@ -98,14 +113,25 @@ export default async function RootLayout({
         )}
         suppressHydrationWarning
       >
-        {/* Script to remove unexpected attributes from body tag */}
+        {/* 优化脚本 */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
               (function() {
-                // Remove any unexpected attributes from body tag
+                // 移除意外的属性
                 if (document.body.hasAttribute('inmaintabuse')) {
                   document.body.removeAttribute('inmaintabuse');
+                }
+
+                // 字体加载优化
+                if ('fonts' in document) {
+                  // 预加载关键字体
+                  Promise.all([
+                    document.fonts.load('400 1em Inter'),
+                    document.fonts.load('700 1em Inter')
+                  ]).then(() => {
+                    document.documentElement.classList.add('fonts-loaded');
+                  });
                 }
               })();
             `

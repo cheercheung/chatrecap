@@ -1,0 +1,79 @@
+{
+  "title": "Chat History Input",
+  "description": "Upload your chat export to analyze",
+  "upload_button_text": "Upload File",
+  "sample_button_text": "Use Sample Input",
+  "placeholder": "Enter or paste your chat text here...",
+  "supported_formats": "Supported: .txt file or .zip containing a .txt file (max 5MB)",
+  "max_file_size": 5,
+  "privacy_notice": "We do not store your chat history, the cached file on our server will be automatically deleted after 30 minutes.",
+  "platform_filter": {
+    "title": "Select Platform",
+    "options": [
+      {
+        "id": "whatsapp",
+        "label": "WhatsApp"
+      },
+      {
+        "id": "instagram",
+        "label": "Instagram"
+      },
+      {
+        "id": "discord",
+        "label": "Discord"
+      },
+      {
+        "id": "telegram",
+        "label": "Telegram"
+      },
+      {
+        "id": "snapchat",
+        "label": "Snapchat"
+      }
+    ]
+  },
+  "platform_upload": {
+    "title": "How to export Your Chat Data",
+    "description": "Select your messaging platform and upload your chat data for analysis"
+  },
+  "json_uploader": {
+    "title": "How to export Your Chat Data",
+    "description": "We'll analyze your chat history and provide insights",
+    "analyze_button": "FREE Analyze",
+    "recap_button": "AI Recap",
+    "auto_sort_message": "Messages will be auto sorted by timestamp.",
+    "max_characters": "Max characters: {count}",
+    "max_message_count": "Max messages count: {count}",
+    "selected_file": "Selected: {filename}",
+    "upload_prompt": "Click to upload your {platform} JSON file"
+  },
+  "upload_box": {
+    "title": "Start Using Chat Recap AI",
+    "description": "Use sample or upload chat file, Click FREE Analyze or AI Recap.",
+    "primary_button": {
+      "title": "AI Recap"
+    },
+    "secondary_button": {
+      "title": "FREE Analyze"
+    }
+  },
+  "upload": {
+    "title": "Upload Chat History",
+    "description": "Upload your chat export to analyze",
+    "drop_files": "Drag and drop your file here",
+    "select_file": "Select File",
+    "uploading": "Uploading...",
+    "error": "Upload Error",
+    "upload_button": "Upload",
+    "upload_failed": "Upload failed",
+    "no_file_selected": "No file selected",
+    "file_size_limit": "File size exceeds limit",
+    "invalid_format": "Invalid file format",
+    "drag_drop": "Drag and drop file here or click to select",
+    "file_selected": "File selected",
+    "file_size_limit_with_size": "File size exceeds {size}MB limit",
+    "invalid_format_with_formats": "Invalid file format. Supported formats: {formats}",
+    "upload_success": "Upload successful"
+  },
+  "sample_chat_text": "[2025/1/1, 01:00:00] ALICE: Happy New Year! 🎉\n[2025/1/1, 01:02:00] JEFF: Happy New Year, my love! 🎆\n[2025/1/1, 08:15:00] ALICE: First coffee of the year! ☕\n[2025/1/1, 08:20:00] JEFF: Cheers to many more! 🥂\n[2025/1/1, 10:30:00] ALICE: What's the plan for today? 🤔\n[2025/1/1, 10:32:00] JEFF: Let's go for a walk in the park🌳\n[2025/1/1, 11:05:00] ALICE: Sounds perfect! 🌞\n[2025/1/1, 13:00:00] JEFF: Got any new year's resolutions?\n[2025/1/1, 13:10:00] ALICE: To travel more! 🌍\n[2025/1/1, 13:15:00] JEFF: That's a great oneI'm with you on that✈️\n[2025/1/1, 14:30:00] ALICE: The weather's so nice today! ☀️\n[2025/1/1, 14:35:00] JEFF: Perfect day for an adventure, don't you think?\n[2025/1/1, 16:00:00] ALICE: I was thinking of getting some ice cream🍦\n[2025/1/1, 16:10:00] JEFF: Oh, I'm in! What flavor?\n[2025/1/1, 18:30:00] ALICE: What should we have for dinner?\n[2025/1/1, 18:32:00] JEFF: Pizza? 🍕"
+}

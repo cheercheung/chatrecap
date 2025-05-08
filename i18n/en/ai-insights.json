@@ -1,0 +1,61 @@
+{
+  "title": "AI Relationship Insights",
+  "description": "AI-generated insights about your relationship based on your chat history",
+  "insights": {
+    "interaction_title": "Interaction Insights",
+    "relationship_title": "Relationship Insights"
+  },
+  "relationship_metrics": {
+    "interest_level": "Interest Level",
+    "response_enthusiasm": "Response Enthusiasm",
+    "emotional_stability": "Emotional Stability",
+    "response_time": "Response Time"
+  },
+  "relationship_analysis": {
+    "description": "Analysis of communication patterns and relationship dynamics based on message history."
+  },
+  "relationship_metrics_hearts": {
+    "title": "Relationship Quality Metrics",
+    "description": "Analysis of key relationship quality indicators based on communication patterns."
+  },
+  "communication_patterns": {
+    "title": "Communication Patterns",
+    "description": "Analysis of how you communicate with each other",
+    "response_time": {
+      "title": "Response Time",
+      "description": "How quickly you respond to each other's messages",
+      "fast": "Fast",
+      "medium": "Medium",
+      "slow": "Slow"
+    },
+    "message_length": {
+      "title": "Message Length",
+      "description": "The typical length of your messages",
+      "short": "Short",
+      "medium": "Medium",
+      "long": "Long"
+    },
+    "conversation_flow": {
+      "title": "Conversation Flow",
+      "description": "How your conversations develop over time",
+      "smooth": "Smooth",
+      "choppy": "Choppy",
+      "balanced": "Balanced"
+    }
+  },
+  "emotional_analysis": {
+    "title": "Emotional Analysis",
+    "description": "Analysis of the emotional tone in your conversations",
+    "positive": "Positive",
+    "neutral": "Neutral",
+    "negative": "Negative",
+    "mixed": "Mixed"
+  },
+  "recommendations": {
+    "title": "Communication Recommendations",
+    "description": "Personalized suggestions to improve your communication",
+    "general": "General recommendations",
+    "specific": "Specific recommendations"
+  },
+  "no_insights": "No AI insights available for this chat history"
+}

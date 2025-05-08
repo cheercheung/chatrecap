@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { useTranslations } from "next-intl";
 import PlatformFilter from "@/components/blocks/platform-filter";
 import JsonUploader from "@/components/blocks/json-uploader";
 import UploadBoxWrapper from "@/components/blocks/upload-box/server-wrapper";
@@ -9,6 +8,8 @@ import PlatformGuide from "@/components/blocks/platform-guide";
 import { Section } from "@/types/blocks/section";
 import { UploadBox as UploadBoxType } from "@/types/blocks/upload-box";
 import { PlatformType } from "@/types/chat-processing";
+// 导入静态翻译
+import { landingTranslations } from '@/lib/static-translations';
 
 interface PlatformOption {
   id: string;
@@ -18,42 +19,41 @@ interface PlatformOption {
 export interface PlatformUploadProps {
   section: Section;
   upload_box: UploadBoxType;
-  className?: string;
 }
 
-export default function PlatformUpload({ section, upload_box, className }: PlatformUploadProps) {
-  const t = useTranslations("chat_analysis");
+export default function PlatformUpload({ section, upload_box }: PlatformUploadProps) {
+  // 使用静态翻译，不再需要额外参数
   const [selectedPlatform, setSelectedPlatform] = useState<PlatformType>("whatsapp");
 
-  // Get platform options from i18n
+  // 从静态翻译中获取平台选项
   const platformOptions: PlatformOption[] = [
-    { id: "whatsapp", label: t("platforms.whatsapp") },
-    { id: "instagram", label: t("platforms.instagram") },
-    { id: "discord", label: t("platforms.discord") },
-    { id: "telegram", label: t("platforms.telegram") },
-    { id: "snapchat", label: t("platforms.snapchat") }
+    { id: "whatsapp", label: landingTranslations.platforms.whatsapp.title },
+    { id: "instagram", label: landingTranslations.platforms.instagram.title },
+    { id: "discord", label: landingTranslations.platforms.discord.title },
+    { id: "telegram", label: landingTranslations.platforms.telegram.title },
+    { id: "snapchat", label: landingTranslations.platforms.snapchat.title }
   ];
 
   const handlePlatformChange = (platformId: string) => {
     setSelectedPlatform(platformId as PlatformType);
   };
 
-  // Default values from i18n
+  // 默认值，使用静态翻译
   const defaultSection = {
-    title: t("upload_title"),
-    description: t("upload_description")
+    title: "How to export Your Chat Data",
+    description: "Select your messaging platform and upload your chat data for analysis"
   };
 
-  // Default values from i18n
+  // 默认值，使用静态翻译
   const defaultUploadBox: UploadBoxType = {
     primary_button: {
-      title: t("analyze_button"),
+      title: "AI Recap",
       url: "/chatrecapresult",
       target: "_self",
       variant: "default"
     },
     secondary_button: {
-      title: t("free_analysis"),
+      title: "FREE Analyze",
       url: "/chatrecapanalysis",
       target: "_self",
       variant: "secondary"
@@ -65,7 +65,7 @@ export default function PlatformUpload({ section, upload_box, className }: Platf
   const uploadBoxData = upload_box || defaultUploadBox;
 
   return (
-    <section className={`${section ? 'py-16' : 'py-8'} relative`}>
+    <section className="py-16 relative">
       <div className="container max-w-4xl">
         {section && (
           <div className="text-center mb-8">

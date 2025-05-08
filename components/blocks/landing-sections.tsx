@@ -10,7 +10,7 @@ import CTA from '@/components/blocks/cta';
 import FAQ from '@/components/blocks/faq';
 import Feature from '@/components/blocks/feature';
 import PlatformUpload from '@/components/blocks/platform-upload';
-import SimplePricing from '@/components/blocks/simple-pricing';
+import SimplePricingClientWrapper from '@/components/blocks/simple-pricing/client-wrapper';
 import Stats from '@/components/blocks/stats';
 
 export default function LandingSections({ page }: { page: LandingPage }) {
@@ -28,7 +28,12 @@ export default function LandingSections({ page }: { page: LandingPage }) {
       {page.feature && <Feature section={page.feature} />}
 
       {/* 定价组件 */}
-      {page.simple_pricing && <SimplePricing {...page.simple_pricing} />}
+      {page.simple_pricing && (
+        <SimplePricingClientWrapper
+          data={page.simple_pricing}
+          messages={page.simple_pricing}
+        />
+      )}
 
       {/* FAQ组件 */}
       {page.faq && <FAQ section={page.faq} />}

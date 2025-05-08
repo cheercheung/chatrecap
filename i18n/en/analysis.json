@@ -1,0 +1,72 @@
+{
+  "title": "Chat Recap AI",
+  "subtitle": "Your AI Chat Analysis",
+  "how_to_import": "How to Import Chat from all platforms",
+  "description": "Transform your conversations with Chat Recap AI. Unlock the hidden patterns and insights in your chats. Understand relationships on a deeper level.",
+  "free_analysis": "Free Analyze",
+  "analyze_button": "AI Recap",
+  "select_platform": "Select Platform",
+  "import_methods": {
+    "mobile": "From WhatsApp iOS/Android",
+    "web": "From WhatsApp Web"
+  },
+  "platforms": {
+    "whatsapp": "WhatsApp",
+    "instagram": "Instagram",
+    "snapchat": "Snapchat",
+    "telegram": "Telegram",
+    "discord": "Discord"
+  },
+  "ai_analysis": {
+    "analyzing": "Analyzing",
+    "error": "Error",
+    "error_description": "Error description",
+    "failed": "Failed",
+    "failed_description": "Failed description",
+    "generate": "Generate",
+    "please_wait": "Please wait",
+    "starting": "Starting",
+    "success": "Success",
+    "success_description": "Success description"
+  },
+  "processing": {
+    "title": "Processing Your Chat",
+    "description": "We're analyzing your chat history, please wait",
+    "failed": "Processing Failed",
+    "processing": "Processing...",
+    "uploading": "Uploading...",
+    "cleaning_progress": "Cleaning Progress",
+    "analysis_progress": "Analysis Progress",
+    "analysis_progress_label": "Analysis Progress",
+    "cleaning": "Cleaning",
+    "cleaning_progress_label": "Cleaning Progress",
+    "completed": "Completed",
+    "description_processing": "We're processing your chat history, please wait",
+    "failed_label": "Failed",
+    "preparing": "Preparing",
+    "status_fetch_failed": "Failed to fetch processing status",
+    "title_processing": "Processing Your Chat",
+    "uploading_label": "Uploading"
+  },
+  "steps": [
+    {
+      "description": "Export your chat history from WhatsApp or other platforms and upload it to our secure ChatRecap AI platform",
+      "number": "1",
+      "title": "Upload Chat"
+    },
+    {
+      "description": "Choose what aspects of your conversations you want to analyze - from basic patterns to deep emotional insights",
+      "number": "2",
+      "title": "Select Analysis"
+    },
+    {
+      "description": "Receive detailed analysis with visualizations and actionable insights about your communication patterns",
+      "number": "3",
+      "title": "Get Insights"
+    }
+  ],
+  "subtitle_steps": "A simple three-step process to get insights about your conversations",
+  "title_steps": "How to Analyze Your Chats with Chat Recap AI?",
+  "advanced_options": "Advanced Options",
+  "character_count": "{current} / {max} characters"
+}

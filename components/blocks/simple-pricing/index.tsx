@@ -3,7 +3,7 @@
 import { Check } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
-import { useTranslations } from 'next-intl';
+// Remove the useTranslations import as we'll use direct props instead
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -20,7 +20,7 @@ export default function SimplePricing({
   subtitleKey,
   plans
 }: SimplePricingType) {
-  const t = useTranslations('pages.landing');
+  // No longer using useTranslations hook
   const [isLoading, setIsLoading] = useState(false);
   const [selectedPlanId, setSelectedPlanId] = useState<string | null>(null);
 
@@ -58,10 +58,10 @@ export default function SimplePricing({
     }
   };
 
-  // 获取标题、副标题和描述，优先使用翻译键
-  const displayTitle = titleKey ? t(titleKey) : title;
-  const displayDescription = descriptionKey ? t(descriptionKey) : description;
-  const displaySubtitle = subtitleKey ? t(subtitleKey) : subtitle;
+  // 直接使用传入的值，不再使用翻译键
+  const displayTitle = title;
+  const displayDescription = description;
+  const displaySubtitle = subtitle;
 
   return (
     <section id="pricing" className="py-24 bg-gradient-to-b from-background via-muted/10 to-background relative overflow-hidden">
@@ -88,14 +88,14 @@ export default function SimplePricing({
 
         <div className="grid gap-10 md:grid-cols-2 lg:gap-16 max-w-6xl mx-auto">
           {plans && Array.isArray(plans) ? plans.map((plan, index) => {
-            // 获取计划的翻译文本
-            const planTitle = plan.titleKey ? t(plan.titleKey) : plan.title;
-            const planDescription = plan.descriptionKey ? t(plan.descriptionKey) : plan.description;
-            const planPrice = plan.priceKey ? t(plan.priceKey) : plan.price;
-            const planOriginalPrice = plan.originalPriceKey ? t(plan.originalPriceKey) : plan.originalPrice;
-            const planPopularLabel = plan.popularLabelKey ? t(plan.popularLabelKey) : plan.popularLabel;
-            const planButtonText = plan.buttonTextKey ? t(plan.buttonTextKey) : plan.buttonText;
-            const planTipText = plan.tipTextKey ? t(plan.tipTextKey) : plan.tipText;
+            // 直接使用传入的值，不再使用翻译键
+            const planTitle = plan.title;
+            const planDescription = plan.description;
+            const planPrice = plan.price;
+            const planOriginalPrice = plan.originalPrice;
+            const planPopularLabel = plan.popularLabel;
+            const planButtonText = plan.buttonText;
+            const planTipText = plan.tipText;
 
             return (
               <Card
@@ -135,8 +135,8 @@ export default function SimplePricing({
                   <div className="mb-10 flex-grow">
                     <ul className="space-y-4">
                       {plan.features.map((feature, featureIndex) => {
-                        // 获取功能的翻译文本
-                        const featureText = feature.textKey ? t(feature.textKey) : feature.text;
+                        // 直接使用传入的值，不再使用翻译键
+                        const featureText = feature.text;
 
                         // Determine if this is a special feature that needs different styling
                         const isSpecialFeature = featureText.startsWith('💬') ||

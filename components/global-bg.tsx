@@ -1,5 +1,7 @@
-"use client";
-
+/**
+ * 全局背景组件 - 静态版本
+ * 移除客户端指令以支持 SSG
+ */
 export default function GlobalBg() {
   return (
     <div className="fixed inset-0 -z-50 overflow-hidden">

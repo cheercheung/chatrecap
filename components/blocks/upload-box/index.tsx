@@ -10,14 +10,21 @@ import { Sparkles, AlertCircle, Upload as UploadIcon } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { useRouter } from "next/navigation";
-import { useTranslations } from 'next-intl';
+// Remove useTranslations import to avoid internationalization context issues
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { motion } from "framer-motion";
 import { RiUploadCloud2Line } from "react-icons/ri";
 
 export default function UploadBox({ upload_box, platform = "whatsapp" }: { upload_box: UploadBoxType, platform?: string }) {
   const router = useRouter();
-  const t = useTranslations('chat_analysis');
+  // Create a simple translation function that returns default values
+  const t = (key: string) => {
+    const translations = {
+      'upload.no_file_selected': 'Please select a file or enter text first',
+      'processing.failed': 'Processing failed'
+    };
+    return translations[key] || key;
+  };
   const [text, setText] = useState("");
   const [fileName, setFileName] = useState("");
   const fileInputRef = useRef<HTMLInputElement>(null);

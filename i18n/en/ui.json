@@ -1,0 +1,105 @@
+{
+  "header": {
+    "brand": {
+      "logo": {
+        "alt": "ChatRecap AI"
+      },
+      "title": "ChatRecap AI"
+    },
+    "buttons": {
+      "try_free": "Try Free",
+      "sign_in": "Sign In"
+    },
+    "nav": {
+      "items": {
+        "join_discord": "Join Discord",
+        "how_it_works": "How It Works",
+        "pricing": "Pricing",
+        "platforms": "Platforms"
+      }
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 ChatRecap AI. All rights reserved.",
+    "links": {
+      "privacy_policy": "Privacy Policy",
+      "terms_of_service": "Terms of Service",
+      "contact_us": "Contact Us"
+    },
+    "social": {
+      "discord": "Discord",
+      "twitter": "Twitter",
+      "instagram": "Instagram",
+      "github": "GitHub"
+    }
+  },
+  "notification": {
+    "limited_time_offer": "Limited Time Offer!",
+    "free": "FREE!",
+    "hurry": "Hurry, this code expires in",
+    "hours": "hours",
+    "of_full_access": "of full access — absolutely",
+    "to_unlock": "to unlock",
+    "try_now": "Try Now",
+    "use_code": "Use code"
+  },
+  "action_buttons": {
+    "ai_recap": "AI Recap",
+    "back_to_upload": "Back to Upload",
+    "share_results": "Share Results",
+    "link_copied": "Link copied to clipboard",
+    "copy_failed": "Failed to copy link",
+    "description": "The link has been copied to your clipboard. You can share it with your friends.",
+    "description_error": "Please try again or copy the URL manually."
+  },
+  "highlighted_text": {
+    "afternoon": "Afternoon",
+    "evening": "Evening",
+    "medium_conversations": "Medium Conversations",
+    "morning": "Morning",
+    "negative": "Negative",
+    "neutral": "Neutral",
+    "positive": "Positive",
+    "quick_responses": "Quick Responses",
+    "very_negative": "Very Negative",
+    "very_positive": "Very Positive"
+  },
+  "buttons": {
+    "free_analyze": "Free Analyze",
+    "ai_recap": "AI Recap",
+    "try_now": "Try Now",
+    "get_started": "Get Started",
+    "learn_more": "Learn More",
+    "sign_in": "Sign In",
+    "sign_out": "Sign Out",
+    "upload_file": "Upload File",
+    "sample_input": "Use Sample Input",
+    "export_pdf": "Export as PDF",
+    "share_results": "Share Results"
+  },
+  "form": {
+    "placeholder": {
+      "enter_text": "Enter text here...",
+      "search": "Search..."
+    },
+    "label": {
+      "file_upload": "Upload File",
+      "text_input": "Text Input",
+      "select_platform": "Select Platform"
+    },
+    "help_text": {
+      "supported_formats": "Supported formats: {formats}",
+      "max_file_size": "Maximum file size: {size}MB"
+    }
+  },
+  "modal": {
+    "close": "Close",
+    "confirm": "Confirm",
+    "cancel": "Cancel"
+  },
+  "pagination": {
+    "previous": "Previous",
+    "next": "Next",
+    "page_of": "Page {current} of {total}"
+  }
+}

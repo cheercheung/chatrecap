@@ -1,0 +1,59 @@
+{
+  "title": "Dashboard",
+  "description": "Manage your account and view your analysis history",
+  "dashboard": "Dashboard",
+  "new_analysis": "New Analysis",
+  "recent_history": "Recent Analysis",
+  "view_all": "View All",
+  "credits": {
+    "title": "Points",
+    "remaining": "Remaining Points",
+    "history": "Points History",
+    "history_description": "View your points transaction history",
+    "buy_button": "Buy Points",
+    "no_records": "No points records",
+    "table": {
+      "type": "Type",
+      "amount": "Amount",
+      "date": "Date"
+    },
+    "types": {
+      "purchase": "Purchase",
+      "used": "Used"
+    }
+  },
+  "history": {
+    "title": "Analysis History",
+    "description": "View your previous chat analysis records",
+    "no_records": "No analysis records",
+    "table": {
+      "id": "File ID",
+      "platform": "Platform",
+      "date": "Date"
+    }
+  },
+  "user": {
+    "profile": {
+      "title": "Profile",
+      "description": "Manage your personal information",
+      "name": "Name",
+      "email": "Email",
+      "update_button": "Update Profile"
+    },
+    "account": {
+      "title": "Account",
+      "description": "Manage your account settings",
+      "change_password": "Change Password",
+      "delete_account": "Delete Account"
+    },
+    "sign_out": "Sign Out",
+    "sign_in": "Sign In"
+  },
+  "navigation": {
+    "overview": "Overview",
+    "points": "Points",
+    "history": "History",
+    "profile": "Profile",
+    "settings": "Settings"
+  }
+}

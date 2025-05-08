@@ -1,0 +1,106 @@
+{
+  "title": "Your Chat Analysis Results",
+  "description": "Discover insights about your conversation patterns and relationship dynamics",
+  "overview_title": "Overview",
+  "story_timeline_title": "Your Chat Journey",
+  "overview_story_part1": "Your conversation tells a beautiful story through <span>{totalMessages} messages</span> exchanged over time. {sender1Name} sent <span>{sender1Messages} messages</span>, while {sender2Name} responded with <span>{sender2Messages} messages</span>.",
+  "overview_story_part2": "Together, you've woven a tapestry of <span>{totalWords} words</span>, with {sender1Name} contributing <span>{sender1Words} words</span> and {sender2Name} sharing <span>{sender2Words} words</span>. Your conversations are meaningful and substantial, with an average of <span>{wordsPerMessage} words per message</span>.",
+  "overview_story_part3": "Your most active conversations happen on <span>{mostActiveDay}</span>, with an average of <span>{avgMessagesPerDay} messages</span> exchanged daily. The typical response time of <span>{responseTime}</span> shows the eager anticipation you both feel when communicating with each other.",
+  "timespan_summary": "Your story began on {startDate}, unfolding over {duration}, until {endDate}—leaving an everlasting mark in the passage of time.",
+  "timespan_fallback": "Your story unfolded over time, leaving an everlasting mark in the passage of time.",
+  "metrics": {
+    "total_messages": "Total Messages",
+    "messages_per_person": "Messages Per person",
+    "total_words": "Total Words",
+    "words_per_message": "Words Per Message",
+    "response_Time": "Response Time",
+    "first_message": "First Message",
+    "last_message": "Last Message",
+    "busiest_date": "Busiest Date",
+    "favorite_day_to_chat": "Favorite Day to Chat",
+    "most_active_day": "Most Active Day",
+    "most_active_hour": "Most Active Hour",
+    "peak_activity_time": "Peak Activity Time"
+  },
+  "time_analysis_title": "Time Analysis",
+  "time_distribution": "Time Distribution",
+  "time_distribution_description": "You tend to chat most during the evening ({evening}%), followed by afternoon ({afternoon}%) and morning ({morning}%). This pattern shows when you're both most available and engaged in conversation.",
+  "response_pattern_description": "Your conversation style shows {responsePattern}. This indicates {conversationLength} throughout your exchanges.",
+  "weekly_activity_heatmap": "Weekly Activity Heatmap",
+  "daily_activity": "Daily Activity",
+  "daily_activity_description": "Your conversations are most active on {mostActiveDay}s around {mostActiveHour}. This consistent pattern suggests you both prioritize making time for each other during these periods.",
+  "heatmap": {
+    "low": "Low",
+    "high": "High"
+  },
+  "text_analysis_title": "Text Analysis",
+  "sentiment_analysis": "Sentiment Analysis",
+  "sentiment_description": "Your conversations have a sentiment score of {sentimentScore}, which indicates a {sentimentDescription} emotional tone. This reflects the overall mood and feeling of your exchanges.",
+  "sentiment_score": "Sentiment Score",
+  "sentiment_positive": "Positive",
+  "sentiment_negative": "Negative",
+  "sentiment_neutral": "Neutral",
+  "sentiment_very_positive": "Very Positive",
+  "sentiment_very_negative": "Very Negative",
+  "overall_sentiment": "Overall Sentiment",
+  "common_words": "Common Words",
+  "top_words": "Top Words",
+  "top_emojis": "Top Emojis",
+  "total_emojis": "Total Emojis",
+  "total_unique_words": "Total Unique Words",
+  "word_cloud": "Word Cloud",
+  "messages": "Messages",
+  "emojis": "Emojis",
+  "word": "Word",
+  "count": "Count",
+  "days": "Days",
+  "words": "words",
+  "communication_comparison": {
+    "description": "A comparison of communication patterns and relationship dynamics between both parties.",
+    "title": "Communication Comparison: {sender1} vs {sender2}"
+  },
+  "relationship_analysis": {
+    "description": "Analysis of communication patterns and relationship dynamics based on message history.",
+    "title": "{sender}'s Communication Analysis"
+  },
+  "relationship_metrics": {
+    "communication": "Communication",
+    "conflict": "Conflict Management",
+    "emotional_stability": "Emotional Stability",
+    "interest_level": "Interest Level",
+    "intimacy": "Intimacy",
+    "response_enthusiasm": "Response Enthusiasm",
+    "response_time": "Response Time",
+    "trust": "Trust"
+  },
+  "relationship_metrics_hearts": {
+    "description": "Analysis of key relationship quality indicators based on communication patterns.",
+    "title": "Relationship Quality Metrics"
+  },
+  "response_patterns": {
+    "consistent": "Consistent response times throughout the day",
+    "evening_active": "Quick responses in evening, slower in morning",
+    "morning_active": "More active in morning than evening"
+  },
+  "actions": {
+    "share_results": "Share Results",
+    "export_pdf": "Export as PDF",
+    "back_to_upload": "Back to Upload"
+  },
+  "share": {
+    "title": "Share Your Chat Analysis",
+    "description": "Share your chat analysis results with others",
+    "link_copied": "Link copied to clipboard",
+    "copy_failed": "Failed to copy link",
+    "share_text": "Check out my chat analysis from ChatRecap AI!"
+  },
+  "no_data": {
+    "no_messages_to_analyze": "No messages to analyze",
+    "unknown_sender": "Unknown",
+    "unknown_date": "Unknown date",
+    "zero_minutes": "0 minutes",
+    "no_conversations": "No conversations",
+    "no_meaningful_words": "No meaningful words found",
+    "heatmap_data_not_available": "Heatmap data not available"
+  }
+}

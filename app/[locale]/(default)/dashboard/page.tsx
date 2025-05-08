@@ -1,5 +1,5 @@
-import { getTranslations } from "next-intl/server";
-import DashboardClientWrapper from "@/components/pages/dashboard/client-wrapper";
+import { getTranslations, getMessages } from "next-intl/server";
+import DashboardClientWrapperNew from "@/components/pages/dashboard/client-wrapper-new";
 import { getDashboardData } from "@/services/dashboard";
 
 // 强制使用服务器端渲染
@@ -11,7 +11,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const t = await getTranslations("dashboard");
+  const t = await getTranslations({ locale, namespace: "dashboard" });
 
   let canonicalUrl = `${process.env.NEXT_PUBLIC_WEB_URL}/dashboard`;
 
@@ -34,14 +34,19 @@ export default async function DashboardPageRoute({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const t = await getTranslations("dashboard");
 
   // 从服务获取仪表盘数据
   const dashboardData = await getDashboardData();
 
+  // 获取翻译消息
+  const messages = await getMessages({ locale, namespace: "dashboard" });
+
+  // 使用新的客户端包装组件，提供国际化上下文
   return (
-    <DashboardClientWrapper
+    <DashboardClientWrapperNew
       data={dashboardData}
+      messages={messages}
+      locale={locale}
     />
   );
 }

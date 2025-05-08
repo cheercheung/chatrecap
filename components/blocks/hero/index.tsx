@@ -1,46 +1,47 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import HappyUsers from "./happy-users";
-import OptimizedImage from "@/components/ui/optimized-image";
-import ImageCard from "@/components/ui/image-card";
+import StaticHappyUsers from "./static-happy-users";
+import StaticOptimizedImage from "@/components/ui/static-optimized-image";
+import StaticImageCard from "@/components/ui/static-image-card";
 import { Hero as HeroType } from "@/types/blocks/hero";
 import Icon from "@/components/icon";
 import Link from "next/link";
+// 导入静态翻译
+import { landingTranslations } from '@/lib/static-translations';
 
 // Hero 组件，优化性能，移除所有动画和效果
 export default async function Hero({ hero }: { hero: HeroType }) {
-  // 动态导入 i18n 数据
+  // 使用静态翻译获取图片数据
   let imageData = [];
   // 控制显示的图片数量
   const maxImages = 4; // 设置最大显示4张图片
 
-  try {
-    // 获取当前语言的图片数据
-    const locale = typeof window !== 'undefined' ? document.documentElement.lang || 'en' : 'en';
-    const module = await import(`@/i18n/pages/landing/${locale}.json`);
+  // 从静态翻译中获取图片数据
+  const imgObj = landingTranslations.landing.image;
+  if (imgObj) {
+    // 将对象转换为数组
+    const itemKeys = Object.keys(imgObj).filter(key => key.startsWith('item')).slice(0, maxImages);
 
-    if (module.default && module.default.image) {
-      // 将对象转换为数组
-      const imgObj = module.default.image;
-      const itemKeys = Object.keys(imgObj).filter(key => key.startsWith('item')).slice(0, maxImages);
+    // 只获取指定数量的图片
+    imageData = itemKeys.map(key => ({
+      src: imgObj[key].src || '',
+      alt: imgObj[key].alt || '',
+      title: imgObj[key].title || '',
+      description: imgObj[key].description || ''
+    }));
 
-      // 只获取指定数量的图片
-      imageData = itemKeys.map(key => ({
-        src: imgObj[key].src || '',
-        alt: imgObj[key].alt || '',
-        title: imgObj[key].title || '',
-        description: imgObj[key].description || ''
-      }));
-
-      // 如果没有足够的图片，使用默认数据填充
-      if (imageData.length === 0) {
-        imageData = [
-          { src: '', alt: '聊天截图示例1', title: imgObj.title || '聊天分析示例', description: imgObj.description || '' }
-        ];
-      }
+    // 如果没有足够的图片，使用默认数据填充
+    if (imageData.length === 0) {
+      imageData = [
+        {
+          src: '',
+          alt: '聊天截图示例1',
+          title: '聊天分析示例',
+          description: '上传您的聊天记录，获取深入的关系洞察和沟通模式分析。'
+        }
+      ];
     }
-  } catch (error) {
-    console.error('Failed to load image data from i18n:', error);
+  } else {
     // 使用默认数据
     imageData = [
       { src: '', alt: '聊天截图示例1', title: '聊天分析示例', description: '上传您的聊天记录，获取深入的关系洞察和沟通模式分析。' }
@@ -92,7 +93,7 @@ export default async function Hero({ hero }: { hero: HeroType }) {
 
                 {hero.show_happy_users && (
                   <div className="mt-6">
-                    <HappyUsers />
+                    <StaticHappyUsers />
                   </div>
                 )}
 
@@ -129,7 +130,7 @@ export default async function Hero({ hero }: { hero: HeroType }) {
             <div className="flex flex-col h-full">
               {hero.show_badge && (
                 <div className="flex justify-center items-center mb-4">
-                  <OptimizedImage
+                  <StaticOptimizedImage
                     src="/imgs/badges/phdaily.svg"
                     alt="phdaily"
                     width={120}
@@ -154,7 +155,7 @@ export default async function Hero({ hero }: { hero: HeroType }) {
                 </div>
               )}
 
-              <ImageCard
+              <StaticImageCard
                 images={imageData.map(item => ({
                   src: item.src,
                   alt: item.alt

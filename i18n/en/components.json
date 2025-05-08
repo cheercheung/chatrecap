@@ -1,0 +1,40 @@
+{
+  "header": {
+    "navigation": {
+      "home": "Home",
+      "features": "Features",
+      "pricing": "Pricing",
+      "how_it_works": "How It Works",
+      "platforms": "Platforms"
+    },
+    "buttons": {
+      "try_free": "Try Free",
+      "sign_in": "Sign In"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 ChatRecap AI. All rights reserved.",
+    "links": {
+      "privacy_policy": "Privacy Policy",
+      "terms_of_service": "Terms of Service",
+      "contact_us": "Contact Us"
+    }
+  },
+  "notification": {
+    "limited_time_offer": "Limited Time Offer!",
+    "free": "FREE!",
+    "hurry": "Hurry",
+    "hours": "hours",
+    "of_full_access": "of full access",
+    "to_unlock": "to unlock",
+    "try_now": "Try Now",
+    "use_code": "Use code"
+  },
+  "action_buttons": {
+    "ai_recap": "AI Recap",
+    "back_to_upload": "Back to Upload",
+    "share_results": "Share Results",
+    "link_copied": "Link copied to clipboard",
+    "copy_failed": "Failed to copy link"
+  }
+}

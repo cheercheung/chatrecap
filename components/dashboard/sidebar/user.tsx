@@ -32,7 +32,18 @@ import { signOut } from "next-auth/react";
 import { useTranslations } from "next-intl";
 
 export default function () {
-  const t = useTranslations();
+  // 使用 try-catch 来处理可能的翻译错误
+  let t;
+  try {
+    t = useTranslations("dashboard");
+  } catch (error) {
+    // 如果找不到翻译，使用一个函数返回默认值
+    t = (key: string): string => {
+      if (key === "user.sign_out") return "Sign Out";
+      if (key === "user.sign_in") return "Sign In";
+      return key;
+    };
+  }
 
   // Removed useAppContext dependency
   const user = null; // Mock user as null since we're removing authentication context

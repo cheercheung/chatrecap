@@ -1,0 +1,84 @@
+{
+  "title": "Chat Recap Platforms",
+  "description": "Explore your messaging patterns across different platforms. Get your chatrecap insights into your chat habits, active hours, and most engaging conversations.",
+  "view_guide": "View download guide",
+  "whatsapp": {
+    "title": "WhatsApp Chat Analysis",
+    "description": "Analyze your WhatsApp conversations to understand your messaging patterns and relationship dynamics.",
+    "download_guide": "How to export your WhatsApp chat history",
+    "button": "Recap Whatsapp",
+    "img1": {
+      "src": "/imgs/output/whatsapp/1.png",
+      "alt": "WhatsApp Chat Export Step",
+      "description": "From WhatsApp Web"
+    },
+    "img2": {
+      "src": "/imgs/output/whatsapp/2.png",
+      "alt": "WhatsApp Chat Export Step",
+      "description": "From WhatsApp iOS/Android"
+    }
+  },
+  "instagram": {
+    "title": "Instagram Chat Analysis",
+    "description": "Discover insights from your Instagram direct messages and understand your communication style.",
+    "download_guide": "How to export your Instagram chat history",
+    "button": "Recap Instagram",
+    "src": "/imgs/output/instagram/1.png",
+    "alt": "Instagram Chat Export Step",
+    "guide_description": "Export Steps: Settings > Accounts Center > Your information and permissions > Download or transfer information. Note: After requesting your data, Instagram will email you a download link within 48 hours. The chat history will be in JSON format."
+  },
+  "snapchat": {
+    "title": "Snapchat Chat Analysis",
+    "description": "Analyze your Snapchat conversations to understand your communication style and patterns.",
+    "download_guide": "How to export your Snapchat chat history",
+    "button": "Recap SnapChat",
+    "src": "/imgs/output/snapchat/1.png",
+    "alt": "Snapchat Chat Export Step",
+    "guide_description": "Go to Settings → My Data/Select 'Export JSON Files' for data portability purposes/Make sure 'Chat History' is selected/Submit your request and wait for the email/Download the ZIP file and extract it/Find the 'chat_history.json' file in the extracted folder/Upload this JSON file below"
+  },
+  "telegram": {
+    "title": "Telegram Chat Analysis",
+    "description": "Get insights from your Telegram conversations and understand your messaging patterns.",
+    "download_guide": "How to export your Telegram chat history",
+    "button": "Recap Telegram",
+    "src": "/imgs/output/telegram/1.png",
+    "alt": "Telegram Chat Export Step",
+    "guide_description": "Export Steps: 1. Open Telegram Desktop app 2. Go to Chat → Export Chat History 3. Export with no media in JSON format Note: Please ensure you have the latest version of Telegram Desktop installed. The export feature is only available in the desktop application."
+  },
+  "discord": {
+    "title": "Discord Chat Analysis",
+    "description": "Analyze your Discord chats to better understand your communication in gaming and community contexts.",
+    "download_guide": "How to export your Discord chat history",
+    "button": "Recap Discord",
+    "src": "/imgs/output/discord/1.png",
+    "alt": "Discord Chat Export Step",
+    "guide_description": "Export Steps: 1. Download and install Discord Chat Exporter 2. Get your Discord token 3. Export chat history to JSON format. Note: Using third-party tools like Discord Chat Exporter may violate Discord's Terms of Service. Please use at your own risk."
+  },
+  "chatrecapplatform": {
+    "badge": "Chat Analysis",
+    "description": "Select the platform you want to analyze your chat history from. We support multiple messaging platforms to provide comprehensive insights.",
+    "meta": {
+      "description": "Select the platform you want to analyze your chat from",
+      "title": "Choose Your Chat Platform"
+    },
+    "platforms": {
+      "discord": {
+        "description": "Analyze your Discord chats to better understand your communication in gaming and community contexts."
+      },
+      "instagram": {
+        "description": "Discover insights from your Instagram direct messages and understand your communication style."
+      },
+      "snapchat": {
+        "description": "Analyze your Snapchat conversations to understand your communication style and patterns."
+      },
+      "telegram": {
+        "description": "Get insights from your Telegram conversations and understand your messaging patterns."
+      },
+      "whatsapp": {
+        "description": "Analyze your WhatsApp conversations to understand your messaging patterns and relationship dynamics."
+      }
+    },
+    "select_button": "Select Platform",
+    "title": "Choose Your Chat Platform"
+  }
+}

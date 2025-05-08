@@ -1,0 +1,217 @@
+{
+  "metadata": {
+    "title": "Chat Recap - AI Chat Analysis Tool",
+    "description": "Analyze your chat history with AI to gain insights into your relationships and communication patterns.",
+    "keywords": "chat, ai, analysis, chat history, conversation patterns, messaging insights, cross platform chat analysis, chat export, chat metrics"
+  },
+  "hero": {
+    "happy_user": "from 999+ happy users",
+    "announcement": {
+      "label": "2025",
+      "title": "💕 Now Available for almost all the paltforms!",
+      "url": "/#pricing"
+    },
+    "buttons": {
+      "free_analyze": "Free Analyze"
+    },
+    "description": "Chat Recap AI unlocks the hidden patterns and insights in your chats, revealing communication patterns, response times, and emotional connections.",
+    "highlight_text": "ChatRecap AI",
+    "tip": "⌛️ limited Time offer 100% off",
+    "title": "ChatRecap AI help you to Analyze chats in relationships"
+  },
+  "feature": {
+    "description": "Discover powerful insights from your conversations with our advanced analysis tools.",
+    "title": "Key Features of ChatRecap AI",
+    "items": [
+      {
+        "title": "Cross-Platform Interaction Analysis",
+        "description": "Analyze your chat frequency and patterns across WhatsApp, WeChat, Instagram, and more. Identify peak periods, track response time changes, and discover unified trends across platforms."
+      },
+      {
+        "title": "Communication Style and Language Analysis",
+        "description": "Use advanced natural language processing to uncover your unique communication style, analyze vocabulary usage, emoji patterns, and reveal emotional and relationship-specific language patterns."
+      },
+      {
+        "title": "Conversation Flow & Dynamics",
+        "description": "Understand how conversations start, evolve, and end. Track who initiates interactions more often and detect shifts in dialogue topics and emotional tones."
+      },
+      {
+        "title": "Emotional Sentiment & Health Insights",
+        "description": "Detect emotional undertones, identify healthy or unhealthy behavior patterns, and build awareness to foster better communication habits in your relationships."
+      },
+      {
+        "title": "Engagement Depth & Frequency Metrics",
+        "description": "Measure reply lengths, conversation depths, and engagement frequency to assess the level of investment from both parties."
+      },
+      {
+        "title": "Personal Information Sharing Balance",
+        "description": "Reveal who shares more personal details, track openness levels, and discover tips to create a more balanced, reciprocal relationship dynamic."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Recap your relationship Today",
+    "description": "Upload your chat history to start your chat analysis journey. Our AI-powered platform provides deep insights and detailed chat recaps about your relationship dynamics, communication patterns, and emotional connections.",
+    "buttons": {
+      "title": "Try Now"
+    }
+  },
+  "stats": {
+    "title": "People Love ChatRecap AI",
+    "description": "for saving time and improving productivity.",
+    "items": [
+      {
+        "label": "10K+",
+        "title": "Trusted by",
+        "description": "Users"
+      },
+      {
+        "label": "50K+",
+        "title": "Recaped",
+        "description": "chats"
+      },
+      {
+        "label": "80K+",
+        "title": "Discovered",
+        "description": "insights"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions About ChatRecap AI",
+    "description": "Have another question? Contact us via email or chat.",
+    "items": [
+      {
+        "description": "ChatRecap AI is a versatile chat analyzer designed primarily for WhatsApp chat analysis. Our WhatsApp chat analyzer provides comprehensive insights with minimal setup. Beyond WhatsApp, ChatRecap AI supports Instagram analysis, allowing you to understand your Instagram direct message patterns. We also fully support Telegram, Discord, and Snapchat conversations. Our development roadmap includes expanding to more messaging platforms to deliver the most comprehensive chat analysis solution available.",
+        "title": "What types of chat data can ChatRecap AI analyze?"
+      },
+      {
+        "description": "Your privacy is our fundamental commitment. ChatRecap AI employs end-to-end encryption during all data transfers and analysis processes. After completing your chat analysis, we automatically purge all data from our systems. Our platform is designed with a zero-storage policy for conversation content, ensuring your personal messages remain completely private and secure.",
+        "title": "How does ChatRecap AI protect my privacy?"
+      },
+      {
+        "description": "ChatRecap AI utilizes advanced machine learning models trained on diverse conversation datasets to deliver highly accurate pattern recognition. Our algorithms identify communication trends with remarkable precision, though we emphasize that context matters in all human interactions. We recommend using our chat analysis insights as valuable guidance that complements your personal understanding of relationships rather than as definitive conclusions.",
+        "title": "How reliable is ChatRecap AI's analysis?"
+      },
+      {
+        "description": "ChatRecap AI delivers detailed analysis across multiple dimensions: message frequency patterns, response time analytics, emotional content mapping, engagement level metrics, and potential communication pattern flags. Premium users receive enhanced insights including communication style compatibility assessments and relationship dynamic evaluations based on longitudinal chat data analysis.",
+        "title": "What insights does ChatRecap AI provide?"
+      },
+      {
+        "description": "ChatRecap AI's advanced processing engine typically completes analysis within minutes, regardless of chat size. Processing time varies based on conversation length and analysis depth selected. Our interface provides real-time progress tracking with percentage completion indicators throughout the analysis process.",
+        "title": "How quickly does ChatRecap AI process my chat history?"
+      },
+      {
+        "description": "Absolutely! ChatRecap AI excels at analyzing both one-on-one and group conversations. For group chats, our platform generates both individual participation metrics and group-level interaction patterns, revealing the communication dynamics within your social or professional circles.",
+        "title": "Can ChatRecap AI handle group conversations?"
+      },
+      {
+        "description": "Early access members enjoy priority access to ChatRecap AI's full feature set and receive exclusive introductory pricing. Members also benefit from extended premium features during their initial subscription period and gain early access to new analysis tools as they're developed.",
+        "title": "What benefits do early access members receive?"
+      },
+      {
+        "description": "As a specialized WhatsApp chat analyzer, we've streamlined this process: 1) Open WhatsApp and navigate to your target conversation 2) Tap the three-dots menu > More > Export chat 3) Choose whether to include media (our analyzer processes both options) 4) Upload the exported file directly to ChatRecap AI for immediate analysis. For other platforms like Instagram, Telegram, Discord, or Snapchat, simply follow our platform-specific export guides available in our Help Center.",
+        "title": "How do I export my chat for analysis with ChatRecap AI?"
+      },
+      {
+        "description": "ChatRecap AI stands apart from basic WhatsApp chat analyzers through our proprietary deep learning models specifically designed for relationship communication analysis. Unlike standard WhatsApp chat analyzers that provide only basic statistics, ChatRecap AI detects subtle emotional patterns, relationship dynamics, and communication trends that other tools miss. Our platform offers unique features including sentiment progression tracking, conversation quality assessment, and relationship health indicators based on established communication research.",
+        "title": "What makes ChatRecap AI different from other chat analyzers?"
+      },
+      {
+        "description": "ChatRecap AI's comprehensive analysis includes detailed metrics across multiple dimensions: message frequency patterns (by day/hour), response time analytics (average and trends), emotional content mapping (positive/negative sentiment distribution), conversation topic clustering, and engagement level metrics. Premium users receive advanced insights including communication style compatibility assessments, media sharing pattern analysis, peak activity time identification, and relationship dynamic evaluations based on longitudinal chat data analysis.",
+        "title": "What specific metrics does ChatRecap AI's analysis reveal?"
+      }
+    ]
+  },
+  "scenarios": {
+    "title": "Chat Analysis & Recaps for All Relationship Types",
+    "description": "Our chat analysis AI understands the nuances of different relationship types. Whether it's romantic partners, family members, friends, or colleagues, our analysis reveals unique insights and creates personalized chat recaps for each relationship dynamic.",
+    "items": [
+      {
+        "title": "Romantic Relationships",
+        "description": "Understand communication patterns with your partner and strengthen your emotional connection.",
+        "buttonText": "Analyze My Relationship"
+      },
+      {
+        "title": "Family Connections",
+        "description": "Analyze family group chats and improve communication with loved ones.",
+        "buttonText": "Analyze Family Chat"
+      },
+      {
+        "title": "2 Year Dating Analysis",
+        "description": "Track your relationship growth over time and discover how your communication has evolved.",
+        "buttonText": "Analyze Relationship Growth"
+      },
+      {
+        "title": "Friendships",
+        "description": "Discover interaction patterns with friends and nurture your social connections.",
+        "buttonText": "Analyze Friendship"
+      }
+    ]
+  },
+  "simple_pricing": {
+    "title": "Buy Credits for In-Depth Chat Analysis",
+    "subtitle": "1 credit ≈ 10,000 words · No expiration · No subscription required",
+    "description": "Recap AI helps you unlock emotional insights, detect red/green flags, and understand your chat dynamics",
+    "plans": [
+      {
+        "title": "Basic Pack",
+        "description": "Perfect for first-time users or single long chats",
+        "price": "$9.90 USD",
+        "tipText": "Great for casual insights or reviewing one relationship",
+        "buttonText": "Get Basic Pack",
+        "features": [
+          "Get 30 credits",
+          "Analyze ≈ 2–3 months of daily conversations",
+          "Detect relationship red & green flags",
+          "Understand emotional tone and communication styles",
+          "Analyze chats from WhatsApp, Instagram, Telegram & more"
+        ]
+      },
+      {
+        "title": "Super Value Pack 🔥",
+        "description": "Best for deep-dive users or long-term conversations",
+        "price": "$19.90 USD",
+        "tipText": "Ideal for deep emotional analysis, timelines, and sharing insights with friends",
+        "buttonText": "Get Super Value Pack",
+        "popularLabel": "Most Popular",
+        "features": [
+          "Get 100 credits",
+          "Analyze ≈ 6–10 months of relationship history",
+          "Includes everything in Basic Pack",
+          "Save 40% per credit",
+          "Priority processing for faster results"
+        ]
+      }
+    ]
+  },
+  "image": {
+    "item1": {
+      "src": "/imgs/features/1.png",
+      "alt": "Chat Analysis Example 1",
+      "title": "Chat Analysis Example",
+      "description": "Upload your chat history to gain deep insights into your relationship dynamics and communication patterns."
+    },
+    "item2": {
+      "src": "/imgs/features/2.png",
+      "alt": "Chat Analysis Example 2",
+      "title": "Cross-Platform Support",
+      "description": "Analyze chats from WhatsApp, Instagram, Discord, Telegram, and more platforms."
+    },
+    "item3": {
+      "src": "/imgs/features/3.png",
+      "alt": "Chat Analysis Example 3",
+      "title": "Detailed Insights",
+      "description": "Get comprehensive analysis of your communication patterns, response times, and emotional connections."
+    },
+    "item4": {
+      "src": "/imgs/features/4.png",
+      "alt": "Chat Analysis Example 4",
+      "title": "AI-Powered Analysis",
+      "description": "Our advanced AI analyzes your conversations to reveal hidden patterns and insights."
+    },
+    "previous": "Previous",
+    "next": "Next",
+    "slide": "Slide"
+  }
+}

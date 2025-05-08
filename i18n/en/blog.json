@@ -1,0 +1,58 @@
+{
+  "title": "Relationship Insights",
+  "description": "Tips, resources, and updates about relationship communication",
+  "read_more_text": "Read More",
+  "categories": {
+    "all": "All",
+    "communication": "Communication",
+    "relationships": "Relationships",
+    "technology": "Technology",
+    "tips": "Tips",
+    "updates": "Updates"
+  },
+  "post": {
+    "published_on": "Published on",
+    "by": "by",
+    "min_read": "min read",
+    "share": "Share",
+    "tags": "Tags",
+    "related_posts": "Related Posts",
+    "comments": "Comments",
+    "leave_comment": "Leave a Comment",
+    "name": "Name",
+    "email": "Email",
+    "comment": "Comment",
+    "submit": "Submit",
+    "previous_post": "Previous Post",
+    "next_post": "Next Post"
+  },
+  "sidebar": {
+    "recent_posts": "Recent Posts",
+    "categories": "Categories",
+    "tags": "Tags",
+    "subscribe": "Subscribe",
+    "subscribe_description": "Get the latest posts delivered to your inbox",
+    "email_placeholder": "Your email address",
+    "subscribe_button": "Subscribe"
+  },
+  "search": {
+    "title": "Search",
+    "placeholder": "Search blog posts...",
+    "results": "Search Results",
+    "no_results": "No results found",
+    "search_button": "Search"
+  },
+  "pagination": {
+    "previous": "Previous",
+    "next": "Next",
+    "page": "Page",
+    "of": "of"
+  },
+  "archive": {
+    "title": "Archive",
+    "description": "Browse all blog posts by date",
+    "month": "Month",
+    "year": "Year",
+    "posts": "Posts"
+  }
+}

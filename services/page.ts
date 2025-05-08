@@ -1,4 +1,6 @@
 import { LandingPage } from "@/types/pages/landing";
+// 导入静态翻译
+import { landingTranslations } from '@/lib/static-translations';
 
 // 缓存对象，使用 Map 提高查找性能
 // 键为语言代码，值为页面数据和过期时间
@@ -10,18 +12,14 @@ const CACHE_TTL = 24 * 60 * 60 * 1000;
 // 支持的语言列表
 const SUPPORTED_LOCALES = ['en', 'zh', 'es', 'tr', 'de', 'ko', 'fr', 'ja'];
 
-// 预加载英文数据的 Promise
-let preloadedEnData: Promise<LandingPage> | null = null;
+// 预加载英文数据
+let preloadedEnData: LandingPage | null = null;
 
 // 在服务器启动时预加载英文数据
 if (typeof window === 'undefined') {
-  preloadedEnData = import('@/i18n/pages/landing/en.json')
-    .then(module => {
-      // 确保数据符合 LandingPage 类型
-      const data = module.default;
-      return validateAndFixLandingPageData(data);
-    })
-    .catch(() => ({}));
+  // 使用静态翻译，不再动态导入
+  const rawData = landingTranslations.landing;
+  preloadedEnData = validateAndFixLandingPageData(rawData);
 }
 
 /**
@@ -102,7 +100,7 @@ function isLandingPage(obj: any): obj is LandingPage {
 }
 
 /**
- * 获取落地页数据，带有内存缓存和预加载优化
+ * 获取落地页数据，使用静态翻译
  * @param locale 语言代码
  * @returns 落地页数据
  */
@@ -126,16 +124,14 @@ export async function getLandingPage(locale: string): Promise<LandingPage> {
     return cachedData.data;
   }
 
-  // 缓存未命中或已过期，加载新数据
+  // 缓存未命中或已过期，使用静态翻译
   try {
-    // 使用 import() 动态加载语言文件
-    // Next.js 会自动优化这些导入
-    const module = await import(`@/i18n/pages/landing/${safeLocale}.json`);
-    const rawData = module.default;
+    // 使用静态翻译，不再动态导入
+    const rawData = landingTranslations.landing;
 
     // 验证数据是否符合 LandingPage 接口
     if (!isLandingPage(rawData)) {
-      throw new Error(`Invalid landing page data for locale: ${locale}`);
+      throw new Error(`Invalid landing page data`);
     }
 
     // 验证并修复数据，确保类型兼容
@@ -149,52 +145,21 @@ export async function getLandingPage(locale: string): Promise<LandingPage> {
 
     return data;
   } catch (error) {
-    console.warn(`Failed to load ${safeLocale}.json, falling back to en.json`);
+    console.warn(`Failed to load landing data, using preloaded data`);
 
-    // 尝试加载英文版本作为后备
-    try {
-      // 检查英文缓存
-      const enCache = pageCache.get('en');
-      if (enCache && enCache.expiry > now) {
-        return enCache.data;
-      }
-
-      // 使用预加载的英文数据（如果可用）
-      if (preloadedEnData) {
-        const data = await preloadedEnData;
-
-        // 更新英文缓存
-        pageCache.set('en', {
-          data,
-          expiry: now + CACHE_TTL
-        });
-
-        return data;
-      }
-
-      // 如果没有预加载数据，则动态加载
-      const module = await import("@/i18n/pages/landing/en.json");
-      const rawData = module.default;
-
-      // 验证数据是否符合 LandingPage 接口
-      if (!isLandingPage(rawData)) {
-        throw new Error('Invalid landing page data for fallback locale: en');
-      }
-
-      // 验证并修复数据，确保类型兼容
-      const data = validateAndFixLandingPageData(rawData);
-
+    // 使用预加载的英文数据（如果可用）
+    if (preloadedEnData) {
       // 更新英文缓存
       pageCache.set('en', {
-        data,
+        data: preloadedEnData,
         expiry: now + CACHE_TTL
       });
 
-      return data;
-    } catch (fallbackError) {
-      console.error('Failed to load fallback landing page:', fallbackError);
-      // 返回一个最小的有效 LandingPage 对象
-      return {};
+      return preloadedEnData;
     }
+
+    // 如果没有预加载数据，返回一个最小的有效 LandingPage 对象
+    console.error('No preloaded data available');
+    return {};
   }
 }

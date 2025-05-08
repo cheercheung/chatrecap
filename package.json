@@ -11,6 +11,8 @@
     "start": "NODE_NO_WARNINGS=1 next start",
     "lint": "next lint",
     "analyze": "ANALYZE=true pnpm build",
+    "debug:build": "cross-env NODE_DEBUG=next:build npm run build",
+    "trace:build": "cross-env TRACE=true npm run build",
     "cf:build": "npx @cloudflare/next-on-pages",
     "cf:preview": "pnpm cf:build && wrangler pages dev",
     "cf:deploy": "pnpm cf:build && wrangler pages deploy",

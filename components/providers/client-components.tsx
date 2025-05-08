@@ -5,20 +5,20 @@ import { useEffect, useState } from 'react';
 import CriticalCSS from './critical-css';
 import HydrationFix from './hydration-fix';
 
-// 延迟加载非关键组件
+// 延迟加载非关键组件 - 修复 ChunkLoadError
+// 移除 ssr: false 选项，因为在 Next.js 的新版本中，这在 Server Components 中不被支持
 export const DynamicToaster = dynamic(
   () => import("@/components/ui/toaster").then(mod => mod.Toaster),
   {
-    ssr: false,
     loading: () => null
   }
 );
 
-// 延迟加载分析组件
+// 延迟加载分析组件 - 修复 ChunkLoadError
+// 移除 ssr: false 选项，因为在 Next.js 的新版本中，这在 Server Components 中不被支持
 export const DynamicAnalytics = dynamic(
   () => import("@/components/analytics"),
   {
-    ssr: false,
     loading: () => null
   }
 );

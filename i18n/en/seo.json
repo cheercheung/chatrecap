@@ -1,0 +1,46 @@
+{
+  "global": {
+    "site_name": "ChatRecap AI",
+    "default_title": "ChatRecap AI - Chat Analysis Tool",
+    "default_description": "Analyze your chat history with AI to gain insights into your relationships and communication patterns.",
+    "default_keywords": "chat analysis, ai, chat history, conversation patterns, messaging insights"
+  },
+  "pages": {
+    "home": {
+      "title": "ChatRecap AI - Chat Analysis Tool",
+      "description": "Analyze your chat history with AI to gain insights into your relationships and communication patterns.",
+      "keywords": "chat analysis, ai, chat history, conversation patterns, messaging insights, cross platform chat analysis"
+    },
+    "chat_analysis": {
+      "title": "Chat Analysis - ChatRecap AI",
+      "description": "Upload your chat history and get deep insights. Supports WhatsApp, Instagram, Discord and more platforms.",
+      "keywords": "chat upload, chat analysis, whatsapp analyzer, instagram chat analysis"
+    },
+    "chat_result": {
+      "title": "Chat Analysis Results - ChatRecap AI",
+      "description": "View your chat analysis results, including message frequency, response time, and sentiment analysis.",
+      "keywords": "chat results, chat analysis, message frequency, response time, sentiment analysis"
+    },
+    "ai_insight": {
+      "title": "AI Relationship Insights - ChatRecap AI",
+      "description": "Get AI-generated relationship insights and communication recommendations based on your chat history.",
+      "keywords": "ai insights, relationship analysis, communication patterns, sentiment analysis, communication recommendations"
+    },
+    "dashboard": {
+      "title": "User Dashboard - ChatRecap AI",
+      "description": "Manage your account, view analysis history, and purchase points.",
+      "keywords": "user dashboard, analysis history, points management"
+    }
+  },
+  "social": {
+    "og_title": "ChatRecap AI - Reveal Hidden Insights in Your Chats",
+    "og_description": "Analyze your chat history with AI to gain insights into your relationships and communication patterns.",
+    "twitter_title": "ChatRecap AI - Chat Analysis Tool",
+    "twitter_description": "Analyze your chat history with AI to gain insights into your relationships and communication patterns."
+  },
+  "metadata": {
+    "title": "Chat Recap AI: Free online tool to analyze Chat without signup - chatrecap.io",
+    "description": "Want to analyze your chat history? ChatRecap AI helps you understand conversations across WhatsApp, Instagram, Snapchat, Discord, and Telegram. Get cross-platform insights and discover your communication patterns.",
+    "keywords": "chatrecap, chat analyzer, whatsapp analyzer, instagram chat analysis, discord chat analysis, telegram analyzer, snapchat analysis, chat history, conversation patterns, messaging insights, cross platform chat analysis, chat export, chat metrics"
+  }
+}

@@ -1,0 +1,89 @@
+/*
+ * 静态核心CSS - 无动画版本
+ * 移除所有动画，提高性能
+ */
+
+/* 静态替代类 - 直接应用最终状态 */
+.animate-fade-in,
+.animate-fade-in-up,
+.js-fade-in,
+.js-fade-in-up,
+.js-fade-in-down,
+.js-fade-in-left,
+.js-fade-in-right,
+.js-scale-in {
+  opacity: 1;
+  transform: none;
+}
+
+/* 移除所有动画延迟和持续时间类的效果 */
+.delay-100,
+.delay-200,
+.delay-300,
+.delay-400,
+.delay-500,
+.duration-300,
+.duration-500,
+.duration-700,
+.duration-1000 {
+  animation-delay: 0s;
+  animation-duration: 0s;
+  transition-delay: 0s;
+  transition-duration: 0s;
+}
+
+/* 确保动画相关类不会产生任何效果 */
+.animate-on-scroll,
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+
+/* 禁用所有动画和过渡效果 - 全局设置 */
+* {
+  animation: none !important;
+  transition: none !important;
+}
+
+/* 例外：允许上传组件的动画 */
+[data-upload-component="true"] * {
+  animation: initial !important;
+  transition: initial !important;
+}
+
+/* 为上传组件恢复动画定义 */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* 只在上传组件内部应用这些动画 */
+[data-upload-component="true"] .animate-fade-in {
+  animation: fadeIn 0.3s ease forwards !important;
+}
+
+[data-upload-component="true"] .animate-fade-in-up {
+  animation: fadeInUp 0.3s ease forwards !important;
+}
+
+[data-upload-component="true"] .animate-pulse-subtle {
+  animation: pulse 2s ease-in-out infinite !important;
+}
