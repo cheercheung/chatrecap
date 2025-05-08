@@ -4,10 +4,56 @@ import React, { forwardRef } from 'react';
 import { useTranslations } from 'next-intl';
 import { Overview, TimeAnalysis } from '@/types/analysis';
 import { motion } from 'framer-motion';
+import { cn } from '@/lib/utils';
 
 type Props = {
   overview: Overview;
   timeAnalysis?: TimeAnalysis;
+};
+
+/**
+ * 卡片样式常量
+ *
+ * 用于统一管理所有卡片的样式，便于一次性修改
+ *
+ * 样式分为三类：
+ * 1. 普通卡片样式 - 用于常规数据展示（如Response Time, Messages Per Day）
+ * 2. 宽卡片样式 - 用于重要数据展示（如Total Messages）
+ * 3. 用户数据卡片样式 - 用于展示用户对比数据（如Messages Per User, Words Per User）
+ */
+const CARD_STYLES = {
+  // 普通卡片容器 - 用于常规数据展示的卡片外层容器
+  container: "bg-background/70 rounded-lg py-5 px-6 border border-primary/5 shadow-sm",
+
+  // 宽卡片容器 - 用于重要数据展示的卡片外层容器，垂直内边距更大
+  wideContainer: "bg-background/70 rounded-lg py-6 px-8 border border-primary/5 shadow-sm",
+
+  // 普通卡片标题 - 用于常规卡片的标题
+  title: "text-base font-medium text-muted-foreground mb-2 text-center",
+
+  // 宽卡片标题 - 用于重要卡片的标题，字体更大，下边距更大
+  wideTitle: "text-lg font-medium text-muted-foreground mb-4 text-center",
+
+  // 普通数值 - 用于展示常规数据的数值
+  value: "text-4xl font-bold text-primary",
+
+  // 宽卡片数值 - 用于展示重要数据的数值，字体更大
+  wideValue: "text-6xl font-bold text-primary",
+
+  // 用户数据数值 - 用于展示用户数据的数值，使用粉色突出显示
+  userValue: "text-5xl font-bold text-pink-500 mb-2",
+
+  // 普通描述文本 - 用于数值下方的描述文本
+  description: "text-sm text-muted-foreground",
+
+  // 宽卡片描述文本 - 用于重要数据下方的描述文本，字体更大，有上边距
+  wideDescription: "text-base text-muted-foreground mt-2",
+
+  // 用户数据容器 - 用于包含两个用户数据的容器，左右对齐
+  userContainer: "flex justify-between px-4 mt-4",
+
+  // 数值容器 - 用于包含数值和描述的容器，垂直居中对齐
+  valueContainer: "flex flex-col items-center"
 };
 
 const OverviewBlock = forwardRef<HTMLDivElement, Props>(({ overview, timeAnalysis }, ref) => {
@@ -28,112 +74,73 @@ const OverviewBlock = forwardRef<HTMLDivElement, Props>(({ overview, timeAnalysi
       </h2>
 
       <div className="space-y-6">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {/* Messages Section */}
-          <div className="bg-background/70 rounded-lg p-4 border border-primary/5 shadow-sm">
-            <div className="text-sm font-medium text-muted-foreground mb-2 text-center">{t('messages')}</div>
-            <div className="flex flex-col items-center">
-              <div className="text-3xl font-bold text-primary">{overview.totalMessages}</div>
-              <div className="text-xs text-muted-foreground">{t('total_messages')}</div>
-            </div>
-            <div className="flex justify-between mt-4">
-              <div className="text-center">
-                <div className="text-lg font-semibold">{overview.sender1.messages}</div>
-                <div className="text-xs text-muted-foreground">
-                  {overview.sender1.name}
-                </div>
-              </div>
-              <div className="text-center">
-                <div className="text-lg font-semibold">{overview.sender2.messages}</div>
-                <div className="text-xs text-muted-foreground">
-                  {overview.sender2.name}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Words Section */}
-          <div className="bg-background/70 rounded-lg p-4 border border-primary/5 shadow-sm">
-            <div className="text-sm font-medium text-muted-foreground mb-2 text-center">{t('words')}</div>
-            <div className="flex flex-col items-center">
-              <div className="text-3xl font-bold text-primary">{overview.totalWords}</div>
-              <div className="text-xs text-muted-foreground">{t('total_words')}</div>
-            </div>
-            <div className="flex justify-between mt-4">
-              <div className="text-center">
-                <div className="text-lg font-semibold">{overview.sender1.words}</div>
-                <div className="text-xs text-muted-foreground">
-                  {overview.sender1.name}
-                </div>
-              </div>
-              <div className="text-center">
-                <div className="text-lg font-semibold">{overview.sender2.words}</div>
-                <div className="text-xs text-muted-foreground">
-                  {overview.sender2.name}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Words Per Message Section */}
-          <div className="bg-background/70 rounded-lg p-4 border border-primary/5 shadow-sm">
-            <div className="text-sm font-medium text-muted-foreground mb-2 text-center">{t('words_per_message')}</div>
-            <div className="flex flex-col items-center">
-              <div className="text-3xl font-bold text-primary">{overview.wordsPerMessage}</div>
-              <div className="text-xs text-muted-foreground">{t('words_per_message')}</div>
-            </div>
-            <div className="flex justify-between mt-4">
-              <div className="text-center">
-                <div className="text-lg font-semibold">{overview.sender1.wordsPerMessage}</div>
-                <div className="text-xs text-muted-foreground">
-                  {overview.sender1.name}
-                </div>
-              </div>
-              <div className="text-center">
-                <div className="text-lg font-semibold">{overview.sender2.wordsPerMessage}</div>
-                <div className="text-xs text-muted-foreground">
-                  {overview.sender2.name}
-                </div>
-              </div>
+        {/* Row 1: Total Messages Card (Full Width) */}
+        <div className="w-full">
+          <div className={CARD_STYLES.wideContainer}>
+            <div className={CARD_STYLES.wideTitle}>{'Total Messages'}</div>
+            <div className={CARD_STYLES.valueContainer}>
+              <div className={CARD_STYLES.wideValue}>{overview.totalMessages}</div>
+              <div className={CARD_STYLES.wideDescription}>{'messages exchanged'}</div>
             </div>
           </div>
         </div>
 
-        {/* Communication Story */}
-        <div className="mt-6">
-          <div className="bg-background/70 rounded-lg p-5 border border-primary/5 shadow-sm text-muted-foreground">
-            <div className="mb-3">
-              {t.rich('overview_story_part1', {
-                // 直接使用原始数据，不进行翻译
-                totalMessages: overview.totalMessages,
-                sender1Name: overview.sender1.name,
-                sender1Messages: overview.sender1.messages,
-                sender2Name: overview.sender2.name,
-                sender2Messages: overview.sender2.messages,
-                span: (chunks) => <span className="highlight">{chunks}</span>
-              })}
+        {/* Row 2 & 3: Two-column cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
+
+          {/* Sender Messages Card */}
+          <div className={CARD_STYLES.container}>
+            <div className={CARD_STYLES.title}>{'Messages Per User'}</div>
+            <div className={CARD_STYLES.userContainer}>
+              <div className="text-center">
+                <div className={CARD_STYLES.userValue}>{overview.sender1.messages}</div>
+                <div className={CARD_STYLES.description}>
+                  {overview.sender1.name}
+                </div>
+              </div>
+              <div className="text-center">
+                <div className={CARD_STYLES.userValue}>{overview.sender2.messages}</div>
+                <div className={CARD_STYLES.description}>
+                  {overview.sender2.name}
+                </div>
+              </div>
             </div>
-            <div className="mb-3">
-              {t.rich('overview_story_part2', {
-                // 直接使用原始数据，不进行翻译
-                totalWords: overview.totalWords,
-                sender1Name: overview.sender1.name,
-                sender1Words: overview.sender1.words,
-                sender2Name: overview.sender2.name,
-                sender2Words: overview.sender2.words,
-                wordsPerMessage: overview.wordsPerMessage,
-                span: (chunks) => <span className="highlight">{chunks}</span>
-              })}
+          </div>
+
+          {/* Sender Words Card */}
+          <div className={CARD_STYLES.container}>
+            <div className={CARD_STYLES.title}>{'Words Per User'}</div>
+            <div className={CARD_STYLES.userContainer}>
+              <div className="text-center">
+                <div className={CARD_STYLES.userValue}>{overview.sender1.words}</div>
+                <div className={CARD_STYLES.description}>
+                  {overview.sender1.name}
+                </div>
+              </div>
+              <div className="text-center">
+                <div className={CARD_STYLES.userValue}>{overview.sender2.words}</div>
+                <div className={CARD_STYLES.description}>
+                  {overview.sender2.name}
+                </div>
+              </div>
             </div>
-            <div>
-              {t.rich('overview_story_part3', {
-                // 直接使用原始数据，不进行翻译
-                mostActiveDay: overview.mostActiveDay,
-                mostActiveHour: timeAnalysis ? timeAnalysis.mostActiveHour.toString() : '--',
-                avgMessagesPerDay: overview.avgMessagesPerDay.toFixed(1),
-                responseTime: overview.responseTime,
-                span: (chunks) => <span className="highlight">{chunks}</span>
-              })}
+          </div>
+
+          {/* Response Time Card */}
+          <div className={CARD_STYLES.container}>
+            <div className={CARD_STYLES.title}>{'Response Time'}</div>
+            <div className={CARD_STYLES.valueContainer}>
+              <div className={CARD_STYLES.value}>{overview.responseTime}</div>
+              <div className={CARD_STYLES.description}>{'average response time'}</div>
+            </div>
+          </div>
+
+          {/* Messages Per Day Card */}
+          <div className={CARD_STYLES.container}>
+            <div className={CARD_STYLES.title}>{'Messages Per Day'}</div>
+            <div className={CARD_STYLES.valueContainer}>
+              <div className={CARD_STYLES.value}>{overview.avgMessagesPerDay.toFixed(1)}</div>
+              <div className={CARD_STYLES.description}>{'average messages per day'}</div>
             </div>
           </div>
         </div>

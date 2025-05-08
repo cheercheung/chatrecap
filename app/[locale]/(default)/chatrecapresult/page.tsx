@@ -73,7 +73,7 @@ export default async function ChatRecapResultPage({
   return (
     <Suspense fallback={
       <div className="min-h-screen flex items-center justify-center">
-        <div className="animate-pulse text-xl">加载中...</div>
+        <div className="animate-pulse text-xl">loading...</div>
       </div>
     }>
       <ChatRecapResultPageComponent analysisData={analysisData} />
