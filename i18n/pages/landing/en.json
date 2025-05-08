@@ -250,7 +250,7 @@
         "alt": "Snapchat Chat Export Step",
         "description":"Go to Settings → My Data/Select 'Export JSON Files' for data portability purposes/Make sure 'Chat History' is selected/Submit your request and wait for the email/Download the ZIP file and extract it/Find the 'chat_history.json' file in the extracted folder/Upload this JSON file below"
       },
-  
+
   "scenarios": {
     "description": "Our chat analysis AI understands the nuances of different relationship types. Whether it's romantic partners, family members, friends, or colleagues, our analysis reveals unique insights and creates personalized chat recaps for each relationship dynamic.",
     "items": [
@@ -281,83 +281,71 @@
     "title": "Chat Analysis & Recaps for All Relationship Types"
   },
   "simple_pricing": {
-    "description": "Start your chat analysis journey with the right plan for your needs.",
+    "description": "Recap AI helps you unlock emotional insights, detect red/green flags, and understand your chat dynamics",
     "label": "Pricing",
     "name": "pricing",
     "plans": [
       {
+        "amount": 9.9,
         "buttonIcon": "RiFlashlightFill",
-        "buttonText": "Get Started",
-        "buttonUrl": "/chatrecapanalysis",
-        "description": "Start your chat analysis journey with essential insights.",
+        "buttonText": "Get Basic Pack",
+        "buttonUrl": "/payment",
+        "description": "Perfect for first-time users or single long chats",
         "features": [
           {
-            "text": "Basic message count analysis"
+            "text": "Get 30 credits"
           },
           {
-            "text": "Daily chat activity patterns"
+            "text": "Analyze ≈ 2–3 months of daily conversations"
           },
           {
-            "text": "Top chat participants overview"
+            "text": "Detect relationship red & green flags"
           },
           {
-            "text": "Limited data processing"
+            "text": "Understand emotional tone and communication styles"
           },
           {
-            "text": "7-day data retention"
-          },
-          {
-            "text": "Standard support"
+            "text": "Analyze chats from WhatsApp, Instagram, Telegram & more"
           }
         ],
-        "isFree": true,
-        "price": "$0",
-        "productId": "free",
-        "tipText": "No credit card required",
-        "title": "Free"
+        "price": "$9.90 USD",
+        "productId": "basic",
+        "tipText": "Great for casual insights or reviewing one relationship",
+        "title": "🔹 Basic Pack"
       },
       {
-        "amount": 990,
+        "amount": 19.9,
         "buttonIcon": "RiFlashlightFill",
-        "buttonText": "Upgrade Now",
+        "buttonText": "Get Super Value Pack",
         "buttonUrl": "/payment",
-        "description": "Unlock comprehensive chat analysis and advanced features.",
+        "description": "Best for deep-dive users or long-term conversations",
         "features": [
           {
-            "text": "All FREE features"
+            "text": "Get 100 credits"
           },
           {
-            "text": "Sentiment analysis"
+            "text": "Analyze ≈ 6–10 months of relationship history"
           },
           {
-            "text": "Topic clustering"
+            "text": "Includes everything in Basic Pack"
           },
           {
-            "text": "Interactive visualizations"
+            "text": "Save 40% per credit"
           },
           {
-            "text": "Custom date range analysis"
-          },
-          {
-            "text": "Relationship insights"
-          },
-          {
-            "text": "30-day data retention"
-          },
-          {
-            "text": "Priority support"
+            "text": "Priority processing for faster results"
           }
         ],
         "isPopular": true,
-        "originalPrice": "$19.90",
-        "popularLabel": "Popular",
-        "price": "$9.90",
-        "productId": "premium",
-        "tipText": "Best value for complete analysis",
-        "title": "Premium"
+        "popularLabel": "Most Popular",
+        "price": "$19.90 USD",
+        "productId": "super",
+        "tipText": "Ideal for deep emotional analysis, timelines, and sharing insights with friends",
+        "title": "Super Value Pack 🔥"
       }
     ],
-    "title": "Choose Your Analysis Plan"
+    "title": "Buy Credits for In-Depth Chat Analysis",
+    "subtitle": "1 credit ≈ 10,000 words · No expiration · No subscription required"
   },
   "stats": {
     "description": "for saving time and improving productivity.",
@@ -440,7 +428,7 @@
     "next": "Next",
     "slide": "Slide"
   },
- 
+
   "footer": {
     "copyright": "© 2025 ChatRecap AI. All rights reserved.",
     "privacy_policy": "Privacy Policy",

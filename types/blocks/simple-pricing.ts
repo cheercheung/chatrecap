@@ -32,5 +32,7 @@ export interface SimplePricing {
   titleKey?: string; // Translation key for the title
   description: string;
   descriptionKey?: string; // Translation key for the description
+  subtitle?: string; // Subtitle text displayed below the title
+  subtitleKey?: string; // Translation key for the subtitle
   plans: PricingPlan[];
 }
