@@ -4,8 +4,8 @@ import React, { forwardRef } from 'react';
 import { useTranslations } from 'next-intl';
 import { TextAnalysis } from '@/types/analysis';
 import { motion } from 'framer-motion';
-import { WordCloud, TopWordsTable, BarChart } from '@/components/charts';
-import HighlightedText from '@/components/ui/highlighted-text';
+import { WordCloud } from '@/components/charts';
+import CustomBarChart from '@/components/charts/custom-barchart';
 
 type Props = {
   textAnalysis: TextAnalysis;
@@ -45,40 +45,16 @@ const TextAnalysisBlock = forwardRef<HTMLDivElement, Props>(
         </h2>
 
         <div className="space-y-6">
-          {/* Common Words and Emojis */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {/* Row 1: Three Cards - Common Words, Emojis, and Sentiment Analysis */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {/* Common Words Card */}
             <div className="bg-background/70 rounded-lg p-4 border border-primary/5 shadow-sm flex flex-col items-center">
               <div className="text-lg font-medium text-foreground mb-3 text-center">{t('common_words')}</div>
-              <div className="flex flex-col items-center mb-4">
+              <div className="flex flex-col items-center">
                 <div className="text-sm text-muted-foreground">{t('total_unique_words')}</div>
                 <div className="text-2xl font-bold text-primary">
                   {filteredCommonWords.length}
                   <span className="text-sm ml-1 text-muted-foreground">{t('words')}</span>
-                </div>
-              </div>
-
-              <div className="grid grid-cols-2 gap-2 w-full">
-                <div className="bg-background/50 rounded-md p-3">
-                  <div className="text-sm font-medium text-foreground mb-2 text-center">{textAnalysis.sender1.name}</div>
-                  <div className="space-y-1 text-center">
-                    {textAnalysis.sender1.commonWords.slice(0, 3).map((item, index) => (
-                      <div key={index} className="text-sm text-muted-foreground">
-                        {item.word} <span className="text-xs">({item.count})</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="bg-background/50 rounded-md p-3">
-                  <div className="text-sm font-medium text-foreground mb-2 text-center">{textAnalysis.sender2.name}</div>
-                  <div className="space-y-1 text-center">
-                    {textAnalysis.sender2.commonWords.slice(0, 3).map((item, index) => (
-                      <div key={index} className="text-sm text-muted-foreground">
-                        {item.word} <span className="text-xs">({item.count})</span>
-                      </div>
-                    ))}
-                  </div>
                 </div>
               </div>
             </div>
@@ -86,123 +62,87 @@ const TextAnalysisBlock = forwardRef<HTMLDivElement, Props>(
             {/* Emojis Card */}
             <div className="bg-background/70 rounded-lg p-4 border border-primary/5 shadow-sm flex flex-col items-center">
               <div className="text-lg font-medium text-foreground mb-3 text-center">{t('emojis')}</div>
-              <div className="flex flex-col items-center mb-4">
+              <div className="flex flex-col items-center">
                 <div className="text-sm text-muted-foreground">{t('total_emojis')}</div>
                 <div className="text-2xl font-bold text-primary">
                   {textAnalysis.topEmojis.reduce((sum, item) => sum + item.count, 0)}
                   <span className="text-sm ml-1 text-muted-foreground">{t('emojis')}</span>
                 </div>
               </div>
-
-              <div className="grid grid-cols-2 gap-2 w-full">
-                <div className="bg-background/50 rounded-md p-3">
-                  <div className="text-sm font-medium text-foreground mb-2 text-center">
-                    {textAnalysis.sender1.name}
-                  </div>
-                  <div className="space-y-1 text-center">
-                    {textAnalysis.sender1.topEmojis.slice(0, 3).map((item, index) => (
-                      <div key={index} className="text-sm">
-                        {item.emoji} <span className="text-xs text-muted-foreground">({item.count})</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="bg-background/50 rounded-md p-3">
-                  <div className="text-sm font-medium text-foreground mb-2 text-center">
-                    {textAnalysis.sender2.name}
-                  </div>
-                  <div className="space-y-1 text-center">
-                    {textAnalysis.sender2.topEmojis.slice(0, 3).map((item, index) => (
-                      <div key={index} className="text-sm">
-                        {item.emoji} <span className="text-xs text-muted-foreground">({item.count})</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Sentiment Analysis */}
-          <div className="bg-background/70 rounded-lg p-4 border border-primary/5 shadow-sm flex flex-col items-center">
-            <div className="text-lg font-medium text-foreground mb-3 text-center">{t('sentiment_analysis')}</div>
-            <div className="flex flex-col items-center mb-4">
-              <div className="text-sm text-muted-foreground">{t('overall_sentiment')}</div>
-              <div className="text-2xl font-bold text-primary">
-                {getSentimentDescription(textAnalysis.sentimentScore)}
-              </div>
-              <div className="text-sm text-muted-foreground">
-                {t('sentiment_score')}: {(textAnalysis.sentimentScore * 100).toFixed(0)}%
-              </div>
             </div>
 
-            <div className="bg-background/50 rounded-md p-4 text-muted-foreground w-full">
-              <p className="text-center">
-                <HighlightedText
-                  text={t('sentiment_description', {
-                    sentimentScore: (textAnalysis.sentimentScore * 100).toFixed(0) + '%',
-                    sentimentDescription: getSentimentDescription(textAnalysis.sentimentScore)
-                  })}
-                />
-              </p>
-            </div>
-          </div>
-
-          {/* Word Cloud & Top Words */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="md:col-span-2 bg-background/70 rounded-lg p-4 border border-primary/5 shadow-sm flex flex-col items-center">
-              <div className="text-lg font-medium text-foreground mb-3 text-center">{t('word_cloud')}</div>
-              <div className="h-64 w-full relative">
-                <WordCloud
-                  words={filteredCommonWords}
-                  excludeWordFn={filterMeaningfulWords}
-                  maxWords={80}
-                  maxFontSize={2.0}
-                  minFontSize={0.7}
-                  useRandomRotation={false}
-                  colorMode="opacity"
-                  className="h-full w-full"
-                />
-              </div>
-            </div>
-
+            {/* Sentiment Analysis Card */}
             <div className="bg-background/70 rounded-lg p-4 border border-primary/5 shadow-sm flex flex-col items-center">
-              <div className="text-lg font-medium text-foreground mb-3 text-center">{t('top_words')}</div>
-              <TopWordsTable
-                words={filteredCommonWords.slice(0, 10)}
-                className="h-64 overflow-auto w-full"
+              <div className="text-lg font-medium text-foreground mb-3 text-center">{t('sentiment_analysis')}</div>
+              <div className="flex flex-col items-center">
+                <div className="text-sm text-muted-foreground">{t('overall_sentiment')}</div>
+                <div className="text-2xl font-bold text-primary">
+                  {getSentimentDescription(textAnalysis.sentimentScore)}
+                </div>
+                <div className="text-sm text-muted-foreground">
+                  {t('sentiment_score')}: {(textAnalysis.sentimentScore * 100).toFixed(0)}%
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Row 2: Word Cloud */}
+          <div className="bg-background/70 rounded-lg p-4 border border-primary/5 shadow-sm flex flex-col items-center">
+            <div className="text-lg font-medium text-foreground mb-3 text-center">{t('word_cloud')}</div>
+            <div className="h-64 w-full relative">
+              <WordCloud
+                words={filteredCommonWords}
+                excludeWordFn={filterMeaningfulWords}
+                maxWords={80}
+                maxFontSize={2.0}
+                minFontSize={0.7}
+                useRandomRotation={false}
+                colorMode="opacity"
+                className="h-full w-full"
               />
             </div>
           </div>
 
-          {/* Emoji Charts */}
+          {/* Row 3: Common Words Bar Charts */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="bg-background/70 rounded-lg p-4 border border-primary/5 shadow-sm flex flex-col items-center">
-              <div className="text-lg font-medium text-foreground mb-3 text-center">
-                {t('top_emojis', {
-                  name: textAnalysis.sender1.name
-                })}
-              </div>
-              <BarChart
+              <CustomBarChart
+                data={textAnalysis.sender1.commonWords.map(item => ({ label: item.word, value: item.count }))}
+                maxItems={8}
+                title="Top Words"
+                className="w-full"
+              />
+            </div>
+
+            <div className="bg-background/70 rounded-lg p-4 border border-primary/5 shadow-sm flex flex-col items-center">
+              <CustomBarChart
+                data={textAnalysis.sender2.commonWords.map(item => ({ label: item.word, value: item.count }))}
+                maxItems={8}
+                title="Top Words"
+                className="w-full"
+              />
+            </div>
+          </div>
+
+          {/* Row 4: Emoji Charts */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="bg-background/70 rounded-lg p-4 border border-primary/5 shadow-sm flex flex-col items-center">
+              <CustomBarChart
                 data={textAnalysis.sender1.topEmojis}
                 isEmoji={true}
                 maxItems={8}
-                className="h-64 w-full"
+                title="Top Emojis"
+                className="w-full"
               />
             </div>
 
             <div className="bg-background/70 rounded-lg p-4 border border-primary/5 shadow-sm flex flex-col items-center">
-              <div className="text-lg font-medium text-foreground mb-3 text-center">
-                {t('top_emojis', {
-                  name: textAnalysis.sender2.name
-                })}
-              </div>
-              <BarChart
+              <CustomBarChart
                 data={textAnalysis.sender2.topEmojis}
                 isEmoji={true}
                 maxItems={8}
-                className="h-64 w-full"
+                title="Top Emojis"
+                className="w-full"
               />
             </div>
           </div>

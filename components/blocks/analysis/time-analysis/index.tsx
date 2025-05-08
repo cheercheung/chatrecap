@@ -6,7 +6,6 @@ import { TimeAnalysis } from '@/types/analysis';
 import { motion } from 'framer-motion';
 import { Clock, Calendar, MessageSquare } from 'lucide-react';
 import { TimeDistribution, LineChart, Heatmap } from '@/components/charts';
-import HighlightedText from '@/components/ui/highlighted-text';
 
 type Props = {
   timeAnalysis: TimeAnalysis;

@@ -126,9 +126,10 @@ export const generateSampleAnalysisData = (id: string = "sample"): AnalysisData 
       responsePattern: "Quick responses in the evening",
       conversationLength: "Medium to long conversations",
       timeDistribution: [
-        {time: "morning", percentage: 20},
-        {time: "afternoon", percentage: 30},
-        {time: "evening", percentage: 50}
+        {time: "morning", percentage: 25},
+        {time: "afternoon", percentage: 15},
+        {time: "evening", percentage: 20},
+        {time: "night", percentage: 40}
       ],
       hourlyActivity: [
         {hour: 0, count: 12},
