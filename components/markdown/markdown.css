@@ -66,3 +66,24 @@
   max-width: 100%;
   box-sizing: border-box;
 }
+
+.markdown blockquote {
+  margin: 0 0 16px;
+  padding: 0 1em;
+  color: var(--muted-foreground);
+  border-left: 0.25em solid var(--border);
+  font-style: italic;
+}
+
+.markdown blockquote > :last-child {
+  margin-bottom: 0;
+}
+
+.markdown .markdown-hr,
+.markdown hr {
+  height: 0.25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: var(--border);
+  border: 0;
+}

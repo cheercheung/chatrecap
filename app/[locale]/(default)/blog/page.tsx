@@ -1,7 +1,7 @@
-import Blog from "@/components/blocks/blog";
+import BlogClientWrapper from "@/components/blocks/blog/client-wrapper";
 import { Blog as BlogType } from "@/types/blocks/blog";
 import { getPostsByLocale } from "@/models/post";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, getMessages } from "next-intl/server";
 
 export async function generateMetadata({
   params,
@@ -43,5 +43,15 @@ export default async function ({
     read_more_text: t("blog.read_more_text"),
   };
 
-  return <Blog blog={blog} />;
+  // 获取翻译消息
+  const messages = await getMessages({ locale });
+
+  // 使用客户端包装组件，提供国际化上下文
+  return (
+    <BlogClientWrapper
+      blog={blog}
+      messages={messages}
+      locale={locale}
+    />
+  );
 }

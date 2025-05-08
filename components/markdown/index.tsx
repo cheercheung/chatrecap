@@ -17,6 +17,10 @@ export default function Markdown({ content }: { content: string }) {
     .replace(/\*(.*)\*/gim, '<em>$1</em>')
     // Links
     .replace(/\[([^\]]+)\]\(([^)]+)\)/gim, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>')
+    // Blockquotes - Add support for > syntax
+    .replace(/^> (.*$)/gim, '<blockquote>$1</blockquote>')
+    // Horizontal Rule - Add support for --- (horizontal line)
+    .replace(/^\s*-{3,}\s*$/gim, '<hr class="markdown-hr" />')
     // Lists
     .replace(/^\s*\n\* (.*)/gim, '<ul>\n<li>$1</li>')
     .replace(/^\* (.*)/gim, '<li>$1</li>')

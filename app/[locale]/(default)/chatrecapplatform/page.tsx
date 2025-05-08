@@ -1,5 +1,5 @@
-import { getTranslations } from "next-intl/server";
-import ChatRecapPlatformPage from "@/components/pages/chat-recap-platform";
+import { getTranslations, getMessages } from "next-intl/server";
+import ChatRecapPlatformClientWrapper from "@/components/pages/chat-recap-platform/client-wrapper";
 import Icon from "@/components/icon";
 
 // 强制使用服务器端渲染
@@ -41,6 +41,7 @@ export default async function ChatRecapPlatformRoute({
 }: {
   params: Promise<{ locale: string }>;
 }) {
+  const { locale } = await params;
   const t = await getTranslations("platforms");
 
   // Define platform data with icons
@@ -92,12 +93,18 @@ export default async function ChatRecapPlatformRoute({
     }
   ];
 
+  // 获取翻译消息
+  const messages = await getMessages({ locale });
+
+  // 使用客户端包装组件，提供国际化上下文
   return (
-    <ChatRecapPlatformPage
+    <ChatRecapPlatformClientWrapper
       pageTitle={t("title")}
       pageDescription={t("description")}
       platforms={platforms}
       guideText={t("view_guide", { defaultValue: "View download guide" })}
+      messages={messages}
+      locale={locale}
     />
   );
 }

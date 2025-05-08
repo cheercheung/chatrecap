@@ -1,6 +1,6 @@
 import { PostStatus, findPostBySlug } from "@/models/post";
-
-import BlogDetail from "@/components/blocks/blog-detail";
+import { getMessages } from "next-intl/server";
+import BlogDetailClientWrapper from "@/components/blocks/blog-detail/client-wrapper";
 import Empty from "@/components/blocks/empty";
 
 export async function generateMetadata({
@@ -39,5 +39,15 @@ export default async function ({
     return <Empty message="Post not found" />;
   }
 
-  return <BlogDetail post={post} />;
+  // 获取翻译消息
+  const messages = await getMessages({ locale });
+
+  // 使用客户端包装组件，提供国际化上下文
+  return (
+    <BlogDetailClientWrapper
+      post={post}
+      messages={messages}
+      locale={locale}
+    />
+  );
 }
