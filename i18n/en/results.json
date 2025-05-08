@@ -43,6 +43,11 @@
   "sentiment_very_positive": "Very Positive",
   "sentiment_very_negative": "Very Negative",
   "overall_sentiment": "Overall Sentiment",
+  "very_positive": "Very Positive",
+  "positive": "Positive",
+  "neutral": "Neutral",
+  "negative": "Negative",
+  "very_negative": "Very Negative",
   "common_words": "Common Words",
   "top_words": "Top Words",
   "top_emojis": "Top Emojis",
@@ -55,6 +60,11 @@
   "count": "Count",
   "days": "Days",
   "words": "words",
+  "morning": "Morning",
+  "afternoon": "Afternoon",
+  "evening": "Evening",
+  "quick_responses": "quick responses",
+  "medium_conversations": "medium-length conversations",
   "communication_comparison": {
     "description": "A comparison of communication patterns and relationship dynamics between both parties.",
     "title": "Communication Comparison: {sender1} vs {sender2}"
@@ -85,7 +95,10 @@
   "actions": {
     "share_results": "Share Results",
     "export_pdf": "Export as PDF",
-    "back_to_upload": "Back to Upload"
+    "back_to_upload": "Back to Upload",
+    "try_ai_analysis": "Try AI analysis as guest",
+    "sign_in_for_more": "Sign in for more AI insight",
+    "new_analysis": "New Chat Analysis"
   },
   "share": {
     "title": "Share Your Chat Analysis",
@@ -102,5 +115,20 @@
     "no_conversations": "No conversations",
     "no_meaningful_words": "No meaningful words found",
     "heatmap_data_not_available": "Heatmap data not available"
+  },
+  "errors": {
+    "result_not_found": "Result not found",
+    "loading_failed": "Failed to load analysis data",
+    "not_found": "Analysis not found",
+    "processing_failed": "Processing failed: {message}"
+  },
+  "chatrecapresult": {
+    "title": "Your Chat Analysis Results",
+    "description": "Discover insights about your conversation patterns and relationship dynamics",
+    "errors": {
+      "result_not_found": "Result not found",
+      "loading_failed": "Failed to load analysis data",
+      "not_found": "Analysis not found"
+    }
   }
 }

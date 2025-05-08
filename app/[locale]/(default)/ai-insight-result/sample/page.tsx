@@ -2,7 +2,6 @@ import { getTranslations, getMessages } from "next-intl/server";
 import ClientWrapper from "@/components/pages/ai-insight-result/client-wrapper";
 import { generateSampleAnalysisData } from "@/lib/analysis/sampleData";
 import { sampleAiInsights } from "@/lib/analysis/sampleData";
-import { locales } from "@/i18n/locale";
 
 // 使用增量静态再生成 (ISR)，提高页面加载性能
 export const dynamic = 'force-static';
@@ -15,19 +14,8 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  // 尝试获取翻译，如果失败则使用默认值
-  let t;
-  try {
-    t = await getTranslations();
-  } catch (error) {
-    // 如果找不到翻译，使用一个函数返回默认值
-    t = (key: string) => {
-      // 使用命名空间路径访问
-      if (key === "chatrecapresult.title") return "AI Insight Result";
-      if (key === "chatrecapresult.description") return "View your AI-powered chat analysis insights";
-      return key;
-    };
-  }
+  // 使用新的翻译系统，指定正确的命名空间
+  const t = await getTranslations({ locale, namespace: 'results' });
 
   let canonicalUrl = `${process.env.NEXT_PUBLIC_WEB_URL}/ai-insight-result/sample`;
 
@@ -36,8 +24,8 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${t("chatrecapresult.title")} - Sample`,
-    description: t("chatrecapresult.description"),
+    title: `${t("title")} - Sample`,
+    description: t("description"),
     alternates: {
       canonical: canonicalUrl,
     },

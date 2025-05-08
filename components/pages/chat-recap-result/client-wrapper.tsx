@@ -3,7 +3,11 @@
 import React from "react";
 import { NextIntlClientProvider } from "next-intl";
 import { AnalysisData } from "@/types/analysis";
-import StaticChatRecapResultPage from "./static";
+import ChatRecapResultBlock from "@/components/blocks/chat-recap-result";
+
+// 导入翻译文件
+import resultsTranslations from "@/i18n/en/results.json";
+import commonTranslations from "@/i18n/en/common.json";
 
 interface ClientWrapperProps {
   analysisData: AnalysisData;
@@ -13,18 +17,27 @@ interface ClientWrapperProps {
 
 /**
  * Client Wrapper Component
- * 
+ *
  * This component wraps the StaticChatRecapResultPage with NextIntlClientProvider
  * to provide translation context for client components.
  */
-const ClientWrapper: React.FC<ClientWrapperProps> = ({ 
+const ClientWrapper: React.FC<ClientWrapperProps> = ({
   analysisData,
   messages,
   locale
 }) => {
+  // 合并翻译消息，确保翻译键可用
+  const combinedMessages = {
+    ...messages,
+    ...resultsTranslations,
+    common: commonTranslations
+  };
+
   return (
-    <NextIntlClientProvider locale={locale} messages={messages}>
-      <StaticChatRecapResultPage analysisData={analysisData} />
+    <NextIntlClientProvider locale={locale} messages={combinedMessages}>
+      <main>
+        <ChatRecapResultBlock analysisData={analysisData} />
+      </main>
     </NextIntlClientProvider>
   );
 };

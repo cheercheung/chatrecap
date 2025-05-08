@@ -80,31 +80,31 @@ export function analyzeChatData(messages: RawMessage[]): AnalysisData {
         dailyActivity: [],
         weekdayHourHeatmap: [
           {
-            day: "time_of_day.monday",
+            day: "days_of_week.monday",
             hours: Array(24).fill(0).map((_, hour) => ({ hour, count: 0 }))
           },
           {
-            day: "time_of_day.tuesday",
+            day: "days_of_week.tuesday",
             hours: Array(24).fill(0).map((_, hour) => ({ hour, count: 0 }))
           },
           {
-            day: "wednesday",
+            day: "days_of_week.wednesday",
             hours: Array(24).fill(0).map((_, hour) => ({ hour, count: 0 }))
           },
           {
-            day: "thursday",
+            day: "days_of_week.thursday",
             hours: Array(24).fill(0).map((_, hour) => ({ hour, count: 0 }))
           },
           {
-            day: "friday",
+            day: "days_of_week.friday",
             hours: Array(24).fill(0).map((_, hour) => ({ hour, count: 0 }))
           },
           {
-            day: "saturday",
+            day: "days_of_week.saturday",
             hours: Array(24).fill(0).map((_, hour) => ({ hour, count: 0 }))
           },
           {
-            day: "sunday",
+            day: "days_of_week.sunday",
             hours: Array(24).fill(0).map((_, hour) => ({ hour, count: 0 }))
           }
         ]

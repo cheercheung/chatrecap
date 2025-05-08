@@ -25,6 +25,7 @@ const Heatmap: React.FC<HeatmapProps> = ({
 }) => {
   // 获取翻译
   const t = useTranslations('chatrecapresult');
+  const commonT = useTranslations('common');
 
   // 安全翻译函数，如果翻译键不存在则返回默认值
   const safeT = (key: string, defaultValue: string): string => {
@@ -35,25 +36,34 @@ const Heatmap: React.FC<HeatmapProps> = ({
     }
   };
 
+  // 安全翻译函数，用于common命名空间
+  const safeCommonT = (key: string, defaultValue: string): string => {
+    try {
+      return commonT(key);
+    } catch (e) {
+      return defaultValue;
+    }
+  };
+
   // 星期几的翻译映射
   const dayTranslationKeys = [
-    'time_of_day.sunday',
-    'time_of_day.monday',
-    'time_of_day.tuesday',
-    'time_of_day.wednesday',
-    'time_of_day.thursday',
-    'time_of_day.friday',
-    'time_of_day.saturday'
+    'days_of_week.sunday',
+    'days_of_week.monday',
+    'days_of_week.tuesday',
+    'days_of_week.wednesday',
+    'days_of_week.thursday',
+    'days_of_week.friday',
+    'days_of_week.saturday'
   ];
 
   // 获取星期几的翻译
   const getDayTranslation = (day: string): string => {
     // 星期几的默认英文名称（用于翻译失败时的回退）
-    const defaultDayNames = ['Sunday', 'Monday', 'Tuesday','wednesday', 'thursday', 'friday', 'saturday']
+    const defaultDayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
     // 如果是数字 (0-6)，直接使用对应的翻译键
     if (/^[0-6]$/.test(day)) {
-      return safeT(dayTranslationKeys[parseInt(day)], defaultDayNames[parseInt(day)]);
+      return safeCommonT(dayTranslationKeys[parseInt(day)], defaultDayNames[parseInt(day)]);
     }
 
     // 如果是简单的英文日期标识符 (sunday, monday 等)，添加命名空间前缀
@@ -61,16 +71,27 @@ const Heatmap: React.FC<HeatmapProps> = ({
       .findIndex(d => d.toLowerCase() === day.toLowerCase());
 
     if (dayIndex !== -1) {
-      return safeT(`time_of_day.${day.toLowerCase()}`, defaultDayNames[dayIndex]);
+      return safeCommonT(`days_of_week.${day.toLowerCase()}`, defaultDayNames[dayIndex]);
     }
 
-    // 如果已经是完整的翻译键 (time_of_day.xxx)，直接使用
+    // 如果已经是完整的翻译键 (days_of_week.xxx 或 time_of_day.xxx)，直接使用
+    if (day.startsWith('days_of_week.')) {
+      const shortDay = day.replace('days_of_week.', '');
+      const shortDayIndex = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday']
+        .findIndex(d => d.toLowerCase() === shortDay.toLowerCase());
+
+      return safeCommonT(day, shortDayIndex !== -1 ? defaultDayNames[shortDayIndex] : day);
+    }
+
+    // 兼容旧的 time_of_day 前缀
     if (day.startsWith('time_of_day.')) {
       const shortDay = day.replace('time_of_day.', '');
       const shortDayIndex = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday']
         .findIndex(d => d.toLowerCase() === shortDay.toLowerCase());
 
-      return safeT(day, shortDayIndex !== -1 ? defaultDayNames[shortDayIndex] : day);
+      if (shortDayIndex !== -1) {
+        return safeCommonT(`days_of_week.${shortDay}`, defaultDayNames[shortDayIndex]);
+      }
     }
 
     // 默认情况，尝试直接翻译

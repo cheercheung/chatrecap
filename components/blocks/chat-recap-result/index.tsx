@@ -7,12 +7,17 @@ import {
   TimeAnalysisBlock,
   StoryTimelineBlock
 } from "@/components/blocks/analysis";
-import { Button } from "@/components/ui/button";
-import { Home, ArrowRight, RefreshCw } from "lucide-react";
+import { Home, Bell } from "lucide-react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { ChatRecapResultProps } from "./types";
+import ActionButtons from "./action-buttons";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 /**
  * Chat Recap Result Block Component
@@ -24,21 +29,22 @@ const ChatRecapResultBlock: React.FC<ChatRecapResultProps> = ({
   analysisData,
   className
 }) => {
-  const router = useRouter();
-  const t = useTranslations("chatrecapresult");
-  const componentT = useTranslations("components");
-  const resultsT = useTranslations("results");
+  // 使用新的翻译系统，指定正确的命名空间
+  const t = useTranslations("results");
+  const commonT = useTranslations("common");
 
-  // 创建一个格式化的时间戳，类似于 "5/8/2025, 4:07:49 AM"
-  const currentDate = new Date();
-  const formattedDate = `${currentDate.getMonth() + 1}/${currentDate.getDate()}/${currentDate.getFullYear()}`;
-  const formattedTime = currentDate.toLocaleTimeString('en-US', {
+  // Use the start date from the analysis data as submission date
+  const submissionDate = new Date(analysisData.startDate);
+
+  // Format the timestamp as 'h:mm am/pm m/d/y'
+  const formattedTime = submissionDate.toLocaleTimeString('en-US', {
     hour: 'numeric',
     minute: '2-digit',
-    second: '2-digit',
     hour12: true
   });
-  const submissionTime = `${formattedDate}, ${formattedTime}`;
+
+  const formattedDate = `${submissionDate.getMonth() + 1}/${submissionDate.getDate()}/${submissionDate.getFullYear()}`;
+  const submissionTime = `${formattedTime} ${formattedDate}`;
 
   return (
     <div className={`w-full py-8 ${className}`}>
@@ -61,76 +67,69 @@ const ChatRecapResultBlock: React.FC<ChatRecapResultProps> = ({
           Analysis {submissionTime}
         </div>
 
-        {/* Row 3: 3个按钮 */}
-        <div className="flex flex-wrap justify-between items-center mb-6">
-          <div className="flex gap-3">
-            <Button
-              variant="outline"
-              className="flex items-center gap-2"
-            >
-              {'Try AI analyze as guest'}
-            </Button>
-
-            <Button
-              className="flex items-center gap-2 bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-600 hover:to-indigo-700"
-            >
-              {'Sign in for more AI Analysis'}
-              <ArrowRight size={16} />
-            </Button>
-          </div>
-
-          <Button
-            variant="outline"
-            className="flex items-center gap-2"
-            onClick={() => router.push('/chatrecapanalysis')}
-          >
-            {'New Analysis'}
-          </Button>
-        </div>
+        {/* Row 3: Action Buttons */}
+        <ActionButtons />
 
         {/* Row 4: 数据保留提示 */}
-        <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-4 mb-8 text-sm text-yellow-800 dark:text-yellow-200">
-          {'We do not store your chat history, the cached data on our server will be automatically deleted after 30 minutes. Please start a new analysis if expired.'}
+        <div className="flex items-center justify-end mb-8">
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger>
+                <Bell className="h-5 w-5 text-yellow-500" />
+              </TooltipTrigger>
+              <TooltipContent>
+                <p className="max-w-xs text-sm">{commonT("data_retention_notice")}</p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
         </div>
 
         {/* Row 5: 分析内容 */}
         <div className="space-y-8">
           {/* 标题 */}
-          <h1 className="text-3xl font-bold text-center mb-6">{'Your Chat Recap Result'}</h1>
+          <h1 className="text-3xl font-bold text-center mb-6">{t("title")}</h1>
 
           {/* Overview Block */}
           <div>
-            <h2 className="text-2xl font-bold mb-4">{'Overview'}</h2>
-            <OverviewBlock
-              overview={analysisData.overview}
-              timeAnalysis={analysisData.timeAnalysis}
-            />
+            <h2 className="text-2xl font-bold mb-4">{t("overview_title")}</h2>
+            <div className="[&_h2]:hidden">
+              <OverviewBlock
+                overview={analysisData.overview}
+                timeAnalysis={analysisData.timeAnalysis}
+              />
+            </div>
           </div>
 
           {/* Time Analysis Block */}
           <div>
-            <h2 className="text-2xl font-bold mb-4">{'Time Analysis'}</h2>
-            <TimeAnalysisBlock
-              timeAnalysis={analysisData.timeAnalysis}
-            />
+            <h2 className="text-2xl font-bold mb-4">{t("time_analysis_title")}</h2>
+            <div className="[&_h2]:hidden">
+              <TimeAnalysisBlock
+                timeAnalysis={analysisData.timeAnalysis}
+              />
+            </div>
           </div>
 
           {/* Text Analysis Block */}
           <div>
-            <h2 className="text-2xl font-bold mb-4">{'Text Analysis'}</h2>
-            <TextAnalysisBlock
-              textAnalysis={analysisData.textAnalysis}
-            />
+            <h2 className="text-2xl font-bold mb-4">{t("text_analysis_title")}</h2>
+            <div className="[&_h2]:hidden">
+              <TextAnalysisBlock
+                textAnalysis={analysisData.textAnalysis}
+              />
+            </div>
           </div>
 
           {/* Timeline Block (Storyline) */}
           <div>
-            <h2 className="text-2xl font-bold mb-4">{'Storyline'}</h2>
-            <StoryTimelineBlock
-              startDate={analysisData.startDate}
-              duration={analysisData.duration}
-              endDate={analysisData.endDate}
-            />
+            <h2 className="text-2xl font-bold mb-4">{t("story_timeline_title")}</h2>
+            <div className="[&_h2]:hidden">
+              <StoryTimelineBlock
+                startDate={analysisData.startDate}
+                duration={analysisData.duration}
+                endDate={analysisData.endDate}
+              />
+            </div>
           </div>
         </div>
       </div>

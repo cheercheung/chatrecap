@@ -29,7 +29,7 @@ export function computeOverview(messages: RawMessage[]): AnalysisData['overview'
         wordsPerMessage: 0
       },
       avgMessagesPerDay: 0,
-      mostActiveDay: "day_names.monday",
+      mostActiveDay: "days_of_week.monday",
       responseTime: "0 minutes"
     };
   }
@@ -108,13 +108,13 @@ export function computeOverview(messages: RawMessage[]): AnalysisData['overview'
     dayCounts[msg.date.getDay()]++;
   });
   const dayNames = [
-    'day_names.sunday',
-    'day_names.monday',
-    'day_names.tuesday',
-    'day_names.wednesday',
-    'day_names.thursday',
-    'day_names.friday',
-    'day_names.saturday'
+    'days_of_week.sunday',
+    'days_of_week.monday',
+    'days_of_week.tuesday',
+    'days_of_week.wednesday',
+    'days_of_week.thursday',
+    'days_of_week.friday',
+    'days_of_week.saturday'
   ];
   const mostActiveDay = dayNames[dayCounts.indexOf(Math.max(...dayCounts))];
 

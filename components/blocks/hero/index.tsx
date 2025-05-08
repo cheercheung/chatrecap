@@ -124,15 +124,13 @@ export default async function Hero({ hero }: { hero: HeroType }) {
               </div>
             </div>
 
-            {/* 右侧内容: 图片 */}
+            {/* 右侧内容: 只保留图片 */}
             <div className="flex flex-col h-full">
               <StaticImageCard
                 images={imageData.map(item => ({
                   src: item.src,
                   alt: item.alt
                 }))}
-                title={imageData[0]?.title || "聊天分析示例"}
-                description={imageData[0]?.description || "上传您的聊天记录，获取深入的关系洞察和沟通模式分析。"}
                 className="min-h-[400px]"
               />
             </div>

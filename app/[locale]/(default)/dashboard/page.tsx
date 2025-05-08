@@ -39,7 +39,7 @@ export default async function DashboardPageRoute({
   const dashboardData = await getDashboardData();
 
   // 获取翻译消息
-  const messages = await getMessages({ locale, namespace: "dashboard" });
+  const messages = await getMessages({ locale });
 
   // 使用新的客户端包装组件，提供国际化上下文
   return (

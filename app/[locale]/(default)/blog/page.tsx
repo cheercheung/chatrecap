@@ -9,7 +9,8 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const t = await getTranslations();
+  // 使用新的翻译系统，指定正确的命名空间
+  const t = await getTranslations({ locale, namespace: 'blog' });
 
   let canonicalUrl = `${process.env.NEXT_PUBLIC_WEB_URL}/blog`;
 
@@ -18,8 +19,8 @@ export async function generateMetadata({
   }
 
   return {
-    title: t("blog.title"),
-    description: t("blog.description"),
+    title: t("title"),
+    description: t("description"),
     alternates: {
       canonical: canonicalUrl,
     },
@@ -32,15 +33,16 @@ export default async function ({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const t = await getTranslations();
+  // 使用新的翻译系统，指定正确的命名空间
+  const t = await getTranslations({ locale, namespace: 'blog' });
 
   const posts = await getPostsByLocale(locale);
 
   const blog: BlogType = {
-    title: t("blog.title"),
-    description: t("blog.description"),
+    title: t("title"),
+    description: t("description"),
     items: posts,
-    read_more_text: t("blog.read_more_text"),
+    read_more_text: t("read_more_text"),
   };
 
   // 获取翻译消息

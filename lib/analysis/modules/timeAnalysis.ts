@@ -20,13 +20,13 @@ export function computeTimeAnalysis(messages: RawMessage[]): AnalysisData['timeA
   // 如果没有消息，返回默认的时间分析数据
   if (!messages.length) {
     const dayNames = [
-      'sunday',
-      'monday',
-      'tuesday',
-      'wednesday',
-      'thursday',
-      'friday',
-      'saturday'
+      'days_of_week.sunday',
+      'days_of_week.monday',
+      'days_of_week.tuesday',
+      'days_of_week.wednesday',
+      'days_of_week.thursday',
+      'days_of_week.friday',
+      'days_of_week.saturday'
     ];
 
     return {
@@ -80,13 +80,13 @@ export function computeTimeAnalysis(messages: RawMessage[]): AnalysisData['timeA
 
   // 最活跃的星期几
   const dayNames = [
-    'sunday',
-    'monday',
-    'tuesday',
-    'wednesday',
-    'thursday',
-    'friday',
-    'saturday'
+    'days_of_week.sunday',
+    'days_of_week.monday',
+    'days_of_week.tuesday',
+    'days_of_week.wednesday',
+    'days_of_week.thursday',
+    'days_of_week.friday',
+    'days_of_week.saturday'
   ];
   const mostActiveDay = dayNames[dayCounts.indexOf(Math.max(...dayCounts))];
 

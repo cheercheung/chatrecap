@@ -56,7 +56,8 @@ if (typeof window === 'undefined') {
 
   // 确保 hero.show_happy_users 属性被正确设置
   if (rawData.hero) {
-    rawData.hero.show_happy_users = true;
+    // 使用类型断言来避免类型错误
+    (rawData.hero as any).show_happy_users = true;
   }
 
   // 合并 landing 和 common 数据
@@ -230,7 +231,8 @@ export async function getLandingPage(locale: string): Promise<LandingPage> {
 
     // 确保 hero.show_happy_users 属性被正确设置
     if (rawData.hero) {
-      rawData.hero.show_happy_users = true;
+      // 使用类型断言来避免类型错误
+      (rawData.hero as any).show_happy_users = true;
     }
 
     const mergedData = {

@@ -75,6 +75,7 @@
     "evening": "Evening",
     "night": "Night"
   },
+  "data_retention_notice":"We do not store your chat history, the cached data on our server will be automatically deleted after 30 minutes. Please start a new analysis if expired.",
   "days_of_week": {
     "monday": "Monday",
     "tuesday": "Tuesday",

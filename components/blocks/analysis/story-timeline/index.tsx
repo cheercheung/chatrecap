@@ -29,10 +29,10 @@ const StoryTimelineBlock = forwardRef<HTMLDivElement, Props>(
         viewport={{ once: true }}
         className="flex flex-col items-center py-8 px-4 mb-8 bg-card/30 backdrop-blur-sm border border-primary/10 rounded-xl shadow-md"
       >
-        <h2 className="text-2xl md:text-3xl font-bold mb-6 text-foreground text-center relative inline-block">
+        {/* <h2 className="text-2xl md:text-3xl font-bold mb-6 text-foreground text-center relative inline-block">
           {title || t('story_timeline_title')}
           <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-pink-500 rounded-full"></span>
-        </h2>
+        </h2> */}
 
         <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
           <HighlightedText

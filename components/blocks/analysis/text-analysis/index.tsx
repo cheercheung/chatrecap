@@ -39,10 +39,10 @@ const TextAnalysisBlock = forwardRef<HTMLDivElement, Props>(
         viewport={{ once: true }}
         className="bg-card/30 backdrop-blur-sm border border-primary/10 rounded-xl p-6 shadow-md flex flex-col items-center"
       >
-        <h2 className="text-2xl md:text-3xl font-bold mb-6 text-foreground text-center relative inline-block mx-auto">
+        {/* <h2 className="text-2xl md:text-3xl font-bold mb-6 text-foreground text-center relative inline-block mx-auto">
           {t('text_analysis_title')}
           <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-pink-500 rounded-full"></span>
-        </h2>
+        </h2> */}
 
         <div className="space-y-6">
           {/* Row 1: Three Cards - Common Words, Emojis, and Sentiment Analysis */}

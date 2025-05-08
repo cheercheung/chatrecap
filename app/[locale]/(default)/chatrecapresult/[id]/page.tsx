@@ -19,7 +19,8 @@ export async function generateMetadata({
     canonicalUrl = `${process.env.NEXT_PUBLIC_WEB_URL}/${locale}/chatrecapresult/${id}`;
   }
 
-  const t = await getTranslations("chatrecapresult");
+  // 使用新的翻译系统，指定正确的命名空间
+  const t = await getTranslations({ locale, namespace: 'results' });
 
   return {
     title: t("title"),
@@ -35,19 +36,20 @@ export default async function ChatRecapResultDetailPage({
 }: {
   params: Promise<{ locale: string; id: string }>;
 }) {
-  const { id } = await params;
-  const t = await getTranslations("chatrecapresult");
+  const { locale, id } = await params;
+  // 使用新的翻译系统，指定正确的命名空间
+  const t = await getTranslations({ locale, namespace: 'results' });
 
   try {
     const analysisData = await getAnalysisData(id);
 
     if (!analysisData) {
-      return <Empty message={t("errors.not_found")} />;
+      return <Empty message={t("no_data.no_messages_to_analyze")} />;
     }
 
     return <ChatRecapResultPage analysisData={analysisData} />;
   } catch (error) {
     console.error("Error fetching analysis data:", error);
-    return <Empty message={t("errors.loading_failed")} />;
+    return <Empty message={t("no_data.no_messages_to_analyze")} />;
   }
 }

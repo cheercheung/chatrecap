@@ -4,15 +4,16 @@ import React from "react";
 import { getTranslations } from "next-intl/server";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations();
+  // 使用英语和正确的命名空间路径
+  const t = await getTranslations({ locale: 'en', namespace: 'seo.metadata' });
 
   return {
     title: {
-      template: `%s | ${t("metadata.title")}`,
-      default: t("metadata.title"),
+      template: `%s | ${t("title")}`,
+      default: t("title"),
     },
-    description: t("metadata.description"),
-    keywords: t("metadata.keywords"),
+    description: t("description"),
+    keywords: t("keywords"),
   };
 }
 

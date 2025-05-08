@@ -12,7 +12,8 @@ interface TimeDistributionProps {
 
 const TimeDistribution: React.FC<TimeDistributionProps> = ({ data, title, className }) => {
   // 获取翻译函数
-  const t = useTranslations('chatrecapresult');
+  const t = useTranslations('results');
+  const commonT = useTranslations('common');
 
   // 安全翻译函数，如果翻译键不存在则返回默认值
   const safeT = (key: string, defaultValue: string): string => {
@@ -44,7 +45,7 @@ const TimeDistribution: React.FC<TimeDistributionProps> = ({ data, title, classN
     }
 
     return {
-      label: safeT(translationKey, defaultValue),
+      label: commonT(translationKey, defaultValue),
       value: item.percentage
     };
   });

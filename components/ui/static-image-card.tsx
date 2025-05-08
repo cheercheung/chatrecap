@@ -1,6 +1,7 @@
 /**
  * 静态版本的 ImageCard 组件
  * 移除客户端状态和交互，支持 SSG
+ * 只显示图片，不显示标题和描述文字
  */
 import Image from 'next/image';
 
@@ -9,15 +10,11 @@ interface StaticImageCardProps {
     src: string;
     alt: string;
   }[];
-  title?: string;
-  description?: string;
   className?: string;
 }
 
 export default function StaticImageCard({
   images,
-  title,
-  description,
   className = ''
 }: StaticImageCardProps) {
   // 确保至少有一张图片
@@ -27,17 +24,17 @@ export default function StaticImageCard({
 
   return (
     <div className={`bg-card border border-primary/10 rounded-2xl w-full overflow-hidden flex flex-col h-full ${className}`}>
-      {/* 卡片区域 */}
-      <div className="flex-grow p-4 flex flex-col justify-between relative">
+      {/* 卡片区域 - 只保留图片部分 */}
+      <div className="flex-grow p-4 flex flex-col justify-center relative">
         {/* 图片区域 - 完全自适应高度 */}
         <div
-          className="w-full bg-gray-100 rounded-lg flex items-center justify-center text-gray-400 mb-6 flex-1"
-          style={{ minHeight: '250px', height: 'auto' }}
+          className="w-full bg-gray-100 rounded-lg flex items-center justify-center text-gray-400 flex-1"
+          style={{ minHeight: '300px', height: 'auto' }}
         >
           <div className="w-full h-full relative">
             {/* 如果有真实图片，使用 Next.js Image 组件 */}
             {image.src ? (
-              <div className="relative w-full h-full min-h-[250px]">
+              <div className="relative w-full h-full min-h-[300px]">
                 <Image
                   src={image.src}
                   alt={image.alt || 'Chat analysis image'}
@@ -57,16 +54,6 @@ export default function StaticImageCard({
               </div>
             )}
           </div>
-        </div>
-
-        {/* 卡片内容 */}
-        <div>
-          <h4 className="font-medium text-lg mb-3 text-primary">
-            {title || 'Chat Analysis Example'}
-          </h4>
-          <p className="text-muted-foreground">
-            {description || 'Upload your chat history to gain deep insights into your relationship dynamics and communication patterns.'}
-          </p>
         </div>
       </div>
 

@@ -1,13 +1,17 @@
 import createMiddleware from 'next-intl/middleware';
-import {locales, defaultLocale} from './i18n/locale';
+// import {locales, defaultLocale} from './i18n/locale';
+
+// Temporarily override locales to only support English
+const supportedLocales = ['en'];
+const defaultLocaleOverride = 'en';
 
 export default createMiddleware({
   // 支持的语言列表
-  locales,
+  locales: supportedLocales,
   // 默认语言
-  defaultLocale,
+  defaultLocale: defaultLocaleOverride,
   // 本地化检测
-  localeDetection: true,
+  localeDetection: false,
   // 本地化前缀
   localePrefix: 'as-needed'
 });

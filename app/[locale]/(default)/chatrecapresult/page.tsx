@@ -1,6 +1,6 @@
-import { getTranslations } from "next-intl/server";
+import { getTranslations, getMessages } from "next-intl/server";
 import Empty from "@/components/blocks/empty";
-import ChatRecapResultPageComponent from "@/components/pages/chat-recap-result";
+import ClientWrapper from "@/components/pages/chat-recap-result/client-wrapper";
 import { generateSampleAnalysisData } from "@/lib/analysis/sampleData";
 import { getCachedAnalysisData } from "@/lib/storage/cache";
 import { AnalysisData } from "@/types/analysis";
@@ -20,7 +20,8 @@ export async function generateMetadata({
   searchParams: Promise<{ fileId?: string }>;
 }) {
   const { locale } = await params;
-  const t = await getTranslations();
+  // 使用新的翻译系统，指定正确的命名空间
+  const t = await getTranslations({ locale, namespace: 'results' });
   const { fileId } = await searchParams;
 
   let canonicalUrl = `${process.env.NEXT_PUBLIC_WEB_URL}/chatrecapresult`;
@@ -36,8 +37,8 @@ export async function generateMetadata({
   }
 
   return {
-    title: t("chatrecapresult.title"),
-    description: t("chatrecapresult.description"),
+    title: t("title"),
+    description: t("description"),
     alternates: {
       canonical: canonicalUrl,
     },
@@ -52,7 +53,8 @@ export default async function ChatRecapResultPage({
   searchParams: Promise<{ fileId?: string }>;
 }) {
   const { locale } = await params;
-  const t = await getTranslations("chatrecapresult");
+  // 使用新的翻译系统，指定正确的命名空间
+  const t = await getTranslations({ locale, namespace: 'results' });
   const { fileId } = await searchParams;
 
   // 如果没有提供文件ID，重定向到示例页面
@@ -69,6 +71,9 @@ export default async function ChatRecapResultPage({
     return <Empty message={t("errors.result_not_found")} />;
   }
 
+  // 获取翻译消息
+  const messages = await getMessages({ locale });
+
   // 使用 Suspense 包装组件，提供加载占位符
   return (
     <Suspense fallback={
@@ -76,7 +81,11 @@ export default async function ChatRecapResultPage({
         <div className="animate-pulse text-xl">loading...</div>
       </div>
     }>
-      <ChatRecapResultPageComponent analysisData={analysisData} />
+      <ClientWrapper
+        analysisData={analysisData}
+        messages={messages}
+        locale={locale}
+      />
     </Suspense>
   );
 }

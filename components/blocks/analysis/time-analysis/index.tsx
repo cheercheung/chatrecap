@@ -13,7 +13,8 @@ type Props = {
 
 const TimeAnalysisBlock = forwardRef<HTMLDivElement, Props>(
   ({ timeAnalysis }, ref) => {
-    const t = useTranslations('chatrecapresult');
+    const t = useTranslations('results');
+    const commonT = useTranslations('common');
     const locale = useLocale();
 
     // 将小时转换为可读时间 (使用当前语言环境)
@@ -56,10 +57,7 @@ const TimeAnalysisBlock = forwardRef<HTMLDivElement, Props>(
         ref={ref}
         className="bg-card/30 backdrop-blur-sm border border-primary/10 rounded-xl p-6 shadow-md flex flex-col items-center"
       >
-        <h2 className="text-2xl md:text-3xl font-bold mb-6 text-foreground text-center relative inline-block mx-auto">
-          {t('time_analysis_title')}
-          <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-pink-500 rounded-full"></span>
-        </h2>
+        {/* zhe */}
 
         <div className="space-y-6">
           {/* Row 1: Weekly Heatmap */}
@@ -118,7 +116,7 @@ const TimeAnalysisBlock = forwardRef<HTMLDivElement, Props>(
               <div>
                 <div className="text-sm text-muted-foreground">{t('most_active_day')}</div>
                 <div className="text-xl font-bold">
-                  {t(`time_of_day.${timeAnalysis.mostActiveDay}`)}
+                  {commonT(`days_of_week.${timeAnalysis.mostActiveDay}`)}
                 </div>
                 <div className="text-xs text-muted-foreground">{t('favorite_day_to_chat')}</div>
               </div>
