@@ -73,16 +73,27 @@ export default function ({ nav }: { nav: NavType }) {
             </Collapsible>
           ) : (
             <SidebarMenuItem key={item.title}>
-              <SidebarMenuButton
-                asChild
-                tooltip={item.title}
-                className={`${item.is_active ? "text-primary" : ""}`}
-              >
-                <Link href={item.url || ""} className="flex items-center gap-1">
+              {item.onClick ? (
+                <SidebarMenuButton
+                  tooltip={item.title}
+                  className={`${item.is_active ? "text-primary" : ""}`}
+                  onClick={item.onClick}
+                >
                   {item.icon && <Icon name={item.icon} className="text-xl" />}
                   <span>{item.title}</span>
-                </Link>
-              </SidebarMenuButton>
+                </SidebarMenuButton>
+              ) : (
+                <SidebarMenuButton
+                  asChild
+                  tooltip={item.title}
+                  className={`${item.is_active ? "text-primary" : ""}`}
+                >
+                  <Link href={item.url || ""} className="flex items-center gap-1">
+                    {item.icon && <Icon name={item.icon} className="text-xl" />}
+                    <span>{item.title}</span>
+                  </Link>
+                </SidebarMenuButton>
+              )}
             </SidebarMenuItem>
           )
         )}

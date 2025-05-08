@@ -19,7 +19,7 @@ export async function generateMetadata({
   }
 
   return {
-    title: t("title"),
+    title: t("how_to_import"),
     description: t("description"),
     alternates: {
       canonical: canonicalUrl,

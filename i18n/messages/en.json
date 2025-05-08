@@ -442,6 +442,41 @@
         "sign_out": "Sign Out",
         "sign_in": "Sign In"
     },
+    "dashboard": {
+        "title": "Dashboard",
+        "description": "Manage your account and view your analysis history",
+        "dashboard": "Dashboard",
+        "new_analysis": "New Analysis",
+        "recent_history": "Recent Analysis",
+        "view_all": "View All",
+        "credits": {
+            "title": "Points",
+            "remaining": "Remaining Points",
+            "history": "Points History",
+            "history_description": "View your points transaction history",
+            "buy_button": "Buy Points",
+            "no_records": "No points records",
+            "table": {
+                "type": "Type",
+                "amount": "Amount",
+                "date": "Date"
+            },
+            "types": {
+                "purchase": "Purchase",
+                "used": "Used"
+            }
+        },
+        "history": {
+            "title": "Analysis History",
+            "description": "View your previous chat analysis records",
+            "no_records": "No analysis records",
+            "table": {
+                "id": "File ID",
+                "platform": "Platform",
+                "date": "Date"
+            }
+        }
+    },
     "upload": {
         "upload_failed": "Upload failed",
         "no_file_selected": "No file selected",
