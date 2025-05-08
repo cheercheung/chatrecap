@@ -63,7 +63,41 @@ const TimeAnalysisBlock = forwardRef<HTMLDivElement, Props>(
         </h2>
 
         <div className="space-y-6">
-          {/* Peak Activity Stats */}
+          {/* Row 1: Weekly Heatmap */}
+          <div className="bg-background/70 rounded-lg p-4 border border-primary/5 shadow-sm">
+            <div className="text-lg font-medium text-foreground mb-4 text-center">{t('weekly_activity_heatmap')}</div>
+            {timeAnalysis.weekdayHourHeatmap &&
+             timeAnalysis.weekdayHourHeatmap.length > 0 &&
+             timeAnalysis.weekdayHourHeatmap.every(day =>
+                day && day.day && Array.isArray(day.hours) && day.hours.length > 0
+             ) ? (
+              <Heatmap
+                data={timeAnalysis.weekdayHourHeatmap}
+                showValues={true}
+                showLegend={true}
+                className="w-full"
+              />
+            ) : (
+              <div className="bg-background/50 rounded-md p-4 text-muted-foreground text-center">
+                <p>{t('heatmap_data_not_available')}</p>
+              </div>
+            )}
+          </div>
+
+          {/* Row 2: Daily Activity (Line Chart) */}
+          <div className="bg-background/70 rounded-lg p-4 border border-primary/5 shadow-sm">
+            <div className="text-lg font-medium text-foreground mb-4 text-center">{t('daily_activity')}</div>
+            <div>
+              <LineChart
+                data={timeAnalysis.dailyActivity}
+                height={300}
+                tooltipUnit="messages"
+                className="w-full"
+              />
+            </div>
+          </div>
+
+          {/* Row 3: Peak Activity Stats (3 Cards) */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {/* Most Active Hour */}
             <div className="bg-background/70 rounded-lg p-4 border border-primary/5 shadow-sm flex items-center">
@@ -106,83 +140,15 @@ const TimeAnalysisBlock = forwardRef<HTMLDivElement, Props>(
             </div>
           </div>
 
-          {/* Time Distribution */}
+          {/* Row 4: Time Distribution (Bar Chart) */}
           <div className="bg-background/70 rounded-lg p-4 border border-primary/5 shadow-sm">
             <div className="text-lg font-medium text-foreground mb-4 text-center">{t('time_distribution')}</div>
-            <div className="mb-4">
+            <div>
               <TimeDistribution
                 data={timeAnalysis.timeDistribution}
                 className="w-full h-30"
               />
             </div>
-            <div className="bg-background/50 rounded-md p-4 text-muted-foreground">
-              <p className="text-center">
-                <HighlightedText
-                  text={t('time_distribution_description', {
-                    morning: (timeAnalysis.timeDistribution.find(item =>
-                      item.time === 'morning')?.percentage || 0) ,
-                    afternoon: (timeAnalysis.timeDistribution.find(item =>
-                      item.time === 'afternoon')?.percentage || 0) ,
-                    evening: (timeAnalysis.timeDistribution.find(item =>
-                      item.time === 'evening')?.percentage || 0)
-                  })}
-                />
-              </p>
-              <p className="mt-2 text-center">
-                <HighlightedText
-                  text={t('response_pattern_description', {
-                    // 直接使用原始数据，不进行翻译
-                    responsePattern: timeAnalysis.responsePattern,
-                    conversationLength: timeAnalysis.conversationLength
-                  })}
-                />
-              </p>
-            </div>
-          </div>
-
-          {/* Daily Activity */}
-          <div className="bg-background/70 rounded-lg p-4 border border-primary/5 shadow-sm">
-            <div className="text-lg font-medium text-foreground mb-4 text-center">{t('daily_activity')}</div>
-            <div className="mb-4">
-              <LineChart
-                data={timeAnalysis.dailyActivity}
-                height={300}
-                tooltipUnit="messages"
-                className="w-full"
-              />
-            </div>
-            <div className="bg-background/50 rounded-md p-4 text-muted-foreground">
-              <p className="text-center">
-                <HighlightedText
-                  text={t('daily_activity_description', {
-                    // 直接使用原始数据，不进行翻译
-                    mostActiveDay: timeAnalysis.mostActiveDay,
-                    mostActiveHour: timeAnalysis.mostActiveHour.toString()
-                  })}
-                />
-              </p>
-            </div>
-          </div>
-
-          {/* Weekly Heatmap */}
-          <div className="bg-background/70 rounded-lg p-4 border border-primary/5 shadow-sm">
-            <div className="text-lg font-medium text-foreground mb-4 text-center">{t('weekly_activity_heatmap')}</div>
-            {timeAnalysis.weekdayHourHeatmap &&
-             timeAnalysis.weekdayHourHeatmap.length > 0 &&
-             timeAnalysis.weekdayHourHeatmap.every(day =>
-                day && day.day && Array.isArray(day.hours) && day.hours.length > 0
-             ) ? (
-              <Heatmap
-                data={timeAnalysis.weekdayHourHeatmap}
-                showValues={true}
-                showLegend={true}
-                className="w-full"
-              />
-            ) : (
-              <div className="bg-background/50 rounded-md p-4 text-muted-foreground text-center">
-                <p>{t('heatmap_data_not_available')}</p>
-              </div>
-            )}
           </div>
         </div>
       </div>
