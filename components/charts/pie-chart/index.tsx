@@ -92,12 +92,12 @@ const PieChart: React.FC<PieChartProps> = ({
     if (active && payload && payload.length) {
       const data = payload[0].payload;
       return (
-        <div className="p-4 bg-background/95 backdrop-blur-sm border border-primary/10 shadow-lg rounded-lg text-sm">
-          <div className="space-y-2">
+        <div className="p-3 bg-background/95 backdrop-blur-sm border border-primary/10 shadow-md rounded-md text-sm">
+          <div className="space-y-1">
             <div className="flex items-center gap-2">
               <div className="w-3 h-3 rounded-full" style={{ backgroundColor: data.color }}></div>
               <span className="font-medium">{data.name}:</span>
-              <span>{data.value} {tooltipUnit} </span>
+              <span>{data.value}{tooltipUnit}</span>
             </div>
           </div>
         </div>
@@ -115,8 +115,9 @@ const PieChart: React.FC<PieChartProps> = ({
           <RechartsPieChart>
             <Tooltip
               content={<CustomTooltip />}
-              wrapperStyle={{ zIndex: 100 }}
+              wrapperStyle={{ zIndex: 100, position: 'absolute', pointerEvents: 'none' }}
               cursor={false}
+              offset={5}
             />
             <Pie
               data={data}

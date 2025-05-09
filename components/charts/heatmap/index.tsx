@@ -30,16 +30,20 @@ const Tooltip: React.FC<TooltipProps> = ({ count, day, hour, visible, x, y }) =>
 
   return (
     <div
-      className="absolute bg-background/90 backdrop-blur-sm border border-primary/10 rounded-md shadow-md px-3 py-1.5 text-sm z-50"
+      className="absolute p-3 bg-background/95 backdrop-blur-sm border border-primary/10 shadow-md rounded-md text-sm z-50"
       style={{
         left: `${x + 10}px`,
         top: `${y - 10}px`,
-        pointerEvents: 'none',
-        boxShadow: '0 2px 5px rgba(0, 0, 0, 0.15)'
+        pointerEvents: 'none'
       }}
     >
-      <div className="font-medium">{day}, {hour}:00</div>
-      <div className="text-primary">{count} messages</div>
+      <div className="space-y-1">
+        <div className="font-medium">{day}, {hour}:00</div>
+        <div className="flex items-center gap-2">
+          <div className="w-3 h-3 rounded-full bg-primary"></div>
+          <span>{count} messages</span>
+        </div>
+      </div>
     </div>
   );
 };

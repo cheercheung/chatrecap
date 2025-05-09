@@ -51,11 +51,23 @@ const LineChart: React.FC<LineChartProps> = ({
     value: item.count
   }));
 
-
-
-  // 添加控制台日志以便调试
-  console.log("LineChart data:", data);
-  console.log("Processed chartData:", chartData);
+  // 自定义 tooltip
+  const CustomTooltip = ({ active, payload, label }: any) => {
+    if (active && payload && payload.length) {
+      return (
+        <div className="p-3 bg-background/95 backdrop-blur-sm border border-primary/10 shadow-md rounded-md text-sm">
+          <div className="space-y-1">
+            <div className="font-medium">{label}</div>
+            <div className="flex items-center gap-2">
+              <div className="w-3 h-3 rounded-full" style={{ backgroundColor: 'hsl(var(--primary))' }}></div>
+              <span>{payload[0].value} messages</span>
+            </div>
+          </div>
+        </div>
+      );
+    }
+    return null;
+  };
 
   return (
     <div className={className} style={{ width: '100%' }}>
@@ -109,7 +121,7 @@ const LineChart: React.FC<LineChartProps> = ({
                 tickMargin={3}
                 width={30}
               />
-              <Tooltip />
+              <Tooltip content={<CustomTooltip />} wrapperStyle={{ zIndex: 100, position: 'absolute', pointerEvents: 'none' }} offset={5} />
               <Area
                 type="monotone"
                 dataKey="value"
@@ -143,7 +155,7 @@ const LineChart: React.FC<LineChartProps> = ({
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="date" />
             <YAxis />
-            <Tooltip />
+            <Tooltip content={<CustomTooltip />} wrapperStyle={{ zIndex: 100, position: 'absolute', pointerEvents: 'none' }} offset={5} />
             <Area type="monotone" dataKey="value" stroke="#8884d8" fill="#8884d8" />
           </AreaChart>
         </div>

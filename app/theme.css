@@ -24,6 +24,12 @@
   --chart-3: 320 60% 55%;
   --chart-4: 300 70% 60%;
   --chart-5: 280 60% 65%;
+
+  /* Sender-specific colors */
+  --sender1-color: hsl(336, 80%, 58%);
+  --sender2-color: hsl(195, 80%, 58%);
+  --sender1-emoji-color: #ec4899;
+  --sender2-emoji-color: #06b6d4;
 }
 
 .dark {
@@ -51,4 +57,10 @@
   --chart-3: 320 50% 50%;
   --chart-4: 300 60% 55%;
   --chart-5: 280 50% 50%;
+
+  /* Sender-specific colors for dark mode */
+  --sender1-color: hsl(336, 70%, 65%);
+  --sender2-color: hsl(195, 70%, 65%);
+  --sender1-emoji-color: #f472b6;
+  --sender2-emoji-color: #22d3ee;
 }

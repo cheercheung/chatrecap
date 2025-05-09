@@ -1,7 +1,8 @@
 "use client";
 
 import React from 'react';
-import { useTranslations } from 'next-intl';
+// Import CSS module from local directory
+import styles from './bar-chart.module.css';
 
 interface EmojiItem {
   emoji: string;
@@ -16,10 +17,11 @@ interface CustomBarChartProps {
   showCount?: boolean;
   barColor?: string;
   isEmoji?: boolean;
+  senderType?: 'sender1' | 'sender2'; // Added sender type for custom colors
 }
 
 /**
- * 自定义条形图组件，使用粉色条形图和更大的间距
+ * Custom bar chart component with consistent styling and sender-specific colors
  */
 const CustomBarChart: React.FC<CustomBarChartProps> = ({
   data,
@@ -27,59 +29,72 @@ const CustomBarChart: React.FC<CustomBarChartProps> = ({
   maxItems = 10,
   className,
   showCount = true,
-  barColor = '#ec4899', // 默认使用粉色
+  barColor,
   isEmoji = false,
+  senderType,
 }) => {
-  // 处理数据，支持两种数据格式
+  // Process data to support both emoji and text formats with completely consistent handling
   const processedData = isEmoji
-    ? (data as EmojiItem[]).map(item => ({ label: item.emoji, value: item.count }))
-    : (data as { label: string; value: number }[]);
+    ? (data as EmojiItem[]).map(item => ({
+        label: item.emoji,
+        value: item.count
+      }))
+    : (data as { label: string; value: number }[]).map(item => ({
+        // Truncate long words to ensure consistent display
+        label: item.label.length > 10 ? item.label.substring(0, 8) + '...' : item.label,
+        value: item.value
+      }));
 
-  // 限制数量
+  // Limit the number of items to display
   const displayItems = processedData.slice(0, maxItems);
 
-  // 获取翻译
-  const t = useTranslations('results');
-
-  // 安全翻译函数，如果翻译键不存在则返回默认值
-  const safeT = (key: string, defaultValue: string): string => {
-    try {
-      return t(key);
-    } catch (e) {
-      return defaultValue;
-    }
-  };
-
-  // 如果没有数据，显示提示信息
+  // If no data, show empty state message
   if (displayItems.length === 0) {
-    return <div className="text-center py-4 text-muted-foreground">
-      {safeT('no_data.no_meaningful_words', 'No data found')}
-    </div>;
+    return <div className={styles.emptyState}>No data found</div>;
   }
 
-  // 获取最大值，用于计算百分比宽度
+  // Get the maximum value for calculating percentage width
   const maxValue = Math.max(...displayItems.map(item => item.value));
 
+  // Determine the bar color based on sender type
+  const getBarColor = () => {
+    // If a specific color is provided, use it
+    if (barColor) return barColor;
+
+    // Use sender-specific colors
+    if (senderType === 'sender1') {
+      return '#ff6b9c'; // Pink color for sender1 (Emily)
+    } else if (senderType === 'sender2') {
+      return '#4dabf7'; // Blue color for sender2 (John)
+    }
+
+    // Default color if no sender type specified
+    return 'hsl(var(--primary))';
+  };
+
   return (
-    <div className={className}>
+    <div className={`${styles.barChartContainer} ${className || ''}`}>
       {title && <h4 className="text-xl font-medium mb-6 text-center">{title}</h4>}
-      <div className="space-y-3">
+      <div>
         {displayItems.map((item, index) => (
-          <div key={index} className="flex items-center gap-3">
-            <div className={`${isEmoji ? 'text-2xl w-10' : 'text-sm font-medium w-16 truncate'}`}>
+          <div key={index} className={styles.barItem}>
+            {/* Apply consistent label styling with specific class based on content type */}
+            <div className={isEmoji ? styles.labelEmoji : styles.labelText}>
               {item.label}
             </div>
-            <div className="flex-1 h-6 bg-gray-100 rounded-full overflow-hidden">
+            {/* Consistent bar track styling */}
+            <div className={styles.barTrack}>
               <div
-                className="h-full rounded-full"
+                className={styles.barFill}
                 style={{
                   width: `${(item.value / maxValue) * 100}%`,
-                  backgroundColor: barColor
+                  backgroundColor: getBarColor()
                 }}
               ></div>
             </div>
+            {/* Consistent count value styling */}
             {showCount && (
-              <div className="text-sm font-medium w-10 text-right">
+              <div className={styles.countValue}>
                 {item.value}
               </div>
             )}

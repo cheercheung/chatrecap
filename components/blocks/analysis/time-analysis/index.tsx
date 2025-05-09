@@ -64,7 +64,7 @@ const TimeAnalysisBlock = forwardRef<HTMLDivElement, Props>(
           <div className={styles.contentCard}>
             <div className={styles.cardTitle}>Daily Activity</div>
             <div style={{
-              minHeight: '220px',
+              minHeight: '180px',
               width: '100%',
               maxWidth: '100%',
               overflow: 'visible',
@@ -73,7 +73,7 @@ const TimeAnalysisBlock = forwardRef<HTMLDivElement, Props>(
               {timeAnalysis.dailyActivity && timeAnalysis.dailyActivity.length > 0 ? (
                 <LineChart
                   data={timeAnalysis.dailyActivity}
-                  height={200}
+                  height={160}
                   tooltipUnit="messages"
                   className="w-full"
                   title=""
@@ -110,10 +110,10 @@ const TimeAnalysisBlock = forwardRef<HTMLDivElement, Props>(
           {/* Row 3: Time Distribution (Two Column Layout) */}
           <div className={styles.contentCard}>
             <div className={styles.cardTitle}>Time Distribution</div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-4">
-              {/* Left Column: Pie Chart (占据2/5宽度) */}
-              <div className="md:col-span-2 flex items-left">
-                <div className="w-full">
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-10">
+              {/* Left Column: Pie Chart (3/5 width) */}
+              <div className="md:col-span-3 flex items-center justify-center">
+                <div className="w-full max-w-[350px]">
                   <TimeDistribution
                     data={timeAnalysis.timeDistribution}
                     className="w-full"
@@ -122,8 +122,8 @@ const TimeAnalysisBlock = forwardRef<HTMLDivElement, Props>(
                 </div>
               </div>
 
-              {/* Right Column: Stats Cards (占据4/6宽度) */}
-              <div className="md:col-span-4 flex flex-col justify-center space-y-4 md:pl-8">
+              {/* Right Column: Stats Cards (vertically arranged) (2/5 width) */}
+              <div className="md:col-span-2 flex flex-col justify-center space-y-4">
                 {/* Most Active Hour */}
                 <div className={styles.statCard}>
                   <div className={styles.iconContainer}>
