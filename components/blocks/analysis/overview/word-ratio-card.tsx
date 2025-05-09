@@ -2,6 +2,7 @@ import React from 'react';
 import { useTranslations } from 'next-intl';
 import HeartRatioChart from '@/components/ui/heartratiochart';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+import styles from '@/styles/overview-cards.module.css';
 
 interface WordRatioCardProps {
   totalWords: number;
@@ -27,6 +28,7 @@ const WordRatioCard: React.FC<WordRatioCardProps> = ({
   className
 }) => {
   const t = useTranslations('results');
+  const metricsT = useTranslations('results.metrics');
 
   // 计算百分比
   const sender1Percentage = totalWords > 0
@@ -37,12 +39,12 @@ const WordRatioCard: React.FC<WordRatioCardProps> = ({
     : 0;
 
   return (
-    <div className={`bg-background/70 rounded-lg py-3 px-2 border border-primary/5 shadow-sm h-[200px] ${className}`}>
-      <div className="text-lg font-medium text-muted-foreground mb-3 text-center">
-        {t('metrics.total_words')}
+    <div className={`${styles.wordRatioCard} ${className}`}>
+      <div className={styles.cardTitle}>
+        {metricsT('total_words')}
       </div>
 
-      <div className="flex flex-col items-center">
+      <div className={styles.cardContent}>
         <div className="text-4xl font-bold text-primary mb-3">
           {totalWords}
         </div>

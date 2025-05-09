@@ -43,11 +43,22 @@ const BarChart: React.FC<BarChartProps> = ({
   const displayItems = processedData.slice(0, maxItems);
 
   // 获取翻译
-  const t = useTranslations('chatrecapresult');
+  const t = useTranslations('results');
+
+  // 安全翻译函数，如果翻译键不存在则返回默认值
+  const safeT = (key: string, defaultValue: string): string => {
+    try {
+      return t(key);
+    } catch (e) {
+      return defaultValue;
+    }
+  };
 
   // 如果没有数据，显示提示信息
   if (displayItems.length === 0) {
-    return <div className="text-center py-4 text-muted-foreground">{t('no_data_found')}</div>;
+    return <div className="text-center py-4 text-muted-foreground">
+      {safeT('no_data.no_meaningful_words', 'No data found')}
+    </div>;
   }
 
   // 获取最大值，用于计算百分比宽度

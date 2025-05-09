@@ -1,0 +1,201 @@
+/* Analysis Containers Module Styles */
+
+/* Main container for analysis blocks */
+.analysisBlock {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(var(--primary), 0.1);
+  border-radius: 0.75rem;
+  padding: 0.1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Container for overview block with less padding */
+.overviewBlock {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(var(--primary), 0.15);
+  border-radius: 0.75rem;
+  padding: 0.3rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+/* Container for text analysis block */
+.textAnalysisBlock {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(var(--primary), 0.15);
+  border-radius: 0.75rem;
+  padding: 0.3rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+/* Container for time analysis block */
+.timeAnalysisBlock {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(var(--primary), 0.15);
+  border-radius: 0.75rem;
+  padding: 0.3rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+/* Container for story timeline block */
+.storyTimelineBlock {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(var(--primary), 0.15);
+  border-radius: 0.75rem;
+  padding: 0.3rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+/* Common card styles for inner content cards */
+.contentCard {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid rgba(var(--primary), 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0.2rem 0;
+}
+
+/* Card with horizontal layout for stats with icons */
+.statCard {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid rgba(var(--primary), 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0.2rem 0;
+}
+
+/* Card title styles */
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: hsl(var(--foreground));
+  margin-bottom: 0.75rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(var(--primary), 0.1);
+  padding-bottom: 0.5rem;
+  width: 100%;
+}
+
+/* Section title styles */
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: hsl(var(--foreground));
+  margin-bottom: 1.5rem;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+}
+
+/* Underline for section titles */
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 100%;
+  height: 0.25rem;
+  background: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--primary)/0.5));
+  border-radius: 0.25rem;
+}
+
+/* Three column grid */
+.threeColumnGrid {
+  display: grid;
+  gap: 4rem;
+  width: 100%;
+  grid-template-columns: repeat(1, 1fr);
+  margin: 0.5rem 0;
+}
+
+/* Two column grid */
+.twoColumnGrid {
+  display: grid;
+  gap: 1.5rem;
+  width: 100%;
+  grid-template-columns: repeat(1, 1fr);
+  margin: 0.5rem 0;
+}
+
+/* Icon container for stat cards */
+.iconContainer {
+  padding: 0.75rem;
+  background: rgba(var(--primary), 0.15);
+  border-radius: 9999px;
+  margin-right: 0.75rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Icon styling */
+.icon {
+  height: 1.75rem;
+  width: 1.75rem;
+  color: hsl(var(--primary));
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.1));
+}
+
+/* Responsive styles */
+@media (min-width: 768px) {
+  .threeColumnGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .twoColumnGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .analysisBlock {
+    padding: 1rem;
+  }
+
+  .cardTitle {
+    font-size: 1rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.25rem;
+  }
+}

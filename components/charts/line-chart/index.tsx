@@ -28,10 +28,21 @@ const LineChart: React.FC<LineChartProps> = ({
   className
 }) => {
   // 获取翻译
-  const t = useTranslations('chatrecapresult');
+  const t = useTranslations('results');
+
+  // 安全翻译函数，如果翻译键不存在则返回默认值
+  const safeT = (key: string, defaultValue: string): string => {
+    try {
+      return t(key);
+    } catch (e) {
+      return defaultValue;
+    }
+  };
 
   if (!data || data.length === 0) {
-    return <div className="text-center py-4 text-muted-foreground">{t('no_data_available')}</div>;
+    return <div className="text-center py-4 text-muted-foreground">
+      {safeT('no_data.no_messages_to_analyze', 'No data available')}
+    </div>;
   }
 
   // 转换数据格式以适应 Recharts
@@ -64,10 +75,10 @@ const LineChart: React.FC<LineChartProps> = ({
           <AreaChart
             data={chartData}
             margin={{
-              top: 10,
-              right: 10,
+              top: 5,
+              right: 5,
               left: 0,
-              bottom: 0,
+              bottom: 5,
             }}
           >
             <defs>
@@ -83,16 +94,16 @@ const LineChart: React.FC<LineChartProps> = ({
             />
             <XAxis
               dataKey="date"
-              tick={{ fontSize: 12, fill: 'hsl(var(--muted-foreground))' }}
+              tick={{ fontSize: 10, fill: 'hsl(var(--muted-foreground))' }}
               tickLine={{ stroke: 'hsl(var(--primary)/0.2)' }}
               axisLine={{ stroke: 'hsl(var(--primary)/0.2)' }}
-              tickMargin={8}
+              tickMargin={4}
             />
             <YAxis
-              tick={{ fontSize: 12, fill: 'hsl(var(--muted-foreground))' }}
+              tick={{ fontSize: 10, fill: 'hsl(var(--muted-foreground))' }}
               tickLine={{ stroke: 'hsl(var(--primary)/0.2)' }}
               axisLine={{ stroke: 'hsl(var(--primary)/0.2)' }}
-              tickMargin={8}
+              tickMargin={4}
             />
             <Tooltip content={<CustomTooltip />} />
             <Area

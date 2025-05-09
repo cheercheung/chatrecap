@@ -1,0 +1,190 @@
+/* Overview Cards Module Styles */
+
+/* Common card styles */
+.overviewCard {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 0.75rem;
+  padding: 0.5rem 0.5rem;
+  border: 1px solid rgba(var(--primary), 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: hsl(var(--foreground));
+  margin-bottom: 0.75rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(var(--primary), 0.1);
+  padding-bottom: 0.5rem;
+  width: 100%;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+/* Words Per Message Card */
+.wordsPerMessageCard {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 0.75rem;
+  padding: 0.5rem 0.5rem;
+  border: 1px solid rgba(var(--primary), 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.wordsPerMessageGrid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+}
+
+.senderColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.senderColumnLeft {
+  display: flex;
+  flex-direction: column;
+  grid-column: span 2;
+  align-items: flex-start;
+}
+
+.senderColumnRight {
+  display: flex;
+  flex-direction: column;
+  grid-column: span 2;
+  align-items: flex-end;
+}
+
+.vsColumn {
+  grid-column: span 1;
+  display: flex;
+  justify-content: center;
+}
+
+.vsText {
+  font-size: 2.25rem;
+  font-weight: 600;
+  color: hsl(var(--muted-foreground));
+  opacity: 0.8;
+  text-transform: uppercase;
+}
+
+.valueText {
+  font-size: 3.25rem;
+  font-weight: 700;
+  color: hsl(var(--primary));
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.senderInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  color: hsl(var(--muted-foreground));
+  font-size: 1rem;
+}
+
+.senderInfoRight {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  color: hsl(var(--muted-foreground));
+  font-size: 1rem;
+  justify-content: flex-end;
+}
+
+.colorDot {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 9999px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.senderName {
+  font-weight: 600;
+  color: hsl(var(--foreground));
+}
+
+.hiddenPlaceholder {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: hsl(var(--primary));
+  margin-bottom: 0.75rem;
+  opacity: 0;
+}
+
+/* Message Ratio Card */
+.messageRatioCard {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 0.75rem;
+  padding: 0.5rem 0.5rem;
+  border: 1px solid rgba(var(--primary), 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Word Ratio Card */
+.wordRatioCard {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 0.75rem;
+  padding: 0.5rem 0.5rem;
+  border: 1px solid rgba(var(--primary), 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .valueText {
+    font-size: 2.5rem;
+  }
+
+  .vsText {
+    font-size: 1.875rem;
+  }
+
+  .senderInfo, .senderInfoRight {
+    font-size: 0.875rem;
+    gap: 0.25rem;
+  }
+
+  .cardTitle {
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .valueText {
+    font-size: 2rem;
+  }
+
+  .vsText {
+    font-size: 1.5rem;
+  }
+
+  .overviewCard, .messageRatioCard, .wordRatioCard, .wordsPerMessageCard {
+    padding: 0.25rem;
+    height: 180px;
+  }
+}

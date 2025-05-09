@@ -6,6 +6,7 @@ import { TextAnalysis } from '@/types/analysis';
 import { motion } from 'framer-motion';
 import { WordCloud } from '@/components/charts';
 import CustomBarChart from '@/components/charts/custom-barchart';
+import styles from '@/styles/analysis-containers.module.css';
 
 type Props = {
   textAnalysis: TextAnalysis;
@@ -14,7 +15,7 @@ type Props = {
 
 const TextAnalysisBlock = forwardRef<HTMLDivElement, Props>(
   ({ textAnalysis, filterMeaningfulWords }, ref) => {
-    const t = useTranslations('chatrecapresult');
+    const t = useTranslations('results');
 
     // 过滤有意义的词（如果提供了过滤函数）
     const filteredCommonWords = filterMeaningfulWords
@@ -37,16 +38,12 @@ const TextAnalysisBlock = forwardRef<HTMLDivElement, Props>(
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
-        className="bg-card/30 backdrop-blur-sm border border-primary/10 rounded-xl p-6 shadow-md flex flex-col items-center"
+        className={styles.textAnalysisBlock}
       >
-        {/* <h2 className="text-2xl md:text-3xl font-bold mb-6 text-foreground text-center relative inline-block mx-auto">
-          {t('text_analysis_title')}
-          <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-pink-500 rounded-full"></span>
-        </h2> */}
 
-        <div className="space-y-4">
+        <div className="space-y-6">
           {/* Row 1: Three Cards - Common Words, Emojis, and Sentiment Analysis */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className={styles.threeColumnGrid}>
             {/* Common Words Card */}
             <div className="bg-background/70 rounded-lg p-4 border border-primary/5 shadow-sm flex flex-col items-center">
               <div className="text-lg font-medium text-foreground mb-3 text-center">{t('common_words')}</div>
@@ -104,7 +101,7 @@ const TextAnalysisBlock = forwardRef<HTMLDivElement, Props>(
           </div>
 
           {/* Row 3: Common Words Bar Charts */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-background/70 rounded-lg p-4 border border-primary/5 shadow-sm flex flex-col items-center">
               <CustomBarChart
                 data={textAnalysis.sender1.commonWords.map(item => ({ label: item.word, value: item.count }))}
@@ -125,7 +122,7 @@ const TextAnalysisBlock = forwardRef<HTMLDivElement, Props>(
           </div>
 
           {/* Row 4: Emoji Charts */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-background/70 rounded-lg p-4 border border-primary/5 shadow-sm flex flex-col items-center">
               <CustomBarChart
                 data={textAnalysis.sender1.topEmojis}

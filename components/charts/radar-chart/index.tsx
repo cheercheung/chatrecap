@@ -42,7 +42,7 @@ const RadarChartComponent: React.FC<RadarChartProps> = ({
   className
 }) => {
   // 获取翻译
-  const t = useTranslations('chatrecapresult');
+  const t = useTranslations('results');
 
   // 安全翻译函数，如果翻译键不存在则返回默认值
   const safeT = (key: string, defaultValue: string): string => {

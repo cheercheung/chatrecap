@@ -8,6 +8,7 @@ import { motion } from 'framer-motion';
 import MessageRatioCard from './message-ratio-card';
 import WordRatioCard from './word-ratio-card';
 import WordsPerMessageCard from './words-per-message-card';
+import styles from '@/styles/analysis-containers.module.css';
 
 type Props = {
   overview: Overview;
@@ -23,7 +24,7 @@ const OverviewBlock = forwardRef<HTMLDivElement, Props>(({ overview }, ref) => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       viewport={{ once: true }}
-      className="bg-card/30 backdrop-blur-sm border border-primary/10 rounded-xl p-2 shadow-md flex flex-col items-center"
+      className={styles.overviewBlock}
     >
       {/* <h2 className="text-2xl md:text-3xl font-bold mb-6 text-foreground text-center relative inline-block mx-auto">
         {t('overview_title')}
@@ -32,7 +33,7 @@ const OverviewBlock = forwardRef<HTMLDivElement, Props>(({ overview }, ref) => {
 
       <div className="space-y-4">
         {/* Row 1: Three cards in a row with custom width distribution */}
-        <div className="grid grid-cols-12 gap-2">
+        <div className="grid grid-cols-12 gap-4">
           {/* Total Messages Card with Heart Ratio Chart (25% Width) */}
           <div className="col-span-12 sm:col-span-4">
             <MessageRatioCard

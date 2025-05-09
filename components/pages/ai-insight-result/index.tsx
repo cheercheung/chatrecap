@@ -35,7 +35,7 @@ const AiInsightResultPage: React.FC<AiInsightResultPageProps> = ({
       hasRelationshipMetrics: !!relationshipMetrics
     });
     return (
-      <main className="max-w-3xl mx-auto py-10 px-4 space-y-8">
+      <main className="max-w-[98%] mx-auto py-6 px-0 space-y-4">
         <div className="p-6 bg-red-50 border border-red-200 rounded-lg">
           <h2 className="text-xl font-semibold text-red-700">Data is incomplete</h2>
           <p className="mt-2 text-red-600">AI analysis result is incomplete, please contact customer service for help.</p>
@@ -45,7 +45,7 @@ const AiInsightResultPage: React.FC<AiInsightResultPageProps> = ({
   }
 
   return (
-    <main className="max-w-3xl mx-auto py-10 px-4 space-y-8">
+    <main className="max-w-[98%] mx-auto py-6 px-0 space-y-4">
       {/* Analysis Summary Block */}
       <AnalysisSummaryBlock
         analysisData={analysisData}

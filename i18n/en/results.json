@@ -22,7 +22,7 @@
     "most_active_hour": "Most Active Hour",
     "peak_activity_time": "Peak Activity Time"
   },
-  "time_analysis_title": "Time Analysis",
+  "time_analysis_title": "",
   "time_distribution": "Time Distribution",
   "time_distribution_description": "You tend to chat most during the evening ({evening}%), followed by afternoon ({afternoon}%) and morning ({morning}%). This pattern shows when you're both most available and engaged in conversation.",
   "response_pattern_description": "Your conversation style shows {responsePattern}. This indicates {conversationLength} throughout your exchanges.",

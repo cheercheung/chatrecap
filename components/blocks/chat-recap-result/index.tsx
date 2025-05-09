@@ -48,7 +48,7 @@ const ChatRecapResultBlock: React.FC<ChatRecapResultProps> = ({
 
   return (
     <div className={`w-full py-6 ${className}`}>
-      <div className="container max-w-4xl mx-auto px-1">
+      <div className="container max-w-5xl mx-auto px-0">
         {/* Row 1: 导航面包屑 */}
         <div className="flex items-center text-sm text-muted-foreground mb-4">
           <Link href="/" className="flex items-center hover:text-foreground transition-colors">
@@ -70,8 +70,9 @@ const ChatRecapResultBlock: React.FC<ChatRecapResultProps> = ({
         {/* Row 3: Action Buttons */}
         <ActionButtons />
 
-        {/* Row 4: 数据保留提示 */}
-        <div className="flex items-center justify-end mb-8">
+        {/* Row 4: 标题和数据保留提示 */}
+        <div className="flex items-center justify-between mb-8">
+          <h1 className="text-3xl font-bold">{t("title")}</h1>
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger>
@@ -85,13 +86,11 @@ const ChatRecapResultBlock: React.FC<ChatRecapResultProps> = ({
         </div>
 
         {/* Row 5: 分析内容 */}
-        <div className="space-y-4">
-          {/* 标题 */}
-          <h1 className="text-3xl font-bold text-center mb-4">{t("title")}</h1>
+        <div className="space-y-6">
 
           {/* Overview Block */}
           <div>
-            <h2 className="text-2xl font-bold mb-2">{t("overview_title")}</h2>
+            <h2 className="text-2xl font-bold mb-1">{t("overview_title")}</h2>
             <div className="[&_h2]:hidden">
               <OverviewBlock
                 overview={analysisData.overview}
@@ -102,7 +101,7 @@ const ChatRecapResultBlock: React.FC<ChatRecapResultProps> = ({
 
           {/* Time Analysis Block */}
           <div>
-            <h2 className="text-2xl font-bold mb-2">{t("time_analysis_title")}</h2>
+            <h2 className="text-2xl font-bold mb-1">{t("time_analysis_title")}</h2>
             <div className="[&_h2]:hidden">
               <TimeAnalysisBlock
                 timeAnalysis={analysisData.timeAnalysis}
@@ -112,7 +111,7 @@ const ChatRecapResultBlock: React.FC<ChatRecapResultProps> = ({
 
           {/* Text Analysis Block */}
           <div>
-            <h2 className="text-2xl font-bold mb-2">{t("text_analysis_title")}</h2>
+            <h2 className="text-2xl font-bold mb-1">{t("text_analysis_title")}</h2>
             <div className="[&_h2]:hidden">
               <TextAnalysisBlock
                 textAnalysis={analysisData.textAnalysis}
@@ -122,7 +121,7 @@ const ChatRecapResultBlock: React.FC<ChatRecapResultProps> = ({
 
           {/* Timeline Block (Storyline) */}
           <div>
-            <h2 className="text-2xl font-bold mb-2">{t("story_timeline_title")}</h2>
+            <h2 className="text-2xl font-bold mb-1">{t("story_timeline_title")}</h2>
             <div className="[&_h2]:hidden">
               <StoryTimelineBlock
                 startDate={analysisData.startDate}
