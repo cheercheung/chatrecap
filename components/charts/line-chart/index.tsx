@@ -82,83 +82,72 @@ const LineChart: React.FC<LineChartProps> = ({
         justifyContent: 'center',
         alignItems: 'center'
       }}>
-        {/* 使用两种方式渲染，确保至少一种能工作 */}
-        {/* 方式1: 使用ResponsiveContainer */}
-        <div style={{ width: '100%', height: '100%', position: 'absolute', top: 0, left: 0 }}>
-          <ResponsiveContainer width="100%" height="100%">
-            <AreaChart
-              data={chartData}
-              margin={{
-                top: 5,
-                right: 10,
-                left: 5,
-                bottom: 5,
-              }}
-            >
-              <defs>
-                <linearGradient id="colorValue" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="hsl(var(--primary))" stopOpacity={0.8}/>
-                  <stop offset="95%" stopColor="hsl(var(--primary))" stopOpacity={0.1}/>
-                </linearGradient>
-              </defs>
-              <CartesianGrid
-                strokeDasharray="3 3"
-                vertical={false}
-                stroke="hsl(var(--primary)/0.1)"
-              />
-              <XAxis
-                dataKey="date"
-                tick={{ fontSize: 9, fill: 'hsl(var(--muted-foreground))' }}
-                tickLine={{ stroke: 'hsl(var(--primary)/0.2)' }}
-                axisLine={{ stroke: 'hsl(var(--primary)/0.2)' }}
-                tickMargin={3}
-                interval="preserveStartEnd"
-              />
-              <YAxis
-                tick={{ fontSize: 9, fill: 'hsl(var(--muted-foreground))' }}
-                tickLine={{ stroke: 'hsl(var(--primary)/0.2)' }}
-                axisLine={{ stroke: 'hsl(var(--primary)/0.2)' }}
-                tickMargin={3}
-                width={30}
-              />
-              <Tooltip content={<CustomTooltip />} wrapperStyle={{ zIndex: 100, position: 'absolute', pointerEvents: 'none' }} offset={5} />
-              <Area
-                type="monotone"
-                dataKey="value"
-                stroke="hsl(var(--primary))"
-                fill="url(#colorValue)"
-                strokeWidth={2}
-                activeDot={{
-                  r: 6,
-                  stroke: 'hsl(var(--background))',
-                  strokeWidth: 2,
-                  fill: 'hsl(var(--primary))'
-                }}
-              />
-            </AreaChart>
-          </ResponsiveContainer>
-        </div>
-
-        {/* 方式2: 直接渲染，不使用ResponsiveContainer */}
-        <div style={{ width: '100%', height: '100%', position: 'absolute', top: 0, left: 0, opacity: 0.01 }}>
+        {/* 只使用一个图表渲染，避免干扰 */}
+        <ResponsiveContainer width="100%" height="100%">
           <AreaChart
-            width={800}
-            height={height}
             data={chartData}
             margin={{
               top: 5,
-              right: 10,
-              left: 5,
+              right: 20,
+              left: 10,
               bottom: 5,
             }}
           >
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="date" />
-            <YAxis />
-            <Tooltip content={<CustomTooltip />} wrapperStyle={{ zIndex: 100, position: 'absolute', pointerEvents: 'none' }} offset={5} />
-            <Area type="monotone" dataKey="value" stroke="#8884d8" fill="#8884d8" />
+            <defs>
+              <linearGradient id="colorValue" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="5%" stopColor="hsl(var(--primary))" stopOpacity={0.8}/>
+                <stop offset="95%" stopColor="hsl(var(--primary))" stopOpacity={0.1}/>
+              </linearGradient>
+            </defs>
+            <CartesianGrid
+              strokeDasharray="3 3"
+              vertical={false}
+              stroke="hsl(var(--primary)/0.1)"
+            />
+            <XAxis
+              dataKey="date"
+              tick={{ fontSize: 9, fill: 'hsl(var(--muted-foreground))' }}
+              tickLine={{ stroke: 'hsl(var(--primary)/0.2)' }}
+              axisLine={{ stroke: 'hsl(var(--primary)/0.2)' }}
+              tickMargin={3}
+              interval="preserveStartEnd"
+            />
+            <YAxis
+              tick={{ fontSize: 9, fill: 'hsl(var(--muted-foreground))' }}
+              tickLine={{ stroke: 'hsl(var(--primary)/0.2)' }}
+              axisLine={{ stroke: 'hsl(var(--primary)/0.2)' }}
+              tickMargin={3}
+              width={30}
+            />
+            <Tooltip
+              content={<CustomTooltip />}
+              cursor={{ stroke: 'hsl(var(--primary))', strokeWidth: 1, strokeDasharray: '3 3' }}
+              wrapperStyle={{
+                zIndex: 1000,
+                position: 'absolute',
+                pointerEvents: 'auto',
+                outline: 'none'
+              }}
+              offset={10}
+              allowEscapeViewBox={{ x: true, y: true }}
+              position={{ x: 0, y: 0 }}
+            />
+            <Area
+              type="monotone"
+              dataKey="value"
+              stroke="hsl(var(--primary))"
+              fill="url(#colorValue)"
+              strokeWidth={2}
+              activeDot={{
+                r: 6,
+                stroke: 'hsl(var(--background))',
+                strokeWidth: 2,
+                fill: 'hsl(var(--primary))'
+              }}
+              isAnimationActive={false}
+            />
           </AreaChart>
-        </div>
+        </ResponsiveContainer>
       </div>
     </div>
   );
