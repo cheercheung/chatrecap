@@ -24,23 +24,25 @@ const StaticAiInsightResultPage: React.FC<StaticAiInsightResultPageProps> = ({
   const { personalityInsights, relationshipMetrics } = analysisData.aiInsights!;
 
   return (
-    <main className="max-w-[98%] mx-auto py-6 px-0 space-y-4">
+    <main>
       {/* Analysis Summary Block */}
       <AnalysisSummaryBlock
         analysisData={analysisData}
       />
 
       {/* AI Insight Block */}
-      <AiInsightBlock
-        data={{
-          personalityInsights,
-          relationshipMetrics,
-          insights: {
-            interaction: mappedInsights,
-            relationship: mappedInsights
-          }
-        }}
-      />
+      <div className="container max-w-5xl mx-auto px-0 py-6">
+        <AiInsightBlock
+          data={{
+            personalityInsights,
+            relationshipMetrics,
+            insights: {
+              interaction: mappedInsights,
+              relationship: mappedInsights
+            }
+          }}
+        />
+      </div>
     </main>
   );
 };

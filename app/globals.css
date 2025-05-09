@@ -1,6 +1,7 @@
 @import "theme.css";
 @import "../styles/static-core.css";
 @import "../styles/font-optimization.css";
+@import "../styles/din-font.css";
 
 /* 使用PurgeCSS优化Tailwind输出 */
 @tailwind base;

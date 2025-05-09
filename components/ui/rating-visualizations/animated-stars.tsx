@@ -21,7 +21,7 @@ export const AnimatedStarRating: React.FC<AnimatedStarRatingProps> = ({
 }) => {
   // 创建星星数组
   const stars = Array.from({ length: maxScore }, (_, i) => i + 1);
-  
+
   // 星星动画变体
   const starVariants = {
     initial: { scale: 0, rotate: -180 },
@@ -37,20 +37,20 @@ export const AnimatedStarRating: React.FC<AnimatedStarRatingProps> = ({
     }),
     hover: { scale: 1.2, rotate: 15, transition: { duration: 0.2 } },
   };
-  
+
   // 分数文本动画变体
   const scoreVariants = {
     initial: { opacity: 0, y: 20 },
-    animate: { 
-      opacity: 1, 
+    animate: {
+      opacity: 1,
       y: 0,
-      transition: { 
+      transition: {
         delay: 0.5,
-        duration: 0.5 
+        duration: 0.5
       }
     },
   };
-  
+
   return (
     <div className={`flex flex-col md:flex-row items-center gap-8 ${className}`}>
       {/* 左侧：星级评分 */}
@@ -73,7 +73,7 @@ export const AnimatedStarRating: React.FC<AnimatedStarRatingProps> = ({
             </motion.div>
           ))}
         </div>
-        
+
         {/* 分数显示 */}
         <motion.div
           variants={scoreVariants}
@@ -81,12 +81,12 @@ export const AnimatedStarRating: React.FC<AnimatedStarRatingProps> = ({
           animate="animate"
           className="text-center"
         >
-          <div className="text-3xl font-bold text-primary">
+          <div className="text-3xl font-bold text-primary din-numbers">
             {score}/{maxScore}
           </div>
         </motion.div>
       </div>
-      
+
       {/* 右侧：标题和内容 */}
       <div className="flex-1 space-y-4">
         <h3 className="text-2xl font-semibold">{title}</h3>

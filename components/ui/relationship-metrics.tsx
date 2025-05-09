@@ -71,6 +71,7 @@ const RelationshipMetrics: React.FC<RelationshipMetricsProps> = ({
                   <CircularProgressbar
                     value={metric.data.score * 10} // 将 0-10 的分数转换为 0-100 的百分比
                     text={`${metric.data.score}/10`}
+                    className="din-numbers"
                     styles={buildStyles({
                       textSize: '1.5rem',
                       pathColor: getColorByScore(metric.data.score),

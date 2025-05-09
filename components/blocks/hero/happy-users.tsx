@@ -35,7 +35,7 @@ export default function HappyUsers() {
           ))}
         </div>
         <p className="text-left font-medium text-muted-foreground">
-          {translatedText}
+          <span className="din-numbers">99+</span> happy users
         </p>
       </div>
     </div>

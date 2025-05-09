@@ -1,0 +1,37 @@
+/**
+ * DIN 字体定义
+ * 专门用于数字显示
+ */
+
+@font-face {
+  font-family: 'DIN';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/din-regular.woff2') format('woff2');
+  unicode-range: U+0030-0039; /* 仅用于数字 0-9 */
+}
+
+@font-face {
+  font-family: 'DIN';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/din-medium.woff2') format('woff2');
+  unicode-range: U+0030-0039; /* 仅用于数字 0-9 */
+}
+
+@font-face {
+  font-family: 'DIN';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/din-bold.woff2') format('woff2');
+  unicode-range: U+0030-0039; /* 仅用于数字 0-9 */
+}
+
+/* 为数字应用 DIN 字体 */
+.din-numbers {
+  font-feature-settings: "tnum";
+  font-variant-numeric: tabular-nums;
+}

@@ -181,6 +181,7 @@ const TextAnalysisBlock = forwardRef<HTMLDivElement, Props>(
                     <CircularProgressbar
                       value={textAnalysis.sentimentScore * 100}
                       text={`${(textAnalysis.sentimentScore * 100).toFixed(0)}%`}
+                      className="din-numbers"
                       styles={buildStyles({
                         textSize: '1.5rem',
                         pathColor: 'hsl(var(--primary))',

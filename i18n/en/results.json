@@ -35,6 +35,7 @@
   },
   "text_analysis_title": "Text Analysis",
   "sentiment_analysis": "Sentiment Analysis",
+  "sentiment_pie_title":"Time-of-Day Insights",
   "sentiment_description": "Your conversations have a sentiment score of {sentimentScore}, which indicates a {sentimentDescription} emotional tone. This reflects the overall mood and feeling of your exchanges.",
   "sentiment_score": "Sentiment Score",
   "sentiment_positive": "Positive",

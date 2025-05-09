@@ -20,18 +20,18 @@ export const CircularWaveRating: React.FC<CircularWaveRatingProps> = ({
 }) => {
   // 计算百分比
   const percentage = (score / maxScore) * 100;
-  
+
   // 波浪动画参数
   const waveCount = 5; // 波浪数量
   const waves = Array.from({ length: waveCount }, (_, i) => i);
-  
+
   return (
     <div className={`flex flex-col md:flex-row items-center gap-8 ${className}`}>
       {/* 左侧：环形进度条 + 波浪效果 */}
       <div className="relative w-64 h-64 flex-shrink-0">
         {/* 外环 */}
         <div className="absolute inset-0 rounded-full border-8 border-primary/10"></div>
-        
+
         {/* 进度环 */}
         <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
           <circle
@@ -46,7 +46,7 @@ export const CircularWaveRating: React.FC<CircularWaveRatingProps> = ({
             transform="rotate(-90 50 50)"
           />
         </svg>
-        
+
         {/* 波浪容器 */}
         <div className="absolute inset-4 rounded-full overflow-hidden bg-primary/5">
           {/* 波浪动画 */}
@@ -74,18 +74,18 @@ export const CircularWaveRating: React.FC<CircularWaveRatingProps> = ({
               }}
             />
           ))}
-          
+
           {/* 中心评分显示 */}
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="text-center">
-              <div className="text-4xl font-bold text-primary">
+              <div className="text-4xl font-bold text-primary din-numbers">
                 {score}/{maxScore}
               </div>
             </div>
           </div>
         </div>
       </div>
-      
+
       {/* 右侧：标题和内容 */}
       <div className="flex-1 space-y-4">
         <h3 className="text-2xl font-semibold">{title}</h3>

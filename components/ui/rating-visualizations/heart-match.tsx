@@ -68,7 +68,7 @@ export const HeartMatchRating: React.FC<HeartMatchRatingProps> = ({
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.5 }}
           >
-            <span className="text-sm font-medium text-primary">
+            <span className="text-sm font-medium text-primary din-numbers">
               {score}/{maxScore}
             </span>
           </motion.div>
@@ -117,7 +117,7 @@ export const HeartMatchRating: React.FC<HeartMatchRatingProps> = ({
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1, duration: 0.5 }}
           >
-            <div className="text-2xl font-bold text-primary">
+            <div className="text-2xl font-bold text-primary din-numbers">
               {score}/{maxScore}
             </div>
           </motion.div>

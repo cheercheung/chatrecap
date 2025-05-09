@@ -99,27 +99,27 @@ export const generateSampleAnalysisData = (id: string = "sample"): AnalysisData 
         name: "John",
         commonWords: [
           { "word": "pls",    "count": 245 },
+          { "word": "sorry",    "count": 195 },
+          { "word": "ttyl",   "count": 178 },
+         { "word": "brb",    "count": 145 },
           { "word": "thx",    "count": 138 },
           { "word": "ily",    "count": 135 },
          { "word": "omg",    "count": 130 },
           { "word": "ur",     "count": 125 },
          { "word": "babe",   "count": 98 },
-          { "word": "sorry",    "count": 195 },
-         { "word": "hmu",    "count": 90 },
-         { "word": "ttyl",   "count": 178 },
-         { "word": "brb",    "count": 145 }
+         { "word": "hmu",    "count": 90 }
         ],
         topEmojis: [
-
-          { "emoji": "🙏",  "count": 245 },
           { "emoji": "😢",  "count": 340 },
-          { "emoji": "🥺", "count": 235 },
           { "emoji": "🙇‍♂️", "count": 330 },
+          { "emoji": "🙏",  "count": 245 },
+           { "emoji": "🥀",  "count": 238 },
+          { "emoji": "🥺", "count": 235 },
+          { "emoji": "😥",  "count": 220 },
           { "emoji": "😔",  "count": 128 },
           { "emoji": "😩",  "count": 125 },
-          { "emoji": "😓",  "count": 121 },
-          { "emoji": "😥",  "count": 220 },
-         { "emoji": "🥀",  "count": 238 }
+          { "emoji": "😓",  "count": 121 }
+        
         ]
       }
     },
@@ -294,113 +294,97 @@ export const getAnalysisData = async (id: string): Promise<AnalysisData | null> 
  */
 export const sampleAiInsights = {
   personalityInsights: {
-    sender1: {
-      name: "Emily",
-      interestLevel: {
-        score: 8,
-        detail:
-          "Emily shows high interest in the conversation, frequently initiating new topics and asking follow-up questions. She responds to almost all messages and shows curiosity about John's opinions and experiences."
+    "sender1": {
+      "name": "Emily",
+      "interestLevel": {
+        "score": 3,
+        "detail": "Emily shows relatively low engagement: she seldom initiates new topics, often responds with brief acknowledgments, and rarely asks follow‑up questions."
       },
-      responseEnthusiasm: {
-        score: 7,
-        detail:
-          "Emily's messages are often enthusiastic, using exclamation marks and positive language. She frequently uses emojis to express excitement and engagement with the conversation."
+      "responseEnthusiasm": {
+        "score": 2,
+        "detail": "Emily’s tone is generally subdued: she rarely uses exclamation marks or emojis and keeps her language neutral."
       },
-      emotionalStability: {
-        score: 9,
-        detail:
-          "Emily maintains a consistent positive tone throughout conversations. Even during disagreements, she remains calm and constructive, rarely showing signs of emotional volatility."
+      "emotionalStability": {
+        "score": 1,
+        "detail": "Emily’s tone fluctuates considerably; she can swing between excitement and frustration within a single conversation, showing noticeable emotional volatility."
       },
-      responseTime: {
-        score: 6,
-        detail:
-          "Emily typically responds within 30 minutes during active conversation periods, though sometimes takes longer during work hours. She rarely leaves messages unanswered for more than a day."
+      "responseTime": {
+        "score": 4,
+        "detail": "Emily often takes several hours to reply and occasionally leaves messages unanswered for a full day."
       }
     },
-    sender2: {
-      name: "John",
-      interestLevel: {
-        score: 7,
-        detail:
-          "John demonstrates good interest in conversations, though he tends to respond more than initiate. He engages well with topics Emily introduces and occasionally brings up new subjects of his own."
+    "sender2": {
+      "name": "John",
+      "interestLevel": {
+        "score": 9,
+        "detail": "John demonstrates very high engagement: he frequently initiates new topics, follows up on details, and sustains the conversation proactively."
       },
-      responseEnthusiasm: {
-        score: 5,
-        detail:
-          "John's communication style is more reserved, with fewer exclamation marks and emojis than Emily. His enthusiasm is more evident when discussing specific topics like movies and technology."
+      "responseEnthusiasm": {
+        "score": 10,
+        "detail": "John’s messages are highly enthusiastic: he regularly uses exclamation marks and emojis to convey excitement, especially when discussing his favorite topics."
       },
-      emotionalStability: {
-        score: 8,
-        detail:
-          "John maintains a steady emotional tone in most conversations. He rarely shows frustration and tends to approach disagreements with a logical perspective rather than emotional reactions."
+      "emotionalStability": {
+        "score": 8,
+        "detail": "John maintains a calm and consistent tone; even during disagreements he remains logical and composed."
       },
-      responseTime: {
-        score: 8,
-        detail:
-          "John is very prompt with responses, typically replying within 15 minutes when active. He's consistent about checking messages and rarely leaves conversations hanging."
+      "responseTime": {
+        "score": 9,
+        "detail": "John is very prompt, typically replying within 15 minutes when active and rarely leaving conversations pending."
       }
     }
   },
   relationshipMetrics: {
-    intimacy: {
-      score: 7,
-      detail:
-        "The conversation shows a good level of intimacy with regular sharing of personal experiences and feelings. Both parties feel comfortable discussing their daily lives and occasional deeper topics, though some emotional reserve is still present."
+    "intimacy": {
+      "score": 3,
+      "detail": "Intimacy is relatively low: exchanges tend to stay on the surface, with few personal disclosures and minimal discussion of deeper feelings."
     },
-    communication: {
-      score: 8,
-      detail:
-        "Communication flows naturally with minimal misunderstandings. Both parties express themselves clearly and ask clarifying questions when needed. Conversations have a good balance of listening and sharing from both sides."
+    "communication": {
+      "score": 5,
+      "detail": "Communication is average: messages are generally clear and understandable, though there are occasional lapses or missed nuances."
     },
-    trust: {
-      score: 9,
-      detail:
-        "There's a strong foundation of trust evident in their willingness to share personal information and vulnerabilities. Neither party shows signs of withholding information or being guarded in their communication."
+    "trust": {
+      "score": 2,
+      "detail": "Trust appears limited: both parties hesitate to share sensitive information and often keep conversations guarded."
     },
-    conflict: {
-      score: 3,
-      detail:
-        "Very little conflict appears in the conversations. When disagreements arise, they're handled respectfully with both parties willing to consider the other's perspective. No instances of heated arguments or lasting tension were observed."
+    "conflict": {
+      "score": 8,
+      "detail": "Conflict is infrequent and mild: disagreements are rare and when they do occur, they’re resolved quickly and respectfully."
     }
   },
   relationshipInsights: {
     points: [
       {
-        title: "Complementary Communication Styles",
-        description:
-          "Emily's enthusiasm balances well with John's more measured approach, creating a dynamic where both parties feel heard and valued."
+        "title": "Surface‑Level Interactions",
+        "description": "Conversations tend to remain on everyday topics with few personal disclosures, reflecting the low intimacy score."
       },
       {
-        title: "Shared Intellectual Curiosity",
-        description:
-          "Both demonstrate interest in learning and discussing new ideas, which strengthens their connection through meaningful exchanges."
+        "title": "Generally Clear but Occasional Ambiguity",
+        "description": "Most messages are understandable and balanced, but there are moments of missed nuance or unspoken assumptions, matching an average communication rating."
       },
       {
-        title: "Mutual Respect",
-        description:
-          "Their conversations show consistent patterns of acknowledging each other's opinions and perspectives, even when they differ."
+        "title": "Hesitant Trust‑Building",
+        "description": "Both parties hold back on sharing sensitive details, indicating limited trust despite polite openness."
       },
       {
-        title: "Growth Opportunity",
-        description:
-          "They could benefit from more vulnerable discussions about future hopes and fears, which are currently touched on but not explored deeply."
+        "title": "Calm Conflict Resolution",
+        "description": "Disagreements are rare and mild; when they occur, they’re addressed respectfully and resolved quickly, consistent with a low‑conflict dynamic."
       }
     ]
   },
   suggestedTopics: [
-    "Future aspirations and how you might support each other's goals",
-    "Deeper exploration of childhood experiences that shaped your values",
-    "Philosophical discussions about life purpose and meaning",
-    "Travel dreams and potential shared adventures",
-    "Creative projects you might enjoy working on together"
+    "Sharing a personal challenge you’re comfortable discussing to build trust",
+    "Reflecting on a memorable moment from your childhood and what it taught you",
+    "Talking through a goal you’re hesitant to pursue and why",
+    "Exploring your fears or anxieties and how the other can support you",
+    "Discussing a meaningful value you both share and how it shapes your choices"
   ],
   overallAnalysis: {
     messageTips: [
-      "Consider setting aside dedicated time for deeper conversations without distractions",
-      "Try sharing more vulnerable thoughts when discussing challenging topics",
-      "Acknowledge each other's messages even when busy, with a quick response indicating you'll reply more fully later",
-      "Continue the positive pattern of asking follow-up questions to show engagement",
-      "Balance practical discussions with more playful, imaginative exchanges"
+      "Schedule a dedicated check‑in where you both share something more personal than usual",
+      "Use open‑ended questions to invite deeper responses rather than surface updates",
+      "Express appreciation for each other’s honesty when someone shares vulnerably",
+      "Follow up on subtle hints—if something seems unsaid, gently ask for more context",
+      "Balance practical planning with intentional moments of emotional connection"
     ]
-  }
-};
+}
+}

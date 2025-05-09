@@ -45,7 +45,7 @@ const WordRatioCard: React.FC<WordRatioCardProps> = ({
       </div>
 
       <div className={styles.cardContent}>
-        <div className="text-4xl font-bold text-primary mb-3">
+        <div className="text-4xl font-bold text-primary mb-3 din-numbers">
           {totalWords}
         </div>
 

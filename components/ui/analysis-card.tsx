@@ -45,6 +45,7 @@ const AnalysisCard: React.FC<AnalysisCardProps> = ({
               <CircularProgressbar
                 value={percentage}
                 text={`${percentage}%`}
+                className="din-numbers"
                 styles={buildStyles({
                   textSize: '1.5rem',
                   pathColor: primaryColor,

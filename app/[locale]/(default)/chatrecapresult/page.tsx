@@ -1,9 +1,7 @@
 import { getTranslations, getMessages } from "next-intl/server";
 import Empty from "@/components/blocks/empty";
 import ClientWrapper from "@/components/pages/chat-recap-result/client-wrapper";
-import { generateSampleAnalysisData } from "@/lib/analysis/sampleData";
 import { getCachedAnalysisData } from "@/lib/storage/cache";
-import { AnalysisData } from "@/types/analysis";
 import { redirect } from "next/navigation";
 import { Suspense } from "react";
 

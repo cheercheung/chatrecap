@@ -141,7 +141,7 @@ const TimeAnalysisBlock = forwardRef<HTMLDivElement, Props>(
                   </div>
                   <div>
                     <div className="text-sm text-muted-foreground">{metricsT('most_active_hour')}</div>
-                    <div className="text-xl font-bold">{formatHour(timeAnalysis.mostActiveHour)}</div>
+                    <div className="text-xl font-bold din-numbers">{formatHour(timeAnalysis.mostActiveHour)}</div>
                     <div className="text-xs text-muted-foreground">{metricsT('peak_activity_time')}</div>
                   </div>
                 </div>
@@ -167,7 +167,7 @@ const TimeAnalysisBlock = forwardRef<HTMLDivElement, Props>(
                   </div>
                   <div>
                     <div className="text-sm text-muted-foreground">{metricsT('busiest_date')}</div>
-                    <div className="text-xl font-bold">{formatDate(timeAnalysis.mostActiveDate)}</div>
+                    <div className="text-xl font-bold din-numbers">{formatDate(timeAnalysis.mostActiveDate)}</div>
                     <div className="text-xs text-muted-foreground">
                       {metricsT('total_messages', { count: timeAnalysis.mostMessagesCount })}
                     </div>

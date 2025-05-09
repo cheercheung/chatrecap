@@ -91,6 +91,20 @@ export default async function RootLayout({
           type="font/woff2"
           crossOrigin="anonymous"
         />
+        <link
+          rel="preload"
+          href="/fonts/din-regular.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/fonts/din-bold.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
       </head>
       <body
         className="min-h-screen bg-background font-sans antialiased overflow-x-hidden"
@@ -111,7 +125,9 @@ export default async function RootLayout({
                   // 预加载关键字体
                   Promise.all([
                     document.fonts.load('400 1em Inter'),
-                    document.fonts.load('700 1em Inter')
+                    document.fonts.load('700 1em Inter'),
+                    document.fonts.load('400 1em DIN'),
+                    document.fonts.load('700 1em DIN')
                   ]).then(() => {
                     document.documentElement.classList.add('fonts-loaded');
                   });

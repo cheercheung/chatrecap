@@ -1,22 +1,19 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
+import React from 'react';
 import { useTranslations } from "next-intl";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Share2, Loader2 } from "lucide-react";
-import { useToast } from "@/components/ui/use-toast";
+import { ArrowLeft, ArrowRight, Share2, RefreshCw } from "lucide-react";
+import { toast } from 'sonner';
 
 /**
  * AI Insight Result页面的操作按钮组件
- * 不包含"生成AI分析"按钮，因为该页面已经是AI分析结果页面
+ * 匹配 ChatRecapResultBlock 的 ActionButtons 组件
  */
 export default function AiInsightActionButtons() {
-  const [isSharing, setIsSharing] = useState(false);
-  const { toast } = useToast();
-
-  // 直接使用顶级命名空间 components
-  const t = useTranslations("components");
+  // 使用新的翻译系统，指定正确的命名空间
+  const resultsT = useTranslations("results");
   const router = useRouter();
   const searchParams = useSearchParams();
   const fileId = searchParams.get('fileId');
@@ -26,72 +23,50 @@ export default function AiInsightActionButtons() {
     router.push('/chatrecapanalysis');
   };
 
-  // 复制链接分享功能
-  const handleShare = async () => {
-    try {
-      setIsSharing(true);
-
-      // 构建分享 URL
-      const shareUrl = new URL(window.location.href);
-
-      // 确保 URL 包含 fileId
-      if (fileId && !shareUrl.searchParams.has('fileId')) {
-        shareUrl.searchParams.set('fileId', fileId);
-      }
-
-      // 复制链接到剪贴板
-      await navigator.clipboard.writeText(shareUrl.toString());
-
-      // 立即显示成功消息
-      toast({
-        title: t('action_buttons.link_copied'),
-        description: t('action_buttons.description'),
+  // 尝试AI分析作为访客
+  const handleTryAsGuest = () => {
+    if (fileId) {
+      router.push(`/ai-insight-result?fileId=${fileId}`);
+    } else {
+      toast.error("No file ID found", {
+        description: "Please upload a chat file first"
       });
-    } catch (error) {
-      // 显示错误消息
-      toast({
-        title: t('action_buttons.copy_failed'),
-        description: t('action_buttons.description_error'),
-        variant: "destructive",
-      });
-    } finally {
-      setIsSharing(false);
     }
+  };
+
+  // 登录获取更多AI分析
+  const handleSignIn = () => {
+    router.push('/auth/signin');
   };
 
   return (
     <div className="flex flex-wrap justify-between items-center mb-8 gap-2">
-      <Button
-        variant="outline"
-        onClick={handleBack}
-        className="flex items-center gap-2"
-      >
-        <ArrowLeft size={16} />
-        {t('action_buttons.back_to_upload')}
-      </Button>
-
-      <div className="flex flex-wrap gap-2">
-        {/* PDF导出按钮暂时隐藏 */}
+      <div className="flex gap-3">
+        <Button
+          className="flex items-center gap-2 bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-600 hover:to-indigo-700"
+          onClick={handleTryAsGuest}
+        >
+          🎉 {resultsT("actions.try_ai_analysis")}
+        </Button>
 
         <Button
           variant="outline"
-          onClick={handleShare}
-          disabled={isSharing}
           className="flex items-center gap-2"
+          onClick={handleSignIn}
         >
-          {isSharing ? (
-            <>
-              <Loader2 className="h-4 w-4 animate-spin" />
-              {"Sharing..."}
-            </>
-          ) : (
-            <>
-              <Share2 size={16} />
-              {t('action_buttons.share_results')}
-            </>
-          )}
+          {resultsT("actions.sign_in_for_more")}
+          <ArrowRight size={16} />
         </Button>
       </div>
+
+      <Button
+        variant="outline"
+        className="flex items-center gap-2"
+        onClick={handleBack}
+      >
+        <RefreshCw size={16} />
+        {resultsT("actions.new_analysis")}
+      </Button>
     </div>
   );
 }

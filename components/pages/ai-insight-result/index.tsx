@@ -35,33 +35,37 @@ const AiInsightResultPage: React.FC<AiInsightResultPageProps> = ({
       hasRelationshipMetrics: !!relationshipMetrics
     });
     return (
-      <main className="max-w-[98%] mx-auto py-6 px-0 space-y-4">
-        <div className="p-6 bg-red-50 border border-red-200 rounded-lg">
-          <h2 className="text-xl font-semibold text-red-700">Data is incomplete</h2>
-          <p className="mt-2 text-red-600">AI analysis result is incomplete, please contact customer service for help.</p>
+      <main>
+        <div className="container max-w-5xl mx-auto px-0 py-6">
+          <div className="p-6 bg-red-50 border border-red-200 rounded-lg">
+            <h2 className="text-xl font-semibold text-red-700">Data is incomplete</h2>
+            <p className="mt-2 text-red-600">AI analysis result is incomplete, please contact customer service for help.</p>
+          </div>
         </div>
       </main>
     );
   }
 
   return (
-    <main className="max-w-[98%] mx-auto py-6 px-0 space-y-4">
+    <main>
       {/* Analysis Summary Block */}
       <AnalysisSummaryBlock
         analysisData={analysisData}
       />
 
       {/* AI Insight Block */}
-      <AiInsightBlock
-        data={{
-          personalityInsights,
-          relationshipMetrics,
-          insights: {
-            interaction: mappedInsights,
-            relationship: mappedInsights
-          }
-        }}
-      />
+      <div className="container max-w-5xl mx-auto px-0 py-6">
+        <AiInsightBlock
+          data={{
+            personalityInsights,
+            relationshipMetrics,
+            insights: {
+              interaction: mappedInsights,
+              relationship: mappedInsights
+            }
+          }}
+        />
+      </div>
     </main>
   );
 };

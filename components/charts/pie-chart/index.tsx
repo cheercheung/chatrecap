@@ -80,7 +80,7 @@ const PieChart: React.FC<PieChartProps> = ({
             fill="hsl(var(--foreground))"
             className="text-xs font-medium"
           >
-            {`${payload.name}: ${value}${tooltipUnit} (${(percent * 100).toFixed(0)}%)`}
+            <tspan className="din-numbers">{`${payload.name}: ${value}${tooltipUnit} (${(percent * 100).toFixed(0)}%)`}</tspan>
           </text>
         )}
       </g>
@@ -97,7 +97,7 @@ const PieChart: React.FC<PieChartProps> = ({
             <div className="flex items-center gap-2">
               <div className="w-3 h-3 rounded-full" style={{ backgroundColor: data.color }}></div>
               <span className="font-medium">{data.name}:</span>
-              <span>{data.value}{tooltipUnit}</span>
+              <span className="din-numbers">{data.value}{tooltipUnit}</span>
             </div>
           </div>
         </div>

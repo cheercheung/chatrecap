@@ -34,7 +34,7 @@ const WordsPerMessageCard: React.FC<WordsPerMessageCardProps> = ({
       <div className={styles.cardContent}>
         <div className={styles.wordsPerMessageGrid}>
           <div className={styles.senderColumnLeft}>
-            <div className={styles.valueText} style={{ color: color1 }}>
+            <div className={`${styles.valueText} din-numbers`} style={{ color: color1 }}>
               {sender1.wordsPerMessage.toFixed(1)}
             </div>
             <div className={styles.senderInfo}>
@@ -48,7 +48,7 @@ const WordsPerMessageCard: React.FC<WordsPerMessageCardProps> = ({
           </div>
 
           <div className={styles.senderColumnRight}>
-            <div className={styles.valueText} style={{ color: color2 }}>
+            <div className={`${styles.valueText} din-numbers`} style={{ color: color2 }}>
               {sender2.wordsPerMessage.toFixed(1)}
             </div>
             <div className={styles.senderInfoRight}>

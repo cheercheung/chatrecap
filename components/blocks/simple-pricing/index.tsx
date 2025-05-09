@@ -102,7 +102,7 @@ export default function SimplePricing({
                 key={index}
                 className={`relative overflow-hidden transition-all duration-300 hover:shadow-xl ${
                   plan.isPopular
-                    ? "border-primary/70 border-2 shadow-lg bg-gradient-to-b from-primary/5 to-transparent"
+                    ? "border-primary/70 border-2 shadow-lg bg-gradient-to-b from-primary/10 to-transparent scale-105 transform z-10"
                     : "border-muted hover:border-primary/50"
                 }`}
               >
@@ -117,7 +117,7 @@ export default function SimplePricing({
 
                 <div className="p-8 flex flex-col h-full">
                   <div className="mb-6">
-                    <h3 className="text-2xl font-bold mb-3 text-primary">{planTitle}</h3>
+                    <h3 className={`text-2xl font-bold mb-3 ${plan.isPopular ? "bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600 text-3xl" : "text-primary"}`}>{planTitle}</h3>
                     <p className="text-muted-foreground font-medium">{planDescription}</p>
                   </div>
 
@@ -155,7 +155,11 @@ export default function SimplePricing({
 
                   <div>
                     <Button
-                      className="w-full text-base py-6 font-medium"
+                      className={`w-full text-base py-6 font-medium ${
+                        plan.isPopular
+                          ? "bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 shadow-lg hover:shadow-xl border-0 animate-pulse"
+                          : ""
+                      }`}
                       size="lg"
                       variant={plan.isPopular ? "default" : "outline"}
                       onClick={() => handlePlanSelection(plan)}
@@ -171,9 +175,19 @@ export default function SimplePricing({
                         </span>
                       ) : (
                         <>
-                          {planButtonText}
-                          {plan.buttonIcon && (
-                            <Icon name={plan.buttonIcon} className="ml-2" />
+                          {plan.isPopular ? (
+                            <span className="flex items-center justify-center">
+                              <span className="mr-2">🔥</span>
+                              {planButtonText}
+                              <span className="ml-2">🔥</span>
+                            </span>
+                          ) : (
+                            <>
+                              {planButtonText}
+                              {plan.buttonIcon && (
+                                <Icon name={plan.buttonIcon} className="ml-2" />
+                              )}
+                            </>
                           )}
                         </>
                       )}

@@ -13,6 +13,19 @@ html.fonts-loaded {
   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
+/* 为数字应用 DIN 字体 */
+html.fonts-loaded .text-4xl,
+html.fonts-loaded .text-3xl,
+html.fonts-loaded .text-2xl,
+html.fonts-loaded .text-xl,
+html.fonts-loaded .text-lg,
+html.fonts-loaded .font-bold,
+html.fonts-loaded .font-semibold {
+  font-family: 'DIN', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-feature-settings: "tnum";
+  font-variant-numeric: tabular-nums;
+}
+
 /* 字体尺寸调整，减少布局偏移 */
 html.fonts-loaded body {
   letter-spacing: normal;

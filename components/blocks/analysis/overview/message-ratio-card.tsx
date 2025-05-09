@@ -45,7 +45,7 @@ const MessageRatioCard: React.FC<MessageRatioCardProps> = ({
       </div>
 
       <div className={styles.cardContent}>
-        <div className="text-4xl font-bold text-primary mb-3">
+        <div className="text-4xl font-bold text-primary mb-3 din-numbers">
           {totalMessages}
         </div>
 

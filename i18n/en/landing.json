@@ -158,8 +158,8 @@
         "title": "Basic Pack",
         "description": "Perfect for first-time users or single long chats",
         "price": "$4.90 USD",
-        "tipText": "Great for casual insights or reviewing one relationship",
-        "buttonText": "Get Basic Pack",
+        "tipText": "Great for casual or reviewing one relationship",
+        "buttonText": "get started ",
         "features": [
           "Get 70 credits",
           "Analyze ≈ 2–3 months of daily conversations",
@@ -172,8 +172,8 @@
         "title": "Super Value Pack 🔥",
         "description": "Best for deep-dive users or long-term conversations",
         "price": "$9.90 USD",
-        "tipText": "Ideal for deep emotional analysis, timelines, and sharing insights with friends",
-        "buttonText": "Get Super Value Pack",
+        "tipText": "Great for deep analysis, timelines with partner",
+        "buttonText": "Upgrade & Save 40%",
         "popularLabel": "Most Popular",
         "features": [
           "Get 200 credits",
@@ -187,25 +187,25 @@
   },
   "image": {
     "item1": {
-      "src": "/imgs/features/1.png",
+      "src": "/imgs/features/1.webp",
       "alt": "Chat Analysis Example 1",
       "title": "Chat Analysis Example",
       "description": "Upload your chat history to gain deep insights into your relationship dynamics and communication patterns."
     },
     "item2": {
-      "src": "/imgs/features/2.png",
+      "src": "/imgs/features/2.webp",
       "alt": "Chat Analysis Example 2",
       "title": "Cross-Platform Support",
       "description": "Analyze chats from WhatsApp, Instagram, Discord, Telegram, and more platforms."
     },
     "item3": {
-      "src": "/imgs/features/3.png",
+      "src": "/imgs/features/3.webp",
       "alt": "Chat Analysis Example 3",
       "title": "Detailed Insights",
       "description": "Get comprehensive analysis of your communication patterns, response times, and emotional connections."
     },
     "item4": {
-      "src": "/imgs/features/4.png",
+      "src": "/imgs/features/4.webp",
       "alt": "Chat Analysis Example 4",
       "title": "AI-Powered Analysis",
       "description": "Our advanced AI analyzes your conversations to reveal hidden patterns and insights."

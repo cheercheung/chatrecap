@@ -44,7 +44,7 @@ const DashboardOverview: React.FC<DashboardPageProps> = ({
               <CardTitle className="text-sm font-medium">{t("credits.remaining")}</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-3xl font-bold">{credits}</p>
+              <p className="text-3xl font-bold din-numbers">{credits}</p>
             </CardContent>
           </Card>
 

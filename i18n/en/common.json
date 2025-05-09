@@ -5,7 +5,8 @@
         "src": "/logo.png",
         "alt": "ChatRecap AI"
       },
-      "title": "ChatRecap AI"
+      "title": "ChatRecap AI",
+      "url": "/"
     },
     "buttons": {
       "try_free": "Try Free",

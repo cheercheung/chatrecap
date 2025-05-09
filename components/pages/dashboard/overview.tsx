@@ -10,7 +10,7 @@ import Link from "next/link";
 
 /**
  * 仪表盘概览组件
- * 
+ *
  * 显示用户积分和最近的分析历史
  */
 const DashboardOverview: React.FC<DashboardPageProps> = ({
@@ -19,7 +19,7 @@ const DashboardOverview: React.FC<DashboardPageProps> = ({
   analysisHistory
 }) => {
   const t = useTranslations("dashboard");
-  
+
   // 只显示最近的3条分析记录
   const recentAnalysis = analysisHistory.slice(0, 3);
 
@@ -40,10 +40,10 @@ const DashboardOverview: React.FC<DashboardPageProps> = ({
               <CardTitle className="text-sm font-medium">{t("credits.remaining")}</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-3xl font-bold">{credits}</p>
+              <p className="text-3xl font-bold din-numbers">{credits}</p>
             </CardContent>
           </Card>
-          
+
           <Button variant="default" onClick={() => console.log("Buy points clicked")}>
             {t("credits.buy_button")}
           </Button>
@@ -55,7 +55,7 @@ const DashboardOverview: React.FC<DashboardPageProps> = ({
         <div className="flex justify-between items-center">
           <h2 className="text-xl font-semibold">{t("recent_history")}</h2>
         </div>
-        
+
         <Card>
           <CardContent className="p-0">
             <Table>
