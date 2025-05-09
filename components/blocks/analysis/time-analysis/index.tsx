@@ -3,7 +3,6 @@
 import React, { forwardRef } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import { TimeAnalysis } from '@/types/analysis';
-import { motion } from 'framer-motion';
 import { Clock, Calendar, MessageSquare } from 'lucide-react';
 import { TimeDistribution, LineChart, Heatmap } from '@/components/charts';
 import styles from '@/styles/analysis-containers.module.css';
@@ -14,7 +13,6 @@ type Props = {
 
 const TimeAnalysisBlock = forwardRef<HTMLDivElement, Props>(
   ({ timeAnalysis }, ref) => {
-    const t = useTranslations('results');
     const commonT = useTranslations('common');
     const metricsT = useTranslations('results.metrics');
     const locale = useLocale();
@@ -61,23 +59,36 @@ const TimeAnalysisBlock = forwardRef<HTMLDivElement, Props>(
       >
         {/* zhe */}
 
-        <div className="space-y-6">
+        <div className="space-y-8">
           {/* Row 1: Daily Activity (Line Chart) */}
-          <div className={styles.contentCard}>
-            <div className={styles.cardTitle}>{t('daily_activity')}</div>
-            <div>
-              <LineChart
-                data={timeAnalysis.dailyActivity}
-                height={200}
-                tooltipUnit="messages"
-                className="w-full"
-              />
+          <div className={styles.lineChartCard}>
+            <div className={styles.cardTitle}>Daily Activity</div>
+            <div style={{
+              minHeight: '220px',
+              width: '100%',
+              maxWidth: '100%',
+              overflow: 'visible',
+              padding: '5px 0'
+            }}>
+              {timeAnalysis.dailyActivity && timeAnalysis.dailyActivity.length > 0 ? (
+                <LineChart
+                  data={timeAnalysis.dailyActivity}
+                  height={200}
+                  tooltipUnit="messages"
+                  className="w-full"
+                  title=""
+                />
+              ) : (
+                <div className="bg-background/50 rounded-md p-4 text-muted-foreground text-center">
+                  <p>no data yet</p>
+                </div>
+              )}
             </div>
           </div>
 
           {/* Row 2: Weekly Heatmap */}
           <div className={styles.contentCard}>
-            <div className={styles.cardTitle}>{t('weekly_activity_heatmap')}</div>
+            <div className={styles.cardTitle}>Weekly Activity Heatmap</div>
             {timeAnalysis.weekdayHourHeatmap &&
              timeAnalysis.weekdayHourHeatmap.length > 0 &&
              timeAnalysis.weekdayHourHeatmap.every(day =>
@@ -91,14 +102,14 @@ const TimeAnalysisBlock = forwardRef<HTMLDivElement, Props>(
               />
             ) : (
               <div className="bg-background/50 rounded-md p-4 text-muted-foreground text-center">
-                <p>{t('no_data.heatmap_data_not_available')}</p>
+                <p>no data yet</p>
               </div>
             )}
           </div>
 
           {/* Row 3: Time Distribution (Bar Chart) */}
           <div className={styles.contentCard}>
-            <div className={styles.cardTitle}>{t('time_distribution')}</div>
+            <div className={styles.cardTitle}>Time Distribution</div>
             <div>
               <TimeDistribution
                 data={timeAnalysis.timeDistribution}

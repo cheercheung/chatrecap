@@ -31,9 +31,9 @@ const OverviewBlock = forwardRef<HTMLDivElement, Props>(({ overview }, ref) => {
         <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-pink-500 rounded-full"></span>
       </h2> */}
 
-      <div className="space-y-4">
+      <div className="space-y-8">
         {/* Row 1: Three cards in a row with custom width distribution */}
-        <div className="grid grid-cols-12 gap-4">
+        <div className="grid grid-cols-12 gap-12">
           {/* Total Messages Card with Heart Ratio Chart (25% Width) */}
           <div className="col-span-12 sm:col-span-4">
             <MessageRatioCard
@@ -83,6 +83,13 @@ const OverviewBlock = forwardRef<HTMLDivElement, Props>(({ overview }, ref) => {
               color2="#1890ff"
             />
           </div>
+        </div>
+
+        {/* 添加"person of few words"文本 */}
+        <div className="text-left text-sm text-muted-foreground italic pl-2 -mt-8">
+          {overview.sender1.wordsPerMessage <= overview.sender2.wordsPerMessage ?
+            `${overview.sender1.name} is a person of few words — more concise than 3.1% of people!` :
+            `${overview.sender2.name} is a person of few words — more concise than 3.1% of people!`}
         </div>
       </div>
     </motion.div>

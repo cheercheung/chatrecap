@@ -44,8 +44,16 @@ const TimeDistribution: React.FC<TimeDistributionProps> = ({ data, title, classN
       translationKey = `time_of_day.${translationKey}`;
     }
 
+    // 安全获取翻译，如果翻译键不存在则返回默认值
+    let label;
+    try {
+      label = commonT(translationKey);
+    } catch (e) {
+      label = defaultValue;
+    }
+
     return {
-      label: commonT(translationKey, defaultValue),
+      label,
       value: item.percentage
     };
   });

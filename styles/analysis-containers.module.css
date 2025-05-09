@@ -22,7 +22,7 @@
   -webkit-backdrop-filter: blur(4px);
   border: 1px solid rgba(var(--primary), 0.15);
   border-radius: 0.75rem;
-  padding: 0.3rem;
+  padding: 0.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
@@ -90,7 +90,12 @@
   flex-direction: column;
   align-items: center;
   margin: 0.2rem 0;
+  width: 850px; /* 设置固定宽度 */
+  max-width: 100%; /* 确保在小屏幕上不会溢出 */
+  margin-left: auto; /* 水平居中 */
+  margin-right: auto; /* 水平居中 */
 }
+
 
 /* Card with horizontal layout for stats with icons */
 .statCard {
@@ -102,7 +107,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 0.2rem 0;
+  margin: 0.2rem 0.2rem;
 }
 
 /* Card title styles */
@@ -143,7 +148,7 @@
 /* Three column grid */
 .threeColumnGrid {
   display: grid;
-  gap: 4rem;
+  gap: 5rem;
   width: 100%;
   grid-template-columns: repeat(1, 1fr);
   margin: 0.5rem 0;

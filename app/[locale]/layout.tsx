@@ -38,13 +38,15 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
+type LayoutProps = {
+  children: React.ReactNode;
+  params: { locale: string };
+};
+
 export default async function RootLayout({
   children,
   params,
-}: Readonly<{
-  children: React.ReactNode;
-  params: { locale: string } | Promise<{ locale: string }>;
-}>) {
+}: LayoutProps) {
   // 直接使用英语
   const locale = 'en';
 
