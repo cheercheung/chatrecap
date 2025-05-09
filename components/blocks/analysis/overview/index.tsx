@@ -34,24 +34,7 @@ const OverviewBlock = forwardRef<HTMLDivElement, Props>(({ overview }, ref) => {
       <div className="space-y-8">
         {/* Row 1: Three cards in a row with custom width distribution */}
         <div className="grid grid-cols-12 gap-12">
-          {/* Total Messages Card with Heart Ratio Chart (25% Width) */}
-          <div className="col-span-12 sm:col-span-4">
-            <MessageRatioCard
-              totalMessages={overview.totalMessages}
-              sender1={{
-                name: overview.sender1.name,
-                messages: overview.sender1.messages
-              }}
-              sender2={{
-                name: overview.sender2.name,
-                messages: overview.sender2.messages
-              }}
-              color1="#ff4d4f"
-              color2="#1890ff"
-            />
-          </div>
-
-          {/* Total Words Card with Heart Ratio Chart (25% Width) */}
+          {/* Total Words Card with Heart Ratio Chart */}
           <div className="col-span-12 sm:col-span-4">
             <WordRatioCard
               totalWords={overview.totalWords}
@@ -68,7 +51,24 @@ const OverviewBlock = forwardRef<HTMLDivElement, Props>(({ overview }, ref) => {
             />
           </div>
 
-          {/* Words Per Message Card (50% Width) */}
+          {/* Total Messages Card with Heart Ratio Chart */}
+          <div className="col-span-12 sm:col-span-4">
+            <MessageRatioCard
+              totalMessages={overview.totalMessages}
+              sender1={{
+                name: overview.sender1.name,
+                messages: overview.sender1.messages
+              }}
+              sender2={{
+                name: overview.sender2.name,
+                messages: overview.sender2.messages
+              }}
+              color1="#ff4d4f"
+              color2="#1890ff"
+            />
+          </div>
+
+          {/* Words Per Message Card */}
           <div className="col-span-12 sm:col-span-4">
             <WordsPerMessageCard
               sender1={{

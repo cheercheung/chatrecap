@@ -29,8 +29,10 @@ export default function HeartRatioChart({
           </linearGradient>
         </defs>
 
-        <path
-          d="M50 91s-35-25.6-35-52.1C15 25.6 29.4 13 44.3 22.1 50 25.9 55.7 22.1 61.4 22.1 76.3 13 90.7 25.6 90.7 38.9 90.7 65.4 50 91 50 91z"
+        <circle
+          cx="50"
+          cy="50"
+          r="40"
           fill={`url(#${gradientId})`}
           stroke="#333"
           strokeWidth="1"
