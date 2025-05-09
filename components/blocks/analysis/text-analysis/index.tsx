@@ -44,7 +44,7 @@ const TextAnalysisBlock = forwardRef<HTMLDivElement, Props>(
           <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-pink-500 rounded-full"></span>
         </h2> */}
 
-        <div className="space-y-6">
+        <div className="space-y-4">
           {/* Row 1: Three Cards - Common Words, Emojis, and Sentiment Analysis */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {/* Common Words Card */}

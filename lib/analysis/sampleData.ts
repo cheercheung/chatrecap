@@ -12,23 +12,23 @@ export const generateSampleAnalysisData = (id: string = "sample"): AnalysisData 
     endDate: "January 31, 2025",
     timespanSummary: "Your story began on January 1, 2025 Thursday 00:00, unfolding over 31 days, until January 31, 2025 Friday 23:59—leaving an everlasting mark in the passage of time.",
     overview: {
-      totalMessages: 473,
-      totalWords: 5243,
-      wordsPerMessage: 11.1,
+      totalMessages: 1330,
+      totalWords: 15243,
+      wordsPerMessage: 11.46,
       sender1: {
         name: "Jessica",
-        messages: 235,
-        words: 2743,
-        wordsPerMessage: 11.7
+        messages: 900,
+        words:14000 ,
+        wordsPerMessage: 15.55
       },
       sender2: {
         name: "Michael",
-        messages: 238,
-        words: 2500,
-        wordsPerMessage: 10.5
+        messages:430 ,
+        words: 1243,
+        wordsPerMessage: 2.89
       },
       avgMessagesPerDay: 15.3,
-      mostActiveDay: "day_names.saturday",
+      mostActiveDay: "saturday",
       responseTime: "3 minutes"
     },
     textAnalysis: {

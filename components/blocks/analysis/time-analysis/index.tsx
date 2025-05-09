@@ -59,7 +59,7 @@ const TimeAnalysisBlock = forwardRef<HTMLDivElement, Props>(
       >
         {/* zhe */}
 
-        <div className="space-y-6">
+        <div className="space-y-4">
           {/* Row 1: Weekly Heatmap */}
           <div className="bg-background/70 rounded-lg p-4 border border-primary/5 shadow-sm">
             <div className="text-lg font-medium text-foreground mb-4 text-center">{t('weekly_activity_heatmap')}</div>
