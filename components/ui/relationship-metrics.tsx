@@ -49,13 +49,9 @@ const RelationshipMetrics: React.FC<RelationshipMetricsProps> = ({
     }
   ];
 
-  // 获取颜色基于分数
-  const getColorByScore = (score: number) => {
-    if (score >= 8) return 'hsl(var(--primary))';
-    if (score >= 6) return 'hsl(var(--chart-2))';
-    if (score >= 4) return 'hsl(var(--chart-3))';
-    if (score >= 2) return 'hsl(var(--chart-4))';
-    return 'hsl(var(--chart-5))';
+  // 始终使用主题色
+  const getColorByScore = (_score: number) => {
+    return 'hsl(var(--primary))';
   };
 
   return (

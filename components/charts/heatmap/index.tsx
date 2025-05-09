@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 
 interface HeatmapProps {
   data: {
@@ -15,38 +16,7 @@ interface HeatmapProps {
   className?: string;
 }
 
-// 自定义 Tooltip 组件
-interface TooltipProps {
-  count: number;
-  day: string;
-  hour: number;
-  visible: boolean;
-  x: number;
-  y: number;
-}
-
-const Tooltip: React.FC<TooltipProps> = ({ count, day, hour, visible, x, y }) => {
-  if (!visible) return null;
-
-  return (
-    <div
-      className="absolute p-3 bg-background/95 backdrop-blur-sm border border-primary/10 shadow-md rounded-md text-sm z-50"
-      style={{
-        left: `${x + 10}px`,
-        top: `${y - 10}px`,
-        pointerEvents: 'none'
-      }}
-    >
-      <div className="space-y-1">
-        <div className="font-medium">{day}, {hour}:00</div>
-        <div className="flex items-center gap-2">
-          <div className="w-3 h-3 rounded-full bg-primary"></div>
-          <span>{count} messages</span>
-        </div>
-      </div>
-    </div>
-  );
-};
+// 不再需要自定义 Tooltip 内容组件，使用 Radix UI 的 TooltipContent 组件
 
 const Heatmap: React.FC<HeatmapProps> = ({
   data,
@@ -56,22 +26,7 @@ const Heatmap: React.FC<HeatmapProps> = ({
   valueIntensityThreshold = 0.5,
   className
 }) => {
-  // 添加 tooltip 状态
-  const [tooltip, setTooltip] = useState<{
-    visible: boolean;
-    count: number;
-    day: string;
-    hour: number;
-    x: number;
-    y: number;
-  }>({
-    visible: false,
-    count: 0,
-    day: '',
-    hour: 0,
-    x: 0,
-    y: 0
-  });
+  // 不再需要 tooltip 状态，因为使用 Radix UI 的 Tooltip 组件
   // 获取翻译
   const t = useTranslations('chatrecapresult');
   const commonT = useTranslations('common');
@@ -199,29 +154,31 @@ const Heatmap: React.FC<HeatmapProps> = ({
                 return (
                   <div
                     key={hourIndex}
-                    className="flex-1 h-8 flex items-center justify-center"
-                    onMouseMove={(e) => {
-                      setTooltip({
-                        visible: true,
-                        count: hourData.count,
-                        day: getDayTranslation(dayData.day),
-                        hour: hourData.hour,
-                        x: e.clientX,
-                        y: e.clientY
-                      });
-                    }}
-                    onMouseLeave={() => {
-                      setTooltip(prev => ({ ...prev, visible: false }));
-                    }}
+                    className="flex-1 h-8 flex items-center justify-center relative"
                   >
-                    <div
-                      className={`w-5 h-5 ${bgColorClass} rounded-full flex items-center justify-center text-xs ${textColorClass}`}
-                      style={{
-                        opacity: 1 // 所有圆点都显示，包括值为0的
-                      }}
-                    >
-                      {showValues && hourData.count > 0 && hourData.count}
-                    </div>
+                    <TooltipProvider>
+                      <Tooltip>
+                        <TooltipTrigger asChild>
+                          <div
+                            className={`w-5 h-5 ${bgColorClass} rounded-full flex items-center justify-center text-xs ${textColorClass} cursor-help`}
+                            style={{
+                              opacity: 1 // 所有圆点都显示，包括值为0的
+                            }}
+                          >
+                            {showValues && hourData.count > 0 && hourData.count}
+                          </div>
+                        </TooltipTrigger>
+                        <TooltipContent className="p-4 bg-background/95 backdrop-blur-sm border border-primary/10 shadow-lg rounded-lg">
+                          <div className="space-y-1">
+                            <div className="font-medium">{getDayTranslation(dayData.day)}, {hourData.hour}:00</div>
+                            <div className="flex items-center gap-2">
+                              <div className="w-3 h-3 rounded-full bg-primary"></div>
+                              <span>{hourData.count} messages</span>
+                            </div>
+                          </div>
+                        </TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
                   </div>
                 );
               })}
@@ -230,15 +187,7 @@ const Heatmap: React.FC<HeatmapProps> = ({
         ))}
       </div>
 
-      {/* Tooltip */}
-      <Tooltip
-        count={tooltip.count}
-        day={tooltip.day}
-        hour={tooltip.hour}
-        visible={tooltip.visible}
-        x={tooltip.x}
-        y={tooltip.y}
-      />
+      {/* 不再需要全局 Tooltip */}
 
       {/* Legend */}
       {showLegend && (

@@ -103,6 +103,40 @@ const WordCloudLib: React.FC<WordCloudLibProps> = ({
         .attr("width", width)
         .attr("height", height);
 
+      // 创建渐变色定义
+      const defs = svg.append("defs");
+
+      // 创建线性渐变
+      const gradient = defs.append("linearGradient")
+        .attr("id", "word-cloud-gradient")
+        .attr("x1", "0%")
+        .attr("y1", "0%")
+        .attr("x2", "100%")
+        .attr("y2", "100%");
+
+      // 添加渐变色停止点
+      gradient.append("stop")
+        .attr("offset", "0%")
+        .attr("stop-color", "hsl(var(--primary))");
+
+      gradient.append("stop")
+        .attr("offset", "50%")
+        .attr("stop-color", "hsl(var(--primary) / 0.8)");
+
+      gradient.append("stop")
+        .attr("offset", "100%")
+        .attr("stop-color", "hsl(var(--primary) / 0.6)");
+
+      // 找出最大和最小值，用于颜色映射
+      const values = cloudWords.map((d: any) => d.value);
+      const minValue = Math.min(...values);
+      const maxValue = Math.max(...values);
+
+      // 创建颜色比例尺
+      const colorScale = d3.scaleLinear<string>()
+        .domain([minValue, (minValue + maxValue) / 2, maxValue])
+        .range(["hsl(var(--primary) / 0.6)", "hsl(var(--primary) / 0.8)", "hsl(var(--primary))"]);
+
       // 添加词云组
       svg.append("g")
         .attr("transform", `translate(${width / 2},${height / 2})`)
@@ -112,11 +146,10 @@ const WordCloudLib: React.FC<WordCloudLibProps> = ({
         .append("text")
         .style("font-family", fontFamily)
         .style("font-weight", fontWeight)
-        // 根据词频设置不同的颜色深浅
+        // 使用主题色渐变
         .style("fill", (d: any) => {
-          // 计算颜色深浅，值越大颜色越深
-          const opacity = 0.5 + (d.value / (d.value + 10)) * 0.5;
-          return `hsla(var(--primary), ${opacity})`;
+          // 根据词频映射到颜色比例尺
+          return colorScale(d.value);
         })
         .attr("text-anchor", "middle")
         .attr("transform", (d: any) => `translate(${d.x},${d.y}) rotate(${d.rotate})`)
@@ -129,14 +162,16 @@ const WordCloudLib: React.FC<WordCloudLibProps> = ({
             .transition()
             .duration(200)
             .style("font-size", (d: any) => `${d.size * 1.2}px`)
-            .style("font-weight", "bold");
+            .style("font-weight", "bold")
+            .style("fill", "url(#word-cloud-gradient)"); // 悬停时使用渐变色
         })
-        .on("mouseout", function() {
+        .on("mouseout", function(event, d: any) {
           d3.select(this)
             .transition()
             .duration(200)
             .style("font-size", (d: any) => `${d.size}px`)
-            .style("font-weight", fontWeight);
+            .style("font-weight", fontWeight)
+            .style("fill", colorScale(d.value)); // 恢复原来的颜色
         });
 
       // 词云渲染完成

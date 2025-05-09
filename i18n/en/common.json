@@ -2,6 +2,7 @@
   "header": {
     "brand": {
       "logo": {
+        "src": "/logo.png",
         "alt": "ChatRecap AI"
       },
       "title": "ChatRecap AI"

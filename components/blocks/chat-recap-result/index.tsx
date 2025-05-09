@@ -5,7 +5,6 @@ import {
   OverviewBlock,
   TextAnalysisBlock,
   TimeAnalysisBlock,
-  StoryTimelineBlock
 } from "@/components/blocks/analysis";
 import { Home, Bell } from "lucide-react";
 import Link from "next/link";
@@ -119,17 +118,6 @@ const ChatRecapResultBlock: React.FC<ChatRecapResultProps> = ({
             </div>
           </div>
 
-          {/* Timeline Block (Storyline) */}
-          <div>
-            <h2 className="text-2xl font-bold mb-1">{t("story_timeline_title")}</h2>
-            <div className="[&_h2]:hidden">
-              <StoryTimelineBlock
-                startDate={analysisData.startDate}
-                duration={analysisData.duration}
-                endDate={analysisData.endDate}
-              />
-            </div>
-          </div>
         </div>
       </div>
     </div>

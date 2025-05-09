@@ -15,6 +15,7 @@ const TimeAnalysisBlock = forwardRef<HTMLDivElement, Props>(
   ({ timeAnalysis }, ref) => {
     const commonT = useTranslations('common');
     const metricsT = useTranslations('results.metrics');
+    const t = useTranslations('results');
     const locale = useLocale();
 
     // 将小时转换为可读时间 (使用当前语言环境)
@@ -62,7 +63,7 @@ const TimeAnalysisBlock = forwardRef<HTMLDivElement, Props>(
         <div className="space-y-8">
           {/* Row 1: Daily Activity (Line Chart) */}
           <div className={styles.contentCard}>
-            <div className={styles.cardTitle}>Daily Activity</div>
+            <div className={styles.cardTitle}>Daily Message Volume</div>
             <div style={{
               minHeight: '180px',
               width: '100%',
@@ -71,13 +72,22 @@ const TimeAnalysisBlock = forwardRef<HTMLDivElement, Props>(
               padding: '5px 0'
             }}>
               {timeAnalysis.dailyActivity && timeAnalysis.dailyActivity.length > 0 ? (
-                <LineChart
-                  data={timeAnalysis.dailyActivity}
-                  height={160}
-                  tooltipUnit="messages"
-                  className="w-full"
-                  title=""
-                />
+                <>
+                  <LineChart
+                    data={timeAnalysis.dailyActivity}
+                    height={160}
+                    tooltipUnit="messages"
+                    className="w-full"
+                    title=""
+                  />
+                  <p className="text-center text-muted-foreground mt-4 text-sm italic">
+                    {t('timespan_summary', {
+                      startDate: formatDate(timeAnalysis.dailyActivity[0]?.date || ''),
+                      duration: `${timeAnalysis.dailyActivity.length} days`,
+                      endDate: formatDate(timeAnalysis.dailyActivity[timeAnalysis.dailyActivity.length - 1]?.date || '')
+                    })}
+                  </p>
+                </>
               ) : (
                 <div className="bg-background/50 rounded-md p-4 text-muted-foreground text-center">
                   <p>no data yet</p>

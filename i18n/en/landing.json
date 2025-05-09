@@ -150,18 +150,18 @@
     ]
   },
   "simple_pricing": {
-    "title": "Buy Credits for In-Depth Chat Analysis",
+    "title": "Buy Credits for InDepth Chat Analysis",
     "subtitle": "1 credit ≈ 10,000 words · No expiration · No subscription required",
-    "description": "Recap AI helps you unlock emotional insights, detect red/green flags, and understand your chat dynamics",
+    "description": "1 credit ≈ 10,000 words · No expiration · No subscription required",
     "plans": [
       {
         "title": "Basic Pack",
         "description": "Perfect for first-time users or single long chats",
-        "price": "$9.90 USD",
+        "price": "$4.90 USD",
         "tipText": "Great for casual insights or reviewing one relationship",
         "buttonText": "Get Basic Pack",
         "features": [
-          "Get 30 credits",
+          "Get 70 credits",
           "Analyze ≈ 2–3 months of daily conversations",
           "Detect relationship red & green flags",
           "Understand emotional tone and communication styles",
@@ -171,12 +171,12 @@
       {
         "title": "Super Value Pack 🔥",
         "description": "Best for deep-dive users or long-term conversations",
-        "price": "$19.90 USD",
+        "price": "$9.90 USD",
         "tipText": "Ideal for deep emotional analysis, timelines, and sharing insights with friends",
         "buttonText": "Get Super Value Pack",
         "popularLabel": "Most Popular",
         "features": [
-          "Get 100 credits",
+          "Get 200 credits",
           "Analyze ≈ 6–10 months of relationship history",
           "Includes everything in Basic Pack",
           "Save 40% per credit",

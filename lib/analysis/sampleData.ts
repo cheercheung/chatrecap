@@ -67,7 +67,7 @@ export const generateSampleAnalysisData = (id: string = "sample"): AnalysisData 
         {emoji: "💕", count: 11},
         {emoji: "😁", count: 10}
       ],
-      wordCount: 5243,
+      wordCount: 15243,
       sender1: {
         name: "Emily",
         commonWords: [
@@ -98,28 +98,28 @@ export const generateSampleAnalysisData = (id: string = "sample"): AnalysisData 
       sender2: {
         name: "John",
         commonWords: [
-          { "word": "pls",    "count": 45 },
-          { "word": "thx",    "count": 38 },
-          { "word": "ily",    "count": 35 },
-         { "word": "omg",    "count": 30 },
-          { "word": "ur",     "count": 28 },
-         { "word": "babe",   "count": 25 },
-          { "word": "sorry",    "count": 22 },
-         { "word": "hmu",    "count": 20 },
-         { "word": "ttyl",   "count": 18 },
-         { "word": "brb",    "count": 15 }
+          { "word": "pls",    "count": 245 },
+          { "word": "thx",    "count": 138 },
+          { "word": "ily",    "count": 135 },
+         { "word": "omg",    "count": 130 },
+          { "word": "ur",     "count": 125 },
+         { "word": "babe",   "count": 98 },
+          { "word": "sorry",    "count": 195 },
+         { "word": "hmu",    "count": 90 },
+         { "word": "ttyl",   "count": 178 },
+         { "word": "brb",    "count": 145 }
         ],
         topEmojis: [
 
-          { "emoji": "🙏",  "count": 45 },
-          { "emoji": "😢",  "count": 40 },
-          { "emoji": "🥺", "count": 35 },
-          { "emoji": "🙇‍♂️", "count": 30 },
-          { "emoji": "😔",  "count": 28 },
-          { "emoji": "😩",  "count": 25 },
-          { "emoji": "😓",  "count": 22 },
-          { "emoji": "😥",  "count": 20 },
-         { "emoji": "🥀",  "count": 18 }
+          { "emoji": "🙏",  "count": 245 },
+          { "emoji": "😢",  "count": 340 },
+          { "emoji": "🥺", "count": 235 },
+          { "emoji": "🙇‍♂️", "count": 330 },
+          { "emoji": "😔",  "count": 128 },
+          { "emoji": "😩",  "count": 125 },
+          { "emoji": "😓",  "count": 121 },
+          { "emoji": "😥",  "count": 220 },
+         { "emoji": "🥀",  "count": 238 }
         ]
       }
     },

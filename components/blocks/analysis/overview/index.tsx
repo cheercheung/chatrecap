@@ -26,10 +26,6 @@ const OverviewBlock = forwardRef<HTMLDivElement, Props>(({ overview }, ref) => {
       viewport={{ once: true }}
       className={styles.overviewBlock}
     >
-      {/* <h2 className="text-2xl md:text-3xl font-bold mb-6 text-foreground text-center relative inline-block mx-auto">
-        {t('overview_title')}
-        <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-pink-500 rounded-full"></span>
-      </h2> */}
 
       <div className="space-y-8">
         {/* Row 1: Three cards in a row with custom width distribution */}
