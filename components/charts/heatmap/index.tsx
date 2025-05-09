@@ -1,6 +1,6 @@
 "use client";
 
-import React from 'react';
+import React, { useState } from 'react';
 import { useTranslations } from 'next-intl';
 
 interface HeatmapProps {
@@ -15,6 +15,35 @@ interface HeatmapProps {
   className?: string;
 }
 
+// 自定义 Tooltip 组件
+interface TooltipProps {
+  count: number;
+  day: string;
+  hour: number;
+  visible: boolean;
+  x: number;
+  y: number;
+}
+
+const Tooltip: React.FC<TooltipProps> = ({ count, day, hour, visible, x, y }) => {
+  if (!visible) return null;
+
+  return (
+    <div
+      className="absolute bg-background/90 backdrop-blur-sm border border-primary/10 rounded-md shadow-md px-3 py-1.5 text-sm z-50"
+      style={{
+        left: `${x + 10}px`,
+        top: `${y - 10}px`,
+        pointerEvents: 'none',
+        boxShadow: '0 2px 5px rgba(0, 0, 0, 0.15)'
+      }}
+    >
+      <div className="font-medium">{day}, {hour}:00</div>
+      <div className="text-primary">{count} messages</div>
+    </div>
+  );
+};
+
 const Heatmap: React.FC<HeatmapProps> = ({
   data,
   title,
@@ -23,6 +52,22 @@ const Heatmap: React.FC<HeatmapProps> = ({
   valueIntensityThreshold = 0.5,
   className
 }) => {
+  // 添加 tooltip 状态
+  const [tooltip, setTooltip] = useState<{
+    visible: boolean;
+    count: number;
+    day: string;
+    hour: number;
+    x: number;
+    y: number;
+  }>({
+    visible: false,
+    count: 0,
+    day: '',
+    hour: 0,
+    x: 0,
+    y: 0
+  });
   // 获取翻译
   const t = useTranslations('chatrecapresult');
   const commonT = useTranslations('common');
@@ -105,7 +150,7 @@ const Heatmap: React.FC<HeatmapProps> = ({
 
   // Helper function to get color based on intensity
   const getHeatColor = (intensity: number): string => {
-    if (intensity === 0) return 'bg-primary/5';
+    if (intensity === 0) return 'bg-gray-200'; // 值为0时显示为灰色
     if (intensity < 0.2) return 'bg-primary/20';
     if (intensity < 0.4) return 'bg-primary/40';
     if (intensity < 0.6) return 'bg-primary/60';
@@ -141,7 +186,7 @@ const Heatmap: React.FC<HeatmapProps> = ({
             <div className="w-20 text-right pr-2 text-sm font-medium">
               {getDayTranslation(dayData.day)}
             </div>
-            <div className="flex flex-1 gap-0.5">
+            <div className="flex flex-1 gap-1">
               {dayData.hours.map((hourData, hourIndex) => {
                 const intensity = hourData.count / maxCount;
                 const bgColorClass = getHeatColor(intensity);
@@ -150,9 +195,29 @@ const Heatmap: React.FC<HeatmapProps> = ({
                 return (
                   <div
                     key={hourIndex}
-                    className={`flex-1 h-8 ${bgColorClass} flex items-center justify-center text-xs ${textColorClass} rounded-sm`}
+                    className="flex-1 h-8 flex items-center justify-center"
+                    onMouseMove={(e) => {
+                      setTooltip({
+                        visible: true,
+                        count: hourData.count,
+                        day: getDayTranslation(dayData.day),
+                        hour: hourData.hour,
+                        x: e.clientX,
+                        y: e.clientY
+                      });
+                    }}
+                    onMouseLeave={() => {
+                      setTooltip(prev => ({ ...prev, visible: false }));
+                    }}
                   >
-                    {showValues && hourData.count > 0 && hourData.count}
+                    <div
+                      className={`w-5 h-5 ${bgColorClass} rounded-full flex items-center justify-center text-xs ${textColorClass}`}
+                      style={{
+                        opacity: 1 // 所有圆点都显示，包括值为0的
+                      }}
+                    >
+                      {showValues && hourData.count > 0 && hourData.count}
+                    </div>
                   </div>
                 );
               })}
@@ -161,10 +226,20 @@ const Heatmap: React.FC<HeatmapProps> = ({
         ))}
       </div>
 
+      {/* Tooltip */}
+      <Tooltip
+        count={tooltip.count}
+        day={tooltip.day}
+        hour={tooltip.hour}
+        visible={tooltip.visible}
+        x={tooltip.x}
+        y={tooltip.y}
+      />
+
       {/* Legend */}
       {showLegend && (
         <div className="flex items-center justify-end mt-4 gap-1 text-sm">
-          <span className="text-muted-foreground">{safeT('heatmap.low', 'low')}</span>
+          <span className="text-muted-foreground">low</span>
           <div className="flex h-2.5 w-24">
             {['bg-primary/5', 'bg-primary/20', 'bg-primary/40', 'bg-primary/60', 'bg-primary/80'].map((color, i) => (
               <div
@@ -173,7 +248,7 @@ const Heatmap: React.FC<HeatmapProps> = ({
               ></div>
             ))}
           </div>
-          <span className="text-muted-foreground">{safeT('heatmap.high', 'high')}</span>
+          <span className="text-muted-foreground">high</span>
         </div>
       )}
     </div>

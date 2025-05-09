@@ -1,16 +1,17 @@
 "use client";
 
 import React from 'react';
-import { BarChart } from '@/components/charts';
+import { PieChart } from '@/components/charts';
 import { useTranslations } from 'next-intl';
 
 interface TimeDistributionProps {
   data: { time: string; percentage: number }[];
   title?: string;
   className?: string;
+  height?: number;
 }
 
-const TimeDistribution: React.FC<TimeDistributionProps> = ({ data, title, className }) => {
+const TimeDistribution: React.FC<TimeDistributionProps> = ({ data, title, className, height = 250 }) => {
   // 获取翻译函数
   const t = useTranslations('results');
   const commonT = useTranslations('common');
@@ -32,11 +33,19 @@ const TimeDistribution: React.FC<TimeDistributionProps> = ({ data, title, classN
     'night': '夜间'
   };
 
-  // 将时间分布数据转换为BarChart组件所需的格式
-  const barChartData = data.map(item => {
+  // 定义饼图的颜色
+  const pieColors = [
+    'hsl(var(--primary))',
+    'hsl(var(--primary)/0.8)',
+    'hsl(var(--primary)/0.6)',
+    'hsl(var(--primary)/0.4)'
+  ];
+
+  // 处理时间标签的翻译
+  const getTranslatedLabel = (timeKey: string): string => {
     // 确保我们有一个有效的翻译键
-    let translationKey = item.time;
-    let defaultValue = item.time;
+    let translationKey = timeKey;
+    let defaultValue = timeKey;
 
     // 如果是简单的时间标识符，添加命名空间并设置默认值
     if (!translationKey.includes('.')) {
@@ -45,29 +54,32 @@ const TimeDistribution: React.FC<TimeDistributionProps> = ({ data, title, classN
     }
 
     // 安全获取翻译，如果翻译键不存在则返回默认值
-    let label;
     try {
-      label = commonT(translationKey);
+      return commonT(translationKey);
     } catch (e) {
-      label = defaultValue;
+      return defaultValue;
     }
+  };
 
-    return {
-      label,
-      value: item.percentage
-    };
-  });
+  // 将时间分布数据转换为PieChart组件所需的格式
+  const pieChartData = data.map((item, index) => ({
+    name: getTranslatedLabel(item.time),
+    value: item.percentage,
+    color: pieColors[index % pieColors.length]
+  }));
 
   return (
     <div className={className}>
-      {title && <h3 className="mb-4 text-lg font-medium">{title}</h3>}
+      {title && <h3 className="text-lg font-medium mb-4">{title}</h3>}
 
-      {/* 水平条形图 */}
-      <div className="h-30">
-        <BarChart
-          data={barChartData}
-          showCount={true}
-          barColor="hsl(var(--primary))"
+      <div style={{ height: `${height}px` }}>
+        <PieChart
+          data={pieChartData}
+          height={height}
+          innerRadius={30}
+          outerRadius={height > 200 ? 80 : 60}
+          tooltipUnit="%"
+          showLabels={false}
           className="h-full"
         />
       </div>

@@ -61,7 +61,7 @@ const TimeAnalysisBlock = forwardRef<HTMLDivElement, Props>(
 
         <div className="space-y-8">
           {/* Row 1: Daily Activity (Line Chart) */}
-          <div className={styles.lineChartCard}>
+          <div className={styles.contentCard}>
             <div className={styles.cardTitle}>Daily Activity</div>
             <div style={{
               minHeight: '220px',
@@ -96,7 +96,7 @@ const TimeAnalysisBlock = forwardRef<HTMLDivElement, Props>(
              ) ? (
               <Heatmap
                 data={timeAnalysis.weekdayHourHeatmap}
-                showValues={true}
+                showValues={false}
                 showLegend={true}
                 className="w-full"
               />
@@ -107,55 +107,61 @@ const TimeAnalysisBlock = forwardRef<HTMLDivElement, Props>(
             )}
           </div>
 
-          {/* Row 3: Time Distribution (Bar Chart) */}
+          {/* Row 3: Time Distribution (Two Column Layout) */}
           <div className={styles.contentCard}>
             <div className={styles.cardTitle}>Time Distribution</div>
-            <div>
-              <TimeDistribution
-                data={timeAnalysis.timeDistribution}
-                className="w-full h-30"
-              />
-            </div>
-          </div>
-
-          {/* Row 4: Peak Activity Stats (3 Cards) */}
-          <div className={styles.threeColumnGrid}>
-            {/* Most Active Hour */}
-            <div className={styles.statCard}>
-              <div className={styles.iconContainer}>
-                <Clock className={styles.icon} />
-              </div>
-              <div>
-                <div className="text-sm text-muted-foreground">{metricsT('most_active_hour')}</div>
-                <div className="text-xl font-bold">{formatHour(timeAnalysis.mostActiveHour)}</div>
-                <div className="text-xs text-muted-foreground">{metricsT('peak_activity_time')}</div>
-              </div>
-            </div>
-
-            {/* Most Active Day */}
-            <div className={styles.statCard}>
-              <div className={styles.iconContainer}>
-                <Calendar className={styles.icon} />
-              </div>
-              <div>
-                <div className="text-sm text-muted-foreground">{metricsT('most_active_day')}</div>
-                <div className="text-xl font-bold">
-                  {commonT(`days_of_week.${timeAnalysis.mostActiveDay}`)}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-4">
+              {/* Left Column: Pie Chart (占据2/5宽度) */}
+              <div className="md:col-span-2 flex items-left">
+                <div className="w-full">
+                  <TimeDistribution
+                    data={timeAnalysis.timeDistribution}
+                    className="w-full"
+                    height={220}
+                  />
                 </div>
-                <div className="text-xs text-muted-foreground">{metricsT('favorite_day_to_chat')}</div>
               </div>
-            </div>
 
-            {/* Busiest Date */}
-            <div className={styles.statCard}>
-              <div className={styles.iconContainer}>
-                <MessageSquare className={styles.icon} />
-              </div>
-              <div>
-                <div className="text-sm text-muted-foreground">{metricsT('busiest_date')}</div>
-                <div className="text-xl font-bold">{formatDate(timeAnalysis.mostActiveDate)}</div>
-                <div className="text-xs text-muted-foreground">
-                  {metricsT('total_messages', { count: timeAnalysis.mostMessagesCount })}
+              {/* Right Column: Stats Cards (占据4/6宽度) */}
+              <div className="md:col-span-4 flex flex-col justify-center space-y-4 md:pl-8">
+                {/* Most Active Hour */}
+                <div className={styles.statCard}>
+                  <div className={styles.iconContainer}>
+                    <Clock className={styles.icon} />
+                  </div>
+                  <div>
+                    <div className="text-sm text-muted-foreground">{metricsT('most_active_hour')}</div>
+                    <div className="text-xl font-bold">{formatHour(timeAnalysis.mostActiveHour)}</div>
+                    <div className="text-xs text-muted-foreground">{metricsT('peak_activity_time')}</div>
+                  </div>
+                </div>
+
+                {/* Most Active Day */}
+                <div className={styles.statCard}>
+                  <div className={styles.iconContainer}>
+                    <Calendar className={styles.icon} />
+                  </div>
+                  <div>
+                    <div className="text-sm text-muted-foreground">{metricsT('most_active_day')}</div>
+                    <div className="text-xl font-bold">
+                      {commonT(`days_of_week.${timeAnalysis.mostActiveDay}`)}
+                    </div>
+                    <div className="text-xs text-muted-foreground">{metricsT('favorite_day_to_chat')}</div>
+                  </div>
+                </div>
+
+                {/* Busiest Date */}
+                <div className={styles.statCard}>
+                  <div className={styles.iconContainer}>
+                    <MessageSquare className={styles.icon} />
+                  </div>
+                  <div>
+                    <div className="text-sm text-muted-foreground">{metricsT('busiest_date')}</div>
+                    <div className="text-xl font-bold">{formatDate(timeAnalysis.mostActiveDate)}</div>
+                    <div className="text-xs text-muted-foreground">
+                      {metricsT('total_messages', { count: timeAnalysis.mostMessagesCount })}
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

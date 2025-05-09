@@ -86,7 +86,7 @@ const OverviewBlock = forwardRef<HTMLDivElement, Props>(({ overview }, ref) => {
         </div>
 
         {/* 添加"person of few words"文本 */}
-        <div className="text-left text-sm text-muted-foreground italic pl-2 -mt-8">
+        <div className="text-left text-m text-muted-foreground italic pl-2 -mt-8">
           {overview.sender1.wordsPerMessage <= overview.sender2.wordsPerMessage ?
             `${overview.sender1.name} is a person of few words — more concise than 3.1% of people!` :
             `${overview.sender2.name} is a person of few words — more concise than 3.1% of people!`}

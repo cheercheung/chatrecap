@@ -16,7 +16,7 @@ interface LineChartProps {
   data: { date: string; count: number }[];
   title?: string;
   height?: number;
-  tooltipUnit?: string;
+  tooltipUnit?: string; // 保留以保持向后兼容性
   className?: string;
 }
 
@@ -24,7 +24,7 @@ const LineChart: React.FC<LineChartProps> = ({
   data,
   title,
   height = 300,
-  tooltipUnit = '',
+  // tooltipUnit 参数保留以保持向后兼容性
   className
 }) => {
   // 获取翻译
@@ -51,20 +51,7 @@ const LineChart: React.FC<LineChartProps> = ({
     value: item.count
   }));
 
-  // 自定义 Tooltip 内容
-  const CustomTooltip = ({ active, payload, label }: any) => {
-    if (active && payload && payload.length) {
-      return (
-        <div className="bg-background/90 backdrop-blur-sm border border-primary/10 rounded-md p-2 shadow-md text-sm">
-          <p className="font-medium">{label}</p>
-          <p className="text-primary">
-            {payload[0].value} {tooltipUnit}
-          </p>
-        </div>
-      );
-    }
-    return null;
-  };
+
 
   // 添加控制台日志以便调试
   console.log("LineChart data:", data);
@@ -122,7 +109,7 @@ const LineChart: React.FC<LineChartProps> = ({
                 tickMargin={3}
                 width={30}
               />
-              <Tooltip content={<CustomTooltip />} />
+              <Tooltip />
               <Area
                 type="monotone"
                 dataKey="value"

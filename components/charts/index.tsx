@@ -8,4 +8,5 @@ export { default as BarChart } from './barchart';
 export { default as WordCloud } from './word-cloud';
 export { default as TopWordsTable } from './top-words-table';
 export { default as RadarChart } from './radar-chart';
+export { default as PieChart } from './pie-chart';
 
