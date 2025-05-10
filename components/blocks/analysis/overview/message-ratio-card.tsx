@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslations } from 'next-intl';
-import HeartRatioChart from '@/components/ui/heartratiochart';
+import PieChart from '@/components/charts/pie-chart';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import styles from '@/styles/overview-cards.module.css';
 
@@ -52,13 +52,17 @@ const MessageRatioCard: React.FC<MessageRatioCardProps> = ({
         <TooltipProvider>
           <Tooltip>
             <TooltipTrigger asChild>
-              <div className="w-16 h-16 cursor-help">
-                <HeartRatioChart
-                  value1={sender1.messages}
-                  value2={sender2.messages}
-                  color1={color1}
-                  color2={color2}
-                  size={64}
+              <div className="cursor-help flex justify-center items-center" style={{ width: '100%', height: '80px', marginTop: '10px' }}>
+                <PieChart
+                  data={[
+                    { name: sender1.name, value: sender1.messages, color: color1 },
+                    { name: sender2.name, value: sender2.messages, color: color2 }
+                  ]}
+                  height={80}
+                  width={80}
+                  innerRadius={0}
+                  outerRadius={35}
+                  showLegend={false}
                 />
               </div>
             </TooltipTrigger>

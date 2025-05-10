@@ -13,6 +13,7 @@ interface PieChartProps {
   innerRadius?: number;
   outerRadius?: number;
   showLabels?: boolean;
+  showLegend?: boolean;
 }
 
 const COLORS = ['hsl(var(--primary))', 'hsl(var(--primary)/0.8)', 'hsl(var(--primary)/0.6)', 'hsl(var(--primary)/0.4)'];
@@ -27,6 +28,7 @@ const PieChart: React.FC<PieChartProps> = ({
   innerRadius = 0,
   outerRadius = 80,
   showLabels = false,
+  showLegend = true,
 }) => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
@@ -131,7 +133,7 @@ const PieChart: React.FC<PieChartProps> = ({
               onMouseLeave={onPieLeave}
               activeIndex={activeIndex !== null ? activeIndex : undefined}
               activeShape={renderActiveShape}
-              paddingAngle={2}
+              paddingAngle={innerRadius > 0 ? 2 : 0}
               isAnimationActive={false}
             >
               {data.map((entry, index) => (
@@ -143,14 +145,16 @@ const PieChart: React.FC<PieChartProps> = ({
             </Pie>
 
             {/* 图例 - 放在饼图左上角 */}
-            <text x="10%" y="15%" className="text-xs" textAnchor="start">
-              <tspan x="10%" dy="0" className="font-medium">Legend:</tspan>
-              {data.map((entry, index) => (
-                <tspan key={`legend-${index}`} x="10%" dy="15" fill={entry.color || COLORS[index % COLORS.length]}>
-                  ● {entry.name}
-                </tspan>
-              ))}
-            </text>
+            {showLegend && (
+              <text x="10%" y="15%" className="text-xs" textAnchor="start">
+                <tspan x="10%" dy="0" className="font-medium">Legend:</tspan>
+                {data.map((entry, index) => (
+                  <tspan key={`legend-${index}`} x="10%" dy="15" fill={entry.color || COLORS[index % COLORS.length]}>
+                    ● {entry.name}
+                  </tspan>
+                ))}
+              </text>
+            )}
           </RechartsPieChart>
         </ResponsiveContainer>
       </div>
