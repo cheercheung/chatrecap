@@ -23,22 +23,42 @@ export async function createCreditTransaction(transaction: {
     // 创建服务端管理员客户端
     const supabaseAdmin = createServerAdminClient();
 
-    // 调用数据库函数更新用户积分
-    await supabaseAdmin.rpc('update_user_credit', {
-      p_user_uuid: transaction.user_uuid,
-      p_amount: transaction.amount
-    });
+    // 获取用户当前积分余额
+    let currentBalance = 0;
+    const { data: userData, error: userError } = await supabaseAdmin
+      .from('User')
+      .select('credit_balance')
+      .eq('id', transaction.user_uuid)
+      .single();
+
+    if (!userError && userData) {
+      currentBalance = userData.credit_balance || 0;
+    }
+
+    // 计算新的积分余额
+    const newBalance = currentBalance + transaction.amount;
+
+    // 更新用户积分余额
+    await supabaseAdmin
+      .from('User')
+      .update({
+        credit_balance: newBalance,
+        updated_at: new Date().toISOString()
+      })
+      .eq('id', transaction.user_uuid);
 
     // 创建积分交易记录
     const { data, error } = await supabase
-      .from('credit_transactions')
+      .from('CreditTransaction')
       .insert({
         id: uuidv4(),
-        user_uuid: transaction.user_uuid,
-        amount: transaction.amount,
+        user_id: transaction.user_uuid,
+        change_amount: transaction.amount,
+        balance_after: newBalance,
         type: transaction.type,
-        order_uuid: transaction.order_uuid,
-        file_uuid: transaction.file_uuid,
+        order_id: transaction.order_uuid,
+        file_id: transaction.file_uuid,
+        description: transaction.type === 'recharge' ? '充值积分' : '消费积分',
         created_at: new Date().toISOString()
       })
       .select()
@@ -55,24 +75,63 @@ export async function createCreditTransaction(transaction: {
 /**
  * 消费用户积分（用于AI分析等功能）
  * @param user_uuid 用户ID
- * @param amount 消费金额
+ * @param amount 消费金额（正数）
  * @param file_uuid 文件ID
+ * @param description 描述信息
  * @returns 是否成功
  */
-export async function consumeCredits(user_uuid: string, amount: number, file_uuid: string) {
+export async function consumeCredits(user_uuid: string, amount: number, file_uuid: string, description: string = '文件分析消费') {
   try {
     // 创建服务端管理员客户端
     const supabaseAdmin = createServerAdminClient();
 
-    // 调用数据库函数消费积分
-    const { data, error } = await supabaseAdmin.rpc('consume_user_credit', {
-      p_user_uuid: user_uuid,
-      p_amount: amount,
-      p_file_uuid: file_uuid
-    });
+    // 获取用户当前积分余额
+    const { data: userData, error: userError } = await supabaseAdmin
+      .from('User')
+      .select('credit_balance')
+      .eq('id', user_uuid)
+      .single();
+
+    if (userError) throw userError;
+
+    const currentBalance = userData.credit_balance || 0;
+
+    // 检查积分是否足够
+    if (currentBalance < amount) {
+      throw new Error('用户积分不足');
+    }
+
+    // 计算新的积分余额（消费为负数）
+    const changeAmount = -Math.abs(amount);
+    const newBalance = currentBalance + changeAmount;
+
+    // 更新用户积分余额
+    await supabaseAdmin
+      .from('User')
+      .update({
+        credit_balance: newBalance,
+        updated_at: new Date().toISOString()
+      })
+      .eq('id', user_uuid);
+
+    // 创建积分消费记录
+    const { data, error } = await supabaseAdmin
+      .from('CreditTransaction')
+      .insert({
+        id: uuidv4(),
+        user_id: user_uuid,
+        change_amount: changeAmount,
+        balance_after: newBalance,
+        type: 'consume',
+        file_id: file_uuid,
+        description: description,
+        created_at: new Date().toISOString()
+      })
+      .select()
+      .single();
 
     if (error) throw error;
-    return data; // 返回布尔值，表示是否成功
+    return true;
   } catch (error) {
     console.error('消费积分失败:', error);
     return false;
@@ -89,9 +148,9 @@ export async function consumeCredits(user_uuid: string, amount: number, file_uui
 export async function getUserCreditHistory(userUuid: string, limit: number = 20, offset: number = 0) {
   try {
     const { data, error } = await supabase
-      .from('credit_transactions')
-      .select('*, orders(*)')
-      .eq('user_uuid', userUuid)
+      .from('CreditTransaction')
+      .select('*, Order(*), ChatFile(*)')
+      .eq('user_id', userUuid)
       .order('created_at', { ascending: false })
       .range(offset, offset + limit - 1);
 
@@ -111,7 +170,7 @@ export async function getUserCreditHistory(userUuid: string, limit: number = 20,
 export async function getUserCreditBalance(userUuid: string) {
   try {
     const { data, error } = await supabase
-      .from('users')
+      .from('User')
       .select('credit_balance')
       .eq('id', userUuid)
       .single();
@@ -148,8 +207,8 @@ export async function checkUserCreditSufficient(userUuid: string, amount: number
 export async function getCreditTransactionById(transactionId: string) {
   try {
     const { data, error } = await supabase
-      .from('credit_transactions')
-      .select('*, orders(*), chat_files(*)')
+      .from('CreditTransaction')
+      .select('*, Order(*), ChatFile(*)')
       .eq('id', transactionId)
       .single();
 

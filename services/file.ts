@@ -23,21 +23,22 @@ export async function createFileRecord(file: {
   user_id?: string;
   session_id: string;
   file_type: string;
-  storage_path?: string;
+  file_url?: string;
+  file_name?: string;
 }) {
   try {
     const fileId = uuidv4();
-    
+
     const { data, error } = await supabase
-      .from('chat_files')
+      .from('ChatFile')
       .insert({
         id: fileId,
         user_id: file.user_id || null,
         session_id: file.session_id,
         file_type: file.file_type,
-        status: ChatFileStatus.UPLOADED,
-        created_at: new Date().toISOString(),
-        storage_path: file.storage_path || null
+        file_url: file.file_url || 'https://example.com/placeholder.txt',
+        file_name: file.file_name || `file_${Date.now()}.txt`,
+        uploaded_at: new Date().toISOString()
       })
       .select()
       .single();
@@ -58,8 +59,8 @@ export async function createFileRecord(file: {
  * @returns 更新后的文件记录
  */
 export async function updateFileStatus(
-  fileId: string, 
-  status: ChatFileStatus, 
+  fileId: string,
+  status: ChatFileStatus,
   additionalData: {
     words_count?: number;
     basic_result_path?: string;
@@ -68,14 +69,27 @@ export async function updateFileStatus(
 ) {
   try {
     const supabaseAdmin = createServerAdminClient();
-    
+
     const updateData: any = {
-      status,
-      ...additionalData
+      status
     };
 
+    // 添加额外数据，但需要确保字段名与数据库匹配
+    if (additionalData.words_count !== undefined) {
+      updateData.words_count = additionalData.words_count;
+    }
+
+    // 注意：这里我们假设数据库中有这些字段，实际可能需要调整
+    if (additionalData.basic_result_path) {
+      updateData.basic_result_path = additionalData.basic_result_path;
+    }
+
+    if (additionalData.ai_result_path) {
+      updateData.ai_result_path = additionalData.ai_result_path;
+    }
+
     const { data, error } = await supabaseAdmin
-      .from('chat_files')
+      .from('ChatFile')
       .update(updateData)
       .eq('id', fileId)
       .select()
@@ -99,9 +113,10 @@ export async function updateFileStatus(
 export async function associateAnalysisResult(fileId: string, resultType: 'basic' | 'ai', resultPath: string) {
   try {
     const supabaseAdmin = createServerAdminClient();
-    
+
     const updateData: any = {};
-    
+
+    // 注意：这里我们假设数据库中有这些字段，实际可能需要调整
     if (resultType === 'basic') {
       updateData.basic_result_path = resultPath;
       updateData.status = ChatFileStatus.COMPLETED_BASIC;
@@ -111,7 +126,7 @@ export async function associateAnalysisResult(fileId: string, resultType: 'basic
     }
 
     const { data, error } = await supabaseAdmin
-      .from('chat_files')
+      .from('ChatFile')
       .update(updateData)
       .eq('id', fileId)
       .select()
@@ -133,7 +148,7 @@ export async function associateAnalysisResult(fileId: string, resultType: 'basic
 export async function getFileById(fileId: string) {
   try {
     const { data, error } = await supabase
-      .from('chat_files')
+      .from('ChatFile')
       .select('*')
       .eq('id', fileId)
       .single();
@@ -154,10 +169,10 @@ export async function getFileById(fileId: string) {
 export async function getUserFiles(userId: string) {
   try {
     const { data, error } = await supabase
-      .from('chat_files')
+      .from('ChatFile')
       .select('*')
       .eq('user_id', userId)
-      .order('created_at', { ascending: false });
+      .order('uploaded_at', { ascending: false });
 
     if (error) throw error;
     return data;
@@ -175,10 +190,10 @@ export async function getUserFiles(userId: string) {
 export async function getSessionFiles(sessionId: string) {
   try {
     const { data, error } = await supabase
-      .from('chat_files')
+      .from('ChatFile')
       .select('*')
       .eq('session_id', sessionId)
-      .order('created_at', { ascending: false });
+      .order('uploaded_at', { ascending: false });
 
     if (error) throw error;
     return data;
@@ -196,31 +211,41 @@ export async function getSessionFiles(sessionId: string) {
 export async function deleteFile(fileId: string) {
   try {
     const supabaseAdmin = createServerAdminClient();
-    
+
     // 先获取文件信息
     const { data: fileData, error: fetchError } = await supabaseAdmin
-      .from('chat_files')
+      .from('ChatFile')
       .select('*')
       .eq('id', fileId)
       .single();
-    
+
     if (fetchError) throw fetchError;
-    
+
+    // 先删除关联的积分交易记录
+    const { error: creditError } = await supabaseAdmin
+      .from('CreditTransaction')
+      .delete()
+      .eq('file_id', fileId);
+
+    if (creditError) {
+      console.warn('删除关联的积分交易记录失败:', creditError);
+      // 继续执行，不中断流程
+    }
+
     // 删除文件记录
     const { error } = await supabaseAdmin
-      .from('chat_files')
+      .from('ChatFile')
       .delete()
       .eq('id', fileId);
 
     if (error) throw error;
-    
-    // 如果有存储路径，也删除存储中的文件
-    // 注意：这里假设存储路径是相对于某个存储桶的路径
-    if (fileData.storage_path) {
+
+    // 如果有文件URL，也可以考虑删除存储中的文件
+    if (fileData.file_url) {
       // 这里可以添加删除存储文件的逻辑
-      // 例如：await deleteStorageFile(fileData.storage_path);
+      // 例如：await deleteStorageFile(fileData.file_url);
     }
-    
+
     return true;
   } catch (error) {
     console.error('删除文件失败:', error);

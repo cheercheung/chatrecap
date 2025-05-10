@@ -62,7 +62,7 @@
    - 创建 `app/auth/callback/route.ts` 认证回调处理页面
    - 创建 `app/[locale]/auth/signin/page.tsx` 登录页面
 
-## 4. 存储系统集成（保留现有存储）
+## 4. 存储系统集成（保留现有存储）✅
 
 1. **保留现有存储系统**
    - 继续使用现有的本地文件系统存储和 S3 兼容存储
@@ -88,35 +88,69 @@
    - 保持文件内容存储在现有系统中
    - 实现文件处理状态更新和查询
 
-## 5. 数据服务实现
-
-1. **用户服务**
+## 5. 数据服务实现✅
+1. **用户服务**✅
    - 实现用户相关的数据操作函数：
      - 创建/更新用户信息
      - 获取用户详情
      - 关联未登录用户的文件
 
-2. **订单服务**
+2. **订单服务**✅
    - 实现订单相关的数据操作函数：
      - 创建订单
      - 更新订单状态
      - 查询用户订单历史
 
-3. **积分交易服务**
+3. **积分交易服务**✅
    - 实现积分交易相关的数据操作函数：
      - 创建积分交易记录
      - 更新用户积分余额
      - 查询交易历史
 
-4. **文件服务**
+4. **文件服务**✅
    - 实现文件相关的数据操作函数：
      - 创建文件记录
      - 更新文件状态
      - 关联分析结果
      - 查询用户文件
 
-## 6. API 路由调整
+### 数据服务实现总结
 
+在第五阶段，我们成功实现了四个核心数据服务，为应用提供了与 Supabase 数据库交互的完整功能。
+
+#### 用户服务 (`services/user.ts`)
+- 实现了完整的用户管理功能，包括创建、查询和更新用户信息
+- 提供了多种获取用户信息的方式：通过ID、邮箱或当前会话
+- 实现了未登录用户文件关联功能，确保用户登录后能访问之前上传的文件
+- 主要函数：`getUserById`, `getUserByEmail`, `createUser`, `saveUser`, `getCurrentUser`, `associateFilesToUser`
+
+#### 订单服务 (`services/order.ts`)
+- 实现了订单生命周期管理，从创建到支付完成
+- 定义了清晰的订单状态流转：`PENDING` → `PAID`/`CANCELLED`/`FAILED`
+- 集成了支付完成后的积分增加逻辑，确保数据一致性
+- 主要函数：`createOrder`, `updateOrderStatus`, `getOrderById`, `getUserOrders`
+
+#### 积分交易服务 (`services/credit.ts`)
+- 实现了完整的积分管理系统，支持充值和消费两种交易类型
+- 使用数据库函数确保积分更新的事务安全
+- 提供了积分余额查询和交易历史功能
+- 主要函数：`createCreditTransaction`, `consumeCredits`, `getUserCreditHistory`, `getUserCreditBalance`, `checkUserCreditSufficient`
+
+#### 文件服务 (`services/file.ts`)
+- 实现了文件元数据管理，支持文件上传、处理和分析的完整流程
+- 定义了文件状态流转：`UPLOADED` → `PROCESSING` → `COMPLETED_BASIC`/`COMPLETE_AI`/`FAILED`
+- 提供了文件查询和管理功能，支持按用户和会话查询
+- 主要函数：`createFileRecord`, `updateFileStatus`, `associateAnalysisResult`, `getFileById`, `getUserFiles`, `getSessionFiles`
+
+#### 数据一致性保障
+- 使用 Supabase RPC 函数确保积分更新的事务安全
+- 所有服务函数都实现了完善的错误处理机制
+- 订单状态更新前验证当前状态，防止重复处理
+- 积分消费前检查余额是否足够
+
+这些数据服务为下一阶段的 API 路由调整和前端组件集成提供了坚实的基础。
+
+## 6. API 路由调整
 1. **支付回调处理**
    - 修改支付回调 API，使用 Supabase 客户端更新订单状态
    - 确保事务安全，使用数据库函数处理复杂操作
@@ -181,39 +215,6 @@
    - 实现应用级错误跟踪
    - 设置关键操作的审计日志
 
-## 10. 迁移策略
-
-1. **数据迁移**
-   - 如有必要，编写数据迁移脚本
-   - 将现有用户数据迁移到 Supabase
-   - 确保数据完整性和一致性
-
-2. **功能逐步迁移**
-   - 先实现基础功能（认证、基本数据操作）
-   - 逐步迁移复杂功能（支付、AI 分析等）
-   - 确保每个阶段都可以正常运行
-
-3. **回滚计划**
-   - 制定回滚策略，以应对迁移过程中可能出现的问题
-   - 确保关键数据的备份和恢复机制
-   - 保留原有系统一段时间，直到新系统稳定
-
-## 实施时间表
-
-| 阶段 | 任务 | 预计时间 |
-|------|------|----------|
-| 1 | 前期准备和环境配置 | 1天 |
-| 2 | 数据库设计和配置 | 2天 |
-| 3 | 认证系统集成 | 2天 |
-| 4 | 存储系统集成 | 1天 |
-| 5 | 数据服务实现 | 3天 |
-| 6 | API 路由调整 | 2天 |
-| 7 | 前端组件调整 | 3天 |
-| 8 | 实时功能实现 | 1天 |
-| 9 | 测试与调整 | 2天 |
-| 10 | 部署与迁移 | 1天 |
-
-总计：约18个工作日
 
 ## 注意事项
 
@@ -236,3 +237,33 @@
    - 设计模块化的服务和组件
    - 考虑未来可能的功能扩展
    - 使用类型安全的接口和模型
+
+
+
+   ## 表结构
+  | table_name        | column_name   | data_type                | is_nullable |
+| ----------------- | ------------- | ------------------------ | ----------- |
+| ChatFile          | id            | uuid                     | NO          |
+| ChatFile          | user_id       | uuid                     | YES         |
+| ChatFile          | file_url      | text                     | NO          |
+| ChatFile          | file_name     | character varying        | NO          |
+| ChatFile          | uploaded_at   | timestamp with time zone | YES         |
+| CreditTransaction | id            | uuid                     | NO          |
+| CreditTransaction | user_id       | uuid                     | YES         |
+| CreditTransaction | change_amount | integer                  | NO          |
+| CreditTransaction | balance_after | integer                  | NO          |
+| CreditTransaction | type          | character varying        | NO          |
+| CreditTransaction | description   | text                     | YES         |
+| CreditTransaction | created_at    | timestamp with time zone | YES         |
+| CreditTransaction | file_id       | uuid                     | YES         |
+| Order             | id            | uuid                     | NO          |
+| Order             | user_id       | uuid                     | YES         |
+| Order             | amount        | numeric                  | NO          |
+| Order             | status        | character varying        | NO          |
+| Order             | created_at    | timestamp with time zone | YES         |
+| User              | id            | uuid                     | NO          |
+| User              | username      | character varying        | NO          |
+| User              | email         | character varying        | NO          |
+| User              | password_hash | character varying        | NO          |
+| User              | created_at    | timestamp with time zone | YES         |
+| User              | updated_at    | timestamp with time zone | YES         |

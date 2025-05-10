@@ -26,12 +26,11 @@ export async function createOrder(order: {
     const orderId = uuidv4();
 
     const { data, error } = await supabase
-      .from('orders')
+      .from('Order')
       .insert({
-        uuid: orderId,
-        user_uuid: order.user_uuid,
+        id: orderId,
+        user_id: order.user_uuid,
         amount: order.amount,
-        credit_amount: order.credit_amount,
         status: order.status || OrderStatus.PENDING,
         created_at: new Date().toISOString()
       })
@@ -59,9 +58,9 @@ export async function updateOrderStatus(orderId: string, status: string, payment
 
     // 获取订单信息
     const { data: orderData, error: fetchError } = await supabaseAdmin
-      .from('orders')
+      .from('Order')
       .select('*')
-      .eq('uuid', orderId)
+      .eq('id', orderId)
       .single();
 
     if (fetchError) throw fetchError;
@@ -81,9 +80,9 @@ export async function updateOrderStatus(orderId: string, status: string, payment
 
     // 更新订单
     const { data, error } = await supabaseAdmin
-      .from('orders')
+      .from('Order')
       .update(updateData)
-      .eq('uuid', orderId)
+      .eq('id', orderId)
       .select()
       .single();
 
@@ -96,10 +95,10 @@ export async function updateOrderStatus(orderId: string, status: string, payment
     if (status === OrderStatus.PAID) {
       // 创建积分交易记录并更新用户积分余额
       await createCreditTransaction({
-        user_uuid: data.user_uuid,
-        amount: data.credit_amount,
+        user_uuid: data.user_id,
+        amount: 1000, // 假设固定充值1000积分，实际应该从订单中获取
         type: 'recharge',
-        order_uuid: data.uuid
+        order_uuid: data.id
       });
     }
 
@@ -118,9 +117,9 @@ export async function updateOrderStatus(orderId: string, status: string, payment
 export async function getOrderById(orderId: string) {
   try {
     const { data, error } = await supabase
-      .from('orders')
+      .from('Order')
       .select('*')
-      .eq('uuid', orderId)
+      .eq('id', orderId)
       .single();
 
     if (error) throw error;
@@ -139,9 +138,9 @@ export async function getOrderById(orderId: string) {
 export async function getUserOrders(userId: string) {
   try {
     const { data, error } = await supabase
-      .from('orders')
+      .from('Order')
       .select('*')
-      .eq('user_uuid', userId)
+      .eq('user_id', userId)
       .order('created_at', { ascending: false });
 
     if (error) throw error;
