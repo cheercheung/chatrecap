@@ -1,0 +1,27 @@
+[
+  {
+    "sender": "Alice",
+    "content": "Hello, how are you?",
+    "date": "2023-01-01T10:00:00.000Z"
+  },
+  {
+    "sender": "Bob",
+    "content": "I'm good, thanks! How about you?",
+    "date": "2023-01-01T10:01:00.000Z"
+  },
+  {
+    "sender": "Alice",
+    "content": "I'm doing well too. What are your plans for today?",
+    "date": "2023-01-01T10:02:00.000Z"
+  },
+  {
+    "sender": "Bob",
+    "content": "Just working on some coding projects. You?",
+    "date": "2023-01-01T10:03:00.000Z"
+  },
+  {
+    "sender": "Alice",
+    "content": "I'm going to the park later.",
+    "date": "2023-01-01T10:04:00.000Z"
+  }
+]

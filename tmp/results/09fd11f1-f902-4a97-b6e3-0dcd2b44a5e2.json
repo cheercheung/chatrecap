@@ -1,0 +1,19 @@
+{
+  "messageCount": 5,
+  "wordCount": 50,
+  "senderStats": {
+    "Alice": {
+      "messageCount": 3,
+      "wordCount": 30
+    },
+    "Bob": {
+      "messageCount": 2,
+      "wordCount": 20
+    }
+  },
+  "timeStats": {
+    "firstMessageDate": "2023-01-01T10:00:00Z",
+    "lastMessageDate": "2023-01-01T10:04:00Z",
+    "duration": "4 minutes"
+  }
+}

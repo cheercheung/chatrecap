@@ -1,0 +1,32 @@
+{
+  "summary": "这是一个简短的对话，Alice和Bob交换了问候并讨论了他们的计划。",
+  "keyInsights": [
+    "对话很友好和轻松",
+    "双方都分享了他们的日常计划",
+    "对话持续了约4分钟"
+  ],
+  "relationshipAnalysis": {
+    "closeness": 7,
+    "communicationStyle": "友好",
+    "topics": [
+      "问候",
+      "日常活动"
+    ]
+  },
+  "personalityInsights": {
+    "Alice": {
+      "traits": [
+        "友好",
+        "主动"
+      ],
+      "communicationStyle": "开放"
+    },
+    "Bob": {
+      "traits": [
+        "简洁",
+        "回应式"
+      ],
+      "communicationStyle": "直接"
+    }
+  }
+}
