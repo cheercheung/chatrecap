@@ -1,0 +1,76 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// 用户表
+model User {
+  uuid           String    @id @default(uuid())
+  email          String    @unique
+  signin_provider String?
+  signin_openid  String?
+  credit_balance Int       @default(0)
+  created_at     DateTime  @default(now())
+  updated_at     DateTime  @updatedAt
+  
+  // 关联
+  transactions   CreditTransaction[]
+  orders         Order[]
+  chatFiles      ChatFile[]
+}
+
+// 订单表
+model Order {
+  uuid          String    @id @default(uuid())
+  created_at    DateTime  @default(now())
+  user_uuid     String
+  amount        Int       // 金额，单位：分
+  status        String    @default("pending")
+  credit_amount Int
+  payment_id    String?
+  
+  // 关联
+  user          User      @relation(fields: [user_uuid], references: [uuid])
+  transactions  CreditTransaction[]
+}
+
+// 积分交易表
+model CreditTransaction {
+  id          Int      @id @default(autoincrement())
+  user_uuid   String
+  amount      Int
+  type        String   // recharge, consume
+  order_uuid  String?
+  file_uuid   String?  // 关联文件UUID
+  created_at  DateTime @default(now())
+  
+  // 关联
+  user        User     @relation(fields: [user_uuid], references: [uuid])
+  order       Order?   @relation(fields: [order_uuid], references: [uuid])
+  chatFile    ChatFile? @relation(fields: [file_uuid], references: [uuid])
+}
+
+// 聊天记录文件表
+model ChatFile {
+  uuid             String    @id @default(uuid())
+  user_uuid        String?   // 可以为NULL（未登录用户）
+  session_id       String?   // 会话标识符
+  file_type        String
+  status           String    @default("uploaded")
+  created_at       DateTime  @default(now())
+  words_count      Int?
+  storage_path     String?
+  basic_result_path String?
+  ai_result_path   String?
+  
+  // 关联
+  user             User?     @relation(fields: [user_uuid], references: [uuid])
+  transactions     CreditTransaction[]
+}

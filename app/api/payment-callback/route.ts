@@ -1,48 +1,25 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { updateOrderStatus, OrderStatus, findOrderByOrderNo } from '@/models/prisma-order';
-import { performAIAnalysis } from '@/services/ai-analysis';
+import { updateOrderStatus } from '@/services/order';
 
-/**
- * 支付回调处理
- * 处理支付成功后的回调，更新订单状态，触发AI分析，然后重定向到结果页面
- */
-export async function GET(request: NextRequest) {
-  // 获取URL参数
-  const searchParams = request.nextUrl.searchParams;
-  const fileId = searchParams.get('fileId');
-  const orderNo = searchParams.get('order_no');
-
-  // 验证必要参数
-  if (!fileId || !orderNo) {
-    return NextResponse.redirect(new URL('/error?message=Missing+required+parameters', request.url));
-  }
-
+export async function POST(request: NextRequest) {
   try {
-    // 查找订单
-    const order = await findOrderByOrderNo(orderNo);
-
-    // 如果订单不存在，重定向到错误页面
+    const body = await request.json();
+    
+    // 验证支付回调数据
+    if (!body.order_id || !body.payment_id || body.status !== 'success') {
+      return NextResponse.json({ error: 'Invalid payment data' }, { status: 400 });
+    }
+    
+    // 更新订单状态
+    const order = await updateOrderStatus(body.order_id, 'paid', body.payment_id);
+    
     if (!order) {
-      return NextResponse.redirect(new URL('/error?message=Order+not+found', request.url));
+      return NextResponse.json({ error: 'Order not found' }, { status: 404 });
     }
-
-    // 如果订单状态是待处理，更新为已完成
-    if (order.status === OrderStatus.PENDING) {
-      await updateOrderStatus(orderNo, OrderStatus.PAID);
-    }
-
-    // 触发AI分析
-    try {
-      await performAIAnalysis(orderNo, 'en', fileId);
-    } catch (error) {
-      console.error('AI analysis failed:', error);
-      // 即使AI分析失败，我们仍然继续处理
-    }
-
-    // 重定向到结果页面，只带fileId参数
-    return NextResponse.redirect(new URL(`/ai-insight-result?fileId=${fileId}`, request.url));
+    
+    return NextResponse.json({ success: true });
   } catch (error) {
-    console.error('Payment callback processing failed:', error);
-    return NextResponse.redirect(new URL('/error?message=Payment+processing+failed', request.url));
+    console.error('Payment callback error:', error);
+    return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
   }
 }

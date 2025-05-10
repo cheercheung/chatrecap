@@ -1,0 +1,98 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// 用户模型
+model User {
+  uuid           String    @id @default(uuid())
+  email          String    @unique
+  nickname       String?
+  avatar_url     String?
+  signin_type    String?
+  signin_provider String?
+  signin_openid  String?
+  created_at     DateTime  @default(now())
+  updated_at     DateTime  @updatedAt
+  signin_ip      String?
+  invited_by     String?
+  is_affiliate   Boolean   @default(false)
+  
+  // 关联
+  apikeys        Apikey[]
+  credits        Credit[]
+  affiliates     Affiliate[] @relation("AffiliateInviter")
+  invited        Affiliate[] @relation("AffiliateInvitee")
+  orders         Order[]
+}
+
+// API密钥模型
+model Apikey {
+  id         Int      @id @default(autoincrement())
+  uuid       String   @default(uuid())
+  user_uuid  String
+  api_key    String   @unique
+  title      String
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+  status     String   @default("created")
+  
+  // 关联
+  user       User     @relation(fields: [user_uuid], references: [uuid])
+}
+
+// 积分模型
+model Credit {
+  id           Int      @id @default(autoincrement())
+  uuid         String   @default(uuid())
+  user_uuid    String
+  amount       Int
+  balance      Int
+  type         String
+  description  String?
+  created_at   DateTime @default(now())
+  updated_at   DateTime @updatedAt
+  
+  // 关联
+  user         User     @relation(fields: [user_uuid], references: [uuid])
+}
+
+// 邀请关系模型
+model Affiliate {
+  id            Int      @id @default(autoincrement())
+  uuid          String   @default(uuid())
+  inviter_uuid  String
+  invitee_uuid  String
+  status        String   @default("pending")
+  reward_amount Int      @default(0)
+  created_at    DateTime @default(now())
+  updated_at    DateTime @updatedAt
+  
+  // 关联
+  inviter       User     @relation("AffiliateInviter", fields: [inviter_uuid], references: [uuid])
+  invitee       User     @relation("AffiliateInvitee", fields: [invitee_uuid], references: [uuid])
+}
+
+// 订单模型
+model Order {
+  id            Int      @id @default(autoincrement())
+  uuid          String   @default(uuid())
+  user_uuid     String
+  product_id    String
+  amount        Int
+  currency      String   @default("USD")
+  status        String   @default("pending")
+  paid_email    String?
+  created_at    DateTime @default(now())
+  updated_at    DateTime @updatedAt
+  
+  // 关联
+  user          User     @relation(fields: [user_uuid], references: [uuid])
+}

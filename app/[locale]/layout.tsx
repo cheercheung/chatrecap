@@ -81,71 +81,49 @@ export default async function RootLayout({
   }
 
   return (
-    <html lang={locale} suppressHydrationWarning>
-      <head>
-        {/* 预加载关键字体 */}
-        <link
-          rel="preload"
-          href="/fonts/inter-var.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/fonts/din-regular.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/fonts/din-bold.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-      </head>
-      <body
-        className="min-h-screen bg-background font-sans antialiased overflow-x-hidden"
-        suppressHydrationWarning
-      >
-        {/* 优化脚本 */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                // 移除意外的属性
-                if (document.body.hasAttribute('inmaintabuse')) {
-                  document.body.removeAttribute('inmaintabuse');
-                }
+    <>
+      {/* 预加载关键字体 */}
+      <link
+        rel="preload"
+        href="/fonts/inter-var.woff2"
+        as="font"
+        type="font/woff2"
+        crossOrigin="anonymous"
+      />
 
-                // 字体加载优化
-                if ('fonts' in document) {
-                  // 预加载关键字体
-                  Promise.all([
-                    document.fonts.load('400 1em Inter'),
-                    document.fonts.load('700 1em Inter'),
-                    document.fonts.load('400 1em DIN'),
-                    document.fonts.load('700 1em DIN')
-                  ]).then(() => {
-                    document.documentElement.classList.add('fonts-loaded');
-                  });
-                }
-              })();
-            `
-          }}
-        />
-        <IntlProvider locale={locale} messages={messages}>
-          {/* 添加骨架屏，减少感知加载时间 */}
-          <div id="page-content">
-            {children}
-          </div>
+      {/* 优化脚本 */}
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            (function() {
+              // 移除意外的属性
+              if (document.body.hasAttribute('inmaintabuse')) {
+                document.body.removeAttribute('inmaintabuse');
+              }
 
-          {/* 使用客户端组件包装器 */}
-          <ClientComponents />
-        </IntlProvider>
-      </body>
-    </html>
+              // 字体加载优化
+              if ('fonts' in document) {
+                // 预加载关键字体
+                Promise.all([
+                  document.fonts.load('400 1em Inter'),
+                  document.fonts.load('700 1em Inter')
+                ]).then(() => {
+                  document.documentElement.classList.add('fonts-loaded');
+                });
+              }
+            })();
+          `
+        }}
+      />
+      <IntlProvider locale={locale} messages={messages}>
+        {/* 添加骨架屏，减少感知加载时间 */}
+        <div id="page-content">
+          {children}
+        </div>
+
+        {/* 使用客户端组件包装器 */}
+        <ClientComponents />
+      </IntlProvider>
+    </>
   );
 }

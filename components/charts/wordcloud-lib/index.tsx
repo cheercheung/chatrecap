@@ -1,12 +1,7 @@
-"use client";
-
 import React, { useRef, useEffect, useState } from 'react';
 import * as d3 from 'd3';
-
-// 导入 d3-cloud
-// 注意：d3-cloud 需要在项目中安装
-// npm install d3-cloud
-const d3Cloud = require('d3-cloud');
+import { scaleLinear } from 'd3-scale';
+import d3Cloud from 'd3-cloud';
 
 interface WordItem {
   word: string;
@@ -72,7 +67,7 @@ const WordCloudLib: React.FC<WordCloudLibProps> = ({
         .size([width, height])
         .words(wordData)
         .padding(padding)
-        .rotate(typeof rotate === 'function' ? rotate : () => rotate)
+        .rotate(typeof rotate === 'function' ? (d: any) => (rotate as any)(d.text) : () => rotate)
         .font(fontFamily)
         .fontWeight(fontWeight)
         .fontSize((d: any) => d.size)
@@ -133,7 +128,7 @@ const WordCloudLib: React.FC<WordCloudLibProps> = ({
       const maxValue = Math.max(...values);
 
       // 创建颜色比例尺
-      const colorScale = d3.scaleLinear<string>()
+      const colorScale = scaleLinear<string>()
         .domain([minValue, (minValue + maxValue) / 2, maxValue])
         .range(["hsl(var(--primary) / 0.6)", "hsl(var(--primary) / 0.8)", "hsl(var(--primary))"]);
 
@@ -165,7 +160,7 @@ const WordCloudLib: React.FC<WordCloudLibProps> = ({
             .style("font-weight", "bold")
             .style("fill", "url(#word-cloud-gradient)"); // 悬停时使用渐变色
         })
-        .on("mouseout", function(event, d: any) {
+        .on("mouseout", function(_event, d: any) {
           d3.select(this)
             .transition()
             .duration(200)

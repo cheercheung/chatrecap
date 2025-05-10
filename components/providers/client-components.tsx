@@ -1,31 +1,16 @@
 'use client';
 
-import dynamic from 'next/dynamic';
 import { useEffect, useState } from 'react';
 import CriticalCSS from './critical-css';
 import HydrationFix from './hydration-fix';
-
-// 延迟加载非关键组件 - 修复 ChunkLoadError
-// 移除 ssr: false 选项，因为在 Next.js 的新版本中，这在 Server Components 中不被支持
-export const DynamicToaster = dynamic(
-  () => import("@/components/ui/toaster").then(mod => mod.Toaster),
-  {
-    loading: () => null
-  }
-);
-
-// 延迟加载分析组件 - 修复 ChunkLoadError
-// 移除 ssr: false 选项，因为在 Next.js 的新版本中，这在 Server Components 中不被支持
-export const DynamicAnalytics = dynamic(
-  () => import("@/components/analytics"),
-  {
-    loading: () => null
-  }
-);
+import { UserProvider } from './user-provider';
+import { Toaster } from '@/components/ui/toaster';
 
 // 客户端包装器组件
 export default function ClientComponents() {
   const [isLoaded, setIsLoaded] = useState(false);
+  const [ToastComponent, setToastComponent] = useState<React.ReactNode | null>(null);
+  const [AnalyticsComponent, setAnalyticsComponent] = useState<React.ReactNode | null>(null);
 
   // 使用 useEffect 确保组件只在客户端渲染
   useEffect(() => {
@@ -44,8 +29,29 @@ export default function ClientComponents() {
     };
   }, []);
 
+  // 使用单独的 useEffect 来加载 Toaster 组件
+  useEffect(() => {
+    if (isLoaded) {
+      // 直接使用 Toaster 组件而不是动态导入
+      setToastComponent(<Toaster />);
+    }
+  }, [isLoaded]);
+
+  // 使用单独的 useEffect 来加载 Analytics 组件
+  useEffect(() => {
+    if (isLoaded) {
+      // 使用 import() 函数动态导入 Analytics 组件
+      import('@/components/analytics').then((module) => {
+        const AnalyticsModule = module.default;
+        setAnalyticsComponent(<AnalyticsModule />);
+      }).catch((error) => {
+        console.error('Failed to load Analytics component:', error);
+      });
+    }
+  }, [isLoaded]);
+
   return (
-    <>
+    <UserProvider>
       {/* 修复水合错误 */}
       <HydrationFix />
 
@@ -53,12 +59,8 @@ export default function ClientComponents() {
       <CriticalCSS />
 
       {/* 只在客户端加载完成后渲染非关键组件 */}
-      {isLoaded && (
-        <>
-          <DynamicToaster />
-          <DynamicAnalytics />
-        </>
-      )}
-    </>
+      {ToastComponent}
+      {AnalyticsComponent}
+    </UserProvider>
   );
 }

@@ -31,6 +31,7 @@ import LocaleToggle from "@/components/locale/toggle";
 import { Menu } from "lucide-react";
 import ThemeToggle from "@/components/theme/toggle";
 import { cn } from "@/lib/utils";
+import AuthStatus from "@/components/sign/auth-status";
 
 export default function Header({ header }: { header: HeaderType }) {
   if (header.disabled) {
@@ -145,6 +146,11 @@ export default function Header({ header }: { header: HeaderType }) {
           <div className="shrink-0 flex gap-3 items-center">
             {header.show_locale && <LocaleToggle />}
             {header.show_theme && <ThemeToggle />}
+
+            {/* Add Auth Status Component */}
+            <div className="ml-2">
+              <AuthStatus />
+            </div>
 
             {header.buttons?.map((item, i) => {
               return (
@@ -302,6 +308,9 @@ export default function Header({ header }: { header: HeaderType }) {
                   <div className="mt-4 flex items-center gap-2">
                     {header.show_locale && <LocaleToggle />}
                     <div className="flex-1"></div>
+
+                    {/* Auth Status in mobile view */}
+                    <AuthStatus />
 
                     {header.show_theme && <ThemeToggle />}
                   </div>
