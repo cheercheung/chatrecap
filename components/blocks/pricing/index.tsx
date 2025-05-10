@@ -22,15 +22,17 @@ export default function Pricing({ pricing }: { pricing: PricingType }) {
 
   const handleCheckout = async (item: PricingItem, cn_pay: boolean = false) => {
     try {
-      // 使用正确的参数
+      // 使用新的参数结构，不再需要fileId
       const params = {
-        fileId: `pricing_${item.product_id}`, // 为pricing创建特殊的fileId
         amount: cn_pay ? item.cn_amount : item.amount,
-        product_id: item.product_id // 传递product_id作为单独参数
+        product_id: item.product_id, // 传递product_id作为单独参数
+        user_id: "b0f9ded6-ccfb-4897-a7ed-fae70f9a7da0" // 使用测试用户ID
       };
 
       setIsLoading(true);
       setProductId(item.product_id);
+
+      console.log("创建支付会话，参数:", params);
 
       const response = await fetch("/api/creem-checkout", {
         method: "POST",
@@ -213,14 +215,19 @@ export default function Pricing({ pricing }: { pricing: PricingType }) {
                               if (isLoading) {
                                 return;
                               }
-                              handleCheckout(item, true);
+                              // 设置固定的产品ID和金额，用于测试
+                              const testItem = {
+                                ...item,
+                                product_id: item.title?.includes("4.9") ?
+                                  "prod_7KaJdvcGzJFuSSlt2iDJjv" : // 4.9元套餐
+                                  "prod_7KaJdvcGzJFuSSlt2iDJjw", // 9.9元套餐
+                                cn_amount: item.title?.includes("4.9") ? 490 : 990
+                              };
+                              console.log("点击中国支付按钮，使用测试商品:", testItem);
+                              handleCheckout(testItem, true);
                             }}
                           >
-                            {/* <img
-                              src="/imgs/cnpay.png"
-                              alt="cnpay"
-                              className="w-20 h-10 rounded-lg"
-                            /> */}
+                            <Button variant="outline">中国支付方式</Button>
                           </div>
                         </div>
                       ) : null}
@@ -232,7 +239,16 @@ export default function Pricing({ pricing }: { pricing: PricingType }) {
                             if (isLoading) {
                               return;
                             }
-                            handleCheckout(item);
+                            // 设置固定的产品ID和金额，用于测试
+                            const testItem = {
+                              ...item,
+                              product_id: item.title?.includes("4.9") ?
+                                "prod_7KaJdvcGzJFuSSlt2iDJjv" : // 4.9元套餐
+                                "prod_7KaJdvcGzJFuSSlt2iDJjw", // 9.9元套餐
+                              amount: item.title?.includes("4.9") ? 490 : 990
+                            };
+                            console.log("点击支付按钮，使用测试商品:", testItem);
+                            handleCheckout(testItem);
                           }}
                         >
                           {(!isLoading ||

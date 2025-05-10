@@ -3,17 +3,17 @@ import { respData, respErr } from "@/lib/resp";
 
 export async function POST(req: Request) {
   try {
-    const { amount, fileId, product_id } = await req.json();
+    const { amount, product_id, user_id } = await req.json();
 
-    if (!fileId) {
-      return respErr("文件ID不能为空");
+    if (!product_id) {
+      return respErr("产品ID不能为空");
     }
 
     // 传递所有必要参数
     const result = await createCreemCheckout({
       amount,
-      fileId,
-      product_id, // 可选参数，如果提供则使用，否则使用环境变量中的默认值
+      product_id, // 产品ID，用于区分不同套餐
+      user_id, // 用户ID，可选参数
     });
 
     return respData({

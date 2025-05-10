@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createOrder, updateOrderStatus, OrderStatus } from '@/services/order';
 import { getUserCreditBalance } from '@/services/credit';
-import { v4 as uuidv4 } from 'uuid';
 import { supabase } from '@/lib/supabase/client';
 
 /**
@@ -71,11 +70,9 @@ export async function POST(request: NextRequest) {
     });
 
     // 2. 模拟支付成功，更新订单状态
-    const paymentId = `test_payment_${uuidv4()}`;
     const updatedOrder = await updateOrderStatus(
       order.id, // 注意这里使用 id 而不是 uuid
-      OrderStatus.PAID,
-      paymentId
+      OrderStatus.PAID
     );
 
     // 3. 获取更新后的积分余额
@@ -96,7 +93,6 @@ export async function POST(request: NextRequest) {
         user_id: updatedOrder.user_id,
         amount: updatedOrder.amount,
         status: updatedOrder.status,
-        payment_id: updatedOrder.payment_id,
         created_at: updatedOrder.created_at
       },
       credits: {
@@ -145,7 +141,6 @@ export async function GET() {
             user_id: 'abc123',
             amount: 9.9,
             status: 'paid',
-            payment_id: 'test_payment_xyz',
             created_at: '2023-01-01T00:00:00Z'
           },
           credits: {

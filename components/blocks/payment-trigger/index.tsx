@@ -29,17 +29,20 @@ export function PaymentTrigger({
     console.log('Starting payment process for fileId:', fileId);
 
     try {
-      // 1. 创建支付会话
-      console.log('Creating payment session with params:', { fileId, amount });
+      // 1. 创建支付会话，使用新的参数结构
+      const params = {
+        amount,
+        product_id: 'prod_7KaJdvcGzJFuSSlt2iDJjv', // 使用基础套餐的产品ID
+        user_id: 'b0f9ded6-ccfb-4897-a7ed-fae70f9a7da0' // 使用测试用户ID
+      };
+
+      console.log('Creating payment session with params:', params);
       const response = await fetch('/api/creem-checkout', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-          fileId,
-          amount
-        }),
+        body: JSON.stringify(params),
       });
 
       console.log('Payment API response status:', response.status);

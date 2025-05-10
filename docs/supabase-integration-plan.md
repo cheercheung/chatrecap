@@ -516,20 +516,191 @@ function showLoginPrompt() {
 
 ## 7. 前端组件调整
 
-1. **支付触发组件**
-   - 修改支付相关组件，适配 Supabase 数据模型
-   - 确保正确处理支付流程和回调
-   - 实现支付状态的实时更新
+前端组件调整是 Supabase 集成的关键环节，需要确保用户界面与后端服务无缝衔接。以下是详细的实施方案：
 
-2. **用户信息组件**
-   - 修改用户信息相关组件，使用 Supabase Auth
-   - 实现用户登录状态的实时更新
-   - 显示用户积分余额和基本信息
+### 7.1 支付触发组件
 
-3. **文件处理组件**
-   - 修改文件上传和处理相关组件
-   - 适配 Supabase 存储和数据模型
-   - 实现文件处理状态的实时更新
+#### 7.1.1 支付套餐配置
+
+项目中有两个支付套餐：
+- 基础套餐：4.9元，提供70积分
+- 超值套餐：9.9元，提供200积分
+
+#### 7.1.2 支付组件调整
+
+1. **使用现有的 `components/blocks/payment-trigger/index.tsx`**
+   - 已实现的 Creem 支付系统将继续使用
+   - 通过不同的 productId 区分不同的套餐
+   - 集成 `services/order.ts` 中的函数创建订单
+   - 保持现有的支付流程：
+     ```typescript
+     // 支付触发函数
+     const handlePayment = async () => {
+       // 1. 创建支付会话，传递对应套餐的 productId
+       // 2. 跳转到 Creem 支付页面
+       // 3. 异步发起文件处理
+     }
+     ```
+
+2. **使用现有的 `components/blocks/pricing/index.tsx`**
+   - 已实现的套餐选择组件将继续使用
+   - 每个套餐关联特定的 productId
+   - 通过 productId 参数传递给支付 API
+   - 示例实现：
+     ```typescript
+     const handleCheckout = async (item: PricingItem) => {
+       const params = {
+         fileId: `pricing_${item.product_id}`,
+         amount: item.amount,
+         product_id: item.product_id // 传递 productId 区分套餐
+       };
+
+       // 调用支付 API 并处理响应
+     }
+     ```
+
+3. **支付回调处理**
+   - 确保 `app/api/payment-callback/route.ts` 正确处理支付回调
+   - 使用 `updateOrderStatus` 函数更新订单状态
+   - 支付成功后自动增加用户积分
+   - 实现支付状态的实时反馈
+
+#### 7.1.3 支付状态集成
+
+1. **集成现有的支付状态处理**
+   - 使用现有的 Toast 通知系统显示支付结果
+   - 在支付API响应中处理成功和失败状态
+   - 使用 Supabase 数据模型更新订单状态
+   - 示例实现：
+     ```typescript
+     try {
+       const responseData = await response.json();
+       const { success, message, data } = responseData;
+
+       if (!success) {
+         toast.error(message || "支付创建失败");
+         return;
+       }
+
+       // 重定向到 Creem 支付页面
+       window.location.href = data.checkout_url;
+     } catch (e) {
+       toast.error("支付创建失败，请稍后再试");
+     }
+     ```
+
+2. **支付成功处理**
+   - 支付成功后自动更新用户积分余额
+   - 在用户界面中实时显示更新后的积分
+   - 使用 DIN 字体显示数字，符合项目设计规范
+   - 提供继续使用的明确引导
+
+### 7.2 用户信息组件
+
+#### 7.2.1 用户信息显示
+
+1. **修改 `components/dashboard/sidebar/user.tsx`**
+   - 更新用户菜单组件，使用 Supabase Auth 获取用户信息
+   - 显示用户头像、用户名和邮箱
+   - 添加登出功能
+   - 实现未登录/已登录状态的切换显示
+
+2. **修改 `components/pages/dashboard/overview.tsx`**
+   - 更新仪表盘概览组件
+   - 显示用户积分余额
+   - 显示最近的分析历史
+   - 添加购买积分按钮
+
+#### 7.2.2 用户积分管理
+
+1. **修改 `components/pages/dashboard/points-history.tsx`**
+   - 更新积分历史组件
+   - 显示积分交易记录，包括充值和消费
+   - 使用 `services/credit.ts` 中的函数获取积分历史
+   - 实现分页和筛选功能
+
+2. **添加积分购买组件**
+   - 在仪表盘中添加积分购买入口
+   - 显示两个套餐选项：4.9元/70积分和9.9元/200积分
+   - 实现一键购买功能
+
+#### 7.2.3 用户认证状态管理
+
+1. **修改 `components/providers/user-provider.tsx`**
+   - 更新用户提供者组件，使用 Supabase Auth
+   - 实现用户状态的全局管理
+   - 提供登录状态检查和用户信息获取方法
+
+2. **实现认证状态持久化**
+   - 使用 Supabase Auth 的会话管理
+   - 确保页面刷新后保持登录状态
+   - 处理会话过期的情况
+
+### 7.3 文件处理组件
+
+#### 7.3.1 文件上传组件
+
+1. **修改文件上传组件**
+   - 更新文件上传逻辑，使用 `services/file.ts` 中的函数
+   - 保持现有的文件存储机制
+   - 在上传成功后创建文件记录
+   - 实现上传进度显示和错误处理
+
+2. **平台选择组件**
+   - 保留现有的平台选择功能（WhatsApp、Discord等）
+   - 确保平台信息正确传递给后端
+
+#### 7.3.2 文件处理状态组件
+
+1. **修改处理状态显示组件**
+   - 更新状态查询逻辑，使用 `getFileById` 函数
+   - 显示文件处理的各个阶段：上传、清洗、处理、完成
+   - 实现状态的实时更新
+   - 添加错误状态处理和重试选项
+
+2. **处理结果展示**
+   - 更新结果页面，从 Supabase 获取分析结果
+   - 保持现有的可视化组件
+   - 添加AI分析触发选项
+   - 显示单词计数等基础分析结果
+
+#### 7.3.3 AI分析触发组件
+
+1. **修改AI分析触发按钮**
+   - 更新触发逻辑，使用 `services/credit.ts` 检查积分余额
+   - 实现积分不足时的提示和充值引导
+   - 使用 `consumeCredits` 函数扣减积分
+   - 显示分析进度和结果
+
+2. **分析结果展示**
+   - 更新AI分析结果页面
+   - 从 Supabase 获取分析数据
+   - 保持现有的可视化组件
+   - 添加分享和导出功能
+
+### 7.4 国际化支持
+
+1. **确保翻译文件完整**
+   - 更新 `i18n/messages` 目录下的翻译文件
+   - 添加新组件所需的翻译键
+   - 保持中文作为主要语言
+
+2. **组件国际化**
+   - 使用 `useTranslations` 钩子获取翻译
+   - 确保所有用户可见文本都使用翻译键
+   - 支持动态切换语言
+
+### 7.5 UI设计规范
+
+1. **保持设计一致性**
+   - 使用 DIN 字体显示所有数字
+   - 保持现有的颜色方案和组件样式
+   - 确保响应式设计，适应不同设备
+
+2. **优化用户体验**
+   - 添加适当的加载状态和过渡动画
+   - 实现错误处理和用户友好的提示
+   - 优化移动端体验
 
 ## 8. 实时功能实现 ✅
 
@@ -597,7 +768,7 @@ function showLoginPrompt() {
 | User              | created_at        | timestamp with time zone | YES         | now()             |
 | User              | updated_at        | timestamp with time zone | YES         | now()             |
 
-## 单词计数功能实施方案
+## 单词计数功能实施方案✅
 ### 1. 功能概述
 开发一个单词计数组件，用于：
 

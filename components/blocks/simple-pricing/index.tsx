@@ -26,28 +26,55 @@ export default function SimplePricing({
 
   const handlePlanSelection = async (plan: PricingPlan) => {
     try {
+      console.log("Plan selected:", plan); // 添加调试信息
       setIsLoading(true);
       setSelectedPlanId(plan.productId);
 
-      // 如果是免费计划或没有设置金额，直接跳转到按钮URL
-      if (plan.isFree || !plan.amount) {
-        window.location.href = plan.buttonUrl;
+      // 从环境变量中获取产品ID
+      const basicProductId = process.env.NEXT_PUBLIC_BASIC_PRODUCT_ID || "prod_e9TcCKZ6qDESAWaWJb6TO";
+      const premiumProductId = process.env.NEXT_PUBLIC_PREMIUM_PRODUCT_ID || "prod_e9TcCKZ6qDESAWaWJb6TO";
+
+      // 根据计划标题确定产品ID和金额
+      const isPremiumPlan = plan.title?.includes("9.9") || plan.price?.includes("9.9");
+
+      // 设置支付参数
+      const params = {
+        amount: isPremiumPlan ? 990 : 490, // 9.9元或4.9元
+        product_id: isPremiumPlan ? premiumProductId : basicProductId, // 根据计划选择产品ID
+        user_id: "b0f9ded6-ccfb-4897-a7ed-fae70f9a7da0" // 使用测试用户ID
+      };
+
+      console.log("创建支付会话，参数:", params);
+      toast.info("正在创建支付会话...");
+
+      // 调用支付API
+      const response = await fetch("/api/creem-checkout", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(params),
+      });
+
+      const responseData = await response.json();
+      console.log('Payment API response data:', responseData);
+
+      const { success, message, data } = responseData;
+
+      if (!success) {
+        console.error('Payment session creation failed:', message);
+        toast.error(message || "支付创建失败");
         return;
       }
 
-      // 对于premium计划，直接跳转到chatrecapanalysis页面
-      console.log('Redirecting to chatrecapanalysis page');
+      // 显示成功消息
+      toast.success("支付会话创建成功，即将跳转...");
 
-      // 获取当前语言
-      const currentLocale = document.documentElement.lang || 'en';
-
-      // 根据当前语言构建URL
-      // 如果是默认语言(英语)，不需要添加语言前缀
-      const redirectUrl = currentLocale === 'en'
-        ? '/chatrecapanalysis'
-        : `/${currentLocale}/chatrecapanalysis`;
-
-      window.location.href = redirectUrl;
+      // 延迟1秒后跳转，以便看到提示
+      setTimeout(() => {
+        // 重定向到Creem支付页面
+        window.location.href = data.checkout_url;
+      }, 1000);
 
     } catch (error) {
       console.error("Navigation error:", error);
@@ -171,7 +198,7 @@ export default function SimplePricing({
                             <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                             <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                           </svg>
-                          处理中...
+                          loading
                         </span>
                       ) : (
                         <>

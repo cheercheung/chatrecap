@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>支付功能测试</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #f9f9f9;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+        input, select {
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .result {
+            background-color: #f0f0f0;
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 20px;
+            white-space: pre-wrap;
+            overflow-x: auto;
+        }
+        .error {
+            color: #d32f2f;
+            background-color: #ffebee;
+            padding: 10px;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+        .success {
+            color: #388e3c;
+            background-color: #e8f5e9;
+            padding: 10px;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Creem支付功能测试</h1>
+    
+    <div class="card">
+        <h2>测试方法1：使用测试支付API</h2>
+        <p>这种方法使用后端的测试API直接模拟支付流程，不会跳转到支付页面。</p>
+        
+        <div>
+            <label for="user_id">用户ID：</label>
+            <input type="text" id="user_id" value="b0f9ded6-ccfb-4897-a7ed-fae70f9a7da0">
+            
+            <label for="amount">金额：</label>
+            <input type="number" id="amount" value="9.9" step="0.1">
+            
+            <button onclick="testPaymentAPI()">测试支付</button>
+        </div>
+        
+        <div id="test-payment-result" class="result" style="display: none;"></div>
+    </div>
+    
+    <div class="card">
+        <h2>测试方法2：使用Creem支付流程</h2>
+        <p>这种方法会创建真实的支付会话并跳转到支付页面，您需要在支付页面填写信息。</p>
+        
+        <div>
+            <label for="user_id_real">用户ID：</label>
+            <input type="text" id="user_id_real" value="b0f9ded6-ccfb-4897-a7ed-fae70f9a7da0">
+            
+            <label for="product_id">产品ID：</label>
+            <select id="product_id">
+                <option value="prod_7KaJdvcGzJFuSSlt2iDJjv">基础套餐 (4.9元/70积分)</option>
+                <option value="prod_7KaJdvcGzJFuSSlt2iDJjw">超值套餐 (9.9元/200积分)</option>
+            </select>
+            
+            <button onclick="createRealPayment()">创建支付会话</button>
+        </div>
+        
+        <div id="real-payment-result" class="result" style="display: none;"></div>
+    </div>
+
+    <script>
+        // 测试支付API
+        async function testPaymentAPI() {
+            const userId = document.getElementById('user_id').value;
+            const amount = parseFloat(document.getElementById('amount').value);
+            const resultDiv = document.getElementById('test-payment-result');
+            
+            if (!userId) {
+                resultDiv.innerHTML = '<div class="error">请输入用户ID</div>';
+                resultDiv.style.display = 'block';
+                return;
+            }
+            
+            try {
+                resultDiv.innerHTML = '正在处理...';
+                resultDiv.style.display = 'block';
+                
+                const response = await fetch('/api/test/payment', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        user_uuid: userId,
+                        amount: amount
+                    }),
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    resultDiv.innerHTML = `<div class="success">${data.message}</div><pre>${JSON.stringify(data, null, 2)}</pre>`;
+                } else {
+                    resultDiv.innerHTML = `<div class="error">测试失败: ${data.message}</div>`;
+                }
+            } catch (error) {
+                resultDiv.innerHTML = `<div class="error">请求错误: ${error.message}</div>`;
+            }
+        }
+        
+        // 创建真实支付会话
+        async function createRealPayment() {
+            const userId = document.getElementById('user_id_real').value;
+            const productId = document.getElementById('product_id').value;
+            const resultDiv = document.getElementById('real-payment-result');
+            
+            if (!userId) {
+                resultDiv.innerHTML = '<div class="error">请输入用户ID</div>';
+                resultDiv.style.display = 'block';
+                return;
+            }
+            
+            try {
+                resultDiv.innerHTML = '正在创建支付会话...';
+                resultDiv.style.display = 'block';
+                
+                const response = await fetch('/api/creem-checkout', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        user_id: userId,
+                        product_id: productId,
+                        amount: productId.includes('2iDJjw') ? 990 : 490 // 根据产品ID设置金额
+                    }),
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    resultDiv.innerHTML = `<div class="success">支付会话创建成功，即将跳转到支付页面...</div>`;
+                    setTimeout(() => {
+                        window.location.href = data.data.checkout_url;
+                    }, 2000);
+                } else {
+                    resultDiv.innerHTML = `<div class="error">创建失败: ${data.message}</div>`;
+                }
+            } catch (error) {
+                resultDiv.innerHTML = `<div class="error">请求错误: ${error.message}</div>`;
+            }
+        }
+    </script>
+</body>
+</html>
