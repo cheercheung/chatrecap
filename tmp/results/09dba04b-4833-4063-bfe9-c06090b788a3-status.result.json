@@ -1,0 +1,8 @@
+{
+  "status": "completed",
+  "cleaningProgress": 100,
+  "analysisProgress": 100,
+  "currentCleaningStep": "准备 whatsapp 数据",
+  "currentAnalysisStep": "处理 whatsapp 消息",
+  "words_count": 40233
+}

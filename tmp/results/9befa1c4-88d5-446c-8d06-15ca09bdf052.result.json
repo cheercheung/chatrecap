@@ -1,0 +1,1196 @@
+{
+  "id": "generated",
+  "startDate": "April 18, 2025",
+  "duration": 1,
+  "endDate": "April 18, 2025",
+  "timespanSummary": "chatrecapresult.timespan_summary",
+  "overview": {
+    "totalMessages": 20,
+    "totalWords": 68,
+    "wordsPerMessage": 3.4,
+    "sender1": {
+      "name": "Cheer",
+      "messages": 10,
+      "words": 33,
+      "wordsPerMessage": 3.3
+    },
+    "sender2": {
+      "name": "Alex",
+      "messages": 10,
+      "words": 35,
+      "wordsPerMessage": 3.5
+    },
+    "avgMessagesPerDay": 20,
+    "mostActiveDay": "days_of_week.friday",
+    "responseTime": "1 minutes"
+  },
+  "textAnalysis": {
+    "commonWords": [
+      {
+        "word": "haha",
+        "count": 2
+      },
+      {
+        "word": "the",
+        "count": 2
+      },
+      {
+        "word": "you",
+        "count": 2
+      },
+      {
+        "word": "photo",
+        "count": 2
+      },
+      {
+        "word": "photos",
+        "count": 2
+      },
+      {
+        "word": "jpg",
+        "count": 2
+      },
+      {
+        "word": "location",
+        "count": 2
+      },
+      {
+        "word": "hey",
+        "count": 1
+      },
+      {
+        "word": "long",
+        "count": 1
+      },
+      {
+        "word": "time",
+        "count": 1
+      },
+      {
+        "word": "see",
+        "count": 1
+      },
+      {
+        "word": "yes",
+        "count": 1
+      },
+      {
+        "word": "let",
+        "count": 1
+      },
+      {
+        "word": "catch",
+        "count": 1
+      },
+      {
+        "word": "soon",
+        "count": 1
+      },
+      {
+        "word": "voice_message",
+        "count": 1
+      },
+      {
+        "word": "voice_messages",
+        "count": 1
+      },
+      {
+        "word": "voice001",
+        "count": 1
+      },
+      {
+        "word": "ogg",
+        "count": 1
+      },
+      {
+        "word": "loved",
+        "count": 1
+      },
+      {
+        "word": "voice",
+        "count": 1
+      },
+      {
+        "word": "knew",
+        "count": 1
+      },
+      {
+        "word": "would",
+        "count": 1
+      },
+      {
+        "word": "wanna",
+        "count": 1
+      },
+      {
+        "word": "grab",
+        "count": 1
+      },
+      {
+        "word": "coffee",
+        "count": 1
+      },
+      {
+        "word": "later",
+        "count": 1
+      },
+      {
+        "word": "sounds",
+        "count": 1
+      },
+      {
+        "word": "awesome",
+        "count": 1
+      },
+      {
+        "word": "coffee_shop",
+        "count": 1
+      },
+      {
+        "word": "that",
+        "count": 1
+      },
+      {
+        "word": "place",
+        "count": 1
+      },
+      {
+        "word": "looks",
+        "count": 1
+      },
+      {
+        "word": "cute",
+        "count": 1
+      },
+      {
+        "word": "meet",
+        "count": 1
+      },
+      {
+        "word": "there",
+        "count": 1
+      },
+      {
+        "word": "perfect",
+        "count": 1
+      },
+      {
+        "word": "sending",
+        "count": 1
+      },
+      {
+        "word": "locations",
+        "count": 1
+      },
+      {
+        "word": "coffee_shop_location",
+        "count": 1
+      },
+      {
+        "word": "json",
+        "count": 1
+      },
+      {
+        "word": "got",
+        "count": 1
+      },
+      {
+        "word": "here",
+        "count": 1
+      },
+      {
+        "word": "already",
+        "count": 1
+      },
+      {
+        "word": "way",
+        "count": 1
+      },
+      {
+        "word": "coffee_waiting",
+        "count": 1
+      },
+      {
+        "word": "nice",
+        "count": 1
+      },
+      {
+        "word": "vibe",
+        "count": 1
+      },
+      {
+        "word": "save",
+        "count": 1
+      },
+      {
+        "word": "table",
+        "count": 1
+      }
+    ],
+    "sentimentScore": 0.7144927536231883,
+    "topEmojis": [
+      {
+        "emoji": "😂",
+        "count": 2
+      },
+      {
+        "emoji": "😎",
+        "count": 2
+      },
+      {
+        "emoji": "😁",
+        "count": 1
+      }
+    ],
+    "wordCount": 58,
+    "sender1": {
+      "name": "Cheer",
+      "commonWords": [
+        {
+          "word": "hey",
+          "count": 1
+        },
+        {
+          "word": "long",
+          "count": 1
+        },
+        {
+          "word": "time",
+          "count": 1
+        },
+        {
+          "word": "see",
+          "count": 1
+        },
+        {
+          "word": "voice_message",
+          "count": 1
+        },
+        {
+          "word": "voice_messages",
+          "count": 1
+        },
+        {
+          "word": "voice001",
+          "count": 1
+        },
+        {
+          "word": "ogg",
+          "count": 1
+        },
+        {
+          "word": "knew",
+          "count": 1
+        },
+        {
+          "word": "you",
+          "count": 1
+        }
+      ],
+      "topEmojis": [
+        {
+          "emoji": "😂",
+          "count": 2
+        },
+        {
+          "emoji": "😎",
+          "count": 1
+        }
+      ]
+    },
+    "sender2": {
+      "name": "Alex",
+      "commonWords": [
+        {
+          "word": "haha",
+          "count": 2
+        },
+        {
+          "word": "the",
+          "count": 2
+        },
+        {
+          "word": "location",
+          "count": 2
+        },
+        {
+          "word": "yes",
+          "count": 1
+        },
+        {
+          "word": "let",
+          "count": 1
+        },
+        {
+          "word": "catch",
+          "count": 1
+        },
+        {
+          "word": "soon",
+          "count": 1
+        },
+        {
+          "word": "loved",
+          "count": 1
+        },
+        {
+          "word": "voice",
+          "count": 1
+        },
+        {
+          "word": "wanna",
+          "count": 1
+        }
+      ],
+      "topEmojis": [
+        {
+          "emoji": "😎",
+          "count": 1
+        },
+        {
+          "emoji": "😁",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "timeAnalysis": {
+    "mostActiveHour": 14,
+    "mostActiveDay": "days_of_week.friday",
+    "mostActiveDate": "2025-04-18",
+    "mostMessagesCount": 20,
+    "responsePattern": "consistent",
+    "conversationLength": "Average 32 minutes",
+    "timeDistribution": [
+      {
+        "time": "time_of_day.morning",
+        "percentage": 0
+      },
+      {
+        "time": "time_of_day.afternoon",
+        "percentage": 100
+      },
+      {
+        "time": "time_of_day.evening",
+        "percentage": 0
+      },
+      {
+        "time": "time_of_day.night",
+        "percentage": 0
+      }
+    ],
+    "hourlyActivity": [
+      {
+        "hour": 0,
+        "count": 0
+      },
+      {
+        "hour": 1,
+        "count": 0
+      },
+      {
+        "hour": 2,
+        "count": 0
+      },
+      {
+        "hour": 3,
+        "count": 0
+      },
+      {
+        "hour": 4,
+        "count": 0
+      },
+      {
+        "hour": 5,
+        "count": 0
+      },
+      {
+        "hour": 6,
+        "count": 0
+      },
+      {
+        "hour": 7,
+        "count": 0
+      },
+      {
+        "hour": 8,
+        "count": 0
+      },
+      {
+        "hour": 9,
+        "count": 0
+      },
+      {
+        "hour": 10,
+        "count": 0
+      },
+      {
+        "hour": 11,
+        "count": 0
+      },
+      {
+        "hour": 12,
+        "count": 0
+      },
+      {
+        "hour": 13,
+        "count": 0
+      },
+      {
+        "hour": 14,
+        "count": 14
+      },
+      {
+        "hour": 15,
+        "count": 0
+      },
+      {
+        "hour": 16,
+        "count": 6
+      },
+      {
+        "hour": 17,
+        "count": 0
+      },
+      {
+        "hour": 18,
+        "count": 0
+      },
+      {
+        "hour": 19,
+        "count": 0
+      },
+      {
+        "hour": 20,
+        "count": 0
+      },
+      {
+        "hour": 21,
+        "count": 0
+      },
+      {
+        "hour": 22,
+        "count": 0
+      },
+      {
+        "hour": 23,
+        "count": 0
+      }
+    ],
+    "dailyActivity": [
+      {
+        "date": "2025-04-18",
+        "count": 20
+      }
+    ],
+    "weekdayHourHeatmap": [
+      {
+        "day": "days_of_week.sunday",
+        "hours": [
+          {
+            "hour": 0,
+            "count": 0
+          },
+          {
+            "hour": 1,
+            "count": 0
+          },
+          {
+            "hour": 2,
+            "count": 0
+          },
+          {
+            "hour": 3,
+            "count": 0
+          },
+          {
+            "hour": 4,
+            "count": 0
+          },
+          {
+            "hour": 5,
+            "count": 0
+          },
+          {
+            "hour": 6,
+            "count": 0
+          },
+          {
+            "hour": 7,
+            "count": 0
+          },
+          {
+            "hour": 8,
+            "count": 0
+          },
+          {
+            "hour": 9,
+            "count": 0
+          },
+          {
+            "hour": 10,
+            "count": 0
+          },
+          {
+            "hour": 11,
+            "count": 0
+          },
+          {
+            "hour": 12,
+            "count": 0
+          },
+          {
+            "hour": 13,
+            "count": 0
+          },
+          {
+            "hour": 14,
+            "count": 0
+          },
+          {
+            "hour": 15,
+            "count": 0
+          },
+          {
+            "hour": 16,
+            "count": 0
+          },
+          {
+            "hour": 17,
+            "count": 0
+          },
+          {
+            "hour": 18,
+            "count": 0
+          },
+          {
+            "hour": 19,
+            "count": 0
+          },
+          {
+            "hour": 20,
+            "count": 0
+          },
+          {
+            "hour": 21,
+            "count": 0
+          },
+          {
+            "hour": 22,
+            "count": 0
+          },
+          {
+            "hour": 23,
+            "count": 0
+          }
+        ]
+      },
+      {
+        "day": "days_of_week.monday",
+        "hours": [
+          {
+            "hour": 0,
+            "count": 0
+          },
+          {
+            "hour": 1,
+            "count": 0
+          },
+          {
+            "hour": 2,
+            "count": 0
+          },
+          {
+            "hour": 3,
+            "count": 0
+          },
+          {
+            "hour": 4,
+            "count": 0
+          },
+          {
+            "hour": 5,
+            "count": 0
+          },
+          {
+            "hour": 6,
+            "count": 0
+          },
+          {
+            "hour": 7,
+            "count": 0
+          },
+          {
+            "hour": 8,
+            "count": 0
+          },
+          {
+            "hour": 9,
+            "count": 0
+          },
+          {
+            "hour": 10,
+            "count": 0
+          },
+          {
+            "hour": 11,
+            "count": 0
+          },
+          {
+            "hour": 12,
+            "count": 0
+          },
+          {
+            "hour": 13,
+            "count": 0
+          },
+          {
+            "hour": 14,
+            "count": 0
+          },
+          {
+            "hour": 15,
+            "count": 0
+          },
+          {
+            "hour": 16,
+            "count": 0
+          },
+          {
+            "hour": 17,
+            "count": 0
+          },
+          {
+            "hour": 18,
+            "count": 0
+          },
+          {
+            "hour": 19,
+            "count": 0
+          },
+          {
+            "hour": 20,
+            "count": 0
+          },
+          {
+            "hour": 21,
+            "count": 0
+          },
+          {
+            "hour": 22,
+            "count": 0
+          },
+          {
+            "hour": 23,
+            "count": 0
+          }
+        ]
+      },
+      {
+        "day": "days_of_week.tuesday",
+        "hours": [
+          {
+            "hour": 0,
+            "count": 0
+          },
+          {
+            "hour": 1,
+            "count": 0
+          },
+          {
+            "hour": 2,
+            "count": 0
+          },
+          {
+            "hour": 3,
+            "count": 0
+          },
+          {
+            "hour": 4,
+            "count": 0
+          },
+          {
+            "hour": 5,
+            "count": 0
+          },
+          {
+            "hour": 6,
+            "count": 0
+          },
+          {
+            "hour": 7,
+            "count": 0
+          },
+          {
+            "hour": 8,
+            "count": 0
+          },
+          {
+            "hour": 9,
+            "count": 0
+          },
+          {
+            "hour": 10,
+            "count": 0
+          },
+          {
+            "hour": 11,
+            "count": 0
+          },
+          {
+            "hour": 12,
+            "count": 0
+          },
+          {
+            "hour": 13,
+            "count": 0
+          },
+          {
+            "hour": 14,
+            "count": 0
+          },
+          {
+            "hour": 15,
+            "count": 0
+          },
+          {
+            "hour": 16,
+            "count": 0
+          },
+          {
+            "hour": 17,
+            "count": 0
+          },
+          {
+            "hour": 18,
+            "count": 0
+          },
+          {
+            "hour": 19,
+            "count": 0
+          },
+          {
+            "hour": 20,
+            "count": 0
+          },
+          {
+            "hour": 21,
+            "count": 0
+          },
+          {
+            "hour": 22,
+            "count": 0
+          },
+          {
+            "hour": 23,
+            "count": 0
+          }
+        ]
+      },
+      {
+        "day": "days_of_week.wednesday",
+        "hours": [
+          {
+            "hour": 0,
+            "count": 0
+          },
+          {
+            "hour": 1,
+            "count": 0
+          },
+          {
+            "hour": 2,
+            "count": 0
+          },
+          {
+            "hour": 3,
+            "count": 0
+          },
+          {
+            "hour": 4,
+            "count": 0
+          },
+          {
+            "hour": 5,
+            "count": 0
+          },
+          {
+            "hour": 6,
+            "count": 0
+          },
+          {
+            "hour": 7,
+            "count": 0
+          },
+          {
+            "hour": 8,
+            "count": 0
+          },
+          {
+            "hour": 9,
+            "count": 0
+          },
+          {
+            "hour": 10,
+            "count": 0
+          },
+          {
+            "hour": 11,
+            "count": 0
+          },
+          {
+            "hour": 12,
+            "count": 0
+          },
+          {
+            "hour": 13,
+            "count": 0
+          },
+          {
+            "hour": 14,
+            "count": 0
+          },
+          {
+            "hour": 15,
+            "count": 0
+          },
+          {
+            "hour": 16,
+            "count": 0
+          },
+          {
+            "hour": 17,
+            "count": 0
+          },
+          {
+            "hour": 18,
+            "count": 0
+          },
+          {
+            "hour": 19,
+            "count": 0
+          },
+          {
+            "hour": 20,
+            "count": 0
+          },
+          {
+            "hour": 21,
+            "count": 0
+          },
+          {
+            "hour": 22,
+            "count": 0
+          },
+          {
+            "hour": 23,
+            "count": 0
+          }
+        ]
+      },
+      {
+        "day": "days_of_week.thursday",
+        "hours": [
+          {
+            "hour": 0,
+            "count": 0
+          },
+          {
+            "hour": 1,
+            "count": 0
+          },
+          {
+            "hour": 2,
+            "count": 0
+          },
+          {
+            "hour": 3,
+            "count": 0
+          },
+          {
+            "hour": 4,
+            "count": 0
+          },
+          {
+            "hour": 5,
+            "count": 0
+          },
+          {
+            "hour": 6,
+            "count": 0
+          },
+          {
+            "hour": 7,
+            "count": 0
+          },
+          {
+            "hour": 8,
+            "count": 0
+          },
+          {
+            "hour": 9,
+            "count": 0
+          },
+          {
+            "hour": 10,
+            "count": 0
+          },
+          {
+            "hour": 11,
+            "count": 0
+          },
+          {
+            "hour": 12,
+            "count": 0
+          },
+          {
+            "hour": 13,
+            "count": 0
+          },
+          {
+            "hour": 14,
+            "count": 0
+          },
+          {
+            "hour": 15,
+            "count": 0
+          },
+          {
+            "hour": 16,
+            "count": 0
+          },
+          {
+            "hour": 17,
+            "count": 0
+          },
+          {
+            "hour": 18,
+            "count": 0
+          },
+          {
+            "hour": 19,
+            "count": 0
+          },
+          {
+            "hour": 20,
+            "count": 0
+          },
+          {
+            "hour": 21,
+            "count": 0
+          },
+          {
+            "hour": 22,
+            "count": 0
+          },
+          {
+            "hour": 23,
+            "count": 0
+          }
+        ]
+      },
+      {
+        "day": "days_of_week.friday",
+        "hours": [
+          {
+            "hour": 0,
+            "count": 0
+          },
+          {
+            "hour": 1,
+            "count": 0
+          },
+          {
+            "hour": 2,
+            "count": 0
+          },
+          {
+            "hour": 3,
+            "count": 0
+          },
+          {
+            "hour": 4,
+            "count": 0
+          },
+          {
+            "hour": 5,
+            "count": 0
+          },
+          {
+            "hour": 6,
+            "count": 0
+          },
+          {
+            "hour": 7,
+            "count": 0
+          },
+          {
+            "hour": 8,
+            "count": 0
+          },
+          {
+            "hour": 9,
+            "count": 0
+          },
+          {
+            "hour": 10,
+            "count": 0
+          },
+          {
+            "hour": 11,
+            "count": 0
+          },
+          {
+            "hour": 12,
+            "count": 0
+          },
+          {
+            "hour": 13,
+            "count": 0
+          },
+          {
+            "hour": 14,
+            "count": 14
+          },
+          {
+            "hour": 15,
+            "count": 0
+          },
+          {
+            "hour": 16,
+            "count": 6
+          },
+          {
+            "hour": 17,
+            "count": 0
+          },
+          {
+            "hour": 18,
+            "count": 0
+          },
+          {
+            "hour": 19,
+            "count": 0
+          },
+          {
+            "hour": 20,
+            "count": 0
+          },
+          {
+            "hour": 21,
+            "count": 0
+          },
+          {
+            "hour": 22,
+            "count": 0
+          },
+          {
+            "hour": 23,
+            "count": 0
+          }
+        ]
+      },
+      {
+        "day": "days_of_week.saturday",
+        "hours": [
+          {
+            "hour": 0,
+            "count": 0
+          },
+          {
+            "hour": 1,
+            "count": 0
+          },
+          {
+            "hour": 2,
+            "count": 0
+          },
+          {
+            "hour": 3,
+            "count": 0
+          },
+          {
+            "hour": 4,
+            "count": 0
+          },
+          {
+            "hour": 5,
+            "count": 0
+          },
+          {
+            "hour": 6,
+            "count": 0
+          },
+          {
+            "hour": 7,
+            "count": 0
+          },
+          {
+            "hour": 8,
+            "count": 0
+          },
+          {
+            "hour": 9,
+            "count": 0
+          },
+          {
+            "hour": 10,
+            "count": 0
+          },
+          {
+            "hour": 11,
+            "count": 0
+          },
+          {
+            "hour": 12,
+            "count": 0
+          },
+          {
+            "hour": 13,
+            "count": 0
+          },
+          {
+            "hour": 14,
+            "count": 0
+          },
+          {
+            "hour": 15,
+            "count": 0
+          },
+          {
+            "hour": 16,
+            "count": 0
+          },
+          {
+            "hour": 17,
+            "count": 0
+          },
+          {
+            "hour": 18,
+            "count": 0
+          },
+          {
+            "hour": 19,
+            "count": 0
+          },
+          {
+            "hour": 20,
+            "count": 0
+          },
+          {
+            "hour": 21,
+            "count": 0
+          },
+          {
+            "hour": 22,
+            "count": 0
+          },
+          {
+            "hour": 23,
+            "count": 0
+          }
+        ]
+      }
+    ]
+  }
+}

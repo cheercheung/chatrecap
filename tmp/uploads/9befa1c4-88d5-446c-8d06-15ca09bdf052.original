@@ -1,0 +1,192 @@
+{
+  "name": "Chat with Alex",
+  "type": "personal_chat",
+  "id": 12345678,
+  "messages": [
+    {
+      "id": 1,
+      "type": "message",
+      "date": "2025-04-18T14:10:00",
+      "from": "Cheer",
+      "text": "Hey! Long time no see",
+      "media_type": "",
+      "file": null
+    },
+    {
+      "id": 2,
+      "type": "message",
+      "date": "2025-04-18T14:11:12",
+      "from": "Alex",
+      "text": [
+        {
+          "type": "plain",
+          "text": "Yes! Let’s catch up soon"
+        }
+      ],
+      "media_type": "",
+      "file": null
+    },
+    {
+      "id": 3,
+      "type": "message",
+      "date": "2025-04-18T14:12:05",
+      "from": "Cheer",
+      "text": "",
+      "media_type": "voice_message",
+      "file": "voice_messages/voice001.ogg"
+    },
+    {
+      "id": 4,
+      "type": "message",
+      "date": "2025-04-18T14:13:20",
+      "from": "Alex",
+      "text": "Haha loved the voice!",
+      "media_type": "",
+      "file": null
+    },
+    {
+      "id": 5,
+      "type": "message",
+      "date": "2025-04-18T14:14:30",
+      "from": "Cheer",
+      "text": "😂 I knew you would",
+      "media_type": "",
+      "file": null
+    },
+    {
+      "id": 6,
+      "type": "message",
+      "date": "2025-04-18T14:15:50",
+      "from": "Alex",
+      "text": "Wanna grab coffee later?",
+      "media_type": "",
+      "file": null
+    },
+    {
+      "id": 7,
+      "type": "message",
+      "date": "2025-04-18T14:16:45",
+      "from": "Cheer",
+      "text": "Sounds awesome ☕",
+      "media_type": "",
+      "file": null
+    },
+    {
+      "id": 8,
+      "type": "message",
+      "date": "2025-04-18T14:18:00",
+      "from": "Alex",
+      "text": "",
+      "media_type": "photo",
+      "file": "photos/coffee_shop.jpg"
+    },
+    {
+      "id": 9,
+      "type": "message",
+      "date": "2025-04-18T14:19:20",
+      "from": "Cheer",
+      "text": "That place looks cute!",
+      "media_type": "",
+      "file": null
+    },
+    {
+      "id": 10,
+      "type": "message",
+      "date": "2025-04-18T14:20:30",
+      "from": "Alex",
+      "text": "Meet there at 5?",
+      "media_type": "",
+      "file": null
+    },
+    {
+      "id": 11,
+      "type": "message",
+      "date": "2025-04-18T14:22:00",
+      "from": "Cheer",
+      "text": "Perfect ✨",
+      "media_type": "",
+      "file": null
+    },
+    {
+      "id": 12,
+      "type": "message",
+      "date": "2025-04-18T14:23:45",
+      "from": "Alex",
+      "text": "Sending you the location 📍",
+      "media_type": "",
+      "file": null
+    },
+    {
+      "id": 13,
+      "type": "message",
+      "date": "2025-04-18T14:25:10",
+      "from": "Alex",
+      "text": "",
+      "media_type": "location",
+      "file": "locations/coffee_shop_location.json"
+    },
+    {
+      "id": 14,
+      "type": "message",
+      "date": "2025-04-18T14:27:00",
+      "from": "Cheer",
+      "text": "Got it!",
+      "media_type": "",
+      "file": null
+    },
+    {
+      "id": 15,
+      "type": "message",
+      "date": "2025-04-18T16:45:00",
+      "from": "Cheer",
+      "text": "Here already 😎",
+      "media_type": "",
+      "file": null
+    },
+    {
+      "id": 16,
+      "type": "message",
+      "date": "2025-04-18T16:46:20",
+      "from": "Alex",
+      "text": "On my way!",
+      "media_type": "",
+      "file": null
+    },
+    {
+      "id": 17,
+      "type": "message",
+      "date": "2025-04-18T16:47:40",
+      "from": "Cheer",
+      "text": "",
+      "media_type": "photo",
+      "file": "photos/coffee_waiting.jpg"
+    },
+    {
+      "id": 18,
+      "type": "message",
+      "date": "2025-04-18T16:49:00",
+      "from": "Alex",
+      "text": "Haha nice vibe 😎☕",
+      "media_type": "",
+      "file": null
+    },
+    {
+      "id": 19,
+      "type": "message",
+      "date": "2025-04-18T16:50:30",
+      "from": "Cheer",
+      "text": "Save me a table! 😂",
+      "media_type": "",
+      "file": null
+    },
+    {
+      "id": 20,
+      "type": "message",
+      "date": "2025-04-18T16:52:00",
+      "from": "Alex",
+      "text": "Done 😁",
+      "media_type": "",
+      "file": null
+    }
+  ]
+}

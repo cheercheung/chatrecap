@@ -1,0 +1,122 @@
+[
+  {
+    "timestamp": "2025-04-18T06:10:00.000Z",
+    "date": "2025-04-18T06:10:00.000Z",
+    "sender": "Cheer",
+    "message": "Hey! Long time no see"
+  },
+  {
+    "timestamp": "2025-04-18T06:11:12.000Z",
+    "date": "2025-04-18T06:11:12.000Z",
+    "sender": "Alex",
+    "message": "Yes! Let’s catch up soon"
+  },
+  {
+    "timestamp": "2025-04-18T06:12:05.000Z",
+    "date": "2025-04-18T06:12:05.000Z",
+    "sender": "Cheer",
+    "message": "[voice_message: voice_messages/voice001.ogg]"
+  },
+  {
+    "timestamp": "2025-04-18T06:13:20.000Z",
+    "date": "2025-04-18T06:13:20.000Z",
+    "sender": "Alex",
+    "message": "Haha loved the voice!"
+  },
+  {
+    "timestamp": "2025-04-18T06:14:30.000Z",
+    "date": "2025-04-18T06:14:30.000Z",
+    "sender": "Cheer",
+    "message": "😂 I knew you would"
+  },
+  {
+    "timestamp": "2025-04-18T06:15:50.000Z",
+    "date": "2025-04-18T06:15:50.000Z",
+    "sender": "Alex",
+    "message": "Wanna grab coffee later?"
+  },
+  {
+    "timestamp": "2025-04-18T06:16:45.000Z",
+    "date": "2025-04-18T06:16:45.000Z",
+    "sender": "Cheer",
+    "message": "Sounds awesome ☕"
+  },
+  {
+    "timestamp": "2025-04-18T06:18:00.000Z",
+    "date": "2025-04-18T06:18:00.000Z",
+    "sender": "Alex",
+    "message": "[photo: photos/coffee_shop.jpg]"
+  },
+  {
+    "timestamp": "2025-04-18T06:19:20.000Z",
+    "date": "2025-04-18T06:19:20.000Z",
+    "sender": "Cheer",
+    "message": "That place looks cute!"
+  },
+  {
+    "timestamp": "2025-04-18T06:20:30.000Z",
+    "date": "2025-04-18T06:20:30.000Z",
+    "sender": "Alex",
+    "message": "Meet there at 5?"
+  },
+  {
+    "timestamp": "2025-04-18T06:22:00.000Z",
+    "date": "2025-04-18T06:22:00.000Z",
+    "sender": "Cheer",
+    "message": "Perfect ✨"
+  },
+  {
+    "timestamp": "2025-04-18T06:23:45.000Z",
+    "date": "2025-04-18T06:23:45.000Z",
+    "sender": "Alex",
+    "message": "Sending you the location 📍"
+  },
+  {
+    "timestamp": "2025-04-18T06:25:10.000Z",
+    "date": "2025-04-18T06:25:10.000Z",
+    "sender": "Alex",
+    "message": "[location: locations/coffee_shop_location.json]"
+  },
+  {
+    "timestamp": "2025-04-18T06:27:00.000Z",
+    "date": "2025-04-18T06:27:00.000Z",
+    "sender": "Cheer",
+    "message": "Got it!"
+  },
+  {
+    "timestamp": "2025-04-18T08:45:00.000Z",
+    "date": "2025-04-18T08:45:00.000Z",
+    "sender": "Cheer",
+    "message": "Here already 😎"
+  },
+  {
+    "timestamp": "2025-04-18T08:46:20.000Z",
+    "date": "2025-04-18T08:46:20.000Z",
+    "sender": "Alex",
+    "message": "On my way!"
+  },
+  {
+    "timestamp": "2025-04-18T08:47:40.000Z",
+    "date": "2025-04-18T08:47:40.000Z",
+    "sender": "Cheer",
+    "message": "[photo: photos/coffee_waiting.jpg]"
+  },
+  {
+    "timestamp": "2025-04-18T08:49:00.000Z",
+    "date": "2025-04-18T08:49:00.000Z",
+    "sender": "Alex",
+    "message": "Haha nice vibe 😎☕"
+  },
+  {
+    "timestamp": "2025-04-18T08:50:30.000Z",
+    "date": "2025-04-18T08:50:30.000Z",
+    "sender": "Cheer",
+    "message": "Save me a table! 😂"
+  },
+  {
+    "timestamp": "2025-04-18T08:52:00.000Z",
+    "date": "2025-04-18T08:52:00.000Z",
+    "sender": "Alex",
+    "message": "Done 😁"
+  }
+]
