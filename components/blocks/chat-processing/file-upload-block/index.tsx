@@ -83,8 +83,8 @@ const FileUploadBlock: React.FC<FileUploadBlockProps> = ({
 
       setProgress(100);
 
-      // 开始处理文件
-      const processResponse = await fetch("/api/chat-processing/process", {
+      // 开始清洗文件
+      const cleanResponse = await fetch("/api/chat-processing/clean", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -95,8 +95,8 @@ const FileUploadBlock: React.FC<FileUploadBlockProps> = ({
         })
       });
 
-      if (!processResponse.ok) {
-        const errorData = await processResponse.json();
+      if (!cleanResponse.ok) {
+        const errorData = await cleanResponse.json();
         throw new Error(errorData.message || t("processing.failed"));
       }
 

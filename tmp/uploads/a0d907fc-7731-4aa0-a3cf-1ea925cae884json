@@ -1,0 +1,29 @@
+{
+  "channel": {
+    "id": "123456789",
+    "type": 1,
+    "name": "test-channel"
+  },
+  "messages": [
+    {
+      "id": "1",
+      "type": 0,
+      "timestamp": "2023-01-01T10:00:00.000Z",
+      "author": {
+        "id": "user1",
+        "name": "User1"
+      },
+      "content": "Hello, how are you?"
+    },
+    {
+      "id": "2",
+      "type": 0,
+      "timestamp": "2023-01-01T10:01:00.000Z",
+      "author": {
+        "id": "user2",
+        "name": "User2"
+      },
+      "content": "I'm good, thanks!"
+    }
+  ]
+}

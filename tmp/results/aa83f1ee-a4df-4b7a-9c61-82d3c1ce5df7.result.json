@@ -1,0 +1,989 @@
+{
+  "id": "generated",
+  "startDate": "January 1, 2023",
+  "duration": 1,
+  "endDate": "January 1, 2023",
+  "timespanSummary": "chatrecapresult.timespan_summary",
+  "overview": {
+    "totalMessages": 4,
+    "totalWords": 17,
+    "wordsPerMessage": 4.3,
+    "sender1": {
+      "name": "User1",
+      "messages": 2,
+      "words": 9,
+      "wordsPerMessage": 4.5
+    },
+    "sender2": {
+      "name": "User2",
+      "messages": 2,
+      "words": 8,
+      "wordsPerMessage": 4
+    },
+    "avgMessagesPerDay": 4,
+    "mostActiveDay": "days_of_week.sunday",
+    "responseTime": "1 minutes"
+  },
+  "textAnalysis": {
+    "commonWords": [
+      {
+        "word": "are",
+        "count": 2
+      },
+      {
+        "word": "you",
+        "count": 2
+      },
+      {
+        "word": "hello",
+        "count": 1
+      },
+      {
+        "word": "how",
+        "count": 1
+      },
+      {
+        "word": "good",
+        "count": 1
+      },
+      {
+        "word": "thanks",
+        "count": 1
+      },
+      {
+        "word": "what",
+        "count": 1
+      },
+      {
+        "word": "doing",
+        "count": 1
+      },
+      {
+        "word": "today",
+        "count": 1
+      },
+      {
+        "word": "just",
+        "count": 1
+      },
+      {
+        "word": "working",
+        "count": 1
+      },
+      {
+        "word": "some",
+        "count": 1
+      },
+      {
+        "word": "code",
+        "count": 1
+      }
+    ],
+    "sentimentScore": 0.8111111111111111,
+    "topEmojis": [],
+    "wordCount": 15,
+    "sender1": {
+      "name": "User1",
+      "commonWords": [
+        {
+          "word": "are",
+          "count": 2
+        },
+        {
+          "word": "you",
+          "count": 2
+        },
+        {
+          "word": "hello",
+          "count": 1
+        },
+        {
+          "word": "how",
+          "count": 1
+        },
+        {
+          "word": "what",
+          "count": 1
+        },
+        {
+          "word": "doing",
+          "count": 1
+        },
+        {
+          "word": "today",
+          "count": 1
+        }
+      ],
+      "topEmojis": []
+    },
+    "sender2": {
+      "name": "User2",
+      "commonWords": [
+        {
+          "word": "good",
+          "count": 1
+        },
+        {
+          "word": "thanks",
+          "count": 1
+        },
+        {
+          "word": "just",
+          "count": 1
+        },
+        {
+          "word": "working",
+          "count": 1
+        },
+        {
+          "word": "some",
+          "count": 1
+        },
+        {
+          "word": "code",
+          "count": 1
+        }
+      ],
+      "topEmojis": []
+    }
+  },
+  "timeAnalysis": {
+    "mostActiveHour": 10,
+    "mostActiveDay": "days_of_week.sunday",
+    "mostActiveDate": "2023-01-01",
+    "mostMessagesCount": 4,
+    "responsePattern": "morning_active",
+    "conversationLength": "Average 32 minutes",
+    "timeDistribution": [
+      {
+        "time": "time_of_day.morning",
+        "percentage": 100
+      },
+      {
+        "time": "time_of_day.afternoon",
+        "percentage": 0
+      },
+      {
+        "time": "time_of_day.evening",
+        "percentage": 0
+      },
+      {
+        "time": "time_of_day.night",
+        "percentage": 0
+      }
+    ],
+    "hourlyActivity": [
+      {
+        "hour": 0,
+        "count": 0
+      },
+      {
+        "hour": 1,
+        "count": 0
+      },
+      {
+        "hour": 2,
+        "count": 0
+      },
+      {
+        "hour": 3,
+        "count": 0
+      },
+      {
+        "hour": 4,
+        "count": 0
+      },
+      {
+        "hour": 5,
+        "count": 0
+      },
+      {
+        "hour": 6,
+        "count": 0
+      },
+      {
+        "hour": 7,
+        "count": 0
+      },
+      {
+        "hour": 8,
+        "count": 0
+      },
+      {
+        "hour": 9,
+        "count": 0
+      },
+      {
+        "hour": 10,
+        "count": 4
+      },
+      {
+        "hour": 11,
+        "count": 0
+      },
+      {
+        "hour": 12,
+        "count": 0
+      },
+      {
+        "hour": 13,
+        "count": 0
+      },
+      {
+        "hour": 14,
+        "count": 0
+      },
+      {
+        "hour": 15,
+        "count": 0
+      },
+      {
+        "hour": 16,
+        "count": 0
+      },
+      {
+        "hour": 17,
+        "count": 0
+      },
+      {
+        "hour": 18,
+        "count": 0
+      },
+      {
+        "hour": 19,
+        "count": 0
+      },
+      {
+        "hour": 20,
+        "count": 0
+      },
+      {
+        "hour": 21,
+        "count": 0
+      },
+      {
+        "hour": 22,
+        "count": 0
+      },
+      {
+        "hour": 23,
+        "count": 0
+      }
+    ],
+    "dailyActivity": [
+      {
+        "date": "2023-01-01",
+        "count": 4
+      }
+    ],
+    "weekdayHourHeatmap": [
+      {
+        "day": "days_of_week.sunday",
+        "hours": [
+          {
+            "hour": 0,
+            "count": 0
+          },
+          {
+            "hour": 1,
+            "count": 0
+          },
+          {
+            "hour": 2,
+            "count": 0
+          },
+          {
+            "hour": 3,
+            "count": 0
+          },
+          {
+            "hour": 4,
+            "count": 0
+          },
+          {
+            "hour": 5,
+            "count": 0
+          },
+          {
+            "hour": 6,
+            "count": 0
+          },
+          {
+            "hour": 7,
+            "count": 0
+          },
+          {
+            "hour": 8,
+            "count": 0
+          },
+          {
+            "hour": 9,
+            "count": 0
+          },
+          {
+            "hour": 10,
+            "count": 4
+          },
+          {
+            "hour": 11,
+            "count": 0
+          },
+          {
+            "hour": 12,
+            "count": 0
+          },
+          {
+            "hour": 13,
+            "count": 0
+          },
+          {
+            "hour": 14,
+            "count": 0
+          },
+          {
+            "hour": 15,
+            "count": 0
+          },
+          {
+            "hour": 16,
+            "count": 0
+          },
+          {
+            "hour": 17,
+            "count": 0
+          },
+          {
+            "hour": 18,
+            "count": 0
+          },
+          {
+            "hour": 19,
+            "count": 0
+          },
+          {
+            "hour": 20,
+            "count": 0
+          },
+          {
+            "hour": 21,
+            "count": 0
+          },
+          {
+            "hour": 22,
+            "count": 0
+          },
+          {
+            "hour": 23,
+            "count": 0
+          }
+        ]
+      },
+      {
+        "day": "days_of_week.monday",
+        "hours": [
+          {
+            "hour": 0,
+            "count": 0
+          },
+          {
+            "hour": 1,
+            "count": 0
+          },
+          {
+            "hour": 2,
+            "count": 0
+          },
+          {
+            "hour": 3,
+            "count": 0
+          },
+          {
+            "hour": 4,
+            "count": 0
+          },
+          {
+            "hour": 5,
+            "count": 0
+          },
+          {
+            "hour": 6,
+            "count": 0
+          },
+          {
+            "hour": 7,
+            "count": 0
+          },
+          {
+            "hour": 8,
+            "count": 0
+          },
+          {
+            "hour": 9,
+            "count": 0
+          },
+          {
+            "hour": 10,
+            "count": 0
+          },
+          {
+            "hour": 11,
+            "count": 0
+          },
+          {
+            "hour": 12,
+            "count": 0
+          },
+          {
+            "hour": 13,
+            "count": 0
+          },
+          {
+            "hour": 14,
+            "count": 0
+          },
+          {
+            "hour": 15,
+            "count": 0
+          },
+          {
+            "hour": 16,
+            "count": 0
+          },
+          {
+            "hour": 17,
+            "count": 0
+          },
+          {
+            "hour": 18,
+            "count": 0
+          },
+          {
+            "hour": 19,
+            "count": 0
+          },
+          {
+            "hour": 20,
+            "count": 0
+          },
+          {
+            "hour": 21,
+            "count": 0
+          },
+          {
+            "hour": 22,
+            "count": 0
+          },
+          {
+            "hour": 23,
+            "count": 0
+          }
+        ]
+      },
+      {
+        "day": "days_of_week.tuesday",
+        "hours": [
+          {
+            "hour": 0,
+            "count": 0
+          },
+          {
+            "hour": 1,
+            "count": 0
+          },
+          {
+            "hour": 2,
+            "count": 0
+          },
+          {
+            "hour": 3,
+            "count": 0
+          },
+          {
+            "hour": 4,
+            "count": 0
+          },
+          {
+            "hour": 5,
+            "count": 0
+          },
+          {
+            "hour": 6,
+            "count": 0
+          },
+          {
+            "hour": 7,
+            "count": 0
+          },
+          {
+            "hour": 8,
+            "count": 0
+          },
+          {
+            "hour": 9,
+            "count": 0
+          },
+          {
+            "hour": 10,
+            "count": 0
+          },
+          {
+            "hour": 11,
+            "count": 0
+          },
+          {
+            "hour": 12,
+            "count": 0
+          },
+          {
+            "hour": 13,
+            "count": 0
+          },
+          {
+            "hour": 14,
+            "count": 0
+          },
+          {
+            "hour": 15,
+            "count": 0
+          },
+          {
+            "hour": 16,
+            "count": 0
+          },
+          {
+            "hour": 17,
+            "count": 0
+          },
+          {
+            "hour": 18,
+            "count": 0
+          },
+          {
+            "hour": 19,
+            "count": 0
+          },
+          {
+            "hour": 20,
+            "count": 0
+          },
+          {
+            "hour": 21,
+            "count": 0
+          },
+          {
+            "hour": 22,
+            "count": 0
+          },
+          {
+            "hour": 23,
+            "count": 0
+          }
+        ]
+      },
+      {
+        "day": "days_of_week.wednesday",
+        "hours": [
+          {
+            "hour": 0,
+            "count": 0
+          },
+          {
+            "hour": 1,
+            "count": 0
+          },
+          {
+            "hour": 2,
+            "count": 0
+          },
+          {
+            "hour": 3,
+            "count": 0
+          },
+          {
+            "hour": 4,
+            "count": 0
+          },
+          {
+            "hour": 5,
+            "count": 0
+          },
+          {
+            "hour": 6,
+            "count": 0
+          },
+          {
+            "hour": 7,
+            "count": 0
+          },
+          {
+            "hour": 8,
+            "count": 0
+          },
+          {
+            "hour": 9,
+            "count": 0
+          },
+          {
+            "hour": 10,
+            "count": 0
+          },
+          {
+            "hour": 11,
+            "count": 0
+          },
+          {
+            "hour": 12,
+            "count": 0
+          },
+          {
+            "hour": 13,
+            "count": 0
+          },
+          {
+            "hour": 14,
+            "count": 0
+          },
+          {
+            "hour": 15,
+            "count": 0
+          },
+          {
+            "hour": 16,
+            "count": 0
+          },
+          {
+            "hour": 17,
+            "count": 0
+          },
+          {
+            "hour": 18,
+            "count": 0
+          },
+          {
+            "hour": 19,
+            "count": 0
+          },
+          {
+            "hour": 20,
+            "count": 0
+          },
+          {
+            "hour": 21,
+            "count": 0
+          },
+          {
+            "hour": 22,
+            "count": 0
+          },
+          {
+            "hour": 23,
+            "count": 0
+          }
+        ]
+      },
+      {
+        "day": "days_of_week.thursday",
+        "hours": [
+          {
+            "hour": 0,
+            "count": 0
+          },
+          {
+            "hour": 1,
+            "count": 0
+          },
+          {
+            "hour": 2,
+            "count": 0
+          },
+          {
+            "hour": 3,
+            "count": 0
+          },
+          {
+            "hour": 4,
+            "count": 0
+          },
+          {
+            "hour": 5,
+            "count": 0
+          },
+          {
+            "hour": 6,
+            "count": 0
+          },
+          {
+            "hour": 7,
+            "count": 0
+          },
+          {
+            "hour": 8,
+            "count": 0
+          },
+          {
+            "hour": 9,
+            "count": 0
+          },
+          {
+            "hour": 10,
+            "count": 0
+          },
+          {
+            "hour": 11,
+            "count": 0
+          },
+          {
+            "hour": 12,
+            "count": 0
+          },
+          {
+            "hour": 13,
+            "count": 0
+          },
+          {
+            "hour": 14,
+            "count": 0
+          },
+          {
+            "hour": 15,
+            "count": 0
+          },
+          {
+            "hour": 16,
+            "count": 0
+          },
+          {
+            "hour": 17,
+            "count": 0
+          },
+          {
+            "hour": 18,
+            "count": 0
+          },
+          {
+            "hour": 19,
+            "count": 0
+          },
+          {
+            "hour": 20,
+            "count": 0
+          },
+          {
+            "hour": 21,
+            "count": 0
+          },
+          {
+            "hour": 22,
+            "count": 0
+          },
+          {
+            "hour": 23,
+            "count": 0
+          }
+        ]
+      },
+      {
+        "day": "days_of_week.friday",
+        "hours": [
+          {
+            "hour": 0,
+            "count": 0
+          },
+          {
+            "hour": 1,
+            "count": 0
+          },
+          {
+            "hour": 2,
+            "count": 0
+          },
+          {
+            "hour": 3,
+            "count": 0
+          },
+          {
+            "hour": 4,
+            "count": 0
+          },
+          {
+            "hour": 5,
+            "count": 0
+          },
+          {
+            "hour": 6,
+            "count": 0
+          },
+          {
+            "hour": 7,
+            "count": 0
+          },
+          {
+            "hour": 8,
+            "count": 0
+          },
+          {
+            "hour": 9,
+            "count": 0
+          },
+          {
+            "hour": 10,
+            "count": 0
+          },
+          {
+            "hour": 11,
+            "count": 0
+          },
+          {
+            "hour": 12,
+            "count": 0
+          },
+          {
+            "hour": 13,
+            "count": 0
+          },
+          {
+            "hour": 14,
+            "count": 0
+          },
+          {
+            "hour": 15,
+            "count": 0
+          },
+          {
+            "hour": 16,
+            "count": 0
+          },
+          {
+            "hour": 17,
+            "count": 0
+          },
+          {
+            "hour": 18,
+            "count": 0
+          },
+          {
+            "hour": 19,
+            "count": 0
+          },
+          {
+            "hour": 20,
+            "count": 0
+          },
+          {
+            "hour": 21,
+            "count": 0
+          },
+          {
+            "hour": 22,
+            "count": 0
+          },
+          {
+            "hour": 23,
+            "count": 0
+          }
+        ]
+      },
+      {
+        "day": "days_of_week.saturday",
+        "hours": [
+          {
+            "hour": 0,
+            "count": 0
+          },
+          {
+            "hour": 1,
+            "count": 0
+          },
+          {
+            "hour": 2,
+            "count": 0
+          },
+          {
+            "hour": 3,
+            "count": 0
+          },
+          {
+            "hour": 4,
+            "count": 0
+          },
+          {
+            "hour": 5,
+            "count": 0
+          },
+          {
+            "hour": 6,
+            "count": 0
+          },
+          {
+            "hour": 7,
+            "count": 0
+          },
+          {
+            "hour": 8,
+            "count": 0
+          },
+          {
+            "hour": 9,
+            "count": 0
+          },
+          {
+            "hour": 10,
+            "count": 0
+          },
+          {
+            "hour": 11,
+            "count": 0
+          },
+          {
+            "hour": 12,
+            "count": 0
+          },
+          {
+            "hour": 13,
+            "count": 0
+          },
+          {
+            "hour": 14,
+            "count": 0
+          },
+          {
+            "hour": 15,
+            "count": 0
+          },
+          {
+            "hour": 16,
+            "count": 0
+          },
+          {
+            "hour": 17,
+            "count": 0
+          },
+          {
+            "hour": 18,
+            "count": 0
+          },
+          {
+            "hour": 19,
+            "count": 0
+          },
+          {
+            "hour": 20,
+            "count": 0
+          },
+          {
+            "hour": 21,
+            "count": 0
+          },
+          {
+            "hour": 22,
+            "count": 0
+          },
+          {
+            "hour": 23,
+            "count": 0
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -20,6 +20,7 @@ const withMDX = mdx({
 const nextConfig = {
   output: "standalone",
   reactStrictMode: false,
+  // 保留 pageExtensions 配置，因为它也适用于 App Router
   pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
   images: {
     remotePatterns: [

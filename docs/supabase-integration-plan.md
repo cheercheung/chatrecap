@@ -151,20 +151,298 @@
 这些数据服务为下一阶段的 API 路由调整和前端组件集成提供了坚实的基础。
 
 ## 6. API 路由调整
-1. **支付回调处理**
-   - 修改支付回调 API，使用 Supabase 客户端更新订单状态
+
+### 6.1 支付回调处理 API✅
+
+1. **修改 `app/api/payment-callback/route.ts`**
+   - 使用 Supabase 客户端替换现有的 Prisma 调用
+   - 使用 `services/order.ts` 中的 `updateOrderStatus` 函数更新订单状态
    - 确保事务安全，使用数据库函数处理复杂操作
-   - 实现支付成功后的积分增加逻辑
+   - 实现支付成功后的积分增加逻辑（已在 `updateOrderStatus` 中集成）
+   - 添加适当的错误处理和日志记录
 
-2. **文件处理 API**
-   - 修改文件上传 API，使用 Supabase 存储和数据库
-   - 实现文件分析状态更新
-   - 处理未登录用户的会话标识
+2. **修改 `app/api/test/payment/route.ts`**（测试支付API）
+   - 更新测试支付API，使用 Supabase 客户端
+   - 使用 `services/order.ts` 和 `services/user.ts` 中的函数
+   - 保持测试支付流程的功能完整性
 
-3. **AI 分析 API**
-   - 修改 AI 分析 API，适配 Supabase 数据模型
-   - 实现积分检查和消费逻辑
-   - 确保分析结果正确存储
+### 6.2 文件处理 API ✅
+
+文件处理系统包含多个阶段：上传、清洗(clean)、基础分析(basic analysis)和AI分析(AI analysis)。以下是各阶段API的实施方案。
+
+#### 6.2.1 文件状态流转
+
+文件处理过程中的状态流转如下：
+
+```
+UPLOADED → CLEANING → PROCESSING → COMPLETED_BASIC → AI_PROCESSING → COMPLETED_AI
+                   ↘            ↘                  ↘               ↘
+                     FAILED       FAILED             FAILED          FAILED
+```
+
+- **UPLOADED**: 文件已上传
+- **CLEANING**: 文件清洗中
+- **PROCESSING**: 基础分析处理中
+- **COMPLETED_BASIC**: 基础分析完成
+- **AI_PROCESSING**: AI分析处理中
+- **COMPLETED_AI**: AI分析完成
+- **FAILED**: 处理失败（任何阶段）
+
+#### 6.2.2 文件上传 API ✅
+
+1. **修改 `app/api/chat-processing/upload/route.ts`**
+   - 使用 `services/file.ts` 中的 `createFileRecord` 函数创建文件记录
+   - 保持文件内容存储在现有系统中
+   - 获取当前用户ID，关联到文件记录
+   - 设置初始状态为 `UPLOADED`
+   - 保存存储路径到 `storage_path` 字段
+
+**端点**: `/api/chat-processing/upload`
+
+**方法**: POST
+
+**请求参数**:
+- `file`: 文件对象（FormData）
+- `platform`: 平台类型（whatsapp, instagram, discord, telegram, snapchat）
+
+**响应**:
+```json
+{
+  "success": true,
+  "fileId": "uuid",
+  "message": "文件上传成功"
+}
+```
+
+#### 6.2.3 文件处理 API ✅
+
+1. **修改 `app/api/chat-processing/process/route.ts`**
+   - 使用 `getFileById` 函数获取文件记录
+   - 使用 `updateFileStatus` 函数更新文件状态为 `PROCESSING`
+   - 异步处理文件，并在处理完成后更新状态
+   - 处理失败时更新状态为 `FAILED`
+
+**端点**: `/api/chat-processing/process`
+
+**方法**: POST
+
+**请求参数**:
+```json
+{
+  "fileId": "uuid",
+  "platform": "platform_type",
+  "skipAiAnalysis": true
+}
+```
+
+**响应**:
+```json
+{
+  "success": true,
+  "fileId": "uuid",
+  "message": "文件处理已开始"
+}
+```
+
+#### 6.2.4 文件状态查询 API ✅
+
+1. **修改 `app/api/chat-processing/status/[fileId]/route.ts`**
+   - 从Supabase数据库获取文件记录
+   - 从本地存储获取处理状态
+   - 合并状态信息返回给客户端
+
+**端点**: `/api/chat-processing/status/:fileId`
+
+#### 6.2.5 平台特定处理 API ✅
+
+1. **修改平台特定处理API**
+   - 更新 `app/api/chat-processing/{platform}/route.ts` 文件
+   - 使用 `getFileById` 函数获取文件记录
+   - 使用 `updateFileStatus` 函数更新文件状态
+   - 确保平台信息正确设置
+
+**支持的平台**:
+- `app/api/chat-processing/discord/route.ts`
+- `app/api/chat-processing/instagram/route.ts`
+- `app/api/chat-processing/snapchat/route.ts`
+- `app/api/chat-processing/telegram/route.ts`
+- `app/api/chat-processing/whatsapp/route.ts`
+
+**端点**: `/api/chat-processing/:platform`
+
+**测试结果**:
+- 创建了专门的测试脚本 `tests/test-platform-specific-apis.js`
+- 测试了所有5个平台的特定处理API
+- 所有平台的测试都成功通过
+- 验证了文件状态正确更新到数据库
+- 验证了平台信息正确设置
+
+#### 6.2.6 基础分析结果获取 API ✅
+
+1. **修改 `app/api/chat-processing/result/[fileId]/route.ts`**
+   - 使用 `getFileById` 函数获取文件记录
+   - 验证文件状态是否为 `COMPLETED_BASIC` 或 `COMPLETED_AI`
+   - 从 `basic_result_path` 读取基础分析结果
+
+**端点**: `/api/chat-processing/result/:fileId`
+
+**测试结果**:
+- 创建了专门的测试脚本 `tests/test-result-api.js`
+- 测试了基础分析结果获取API的功能
+- 验证了API能够正确处理不同的文件状态
+- 验证了API能够正确处理不存在的文件ID
+- 验证了API返回的结果结构符合预期
+- 所有测试都成功通过
+
+
+
+### 6.3 AI 分析 API
+
+AI分析是文件处理流程的最后阶段，需要消耗用户积分。以下是AI分析API的实施方案。
+
+#### 6.3.1 AI分析触发 API
+
+1. **修改 `app/api/chat-processing/ai-analysis/route.ts`**
+   - 使用 `getFileById` 函数获取文件记录
+   - 验证文件状态是否为 `COMPLETED_BASIC`
+   - 使用 `checkUserCreditSufficient` 函数检查用户积分是否足够
+   - 使用 `consumeCredits` 函数消费用户积分
+   - 使用 `updateFileStatus` 函数更新文件状态为 `AI_PROCESSING`
+   - 异步执行AI分析，并在分析完成后更新状态
+   - 分析失败时更新状态为 `FAILED`
+
+**端点**: `/api/chat-processing/ai-analysis`
+
+**方法**: POST
+
+**请求参数**:
+```json
+{
+  "fileId": "uuid"
+}
+```
+
+**响应**:
+```json
+{
+  "success": true,
+  "fileId": "uuid",
+  "message": "AI分析已开始",
+  "creditsConsumed": 10
+}
+```
+
+#### 6.3.2 AI分析状态查询 API
+
+1. **修改 `app/api/check-analysis-status/route.ts`**
+   - 使用 `getFileById` 函数获取文件记录
+   - 验证文件是否存在
+   - 返回文件的AI分析状态
+
+**端点**: `/api/check-analysis-status`
+
+**方法**: GET
+
+**请求参数**:
+```json
+{
+  "fileId": "uuid"
+}
+```
+
+**响应**:
+```json
+{
+  "success": true,
+  "status": "COMPLETED_AI",
+  "progress": 100
+}
+```
+
+#### 6.3.3 AI分析结果获取 API
+
+1. **修改 `app/api/chat-processing/ai-result/[fileId]/route.ts`**
+   - 使用 `getFileById` 函数获取文件记录
+   - 验证文件状态是否为 `COMPLETED_AI`
+   - 从 `ai_result_path` 读取AI分析结果
+
+**端点**: `/api/chat-processing/ai-result/:fileId`
+
+**方法**: GET
+
+**响应**:
+```json
+{
+  "success": true,
+  "result": {
+    "summary": "这是一段关于聊天内容的总结...",
+    "insights": [
+      "发现1: ...",
+      "发现2: ..."
+    ],
+    "sentimentAnalysis": {
+      "overall": 0.75,
+      "breakdown": {...}
+    },
+    "topicAnalysis": [...]
+  }
+}
+```
+
+#### 6.3.4 AI分析触发检查 API
+
+1. **修改 `app/api/trigger-analysis/route.ts`**
+   - 使用 Supabase 客户端查询订单和文件状态
+   - 集成 `services/order.ts` 和 `services/file.ts` 中的函数
+   - 检查用户是否有足够积分进行AI分析
+   - 返回用户是否可以触发AI分析
+
+**端点**: `/api/trigger-analysis`
+
+**方法**: GET
+
+**请求参数**:
+```json
+{
+  "fileId": "uuid"
+}
+```
+
+**响应**:
+```json
+{
+  "success": true,
+  "canTrigger": true,
+  "requiredCredits": 10,
+  "userCredits": 25
+}
+```
+
+#### 6.3.5 积分消费实现
+
+AI分析需要消费用户积分，实现方式如下：
+
+1. **使用数据库事务确保原子性**
+   - 在同一事务中扣减积分和更新文件状态
+   - 如果任一操作失败，整个事务回滚
+
+2. **积分消费记录**
+   - 创建积分交易记录，类型为 `CONSUME`
+   - 记录消费原因为AI分析，并关联文件ID
+   - 记录消费后的余额
+
+3. **积分不足处理**
+   - 如果用户积分不足，返回错误信息
+   - 提供购买积分的选项
+
+### 6.4 存储 API 调整
+
+1. **修改 `app/api/storage/route.ts`**
+   - 使用 Supabase 客户端替换现有的存储调用
+   - 集成 `services/file.ts` 中的函数
+   - 确保文件内容和元数据的一致性
+   - 保持现有的文件类型和存储逻辑
+
 
 ## 7. 前端组件调整
 
@@ -183,7 +461,7 @@
    - 适配 Supabase 存储和数据模型
    - 实现文件处理状态的实时更新
 
-## 8. 实时功能实现
+## 8. 实时功能实现 ✅
 
 1. **Supabase 实时订阅配置**
    - 在 Supabase 控制台 > Database > Replication 中配置：
@@ -216,54 +494,34 @@
    - 设置关键操作的审计日志
 
 
-## 注意事项
-
-1. **安全考虑**
-   - 确保敏感操作使用服务端 API 和服务角色密钥
-   - 正确配置 RLS 策略，防止数据泄露
-   - 定期审查访问日志和权限设置
-
-2. **性能优化**
-   - 为频繁查询的字段创建索引
-   - 使用适当的缓存策略
-   - 监控查询性能，优化慢查询
-
-3. **用户体验**
-   - 确保认证流程流畅，提供清晰的错误信息
-   - 实现加载状态和进度指示
-   - 提供适当的反馈机制
-
-4. **扩展性考虑**
-   - 设计模块化的服务和组件
-   - 考虑未来可能的功能扩展
-   - 使用类型安全的接口和模型
-
-
-
    ## 表结构
-  | table_name        | column_name   | data_type                | is_nullable |
-| ----------------- | ------------- | ------------------------ | ----------- |
-| ChatFile          | id            | uuid                     | NO          |
-| ChatFile          | user_id       | uuid                     | YES         |
-| ChatFile          | file_url      | text                     | NO          |
-| ChatFile          | file_name     | character varying        | NO          |
-| ChatFile          | uploaded_at   | timestamp with time zone | YES         |
-| CreditTransaction | id            | uuid                     | NO          |
-| CreditTransaction | user_id       | uuid                     | YES         |
-| CreditTransaction | change_amount | integer                  | NO          |
-| CreditTransaction | balance_after | integer                  | NO          |
-| CreditTransaction | type          | character varying        | NO          |
-| CreditTransaction | description   | text                     | YES         |
-| CreditTransaction | created_at    | timestamp with time zone | YES         |
-| CreditTransaction | file_id       | uuid                     | YES         |
-| Order             | id            | uuid                     | NO          |
-| Order             | user_id       | uuid                     | YES         |
-| Order             | amount        | numeric                  | NO          |
-| Order             | status        | character varying        | NO          |
-| Order             | created_at    | timestamp with time zone | YES         |
-| User              | id            | uuid                     | NO          |
-| User              | username      | character varying        | NO          |
-| User              | email         | character varying        | NO          |
-| User              | password_hash | character varying        | NO          |
-| User              | created_at    | timestamp with time zone | YES         |
-| User              | updated_at    | timestamp with time zone | YES         |
+| table_name        | column_name       | data_type                | is_nullable | column_default    |
+| ----------------- | ----------------- | ------------------------ | ----------- | ----------------- |
+| ChatFile          | id                | uuid                     | NO          | gen_random_uuid() |
+| ChatFile          | user_id           | uuid                     | YES         | null              |
+| ChatFile          | uploaded_at       | timestamp with time zone | YES         | now()             |
+| ChatFile          | platform          | text                     | YES         | null              |
+| ChatFile          | status            | text                     | YES         | null              |
+| ChatFile          | words_count       | integer                  | YES         | null              |
+| ChatFile          | storage_path      | text                     | YES         | null              |
+| ChatFile          | basic_result_path | text                     | YES         | null              |
+| ChatFile          | ai_result_path    | text                     | YES         | null              |
+| CreditTransaction | id                | uuid                     | NO          | gen_random_uuid() |
+| CreditTransaction | user_id           | uuid                     | YES         | null              |
+| CreditTransaction | change_amount     | integer                  | NO          | null              |
+| CreditTransaction | balance_after     | integer                  | NO          | null              |
+| CreditTransaction | type              | character varying        | NO          | null              |
+| CreditTransaction | description       | text                     | YES         | null              |
+| CreditTransaction | created_at        | timestamp with time zone | YES         | now()             |
+| CreditTransaction | file_id           | uuid                     | YES         | null              |
+| Order             | id                | uuid                     | NO          | gen_random_uuid() |
+| Order             | user_id           | uuid                     | YES         | null              |
+| Order             | amount            | numeric                  | NO          | null              |
+| Order             | status            | character varying        | NO          | null              |
+| Order             | created_at        | timestamp with time zone | YES         | now()             |
+| User              | id                | uuid                     | NO          | gen_random_uuid() |
+| User              | username          | character varying        | NO          | null              |
+| User              | email             | character varying        | NO          | null              |
+| User              | password_hash     | character varying        | NO          | null              |
+| User              | created_at        | timestamp with time zone | YES         | now()             |
+| User              | updated_at        | timestamp with time zone | YES         | now()             |

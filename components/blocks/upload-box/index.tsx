@@ -147,10 +147,10 @@ export default function UploadBox({ upload_box, platform = "whatsapp" }: { uploa
       setProgress(100);
       setFileId(data.fileId);
 
-      // Start processing file
+      // Start cleaning file
       setProcessing(true);
 
-      const processResponse = await fetch("/api/chat-processing/process", {
+      const cleanResponse = await fetch("/api/chat-processing/clean", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -161,9 +161,9 @@ export default function UploadBox({ upload_box, platform = "whatsapp" }: { uploa
         })
       });
 
-      if (!processResponse.ok) {
-        const errorData = await processResponse.json();
-        throw new Error(errorData.message || "Processing failed");
+      if (!cleanResponse.ok) {
+        const errorData = await cleanResponse.json();
+        throw new Error(errorData.message || "Cleaning failed");
       }
 
       return data.fileId;

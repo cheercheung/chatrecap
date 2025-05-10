@@ -1,0 +1,173 @@
+{
+  "info": {
+    "name": "ChatRecap API Tests",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Upload File",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/path/to/test-data.txt"
+            },
+            {
+              "key": "platform",
+              "value": "discord",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/chat-processing/upload",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "chat-processing", "upload"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get File Status",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/chat-processing/status/{{fileId}}",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "chat-processing", "status", "{{fileId}}"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Process File",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"fileId\": \"{{fileId}}\",\n    \"platform\": \"discord\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/chat-processing/process",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "chat-processing", "process"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Process Discord",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"fileId\": \"{{fileId}}\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/chat-processing/discord",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "chat-processing", "discord"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Process Instagram",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"fileId\": \"{{fileId}}\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/chat-processing/instagram",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "chat-processing", "instagram"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Process Telegram",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"fileId\": \"{{fileId}}\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/chat-processing/telegram",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "chat-processing", "telegram"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Process Snapchat",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"fileId\": \"{{fileId}}\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/chat-processing/snapchat",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "chat-processing", "snapchat"]
+        }
+      },
+      "response": []
+    }
+  ]
+}

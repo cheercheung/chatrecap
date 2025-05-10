@@ -1,5 +1,6 @@
 import { ProcessResult } from '../../types';
 import { processSnapchatJson } from './jsonProcessor';
+import { processSnapchatConversationsFormat } from './conversationsProcessor';
 
 /**
  * 处理 Snapchat 数据
@@ -56,6 +57,13 @@ export function processSnapchat(input: string | object): ProcessResult {
     };
   }
 
-  // 处理 JSON 数据
+  // 检查是否是对话格式（包含conversations字段）
+  if (jsonData && typeof jsonData === 'object' &&
+      'conversations' in jsonData && Array.isArray(jsonData.conversations)) {
+    console.log('检测到Snapchat对话格式数据');
+    return processSnapchatConversationsFormat(jsonData);
+  }
+
+  // 处理标准JSON数据（消息数组）
   return processSnapchatJson(jsonData);
 }

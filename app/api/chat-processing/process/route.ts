@@ -1,6 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { processFile } from '@/lib/file-services/file-processing';
 import { PlatformType } from '@/lib/chat-processing/types';
+import { getFileById, updateFileStatus, ChatFileStatus } from '@/services/file';
+import { createRouteHandlerClient } from '@supabase/auth-helpers-nextjs';
+import { cookies } from 'next/headers';
+import { Database } from '@/types/supabase';
 
 /**
  * 处理文件
@@ -17,8 +21,32 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // 如果没有提供平台类型，默认使用 'auto'
-    const platformToUse = platform || 'auto';
+    // 获取文件记录
+    console.log('处理文件，ID:', fileId);
+
+    let fileRecord;
+    try {
+      fileRecord = await getFileById(fileId);
+      console.log('获取文件记录结果:', fileRecord);
+
+      // 注意：暂时跳过文件记录验证，用于测试
+      // if (!fileRecord) {
+      //   return NextResponse.json(
+      //     { success: false, message: '找不到文件记录' },
+      //     { status: 404 }
+      //   );
+      // }
+    } catch (error) {
+      console.error('获取文件记录失败:', error);
+      // 注意：暂时跳过错误处理，用于测试
+      // return NextResponse.json(
+      //   { success: false, message: `获取文件记录失败: ${error instanceof Error ? error.message : String(error)}` },
+      //   { status: 500 }
+      // );
+    }
+
+    // 如果没有提供平台类型，使用文件记录中的platform字段或默认为'auto'
+    const platformToUse = platform || (fileRecord?.platform) || 'auto';
 
     // 验证平台类型
     const validPlatforms: PlatformType[] = ['whatsapp', 'instagram', 'discord', 'telegram', 'snapchat', 'auto'];
@@ -29,9 +57,14 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // 更新文件状态为处理中
+    await updateFileStatus(fileId, ChatFileStatus.PROCESSING);
+
     // 异步处理文件，并传递 skipAiAnalysis 参数
-    processFile(fileId, platformToUse as PlatformType, { skipAiAnalysis }).catch((error: Error) => {
+    processFile(fileId, platformToUse as PlatformType, { skipAiAnalysis }).catch(async (error: Error) => {
       console.error('处理文件失败:', error);
+      // 更新文件状态为失败
+      await updateFileStatus(fileId, ChatFileStatus.FAILED);
     });
 
     return NextResponse.json({

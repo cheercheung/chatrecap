@@ -1,13 +1,12 @@
-import { supabase } from '@/lib/supabase/client';
 import { createServerAdminClient } from '@/lib/supabase/server';
 import { v4 as uuidv4 } from 'uuid';
-import { FileType } from '@/services/constant';
 
 /**
  * 文件状态枚举
  */
 export enum ChatFileStatus {
   UPLOADED = 'uploaded',
+  CLEANING = 'cleaning',
   PROCESSING = 'processing',
   COMPLETED_BASIC = 'completed_basic',
   COMPLETE_AI = 'complete_ai',
@@ -20,30 +19,47 @@ export enum ChatFileStatus {
  * @returns 创建的文件记录
  */
 export async function createFileRecord(file: {
+  id?: string; // 添加可选的ID参数
   user_id?: string;
-  session_id: string;
-  file_type: string;
-  file_url?: string;
-  file_name?: string;
+  session_id?: string;
+  platform?: string;
+  status?: ChatFileStatus;
+  words_count?: number;
+  storage_path: string; // 现在是必需的
+  basic_result_path?: string;
+  ai_result_path?: string;
 }) {
   try {
-    const fileId = uuidv4();
+    const fileId = file.id || uuidv4();
+    const supabaseAdmin = createServerAdminClient();
 
-    const { data, error } = await supabase
+    console.log('创建文件记录，ID:', fileId, '数据:', file);
+
+    const insertData = {
+      id: fileId,
+      user_id: file.user_id || null,
+      platform: file.platform || 'auto',
+      status: file.status || ChatFileStatus.UPLOADED,
+      words_count: file.words_count || null,
+      storage_path: file.storage_path, // 必需的字段
+      basic_result_path: file.basic_result_path || null,
+      ai_result_path: file.ai_result_path || null
+    };
+
+    console.log('插入数据:', insertData);
+
+    const { data, error } = await supabaseAdmin
       .from('ChatFile')
-      .insert({
-        id: fileId,
-        user_id: file.user_id || null,
-        session_id: file.session_id,
-        file_type: file.file_type,
-        file_url: file.file_url || 'https://example.com/placeholder.txt',
-        file_name: file.file_name || `file_${Date.now()}.txt`,
-        uploaded_at: new Date().toISOString()
-      })
+      .insert(insertData)
       .select()
       .single();
 
-    if (error) throw error;
+    if (error) {
+      console.error('数据库插入错误:', error);
+      throw error;
+    }
+
+    console.log('文件记录创建成功:', data);
     return data;
   } catch (error) {
     console.error('创建文件记录失败:', error);
@@ -62,7 +78,9 @@ export async function updateFileStatus(
   fileId: string,
   status: ChatFileStatus,
   additionalData: {
+    platform?: string;
     words_count?: number;
+    storage_path?: string;
     basic_result_path?: string;
     ai_result_path?: string;
   } = {}
@@ -74,12 +92,19 @@ export async function updateFileStatus(
       status
     };
 
-    // 添加额外数据，但需要确保字段名与数据库匹配
+    // 添加额外数据，确保字段名与数据库匹配
+    if (additionalData.platform !== undefined) {
+      updateData.platform = additionalData.platform;
+    }
+
     if (additionalData.words_count !== undefined) {
       updateData.words_count = additionalData.words_count;
     }
 
-    // 注意：这里我们假设数据库中有这些字段，实际可能需要调整
+    if (additionalData.storage_path !== undefined) {
+      updateData.storage_path = additionalData.storage_path;
+    }
+
     if (additionalData.basic_result_path) {
       updateData.basic_result_path = additionalData.basic_result_path;
     }
@@ -147,13 +172,21 @@ export async function associateAnalysisResult(fileId: string, resultType: 'basic
  */
 export async function getFileById(fileId: string) {
   try {
-    const { data, error } = await supabase
+    console.log('获取文件详情，ID:', fileId);
+    const supabaseAdmin = createServerAdminClient();
+
+    const { data, error } = await supabaseAdmin
       .from('ChatFile')
       .select('*')
       .eq('id', fileId)
       .single();
 
-    if (error) throw error;
+    if (error) {
+      console.error('获取文件详情数据库错误:', error);
+      throw error;
+    }
+
+    console.log('获取文件详情结果:', data);
     return data;
   } catch (error) {
     console.error('获取文件详情失败:', error);
@@ -168,7 +201,9 @@ export async function getFileById(fileId: string) {
  */
 export async function getUserFiles(userId: string) {
   try {
-    const { data, error } = await supabase
+    const supabaseAdmin = createServerAdminClient();
+
+    const { data, error } = await supabaseAdmin
       .from('ChatFile')
       .select('*')
       .eq('user_id', userId)
@@ -183,22 +218,24 @@ export async function getUserFiles(userId: string) {
 }
 
 /**
- * 查询会话文件列表
- * @param sessionId 会话ID
+ * 查询最近的文件列表
+ * @param limit 限制数量
  * @returns 文件列表
  */
-export async function getSessionFiles(sessionId: string) {
+export async function getRecentFiles(limit: number = 10) {
   try {
-    const { data, error } = await supabase
+    const supabaseAdmin = createServerAdminClient();
+
+    const { data, error } = await supabaseAdmin
       .from('ChatFile')
       .select('*')
-      .eq('session_id', sessionId)
-      .order('uploaded_at', { ascending: false });
+      .order('uploaded_at', { ascending: false })
+      .limit(limit);
 
     if (error) throw error;
     return data;
   } catch (error) {
-    console.error('查询会话文件列表失败:', error);
+    console.error('查询最近文件列表失败:', error);
     return [];
   }
 }
@@ -240,10 +277,10 @@ export async function deleteFile(fileId: string) {
 
     if (error) throw error;
 
-    // 如果有文件URL，也可以考虑删除存储中的文件
-    if (fileData.file_url) {
+    // 如果有存储路径，也可以考虑删除存储中的文件
+    if (fileData.storage_path) {
       // 这里可以添加删除存储文件的逻辑
-      // 例如：await deleteStorageFile(fileData.file_url);
+      // 例如：await deleteStorageFile(fileData.storage_path);
     }
 
     return true;

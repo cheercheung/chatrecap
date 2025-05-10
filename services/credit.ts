@@ -16,7 +16,6 @@ export async function createCreditTransaction(transaction: {
   user_uuid: string;
   amount: number;
   type: CreditTransactionType;
-  order_uuid?: string;
   file_uuid?: string;
 }) {
   try {
@@ -48,19 +47,25 @@ export async function createCreditTransaction(transaction: {
       .eq('id', transaction.user_uuid);
 
     // 创建积分交易记录
+    // 注意：根据数据库表结构，CreditTransaction表可能没有order_id列
+    const insertData: any = {
+      id: uuidv4(),
+      user_id: transaction.user_uuid,
+      change_amount: transaction.amount,
+      balance_after: newBalance,
+      type: transaction.type,
+      description: transaction.type === 'recharge' ? '充值积分' : '消费积分',
+      created_at: new Date().toISOString()
+    };
+
+    // 如果提供了文件ID，添加到插入数据中
+    if (transaction.file_uuid) {
+      insertData.file_id = transaction.file_uuid;
+    }
+
     const { data, error } = await supabase
       .from('CreditTransaction')
-      .insert({
-        id: uuidv4(),
-        user_id: transaction.user_uuid,
-        change_amount: transaction.amount,
-        balance_after: newBalance,
-        type: transaction.type,
-        order_id: transaction.order_uuid,
-        file_id: transaction.file_uuid,
-        description: transaction.type === 'recharge' ? '充值积分' : '消费积分',
-        created_at: new Date().toISOString()
-      })
+      .insert(insertData)
       .select()
       .single();
 
@@ -115,7 +120,7 @@ export async function consumeCredits(user_uuid: string, amount: number, file_uui
       .eq('id', user_uuid);
 
     // 创建积分消费记录
-    const { data, error } = await supabaseAdmin
+    const { error } = await supabaseAdmin
       .from('CreditTransaction')
       .insert({
         id: uuidv4(),
@@ -126,9 +131,7 @@ export async function consumeCredits(user_uuid: string, amount: number, file_uui
         file_id: file_uuid,
         description: description,
         created_at: new Date().toISOString()
-      })
-      .select()
-      .single();
+      });
 
     if (error) throw error;
     return true;
@@ -169,14 +172,23 @@ export async function getUserCreditHistory(userUuid: string, limit: number = 20,
  */
 export async function getUserCreditBalance(userUuid: string) {
   try {
+    // 由于User表中没有credit_balance字段，我们从CreditTransaction表中计算
+    // 获取用户的所有交易记录
     const { data, error } = await supabase
-      .from('User')
-      .select('credit_balance')
-      .eq('id', userUuid)
-      .single();
+      .from('CreditTransaction')
+      .select('change_amount')
+      .eq('user_id', userUuid);
 
     if (error) throw error;
-    return data?.credit_balance || 0;
+
+    // 如果没有交易记录，返回0
+    if (!data || data.length === 0) {
+      return 0;
+    }
+
+    // 计算总积分（所有交易的change_amount之和）
+    const totalCredits = data.reduce((sum, transaction) => sum + transaction.change_amount, 0);
+    return totalCredits;
   } catch (error) {
     console.error('获取用户积分余额失败:', error);
     return 0;

@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { createRouteSupabaseClient } from '@/lib/supabase/client';
 import { createRouteHandlerClient } from '@supabase/auth-helpers-nextjs';
 import { Database } from '@/types/supabase';
 import { cookies } from 'next/headers';
@@ -14,16 +13,10 @@ export async function GET(request: NextRequest) {
 
     if (code) {
       try {
-        // 使用直接的方式创建客户端，避免使用 createRouteSupabaseClient
-        console.log('Creating Supabase client directly');
+        // 创建 Supabase 客户端，直接传递 cookies 函数
+        const supabase = createRouteHandlerClient<Database>({ cookies });
 
-        // 先获取 cookie 存储
-        const cookieStore = await cookies();
-
-        // 使用 try-catch 包装可能出错的代码
         try {
-          const supabase = createRouteHandlerClient<Database>({ cookies: () => cookieStore });
-
           // 使用 code 交换会话
           console.log('Exchanging code for session');
           const sessionResult = await supabase.auth.exchangeCodeForSession(code);

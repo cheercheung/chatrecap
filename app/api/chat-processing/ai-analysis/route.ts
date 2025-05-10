@@ -5,6 +5,13 @@ import { readFile, FileType, saveAiAnalysisResult, saveCompleteAnalysisData } fr
 import { AIInsights, AnalysisData } from '@/types/analysis';
 import { RawMessage } from '@/lib/chat-processing/types';
 import { createAiAnalysisPrompt, validateAiInsights, extractJsonFromAiResponse } from '@/lib/ai-analysis';
+import { getFileById, updateFileStatus, ChatFileStatus, associateAnalysisResult } from '@/services/file';
+import { checkUserCreditSufficient, consumeCredits } from '@/services/credit';
+import { createServerClient } from '@/lib/supabase/server';
+import { cookies } from 'next/headers';
+
+// AI分析所需的积分数量
+const AI_ANALYSIS_CREDIT_COST = 10;
 
 /**
  * AI分析API路由
@@ -22,10 +29,68 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // 获取文件记录
+    const fileRecord = await getFileById(fileId);
+    if (!fileRecord) {
+      return NextResponse.json(
+        { success: false, message: '文件不存在' },
+        { status: 404 }
+      );
+    }
+
+    // 验证文件状态是否为 COMPLETED_BASIC
+    if (fileRecord.status !== ChatFileStatus.COMPLETED_BASIC) {
+      return NextResponse.json(
+        {
+          success: false,
+          message: `文件状态不允许进行AI分析，当前状态: ${fileRecord.status}`,
+          code: 'INVALID_STATE'
+        },
+        { status: 400 }
+      );
+    }
+
+    // 获取当前用户
+    const supabase = createServerClient(
+      name => cookies().get(name),
+      (name, value, options) => cookies().set(name, value, options)
+    );
+    const { data: { session } } = await supabase.auth.getSession();
+    const userId = session?.user?.id;
+
+    if (!userId) {
+      return NextResponse.json(
+        { success: false, message: '用户未登录' },
+        { status: 401 }
+      );
+    }
+
+    // 检查用户积分是否足够
+    const hasSufficientCredits = await checkUserCreditSufficient(userId, AI_ANALYSIS_CREDIT_COST);
+    if (!hasSufficientCredits) {
+      return NextResponse.json(
+        {
+          success: false,
+          message: '积分不足，无法进行AI分析',
+          code: 'INSUFFICIENT_CREDITS',
+          requiredCredits: AI_ANALYSIS_CREDIT_COST
+        },
+        { status: 402 }  // 402 Payment Required
+      );
+    }
+
+    // 更新文件状态为AI处理中
+    await updateFileStatus(fileId, ChatFileStatus.PROCESSING, {
+      // 可以添加其他需要更新的字段
+    });
+
     // 获取清理后的消息数组
     const messages = await readFile(fileId, FileType.CLEANED) as RawMessage[];
 
     if (!messages || !Array.isArray(messages) || messages.length === 0) {
+      // 更新文件状态为失败
+      await updateFileStatus(fileId, ChatFileStatus.FAILED);
+
       return NextResponse.json(
         { success: false, message: '找不到处理结果或消息为空' },
         { status: 404 }
@@ -70,6 +135,9 @@ export async function POST(request: NextRequest) {
       validateAiInsights(aiInsights);
 
     } catch (error) {
+      // 更新文件状态为失败
+      await updateFileStatus(fileId, ChatFileStatus.FAILED);
+
       console.error('解析AI响应失败:', error);
       console.error('AI响应内容:', text);
       return NextResponse.json(
@@ -81,9 +149,27 @@ export async function POST(request: NextRequest) {
     // 保存AI分析结果
     try {
       // 保存AI分析结果到单独的文件
-      await saveAiAnalysisResult(fileId, aiInsights);
+      const resultPath = await saveAiAnalysisResult(fileId, aiInsights);
+
+      // 更新文件状态为AI分析完成，并关联AI分析结果
+      await associateAnalysisResult(fileId, 'ai', resultPath);
+
+      // 消费用户积分
+      const creditConsumed = await consumeCredits(
+        userId,
+        AI_ANALYSIS_CREDIT_COST,
+        fileId,
+        'AI分析消费'
+      );
+
+      if (!creditConsumed) {
+        console.warn('积分消费失败，但AI分析已完成');
+      }
 
     } catch (error) {
+      // 更新文件状态为失败
+      await updateFileStatus(fileId, ChatFileStatus.FAILED);
+
       console.error('更新分析数据失败:', error);
       return NextResponse.json(
         { success: false, message: '更新分析数据失败' },
@@ -94,6 +180,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({
       success: true,
       aiInsights,
+      creditConsumed: AI_ANALYSIS_CREDIT_COST
     });
   } catch (error) {
     console.error('AI分析失败:', error);

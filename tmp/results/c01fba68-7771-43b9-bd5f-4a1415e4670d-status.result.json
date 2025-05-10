@@ -1,0 +1,8 @@
+{
+  "status": "failed",
+  "cleaningProgress": 0,
+  "analysisProgress": 0,
+  "currentCleaningStep": "准备 snapchat 数据",
+  "currentAnalysisStep": "处理 snapchat 消息",
+  "error": "处理失败: invalid_format"
+}

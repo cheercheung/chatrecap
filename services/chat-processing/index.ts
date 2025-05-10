@@ -30,6 +30,32 @@ export async function uploadChatFile(file: File, platform: PlatformType): Promis
 }
 
 /**
+ * 清洗聊天文件
+ * @param fileId 文件ID
+ * @param platform 平台类型
+ * @returns 清洗结果
+ */
+export async function cleanChatFile(fileId: string, platform: PlatformType): Promise<{ success: boolean }> {
+  // 发送请求
+  const response = await fetch('/api/chat-processing/clean', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ fileId, platform })
+  });
+
+  // 检查响应
+  if (!response.ok) {
+    const error = await response.text();
+    throw new Error(`清洗失败: ${error}`);
+  }
+
+  // 返回结果
+  return response.json();
+}
+
+/**
  * 处理聊天文件
  * @param fileId 文件ID
  * @param platform 平台类型

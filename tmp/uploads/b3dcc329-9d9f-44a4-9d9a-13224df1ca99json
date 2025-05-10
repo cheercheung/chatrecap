@@ -1,0 +1,23 @@
+{
+  "conversations": [
+    {
+      "id": "conversation1",
+      "participants": [
+        "User1",
+        "User2"
+      ],
+      "messages": [
+        {
+          "from": "User1",
+          "timestamp": "2023-01-01T10:00:00.000Z",
+          "content": "Hello, how are you?"
+        },
+        {
+          "from": "User2",
+          "timestamp": "2023-01-01T10:01:00.000Z",
+          "content": "I'm good, thanks!"
+        }
+      ]
+    }
+  ]
+}

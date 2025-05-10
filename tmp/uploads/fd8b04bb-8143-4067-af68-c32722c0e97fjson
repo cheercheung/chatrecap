@@ -1,0 +1,22 @@
+{
+  "participants": [
+    {
+      "name": "User1"
+    },
+    {
+      "name": "User2"
+    }
+  ],
+  "messages": [
+    {
+      "sender_name": "User1",
+      "timestamp_ms": 1672567200000,
+      "content": "Hello, how are you?"
+    },
+    {
+      "sender_name": "User2",
+      "timestamp_ms": 1672567260000,
+      "content": "I'm good, thanks!"
+    }
+  ]
+}

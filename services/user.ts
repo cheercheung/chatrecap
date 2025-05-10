@@ -2,6 +2,7 @@ import { createServerAdminClient } from '@/lib/supabase/server';
 import { supabase } from '@/lib/supabase/client';
 import { User } from '@/types/user';
 import { v4 as uuidv4 } from 'uuid';
+import { getUserCreditBalance } from './credit';
 
 /**
  * 根据ID获取用户信息
@@ -11,22 +12,21 @@ import { v4 as uuidv4 } from 'uuid';
 export async function getUserById(id: string): Promise<User | null> {
   try {
     const { data, error } = await supabase
-      .from('users')
+      .from('User')
       .select('*')
       .eq('id', id)
       .single();
 
     if (error) throw error;
 
+    // 获取用户积分余额
+    const credits = await getUserCreditBalance(id);
+
     return {
       uuid: data.id,
       email: data.email,
-      nickname: data.nickname || '',
-      avatar_url: data.avatar_url || '',
       created_at: data.created_at,
-      credits: data.credit_balance || 0,
-      signin_provider: data.signin_provider,
-      signin_openid: data.signin_openid
+      credits, // 从CreditTransaction表中计算得到
     };
   } catch (error) {
     console.error('获取用户信息失败:', error);
@@ -42,7 +42,7 @@ export async function getUserById(id: string): Promise<User | null> {
 export async function getUserByEmail(email: string): Promise<User | null> {
   try {
     const { data, error } = await supabase
-      .from('users')
+      .from('User')
       .select('*')
       .eq('email', email)
       .single();
@@ -55,15 +55,14 @@ export async function getUserByEmail(email: string): Promise<User | null> {
       throw error;
     }
 
+    // 获取用户积分余额
+    const credits = await getUserCreditBalance(data.id);
+
     return {
       uuid: data.id,
       email: data.email,
-      nickname: data.nickname || '',
-      avatar_url: data.avatar_url || '',
       created_at: data.created_at,
-      credits: data.credit_balance || 0,
-      signin_provider: data.signin_provider,
-      signin_openid: data.signin_openid
+      credits, // 从CreditTransaction表中计算得到
     };
   } catch (error) {
     console.error('根据邮箱获取用户信息失败:', error);
@@ -76,18 +75,47 @@ export async function getUserByEmail(email: string): Promise<User | null> {
  * @param userId 用户ID
  * @param credits 积分余额
  * @returns 是否成功
+ *
+ * 注意：由于User表中没有credit_balance字段，此函数不再直接更新用户表
+ * 而是通过创建积分交易记录来间接更新用户积分
+ * 实际积分余额需要通过getUserCreditBalance函数获取
  */
 export async function updateUserCredits(userId: string, credits: number): Promise<boolean> {
   try {
     const supabaseAdmin = createServerAdminClient();
 
+    // 获取当前积分余额
+    const { data: transactions, error: fetchError } = await supabaseAdmin
+      .from('CreditTransaction')
+      .select('change_amount')
+      .eq('user_id', userId);
+
+    if (fetchError) throw fetchError;
+
+    // 计算当前积分余额
+    const currentBalance = transactions && transactions.length > 0
+      ? transactions.reduce((sum, tx) => sum + tx.change_amount, 0)
+      : 0;
+
+    // 计算需要增加的积分
+    const changeAmount = credits - currentBalance;
+
+    // 如果没有变化，直接返回
+    if (changeAmount === 0) {
+      return true;
+    }
+
+    // 创建积分交易记录
     const { error } = await supabaseAdmin
-      .from('users')
-      .update({
-        credit_balance: credits,
-        updated_at: new Date().toISOString()
-      })
-      .eq('id', userId);
+      .from('CreditTransaction')
+      .insert({
+        user_id: userId,
+        change_amount: changeAmount,
+        balance_after: credits,
+        type: changeAmount > 0 ? 'adjustment_add' : 'adjustment_subtract',
+        description: '管理员调整积分',
+        created_at: new Date().toISOString()
+      });
 
     if (error) throw error;
     return true;
@@ -108,15 +136,10 @@ export async function createUser(user: Partial<User>): Promise<User | null> {
     const userId = user.uuid || uuidv4();
 
     const { data, error } = await supabaseAdmin
-      .from('users')
+      .from('User')
       .insert({
         id: userId,
         email: user.email,
-        nickname: user.nickname || '',
-        avatar_url: user.avatar_url || '',
-        credit_balance: user.credits || 0,
-        signin_provider: user.signin_provider,
-        signin_openid: user.signin_openid,
         created_at: new Date().toISOString(),
         updated_at: new Date().toISOString(),
       })
@@ -125,15 +148,14 @@ export async function createUser(user: Partial<User>): Promise<User | null> {
 
     if (error) throw error;
 
+    // 获取用户积分余额（新用户默认为0）
+    const credits = 0;
+
     return {
       uuid: data.id,
       email: data.email,
-      nickname: data.nickname || '',
-      avatar_url: data.avatar_url || '',
       created_at: data.created_at,
-      credits: data.credit_balance || 0,
-      signin_provider: data.signin_provider,
-      signin_openid: data.signin_openid
+      credits, // 新用户默认积分为0
     };
   } catch (error) {
     console.error('创建用户失败:', error);
@@ -152,7 +174,7 @@ export async function saveUser(user: User): Promise<User> {
 
     // 检查用户是否已存在
     const { data: existingUser, error: fetchError } = await supabaseAdmin
-      .from('users')
+      .from('User')
       .select('*')
       .eq('email', user.email)
       .single();
@@ -165,12 +187,8 @@ export async function saveUser(user: User): Promise<User> {
     if (existingUser) {
       // 用户已存在，更新信息
       const { data, error } = await supabaseAdmin
-        .from('users')
+        .from('User')
         .update({
-          nickname: user.nickname || existingUser.nickname,
-          avatar_url: user.avatar_url || existingUser.avatar_url,
-          signin_provider: user.signin_provider || existingUser.signin_provider,
-          signin_openid: user.signin_openid || existingUser.signin_openid,
           updated_at: new Date().toISOString(),
         })
         .eq('id', existingUser.id)
@@ -179,15 +197,14 @@ export async function saveUser(user: User): Promise<User> {
 
       if (error) throw error;
 
+      // 获取用户积分余额
+      const credits = await getUserCreditBalance(data.id);
+
       return {
         uuid: data.id,
         email: data.email,
-        nickname: data.nickname || '',
-        avatar_url: data.avatar_url || '',
         created_at: data.created_at,
-        credits: data.credit_balance || 0,
-        signin_provider: data.signin_provider,
-        signin_openid: data.signin_openid
+        credits, // 从CreditTransaction表中计算得到
       };
     } else {
       // 创建新用户
@@ -248,18 +265,16 @@ export async function getCurrentUser(): Promise<User | null> {
 
 /**
  * 关联未登录用户的文件
- * @param sessionId 会话ID
  * @param userId 用户ID
  * @returns 是否成功
  */
-export async function associateFilesToUser(sessionId: string, userId: string): Promise<boolean> {
+export async function associateFilesToUser(userId: string): Promise<boolean> {
   try {
     const supabaseAdmin = createServerAdminClient();
 
     const { error } = await supabaseAdmin
-      .from('chat_files')
+      .from('ChatFile')
       .update({ user_id: userId })
-      .eq('session_id', sessionId)
       .is('user_id', null);
 
     if (error) throw error;

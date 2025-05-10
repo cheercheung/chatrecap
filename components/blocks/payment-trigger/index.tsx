@@ -58,18 +58,18 @@ export function PaymentTrigger({
       console.log('Redirecting to checkout URL:', data.checkout_url);
       window.location.href = data.checkout_url;
 
-      // 3. 异步发起基础分析（不阻塞支付流程）
-      fetch('/api/chat-processing/process', {
+      // 3. 异步发起文件清洗（不阻塞支付流程）
+      fetch('/api/chat-processing/clean', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
           fileId,
-          skipAiAnalysis: true // 只进行基础分析，不进行AI分析
+          platform: 'auto' // 自动检测平台类型
         }),
       }).catch(err => {
-        console.error('Background processing failed:', err);
+        console.error('Background cleaning failed:', err);
         // 不阻止支付流程继续
       });
     } catch (error) {

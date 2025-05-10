@@ -11,6 +11,7 @@ import { useTranslations } from "next-intl";
 import { Sparkles } from "lucide-react";
 import {
   uploadChatFile,
+  cleanChatFile,
   processChatFile,
   PlatformType
 } from "@/services/chat-processing";
@@ -188,8 +189,8 @@ export default function JsonUploader({
             body: JSON.stringify({ fileId: uploadResult.fileId })
           });
         } else {
-          // 默认使用通用处理方法
-          await processChatFile(uploadResult.fileId, platform);
+          // 默认使用通用清洗方法
+          await cleanChatFile(uploadResult.fileId, platform);
           // 设置一个成功的响应
           response = new Response(JSON.stringify({ success: true }), {
             status: 200,

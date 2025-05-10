@@ -15,11 +15,18 @@ export enum OrderStatus {
 
 /**
  * 创建订单
+ *
+ * @param order 订单信息
+ * @param order.user_uuid 用户ID
+ * @param order.amount 订单金额
+ * @param order.credit_amount 积分数量（此字段在数据库中不存在，仅用于兼容旧代码）
+ * @param order.status 订单状态（可选，默认为pending）
+ * @returns 创建的订单
  */
 export async function createOrder(order: {
   user_uuid: string;
   amount: number;
-  credit_amount: number;
+  credit_amount: number; // 此字段在数据库中不存在，仅用于兼容旧代码
   status?: string;
 }) {
   try {
@@ -71,11 +78,12 @@ export async function updateOrderStatus(orderId: string, status: string, payment
     }
 
     // 准备更新数据
-    const updateData: { status: string; payment_id?: string } = { status };
+    // 注意：根据数据库表结构，Order表可能没有payment_id列
+    const updateData: { status: string } = { status };
 
-    // 如果提供了支付ID，添加到更新数据中
+    // 记录支付ID，但不更新到数据库
     if (paymentId) {
-      updateData.payment_id = paymentId;
+      console.log(`订单 ${orderId} 的支付ID: ${paymentId}`);
     }
 
     // 更新订单
@@ -93,12 +101,15 @@ export async function updateOrderStatus(orderId: string, status: string, payment
 
     // 如果订单状态更新为已支付，处理积分增加逻辑
     if (status === OrderStatus.PAID) {
+      // 根据订单金额计算积分
+      // 这里使用一个简单的规则：1元 = 100积分
+      const creditAmount = Math.floor(Number(data.amount) * 100);
+
       // 创建积分交易记录并更新用户积分余额
       await createCreditTransaction({
         user_uuid: data.user_id,
-        amount: 1000, // 假设固定充值1000积分，实际应该从订单中获取
-        type: 'recharge',
-        order_uuid: data.id
+        amount: creditAmount,
+        type: 'recharge'
       });
     }
 

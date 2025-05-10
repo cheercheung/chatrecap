@@ -137,10 +137,11 @@ export async function deleteFile(fileId: string, type: FileType): Promise<boolea
  * 保存上传的文件
  * @param fileContent 文件内容
  * @param fileExtension 文件扩展名
+ * @param customFileId 自定义文件ID（可选）
  * @returns 文件ID
  */
-export async function saveUploadedFile(fileContent: Buffer | string, fileExtension: string = ''): Promise<string> {
-  const fileId = uuidv4();
+export async function saveUploadedFile(fileContent: Buffer | string, fileExtension: string = '', customFileId?: string): Promise<string> {
+  const fileId = customFileId || uuidv4();
   const filePath = path.join(UPLOAD_DIR, `${fileId}${fileExtension}`);
 
   // 确保目录存在

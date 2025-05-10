@@ -1,5 +1,6 @@
 import { ProcessResult } from '../../types';
 import { processDiscordJson } from './jsonProcessor';
+import { processDiscordChannelFormat } from './channelProcessor';
 
 /**
  * 处理 Discord 数据
@@ -56,6 +57,14 @@ export function processDiscord(input: string | object): ProcessResult {
     };
   }
 
-  // 处理 JSON 数据
+  // 检查是否是频道格式（包含channel和messages字段）
+  if (jsonData && typeof jsonData === 'object' &&
+      'channel' in jsonData && 'messages' in jsonData &&
+      Array.isArray(jsonData.messages)) {
+    console.log('检测到Discord频道格式数据');
+    return processDiscordChannelFormat(jsonData);
+  }
+
+  // 处理标准JSON数据（消息数组）
   return processDiscordJson(jsonData);
 }

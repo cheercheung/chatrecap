@@ -1,0 +1,20 @@
+{
+  "name": "Telegram Chat",
+  "type": "personal_chat",
+  "messages": [
+    {
+      "id": 1,
+      "type": "message",
+      "date": "2023-01-01T10:00:00",
+      "from": "User1",
+      "text": "Hello, how are you?"
+    },
+    {
+      "id": 2,
+      "type": "message",
+      "date": "2023-01-01T10:01:00",
+      "from": "User2",
+      "text": "I'm good, thanks!"
+    }
+  ]
+}
