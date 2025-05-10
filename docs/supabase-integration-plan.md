@@ -296,7 +296,7 @@ UPLOADED → CLEANING → PROCESSING → COMPLETED_BASIC → AI_PROCESSING → C
 
 
 
-### 6.3 AI 分析 API
+### 6.3 AI 分析 API✅
 
 AI分析是文件处理流程的最后阶段，需要消耗用户积分。以下是AI分析API的实施方案。
 
@@ -313,24 +313,6 @@ AI分析是文件处理流程的最后阶段，需要消耗用户积分。以下
 
 **端点**: `/api/chat-processing/ai-analysis`
 
-**方法**: POST
-
-**请求参数**:
-```json
-{
-  "fileId": "uuid"
-}
-```
-
-**响应**:
-```json
-{
-  "success": true,
-  "fileId": "uuid",
-  "message": "AI分析已开始",
-  "creditsConsumed": 10
-}
-```
 
 #### 6.3.2 AI分析状态查询 API
 
@@ -341,23 +323,7 @@ AI分析是文件处理流程的最后阶段，需要消耗用户积分。以下
 
 **端点**: `/api/check-analysis-status`
 
-**方法**: GET
 
-**请求参数**:
-```json
-{
-  "fileId": "uuid"
-}
-```
-
-**响应**:
-```json
-{
-  "success": true,
-  "status": "COMPLETED_AI",
-  "progress": 100
-}
-```
 
 #### 6.3.3 AI分析结果获取 API
 
@@ -368,26 +334,6 @@ AI分析是文件处理流程的最后阶段，需要消耗用户积分。以下
 
 **端点**: `/api/chat-processing/ai-result/:fileId`
 
-**方法**: GET
-
-**响应**:
-```json
-{
-  "success": true,
-  "result": {
-    "summary": "这是一段关于聊天内容的总结...",
-    "insights": [
-      "发现1: ...",
-      "发现2: ..."
-    ],
-    "sentimentAnalysis": {
-      "overall": 0.75,
-      "breakdown": {...}
-    },
-    "topicAnalysis": [...]
-  }
-}
-```
 
 #### 6.3.4 AI分析触发检查 API
 
@@ -399,25 +345,7 @@ AI分析是文件处理流程的最后阶段，需要消耗用户积分。以下
 
 **端点**: `/api/trigger-analysis`
 
-**方法**: GET
-
-**请求参数**:
-```json
-{
-  "fileId": "uuid"
-}
-```
-
-**响应**:
-```json
-{
-  "success": true,
-  "canTrigger": true,
-  "requiredCredits": 10,
-  "userCredits": 25
-}
-```
-
+*
 #### 6.3.5 积分消费实现
 
 AI分析需要消费用户积分，实现方式如下：
@@ -437,11 +365,424 @@ AI分析需要消费用户积分，实现方式如下：
 
 ### 6.4 存储 API 调整
 
+#### 6.4.1 存储系统集成方案✅
+由于项目决定保留现有的服务器本地存储系统而不是迁移到Supabase存储桶，我们采用以下方案来调整存储API：
+1. **保留现有的文件存储逻辑**
+   - 继续使用现有的本地文件系统存储机制
+   - 不迁移文件内容到Supabase存储桶
+   - 保持 `lib/storage/index.ts` 中的核心文件操作函数不变
+
+2. **增强存储API与数据库的集成**
+   - 修改 `app/api/storage/route.ts` 以在文件操作的同时更新Supabase数据库中的文件元数据
+   - 使用 `services/file.ts` 中的函数来操作数据库中的文件记录
+   - 确保文件操作和数据库操作的一致性
+
+3. **增加用户认证和权限检查**
+   - 在文件操作前验证用户身份和权限
+   - 确保用户只能访问和修改自己的文件
+   - 使用Supabase Auth会话进行身份验证
+
+#### 6.4.2 具体实施内容
+
 1. **修改 `app/api/storage/route.ts`**
-   - 使用 Supabase 客户端替换现有的存储调用
-   - 集成 `services/file.ts` 中的函数
-   - 确保文件内容和元数据的一致性
-   - 保持现有的文件类型和存储逻辑
+   - 添加用户认证和权限验证
+   - 在文件上传/保存时，同时创建或更新Supabase中的文件记录
+   - 在文件读取时，验证用户权限和文件状态
+   - 在文件删除时，同时删除Supabase中的文件记录
+   - 保持API接口兼容性，确保现有前端代码不需要大幅修改
+
+2. **实现事务安全**
+   - 确保文件操作和数据库操作的原子性
+   - 如果任一操作失败，进行适当的回滚或错误处理
+   - 添加详细的错误日志和用户友好的错误消息
+
+3. **优化性能和安全性**
+   - 添加缓存机制，减少重复读取
+   - 实现文件访问的审计日志
+   - 添加文件大小和类型的验证
+
+#### 6.4.3 用户验证和权限验证方案
+
+##### 用户角色与权限模型
+
+1. **用户角色定义**
+   ```typescript
+   enum UserRole {
+     GUEST = 'guest',     // 未登录用户
+     USER = 'user',       // 已登录用户
+     ADMIN = 'admin'      // 管理员（可选，未来扩展用）
+   }
+   ```
+
+2. **资源访问权限**
+   ```typescript
+   enum ResourcePermission {
+     READ = 'read',       // 读取权限
+     WRITE = 'write',     // 写入权限
+     DELETE = 'delete',   // 删除权限
+     EXECUTE = 'execute'  // 执行操作权限（如触发分析）
+   }
+   ```
+
+3. **权限矩阵**
+
+   | 资源/功能 | 未登录用户 (GUEST) | 已登录用户 (USER) |
+   |----------|-------------------|------------------|
+   | 页面访问  | 除 auth/signin 外的所有页面 | 所有页面 |
+   | 文件上传  | ✅ 允许 | ✅ 允许 |
+   | 基础分析  | ✅ 允许 | ✅ 允许 |
+   | AI分析    | ❌ 不允许 | ✅ 允许（需要积分） |
+   | 充值      | ❌ 不允许（需登录） | ✅ 允许 |
+   | 查看自己的文件 | ✅ 允许（通过会话ID） | ✅ 允许 |
+   | 查看他人文件 | ❌ 不允许 | ❌ 不允许 |
+   | 删除文件  | ✅ 允许（仅自己的） | ✅ 允许（仅自己的） |
+
+##### 文件所有权规则
+
+1. **未登录用户上传的文件**：
+   - 使用会话ID作为临时标识
+   - 文件与会话关联，而非用户ID
+   - 当用户登录后，可以选择将文件关联到账户
+
+2. **已登录用户上传的文件**：
+   - 文件直接与用户ID关联
+   - 用户拥有完全控制权
+
+3. **文件访问控制**：
+   - 默认情况下，文件为私有（只有所有者可访问）
+   - 未来可扩展支持文件共享功能
+
+
+##### 实现方案
+
+1. **用户身份验证**
+
+   ```typescript
+   /**
+    * 获取当前用户信息
+    * @returns 用户信息对象
+    */
+   async function getCurrentUser(): Promise<{
+     userId: string | null;
+     role: UserRole;
+     sessionId: string;
+   }> {
+     try {
+       // 获取会话ID（所有用户都有，包括未登录用户）
+       const sessionId = cookies().get('session_id')?.value || generateSessionId();
+
+       // 如果没有会话ID，设置一个
+       if (!cookies().get('session_id')) {
+         cookies().set('session_id', sessionId, {
+           httpOnly: true,
+           sameSite: 'strict',
+           maxAge: 30 * 24 * 60 * 60 // 30天
+         });
+       }
+
+       // 尝试获取登录用户信息
+       const supabase = createServerClient(
+         name => cookies().get(name),
+         (name, value, options) => cookies().set(name, value, options)
+       );
+       const { data: { session } } = await supabase.auth.getSession();
+       const userId = session?.user?.id || null;
+
+       // 确定用户角色
+       const role = userId ? UserRole.USER : UserRole.GUEST;
+
+       return { userId, role, sessionId };
+     } catch (error) {
+       console.error('获取用户信息失败:', error);
+       // 出错时返回游客身份
+       return {
+         userId: null,
+         role: UserRole.GUEST,
+         sessionId: cookies().get('session_id')?.value || generateSessionId()
+       };
+     }
+   }
+   ```
+
+2. **资源访问验证**
+
+   ```typescript
+   /**
+    * 验证文件访问权限
+    * @param fileId 文件ID
+    * @param user 用户信息
+    * @param permission 请求的权限
+    * @returns 是否有权限
+    */
+   async function validateFileAccess(
+     fileId: string,
+     user: { userId: string | null; role: UserRole; sessionId: string },
+     permission: ResourcePermission
+   ): Promise<boolean> {
+     try {
+       // 获取文件记录
+       const fileRecord = await getFileById(fileId);
+
+       // 如果文件不存在，只允许写入操作（创建新文件）
+       if (!fileRecord) {
+         return permission === ResourcePermission.WRITE;
+       }
+
+       // 检查文件所有权
+       const isOwner = (user.userId && fileRecord.user_id === user.userId) ||
+                      (!fileRecord.user_id && fileRecord.session_id === user.sessionId);
+
+       // 所有者拥有全部权限
+       if (isOwner) {
+         return true;
+       }
+
+       // 非所有者默认没有权限
+       return false;
+     } catch (error) {
+       console.error('验证文件访问权限失败:', error);
+       return false; // 出错时拒绝访问
+     }
+   }
+   ```
+
+3. **API权限检查中间件**
+
+   ```typescript
+   /**
+    * API权限检查
+    * @param handler API处理函数
+    * @param options 权限选项
+    * @returns 处理结果
+    */
+   function withPermissionCheck(
+     handler: (req: NextRequest, user: any) => Promise<NextResponse>,
+     options: {
+       requireAuth?: boolean;
+       resourceType?: 'file' | 'credit' | 'user';
+       permission?: ResourcePermission;
+     } = {}
+   ) {
+     return async (req: NextRequest) => {
+       // 获取用户信息
+       const user = await getCurrentUser();
+
+       // 检查是否需要登录
+       if (options.requireAuth && user.role === UserRole.GUEST) {
+         return NextResponse.json(
+           { success: false, message: '需要登录', code: 'AUTH_REQUIRED' },
+           { status: 401 }
+         );
+       }
+
+       // 如果是文件资源，检查文件权限
+       if (options.resourceType === 'file' && options.permission) {
+         // 从请求中获取文件ID
+         const fileId = req.nextUrl.searchParams.get('fileId') ||
+                       (await req.json())?.fileId;
+
+         if (!fileId) {
+           return NextResponse.json(
+             { success: false, message: '缺少文件ID' },
+             { status: 400 }
+           );
+         }
+
+         const hasPermission = await validateFileAccess(
+           fileId,
+           user,
+           options.permission
+         );
+
+         if (!hasPermission) {
+           return NextResponse.json(
+             { success: false, message: '无权访问此资源' },
+             { status: 403 }
+           );
+         }
+       }
+
+       // 权限检查通过，调用原始处理函数
+       return handler(req, user);
+     };
+   }
+   ```
+
+4. **会话文件迁移**
+
+   ```typescript
+   /**
+    * 将会话文件迁移到用户账户
+    * @param sessionId 会话ID
+    * @param userId 用户ID
+    * @returns 迁移结果
+    */
+   export async function migrateSessionFiles(sessionId: string, userId: string) {
+     try {
+       const supabaseAdmin = createServerAdminClient();
+
+       // 查找所有与会话关联的文件
+       const { data: files, error: fetchError } = await supabaseAdmin
+         .from('ChatFile')
+         .select('*')
+         .eq('session_id', sessionId)
+         .is('user_id', null); // 只迁移没有用户ID的文件
+
+       if (fetchError) throw fetchError;
+
+       // 如果没有文件，直接返回
+       if (!files || files.length === 0) {
+         return { success: true, migratedCount: 0 };
+       }
+
+       // 更新文件所有权
+       const { error: updateError } = await supabaseAdmin
+         .from('ChatFile')
+         .update({ user_id: userId, session_id: null })
+         .eq('session_id', sessionId)
+         .is('user_id', null);
+
+       if (updateError) throw updateError;
+
+       return { success: true, migratedCount: files.length };
+     } catch (error) {
+       console.error('迁移会话文件失败:', error);
+       return { success: false, error };
+     }
+   }
+   ```
+
+##### API实现示例
+
+1. **文件上传API**
+
+   ```typescript
+   export const POST = withPermissionCheck(
+     async (req: NextRequest, user) => {
+       // 处理文件上传
+       const formData = await req.formData();
+       const file = formData.get('file') as File;
+
+       // 创建文件记录
+       const fileRecord = await createFileRecord({
+         user_id: user.userId,
+         session_id: user.userId ? undefined : user.sessionId, // 未登录用户使用会话ID
+         platform: formData.get('platform') as string,
+         status: ChatFileStatus.UPLOADED,
+         storage_path: `/uploads/${fileId}`
+       });
+
+       return NextResponse.json({ success: true, fileId: fileRecord.id });
+     },
+     { resourceType: 'file', permission: ResourcePermission.WRITE }
+   );
+   ```
+
+2. **AI分析触发API**
+
+   ```typescript
+   export const POST = withPermissionCheck(
+     async (req: NextRequest, user) => {
+       const { fileId } = await req.json();
+
+       // 检查用户积分是否足够
+       if (user.userId) {
+         const hasSufficientCredits = await checkUserCreditSufficient(
+           user.userId,
+           AI_ANALYSIS_CREDIT_COST
+         );
+
+         if (!hasSufficientCredits) {
+           return NextResponse.json(
+             {
+               success: false,
+               message: '积分不足，无法进行AI分析',
+               code: 'INSUFFICIENT_CREDITS'
+             },
+             { status: 402 }
+           );
+         }
+       } else {
+         // 未登录用户不能进行AI分析
+         return NextResponse.json(
+           {
+             success: false,
+             message: '需要登录才能进行AI分析',
+             code: 'AUTH_REQUIRED'
+           },
+           { status: 401 }
+         );
+       }
+
+       // 处理AI分析...
+
+       return NextResponse.json({ success: true });
+     },
+     {
+       requireAuth: true, // 需要登录
+       resourceType: 'file',
+       permission: ResourcePermission.EXECUTE
+     }
+   );
+   ```
+
+##### 前端实现
+
+在前端，需要处理未登录和已登录状态的切换：
+
+```typescript
+// 检查用户是否可以进行AI分析
+async function checkCanTriggerAiAnalysis(fileId: string) {
+  const response = await fetch(`/api/trigger-analysis?fileId=${fileId}`);
+  const data = await response.json();
+
+  if (!data.success) {
+    if (data.code === 'AUTH_REQUIRED') {
+      // 提示用户登录
+      showLoginPrompt();
+    } else if (data.code === 'INSUFFICIENT_CREDITS') {
+      // 提示用户充值
+      showRechargePrompt();
+    }
+    return false;
+  }
+
+  return data.canTrigger;
+}
+
+// 显示登录提示
+function showLoginPrompt() {
+  // 实现登录提示UI
+  // 可以提供"登录以保存您的文件"的选项
+}
+```
+
+
+
+##### 
+步骤2：修改文件服务
+更新services/file.ts文件，添加对session_id的支持：
+
+修改createFileRecord函数，支持session_id
+修改getUserFiles函数，支持通过session_id查询文件
+添加migrateSessionFiles函数，用于将会话文件迁移到用户账户
+步骤3：实现用户身份验证
+创建用户身份验证工具函数，用于获取当前用户信息：
+
+创建lib/auth/user.ts文件，实现getCurrentUser函数
+实现会话ID的生成和管理
+步骤4：实现权限验证
+创建权限验证工具函数，用于验证资源访问权限：
+
+创建lib/auth/permissions.ts文件，实现validateFileAccess函数
+实现API权限检查中间件withPermissionCheck
+步骤5：修改API路由
+更新API路由，集成权限验证：
+
+修改文件上传API
+修改文件获取API
+修改AI分析触发API
+
 
 
 ## 7. 前端组件调整
@@ -499,6 +840,7 @@ AI分析需要消费用户积分，实现方式如下：
 | ----------------- | ----------------- | ------------------------ | ----------- | ----------------- |
 | ChatFile          | id                | uuid                     | NO          | gen_random_uuid() |
 | ChatFile          | user_id           | uuid                     | YES         | null              |
+| ChatFile          | session_id        | text                     | YES         | null              |
 | ChatFile          | uploaded_at       | timestamp with time zone | YES         | now()             |
 | ChatFile          | platform          | text                     | YES         | null              |
 | ChatFile          | status            | text                     | YES         | null              |

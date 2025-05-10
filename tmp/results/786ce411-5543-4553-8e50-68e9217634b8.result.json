@@ -1,0 +1,11 @@
+{
+  "messageCount": 2,
+  "senderStats": {
+    "Alice": {
+      "messageCount": 1
+    },
+    "Bob": {
+      "messageCount": 1
+    }
+  }
+}

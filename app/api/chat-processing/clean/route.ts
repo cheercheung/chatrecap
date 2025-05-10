@@ -38,10 +38,10 @@ export async function POST(request: NextRequest) {
     // 验证文件状态
     if (fileRecord.status !== ChatFileStatus.UPLOADED) {
       return NextResponse.json(
-        { 
-          success: false, 
-          message: `文件状态不允许清洗操作，当前状态: ${fileRecord.status}`, 
-          code: 'INVALID_STATE' 
+        {
+          success: false,
+          message: `文件状态不允许清洗操作，当前状态: ${fileRecord.status}`,
+          code: 'INVALID_STATE'
         },
         { status: 400 }
       );
@@ -59,7 +59,8 @@ export async function POST(request: NextRequest) {
       // 如果处理完成，更新数据库中的文件状态
       if (status.status === 'completed') {
         await updateDbFileStatus(fileId, ChatFileStatus.COMPLETED_BASIC, {
-          basic_result_path: `tmp/results/${fileId}.result.json`
+          basic_result_path: `tmp/results/${fileId}.result.json`,
+          words_count: status.words_count // 更新字符计数
         });
       } else if (status.status === 'failed') {
         await updateDbFileStatus(fileId, ChatFileStatus.FAILED);

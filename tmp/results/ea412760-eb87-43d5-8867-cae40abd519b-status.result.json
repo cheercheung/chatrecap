@@ -1,0 +1,8 @@
+{
+  "status": "failed",
+  "cleaningProgress": 0,
+  "analysisProgress": 0,
+  "currentCleaningStep": "准备 auto 数据",
+  "currentAnalysisStep": "处理 auto 消息",
+  "error": "处理失败: invalid_format, 自动检测为 Discord 格式"
+}

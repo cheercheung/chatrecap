@@ -1,0 +1,23 @@
+{
+  "participants": [
+    { "name": "User1" },
+    { "name": "User2" }
+  ],
+  "messages": [
+    {
+      "sender": "User1",
+      "message": "Hello, how are you?",
+      "timestamp": "2023-06-01T10:00:00.000Z"
+    },
+    {
+      "sender": "User2",
+      "message": "我很好，谢谢！",
+      "timestamp": "2023-06-01T10:01:00.000Z"
+    },
+    {
+      "sender": "User1",
+      "message": "Great! Let's meet tomorrow.",
+      "timestamp": "2023-06-01T10:02:00.000Z"
+    }
+  ]
+}

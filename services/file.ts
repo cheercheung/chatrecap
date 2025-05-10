@@ -38,6 +38,7 @@ export async function createFileRecord(file: {
     const insertData = {
       id: fileId,
       user_id: file.user_id || null,
+      session_id: file.session_id || null, // 添加会话ID
       platform: file.platform || 'auto',
       status: file.status || ChatFileStatus.UPLOADED,
       words_count: file.words_count || null,
@@ -139,14 +140,33 @@ export async function associateAnalysisResult(fileId: string, resultType: 'basic
   try {
     const supabaseAdmin = createServerAdminClient();
 
+    // 先获取当前文件记录
+    const { data: fileRecord, error: fetchError } = await supabaseAdmin
+      .from('ChatFile')
+      .select('*')
+      .eq('id', fileId)
+      .single();
+
+    if (fetchError) {
+      console.error('获取文件记录失败:', fetchError);
+      throw fetchError;
+    }
+
     const updateData: any = {};
 
-    // 注意：这里我们假设数据库中有这些字段，实际可能需要调整
     if (resultType === 'basic') {
+      // 更新基础分析结果
       updateData.basic_result_path = resultPath;
       updateData.status = ChatFileStatus.COMPLETED_BASIC;
     } else if (resultType === 'ai') {
+      // 更新AI分析结果
       updateData.ai_result_path = resultPath;
+
+      // 检查是否有基础分析结果
+      if (!fileRecord.basic_result_path) {
+        console.warn(`文件 ${fileId} 没有基础分析结果，但正在设置AI分析结果`);
+      }
+
       updateData.status = ChatFileStatus.COMPLETE_AI;
     }
 
@@ -157,7 +177,12 @@ export async function associateAnalysisResult(fileId: string, resultType: 'basic
       .select()
       .single();
 
-    if (error) throw error;
+    if (error) {
+      console.error('更新文件记录失败:', error);
+      throw error;
+    }
+
+    console.log(`成功关联${resultType === 'basic' ? '基础' : 'AI'}分析结果:`, data);
     return data;
   } catch (error) {
     console.error('关联分析结果失败:', error);
@@ -195,22 +220,43 @@ export async function getFileById(fileId: string) {
 }
 
 /**
- * 查询用户文件列表
+ * 查询用户文件列表（包括会话文件）
  * @param userId 用户ID
+ * @param sessionId 会话ID
  * @returns 文件列表
  */
-export async function getUserFiles(userId: string) {
+export async function getUserFiles(userId?: string, sessionId?: string) {
   try {
     const supabaseAdmin = createServerAdminClient();
 
-    const { data, error } = await supabaseAdmin
+    let query = supabaseAdmin
       .from('ChatFile')
       .select('*')
-      .eq('user_id', userId)
       .order('uploaded_at', { ascending: false });
 
-    if (error) throw error;
-    return data;
+    if (userId && sessionId) {
+      // 如果同时提供了userId和sessionId，查询两者的并集
+      query = query.or(`user_id.eq.${userId},session_id.eq.${sessionId}`);
+    } else if (userId) {
+      // 只查询用户关联的文件
+      query = query.eq('user_id', userId);
+    } else if (sessionId) {
+      // 只查询会话关联的文件
+      query = query.eq('session_id', sessionId);
+    } else {
+      // 如果都没有提供，返回空数组
+      console.warn('getUserFiles: 未提供userId或sessionId');
+      return [];
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      console.error('查询文件列表数据库错误:', error);
+      throw error;
+    }
+
+    return data || [];
   } catch (error) {
     console.error('查询用户文件列表失败:', error);
     return [];
@@ -287,5 +333,108 @@ export async function deleteFile(fileId: string) {
   } catch (error) {
     console.error('删除文件失败:', error);
     return false;
+  }
+}
+
+/**
+ * 将会话文件迁移到用户账户
+ * @param sessionId 会话ID
+ * @param userId 用户ID
+ * @returns 迁移结果
+ */
+export async function migrateSessionFiles(sessionId: string, userId: string) {
+  try {
+    if (!sessionId || !userId) {
+      console.error('迁移会话文件失败: sessionId和userId不能为空');
+      return { success: false, error: '会话ID和用户ID不能为空' };
+    }
+
+    console.log(`开始迁移会话文件，会话ID: ${sessionId}, 用户ID: ${userId}`);
+    const supabaseAdmin = createServerAdminClient();
+
+    // 查找所有与会话关联的文件
+    const { data: files, error: fetchError } = await supabaseAdmin
+      .from('ChatFile')
+      .select('*')
+      .eq('session_id', sessionId)
+      .is('user_id', null); // 只迁移没有用户ID的文件
+
+    if (fetchError) {
+      console.error('查询会话文件失败:', fetchError);
+      throw fetchError;
+    }
+
+    // 如果没有文件，直接返回
+    if (!files || files.length === 0) {
+      console.log(`没有找到与会话ID ${sessionId} 关联的文件`);
+      return { success: true, migratedCount: 0 };
+    }
+
+    console.log(`找到 ${files.length} 个会话文件需要迁移`);
+
+    // 更新文件所有权
+    const { error: updateError } = await supabaseAdmin
+      .from('ChatFile')
+      .update({
+        user_id: userId,
+        session_id: null // 清除会话ID
+      })
+      .eq('session_id', sessionId)
+      .is('user_id', null);
+
+    if (updateError) {
+      console.error('更新文件所有权失败:', updateError);
+      throw updateError;
+    }
+
+    console.log(`成功迁移 ${files.length} 个文件到用户 ${userId}`);
+    return {
+      success: true,
+      migratedCount: files.length,
+      files: files.map(f => ({ id: f.id, platform: f.platform, status: f.status }))
+    };
+  } catch (error) {
+    console.error('迁移会话文件失败:', error);
+    return {
+      success: false,
+      error: error instanceof Error ? error.message : '未知错误',
+      migratedCount: 0
+    };
+  }
+}
+
+/**
+ * 获取文件所有者信息
+ * @param fileId 文件ID
+ * @returns 所有者信息
+ */
+export async function getFileOwner(fileId: string) {
+  try {
+    const supabaseAdmin = createServerAdminClient();
+
+    // 获取文件记录
+    const { data: fileRecord, error: fileError } = await supabaseAdmin
+      .from('ChatFile')
+      .select('user_id, session_id')
+      .eq('id', fileId)
+      .single();
+
+    if (fileError) {
+      console.error('获取文件记录失败:', fileError);
+      throw fileError;
+    }
+
+    if (!fileRecord) {
+      return { userId: null, sessionId: null, exists: false };
+    }
+
+    return {
+      userId: fileRecord.user_id,
+      sessionId: fileRecord.session_id,
+      exists: true
+    };
+  } catch (error) {
+    console.error('获取文件所有者信息失败:', error);
+    return { userId: null, sessionId: null, exists: false, error };
   }
 }

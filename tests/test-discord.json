@@ -1,0 +1,35 @@
+[
+  {
+    "id": "1234567890123456",
+    "type": 0,
+    "timestamp": "2023-06-01T10:00:00.000Z",
+    "author": {
+      "id": "123456789012345678",
+      "name": "User1",
+      "discriminator": "0000"
+    },
+    "content": "Hello, how are you?"
+  },
+  {
+    "id": "1234567890123457",
+    "type": 0,
+    "timestamp": "2023-06-01T10:01:00.000Z",
+    "author": {
+      "id": "123456789012345679",
+      "name": "User2",
+      "discriminator": "0000"
+    },
+    "content": "我很好，谢谢！"
+  },
+  {
+    "id": "1234567890123458",
+    "type": 0,
+    "timestamp": "2023-06-01T10:02:00.000Z",
+    "author": {
+      "id": "123456789012345678",
+      "name": "User1",
+      "discriminator": "0000"
+    },
+    "content": "Great! Let's meet tomorrow."
+  }
+]

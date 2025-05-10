@@ -5,6 +5,7 @@ import { processChat } from '../chat-processing';
 import { getUploadedFileContent, getUploadedFileMetadata } from './file-utils';
 import { FileType, getFilePath } from '@/lib/storage/index';
 import { analyzeChatData } from '@/lib/analysis';
+import { countTotalCharactersInMessages } from '@/lib/word-counter';
 
 // 上传目录和结果目录 - 使用与storage/index.ts相同的路径
 const UPLOAD_DIR = path.join(process.cwd(), 'tmp', 'uploads');
@@ -96,7 +97,9 @@ export async function processUploadedFile(
     // 使用通用处理函数
     const result = processChat(content, platform);
 
-    console.log(`处理完成，消息数量: ${result.messages.length}`);
+    // 计算字符数（不计算空格）
+    const charCount = countTotalCharactersInMessages(result.messages, false);
+    console.log(`处理完成，消息数量: ${result.messages.length}，字符数: ${charCount}`);
 
     // 检查处理结果
     if (result.messages.length === 0 || (result.messages.length === 1 && result.messages[0].sender === 'System')) {
@@ -128,12 +131,13 @@ export async function processUploadedFile(
     }
     fs.writeFileSync(resultPath, JSON.stringify(analysisData, null, 2));
 
-    // 更新状态为完成
+    // 更新状态为完成，并包含字符数
     if (statusCallback) {
       await statusCallback({
         status: 'completed',
         cleaningProgress: 100,
-        analysisProgress: 100
+        analysisProgress: 100,
+        words_count: charCount // 使用字符数作为words_count
       });
     }
 

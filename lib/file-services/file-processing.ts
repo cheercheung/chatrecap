@@ -4,6 +4,7 @@ import { getUploadedFileContent } from './file-utils';
 import { saveFile, readFile, FileType, getFilePath } from '@/lib/storage/index';
 import path from 'path';
 import { analyzeChatData } from '@/lib/analysis';
+import { countTotalCharactersInMessages } from '@/lib/word-counter';
 
 // 重新导出 getProcessResult 函数，以保持向后兼容性
 export const getProcessResult = getResult;
@@ -18,6 +19,7 @@ export interface FileStatus {
   currentCleaningStep?: string;
   currentAnalysisStep?: string;
   error?: string;
+  words_count?: number; // 字符计数字段
 }
 
 /**
@@ -131,6 +133,10 @@ export async function processFile(
     // 处理聊天数据
     const result = processChat(content, platform);
 
+    // 计算字符数（不计算空格）
+    const charCount = countTotalCharactersInMessages(result.messages, false);
+    console.log(`文件 ${fileId} 的字符数: ${charCount}`);
+
     // 模拟分析进度
     await simulateProgress(fileId, 'analyzing', 'analysisProgress');
 
@@ -143,11 +149,12 @@ export async function processFile(
     await saveFile(fileId, analysisData, FileType.RESULT);
     console.log(`保存分析结果到: ${getFilePath(fileId, FileType.RESULT)}`);
 
-    // 更新状态为完成
+    // 更新状态为完成，并包含字符数作为words_count
     await updateFileStatus(fileId, {
       status: 'completed',
       cleaningProgress: 100,
-      analysisProgress: 100
+      analysisProgress: 100,
+      words_count: charCount // 使用字符数作为words_count
     });
 
     return result;
